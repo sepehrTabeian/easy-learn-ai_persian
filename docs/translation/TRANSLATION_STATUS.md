@@ -18,7 +18,7 @@
 | `data/nav/sites.json`، `data/timeline/index.json` | ✅ انجام شد | commit `f222c72` |
 | `readme.md` | ✅ انجام شد | دستی بازنویسی شد، داخل `<div dir="rtl">` |
 | `ai-sites/*`: راه‌اندازی RTL (۷۸ زیرسایت) | ✅ انجام شد، commit نهایی این سند | تزریق `dir=rtl`، فونت Vazirmatn، کلاس‌های منطقی Tailwind |
-| `ai-sites/*`: ترجمه متن | 🟡 در جریان | ۲٬۴۵۰ قطعه از ۲۱٬۸۸۴ ترجمه شده (فقط در `work/`، **هنوز اعمال نشده**) |
+| `ai-sites/*`: ترجمه متن | 🟡 در جریان | ۲٬۸۰۰ قطعه از ۲۱٬۸۸۴ ترجمه شده (فقط در `work/`، **هنوز اعمال نشده**) |
 | `public/*/static/js` (خروجی build زیرسایت‌ها) | ⛔ مانده | پس از ترجمه `ai-sites` باید rebuild شود (نیاز به نصب وابستگی + اجازه کاربر) |
 | `data/daily/` (حدود ۲۶۸ هزار کاراکتر چینی) | ⛔ مانده | |
 | `public/awesome-prompt/` (حدود ۲۵۷ هزار) | ⛔ مانده | فایل‌های «ترجمه» پرامپت‌ها هنوز چینی‌اند |
@@ -46,7 +46,7 @@ docs/translation/
 │   └── seg_misc.json + tr_misc_*.tsv    (nav و timeline)
 └── work/                      ← کار در جریان
     ├── seg_sites.json                   ۲۱٬۸۸۴ قطعه جدید ai-sites
-    └── tr_sites_000.tsv تا tr_sites_006.tsv  (قطعه‌های 0 تا 2449)
+    └── tr_sites_000.tsv تا tr_sites_007.tsv  (قطعه‌های 0 تا 2799)
 ```
 
 ## روش کار (pipeline)
@@ -140,7 +140,7 @@ docs/translation/
 
 ## مرحله بعد
 
-1. ادامه ترجمه `work/seg_sites.json` از قطعه **2450** (فایل بعدی: `tr_sites_007.tsv`).
+1. ادامه ترجمه `work/seg_sites.json` از قطعه **2800** (فایل بعدی: `tr_sites_008.tsv`).
 2. پس از اتمام: اعمال، بررسی‌ها، commit.
 3. اجازه گرفتن از کاربر برای نصب وابستگی‌ها و rebuild خروجی هر زیرسایت (`cd ai-sites/<name> && pnpm install && pnpm build` که خروجی را در `public/<name>` می‌ریزد؛ ۴ زیرسایت با vite هستند: evaluation, harness, prompt-cache, skills).
 4. بخش‌های بعدی: `data/daily`، `public/awesome-prompt`، `public/article`، `ai-app`.
@@ -155,3 +155,4 @@ docs/translation/
 - **2026-10-24** — تکمیل دستهٔ پنجم ترجمهٔ ai-sites شامل قطعه‌های ۱۴۰۰ تا ۱۷۴۹ در فایل `work/tr_sites_004.tsv` (مجموعاً ۱٬۷۵۰ قطعهٔ ترجمه‌شده در work).
 - **2026-10-24** — تکمیل دستی دستهٔ ششم ترجمهٔ ai-sites شامل قطعه‌های ۱۷۵۰ تا ۲۰۹۹ در فایل `work/tr_sites_005.tsv`؛ مسیر ترجمه با مدل محلی به درخواست کاربر کنار گذاشته شد (مجموعاً ۲٬۱۰۰ قطعهٔ ترجمه‌شده در work).
 - **2026-10-24** — تکمیل دستی دستهٔ هفتم ترجمهٔ ai-sites شامل قطعه‌های ۲۱۰۰ تا ۲۴۴۹ در فایل `work/tr_sites_006.tsv` (مجموعاً ۲٬۴۵۰ قطعهٔ ترجمه‌شده در work).
+- **2026-10-24** — تکمیل دستی دستهٔ هشتم ترجمهٔ ai-sites شامل قطعه‌های ۲۴۵۰ تا ۲۷۹۹ در فایل `work/tr_sites_007.tsv` (مجموعاً ۲٬۸۰۰ قطعهٔ ترجمه‌شده در work).
