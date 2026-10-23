@@ -10,7 +10,7 @@
 - کار فقط روی برنچ `persian` انجام می‌شود. **PR زده نمی‌شود.**
 - محدودیت: کاربر گفته `npm install` / `pnpm install` بدون اجازه اجرا نشود، پس build یا اجرای سایت فعلاً ممکن نیست.
 
-## وضعیت فعلی (2026-10-23)
+## وضعیت فعلی (2026-10-24)
 
 | بخش | وضعیت | توضیح |
 |---|---|---|
@@ -18,12 +18,13 @@
 | `data/nav/sites.json`، `data/timeline/index.json` | ✅ انجام شد | commit `f222c72` |
 | `readme.md` | ✅ انجام شد | دستی بازنویسی شد، داخل `<div dir="rtl">` |
 | `ai-sites/*`: راه‌اندازی RTL (۷۸ زیرسایت) | ✅ انجام شد، commit نهایی این سند | تزریق `dir=rtl`، فونت Vazirmatn، کلاس‌های منطقی Tailwind |
-| `ai-sites/*`: ترجمه متن | 🟡 در جریان | ۷۰۰ قطعه از ۲۱٬۸۸۴ ترجمه شده (فقط در `work/`، **هنوز اعمال نشده**) |
+| `ai-sites/*`: ترجمه متن | 🟡 در جریان | ۱٬۰۵۰ قطعه از ۲۱٬۸۸۴ ترجمه شده (فقط در `work/`، **هنوز اعمال نشده**) |
 | `public/*/static/js` (خروجی build زیرسایت‌ها) | ⛔ مانده | پس از ترجمه `ai-sites` باید rebuild شود (نیاز به نصب وابستگی + اجازه کاربر) |
 | `data/daily/` (حدود ۲۶۸ هزار کاراکتر چینی) | ⛔ مانده | |
 | `public/awesome-prompt/` (حدود ۲۵۷ هزار) | ⛔ مانده | فایل‌های «ترجمه» پرامپت‌ها هنوز چینی‌اند |
 | `public/article/` (حدود ۱۱۳ هزار) | ⛔ مانده | HTML تک‌فایلی |
 | `ai-app/*` | ⛔ مانده | |
+| گراف کد Graphify | ✅ ساخته شد | حالت محلی `code-only`؛ خروجی در `graphify-out/` با ۳۲٬۹۶۲ گره و ۹۱٬۷۱۰ یال |
 
 ## ساختار پوشه `docs/translation/`
 
@@ -45,7 +46,7 @@ docs/translation/
 │   └── seg_misc.json + tr_misc_*.tsv    (nav و timeline)
 └── work/                      ← کار در جریان
     ├── seg_sites.json                   ۲۱٬۸۸۴ قطعه جدید ai-sites
-    └── tr_sites_000.tsv, tr_sites_001.tsv  (قطعه‌های 0 تا 699)
+    └── tr_sites_000.tsv, tr_sites_001.tsv, tr_sites_002.tsv  (قطعه‌های 0 تا 1049)
 ```
 
 ## روش کار (pipeline)
@@ -111,6 +112,7 @@ docs/translation/
 9. **prompt-cache**: فایل `ai-sites/prompt-cache/audio-segments.json` متن صوت‌های چینی است؛ ترجمه آن زیرنویس فارسی می‌سازد ولی صدا چینی می‌ماند.
 10. **نام محصولات چینی** با آوانویسی لاتین (pinyin) یا نام انگلیسی رسمی نوشته شوند (مثل iFlytek Huiwen، Doubao، Hunyuan). نام شرکت‌ها انگلیسی: Alibaba, Baidu, ByteDance, Tencent, Kuaishou, Moonshot AI, Zhipu AI.
 11. **ماه‌ها**: «مارس 2017»، «ژوئن 2017» (ارقام لاتین).
+12. **Graphify**: شش فایل SQL به‌دلیل نصب نبودن افزونهٔ اختیاری `tree_sitter_sql` وارد گراف نشدند؛ دو فایل TSX نیز خطای نحوی داشتند و فقط بخشی از نمادهایشان استخراج شد.
 
 ## واژه‌نامه کلیدی (برای یکنواختی)
 
@@ -138,7 +140,7 @@ docs/translation/
 
 ## مرحله بعد
 
-1. ادامه ترجمه `work/seg_sites.json` از قطعه **700** (فایل بعدی: `tr_sites_002.tsv`).
+1. ادامه ترجمه `work/seg_sites.json` از قطعه **1050** (فایل بعدی: `tr_sites_003.tsv`).
 2. پس از اتمام: اعمال، بررسی‌ها، commit.
 3. اجازه گرفتن از کاربر برای نصب وابستگی‌ها و rebuild خروجی هر زیرسایت (`cd ai-sites/<name> && pnpm install && pnpm build` که خروجی را در `public/<name>` می‌ریزد؛ ۴ زیرسایت با vite هستند: evaluation, harness, prompt-cache, skills).
 4. بخش‌های بعدی: `data/daily`، `public/awesome-prompt`، `public/article`، `ai-app`.
@@ -147,3 +149,5 @@ docs/translation/
 
 - **2026-10-23** — فاز ۱: سایت اصلی، nav، timeline و README ترجمه شد + RTL (commit `f222c72`).
 - **2026-10-23** — فاز ۲ شروع: RTL برای ۷۸ زیرسایت ai-sites (entry + فونت + کلاس‌ها)؛ ۷۰۰ قطعه ترجمه در `work/`؛ ابزارها و این سند به مخزن اضافه شد.
+- **2026-10-24** — تکمیل دسته سوم ترجمه ai-sites شامل قطعه‌های ۷۰۰ تا ۱۰۴۹ در فایل `work/tr_sites_002.tsv` (مجموعاً ۱٬۰۵۰ قطعه ترجمه‌شده در work).
+- **2026-10-24** — Graphify در حالت محلی `code-only` اجرا شد؛ `graphify-out/graph.json`، گزارش Markdown و نمای HTML تولید شدند.
