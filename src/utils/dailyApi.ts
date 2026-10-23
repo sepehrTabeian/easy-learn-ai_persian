@@ -1,13 +1,13 @@
 /**
- * AI 日报 API 请求工具模块
- * 负责与 CDN 服务器的数据交互，包括获取日报列表和具体日报内容
+ * ماژول ابزار درخواست API گزارش روزانه AI
+ * مسئول تعامل داده با سرور CDN، شامل دریافت فهرست گزارش‌های روزانه و محتوای هر گزارش
  */
 
 import { DailyListResponse } from "../types/daily";
 import dailyData from "./dailyData.json";
 
 export const dailyApiUtils = {
-  // 获取日报列表
+  // دریافت فهرست گزارش‌های روزانه
   async fetchDailyList(): Promise<DailyListResponse> {
     try {
       // const response = await fetch("../../public/data/daily/home.json", {
@@ -30,23 +30,23 @@ export const dailyApiUtils = {
     } catch (error) {
       console.error("Error fetching daily list:", error);
 
-      // 提供更详细的错误信息
+      // ارائه اطلاعات خطای دقیق‌تر
       if (error instanceof TypeError && error.message.includes("fetch")) {
-        throw new Error("网络连接失败，请检查网络状态或稍后重试");
+        throw new Error("اتصال شبکه ناموفق بود، لطفاً وضعیت شبکه را بررسی کنید یا بعداً دوباره امتحان کنید");
       } else if (error instanceof Error && error.message.includes("CORS")) {
-        throw new Error("跨域访问被阻止，请联系管理员配置服务器");
+        throw new Error("دسترسی بین‌دامنه‌ای مسدود شد، لطفاً با مدیر برای پیکربندی سرور تماس بگیرید");
       } else if (
         error instanceof Error &&
         error.message.includes("HTTP error")
       ) {
-        throw new Error(`服务器响应错误: ${error.message}`);
+        throw new Error(`خطای پاسخ سرور: ${error.message}`);
       } else {
-        throw new Error("获取日报列表失败，请稍后重试");
+        throw new Error("دریافت فهرست گزارش‌های روزانه ناموفق بود، لطفاً بعداً دوباره امتحان کنید");
       }
     }
   },
 
-  // 获取具体日报内容
+  // دریافت محتوای یک گزارش روزانه
   async fetchDailyContent(date: string): Promise<string> {
     try {
       const response = await fetch(
@@ -76,14 +76,14 @@ export const dailyApiUtils = {
       console.error(`Error fetching daily content for ${date}:`, error);
 
       if (error instanceof TypeError && error.message.includes("fetch")) {
-        throw new Error("网络连接失败，请检查网络状态或稍后重试");
+        throw new Error("اتصال شبکه ناموفق بود، لطفاً وضعیت شبکه را بررسی کنید یا بعداً دوباره امتحان کنید");
       } else if (
         error instanceof Error &&
         error.message.includes("HTTP error")
       ) {
-        throw new Error(`服务器响应错误: ${error.message}`);
+        throw new Error(`خطای پاسخ سرور: ${error.message}`);
       } else {
-        throw new Error("获取日报内容失败，请稍后重试");
+        throw new Error("دریافت محتوای گزارش روزانه ناموفق بود، لطفاً بعداً دوباره امتحان کنید");
       }
     }
   },

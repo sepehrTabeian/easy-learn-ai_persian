@@ -1,21 +1,21 @@
 /**
- * Llama 封面
+ * جلد Llama
  *
- * 隐喻：Llama 4 代版本号（1 / 2 / 3 / 4）四枚 ticket 横排，
- *   每枚一个不同 tone，左上挂"open weights"印章，右上一颗简化 llama 头像 stamp。
+ * استعاره: ۴ نسخه Llama (1 / 2 / 3 / 4) به‌صورت چهار ticket در یک ردیف افقی،
+ *   هر کدام با یک tone متفاوت، در بالا-چپ آویزان"open weights"مهر، در بالا-راست یک stamp با چهره ساده‌شده llama.
  *
- * 视觉构图（viewBox 320×200）：
- *   - 左上：coral "open weights" 倾斜印章
- *   - 右上：圆角矩形 stamp 写大写 LLaMA + 一颗简化耳朵/眼睛 svg
- *   - 中央：4 个 stamp ticket（version 1 → 4），每个 sub-label 显示一句关键事实
+ * ترکیب‌بندی بصری (viewBox 320×200):
+ *   - بالا-چپ: coral "open weights" مهر کج
+ *   - بالا-راست: stamp مستطیل گوشه‌گرد با نوشته بزرگ LLaMA + یک svg ساده‌شده گوش/چشم
+ *   - مرکز: ۴ stamp ticket (version 1 ← 4)، هر sub-label یک واقعیت کلیدی را نشان می‌دهد
  *     · 1 dense / 2 commercial / 3 GQA / 4 MoE
- *   - tickets 之间用 1.5 px 黑实线 + 三角箭头连接
- *   - 底部一条粗虚线时间轴 + 2023/24/25 年份刻度
+ *   - ticketها با خط پیوسته مشکی 1.5 px + فلش مثلثی به هم وصل‌اند
+ *   - در پایین یک محور زمانی نقطه‌چین ضخیم + درجه‌بندی سال‌های 2023/24/25
  *
- * hover 行为：
- *   - 4 张 ticket 微浮起 + 阴影变深（依次延迟）
- *   - "open weights" 印章微旋转
- *   - 右上 LLaMA stamp 轻微缩放
+ * رفتار hover:
+ *   - ۴ ticket کمی بلند می‌شوند + سایه تیره‌تر می‌شود (با تأخیر به ترتیب)
+ *   - "open weights" مهر کمی می‌چرخد
+ *   - stamp با LLaMA در بالا-راست کمی بزرگ و کوچک می‌شود
  */
 import React from "react";
 import CoverShell from "./CoverShell";
@@ -35,7 +35,7 @@ const TICKETS: Ticket[] = [
 ];
 
 const LlamaCover: React.FC = () => {
-  /* tickets 横向布局 */
+  /* چیدمان افقی ticketها */
   const X0 = 36;
   const STEP = 64;
   const Y_T = 80;
@@ -44,7 +44,7 @@ const LlamaCover: React.FC = () => {
 
   return (
     <CoverShell bgClassName="bg-cream" dotOpacity={0.07}>
-      {/* 左上：open weights 印章（倾斜） */}
+      {/* بالا-چپ: مهر open weights (کج) */}
       <g
         transform="translate(40,30) rotate(-7)"
         className="origin-center transition-transform duration-500 ease-out group-hover:rotate-2 group-hover:scale-105"
@@ -73,7 +73,7 @@ const LlamaCover: React.FC = () => {
         </text>
       </g>
 
-      {/* 右上：LLaMA 字样 stamp + 简化 llama 头像 */}
+      {/* بالا-راست: stamp با نوشته LLaMA + چهره ساده‌شده llama */}
       <g
         transform="translate(280,30) rotate(6)"
         className="origin-center transition-transform duration-500 ease-out group-hover:rotate-[-3deg] group-hover:scale-110"
@@ -88,14 +88,14 @@ const LlamaCover: React.FC = () => {
           stroke="#241C15"
           strokeWidth="1.8"
         />
-        {/* 简化 llama 头：两只长耳朵 + 椭圆脸 */}
+        {/* سر ساده‌شده llama: دو گوش بلند + صورت بیضی */}
         <g transform="translate(-15,0)" stroke="#FBE891" strokeWidth="1.5" fill="none">
           <ellipse cx="0" cy="2" rx="5" ry="6" fill="#FBE891" />
-          {/* 左耳 */}
+          {/* گوش چپ */}
           <path d="M -3 -3 L -4 -8" strokeLinecap="round" />
-          {/* 右耳 */}
+          {/* گوش راست */}
           <path d="M 3 -3 L 4 -8" strokeLinecap="round" />
-          {/* 眼睛 */}
+          {/* چشم‌ها */}
           <circle cx="-1.5" cy="2" r="0.9" fill="#241C15" stroke="none" />
         </g>
         <text
@@ -112,7 +112,7 @@ const LlamaCover: React.FC = () => {
         </text>
       </g>
 
-      {/* 4 张 ticket 横排 */}
+      {/* ۴ ticket در یک ردیف افقی */}
       {TICKETS.map((t, i) => {
         const x = X0 + i * STEP;
         return (
@@ -133,11 +133,11 @@ const LlamaCover: React.FC = () => {
               stroke="#241C15"
               strokeWidth="1.8"
             />
-            {/* ticket 撕缝（左右两侧 V notch 暗示） */}
+            {/* شکاف پاره ticket (اشاره به V notch در دو طرف چپ و راست) */}
             <circle cx="0" cy={H / 2} r="2.5" fill="#FBEFE3" stroke="#241C15" strokeWidth="0.8" />
             <circle cx={W} cy={H / 2} r="2.5" fill="#FBEFE3" stroke="#241C15" strokeWidth="0.8" />
 
-            {/* version 大数字 */}
+            {/* عدد بزرگ version */}
             <text
               x={W / 2}
               y="26"
@@ -149,7 +149,7 @@ const LlamaCover: React.FC = () => {
             >
               {t.v}
             </text>
-            {/* 横线 */}
+            {/* خط افقی */}
             <line
               x1="9"
               y1="32"
@@ -159,7 +159,7 @@ const LlamaCover: React.FC = () => {
               strokeWidth="0.8"
               opacity="0.5"
             />
-            {/* 关键事实 */}
+            {/* واقعیت کلیدی */}
             <text
               x={W / 2}
               y="46"
@@ -176,7 +176,7 @@ const LlamaCover: React.FC = () => {
         );
       })}
 
-      {/* 三段连接箭头：ticket 1→2 / 2→3 / 3→4 */}
+      {/* سه فلش اتصال: ticket 1→2 / 2→3 / 3→4 */}
       <g stroke="#241C15" strokeWidth="1.4" fill="#241C15">
         {[0, 1, 2].map((i) => {
           const x1 = X0 + i * STEP + W + 3;
@@ -191,7 +191,7 @@ const LlamaCover: React.FC = () => {
         })}
       </g>
 
-      {/* 底部时间轴 */}
+      {/* محور زمانی پایین */}
       <g>
         <line
           x1="30"
@@ -228,7 +228,7 @@ const LlamaCover: React.FC = () => {
         ))}
       </g>
 
-      {/* 标题字 */}
+      {/* متن عنوان */}
       <text
         x="160"
         y="156"

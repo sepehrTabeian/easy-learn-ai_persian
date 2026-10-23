@@ -1,6 +1,6 @@
 /**
- * Header · Mailchimp-Freddie 风
- * 顶部黄色 metadata 细条 + 白底导航 + stamp 风按钮
+ * Header · سبک Mailchimp-Freddie
+ * نوار باریک metadata زرد در بالا + ناوبری با پس‌زمینه سفید + دکمه‌های سبک stamp
  */
 
 import React, { useEffect, useState } from "react";
@@ -9,15 +9,15 @@ import { Github, Youtube, MessageCircle } from "lucide-react";
 import { NavigationItem, SocialLink } from "../types";
 
 const navigationItems: NavigationItem[] = [
-  { name: "知视", path: "/ai-knowledge" },
-  { name: "文章", path: "/ai-article" },
-  { name: "提示词", path: "/ai-prompts" },
-  { name: "作品", path: "/ai-application" },
-  { name: "模型", path: "/ai-model" },
-  { name: "评估", path: "/ai-benchmark" },
-  { name: "日报", path: "/ai-daily" },
-  { name: "教程", path: "/ai-tutorial" },
-  { name: "星球", path: "/knowledge-planet" },
+  { name: "دانش بصری", path: "/ai-knowledge" },
+  { name: "مقالات", path: "/ai-article" },
+  { name: "پرامپت‌ها", path: "/ai-prompts" },
+  { name: "آثار", path: "/ai-application" },
+  { name: "مدل‌ها", path: "/ai-model" },
+  { name: "ارزیابی", path: "/ai-benchmark" },
+  { name: "اخبار روزانه", path: "/ai-daily" },
+  { name: "آموزش‌ها", path: "/ai-tutorial" },
+  { name: "سیاره", path: "/knowledge-planet" },
 ];
 
 const socialLinks: SocialLink[] = [
@@ -26,8 +26,8 @@ const socialLinks: SocialLink[] = [
     icon: "Github",
     url: "https://github.com/ConardLi/easy-learn-ai",
   },
-  { name: "B站", icon: "Youtube", url: "https://space.bilibili.com/474921808" },
-  { name: "微信", icon: "MessageCircle", url: "#" },
+  { name: "Bilibili", icon: "Youtube", url: "https://space.bilibili.com/474921808" },
+  { name: "WeChat", icon: "MessageCircle", url: "#" },
 ];
 
 const Header: React.FC = () => {
@@ -111,27 +111,27 @@ const Header: React.FC = () => {
                   rel="noopener noreferrer"
                   className="flex items-center justify-center w-9 h-9 rounded-full text-ink hover:bg-butter transition-colors duration-250 ease-spring"
                   onMouseEnter={() =>
-                    link.name === "微信" && setShowWeChatQR(true)
+                    link.name === "WeChat" && setShowWeChatQR(true)
                   }
                   onMouseLeave={() =>
-                    link.name === "微信" && setShowWeChatQR(false)
+                    link.name === "WeChat" && setShowWeChatQR(false)
                   }
-                  onClick={(e) => link.name === "微信" && e.preventDefault()}
+                  onClick={(e) => link.name === "WeChat" && e.preventDefault()}
                   aria-label={link.name}
                 >
                   {getIcon(link.icon)}
                 </a>
 
-                {link.name === "微信" && showWeChatQR && (
-                  <div className="absolute top-full right-0 mt-3 bg-white border-2 border-ink rounded-2xl shadow-stamp-lg z-50 min-w-max">
+                {link.name === "WeChat" && showWeChatQR && (
+                  <div className="absolute top-full end-0 mt-3 bg-white border-2 border-ink rounded-2xl shadow-stamp-lg z-50 min-w-max">
                     <div className="flex flex-col items-center p-4">
                       <img
                         src="/imgs/gzh.jpg"
-                        alt="微信公众号二维码"
+                        alt="کد QR حساب رسمی WeChat"
                         className="w-40 h-40 object-cover rounded-xl"
                       />
                       <p className="font-sans text-[12px] font-semibold text-ink mt-3 text-center whitespace-nowrap">
-                        扫码关注公众号 →
+                        برای دنبال کردن حساب رسمی اسکن کنید ←
                       </p>
                     </div>
                   </div>

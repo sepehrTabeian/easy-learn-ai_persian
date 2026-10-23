@@ -1,78 +1,78 @@
 [
     {
         "modelName": "Seed-OSS-36B-Base",
-        "company": "字节跳动",
-        "country": "中国",
-        "openSourceStatus": "开源",
+        "company": "ByteDance",
+        "country": "چین",
+        "openSourceStatus": "متن‌باز",
         "releaseDate": "2025-08-20",
-        "description": "Seed-OSS-36B-Base 是字节跳动开源的大型因果语言模型，采用 RoPE、GQA 注意力、RMSNorm 与 SwiGLU，训练语料约 12T，原生支持 512K 长上下文与可调思考预算，强化长文本生成、复杂推理与 Agent 工具调用，适用于企业检索、内容创作、流程自动化与研发评测等场景。",
+        "description": "Seed-OSS-36B-Base مدل زبانی علّی بزرگ و متن‌باز ByteDance است که از RoPE، توجه GQA، RMSNorm و SwiGLU استفاده می‌کند، پیکره آموزشی حدود 12T دارد، به‌طور بومی از context طولانی 512K و بودجه تفکر قابل تنظیم پشتیبانی می‌کند و تولید متن طولانی، استدلال پیچیده و فراخوانی ابزار Agent را تقویت کرده؛ مناسب برای بازیابی سازمانی، تولید محتوا، خودکارسازی فرایند و ارزیابی توسعه.",
         "modelTags": [
-            "文本生成",
-            "深度思考",
-            "工具调用"
+            "تولید متن",
+            "تفکر عمیق",
+            "فراخوانی ابزار"
         ],
         "contextWindow": 512,
         "maxGenerationTokenLength": 0,
         "relatedLinks": [
             {
-                "title": "Seed-OSS 官方开源仓库",
+                "title": "مخزن متن‌باز رسمی Seed-OSS",
                 "url": " https://github.com/ByteDance-Seed/seed-oss "
             },
             {
-                "title": "Seed-OSS Releases 页面",
+                "title": "صفحه Releases در Seed-OSS",
                 "url": " https://github.com/ByteDance-Seed/seed-oss/releases "
             }
         ]
     },
     {
         "modelName": "doubao-seed-code",
-        "company": "字节跳动",
-        "country": "中国",
-        "openSourceStatus": "闭源",
+        "company": "ByteDance",
+        "country": "چین",
+        "openSourceStatus": "متن‌بسته",
         "releaseDate": "2025-10-28",
-        "description": "Doubao‑Seed‑Code 是 Doubao Seed 系列代码增强模型，基于 Transformer/MoE 与多语言代码语料精调，原生 256K 上下文、最大输出可设 32K；兼具文本、图片与视频理解，支持思维链与工具调用。擅长代码生成、补全、重构与跨项目理解，适用于研发提效、单测生成、Bug 修复与开发文档编写。",
+        "description": "Doubao‑Seed‑Code مدل تقویت‌شده کد سری Doubao Seed است که بر پایه Transformer/MoE و تنظیم دقیق با پیکره کد چندزبانه ساخته شده، context بومی 256K و حداکثر خروجی قابل تنظیم تا 32K دارد؛ هم‌زمان فهم متن، تصویر و ویدئو دارد و از زنجیره فکر و فراخوانی ابزار پشتیبانی می‌کند. در تولید، تکمیل و بازسازی کد و فهم بین‌پروژه‌ای مهارت دارد و برای افزایش بهره‌وری توسعه، تولید تست واحد، رفع باگ و نوشتن مستندات توسعه مناسب است.",
         "modelTags": [
-            "代码增强",
-            "文本生成",
-            "深度思考",
-            "工具调用",
-            "视觉理解"
+            "تقویت کد",
+            "تولید متن",
+            "تفکر عمیق",
+            "فراخوانی ابزار",
+            "درک تصویر"
         ],
         "contextWindow": 256,
         "maxGenerationTokenLength": 32,
         "relatedLinks": [
             {
-                "title": "方舟模型列表（含 doubao-seed-code 规格）",
+                "title": "فهرست مدل‌های Ark (شامل مشخصات doubao-seed-code)",
                 "url": "https://www.volcengine.com/docs/82379/1330310"
             },
             {
-                "title": "豆包大模型产品页（Seed 系列介绍）",
+                "title": "صفحه محصول مدل بزرگ Doubao (معرفی سری Seed)",
                 "url": "https://www.volcengine.com/product/doubao"
             }
         ]
     },
     {
         "modelName": "doubao-seed-2.0-code",
-        "company": "字节跳动",
-        "country": "中国",
-        "openSourceStatus": "闭源",
+        "company": "ByteDance",
+        "country": "چین",
+        "openSourceStatus": "متن‌بسته",
         "releaseDate": "2026-02",
-        "description": "doubao-seed-2.0-code 是豆包 Seed 2.0 系列面向代码与 Agentic Coding 的专项模型，承接 Seed Code 的长上下文代码理解、重构、测试生成和工具调用能力，适合工程研发提效、仓库级分析、Bug 修复和自动化开发工作流。",
+        "description": "doubao-seed-2.0-code مدل تخصصی سری Doubao Seed 2.0 برای کد و Agentic Coding است که توانایی‌های فهم کد با context طولانی، بازسازی، تولید تست و فراخوانی ابزار Seed Code را ادامه می‌دهد؛ مناسب برای افزایش بهره‌وری توسعه مهندسی، تحلیل در سطح مخزن، رفع باگ و جریان‌های کاری توسعه خودکار.",
         "modelTags": [
-            "代码增强",
-            "文本生成",
-            "深度思考",
-            "工具调用"
+            "تقویت کد",
+            "تولید متن",
+            "تفکر عمیق",
+            "فراخوانی ابزار"
         ],
         "contextWindow": 256,
         "maxGenerationTokenLength": 32,
         "relatedLinks": [
             {
-                "title": "火山方舟模型列表（Doubao Seed 系列）",
+                "title": "فهرست مدل‌های Volcano Ark (سری Doubao Seed)",
                 "url": "https://www.volcengine.com/docs/82379/1330310"
             },
             {
-                "title": "豆包大模型产品页（Seed 系列）",
+                "title": "صفحه محصول مدل بزرگ Doubao (سری Seed)",
                 "url": "https://www.volcengine.com/product/doubao"
             }
         ],
@@ -80,53 +80,53 @@
     },
     {
         "modelName": "doubao-seed-1.6",
-        "company": "字节跳动",
-        "country": "中国",
-        "openSourceStatus": "闭源",
+        "company": "ByteDance",
+        "country": "چین",
+        "openSourceStatus": "متن‌بسته",
         "releaseDate": "2025-10-15",
-        "description": "Doubao‑Seed‑1.6 是字节跳动多模态通用模型，采用稀疏 MoE 与强化学习调优，原生 256K 上下文、224K 输入，最大回答可设 32K；支持思考/非思考/自动三种模式，兼容文本、图片与视频理解，具备工具调用与结构化输出，适用于复杂推理、长文档问答、GUI 操作与前端页面编程。",
+        "description": "Doubao‑Seed‑1.6 مدل عمومی چندوجهی ByteDance است که از MoE پراکنده و تنظیم با یادگیری تقویتی استفاده می‌کند، context بومی 256K، ورودی 224K و حداکثر پاسخ قابل تنظیم تا 32K دارد؛ از سه حالت تفکری/غیرتفکری/خودکار پشتیبانی می‌کند، با فهم متن، تصویر و ویدئو سازگار است و فراخوانی ابزار و خروجی ساختاریافته دارد؛ مناسب برای استدلال پیچیده، پرسش و پاسخ اسناد طولانی، کار با GUI و برنامه‌نویسی صفحات فرانت‌اند.",
         "modelTags": [
-            "文本生成",
-            "深度思考",
-            "视觉理解",
-            "工具调用"
+            "تولید متن",
+            "تفکر عمیق",
+            "درک تصویر",
+            "فراخوانی ابزار"
         ],
         "contextWindow": 256,
         "maxGenerationTokenLength": 32,
         "relatedLinks": [
             {
-                "title": "方舟产品简介（含 doubao-seed-1-6）",
+                "title": "معرفی محصول Ark (شامل doubao-seed-1-6)",
                 "url": "https://www.volcengine.com/docs/82379/1554681"
             },
             {
-                "title": "方舟模型列表（doubao-seed-1.6 推荐）",
+                "title": "فهرست مدل‌های Ark (پیشنهاد doubao-seed-1.6)",
                 "url": "https://www.volcengine.com/docs/82379/1330310"
             }
         ]
     },
     {
         "modelName": "doubao-seed-2.0-pro",
-        "company": "字节跳动",
-        "country": "中国",
-        "openSourceStatus": "闭源",
+        "company": "ByteDance",
+        "country": "چین",
+        "openSourceStatus": "متن‌بسته",
         "releaseDate": "2026-02-15",
-        "description": "doubao-seed-2.0-pro 是火山方舟/豆包 Seed 2.0 系列的高性能通用模型，官方模型列表和应用文档列出 seed-2-0-pro 版本，面向更强多模态理解、深度思考、代码与工具调用场景；适合复杂业务问答、长文档处理、智能体编排和企业级内容生成。",
+        "description": "doubao-seed-2.0-pro مدل عمومی با عملکرد بالای سری Volcano Ark/Doubao Seed 2.0 است؛ فهرست رسمی مدل‌ها و مستندات کاربرد نسخه seed-2-0-pro را فهرست کرده‌اند که برای فهم چندوجهی قوی‌تر، تفکر عمیق، کد و فراخوانی ابزار طراحی شده؛ مناسب برای پرسش و پاسخ کسب‌وکار پیچیده، پردازش اسناد طولانی، هماهنگ‌سازی عامل‌های هوشمند و تولید محتوای سازمانی.",
         "modelTags": [
-            "文本生成",
-            "深度思考",
-            "视觉理解",
-            "代码增强",
-            "工具调用"
+            "تولید متن",
+            "تفکر عمیق",
+            "درک تصویر",
+            "تقویت کد",
+            "فراخوانی ابزار"
         ],
         "contextWindow": 256,
         "maxGenerationTokenLength": 32,
         "relatedLinks": [
             {
-                "title": "火山方舟模型列表（Doubao Seed 系列）",
+                "title": "فهرست مدل‌های Volcano Ark (سری Doubao Seed)",
                 "url": "https://www.volcengine.com/docs/82379/1330310"
             },
             {
-                "title": "火山方舟工具概述（seed-2-0-pro 示例）",
+                "title": "نمای کلی ابزارهای Volcano Ark (نمونه seed-2-0-pro)",
                 "url": "https://www.volcengine.com/docs/82379/1267885"
             }
         ],
@@ -134,25 +134,25 @@
     },
     {
         "modelName": "doubao-seed-2.0-lite",
-        "company": "字节跳动",
-        "country": "中国",
-        "openSourceStatus": "闭源",
+        "company": "ByteDance",
+        "country": "چین",
+        "openSourceStatus": "متن‌بسته",
         "releaseDate": "2026-02-15",
-        "description": "doubao-seed-2.0-lite 是豆包 Seed 2.0 系列的轻量版本，火山方舟文档列出 seed-2-0-lite 模型，面向低延迟、高并发和成本敏感的通用生成、视觉理解与工具调用任务；适合客服、摘要、分类、检索问答和轻量智能体应用。",
+        "description": "doubao-seed-2.0-lite نسخه سبک سری Doubao Seed 2.0 است؛ مستندات Volcano Ark مدل seed-2-0-lite را فهرست کرده که برای وظایف تولید عمومی، فهم بصری و فراخوانی ابزار کم‌تأخیر، با هم‌روندی بالا و حساس به هزینه طراحی شده؛ مناسب برای پشتیبانی مشتری، خلاصه‌سازی، طبقه‌بندی، پرسش و پاسخ بازیابی و کاربردهای عامل هوشمند سبک.",
         "modelTags": [
-            "文本生成",
-            "视觉理解",
-            "工具调用"
+            "تولید متن",
+            "درک تصویر",
+            "فراخوانی ابزار"
         ],
         "contextWindow": 256,
         "maxGenerationTokenLength": 32,
         "relatedLinks": [
             {
-                "title": "火山方舟模型列表（Doubao Seed 系列）",
+                "title": "فهرست مدل‌های Volcano Ark (سری Doubao Seed)",
                 "url": "https://www.volcengine.com/docs/82379/1330310"
             },
             {
-                "title": "火山方舟工具概述（seed-2-0-lite 示例）",
+                "title": "نمای کلی ابزارهای Volcano Ark (نمونه seed-2-0-lite)",
                 "url": "https://www.volcengine.com/docs/82379/1267885"
             }
         ],
@@ -160,26 +160,26 @@
     },
     {
         "modelName": "doubao-seed-1.6-flash",
-        "company": "字节跳动",
-        "country": "中国",
-        "openSourceStatus": "闭源",
+        "company": "ByteDance",
+        "country": "چین",
+        "openSourceStatus": "متن‌بسته",
         "releaseDate": "2025-08-28",
-        "description": "Doubao‑Seed‑1.6‑Flash 面向实时推理场景优化，在保持多模态深度思考能力的同时，显著提升生成速度与时延稳定性。原生 256K 上下文、224K 输入，思维链上限 32K，最大输出可配 16K（默认 4K）。支持文本、图片与视频理解，提供 Function Calling、结构化输出与上下文缓存。适合教育切题、快速问答、长图文理解与高并发业务调用。",
+        "description": "Doubao‑Seed‑1.6‑Flash برای سناریوهای استنتاج بلادرنگ بهینه شده و ضمن حفظ توانایی تفکر عمیق چندوجهی، سرعت تولید و پایداری تأخیر را به‌طور محسوسی بهبود داده است. context بومی 256K، ورودی 224K، حد بالای زنجیره فکر 32K و حداکثر خروجی قابل تنظیم تا 16K (پیش‌فرض 4K). از فهم متن، تصویر و ویدئو پشتیبانی می‌کند و Function Calling، خروجی ساختاریافته و کش context ارائه می‌دهد. مناسب برای تحلیل سؤالات آموزشی، پرسش و پاسخ سریع، فهم تصویر و متن طولانی و فراخوانی‌های کسب‌وکار با هم‌روندی بالا.",
         "modelTags": [
-            "文本生成",
-            "深度思考",
-            "视觉理解",
-            "工具调用"
+            "تولید متن",
+            "تفکر عمیق",
+            "درک تصویر",
+            "فراخوانی ابزار"
         ],
         "contextWindow": 256,
         "maxGenerationTokenLength": 16,
         "relatedLinks": [
             {
-                "title": "doubao-seed-1.6-flash 官方规格与定价",
+                "title": "مشخصات و قیمت‌گذاری رسمی doubao-seed-1.6-flash",
                 "url": "https://www.volcengine.com/docs/82379/1593704"
             },
             {
-                "title": "方舟模型列表（含 Seed 系列）",
+                "title": "فهرست مدل‌های Ark (شامل سری Seed)",
                 "url": "https://www.volcengine.com/docs/82379/1330310"
             }
         ],
@@ -187,26 +187,26 @@
     },
     {
         "modelName": "doubao-seed-1.6-thinking",
-        "company": "字节跳动",
-        "country": "中国",
-        "openSourceStatus": "闭源",
+        "company": "ByteDance",
+        "country": "چین",
+        "openSourceStatus": "متن‌بسته",
         "releaseDate": "2025-07-15",
-        "description": "Doubao‑Seed‑1.6‑Thinking 在编程、数学、逻辑推理等基础能力上大幅增强，并新增视觉理解。原生 256K 上下文、224K 输入，思维链可达 32K；根据版本可配置最大回答 16K/32K（默认 4K）。支持 Function Calling、结构化输出与批量推理，适合复杂问题拆解、长文档问答、代码与数学习题求解、分析报告与流程规划等高可靠场景。",
+        "description": "Doubao‑Seed‑1.6‑Thinking در توانایی‌های پایه مثل برنامه‌نویسی، ریاضی و استدلال منطقی به‌شدت تقویت شده و فهم بصری نیز به آن افزوده شده است. context بومی 256K، ورودی 224K و زنجیره فکر تا 32K؛ بسته به نسخه حداکثر پاسخ 16K/32K قابل تنظیم است (پیش‌فرض 4K). از Function Calling، خروجی ساختاریافته و استنتاج دسته‌ای پشتیبانی می‌کند و برای سناریوهای با قابلیت اطمینان بالا مثل تجزیه مسائل پیچیده، پرسش و پاسخ اسناد طولانی، حل تمرین‌های کد و ریاضی، گزارش تحلیلی و برنامه‌ریزی فرایند مناسب است.",
         "modelTags": [
-            "文本生成",
-            "深度思考",
-            "视觉理解",
-            "工具调用"
+            "تولید متن",
+            "تفکر عمیق",
+            "درک تصویر",
+            "فراخوانی ابزار"
         ],
         "contextWindow": 256,
         "maxGenerationTokenLength": 32,
         "relatedLinks": [
             {
-                "title": "doubao-seed-1.6-thinking 官方规格与定价",
+                "title": "مشخصات و قیمت‌گذاری رسمی doubao-seed-1.6-thinking",
                 "url": "https://www.volcengine.com/docs/82379/1593703"
             },
             {
-                "title": "方舟模型列表（含 Seed 系列）",
+                "title": "فهرست مدل‌های Ark (شامل سری Seed)",
                 "url": "https://www.volcengine.com/docs/82379/1330310"
             }
         ],
@@ -214,24 +214,24 @@
     },
     {
         "modelName": "doubao-1.5-vision-lite",
-        "company": "字节跳动",
-        "country": "中国",
-        "openSourceStatus": "闭源",
+        "company": "ByteDance",
+        "country": "چین",
+        "openSourceStatus": "متن‌بسته",
         "releaseDate": "2025-03-15",
-        "description": "doubao-1.5-vision-lite 为成本优化的多模态模型，延续 Transformer 架构与图像理解能力，支持文本+图片输入，提供 128K 上下文；在日常图像分类、OCR、简单图文问答等任务表现稳定，适合轻量应用与批量处理场景。官方未公开最大输出 Token 限制。",
+        "description": "doubao-1.5-vision-lite مدل چندوجهی بهینه‌شده از نظر هزینه است که معماری Transformer و توانایی فهم تصویر را ادامه می‌دهد، از ورودی متن+تصویر پشتیبانی می‌کند و context با طول 128K ارائه می‌دهد؛ در وظایفی مثل طبقه‌بندی تصاویر روزمره، OCR و پرسش و پاسخ تصویری ساده پایدار عمل می‌کند و برای کاربردهای سبک و پردازش دسته‌ای مناسب است. حد حداکثر Token خروجی به‌طور رسمی اعلام نشده است.",
         "modelTags": [
-            "视觉理解",
-            "文本生成"
+            "درک تصویر",
+            "تولید متن"
         ],
         "contextWindow": 128,
         "maxGenerationTokenLength": 0,
         "relatedLinks": [
             {
-                "title": "方舟模型列表（含 Doubao 1.5 视觉系列）",
+                "title": "فهرست مدل‌های Ark (شامل سری بصری Doubao 1.5)",
                 "url": "https://www.volcengine.com/docs/82379/1330310"
             },
             {
-                "title": "豆包大模型产品页（Vision 系列介绍）",
+                "title": "صفحه محصول مدل بزرگ Doubao (معرفی سری Vision)",
                 "url": "https://www.volcengine.com/product/doubao"
             }
         ],
@@ -239,25 +239,25 @@
     },
     {
         "modelName": "doubao-1.5-vision-pro",
-        "company": "字节跳动",
-        "country": "中国",
-        "openSourceStatus": "闭源",
+        "company": "ByteDance",
+        "country": "چین",
+        "openSourceStatus": "متن‌بسته",
         "releaseDate": "2025-03-28",
-        "description": "doubao-1.5-vision-pro 是字节跳动豆包的多模态旗舰模型，基于 Transformer 与自研视觉增强，支持文本、图片与视频输入，提供 128K 上下文与可配置 16K 输出；在文档识别、复杂场景理解与细节问答上表现突出，适用于图文问答、视频解析、企业内容检索与智能质检等场景。",
+        "description": "doubao-1.5-vision-pro مدل پرچم‌دار چندوجهی Doubao از ByteDance است که بر پایه Transformer و تقویت بصری خودساخته ساخته شده، از ورودی متن، تصویر و ویدئو پشتیبانی می‌کند و context با طول 128K و خروجی قابل تنظیم 16K ارائه می‌دهد؛ در تشخیص اسناد، فهم صحنه‌های پیچیده و پرسش و پاسخ جزئیات برجسته است؛ مناسب برای پرسش و پاسخ تصویری، تحلیل ویدئو، بازیابی محتوای سازمانی و بازرسی کیفیت هوشمند.",
         "modelTags": [
-            "视觉理解",
-            "文本生成",
-            "工具调用"
+            "درک تصویر",
+            "تولید متن",
+            "فراخوانی ابزار"
         ],
         "contextWindow": 128,
         "maxGenerationTokenLength": 16,
         "relatedLinks": [
             {
-                "title": "方舟模型列表（doubao-1.5-vision-pro 规格）",
+                "title": "فهرست مدل‌های Ark (مشخصات doubao-1.5-vision-pro)",
                 "url": "https://www.volcengine.com/docs/82379/1330310"
             },
             {
-                "title": "豆包大模型产品页（Vision Pro 介绍）",
+                "title": "صفحه محصول مدل بزرگ Doubao (معرفی Vision Pro)",
                 "url": "https://www.volcengine.com/product/doubao"
             }
         ],
@@ -265,26 +265,26 @@
     },
     {
         "modelName": "doubao-1.5-thinking-vision-pro",
-        "company": "字节跳动",
-        "country": "中国",
-        "openSourceStatus": "闭源",
+        "company": "ByteDance",
+        "country": "چین",
+        "openSourceStatus": "متن‌بسته",
         "releaseDate": "2025-04-28",
-        "description": "doubao-1.5-thinking-vision-pro 面向复杂图文推理，结合深度思考控制与多步链路，支持文本+图片输入，提供 128K 上下文与 16K 输出；在数学题、代码解释、科学图表分析与多轮视觉推理上表现优异，适用于研究辅佐、合规审阅与企业智能分析等场景。",
+        "description": "doubao-1.5-thinking-vision-pro برای استدلال پیچیده تصویر و متن طراحی شده و کنترل تفکر عمیق را با زنجیره چندگامی ترکیب می‌کند، از ورودی متن+تصویر پشتیبانی می‌کند و context با طول 128K و خروجی 16K دارد؛ در مسائل ریاضی، توضیح کد، تحلیل نمودارهای علمی و استدلال بصری چنددوره‌ای عالی عمل می‌کند؛ مناسب برای کمک پژوهشی، بازبینی انطباق و تحلیل هوشمند سازمانی.",
         "modelTags": [
-            "视觉理解",
-            "深度思考",
-            "文本生成",
-            "工具调用"
+            "درک تصویر",
+            "تفکر عمیق",
+            "تولید متن",
+            "فراخوانی ابزار"
         ],
         "contextWindow": 128,
         "maxGenerationTokenLength": 16,
         "relatedLinks": [
             {
-                "title": "方舟模型列表（doubao-1.5-thinking-vision-pro 规格）",
+                "title": "فهرست مدل‌های Ark (مشخصات doubao-1.5-thinking-vision-pro)",
                 "url": "https://www.volcengine.com/docs/82379/1330310"
             },
             {
-                "title": "方舟体验平台：doubao-1.5-thinking-vision-pro-250428",
+                "title": "پلتفرم تجربه Ark: doubao-1.5-thinking-vision-pro-250428",
                 "url": "https://www.volcengine.com/experience/ark?model=doubao-1-5-thinking-vision-pro-250428"
             }
         ],
@@ -292,26 +292,26 @@
     },
     {
         "modelName": "doubao-1.5-thinking-pro",
-        "company": "字节跳动",
-        "country": "中国",
-        "openSourceStatus": "闭源",
+        "company": "ByteDance",
+        "country": "چین",
+        "openSourceStatus": "متن‌بسته",
         "releaseDate": "2025-04-28",
-        "description": "Doubao‑1.5‑Thinking‑Pro 是面向复杂推理的旗舰模型，采用 Transformer 与深度思考控制，支持 128K 上下文与文本/图片等多模态输入，具备 32K 链式思维与工具调用能力；在数学、编程、科学问答与创意写作表现突出，适合企业检索问答、代码分析与流程决策。",
+        "description": "Doubao‑1.5‑Thinking‑Pro مدل پرچم‌دار برای استدلال پیچیده است که از Transformer و کنترل تفکر عمیق استفاده می‌کند، از context با طول 128K و ورودی چندوجهی مثل متن/تصویر پشتیبانی می‌کند و زنجیره فکر 32K و توانایی فراخوانی ابزار دارد؛ در ریاضی، برنامه‌نویسی، پرسش و پاسخ علمی و نویسندگی خلاق برجسته است؛ مناسب برای پرسش و پاسخ بازیابی سازمانی، تحلیل کد و تصمیم‌گیری فرایند.",
         "modelTags": [
-            "文本生成",
-            "深度思考",
-            "视觉理解",
-            "工具调用"
+            "تولید متن",
+            "تفکر عمیق",
+            "درک تصویر",
+            "فراخوانی ابزار"
         ],
         "contextWindow": 128,
         "maxGenerationTokenLength": 16,
         "relatedLinks": [
             {
-                "title": "doubao-1.5-thinking-pro 官方规格与文档",
+                "title": "مشخصات و مستندات رسمی doubao-1.5-thinking-pro",
                 "url": "https://www.volcengine.com/docs/82379/1536428"
             },
             {
-                "title": "豆包大模型产品页",
+                "title": "صفحه محصول مدل بزرگ Doubao",
                 "url": "https://www.volcengine.com/product/doubao"
             }
         ],
@@ -319,24 +319,24 @@
     },
     {
         "modelName": "doubao-1.5-pro-256k",
-        "company": "字节跳动",
-        "country": "中国",
-        "openSourceStatus": "闭源",
+        "company": "ByteDance",
+        "country": "چین",
+        "openSourceStatus": "متن‌بسته",
         "releaseDate": "2025-01-15",
-        "description": "Doubao‑1.5‑Pro‑256k 是 1.5 Pro 的长上下文升级版，最大上下文 256K，输出可设 12K；基于 Transformer 与优化推理训练，在长文档摘要、信息抽取、检索问答与多轮对话中表现稳定，支持工具调用与流式输出，适合企业文档处理、知识库检索与批量内容生成。",
+        "description": "Doubao‑1.5‑Pro‑256k نسخه ارتقایافته context طولانی 1.5 Pro است با حداکثر context برابر 256K و خروجی قابل تنظیم 12K؛ بر پایه Transformer و آموزش استنتاج بهینه‌شده، در خلاصه اسناد طولانی، استخراج اطلاعات، پرسش و پاسخ بازیابی و گفتگوی چنددوره‌ای پایدار عمل می‌کند و از فراخوانی ابزار و خروجی جریانی پشتیبانی می‌کند؛ مناسب برای پردازش اسناد سازمانی، بازیابی پایگاه دانش و تولید محتوای دسته‌ای.",
         "modelTags": [
-            "文本生成",
-            "工具调用"
+            "تولید متن",
+            "فراخوانی ابزار"
         ],
         "contextWindow": 256,
         "maxGenerationTokenLength": 12,
         "relatedLinks": [
             {
-                "title": "doubao-1.5-pro-256k 官方规格与文档",
+                "title": "مشخصات و مستندات رسمی doubao-1.5-pro-256k",
                 "url": "https://www.volcengine.com/docs/82379/1554682"
             },
             {
-                "title": "火山方舟产品页",
+                "title": "صفحه محصول Volcano Ark",
                 "url": "https://www.volcengine.com/product/ark"
             }
         ],
@@ -344,24 +344,24 @@
     },
     {
         "modelName": "doubao-1.5-pro-32k",
-        "company": "字节跳动",
-        "country": "中国",
-        "openSourceStatus": "闭源",
+        "company": "ByteDance",
+        "country": "چین",
+        "openSourceStatus": "متن‌بسته",
         "releaseDate": "2025-01-15",
-        "description": "Doubao‑1.5‑Pro‑32k 属于豆包专业版系列，默认 32K 上下文，最新 250115 版本可扩展至 128K；支持最大 12K 输出、工具调用与上下文缓存，在参考问答、摘要、信息抽取与复杂流程编排上表现优秀，适用于内容生产、业务助手与自动化文本处理。",
+        "description": "Doubao‑1.5‑Pro‑32k عضو سری حرفه‌ای Doubao است با context پیش‌فرض 32K که نسخه جدید 250115 تا 128K قابل گسترش است؛ از حداکثر خروجی 12K، فراخوانی ابزار و کش context پشتیبانی می‌کند و در پرسش و پاسخ مرجع، خلاصه‌سازی، استخراج اطلاعات و هماهنگ‌سازی فرایندهای پیچیده عالی عمل می‌کند؛ مناسب برای تولید محتوا، دستیار کسب‌وکار و پردازش خودکار متن.",
         "modelTags": [
-            "文本生成",
-            "工具调用"
+            "تولید متن",
+            "فراخوانی ابزار"
         ],
         "contextWindow": 32,
         "maxGenerationTokenLength": 12,
         "relatedLinks": [
             {
-                "title": "doubao-1.5-pro-32k 官方规格与文档",
+                "title": "مشخصات و مستندات رسمی doubao-1.5-pro-32k",
                 "url": "https://www.volcengine.com/docs/82379/1554678"
             },
             {
-                "title": "火山方舟产品页",
+                "title": "صفحه محصول Volcano Ark",
                 "url": "https://www.volcengine.com/product/ark"
             }
         ],
@@ -369,23 +369,23 @@
     },
     {
         "modelName": "doubao-seedream-4.0",
-        "company": "字节跳动",
-        "country": "中国",
-        "openSourceStatus": "闭源",
+        "company": "ByteDance",
+        "country": "چین",
+        "openSourceStatus": "متن‌بسته",
         "releaseDate": "2025-09-11",
-        "description": "Doubao‑Seedream‑4.0 是 SOTA 级多模态图像创作模型，统一文生图与图像编辑能力，支持文本、单图与多图输入及组图生成；原生支持 1K/2K/4K 输出，最多一次生成 15 张关联图片，2K 成图速度提升至秒级；在文本渲染、复杂排版、主体一致性与美学质量方面显著增强，适用于商业设计、海报创作、电商营销与影视动漫等场景。",
+        "description": "Doubao‑Seedream‑4.0 مدل خلق تصویر چندوجهی در سطح SOTA است که تولید تصویر از متن و ویرایش تصویر را یکپارچه کرده، از ورودی متن، تک‌تصویر و چندتصویر و تولید مجموعه تصویر پشتیبانی می‌کند؛ به‌طور بومی از خروجی 1K/2K/4K پشتیبانی می‌کند، حداکثر ۱۵ تصویر مرتبط را یک‌جا تولید می‌کند و سرعت تولید تصویر 2K به چند ثانیه رسیده؛ در رندر متن، صفحه‌آرایی پیچیده، یکنواختی سوژه و کیفیت زیبایی‌شناختی به‌طور محسوسی تقویت شده و برای طراحی تجاری، خلق پوستر، بازاریابی فروشگاهی و فیلم و انیمیشن مناسب است.",
         "modelTags": [
-            "图片生成",
-            "视觉理解"
+            "تولید تصویر",
+            "درک تصویر"
         ],
         "maxOutputResolution": "4096x4096",
         "relatedLinks": [
             {
-                "title": "图片生成 API（Seedream 4.0，分辨率/能力/参数）",
+                "title": "API تولید تصویر (Seedream 4.0، وضوح/توانایی/پارامترها)",
                 "url": "https://www.volcengine.com/docs/82379/1541523"
             },
             {
-                "title": "开发者社区：Seedream 4.0 4K 超高清与组图创作介绍",
+                "title": "جامعه توسعه‌دهندگان: معرفی خلق فوق‌العاده باکیفیت 4K و مجموعه تصویر در Seedream 4.0",
                 "url": "https://developer.volcengine.com/articles/7551000460656967734"
             }
         ],
@@ -393,23 +393,23 @@
     },
     {
         "modelName": "doubao-seedream-3.0-t2i",
-        "company": "字节跳动",
-        "country": "中国",
-        "openSourceStatus": "闭源",
+        "company": "ByteDance",
+        "country": "چین",
+        "openSourceStatus": "متن‌بسته",
         "releaseDate": "2025-04-15",
-        "description": "Doubao‑Seedream‑3.0‑t2i 是中英双语文生图模型，支持原生高分辨率 2K 输出，响应更快；在小字生成、文本排版与指令遵循上的表现显著提升，综合能力接近 GPT‑4o；支持多比例与 JPEG 输出，适合商业海报、产品设计、插画与社媒素材自动化生成。上下文与最大输出 Token 限制官方未公开。",
+        "description": "Doubao‑Seedream‑3.0‑t2i مدل دوزبانه چینی-انگلیسی تولید تصویر از متن است که از خروجی بومی با وضوح بالای 2K پشتیبانی می‌کند و پاسخ سریع‌تری دارد؛ در تولید متن کوچک، صفحه‌آرایی متن و پیروی از دستور به‌طور محسوسی بهبود یافته و توانایی کلی آن به GPT‑4o نزدیک است؛ از چند نسبت ابعاد و خروجی JPEG پشتیبانی می‌کند و برای تولید خودکار پوستر تجاری، طراحی محصول، تصویرسازی و محتوای شبکه‌های اجتماعی مناسب است. حدود context و حداکثر Token خروجی به‌طور رسمی اعلام نشده‌اند.",
         "modelTags": [
-            "图片生成",
-            "视觉理解"
+            "تولید تصویر",
+            "درک تصویر"
         ],
         "maxOutputResolution": "2048x2048",
         "relatedLinks": [
             {
-                "title": "Seedream 3.0 文生图（模型介绍与规格：2K、价格、IPM）",
+                "title": "تولید تصویر از متن Seedream 3.0 (معرفی و مشخصات مدل: 2K، قیمت، IPM)",
                 "url": "https://www.volcengine.com/docs/82379/1555133"
             },
             {
-                "title": "图片生成 API（Seedream 4.0/3.0/SeedEdit 的 size 参数与范围）",
+                "title": "API تولید تصویر (پارامتر size و بازه آن در Seedream 4.0/3.0/SeedEdit)",
                 "url": "https://www.volcengine.com/docs/82379/1541523"
             }
         ],
@@ -417,23 +417,23 @@
     },
     {
         "modelName": "doubao-seededit-3.0-i2i",
-        "company": "字节跳动",
-        "country": "中国",
-        "openSourceStatus": "闭源",
+        "company": "ByteDance",
+        "country": "چین",
+        "openSourceStatus": "متن‌بسته",
         "releaseDate": "2025-06-28",
-        "description": "Doubao‑SeedEdit‑3.0‑i2i 为图像编辑模型，基于 Seedream 3.0 训练并加入数据融合与奖励模型，擅长在编辑区域精细处理同时保持主体与背景细节；支持文本驱动的风格替换、背景更改、视角与光线转换等，输出 JPEG，适用于人像修饰、商品图改造与视觉设计迭代。",
+        "description": "Doubao‑SeedEdit‑3.0‑i2i مدل ویرایش تصویر است که بر پایه Seedream 3.0 آموزش دیده و ادغام داده و مدل پاداش به آن افزوده شده؛ در پردازش دقیق ناحیه ویرایش با حفظ جزئیات سوژه و پس‌زمینه مهارت دارد؛ از جایگزینی سبک، تغییر پس‌زمینه و تغییر زاویه دید و نور با هدایت متن پشتیبانی می‌کند، خروجی JPEG دارد و برای روتوش چهره، بازسازی تصاویر محصول و تکرار طراحی بصری مناسب است.",
         "modelTags": [
-            "图片生成",
-            "视觉理解"
+            "تولید تصویر",
+            "درک تصویر"
         ],
         "maxOutputResolution": "1536x1536",
         "relatedLinks": [
             {
-                "title": "SeedEdit 3.0 图生图模型介绍（价格 0.30 元/张，500 IPM）",
+                "title": "معرفی مدل تصویر به تصویر SeedEdit 3.0 (قیمت ۰٫۳۰ یوان برای هر تصویر، 500 IPM)",
                 "url": "https://www.volcengine.com/docs/82379/1729477"
             },
             {
-                "title": "图片生成 API（SeedEdit 3.0 i2i adaptive 尺寸与预设分辨率）",
+                "title": "API تولید تصویر (اندازه adaptive و وضوح‌های پیش‌تنظیم SeedEdit 3.0 i2i)",
                 "url": "https://www.volcengine.com/docs/82379/1541523"
             }
         ],
@@ -441,23 +441,23 @@
     },
     {
         "modelName": "doubao-seedream-2.0-t2i",
-        "company": "字节跳动",
-        "country": "中国",
-        "openSourceStatus": "闭源",
+        "company": "ByteDance",
+        "country": "چین",
+        "openSourceStatus": "متن‌بسته",
         "releaseDate": "2025-03-10",
-        "description": "Doubao‑Seedream‑2.0‑t2i 是原生中英双语文生图模型，采用 DiT 扩散架构并引入自研双语文本编码器与字形对齐 ByT5，结合 Scaled ROPE 与多阶段 SFT/RLHF；支持高质量文字渲染与审美构图，适用于海报设计、品牌素材与中文文化元素生成。上下文与最大输出 Token 限制官方未公开。",
+        "description": "Doubao‑Seedream‑2.0‑t2i مدل دوزبانه بومی چینی-انگلیسی تولید تصویر از متن است که از معماری انتشاری DiT استفاده کرده و رمزگذار متنی دوزبانه خودساخته و ByT5 هم‌ترازشده با شکل حروف را معرفی کرده و با Scaled ROPE و SFT/RLHF چندمرحله‌ای همراه است؛ از رندر متن باکیفیت و ترکیب‌بندی زیبایی‌شناختی پشتیبانی می‌کند و برای طراحی پوستر، محتوای برند و تولید عناصر فرهنگی چینی مناسب است. حدود context و حداکثر Token خروجی به‌طور رسمی اعلام نشده‌اند.",
         "modelTags": [
-            "图片生成",
-            "视觉理解"
+            "تولید تصویر",
+            "درک تصویر"
         ],
         "maxOutputResolution": "1024x1024",
         "relatedLinks": [
             {
-                "title": "Seedream 2.0 技术报告发布（上线时间与能力概述）",
+                "title": "انتشار گزارش فنی Seedream 2.0 (زمان عرضه و نمای کلی توانایی‌ها)",
                 "url": "https://seed.bytedance.com/en/blog/doubao-text-to-image-technical-report-released-full-disclosure-of-data-processing-pre-training-and-rlhf-workflow"
             },
             {
-                "title": "Seedream 2.0 技术报告（arXiv 2503.07703）",
+                "title": "گزارش فنی Seedream 2.0 (arXiv 2503.07703)",
                 "url": "https://arxiv.org/abs/2503.07703"
             }
         ],
@@ -465,51 +465,51 @@
     },
     {
         "modelName": "Seedance 1.0",
-        "company": "字节跳动",
-        "country": "中国",
-        "openSourceStatus": "闭源",
+        "company": "ByteDance",
+        "country": "چین",
+        "openSourceStatus": "متن‌بسته",
         "releaseDate": "2025-06-11",
-        "description": "Seedance 1.0 是字节跳动 Seed 团队推出的视频生成基础模型，采用高效扩散建模与多源数据精准标注，融合多任务建模与交错多模态位置编码；原生支持多镜头叙事与图文到视频，结合细粒度 SFT 与视频特化 RLHF，并通过多阶段蒸馏与系统级优化实现 10× 推理加速，5 秒 1080P 约 41.4 秒生成，适用于广告创作、短片分镜与社媒内容。",
+        "description": "Seedance 1.0 مدل پایه تولید ویدئوی تیم Seed از ByteDance است که از مدل‌سازی انتشاری کارآمد و برچسب‌گذاری دقیق داده‌های چندمنبعی استفاده می‌کند و مدل‌سازی چندوظیفه‌ای و کدگذاری موقعیت چندوجهی درهم‌تنیده را ترکیب می‌کند؛ به‌طور بومی از روایت چندنمایی و تبدیل تصویر و متن به ویدئو پشتیبانی می‌کند، با SFT ریزدانه و RLHF ویژه ویدئو همراه است و با تقطیر چندمرحله‌ای و بهینه‌سازی در سطح سیستم شتاب استنتاج ۱۰ برابری دارد؛ تولید ویدئوی ۵ ثانیه‌ای 1080P حدود ۴۱٫۴ ثانیه طول می‌کشد؛ مناسب برای خلق تبلیغات، استوری‌بورد فیلم کوتاه و محتوای شبکه‌های اجتماعی.",
         "modelTags": [
-            "视频生成"
+            "تولید ویدئو"
         ],
         "outputImageMaxResolution": "1080P",
         "maxGenerationVideoDuration": "10",
         "relatedLinks": [
             {
-                "title": "Seedance 1.0 模型主页（含完整技术报告）",
+                "title": "صفحه اصلی مدل Seedance 1.0 (شامل گزارش فنی کامل)",
                 "url": "https://seed.bytedance.com/en/seedance"
             },
             {
-                "title": "Seedance 1.0 技术报告（Publications）",
+                "title": "گزارش فنی Seedance 1.0 (Publications)",
                 "url": "https://seed.bytedance.com/en/public_papers/seedance-1-0-exploring-the-boundaries-of-video-generation-models"
             },
             {
-                "title": "Seed 团队博客：Seedance 1.0 技术报告公开",
+                "title": "وبلاگ تیم Seed: انتشار عمومی گزارش فنی Seedance 1.0",
                 "url": "https://seed.bytedance.com/en/blog/tech-report-of-seedance-1-0-is-now-publicly-available"
             }
         ]
     },
     {
         "modelName": "Seedance 2.0",
-        "company": "字节跳动",
-        "country": "中国",
-        "openSourceStatus": "闭源",
+        "company": "ByteDance",
+        "country": "چین",
+        "openSourceStatus": "متن‌بسته",
         "releaseDate": "2026-02-12",
-        "description": "Seedance 2.0 是字节跳动 Seed 团队推出的新一代视频创作模型，采用统一多模态音视频联合生成架构，支持文本、图像、音频和视频四类输入；相比 1.5 版本显著提升复杂交互与运动场景可用率、物理准确性、真实感和可控性，支持最多 9 张图片、3 段视频、3 段音频与自然语言指令混合输入，并可生成 15 秒高质量多镜头音视频输出，适用于影视分镜、广告创意、视频续写编辑、复杂动作叙事和专业音画内容生产。",
+        "description": "Seedance 2.0 نسل جدید مدل خلق ویدئوی تیم Seed از ByteDance است که از معماری یکپارچه تولید مشترک صدا و تصویر چندوجهی استفاده می‌کند و از چهار نوع ورودی متن، تصویر، صدا و ویدئو پشتیبانی می‌کند؛ نسبت به نسخه 1.5 نرخ قابل استفاده بودن در سناریوهای تعامل و حرکت پیچیده، دقت فیزیکی، واقع‌گرایی و کنترل‌پذیری را به‌طور محسوسی بهبود داده، از ورودی ترکیبی حداکثر ۹ تصویر، ۳ ویدئو، ۳ صدا و دستور زبان طبیعی پشتیبانی می‌کند و می‌تواند خروجی صوتی-تصویری چندنمایی باکیفیت ۱۵ ثانیه‌ای تولید کند؛ مناسب برای استوری‌بورد فیلم، خلاقیت تبلیغاتی، ادامه و ویرایش ویدئو، روایت حرکات پیچیده و تولید حرفه‌ای محتوای صوتی-تصویری.",
         "modelTags": [
-            "视频生成",
-            "音频处理"
+            "تولید ویدئو",
+            "پردازش صدا"
         ],
-        "outputImageMaxResolution": "官方未公开",
+        "outputImageMaxResolution": "به‌طور رسمی اعلام نشده",
         "maxGenerationVideoDuration": "15",
         "relatedLinks": [
             {
-                "title": "Seedance 2.0 模型主页",
+                "title": "صفحه اصلی مدل Seedance 2.0",
                 "url": "https://seed.bytedance.com/en/seedance2_0"
             },
             {
-                "title": "Seedance 2.0 官方发布博客",
+                "title": "وبلاگ رسمی انتشار Seedance 2.0",
                 "url": "https://seed.bytedance.com/en/blog/seedance-2-0-official-launch"
             }
         ],

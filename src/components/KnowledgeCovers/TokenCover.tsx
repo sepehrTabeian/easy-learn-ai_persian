@@ -1,22 +1,22 @@
 /**
- * Token 封面
+ * جلد Token
  *
- * 隐喻：「1 个英文词 ≠ 1 个 token」。一行「strawberry」被两条裁切线切成 3 块，
- *       每块下面挂一个 token id 号码。
+ * استعاره: «۱ کلمه انگلیسی ≠ ۱ token». یک خط «strawberry» با دو خط برش به ۳ قطعه تقسیم شده،
+ *       زیر هر قطعه یک شماره token id آویزان است.
  *
- * 视觉构图（viewBox 320×200）：
- *   - 中上：「strawberry」一整词（display 字体，cream 描边背景），两条 dashed 切线穿过
- *   - 中下：3 个色块 token：「str」（butter）、「aw」（coral）、「berry」（teal），
- *           每块下方一个 mono id 数字
- *   - 右上：印章「1 → 3 tokens」（pop 色）
- *   - 左下：BPE / vocab 199,997 小标签
- *   - 左上：剪刀小标
+ * ترکیب‌بندی بصری (viewBox 320×200):
+ *   - بالا وسط: کل کلمه «strawberry» (فونت display، پس‌زمینه با حاشیه cream)، دو خط برش dashed از آن عبور می‌کنند
+ *   - پایین وسط: ۳ بلوک رنگی token: «str» (butter)، «aw» (coral)، «berry» (teal)،
+ *           زیر هر بلوک یک عدد id با mono
+ *   - بالا-راست: مهر «1 → 3 tokens» (رنگ pop)
+ *   - پایین-چپ: برچسب کوچک BPE / vocab 199,997
+ *   - بالا-چپ: برچسب کوچک قیچی
  *
- * 跟 NlpCover 区分点：
- *   ─ Nlp 主图是「输入框 → 5 个 token → 向量柱 → y」，整链路
- *   ─ Token 主图聚焦「单词被切」这一动作 —— 1 个英文词被切成 3 块 + 各自 id
+ * نکات تمایز با NlpCover:
+ *   ─ تصویر اصلی Nlp «کادر ورودی ← ۵ token ← ستون بردار ← y» است، یعنی کل زنجیره
+ *   ─ تصویر اصلی Token روی عمل «بریده شدن کلمه» تمرکز دارد —— ۱ کلمه انگلیسی به ۳ قطعه بریده می‌شود + id هر کدام
  *
- * hover：3 个色块依次上下错位（mimic 切开后散落），切线 dash 流动加速。
+ * hover: ۳ بلوک رنگی به ترتیب بالا و پایین جابه‌جا می‌شوند (mimic پخش شدن پس از برش)، dash روان خطوط برش سریع‌تر می‌شود.
  */
 import React from "react";
 import CoverShell from "./CoverShell";
@@ -30,7 +30,7 @@ const PIECES: { text: string; tone: string; textColor: string; id: string }[] = 
 const TokenCover: React.FC = () => {
   return (
     <CoverShell bgClassName="bg-cream" dotOpacity={0.08}>
-      {/* 右上：印章 1 → 3 tokens */}
+      {/* بالا-راست: مهر 1 → 3 tokens */}
       <g
         transform="translate(280,28) rotate(8)"
         className="origin-center transition-transform duration-500 group-hover:rotate-[-4deg] group-hover:scale-110"
@@ -59,7 +59,7 @@ const TokenCover: React.FC = () => {
         </text>
       </g>
 
-      {/* 左下：BPE 标签 */}
+      {/* پایین-چپ: برچسب BPE */}
       <g transform="translate(28,178) rotate(-3)" className="origin-left">
         <rect
           x="-3"
@@ -85,7 +85,7 @@ const TokenCover: React.FC = () => {
         </text>
       </g>
 
-      {/* 左上：剪刀 icon（手写 SVG，避免依赖 lucide） */}
+      {/* بالا-چپ: icon قیچی (SVG دست‌نویس، برای پرهیز از وابستگی به lucide) */}
       <g
         transform="translate(36,40) rotate(-12)"
         className="origin-center transition-transform duration-500 group-hover:rotate-[4deg]"
@@ -96,9 +96,9 @@ const TokenCover: React.FC = () => {
         <line x1="0" y1="6" x2="14" y2="2" stroke="#241C15" strokeWidth="1.6" strokeLinecap="round" />
       </g>
 
-      {/* 中上：「strawberry」整词 + 两条切线 */}
+      {/* بالا وسط: کل کلمه «strawberry» + دو خط برش */}
       <g transform="translate(160,80)">
-        {/* 背景白条 */}
+        {/* نوار سفید پس‌زمینه */}
         <rect
           x="-110"
           y="-22"
@@ -109,7 +109,7 @@ const TokenCover: React.FC = () => {
           stroke="#241C15"
           strokeWidth="2"
         />
-        {/* 词 */}
+        {/* کلمه */}
         <text
           x="0"
           y="7"
@@ -122,7 +122,7 @@ const TokenCover: React.FC = () => {
         >
           strawberry
         </text>
-        {/* 两条切线（位置匹配 str|aw|berry 边界） */}
+        {/* دو خط برش (موقعیت مطابق مرزهای str|aw|berry) */}
         <line
           x1="-46"
           y1="-30"
@@ -147,7 +147,7 @@ const TokenCover: React.FC = () => {
         />
       </g>
 
-      {/* 切线 → 切块 之间的小箭头 */}
+      {/* فلش کوچک بین خط برش ← قطعه */}
       <g>
         <line
           x1="160"
@@ -162,11 +162,11 @@ const TokenCover: React.FC = () => {
         <polygon points="157,121 163,121 160,127" fill="#241C15" />
       </g>
 
-      {/* 中下：3 个色块 token + id */}
+      {/* پایین وسط: ۳ بلوک رنگی token + id */}
       {PIECES.map((p, i) => {
         const totalWidth = 200;
         const gap = 8;
-        const widthMap = [44, 36, 76]; // str / aw / berry · 按字符宽度
+        const widthMap = [44, 36, 76]; // str / aw / berry · بر اساس عرض کاراکتر
         let xOffset = -totalWidth / 2;
         for (let j = 0; j < i; j++) xOffset += widthMap[j] + gap;
         const x = 160 + xOffset + widthMap[i] / 2;
@@ -177,7 +177,7 @@ const TokenCover: React.FC = () => {
             className="origin-center transition-transform duration-500 group-hover:translate-y-1"
             style={{ transitionDelay: `${i * 80}ms` } as React.CSSProperties}
           >
-            {/* token 块 */}
+            {/* بلوک token */}
             <rect
               x={-widthMap[i] / 2}
               y={-14}
@@ -199,7 +199,7 @@ const TokenCover: React.FC = () => {
             >
               {p.text}
             </text>
-            {/* id 数字 */}
+            {/* عدد id */}
             <text
               x="0"
               y="29"
@@ -216,7 +216,7 @@ const TokenCover: React.FC = () => {
         );
       })}
 
-      {/* 底部 caption */}
+      {/* caption پایین */}
       <text
         x="160"
         y="194"
@@ -226,7 +226,7 @@ const TokenCover: React.FC = () => {
         fill="#88837C"
         letterSpacing="0.5"
       >
-        1 word ≠ 1 token · 子词才是模型读到的最小单位
+        1 word ≠ 1 token · زیرکلمه کوچک‌ترین واحدی است که مدل می‌خواند
       </text>
     </CoverShell>
   );

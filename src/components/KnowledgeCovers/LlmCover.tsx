@@ -1,16 +1,16 @@
 /**
- * LLM 封面
+ * جلد LLM
  *
- * 隐喻：大模型 = 一个被海量神经元填满的「脑」，左侧吃 token、右侧吐 token。
+ * استعاره: مدل بزرگ = یک «مغز» پر از نورون‌های بی‌شمار که از چپ token می‌خورد و از راست token بیرون می‌دهد.
  *
- * 视觉构图（viewBox 320×200）：
- *   - 中央大圆 = 脑（白底 / ink 描边 / 内置 8×8 神经元点阵 + coral 高亮）
- *   - 左侧 4 个 mono token 方块（"轻 松 理 解"） →  脑
- *   - 脑  → 右侧 4 个 token 方块（"L L M ✦"）
- *   - 上方一条 coral 弧（表示 attention 流）
- *   - 装饰：右上 sparkle、左下小方块
+ * ترکیب‌بندی بصری (viewBox 320×200):
+ *   - دایره بزرگ مرکزی = مغز (پس‌زمینه سفید / حاشیه ink / ماتریس نقطه‌ای نورون 8×8 داخلی + هایلایت coral)
+ *   - ۴ مربع token با فونت mono در چپ ("درک آسان هوش مصنوعی") ←  مغز
+ *   - مغز ← ۴ مربع token در راست ("L L M ✦"）
+ *   - یک کمان coral در بالا (نشان‌دهنده جریان attention)
+ *   - تزئین: sparkle بالا-راست، مربع کوچک پایین-چپ
  *
- * hover 行为：脑外圈 ring 微微扩散；左右 token 各往中心位移 2px。
+ * رفتار hover: حلقه بیرونی مغز کمی گسترش می‌یابد؛ tokenهای چپ و راست هر کدام 2px به سمت مرکز جابه‌جا می‌شوند.
  */
 import React from "react";
 import CoverShell from "./CoverShell";
@@ -18,7 +18,7 @@ import CoverShell from "./CoverShell";
 const LlmCover: React.FC = () => {
   return (
     <CoverShell bgClassName="bg-butter" dotOpacity={0.07}>
-      {/* 上方装饰弧 —— attention 流 */}
+      {/* کمان تزئینی بالا —— جریان attention */}
       <path
         d="M 30 30 Q 160 -8 290 30"
         stroke="#E07A5F"
@@ -29,7 +29,7 @@ const LlmCover: React.FC = () => {
         opacity="0.55"
       />
 
-      {/* 装饰：右上 sparkle */}
+      {/* تزئین: sparkle بالا-راست */}
       <g transform="translate(285,28) rotate(15)" className="origin-center transition-transform duration-700 group-hover:rotate-45">
         <path
           d="M 0 -8 L 1.5 -1.5 L 8 0 L 1.5 1.5 L 0 8 L -1.5 1.5 L -8 0 L -1.5 -1.5 Z"
@@ -39,18 +39,18 @@ const LlmCover: React.FC = () => {
         />
       </g>
 
-      {/* 装饰：左下小方块 */}
+      {/* تزئین: مربع کوچک پایین-چپ */}
       <g transform="translate(30,170) rotate(-12)" className="origin-center transition-transform duration-500 group-hover:-rotate-2">
         <rect x="-5" y="-5" width="10" height="10" rx="2" fill="#1B4B5A" stroke="#241C15" strokeWidth="1.5" />
       </g>
 
-      {/* 左侧输入 token 串 */}
+      {/* رشته token ورودی در چپ */}
       <g className="transition-transform duration-500 ease-out group-hover:translate-x-1">
         {[
-          { y: 50, label: "轻" },
-          { y: 82, label: "松" },
-          { y: 114, label: "理" },
-          { y: 146, label: "解" },
+          { y: 50, label: "درک" },
+          { y: 82, label: "آسان" },
+          { y: 114, label: "هوش" },
+          { y: 146, label: "مصنوعی" },
         ].map((t, i) => (
           <g key={`in-${i}`} transform={`translate(30, ${t.y})`}>
             <rect
@@ -74,15 +74,15 @@ const LlmCover: React.FC = () => {
             >
               {t.label}
             </text>
-            {/* 连接到脑的细线 */}
+            {/* خطوط باریک متصل به مغز */}
             <line x1="34" y1="0" x2="105" y2="100" stroke="#241C15" strokeWidth="0.8" opacity="0.22" />
           </g>
         ))}
       </g>
 
-      {/* 中央：脑 */}
+      {/* مرکز: مغز */}
       <g transform="translate(160,100)">
-        {/* hover 时的扩散环 */}
+        {/* حلقه گسترش در hover */}
         <circle
           cx="0"
           cy="0"
@@ -94,21 +94,21 @@ const LlmCover: React.FC = () => {
           className="transition-all duration-500 group-hover:opacity-60 group-hover:r-[58]"
           style={{ transformOrigin: "center" }}
         />
-        {/* 主圆 */}
+        {/* دایره اصلی */}
         <circle cx="0" cy="0" r="46" fill="#FFFFFF" stroke="#241C15" strokeWidth="2.5" />
-        {/* clipPath 限定神经元矩阵在圆内 */}
+        {/* clipPath ماتریس نورون را درون دایره محدود می‌کند */}
         <defs>
           <clipPath id="llm-brain-clip">
             <circle cx="0" cy="0" r="42" />
           </clipPath>
         </defs>
         <g clipPath="url(#llm-brain-clip)">
-          {/* 8 列 × 8 行神经元 */}
+          {/* ۸ ستون × ۸ ردیف نورون */}
           {Array.from({ length: 8 }).flatMap((_, i) =>
             Array.from({ length: 8 }).map((_, j) => {
               const x = -42 + i * 12 + 6;
               const y = -42 + j * 12 + 6;
-              /* 用确定哈希挑出几个高亮点，避免每次渲染抖动 */
+              /* با هش قطعی چند نقطه هایلایت انتخاب می‌شوند تا در هر رندر نلرزند */
               const seed = (i * 31 + j * 17) % 13;
               const highlight = seed === 1 || seed === 5 || seed === 9;
               const med = seed === 3 || seed === 7;
@@ -125,7 +125,7 @@ const LlmCover: React.FC = () => {
             }),
           )}
         </g>
-        {/* 标签 LLM */}
+        {/* برچسب LLM */}
         <rect
           x="-22"
           y="34"
@@ -150,16 +150,16 @@ const LlmCover: React.FC = () => {
         </text>
       </g>
 
-      {/* 右侧输出 token 串 */}
+      {/* رشته token خروجی در راست */}
       <g className="transition-transform duration-500 ease-out group-hover:-translate-x-1">
         {[
-          { y: 50, label: "看", tone: "ink" },
-          { y: 82, label: "得", tone: "ink" },
-          { y: 114, label: "懂", tone: "coral" },
+          { y: 50, label: "قابل", tone: "ink" },
+          { y: 82, label: "فهم", tone: "ink" },
+          { y: 114, label: "و", tone: "coral" },
           { y: 146, label: "！", tone: "ink" },
         ].map((t, i) => (
           <g key={`out-${i}`} transform={`translate(258, ${t.y})`}>
-            {/* 连接到脑的细线 */}
+            {/* خطوط باریک متصل به مغز */}
             <line x1="-3" y1="0" x2="-58" y2="0" stroke="#241C15" strokeWidth="0.8" opacity="0.22" />
             <rect
               x="0"

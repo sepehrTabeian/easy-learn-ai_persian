@@ -80,7 +80,7 @@ export default function LoraRankCover() {
           rank →
         </text>
         <text x="36" y="60" fontFamily="Geist Mono, monospace" fontSize="9" fill="#88837C">
-          表达力
+          رسا
         </text>
       </svg>
     </CoverShell>

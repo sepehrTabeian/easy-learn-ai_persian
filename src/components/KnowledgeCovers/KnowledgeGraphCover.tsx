@@ -2,11 +2,11 @@ import React from "react";
 import CoverShell from "./CoverShell";
 
 const nodes = [
-  { x: 62, y: 62, label: "人", fill: "#F4D35E" },
-  { x: 162, y: 48, label: "公司", fill: "#E07A5F" },
-  { x: 246, y: 91, label: "项目", fill: "#F4D35E" },
-  { x: 110, y: 145, label: "城市", fill: "#1B4B5A" },
-  { x: 222, y: 153, label: "产品", fill: "#7A28CB" },
+  { x: 62, y: 62, label: "شخص", fill: "#F4D35E" },
+  { x: 162, y: 48, label: "شرکت", fill: "#E07A5F" },
+  { x: 246, y: 91, label: "پروژه", fill: "#F4D35E" },
+  { x: 110, y: 145, label: "شهر", fill: "#1B4B5A" },
+  { x: 222, y: 153, label: "محصول", fill: "#7A28CB" },
 ];
 
 const KnowledgeGraphCover: React.FC = () => (
@@ -18,7 +18,7 @@ const KnowledgeGraphCover: React.FC = () => (
       {nodes.map((node) => (
         <g key={node.label}>
           <circle cx={node.x} cy={node.y} r="25" fill={node.fill} stroke="#241C15" strokeWidth="2.5" />
-          <text x={node.x} y={node.y + 4} textAnchor="middle" fontFamily="Plus Jakarta Sans, Noto Sans SC, sans-serif" fontSize="11" fontWeight="800" fill={node.fill === "#1B4B5A" || node.fill === "#7A28CB" || node.fill === "#E07A5F" ? "#FBEFE3" : "#241C15"}>{node.label}</text>
+          <text x={node.x} y={node.y + 4} textAnchor="middle" fontFamily="Plus Jakarta Sans, Vazirmatn, sans-serif" fontSize="11" fontWeight="800" fill={node.fill === "#1B4B5A" || node.fill === "#7A28CB" || node.fill === "#E07A5F" ? "#FBEFE3" : "#241C15"}>{node.label}</text>
         </g>
       ))}
     </g>

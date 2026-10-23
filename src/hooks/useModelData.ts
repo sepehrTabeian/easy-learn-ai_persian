@@ -1,6 +1,6 @@
 /**
- * 模型数据管理的自定义 Hook
- * 封装模型列表数据获取、搜索、筛选、排序和分组逻辑
+ * Hook سفارشی مدیریت داده مدل
+ * منطق دریافت، جستجو، فیلتر، مرتب‌سازی و گروه‌بندی داده فهرست مدل‌ها را کپسوله می‌کند
  */
 
 import { useState, useEffect, useMemo } from 'react';
@@ -9,7 +9,7 @@ import { modelApiUtils } from '../utils/modelApi';
 import toast from 'react-hot-toast';
 
 /**
- * Hook: 获取模型列表
+ * Hook: دریافت فهرست مدل‌ها
  */
 export const useModelList = () => {
   const [modelList, setModelList] = useState<AIModel[]>([]);
@@ -21,14 +21,14 @@ export const useModelList = () => {
       try {
         setLoading(true);
         setError(null);
-        console.log('开始获取模型列表...');
+        console.log('شروع دریافت فهرست مدل‌ها...');
         
         const data = await modelApiUtils.fetchModelList();
-        console.log('获取到模型数据:', data.length, '个模型');
+        console.log('داده مدل‌ها دریافت شد:', data.length, 'مدل');
         
         setModelList(data);
       } catch (error) {
-        const errorMessage = error instanceof Error ? error.message : '未知错误';
+        const errorMessage = error instanceof Error ? error.message : 'خطای ناشناخته';
         setError(errorMessage);
         toast.error(errorMessage);
         console.error('Failed to load model list:', error);
@@ -44,7 +44,7 @@ export const useModelList = () => {
 };
 
 /**
- * Hook: 模型搜索和筛选
+ * Hook: جستجو و فیلتر مدل
  */
 export const useModelFilters = (modelList: AIModel[]) => {
   const [filters, setFilters] = useState<ModelFilters>({
@@ -54,14 +54,14 @@ export const useModelFilters = (modelList: AIModel[]) => {
     selectedOpenSourceStatus: [],
   });
 
-  // 获取所有公司列表
+  // دریافت فهرست همه شرکت‌ها
   const allCompanies = useMemo(() => {
     const companies = new Set<string>();
     modelList.forEach(model => companies.add(model.company));
     return Array.from(companies).sort();
   }, [modelList]);
 
-  // 获取所有标签列表
+  // دریافت فهرست همه برچسب‌ها
   const allTags = useMemo(() => {
     const tags = new Set<string>();
     modelList.forEach(model => {
@@ -70,16 +70,16 @@ export const useModelFilters = (modelList: AIModel[]) => {
     return Array.from(tags).sort();
   }, [modelList]);
 
-  // 获取所有开源状态
+  // دریافت همه وضعیت‌های متن‌باز
   const allOpenSourceStatuses = useMemo(() => {
-    return ['开源', '闭源'];
+    return ['متن‌باز', 'متن‌بسته'];
   }, []);
 
-  // 应用筛选
+  // اعمال فیلتر
   const filteredModels = useMemo(() => {
     let result = [...modelList];
 
-    // 搜索过滤
+    // فیلتر جستجو
     if (filters.searchQuery.trim()) {
       const query = filters.searchQuery.toLowerCase();
       result = result.filter(model =>
@@ -90,28 +90,28 @@ export const useModelFilters = (modelList: AIModel[]) => {
       );
     }
 
-    // 公司过滤
+    // فیلتر شرکت
     if (filters.selectedCompanies.length > 0) {
       result = result.filter(model => 
         filters.selectedCompanies.includes(model.company)
       );
     }
 
-    // 标签过滤
+    // فیلتر برچسب
     if (filters.selectedTags.length > 0) {
       result = result.filter(model =>
         filters.selectedTags.some(tag => model.modelTags.includes(tag))
       );
     }
 
-    // 开源状态过滤
+    // فیلتر وضعیت متن‌باز
     if (filters.selectedOpenSourceStatus.length > 0) {
       result = result.filter(model =>
         filters.selectedOpenSourceStatus.includes(model.openSourceStatus)
       );
     }
 
-    // 上下文窗口过滤
+    // فیلتر پنجره context
     if (filters.minContextWindow !== undefined) {
       result = result.filter(model => model.contextWindow >= filters.minContextWindow!);
     }
@@ -156,7 +156,7 @@ export const useModelFilters = (modelList: AIModel[]) => {
 };
 
 /**
- * Hook: 模型排序
+ * Hook: مرتب‌سازی مدل
  */
 export const useModelSort = (models: AIModel[]) => {
   const [sortOption, setSortOption] = useState<SortOption>('releaseDate-desc');
@@ -194,12 +194,12 @@ export const useModelSort = (models: AIModel[]) => {
 };
 
 /**
- * Hook: 模型分组
+ * Hook: گروه‌بندی مدل
  */
 export const useModelGroup = (models: AIModel[], groupBy: GroupByOption) => {
   const groupedModels = useMemo(() => {
     if (groupBy === 'none') {
-      return { '所有模型': models };
+      return { 'همه مدل‌ها': models };
     }
 
     const groups: Record<string, AIModel[]> = {};
@@ -215,7 +215,7 @@ export const useModelGroup = (models: AIModel[], groupBy: GroupByOption) => {
           groupKey = model.openSourceStatus;
           break;
         case 'tag':
-          // 对于标签分组，一个模型可能属于多个组
+          // در گروه‌بندی برچسب، یک مدل ممکن است به چند گروه تعلق داشته باشد
           model.modelTags.forEach(tag => {
             if (!groups[tag]) {
               groups[tag] = [];
@@ -224,7 +224,7 @@ export const useModelGroup = (models: AIModel[], groupBy: GroupByOption) => {
           });
           return;
         default:
-          groupKey = '未分类';
+          groupKey = 'دسته‌بندی‌نشده';
       }
 
       if (!groups[groupKey]) {

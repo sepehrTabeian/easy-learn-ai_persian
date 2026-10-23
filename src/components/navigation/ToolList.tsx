@@ -16,7 +16,7 @@ const ToolList: React.FC<ToolListProps> = ({
   tools, 
   title, 
   showCategory = false,
-  emptyMessage = "暂无工具"
+  emptyMessage = "هنوز ابزاری نیست"
 }) => {
   const {
     currentPage,
@@ -36,30 +36,30 @@ const ToolList: React.FC<ToolListProps> = ({
           <Grid className="w-8 h-8 text-gray-400" />
         </div>
         <h3 className="text-lg font-medium text-gray-600 mb-2">{emptyMessage}</h3>
-        <p className="text-sm text-gray-400">尝试其他搜索关键词或浏览不同分类</p>
+        <p className="text-sm text-gray-400">کلیدواژه جستجوی دیگری امتحان کنید یا دسته‌بندی دیگری را مرور کنید</p>
       </div>
     );
   }
 
   return (
     <div className="space-y-6">
-      {/* 工具列表头部 */}
+      {/* سربرگ فهرست ابزارها */}
       <div className="bg-white rounded-2xl shadow-lg p-6">
         <div className="flex items-center justify-between mb-4">
           <div>
             <h2 className="text-2xl font-bold text-gray-800">{title}</h2>
             <p className="text-gray-600 mt-1">
-              共找到 <span className="font-semibold text-orange-600">{tools.length}</span> 个工具
+              در مجموع <span className="font-semibold text-orange-600">{tools.length}</span> ابزار پیدا شد
               {totalPages > 1 && (
-                <span className="ml-2">
-                  第 {currentPage} / {totalPages} 页
+                <span className="ms-2">
+                  صفحه {currentPage} / {totalPages} 
                 </span>
               )}
             </p>
           </div>
           
-          {/* 视图切换 */}
-          <div className="flex items-center space-x-2 bg-gray-100 rounded-lg p-1">
+          {/* تغییر نما */}
+          <div className="flex items-center space-x-2 rtl:space-x-reverse bg-gray-100 rounded-lg p-1">
             <button
               onClick={() => setViewMode('grid')}
               className={`p-2 rounded-md transition-colors duration-200
@@ -84,7 +84,7 @@ const ToolList: React.FC<ToolListProps> = ({
         </div>
       </div>
 
-      {/* 工具网格 */}
+      {/* شبکه ابزارها */}
       <div className={`
         ${viewMode === 'grid' 
           ? 'grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6' 
@@ -101,7 +101,7 @@ const ToolList: React.FC<ToolListProps> = ({
         ))}
       </div>
 
-      {/* 分页 */}
+      {/* صفحه‌بندی */}
       <Pagination
         currentPage={currentPage}
         totalPages={totalPages}

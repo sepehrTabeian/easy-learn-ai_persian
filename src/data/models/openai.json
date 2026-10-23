@@ -2,23 +2,23 @@
     {
         "modelName": "GPT-4",
         "company": "OpenAI",
-        "country": "美国",
-        "openSourceStatus": "闭源",
+        "country": "آمریکا",
+        "openSourceStatus": "متن‌بسته",
         "releaseDate": "2023-03-14",
-        "description": "GPT‑4 采用改进 Transformer 与 RLHF 对齐，主版本提供 8K 上下文（另有 32K 版本），在推理与指令遵循、专业评测与内容创作上显著提升，适用于对话、文档理解与应用开发。",
+        "description": "GPT‑4 از Transformer بهبودیافته و هم‌ترازی RLHF استفاده می‌کند؛ نسخه اصلی context با طول 8K دارد (نسخه 32K هم وجود دارد) و در استدلال و پیروی از دستور، ارزیابی‌های تخصصی و تولید محتوا به‌طور محسوسی بهبود یافته؛ مناسب برای گفتگو، فهم اسناد و توسعه برنامه.",
         "modelTags": [
-            "文本生成",
-            "工具调用"
+            "تولید متن",
+            "فراخوانی ابزار"
         ],
         "contextWindow": 8,
         "maxGenerationTokenLength": 4,
         "relatedLinks": [
             {
-                "title": "官方页面：GPT‑4",
+                "title": "صفحه رسمی: GPT‑4",
                 "url": "https://openai.com/product/gpt-4"
             },
             {
-                "title": "GPT‑4 技术报告（arXiv）",
+                "title": "گزارش فنی GPT‑4 (arXiv)",
                 "url": "https://arxiv.org/abs/2303.08774"
             }
         ]
@@ -26,23 +26,23 @@
     {
         "modelName": "GPT-3.5 Turbo",
         "company": "OpenAI",
-        "country": "美国",
-        "openSourceStatus": "闭源",
+        "country": "آمریکا",
+        "openSourceStatus": "متن‌بسته",
         "releaseDate": "2023-11-06",
-        "description": "GPT‑3.5 Turbo 是 OpenAI 的经济型通用文本模型，延续 GPT 系列架构并优化聊天与补全，提供 16K 上下文与较低价格和延迟。适合对话系统、摘要改写、轻量检索增强生成与基础内容创作，不支持图像/音频输入及高级工具调用。",
+        "description": "GPT‑3.5 Turbo مدل متنی عمومی اقتصادی OpenAI است که معماری سری GPT را ادامه داده و گفتگو و تکمیل را بهینه کرده، context با طول 16K و قیمت و تأخیر کمتر ارائه می‌دهد. مناسب برای سیستم‌های گفتگو، خلاصه و بازنویسی، تولید تقویت‌شده با بازیابی سبک و تولید محتوای پایه؛ از ورودی تصویر/صدا و فراخوانی ابزار پیشرفته پشتیبانی نمی‌کند.",
         "modelTags": [
-            "文本生成",
-            "工具调用"
+            "تولید متن",
+            "فراخوانی ابزار"
         ],
         "contextWindow": 16,
         "maxGenerationTokenLength": 4,
         "relatedLinks": [
             {
-                "title": "平台文档：GPT‑3.5 Turbo",
+                "title": "مستندات پلتفرم: GPT‑3.5 Turbo",
                 "url": " https://platform.openai.com/docs/models/gpt-3-5-turbo "
             },
             {
-                "title": "平台文档：GPT‑3.5 系列概览",
+                "title": "مستندات پلتفرم: نمای کلی سری GPT‑3.5",
                 "url": " https://platform.openai.com/docs/models/gpt-3-5 "
             }
         ]
@@ -50,24 +50,24 @@
     {
         "modelName": "GPT-4 Turbo",
         "company": "OpenAI",
-        "country": "美国",
-        "openSourceStatus": "闭源",
+        "country": "آمریکا",
+        "openSourceStatus": "متن‌بسته",
         "releaseDate": "2023-11-06",
-        "description": "GPT‑4 Turbo 是 OpenAI 推出的高智能多模态大模型，基于改进的 Transformer 训练与 RLHF 后处理，提供 128K 上下文、较低延迟与更低价格。支持文本与图像输入、结构化输出与函数/工具调用，适用于长文档理解、企业智能助理、内容创作与复杂业务流程自动化。",
+        "description": "GPT‑4 Turbo مدل بزرگ چندوجهی با هوش بالای OpenAI است که بر پایه آموزش Transformer بهبودیافته و پس‌پردازش RLHF ساخته شده، context با طول 128K، تأخیر کمتر و قیمت پایین‌تر ارائه می‌دهد. از ورودی متن و تصویر، خروجی ساختاریافته و فراخوانی تابع/ابزار پشتیبانی می‌کند؛ مناسب برای فهم اسناد طولانی، دستیار هوشمند سازمانی، تولید محتوا و خودکارسازی فرایندهای کسب‌وکار پیچیده.",
         "modelTags": [
-            "文本生成",
-            "视觉理解",
-            "工具调用"
+            "تولید متن",
+            "درک تصویر",
+            "فراخوانی ابزار"
         ],
         "contextWindow": 128,
         "maxGenerationTokenLength": 4,
         "relatedLinks": [
             {
-                "title": "DevDay 发布：GPT‑4 Turbo 等新模型",
+                "title": "انتشار در DevDay: GPT‑4 Turbo و مدل‌های جدید دیگر",
                 "url": " https://openai.com/blog/new-models-and-developer-products-announced-at-devday "
             },
             {
-                "title": "平台文档：GPT‑4 与 GPT‑4 Turbo",
+                "title": "مستندات پلتفرم: GPT‑4 و GPT‑4 Turbo",
                 "url": " https://platform.openai.com/docs/models/gpt-4-and-gpt-4-turbo "
             }
         ],
@@ -76,24 +76,24 @@
     {
         "modelName": "GPT-4o",
         "company": "OpenAI",
-        "country": "美国",
-        "openSourceStatus": "闭源",
+        "country": "آمریکا",
+        "openSourceStatus": "متن‌بسته",
         "releaseDate": "2024-05-13",
-        "description": "GPT‑4o 是 OpenAI 的“omni”旗舰模型，“o”代表“o​​mni” 它接受文本、音频、图像和视频的任意组合作为输入，并生成文本、音频和图像的任意组合输出。可在文本、图像与音频间端到端推理，具备 128K 上下文与 16K 输出上限，较 GPT‑4 Turbo 更快且更便宜。支持实时对话、视觉理解与工具调用，适用于语音助手、跨语言对话、图像解析与多模态业务工作流。",
+        "description": "GPT‑4o مدل پرچم‌دار «omni» در OpenAI است؛ «o» یعنی «o​​mni». هر ترکیبی از متن، صدا، تصویر و ویدئو را به‌عنوان ورودی می‌پذیرد و هر ترکیبی از متن، صدا و تصویر را خروجی می‌دهد. می‌تواند به‌صورت سرتاسری بین متن، تصویر و صدا استدلال کند، context با طول 128K و حد خروجی 16K دارد و از GPT‑4 Turbo سریع‌تر و ارزان‌تر است. از گفتگوی بلادرنگ، فهم بصری و فراخوانی ابزار پشتیبانی می‌کند؛ مناسب برای دستیار صوتی، گفتگوی بین‌زبانی، تجزیه تصویر و جریان‌های کاری کسب‌وکار چندوجهی.",
         "modelTags": [
-            "文本生成",
-            "视觉理解",
-            "工具调用"
+            "تولید متن",
+            "درک تصویر",
+            "فراخوانی ابزار"
         ],
         "contextWindow": 128,
         "maxGenerationTokenLength": 16,
         "relatedLinks": [
             {
-                "title": "官方介绍：你好 GPT‑4o",
+                "title": "معرفی رسمی: سلام GPT‑4o",
                 "url": " https://openai.com/index/hello-gpt-4o/ "
             },
             {
-                "title": "平台文档：GPT‑4o",
+                "title": "مستندات پلتفرم: GPT‑4o",
                 "url": " https://platform.openai.com/docs/models/gpt-4o "
             }
         ]
@@ -101,24 +101,24 @@
     {
         "modelName": "GPT-4o mini",
         "company": "OpenAI",
-        "country": "美国",
-        "openSourceStatus": "闭源",
+        "country": "آمریکا",
+        "openSourceStatus": "متن‌بسته",
         "releaseDate": "2024-07-18",
-        "description": "GPT‑4o mini 是面向聚焦任务的小型“omni”模型，提供 128K 上下文与 16K 输出，支持文本与图像输入、文本输出，成本与延迟显著降低，适合微调与蒸馏，在分类、信息抽取、翻译、标签生成及图文混合理解等场景表现稳定。",
+        "description": "GPT‑4o mini مدل «omni» کوچک برای وظایف متمرکز است که context با طول 128K و خروجی 16K ارائه می‌دهد، از ورودی متن و تصویر و خروجی متن پشتیبانی می‌کند، هزینه و تأخیر را به‌طور محسوسی کاهش داده و برای تنظیم دقیق و تقطیر مناسب است؛ در طبقه‌بندی، استخراج اطلاعات، ترجمه، تولید برچسب و فهم ترکیبی تصویر و متن پایدار عمل می‌کند.",
         "modelTags": [
-            "文本生成",
-            "视觉理解",
-            "工具调用"
+            "تولید متن",
+            "درک تصویر",
+            "فراخوانی ابزار"
         ],
         "contextWindow": 128,
         "maxGenerationTokenLength": 16,
         "relatedLinks": [
             {
-                "title": "平台文档：GPT‑4o mini",
+                "title": "مستندات پلتفرم: GPT‑4o mini",
                 "url": "https://platform.openai.com/docs/models/gpt-4o-mini"
             },
             {
-                "title": "平台文档：GPT‑4o",
+                "title": "مستندات پلتفرم: GPT‑4o",
                 "url": "https://platform.openai.com/docs/models/gpt-4o"
             }
         ],
@@ -127,25 +127,25 @@
     {
         "modelName": "GPT-4.1",
         "company": "OpenAI",
-        "country": "美国",
-        "openSourceStatus": "闭源",
+        "country": "آمریکا",
+        "openSourceStatus": "متن‌بسته",
         "releaseDate": "2025-04-14",
-        "description": "GPT‑4.1 是 OpenAI 提供的最高智能非推理 GPT 模型，支持文本与图像输入、文本输出，具备最长 1M 上下文窗口，并显著提升指令遵循、工具调用与长上下文理解能力。适合企业级智能体、海量文档分析、复杂问答与代码协作等高要求场景。",
+        "description": "GPT‑4.1 هوشمندترین مدل GPT غیراستدلالی OpenAI است که از ورودی متن و تصویر و خروجی متن پشتیبانی می‌کند، پنجره context تا 1M دارد و پیروی از دستور، فراخوانی ابزار و فهم context طولانی را به‌طور محسوسی بهبود داده. مناسب برای سناریوهای پرتوقع مثل عامل‌های هوشمند سازمانی، تحلیل حجم عظیم اسناد، پرسش و پاسخ پیچیده و همکاری روی کد.",
         "modelTags": [
-            "文本生成",
-            "视觉理解",
-            "工具调用",
-            "代码增强"
+            "تولید متن",
+            "درک تصویر",
+            "فراخوانی ابزار",
+            "تقویت کد"
         ],
         "contextWindow": 1000,
         "maxGenerationTokenLength": 32,
         "relatedLinks": [
             {
-                "title": "官方博文：Introducing GPT‑4.1 in the API",
+                "title": "پست رسمی: Introducing GPT‑4.1 in the API",
                 "url": " https://openai.com/index/gpt-4-1/ "
             },
             {
-                "title": "平台文档：GPT‑4.1",
+                "title": "مستندات پلتفرم: GPT‑4.1",
                 "url": " https://platform.openai.com/docs/models/gpt-4.1 "
             }
         ]
@@ -153,25 +153,25 @@
     {
         "modelName": "GPT-4.1 mini",
         "company": "OpenAI",
-        "country": "美国",
-        "openSourceStatus": "闭源",
+        "country": "آمریکا",
+        "openSourceStatus": "متن‌بسته",
         "releaseDate": "2025-04-14",
-        "description": "GPT‑4.1 mini 是 GPT‑4.1 的更小更快版本，提供 1M 上下文与 32K 输出，擅长指令遵循与工具调用，支持文本与图像输入、文本输出，低延迟且无需推理步骤，适合低时延智能体、长文档处理与结构化结果生成。",
+        "description": "GPT‑4.1 mini نسخه کوچک‌تر و سریع‌تر GPT‑4.1 است که context با طول 1M و خروجی 32K ارائه می‌دهد، در پیروی از دستور و فراخوانی ابزار مهارت دارد، از ورودی متن و تصویر و خروجی متن پشتیبانی می‌کند، تأخیر کمی دارد و گام استدلال لازم ندارد؛ مناسب برای عامل‌های هوشمند کم‌تأخیر، پردازش اسناد طولانی و تولید نتایج ساختاریافته.",
         "modelTags": [
-            "文本生成",
-            "工具调用",
-            "视觉理解",
-            "代码增强"
+            "تولید متن",
+            "فراخوانی ابزار",
+            "درک تصویر",
+            "تقویت کد"
         ],
         "contextWindow": 1000,
         "maxGenerationTokenLength": 32,
         "relatedLinks": [
             {
-                "title": "平台文档：GPT‑4.1 mini",
+                "title": "مستندات پلتفرم: GPT‑4.1 mini",
                 "url": "https://platform.openai.com/docs/models/gpt-4.1-mini"
             },
             {
-                "title": "官方博文：Introducing GPT‑4.1 in the API",
+                "title": "پست رسمی: Introducing GPT‑4.1 in the API",
                 "url": "https://openai.com/index/gpt-4-1/"
             }
         ],
@@ -180,25 +180,25 @@
     {
         "modelName": "GPT-4.1 nano",
         "company": "OpenAI",
-        "country": "美国",
-        "openSourceStatus": "闭源",
+        "country": "آمریکا",
+        "openSourceStatus": "متن‌بسته",
         "releaseDate": "2025-04-14",
-        "description": "GPT‑4.1 nano 是 GPT‑4.1 系列中速度最快、成本最低的版本，提供 1M 上下文与 32K 最大输出，擅长指令遵循与工具调用，支持文本与图像输入、文本输出，适合大规模路由、批量处理与结构化结果生成。",
+        "description": "GPT‑4.1 nano سریع‌ترین و کم‌هزینه‌ترین نسخه سری GPT‑4.1 است که context با طول 1M و حداکثر خروجی 32K ارائه می‌دهد، در پیروی از دستور و فراخوانی ابزار مهارت دارد و از ورودی متن و تصویر و خروجی متن پشتیبانی می‌کند؛ مناسب برای مسیریابی در مقیاس بزرگ، پردازش دسته‌ای و تولید نتایج ساختاریافته.",
         "modelTags": [
-            "文本生成",
-            "工具调用",
-            "视觉理解",
-            "代码增强"
+            "تولید متن",
+            "فراخوانی ابزار",
+            "درک تصویر",
+            "تقویت کد"
         ],
         "contextWindow": 1000,
         "maxGenerationTokenLength": 32,
         "relatedLinks": [
             {
-                "title": "平台文档：GPT‑4.1 nano",
+                "title": "مستندات پلتفرم: GPT‑4.1 nano",
                 "url": "https://platform.openai.com/docs/models/gpt-4.1-nano"
             },
             {
-                "title": "官方博文：Introducing GPT‑4.1 in the API",
+                "title": "پست رسمی: Introducing GPT‑4.1 in the API",
                 "url": "https://openai.com/index/gpt-4-1/"
             }
         ],
@@ -207,26 +207,26 @@
     {
         "modelName": "GPT-5",
         "company": "OpenAI",
-        "country": "美国",
-        "openSourceStatus": "闭源",
+        "country": "آمریکا",
+        "openSourceStatus": "متن‌بسته",
         "releaseDate": "2025-08-07",
-        "description": "GPT‑5 是 OpenAI 迄今最强的编码与智能体任务模型，提供 400K 上下文与 128K 最大输出，支持文本与图像输入、文本输出，并引入最小推理（minimal reasoning）与可控详细程度（verbosity）。在前端生成、复杂工具调用链与大型代码库调试上显著提升，适用于企业级智能体、长文档理解与高质量代码生成。",
+        "description": "GPT‑5 قوی‌ترین مدل OpenAI تاکنون برای کدنویسی و وظایف عامل هوشمند است که context با طول 400K و حداکثر خروجی 128K ارائه می‌دهد، از ورودی متن و تصویر و خروجی متن پشتیبانی می‌کند و استدلال حداقلی (minimal reasoning) و میزان جزئیات قابل کنترل (verbosity) را معرفی کرده. در تولید فرانت‌اند، زنجیره‌های پیچیده فراخوانی ابزار و اشکال‌زدایی پایگاه‌های کد بزرگ به‌طور محسوسی بهبود یافته؛ مناسب برای عامل‌های هوشمند سازمانی، فهم اسناد طولانی و تولید کد باکیفیت.",
         "modelTags": [
-            "文本生成",
-            "深度思考",
-            "视觉理解",
-            "代码增强",
-            "工具调用"
+            "تولید متن",
+            "تفکر عمیق",
+            "درک تصویر",
+            "تقویت کد",
+            "فراخوانی ابزار"
         ],
         "contextWindow": 400,
         "maxGenerationTokenLength": 128,
         "relatedLinks": [
             {
-                "title": "平台文档：GPT‑5",
+                "title": "مستندات پلتفرم: GPT‑5",
                 "url": "https://platform.openai.com/docs/models/gpt-5"
             },
             {
-                "title": "隆重推出 GPT‑5（研究/产品介绍）",
+                "title": "معرفی GPT‑5 (معرفی پژوهش/محصول)",
                 "url": "https://openai.com/index/introducing-gpt-5/"
             }
         ]
@@ -234,24 +234,24 @@
     {
         "modelName": "GPT-5 mini",
         "company": "OpenAI",
-        "country": "美国",
-        "openSourceStatus": "闭源",
+        "country": "آمریکا",
+        "openSourceStatus": "متن‌بسته",
         "releaseDate": "2025-08-07",
-        "description": "GPT‑5 mini 是 GPT‑5 的更小更快版本，保持 400K 上下文与 128K 最大输出，适合低延迟任务与聚焦型工作流。支持文本与图像输入、文本输出与工具调用，擅长分类、抽取、摘要与结构化输出，成本友好并适合微调与蒸馏。",
+        "description": "GPT‑5 mini نسخه کوچک‌تر و سریع‌تر GPT‑5 است که context با طول 400K و حداکثر خروجی 128K را حفظ کرده و برای وظایف کم‌تأخیر و جریان‌های کاری متمرکز مناسب است. از ورودی متن و تصویر، خروجی متن و فراخوانی ابزار پشتیبانی می‌کند، در طبقه‌بندی، استخراج، خلاصه‌سازی و خروجی ساختاریافته مهارت دارد، هزینه مناسبی دارد و برای تنظیم دقیق و تقطیر مناسب است.",
         "modelTags": [
-            "文本生成",
-            "视觉理解",
-            "工具调用"
+            "تولید متن",
+            "درک تصویر",
+            "فراخوانی ابزار"
         ],
         "contextWindow": 400,
         "maxGenerationTokenLength": 128,
         "relatedLinks": [
             {
-                "title": "平台文档：GPT‑5 mini",
+                "title": "مستندات پلتفرم: GPT‑5 mini",
                 "url": "https://platform.openai.com/docs/models/gpt-5-mini"
             },
             {
-                "title": "面向开发者的 GPT‑5 发布",
+                "title": "انتشار GPT‑5 برای توسعه‌دهندگان",
                 "url": "https://openai.com/index/introducing-gpt-5-for-developers/"
             }
         ],
@@ -260,24 +260,24 @@
     {
         "modelName": "GPT-5 nano",
         "company": "OpenAI",
-        "country": "美国",
-        "openSourceStatus": "闭源",
+        "country": "آمریکا",
+        "openSourceStatus": "متن‌بسته",
         "releaseDate": "2025-08-07",
-        "description": "GPT‑5 nano 为该系列的极速与低成本版本，提供 400K 上下文与 128K 最大输出，支持文本与图像输入、文本输出，适用于大规模推理路由、批量处理与轻量智能体。在结构化抽取、分类与短上下文任务上表现稳定。",
+        "description": "GPT‑5 nano نسخه فوق‌سریع و کم‌هزینه این سری است که context با طول 400K و حداکثر خروجی 128K ارائه می‌دهد و از ورودی متن و تصویر و خروجی متن پشتیبانی می‌کند؛ مناسب برای مسیریابی استدلال در مقیاس بزرگ، پردازش دسته‌ای و عامل‌های هوشمند سبک. در استخراج ساختاریافته، طبقه‌بندی و وظایف با context کوتاه پایدار عمل می‌کند.",
         "modelTags": [
-            "文本生成",
-            "视觉理解",
-            "工具调用"
+            "تولید متن",
+            "درک تصویر",
+            "فراخوانی ابزار"
         ],
         "contextWindow": 400,
         "maxGenerationTokenLength": 128,
         "relatedLinks": [
             {
-                "title": "平台文档：GPT‑5 nano",
+                "title": "مستندات پلتفرم: GPT‑5 nano",
                 "url": "https://platform.openai.com/docs/models/gpt-5-nano"
             },
             {
-                "title": "面向开发者的 GPT‑5 发布",
+                "title": "انتشار GPT‑5 برای توسعه‌دهندگان",
                 "url": "https://openai.com/index/introducing-gpt-5-for-developers/"
             }
         ],
@@ -286,26 +286,26 @@
     {
         "modelName": "GPT-5 pro",
         "company": "OpenAI",
-        "country": "美国",
-        "openSourceStatus": "闭源",
+        "country": "آمریکا",
+        "openSourceStatus": "متن‌بسته",
         "releaseDate": "2025-10-06",
-        "description": "GPT‑5 pro 为扩展推理版本，提供 400K 上下文与 272K 最大输出，强调更强的多步骤推理、引导式工具使用与长上下文理解能力，适用于复杂分析、合规审阅、企业知识问答与端到端智能体工作流。支持文本与图像输入、文本输出与工具调用。",
+        "description": "GPT‑5 pro نسخه استدلال گسترده است که context با طول 400K و حداکثر خروجی 272K ارائه می‌دهد و بر استدلال چندگامی قوی‌تر، استفاده هدایت‌شده از ابزار و فهم context طولانی تأکید دارد؛ مناسب برای تحلیل پیچیده، بازبینی انطباق، پرسش و پاسخ دانش سازمانی و جریان‌های کاری سرتاسری عامل هوشمند. از ورودی متن و تصویر، خروجی متن و فراخوانی ابزار پشتیبانی می‌کند.",
         "modelTags": [
-            "文本生成",
-            "深度思考",
-            "视觉理解",
-            "工具调用",
-            "代码增强"
+            "تولید متن",
+            "تفکر عمیق",
+            "درک تصویر",
+            "فراخوانی ابزار",
+            "تقویت کد"
         ],
         "contextWindow": 400,
         "maxGenerationTokenLength": 272,
         "relatedLinks": [
             {
-                "title": "平台文档：GPT‑5 pro",
+                "title": "مستندات پلتفرم: GPT‑5 pro",
                 "url": "https://platform.openai.com/docs/models/gpt-5-pro"
             },
             {
-                "title": "GPT‑5 与智能工作新时代（企业应用）",
+                "title": "GPT‑5 و عصر جدید کار هوشمند (کاربرد سازمانی)",
                 "url": "https://openai.com/index/gpt-5-new-era-of-work/"
             }
         ],
@@ -314,25 +314,25 @@
     {
         "modelName": "GPT-5 Codex",
         "company": "OpenAI",
-        "country": "美国",
-        "openSourceStatus": "闭源",
+        "country": "آمریکا",
+        "openSourceStatus": "متن‌بسته",
         "releaseDate": "2025-08-07",
-        "description": "GPT‑5 Codex 面向智能体编码与复杂工程任务，提供 400K 上下文与 128K 最大输出，擅长大型代码库分析、端到端修复与前端界面生成，支持工具调用并在实际编码基准（如 SWE‑bench Verified、Aider polyglot）中表现优异，适用于 IDE 助手与自主演进型编码代理。",
+        "description": "GPT‑5 Codex برای کدنویسی عاملی و وظایف مهندسی پیچیده طراحی شده، context با طول 400K و حداکثر خروجی 128K ارائه می‌دهد، در تحلیل پایگاه‌های کد بزرگ، رفع سرتاسری و تولید رابط فرانت‌اند مهارت دارد، از فراخوانی ابزار پشتیبانی می‌کند و در بنچمارک‌های واقعی کدنویسی (مثل SWE‑bench Verified و Aider polyglot) عالی عمل کرده؛ مناسب برای دستیار IDE و عامل‌های کدنویسی خودتکامل.",
         "modelTags": [
-            "文本生成",
-            "代码增强",
-            "工具调用",
-            "视觉理解"
+            "تولید متن",
+            "تقویت کد",
+            "فراخوانی ابزار",
+            "درک تصویر"
         ],
         "contextWindow": 400,
         "maxGenerationTokenLength": 128,
         "relatedLinks": [
             {
-                "title": "平台文档：GPT‑5 Codex",
+                "title": "مستندات پلتفرم: GPT‑5 Codex",
                 "url": "https://platform.openai.com/docs/models/gpt-5-codex"
             },
             {
-                "title": "面向开发者的 GPT‑5 发布",
+                "title": "انتشار GPT‑5 برای توسعه‌دهندگان",
                 "url": "https://openai.com/index/introducing-gpt-5-for-developers/"
             }
         ],
@@ -341,28 +341,28 @@
     {
         "modelName": "GPT OSS",
         "company": "OpenAI",
-        "country": "美国",
-        "openSourceStatus": "开源",
+        "country": "آمریکا",
+        "openSourceStatus": "متن‌باز",
         "releaseDate": "2025-08-05",
-        "description": "GPT OSS 是 OpenAI 推出的开放权重模型家族（gpt‑oss‑120b 与 gpt‑oss‑20b），采用 Mixture‑of‑Experts（MoE）架构并对专家权重使用 4‑bit MXFP4 量化。纯文本推理，内置链式思维并支持可调推理强度，适配 Transformers、vLLM、llama.cpp、Ollama 等生态；最长相对位置编码支持 128K。Apache 2.0 许可证，适合私有部署与本地推理。",
+        "description": "GPT OSS خانواده مدل‌های با وزن باز OpenAI است (gpt‑oss‑120b و gpt‑oss‑20b) که از معماری Mixture‑of‑Experts (MoE) استفاده می‌کند و وزن‌های متخصصان را با MXFP4 چهاربیتی کوانتیزه کرده است. استدلال فقط متنی، زنجیره فکر داخلی و پشتیبانی از شدت استدلال قابل تنظیم دارد و با اکوسیستم‌هایی مثل Transformers، vLLM، llama.cpp و Ollama سازگار است؛ کدگذاری موقعیت نسبی تا 128K پشتیبانی می‌شود. مجوز Apache 2.0، مناسب برای استقرار خصوصی و استنتاج محلی.",
         "modelTags": [
-            "文本生成",
-            "工具调用",
-            "代码增强"
+            "تولید متن",
+            "فراخوانی ابزار",
+            "تقویت کد"
         ],
         "contextWindow": 128,
         "maxGenerationTokenLength": 128,
         "relatedLinks": [
             {
-                "title": "Hugging Face 模型卡：gpt‑oss‑120b",
+                "title": "کارت مدل Hugging Face: gpt‑oss‑120b",
                 "url": "https://huggingface.co/openai/gpt-oss-120b"
             },
             {
-                "title": "Hugging Face 模型卡：gpt‑oss‑20b",
+                "title": "کارت مدل Hugging Face: gpt‑oss‑20b",
                 "url": "https://huggingface.co/openai/gpt-oss-20b"
             },
             {
-                "title": "公告：欢迎 GPT OSS（Hugging Face）",
+                "title": "اطلاعیه: خوش آمدی GPT OSS (Hugging Face)",
                 "url": "https://huggingface.co/blog/zh/welcome-openai-gpt-oss"
             }
         ]
@@ -370,21 +370,21 @@
     {
         "modelName": "GPT-5.1",
         "company": "OpenAI",
-        "country": "美国",
-        "openSourceStatus": "闭源",
+        "country": "آمریکا",
+        "openSourceStatus": "متن‌بسته",
         "releaseDate": "2025-11-13",
-        "description": "GPT-5.1 是 OpenAI 推出的 GPT-5 系列迭代模型，采用统一系统与自适应推理机制，按任务复杂度动态调整思考时长，显著提升指令遵循、对话自然度与代码任务效率；支持提示缓存与无推理模式，适用于智能体编排、复杂编码、长文本问答与工具调用。",
+        "description": "GPT-5.1 مدل تکرار سری GPT-5 از OpenAI است که از سیستم یکپارچه و مکانیزم استدلال تطبیقی استفاده می‌کند و بر اساس پیچیدگی وظیفه زمان تفکر را پویا تنظیم می‌کند؛ پیروی از دستور، طبیعی بودن گفتگو و بهره‌وری وظایف کد را به‌طور محسوسی بهبود داده؛ از کش پرامپت و حالت بدون استدلال پشتیبانی می‌کند و برای هماهنگ‌سازی عامل هوشمند، کدنویسی پیچیده، پرسش و پاسخ متن طولانی و فراخوانی ابزار مناسب است.",
         "modelTags": [
-            "文本生成",
-            "深度思考",
-            "代码增强",
-            "工具调用"
+            "تولید متن",
+            "تفکر عمیق",
+            "تقویت کد",
+            "فراخوانی ابزار"
         ],
         "contextWindow": 400,
         "maxGenerationTokenLength": 128,
         "relatedLinks": [
             {
-                "title": "GPT-5.1 官方发布页",
+                "title": "صفحه رسمی انتشار GPT-5.1",
                 "url": " https://openai.com/index/gpt-5-1/ "
             },
             {
@@ -392,11 +392,11 @@
                 "url": " https://openai.com/index/gpt-5-1-for-developers/ "
             },
             {
-                "title": "GPT-5.1 系统卡附录（PDF）",
+                "title": "پیوست کارت سیستم GPT-5.1 (PDF)",
                 "url": " https://cdn.openai.com/pdf/4173ec8d-1229-47db-96de-06d87147e07e/5_1_system_card.pdf "
             },
             {
-                "title": "GPT-5 官方页面（上下文与输出限制）",
+                "title": "صفحه رسمی GPT-5 (محدودیت‌های context و خروجی)",
                 "url": " https://openai.com/gpt-5/ "
             }
         ],
@@ -405,29 +405,29 @@
     {
         "modelName": "GPT-5.1-Codex-Max",
         "company": "OpenAI",
-        "country": "美国",
-        "openSourceStatus": "闭源",
+        "country": "آمریکا",
+        "openSourceStatus": "متن‌بسته",
         "releaseDate": "2025-11-19",
-        "description": "GPT‑5.1‑Codex‑Max 是 OpenAI 面向工程的前沿智能体编码模型，基于更新的统一推理系统并引入 compaction 跨多上下文窗口处理，提升长时段任务连贯性与令牌效率；擅长项目级重构、深度调试、代码评审与前端生成，支持 CLI/IDE 与 Windows。（官方未公开单一上下文与最大输出）",
+        "description": "GPT‑5.1‑Codex‑Max مدل کدنویسی عاملی پیشرو OpenAI برای مهندسی است که بر پایه سیستم استدلال یکپارچه به‌روزشده ساخته شده و compaction را برای پردازش در چند پنجره context معرفی کرده و پیوستگی وظایف طولانی و بهره‌وری token را بهبود می‌دهد؛ در بازسازی در سطح پروژه، اشکال‌زدایی عمیق، بازبینی کد و تولید فرانت‌اند مهارت دارد و از CLI/IDE و Windows پشتیبانی می‌کند. (context واحد و حداکثر خروجی به‌طور رسمی اعلام نشده)",
         "modelTags": [
-            "文本生成",
-            "深度思考",
-            "代码增强",
-            "工具调用"
+            "تولید متن",
+            "تفکر عمیق",
+            "تقویت کد",
+            "فراخوانی ابزار"
         ],
         "contextWindow": 400,
         "maxGenerationTokenLength": 128,
         "relatedLinks": [
             {
-                "title": "GPT‑5.1‑Codex‑Max 官方发布公告",
+                "title": "اطلاعیه رسمی انتشار GPT‑5.1‑Codex‑Max",
                 "url": "https://openai.com/index/gpt-5-1-codex-max/"
             },
             {
-                "title": "GPT‑5.1‑Codex‑Max 系统卡",
+                "title": "کارت سیستم GPT‑5.1‑Codex‑Max",
                 "url": "https://openai.com/index/gpt-5-1-codex-max-system-card/"
             },
             {
-                "title": "GPT‑5.1‑Codex‑Max 官方介绍",
+                "title": "معرفی رسمی GPT‑5.1‑Codex‑Max",
                 "url": "https://platform.openai.com/docs/models/gpt-5.1-codex"
             }
         ],
@@ -436,26 +436,26 @@
     {
         "modelName": "GPT-5.2",
         "company": "OpenAI",
-        "country": "美国",
-        "openSourceStatus": "闭源",
+        "country": "آمریکا",
+        "openSourceStatus": "متن‌بسته",
         "releaseDate": "2025-12-11",
-        "description": "GPT-5.2 是 OpenAI 面向专业知识工作与智能体的旗舰模型，官方未公开具体架构与训练数据细节；支持文本/图像输入、400K 上下文与 128K 输出，强化长文档理解、工程编码、视觉推理及多步骤工具调用，适用于报表/演示生成、软件开发与企业自动化流程。",
+        "description": "GPT-5.2 مدل پرچم‌دار OpenAI برای کار دانشی حرفه‌ای و عامل‌های هوشمند است؛ جزئیات معماری و داده آموزشی به‌طور رسمی اعلام نشده؛ از ورودی متن/تصویر، context با طول 400K و خروجی 128K پشتیبانی می‌کند و فهم اسناد طولانی، کدنویسی مهندسی، استدلال بصری و فراخوانی ابزار چندگامی را تقویت کرده؛ مناسب برای تولید گزارش/ارائه، توسعه نرم‌افزار و فرایندهای خودکارسازی سازمانی.",
         "modelTags": [
-            "文本生成",
-            "深度思考",
-            "视觉理解",
-            "代码增强",
-            "工具调用"
+            "تولید متن",
+            "تفکر عمیق",
+            "درک تصویر",
+            "تقویت کد",
+            "فراخوانی ابزار"
         ],
         "contextWindow": 400,
         "maxGenerationTokenLength": 128,
         "relatedLinks": [
             {
-                "title": "平台文档：GPT-5.2",
+                "title": "مستندات پلتفرم: GPT-5.2",
                 "url": "https://platform.openai.com/docs/models/gpt-5.2"
             },
             {
-                "title": "官方博文：Introducing GPT-5.2",
+                "title": "پست رسمی: Introducing GPT-5.2",
                 "url": "https://openai.com/index/introducing-gpt-5-2/"
             }
         ],
@@ -464,25 +464,25 @@
     {
         "modelName": "GPT-5.2 pro",
         "company": "OpenAI",
-        "country": "美国",
-        "openSourceStatus": "闭源",
+        "country": "آمریکا",
+        "openSourceStatus": "متن‌بسته",
         "releaseDate": "2025-12-11",
-        "description": "GPT-5.2 pro 是 GPT-5.2 的高算力版本，仅通过 Responses API 提供，面向耗时更长、要求更高准确性的复杂问题；支持 400K 上下文与 128K 最大输出，reasoning.effort 支持 medium、high、xhigh，并可使用 Web search、File search、Image generation 与 MCP 等工具，适合高难推理、研究分析与企业级决策工作流。",
+        "description": "GPT-5.2 pro نسخه با توان محاسباتی بالای GPT-5.2 است که فقط از طریق Responses API ارائه می‌شود و برای مسائل پیچیده‌ای طراحی شده که زمان بیشتر و دقت بالاتری می‌خواهند؛ از context با طول 400K و حداکثر خروجی 128K پشتیبانی می‌کند، reasoning.effort از medium، high و xhigh پشتیبانی می‌کند و می‌تواند از ابزارهایی مثل Web search، File search، Image generation و MCP استفاده کند؛ مناسب برای استدلال دشوار، تحلیل پژوهشی و جریان‌های کاری تصمیم‌گیری سازمانی.",
         "modelTags": [
-            "文本生成",
-            "深度思考",
-            "视觉理解",
-            "工具调用"
+            "تولید متن",
+            "تفکر عمیق",
+            "درک تصویر",
+            "فراخوانی ابزار"
         ],
         "contextWindow": 400,
         "maxGenerationTokenLength": 128,
         "relatedLinks": [
             {
-                "title": "平台文档：GPT-5.2 pro",
+                "title": "مستندات پلتفرم: GPT-5.2 pro",
                 "url": "https://platform.openai.com/docs/models/gpt-5.2-pro"
             },
             {
-                "title": "OpenAI 最新模型指南：GPT-5.2",
+                "title": "راهنمای جدیدترین مدل‌های OpenAI: GPT-5.2",
                 "url": "https://platform.openai.com/docs/guides/latest-model"
             }
         ],
@@ -491,26 +491,26 @@
     {
         "modelName": "GPT-5.2-Codex",
         "company": "OpenAI",
-        "country": "美国",
-        "openSourceStatus": "闭源",
+        "country": "آمریکا",
+        "openSourceStatus": "متن‌بسته",
         "releaseDate": "2025-12-11",
-        "description": "GPT-5.2-Codex 是 OpenAI 面向 Codex 与类似环境的智能体编码模型，官方定位为 long-horizon agentic coding 任务的最智能编码模型；支持 400K 上下文、128K 最大输出、图像输入、函数调用、结构化输出、流式输出与提示缓存，reasoning.effort 支持 low、medium、high、xhigh，适合大型代码库修复、端到端工程任务和 IDE/CLI 编程代理。",
+        "description": "GPT-5.2-Codex مدل کدنویسی عاملی OpenAI برای Codex و محیط‌های مشابه است که جایگاه رسمی آن هوشمندترین مدل کدنویسی برای وظایف long-horizon agentic coding است؛ از context با طول 400K، حداکثر خروجی 128K، ورودی تصویر، فراخوانی تابع، خروجی ساختاریافته، خروجی جریانی و کش پرامپت پشتیبانی می‌کند و reasoning.effort از low، medium، high و xhigh پشتیبانی می‌کند؛ مناسب برای رفع پایگاه‌های کد بزرگ، وظایف مهندسی سرتاسری و عامل‌های برنامه‌نویسی IDE/CLI.",
         "modelTags": [
-            "文本生成",
-            "深度思考",
-            "视觉理解",
-            "代码增强",
-            "工具调用"
+            "تولید متن",
+            "تفکر عمیق",
+            "درک تصویر",
+            "تقویت کد",
+            "فراخوانی ابزار"
         ],
         "contextWindow": 400,
         "maxGenerationTokenLength": 128,
         "relatedLinks": [
             {
-                "title": "平台文档：GPT-5.2-Codex",
+                "title": "مستندات پلتفرم: GPT-5.2-Codex",
                 "url": "https://platform.openai.com/docs/models/gpt-5.2-codex"
             },
             {
-                "title": "OpenAI 最新模型指南：GPT-5.2-Codex 说明",
+                "title": "راهنمای جدیدترین مدل‌های OpenAI: توضیح GPT-5.2-Codex",
                 "url": "https://platform.openai.com/docs/guides/latest-model"
             }
         ],
@@ -519,26 +519,26 @@
     {
         "modelName": "GPT-5.3-Codex",
         "company": "OpenAI",
-        "country": "美国",
-        "openSourceStatus": "闭源",
+        "country": "آمریکا",
+        "openSourceStatus": "متن‌بسته",
         "releaseDate": "2026-02-05",
-        "description": "GPT-5.3-Codex 是 OpenAI 迄今最强的智能体编程模型，整合 GPT-5.2-Codex 的编程性能与 GPT-5.2 的推理能力，运行速度提升 25%；在 SWE-Bench Pro 达到 56.8%，Terminal-Bench 2.0 达到 77.3%，OSWorld-Verified 达到 64.7%；支持交互式协作、实时引导与长时任务执行，适用于端到端软件开发、智能体工作流与企业级编码自动化。",
+        "description": "GPT-5.3-Codex قوی‌ترین مدل برنامه‌نویسی عاملی OpenAI تاکنون است که عملکرد برنامه‌نویسی GPT-5.2-Codex و توانایی استدلال GPT-5.2 را ادغام کرده و سرعت اجرای آن ۲۵٪ بیشتر شده؛ در SWE-Bench Pro به 56.8%، در Terminal-Bench 2.0 به 77.3% و در OSWorld-Verified به 64.7% رسیده؛ از همکاری تعاملی، هدایت بلادرنگ و اجرای وظایف طولانی پشتیبانی می‌کند و برای توسعه نرم‌افزار سرتاسری، جریان‌های کاری عامل هوشمند و خودکارسازی کدنویسی سازمانی مناسب است.",
         "modelTags": [
-            "文本生成",
-            "深度思考",
-            "视觉理解",
-            "代码增强",
-            "工具调用"
+            "تولید متن",
+            "تفکر عمیق",
+            "درک تصویر",
+            "تقویت کد",
+            "فراخوانی ابزار"
         ],
         "contextWindow": 400,
         "maxGenerationTokenLength": 128,
         "relatedLinks": [
             {
-                "title": "GPT-5.3-Codex 官方发布公告",
+                "title": "اطلاعیه رسمی انتشار GPT-5.3-Codex",
                 "url": "https://openai.com/index/introducing-gpt-5-3-codex/"
             },
             {
-                "title": "平台文档：GPT-5.3-Codex",
+                "title": "مستندات پلتفرم: GPT-5.3-Codex",
                 "url": "https://platform.openai.com/docs/models/gpt-5-3-codex"
             }
         ],
@@ -547,30 +547,30 @@
     {
         "modelName": "GPT-5.5",
         "company": "OpenAI",
-        "country": "美国",
-        "openSourceStatus": "闭源",
+        "country": "آمریکا",
+        "openSourceStatus": "متن‌بسته",
         "releaseDate": "2026-04-23",
-        "description": "GPT-5.5 是 OpenAI 面向复杂专业工作的最新前沿模型，支持文本与图像输入、文本输出，提供 1,050K 上下文与 128K 最大输出；在智能体编码、电脑使用、知识工作、工具调用和科学研究任务上相较 GPT-5.4 明显提升，同时保持较高推理效率。API 支持 Chat Completions 与 Responses，reasoning.effort 支持 none、low、medium、high、xhigh，适合大型代码库、长文档研究、企业自动化与多工具智能体工作流。",
+        "description": "GPT-5.5 جدیدترین مدل پیشرو OpenAI برای کارهای حرفه‌ای پیچیده است که از ورودی متن و تصویر و خروجی متن پشتیبانی می‌کند و context با طول 1,050K و حداکثر خروجی 128K ارائه می‌دهد؛ در کدنویسی عاملی، استفاده از کامپیوتر، کار دانشی، فراخوانی ابزار و وظایف پژوهش علمی نسبت به GPT-5.4 به‌طور محسوسی بهبود یافته و هم‌زمان بهره‌وری استدلال بالایی دارد. API از Chat Completions و Responses پشتیبانی می‌کند و reasoning.effort از none، low، medium، high و xhigh پشتیبانی می‌کند؛ مناسب برای پایگاه‌های کد بزرگ، پژوهش اسناد طولانی، خودکارسازی سازمانی و جریان‌های کاری عامل هوشمند چندابزاری.",
         "modelTags": [
-            "文本生成",
-            "深度思考",
-            "视觉理解",
-            "代码增强",
-            "工具调用"
+            "تولید متن",
+            "تفکر عمیق",
+            "درک تصویر",
+            "تقویت کد",
+            "فراخوانی ابزار"
         ],
         "contextWindow": 1050,
         "maxGenerationTokenLength": 128,
         "relatedLinks": [
             {
-                "title": "GPT-5.5 官方发布公告",
+                "title": "اطلاعیه رسمی انتشار GPT-5.5",
                 "url": "https://openai.com/index/introducing-gpt-5-5/"
             },
             {
-                "title": "平台文档：GPT-5.5",
+                "title": "مستندات پلتفرم: GPT-5.5",
                 "url": "https://platform.openai.com/docs/models/gpt-5.5"
             },
             {
-                "title": "GPT-5.5 系统卡",
+                "title": "کارت سیستم GPT-5.5",
                 "url": "https://openai.com/index/gpt-5-5-system-card/"
             }
         ],
@@ -579,30 +579,30 @@
     {
         "modelName": "GPT-5.5 pro",
         "company": "OpenAI",
-        "country": "美国",
-        "openSourceStatus": "闭源",
+        "country": "آمریکا",
+        "openSourceStatus": "متن‌بسته",
         "releaseDate": "2026-04-24",
-        "description": "GPT-5.5 pro 是 GPT-5.5 的高算力版本，使用更多计算以获得更稳定、更精确的回答；支持文本与图像输入、文本输出，提供 1,050K 上下文与 128K 最大输出。官方说明该模型适合更困难的问题，部分请求可能需要数分钟完成，建议在 Responses API 中结合 background mode 使用，适用于高难研究、复杂推理、合规/金融分析与长链路专业任务。",
+        "description": "GPT-5.5 pro نسخه با توان محاسباتی بالای GPT-5.5 است که از محاسبات بیشتر برای پاسخ‌های پایدارتر و دقیق‌تر استفاده می‌کند؛ از ورودی متن و تصویر و خروجی متن پشتیبانی می‌کند و context با طول 1,050K و حداکثر خروجی 128K ارائه می‌دهد. طبق توضیح رسمی این مدل برای مسائل دشوارتر مناسب است و برخی درخواست‌ها ممکن است چند دقیقه طول بکشند؛ پیشنهاد می‌شود در Responses API همراه با background mode استفاده شود؛ مناسب برای پژوهش دشوار، استدلال پیچیده، تحلیل انطباق/مالی و وظایف حرفه‌ای زنجیره‌ای طولانی.",
         "modelTags": [
-            "文本生成",
-            "深度思考",
-            "视觉理解",
-            "代码增强",
-            "工具调用"
+            "تولید متن",
+            "تفکر عمیق",
+            "درک تصویر",
+            "تقویت کد",
+            "فراخوانی ابزار"
         ],
         "contextWindow": 1050,
         "maxGenerationTokenLength": 128,
         "relatedLinks": [
             {
-                "title": "平台文档：GPT-5.5 pro",
+                "title": "مستندات پلتفرم: GPT-5.5 pro",
                 "url": "https://platform.openai.com/docs/models/gpt-5.5-pro"
             },
             {
-                "title": "GPT-5.5 官方发布公告",
+                "title": "اطلاعیه رسمی انتشار GPT-5.5",
                 "url": "https://openai.com/index/introducing-gpt-5-5/"
             },
             {
-                "title": "GPT-5.5 系统卡",
+                "title": "کارت سیستم GPT-5.5",
                 "url": "https://openai.com/index/gpt-5-5-system-card/"
             }
         ],
@@ -611,21 +611,21 @@
     {
         "modelName": "o1",
         "company": "OpenAI",
-        "country": "美国",
-        "openSourceStatus": "闭源",
+        "country": "آمریکا",
+        "openSourceStatus": "متن‌بسته",
         "releaseDate": "2024-12-17",
-        "description": "o1 系列为通过强化学习训练的推理模型，先思考后回答，擅长复杂多步骤推理、数学、科学与代码分析。提供 200K 上下文与 100K 最大输出，支持文本与图像输入、文本输出。",
+        "description": "سری o1 مدل‌های استدلالی آموزش‌دیده با یادگیری تقویتی هستند که اول فکر می‌کنند و بعد پاسخ می‌دهند و در استدلال پیچیده چندگامی، ریاضی، علوم و تحلیل کد مهارت دارند. context با طول 200K و حداکثر خروجی 100K ارائه می‌دهند و از ورودی متن و تصویر و خروجی متن پشتیبانی می‌کنند.",
         "modelTags": [
-            "深度思考",
-            "视觉理解",
-            "工具调用",
-            "文本生成"
+            "تفکر عمیق",
+            "درک تصویر",
+            "فراخوانی ابزار",
+            "تولید متن"
         ],
         "contextWindow": 200,
         "maxGenerationTokenLength": 100,
         "relatedLinks": [
             {
-                "title": "平台文档：o1",
+                "title": "مستندات پلتفرم: o1",
                 "url": "https://platform.openai.com/docs/models/o1"
             }
         ]
@@ -633,21 +633,21 @@
     {
         "modelName": "o1-pro",
         "company": "OpenAI",
-        "country": "美国",
-        "openSourceStatus": "闭源",
+        "country": "آمریکا",
+        "openSourceStatus": "متن‌بسته",
         "releaseDate": "2025-03-19",
-        "description": "o1‑pro 使用更多算力以提供更优、更稳定的答案，仅在 Responses API 提供，支持多轮思考后再响应，适合耗时更长的复杂问题。规格与 o1 保持一致（200K 上下文，100K 输出）。",
+        "description": "o1‑pro از توان محاسباتی بیشتر برای ارائه پاسخ‌های بهتر و پایدارتر استفاده می‌کند، فقط در Responses API ارائه می‌شود، از تفکر چنددوره‌ای پیش از پاسخ پشتیبانی می‌کند و برای مسائل پیچیده زمان‌بر مناسب است. مشخصات با o1 یکسان است (context با طول 200K، خروجی 100K).",
         "modelTags": [
-            "深度思考",
-            "视觉理解",
-            "工具调用",
-            "文本生成"
+            "تفکر عمیق",
+            "درک تصویر",
+            "فراخوانی ابزار",
+            "تولید متن"
         ],
         "contextWindow": 200,
         "maxGenerationTokenLength": 100,
         "relatedLinks": [
             {
-                "title": "平台文档：o1‑pro",
+                "title": "مستندات پلتفرم: o1‑pro",
                 "url": "https://platform.openai.com/docs/models/o1-pro"
             }
         ],
@@ -656,20 +656,20 @@
     {
         "modelName": "o1-mini",
         "company": "OpenAI",
-        "country": "美国",
-        "openSourceStatus": "闭源",
+        "country": "آمریکا",
+        "openSourceStatus": "متن‌بسته",
         "releaseDate": "2024-09-12",
-        "description": "o1‑mini 是更快、更实惠的推理模型，提供 128K 上下文与 65K 最大输出（文本 I/O），不支持图像。官方建议在相同成本与延迟下优先使用 o3‑mini。",
+        "description": "o1‑mini مدل استدلالی سریع‌تر و مقرون‌به‌صرفه‌تر است که context با طول 128K و حداکثر خروجی 65K (I/O متنی) ارائه می‌دهد و از تصویر پشتیبانی نمی‌کند. توصیه رسمی این است که با هزینه و تأخیر یکسان اولویت با o3‑mini باشد.",
         "modelTags": [
-            "深度思考",
-            "工具调用",
-            "文本生成"
+            "تفکر عمیق",
+            "فراخوانی ابزار",
+            "تولید متن"
         ],
         "contextWindow": 128,
         "maxGenerationTokenLength": 65,
         "relatedLinks": [
             {
-                "title": "平台文档：o1‑mini",
+                "title": "مستندات پلتفرم: o1‑mini",
                 "url": "https://platform.openai.com/docs/models/o1-mini"
             }
         ],
@@ -678,20 +678,20 @@
     {
         "modelName": "o3",
         "company": "OpenAI",
-        "country": "美国",
-        "openSourceStatus": "闭源",
+        "country": "آمریکا",
+        "openSourceStatus": "متن‌بسته",
         "releaseDate": "2025-04-16",
-        "description": "o3 是跨领域的强推理模型，为数学、科学、编码与视觉推理设立新标准；支持文本与图像输入、文本输出，适合多步骤分析与技术写作。",
+        "description": "o3 مدل استدلالی قوی بین‌حوزه‌ای است که برای ریاضی، علوم، کدنویسی و استدلال بصری استاندارد جدیدی تعیین کرده؛ از ورودی متن و تصویر و خروجی متن پشتیبانی می‌کند و برای تحلیل چندگامی و نگارش فنی مناسب است.",
         "modelTags": [
-            "深度思考",
-            "视觉理解",
-            "工具调用"
+            "تفکر عمیق",
+            "درک تصویر",
+            "فراخوانی ابزار"
         ],
         "contextWindow": 200,
         "maxGenerationTokenLength": 100,
         "relatedLinks": [
             {
-                "title": "平台文档：o3",
+                "title": "مستندات پلتفرم: o3",
                 "url": "https://platform.openai.com/docs/models/o3"
             }
         ]
@@ -699,21 +699,21 @@
     {
         "modelName": "o3-pro",
         "company": "OpenAI",
-        "country": "美国",
-        "openSourceStatus": "闭源",
+        "country": "آمریکا",
+        "openSourceStatus": "متن‌بسته",
         "releaseDate": "2025-06-10",
-        "description": "o3‑pro 使用更多算力以获得更优答案，仅在 Responses API 提供；因面向较难问题，部分请求可能需数分钟完成，建议使用后台模式避免超时。规格 200K 上下文、100K 输出。",
+        "description": "o3‑pro از توان محاسباتی بیشتر برای پاسخ‌های بهتر استفاده می‌کند و فقط در Responses API ارائه می‌شود؛ چون برای مسائل دشوارتر طراحی شده، برخی درخواست‌ها ممکن است چند دقیقه طول بکشند و پیشنهاد می‌شود از حالت پس‌زمینه برای جلوگیری از timeout استفاده شود. مشخصات: context با طول 200K، خروجی 100K.",
         "modelTags": [
-            "深度思考",
-            "视觉理解",
-            "工具调用",
-            "文本生成"
+            "تفکر عمیق",
+            "درک تصویر",
+            "فراخوانی ابزار",
+            "تولید متن"
         ],
         "contextWindow": 200,
         "maxGenerationTokenLength": 100,
         "relatedLinks": [
             {
-                "title": "平台文档：o3‑pro",
+                "title": "مستندات پلتفرم: o3‑pro",
                 "url": "https://platform.openai.com/docs/models/o3-pro"
             }
         ],
@@ -722,20 +722,20 @@
     {
         "modelName": "o3-mini",
         "company": "OpenAI",
-        "country": "美国",
-        "openSourceStatus": "闭源",
+        "country": "آمریکا",
+        "openSourceStatus": "متن‌بسته",
         "releaseDate": "2025-01-31",
-        "description": "o3‑mini 是最新的小型推理模型，在与 o1‑mini 相同成本与延迟下提供更高智能；支持结构化输出、函数调用与批量 API；文本 I/O。",
+        "description": "o3‑mini جدیدترین مدل استدلالی کوچک است که با هزینه و تأخیر یکسان با o1‑mini هوش بالاتری ارائه می‌دهد؛ از خروجی ساختاریافته، فراخوانی تابع و API دسته‌ای پشتیبانی می‌کند؛ I/O متنی.",
         "modelTags": [
-            "深度思考",
-            "工具调用",
-            "文本生成"
+            "تفکر عمیق",
+            "فراخوانی ابزار",
+            "تولید متن"
         ],
         "contextWindow": 200,
         "maxGenerationTokenLength": 100,
         "relatedLinks": [
             {
-                "title": "平台文档：o3‑mini",
+                "title": "مستندات پلتفرم: o3‑mini",
                 "url": "https://platform.openai.com/docs/models/o3-mini"
             }
         ],
@@ -744,20 +744,20 @@
     {
         "modelName": "o3-deep-research",
         "company": "OpenAI",
-        "country": "美国",
-        "openSourceStatus": "闭源",
+        "country": "آمریکا",
+        "openSourceStatus": "متن‌بسته",
         "releaseDate": "2025-06-26",
-        "description": "o3‑deep‑research 是最强的深度研究模型，可进行互联网搜索与跨数据源综合（支持 MCP 连接器与自有数据），适合复杂多阶段的研究任务。",
+        "description": "o3‑deep‑research قوی‌ترین مدل پژوهش عمیق است که می‌تواند جستجوی اینترنتی و ترکیب بین منابع داده انجام دهد (پشتیبانی از اتصال‌دهنده MCP و داده‌های اختصاصی) و برای وظایف پژوهشی پیچیده چندمرحله‌ای مناسب است.",
         "modelTags": [
-            "深度思考",
-            "工具调用",
-            "文本生成"
+            "تفکر عمیق",
+            "فراخوانی ابزار",
+            "تولید متن"
         ],
         "contextWindow": 200,
         "maxGenerationTokenLength": 100,
         "relatedLinks": [
             {
-                "title": "平台文档：o3‑deep‑research",
+                "title": "مستندات پلتفرم: o3‑deep‑research",
                 "url": "https://platform.openai.com/docs/models/o3-deep-research"
             }
         ],
@@ -766,20 +766,20 @@
     {
         "modelName": "o4-mini",
         "company": "OpenAI",
-        "country": "美国",
-        "openSourceStatus": "闭源",
+        "country": "آمریکا",
+        "openSourceStatus": "متن‌بسته",
         "releaseDate": "2025-04-16",
-        "description": "o4‑mini 是最新的小型 o 系列推理模型，优化编码与视觉任务的效率与效果；提供 200K 上下文与 100K 输出，支持文本与图像输入；官方说明其后续由 GPT‑5 mini 接任。",
+        "description": "o4‑mini جدیدترین مدل استدلالی کوچک سری o است که بهره‌وری و نتیجه وظایف کدنویسی و بصری را بهینه کرده؛ context با طول 200K و خروجی 100K ارائه می‌دهد و از ورودی متن و تصویر پشتیبانی می‌کند؛ طبق توضیح رسمی بعداً GPT‑5 mini جانشین آن شده است.",
         "modelTags": [
-            "深度思考",
-            "视觉理解",
-            "工具调用"
+            "تفکر عمیق",
+            "درک تصویر",
+            "فراخوانی ابزار"
         ],
         "contextWindow": 200,
         "maxGenerationTokenLength": 100,
         "relatedLinks": [
             {
-                "title": "平台文档：o4‑mini",
+                "title": "مستندات پلتفرم: o4‑mini",
                 "url": "https://platform.openai.com/docs/models/o4-mini"
             }
         ]
@@ -787,24 +787,24 @@
     {
         "modelName": "o4-mini-deep-research",
         "company": "OpenAI",
-        "country": "美国",
-        "openSourceStatus": "闭源",
+        "country": "آمریکا",
+        "openSourceStatus": "متن‌بسته",
         "releaseDate": "2025-06-26",
-        "description": "o4-mini-deep-research 是 OpenAI 面向深度研究任务的高性价比版本，可在 Responses API 中结合 Web search、MCP 连接器和 File search 对互联网与私有数据进行跨源检索、分析和综合；支持 200K 上下文与 100K 最大输出，适合市场研究、法律/科学资料梳理和大规模内部知识报告。",
+        "description": "o4-mini-deep-research نسخه با صرفه اقتصادی بالای OpenAI برای وظایف پژوهش عمیق است که می‌تواند در Responses API همراه با Web search، اتصال‌دهنده MCP و File search روی اینترنت و داده‌های خصوصی بازیابی، تحلیل و ترکیب بین‌منبعی انجام دهد؛ از context با طول 200K و حداکثر خروجی 100K پشتیبانی می‌کند و برای پژوهش بازار، مرتب‌سازی منابع حقوقی/علمی و گزارش‌های دانش داخلی در مقیاس بزرگ مناسب است.",
         "modelTags": [
-            "文本生成",
-            "深度思考",
-            "工具调用"
+            "تولید متن",
+            "تفکر عمیق",
+            "فراخوانی ابزار"
         ],
         "contextWindow": 200,
         "maxGenerationTokenLength": 100,
         "relatedLinks": [
             {
-                "title": "平台文档：o4-mini-deep-research",
+                "title": "مستندات پلتفرم: o4-mini-deep-research",
                 "url": "https://platform.openai.com/docs/models/o4-mini-deep-research"
             },
             {
-                "title": "OpenAI Deep Research 指南",
+                "title": "راهنمای OpenAI Deep Research",
                 "url": "https://platform.openai.com/docs/guides/deep-research"
             }
         ],
@@ -813,25 +813,25 @@
     {
         "modelName": "DALL·E 2",
         "company": "OpenAI",
-        "country": "美国",
-        "openSourceStatus": "闭源",
+        "country": "آمریکا",
+        "openSourceStatus": "متن‌بسته",
         "releaseDate": "2022-09-28",
-        "description": "DALL·E 2 是 OpenAI 文生图模型，采用扩散架构并结合 CLIP 引导，提升语义一致性与图像逼真度；支持图像编辑、局部修补与外延扩图，提供多尺寸与变体生成，适用于品牌素材迭代、照片修复与海报合成。",
+        "description": "DALL·E 2 مدل تولید تصویر از متن OpenAI است که از معماری انتشاری همراه با هدایت CLIP استفاده می‌کند و یکنواختی معنایی و واقع‌گرایی تصویر را بهبود داده؛ از ویرایش تصویر، ترمیم موضعی و گسترش تصویر پشتیبانی می‌کند و تولید در چند اندازه و گونه را ارائه می‌دهد؛ مناسب برای تکرار محتوای برند، ترمیم عکس و ترکیب پوستر.",
         "modelTags": [
-            "图片生成"
+            "تولید تصویر"
         ],
         "maxOutputResolution": "1024x1024",
         "relatedLinks": [
             {
-                "title": "DALL·E 2 官方介绍",
+                "title": "معرفی رسمی DALL·E 2",
                 "url": "https://openai.com/index/dall-e-2/"
             },
             {
-                "title": "DALL·E 测试版开放公告（2022-09-28）",
+                "title": "اطلاعیه باز شدن نسخه آزمایشی DALL·E (2022-09-28)",
                 "url": "https://openai.com/index/dall-e-now-available-without-waitlist/"
             },
             {
-                "title": "Images API：Edits（仅 DALL·E 2）",
+                "title": "Images API: Edits (فقط DALL·E 2)",
                 "url": "https://platform.openai.com/docs/guides/images/edits-dall-e-2-only"
             }
         ]
@@ -839,25 +839,25 @@
     {
         "modelName": "DALL·E 3",
         "company": "OpenAI",
-        "country": "美国",
-        "openSourceStatus": "闭源",
+        "country": "آمریکا",
+        "openSourceStatus": "متن‌بسته",
         "releaseDate": "2023-10-19",
-        "description": "DALL·E 3 是 OpenAI 最新文本到图像模型，基于扩散生成与改进的图像字幕训练，并结合 GPT‑4 提示重写提升对复杂描述的遵循度；可生成高清且构图稳定的图像，能更好处理文字与手部细节，支持多种长宽比，适用于插画创作、品牌设计、营销素材与产品概念可视化。上下文窗口与最大输出 Token 限制官方未公开。",
+        "description": "DALL·E 3 جدیدترین مدل تبدیل متن به تصویر OpenAI است که بر پایه تولید انتشاری و آموزش زیرنویس تصویر بهبودیافته ساخته شده و با بازنویسی پرامپت توسط GPT‑4 پیروی از توصیف‌های پیچیده را بهبود داده؛ می‌تواند تصاویر باکیفیت با ترکیب‌بندی پایدار تولید کند، متن و جزئیات دست را بهتر پردازش می‌کند و از نسبت‌های ابعاد مختلف پشتیبانی می‌کند؛ مناسب برای تصویرسازی، طراحی برند، محتوای بازاریابی و تجسم مفهوم محصول. پنجره context و حداکثر Token خروجی به‌طور رسمی اعلام نشده‌اند.",
         "modelTags": [
-            "图片生成"
+            "تولید تصویر"
         ],
         "maxOutputResolution": "1792x1024",
         "relatedLinks": [
             {
-                "title": "DALL·E 3 现已在 ChatGPT Plus/Enterprise 提供（2023-10-19）",
+                "title": "DALL·E 3 اکنون در ChatGPT Plus/Enterprise در دسترس است (2023-10-19)",
                 "url": "https://openai.com/index/dall-e-3-is-now-available-in-chatgpt-plus-and-enterprise/"
             },
             {
-                "title": "DALL·E 3 系统卡",
+                "title": "کارت سیستم DALL·E 3",
                 "url": "https://openai.com/index/dall-e-3-system-card/"
             },
             {
-                "title": "Images API 指南（生成）",
+                "title": "راهنمای Images API (تولید)",
                 "url": "https://platform.openai.com/docs/guides/images"
             }
         ]
@@ -865,18 +865,18 @@
     {
         "modelName": "GPT Image 1",
         "company": "OpenAI",
-        "country": "美国",
-        "openSourceStatus": "闭源",
+        "country": "آمریکا",
+        "openSourceStatus": "متن‌بسته",
         "releaseDate": "2025-04-23",
-        "description": "GPT Image 1 是 OpenAI 推出的原生多模态图像生成模型，接受文本与图像输入并输出图片；提供低、中、高三档质量与 1024/1536 多分辨率，支持生成与编辑接口，可在聊天、响应与批处理端点调用；适用于品牌设计、产品概念图、营销素材与电商海报。",
+        "description": "GPT Image 1 مدل تولید تصویر چندوجهی بومی OpenAI است که ورودی متن و تصویر می‌پذیرد و تصویر خروجی می‌دهد؛ سه سطح کیفیت کم، متوسط و بالا و وضوح‌های 1024/1536 ارائه می‌دهد، از رابط‌های تولید و ویرایش پشتیبانی می‌کند و در endpointهای گفتگو، پاسخ و پردازش دسته‌ای قابل فراخوانی است؛ مناسب برای طراحی برند، تصاویر مفهومی محصول، محتوای بازاریابی و پوستر فروشگاهی.",
         "modelTags": [
-            "图片生成",
-            "视觉理解"
+            "تولید تصویر",
+            "درک تصویر"
         ],
         "maxOutputResolution": "1536x1024",
         "relatedLinks": [
             {
-                "title": "GPT Image 1 模型文档",
+                "title": "مستندات مدل GPT Image 1",
                 "url": " https://platform.openai.com/docs/models/gpt-image-1 "
             }
         ]
@@ -884,18 +884,18 @@
     {
         "modelName": "GPT Image 1 Mini",
         "company": "OpenAI",
-        "country": "美国",
-        "openSourceStatus": "闭源",
+        "country": "آمریکا",
+        "openSourceStatus": "متن‌بسته",
         "releaseDate": "2025-04-23",
-        "description": "GPT Image 1 Mini 是 GPT Image 1 的经济版，原生支持文本与图像输入并输出图片；在价格与速度上更优，提供多档质量与分辨率选择，支持生成与编辑 API，可接入聊天、响应与批处理端点；适用于大规模素材生成、A/B 创意测试与自动化内容生产。",
+        "description": "GPT Image 1 Mini نسخه اقتصادی GPT Image 1 است که به‌طور بومی از ورودی متن و تصویر پشتیبانی کرده و تصویر خروجی می‌دهد؛ در قیمت و سرعت بهتر است، چند سطح کیفیت و وضوح ارائه می‌دهد، از API تولید و ویرایش پشتیبانی می‌کند و به endpointهای گفتگو، پاسخ و پردازش دسته‌ای متصل می‌شود؛ مناسب برای تولید محتوا در مقیاس بزرگ، تست خلاقانه A/B و تولید خودکار محتوا.",
         "modelTags": [
-            "图片生成",
-            "视觉理解"
+            "تولید تصویر",
+            "درک تصویر"
         ],
         "maxOutputResolution": "1536x1024",
         "relatedLinks": [
             {
-                "title": "gpt-image-1-mini 模型文档",
+                "title": "مستندات مدل gpt-image-1-mini",
                 "url": " https://platform.openai.com/docs/models/gpt-image-1-mini "
             }
         ]
@@ -903,22 +903,22 @@
     {
         "modelName": "GPT Image 2",
         "company": "OpenAI",
-        "country": "美国",
-        "openSourceStatus": "闭源",
+        "country": "آمریکا",
+        "openSourceStatus": "متن‌بسته",
         "releaseDate": "2026-04-21",
-        "description": "GPT Image 2 是 OpenAI 最新的图像生成与编辑模型，模型快照为 gpt-image-2-2026-04-21，支持文本与图像输入并输出图片；官方文档强调其具备快速、高质量生成与编辑能力，支持灵活尺寸和高保真图像输入，适合品牌设计、商品图、广告创意、复杂图像编辑与规模化素材生产。",
+        "description": "GPT Image 2 جدیدترین مدل تولید و ویرایش تصویر OpenAI است با snapshot مدل gpt-image-2-2026-04-21 که از ورودی متن و تصویر پشتیبانی کرده و تصویر خروجی می‌دهد؛ مستندات رسمی بر توانایی تولید و ویرایش سریع و باکیفیت تأکید دارند، از اندازه‌های انعطاف‌پذیر و ورودی تصویر با وفاداری بالا پشتیبانی می‌کند و برای طراحی برند، تصاویر کالا، خلاقیت تبلیغاتی، ویرایش پیچیده تصویر و تولید محتوا در مقیاس بزرگ مناسب است.",
         "modelTags": [
-            "图片生成",
-            "视觉理解"
+            "تولید تصویر",
+            "درک تصویر"
         ],
-        "maxOutputResolution": "官方未公开",
+        "maxOutputResolution": "به‌طور رسمی اعلام نشده",
         "relatedLinks": [
             {
-                "title": "GPT Image 2 模型文档",
+                "title": "مستندات مدل GPT Image 2",
                 "url": "https://developers.openai.com/api/docs/models/gpt-image-2"
             },
             {
-                "title": "OpenAI 图像生成指南",
+                "title": "راهنمای تولید تصویر OpenAI",
                 "url": "https://developers.openai.com/api/docs/guides/image-generation"
             }
         ],
@@ -927,26 +927,26 @@
     {
         "modelName": "Sora 2",
         "company": "OpenAI",
-        "country": "美国",
-        "openSourceStatus": "闭源",
+        "country": "آمریکا",
+        "openSourceStatus": "متن‌بسته",
         "releaseDate": "2025-09-30",
-        "description": "Sora 2 是 OpenAI 推出的新一代视频与音频生成模型，基于扩散式 Transformer 与大规模多模态数据训练，强化世界模拟能力，显著提升物理一致性、真实感、风格覆盖与提示可控性；支持文本/图像/视频到视频、同步语音与音效，1080P，最长 25 秒（Storyboard 可选），适用于广告创意、叙事短片、社媒二创与品牌传播。",
+        "description": "Sora 2 نسل جدید مدل تولید ویدئو و صدای OpenAI است که بر پایه Transformer انتشاری و آموزش با داده‌های چندوجهی در مقیاس بزرگ ساخته شده، توانایی شبیه‌سازی جهان را تقویت کرده و یکنواختی فیزیکی، واقع‌گرایی، پوشش سبک و کنترل‌پذیری پرامپت را به‌طور محسوسی بهبود داده؛ از تبدیل متن/تصویر/ویدئو به ویدئو، گفتار و جلوه صوتی هم‌گام پشتیبانی می‌کند، با وضوح 1080P و حداکثر ۲۵ ثانیه (Storyboard اختیاری)؛ مناسب برای خلاقیت تبلیغاتی، فیلم کوتاه روایی، بازآفرینی محتوای شبکه‌های اجتماعی و اطلاع‌رسانی برند.",
         "modelTags": [
-            "视频生成"
+            "تولید ویدئو"
         ],
         "outputImageMaxResolution": "1080P",
         "maxGenerationVideoDuration": "15",
         "relatedLinks": [
             {
-                "title": "Sora 2 正式发布（OpenAI 官方博客）",
+                "title": "انتشار رسمی Sora 2 (وبلاگ رسمی OpenAI)",
                 "url": "https://openai.com/index/sora-2/"
             },
             {
-                "title": "Sora 2 系统卡（技术与安全）",
+                "title": "کارت سیستم Sora 2 (فنی و امنیتی)",
                 "url": "https://openai.com/index/sora-2-system-card/"
             },
             {
-                "title": "Sora 发布说明（功能与时长）",
+                "title": "یادداشت انتشار Sora (قابلیت‌ها و مدت)",
                 "url": "https://help.openai.com/en/articles/12593142-sora-release-notes"
             }
         ]
@@ -954,26 +954,26 @@
     {
         "modelName": "Sora 1.0",
         "company": "OpenAI",
-        "country": "美国",
-        "openSourceStatus": "闭源",
+        "country": "آمریکا",
+        "openSourceStatus": "متن‌بسته",
         "releaseDate": "2024-02-15",
-        "description": "Sora 1.0 是 OpenAI 首次公开的文本到视频模型，采用扩散式 Transformer 架构与补丁表征、重标注技术，提升提示解析与时序一致性；支持文本/图像/视频到视频与镜头扩展，最高 1080P，最长 60 秒，适用于影视分镜预演、广告短片、社媒内容生成与创意原型制作。",
+        "description": "Sora 1.0 نخستین مدل عمومی تبدیل متن به ویدئوی OpenAI است که از معماری Transformer انتشاری، نمایش patch و فناوری برچسب‌گذاری مجدد استفاده می‌کند و تجزیه پرامپت و یکنواختی زمانی را بهبود داده؛ از تبدیل متن/تصویر/ویدئو به ویدئو و گسترش نما پشتیبانی می‌کند، با حداکثر وضوح 1080P و حداکثر ۶۰ ثانیه؛ مناسب برای پیش‌نمایش استوری‌بورد فیلم، تبلیغات کوتاه، تولید محتوای شبکه‌های اجتماعی و ساخت نمونه اولیه خلاقانه.",
         "modelTags": [
-            "视频生成"
+            "تولید ویدئو"
         ],
         "outputImageMaxResolution": "1080P",
         "maxGenerationVideoDuration": "20",
         "relatedLinks": [
             {
-                "title": "Introducing Sora（模型介绍页）",
+                "title": "Introducing Sora (صفحه معرفی مدل)",
                 "url": "https://openai.com/index/sora/"
             },
             {
-                "title": "Sora System Card（系统卡）",
+                "title": "Sora System Card (کارت سیستم)",
                 "url": "https://openai.com/index/sora-system-card/"
             },
             {
-                "title": "Sora is here（产品发布与分辨率/时长）",
+                "title": "Sora is here (انتشار محصول و وضوح/مدت)",
                 "url": "https://openai.com/index/sora-is-here/"
             }
         ]

@@ -1,12 +1,12 @@
 /**
- * 模型卡片 · Mailchimp-Freddie 风
+ * کارت مدل · سبک Mailchimp-Freddie
  *
- * 设计要点：
- * - stamp 风：白底 + ink 2px 边 + offset 阴影，hover 上左平移
- * - 顶 strip 用品牌色循环（不再彩虹渐变 typeColorMap）
- * - 数据块 (context / output / resolution) 改 cream 浅奶油 + ink 边，无渐变
- * - 标签 chips 单色 + ink 细边
- * - 信息层级：公司+国家 → 模型名 → 时间/开源 → 数据格 → 标签 → 描述
+ * نکات طراحی:
+ * - سبک stamp: پس‌زمینه سفید + حاشیه 2px با ink + سایه offset، در hover به بالا-چپ جابه‌جا می‌شود
+ * - strip بالا از چرخه رنگ برند استفاده می‌کند (دیگر typeColorMap گرادیان رنگین‌کمانی نیست)
+ * - بلوک‌های داده (context / output / resolution) به cream کرمی کم‌رنگ + حاشیه ink تغییر کرده، بدون گرادیان
+ * - chipهای برچسب تک‌رنگ + حاشیه باریک ink
+ * - سلسله‌مراتب اطلاعات: شرکت+کشور ← نام مدل ← زمان/متن‌باز ← خانه‌های داده ← برچسب ← توضیح
  */
 
 import React, { useState } from "react";
@@ -18,16 +18,16 @@ interface ModelCardProps {
   model: AIModel;
 }
 
-/** 公司 → 品牌色 strip (循环 5 色，避免乱) */
+/** شرکت ← strip رنگ برند (چرخه ۵ رنگ، برای جلوگیری از شلوغی) */
 const companyAccent = (company: string): string => {
   const palette = [
-    "bg-butter", // 黄
-    "bg-coral", // 珊瑚
-    "bg-teal", // 深 teal
-    "bg-pop", // 玫粉
-    "bg-butter-deep", // 深黄
+    "bg-butter", // زرد
+    "bg-coral", // مرجانی
+    "bg-teal", // teal تیره
+    "bg-pop", // صورتی
+    "bg-butter-deep", // زرد تیره
   ];
-  /* 哈希分配，保证同公司始终同色 */
+  /* تخصیص با هش، تضمین می‌کند یک شرکت همیشه یک رنگ داشته باشد */
   let hash = 0;
   for (let i = 0; i < company.length; i++) {
     hash = (hash * 31 + company.charCodeAt(i)) % 1000;
@@ -37,13 +37,13 @@ const companyAccent = (company: string): string => {
 
 const countryFlag = (country: string): string => {
   const flags: Record<string, string> = {
-    美国: "🇺🇸",
-    中国: "🇨🇳",
-    英国: "🇬🇧",
-    德国: "🇩🇪",
-    法国: "🇫🇷",
-    加拿大: "🇨🇦",
-    日本: "🇯🇵",
+    آمریکا: "🇺🇸",
+    چین: "🇨🇳",
+    انگلیس: "🇬🇧",
+    آلمان: "🇩🇪",
+    فرانسه: "🇫🇷",
+    کانادا: "🇨🇦",
+    ژاپن: "🇯🇵",
   };
   return flags[country] || "🌍";
 };
@@ -60,7 +60,7 @@ const formatDate = (dateStr: string): string => {
   }
 };
 
-/** 大数字格式化：1024 → 1M, 128 → 128K, 0 / null → N/A */
+/** قالب‌بندی اعداد بزرگ: 1024 ← 1M، 128 ← 128K، 0 / null ← N/A */
 const formatTokenSize = (n: number | undefined): string => {
   if (!n || n <= 0) return "N/A";
   if (n >= 1000) {
@@ -80,14 +80,14 @@ export const ModelCard: React.FC<ModelCardProps> = ({ model }) => {
         onClick={() => setIsModalOpen(true)}
         className="group cursor-pointer flex flex-col bg-white border-2 border-ink rounded-2xl shadow-stamp transition-all duration-300 ease-spring hover:-translate-x-1 hover:-translate-y-1 hover:[box-shadow:8px_8px_0_0_#241C15] overflow-hidden"
       >
-        {/* 顶 strip —— 品牌色，标识公司归属 */}
+        {/* strip بالا —— رنگ برند، نشان‌دهنده شرکت مالک */}
         <div
           className={`h-2 ${accent} border-b-2 border-ink`}
           aria-hidden
         />
 
         <div className="p-5">
-          {/* 头部：公司图标 + 模型名 + 元数据 */}
+          {/* سربرگ: آیکون شرکت + نام مدل + metadata */}
           <div className="flex items-start gap-3.5 mb-4">
             <div className="flex-shrink-0">
               <img
@@ -118,9 +118,9 @@ export const ModelCard: React.FC<ModelCardProps> = ({ model }) => {
                   {formatDate(model.releaseDate)}
                 </span>
                 <span
-                  className={`inline-flex items-center gap-1 font-semibold ${model.openSourceStatus === "开源" ? "text-teal" : "text-ink-tertiary"}`}
+                  className={`inline-flex items-center gap-1 font-semibold ${model.openSourceStatus === "متن‌باز" ? "text-teal" : "text-ink-tertiary"}`}
                 >
-                  {model.openSourceStatus === "开源" ? (
+                  {model.openSourceStatus === "متن‌باز" ? (
                     <Unlock className="w-3 h-3" strokeWidth={2.5} />
                   ) : (
                     <Lock className="w-3 h-3" strokeWidth={2.5} />
@@ -131,26 +131,26 @@ export const ModelCard: React.FC<ModelCardProps> = ({ model }) => {
             </div>
           </div>
 
-          {/* 数据格 —— context / output / resolution 三栏，cream 浅底 + ink 边 */}
+          {/* خانه‌های داده —— سه ستون context / output / resolution، پس‌زمینه کم‌رنگ cream + حاشیه ink */}
           {(!!model.contextWindow ||
             !!model.maxGenerationTokenLength ||
             !!model.maxOutputResolution) && (
             <div className="grid grid-cols-2 gap-2 mb-3">
               {!!model.contextWindow && (
                 <DataCell
-                  label="上下文"
+                  label="طول context"
                   value={formatTokenSize(model.contextWindow)}
                 />
               )}
               {!!model.maxGenerationTokenLength && (
                 <DataCell
-                  label="最大输出"
+                  label="حداکثر خروجی"
                   value={formatTokenSize(model.maxGenerationTokenLength)}
                 />
               )}
               {!!model.maxOutputResolution && (
                 <DataCell
-                  label="最大分辨率"
+                  label="حداکثر وضوح"
                   value={model.maxOutputResolution}
                   full={!model.contextWindow || !model.maxGenerationTokenLength}
                 />
@@ -158,7 +158,7 @@ export const ModelCard: React.FC<ModelCardProps> = ({ model }) => {
             </div>
           )}
 
-          {/* 标签 chips —— 单色 stamp 风 */}
+          {/* chipهای برچسب —— سبک stamp تک‌رنگ */}
           {model.modelTags.length > 0 && (
             <div className="flex flex-wrap gap-1.5 mb-3">
               {model.modelTags.slice(0, 3).map((tag, idx) => (
@@ -178,7 +178,7 @@ export const ModelCard: React.FC<ModelCardProps> = ({ model }) => {
             </div>
           )}
 
-          {/* 描述 */}
+          {/* توضیح */}
           <p className="font-sans text-[13px] text-ink-secondary leading-[1.6] line-clamp-2">
             {model.description}
           </p>
@@ -194,7 +194,7 @@ export const ModelCard: React.FC<ModelCardProps> = ({ model }) => {
   );
 };
 
-/** 数据格小组件 —— cream 浅底 + ink 边 + 标签上 / 数字下 */
+/** کامپوننت کوچک خانه داده —— پس‌زمینه کم‌رنگ cream + حاشیه ink + برچسب بالا / عدد پایین */
 const DataCell: React.FC<{ label: string; value: string; full?: boolean }> = ({
   label,
   value,

@@ -1,33 +1,33 @@
 /**
- * CTA-01 庆祝场景组件
- * - 主角 = 戴草帽眼镜的小读者，抱着会笑的大星星 + 比赞 + 眨右眼
- * - 6 个装饰围绕主角散布，组成「拿到星星的庆祝时刻」
- * - 滚到这里才触发：用 IntersectionObserver 监听，进入视口后才挂载 Layer
- *   主角先 pop → 装饰元素错峰 burst → 总入场 ~1.5s
- * - 入场后无缝接管到循环动画（主角偶尔挥手，星星呼吸闪烁，亮线浮动，绿叶摆动）
+ * CTA-01 کامپوننت صحنه جشن
+ * - شخصیت اصلی = خواننده کوچکی با کلاه حصیری و عینک که ستاره بزرگِ خندانی را در آغوش گرفته + لایک + چشمک با چشم راست
+ * - ۶ عنصر تزئینی دور شخصیت اصلی پخش شده‌اند و «لحظه جشنِ گرفتن ستاره» را می‌سازند
+ * - فقط وقتی تا این‌جا اسکرول شود اجرا می‌شود: با IntersectionObserver گوش می‌دهد و پس از ورود به viewport لایه‌ها را mount می‌کند
+ *   اول شخصیت اصلی pop می‌شود ← عناصر تزئینی با فاصله burst می‌شوند ← کل ورود حدود ۱٫۵ ثانیه
+ * - پس از ورود، بی‌وقفه به انیمیشن چرخه‌ای می‌رسد (شخصیت گاهی دست تکان می‌دهد، ستاره نفس می‌کشد و چشمک می‌زند، خطوط نور شناورند، برگ‌ها تاب می‌خورند)
  *
- * 素材来自 public/imgs/site/
- *   cat-main         主图（人物 + 星星 + 比赞）
- *   cat-star-lg      大黄星
- *   cat-star-sm      小黄星
- *   cat-rays-yellow  3 条黄色亮线
- *   cat-rays-orange  3 条橙色亮线
- *   cat-leaf         一对绿叶
- *   cat-dot-green    绿色圆点
+ * منابع از public/imgs/site/
+ *   cat-main         تصویر اصلی (شخصیت + ستاره + لایک)
+ *   cat-star-lg      ستاره زرد بزرگ
+ *   cat-star-sm      ستاره زرد کوچک
+ *   cat-rays-yellow  ۳ خط نور زرد
+ *   cat-rays-orange  ۳ خط نور نارنجی
+ *   cat-leaf         یک جفت برگ سبز
+ *   cat-dot-green    نقطه سبز
  *
- * 与 HeroScene 的差异：
- *   - 入场惰性触发（HeroScene 在首屏直接播）
- *   - 主角入场用 enter-pop（中心放大）而非 up（CTA 区视觉中心更稳）
- *   - 大星星入场用 enter-spin（更有"庆祝感"）
- *   - 主角的 loop 用 wave（90% 静止，偶尔挥手），不是持续 wiggle
+ * تفاوت با HeroScene:
+ *   - ورود تنبل (lazy) اجرا می‌شود (HeroScene مستقیم در صفحه اول پخش می‌شود)
+ *   - ورود شخصیت اصلی با enter-pop (بزرگ‌شدن از مرکز) است نه up (مرکز بصری بخش CTA پایدارتر است)
+ *   - ورود ستاره بزرگ با enter-spin (حس"جشن"）
+ *   - loop شخصیت اصلی wave است (۹۰٪ ثابت، گاهی دست تکان می‌دهد)، نه wiggle مداوم
  */
 
 import React from "react";
 import { useInView } from "../hooks/useInView";
 
 /**
- * ⚠️ 必须用完整的 className 字符串字面量
- * Tailwind 静态扫描不识别动态拼接的 animate-* 类名
+ * ⚠️ باید از رشته کامل literal برای className استفاده شود
+ * اسکن ایستای Tailwind کلاس‌های animate-* که پویا ساخته شوند را تشخیص نمی‌دهد
  */
 const ENTER_CLASS = {
   pop: "animate-enter-pop",
@@ -86,7 +86,7 @@ const Layer: React.FC<LayerProps> = ({
 );
 
 const CTAScene: React.FC = () => {
-  // 进入视口才触发入场动画（threshold 0.25 = 25% 可见即播放）
+  // انیمیشن ورود فقط با ورود به viewport اجرا می‌شود (threshold 0.25 = با ۲۵٪ دیده‌شدن پخش می‌شود)
   const [ref, inView] = useInView<HTMLDivElement>({ threshold: 0.25 });
 
   return (
@@ -96,21 +96,21 @@ const CTAScene: React.FC = () => {
     >
       {inView && (
         <>
-          {/* ── 主角先入场，中心 pop + 偶尔挥手 ── */}
+          {/* ── اول شخصیت اصلی وارد می‌شود، pop از مرکز + گاهی دست تکان دادن ── */}
           <Layer
             src="/imgs/site/cat-main.png"
-            alt="一个戴草帽戴眼镜的小读者，抱着一颗会笑的大星星，单手比赞，眨着右眼"
-            pos="top-[6%] left-[10%] w-[82%]"
+            alt="خواننده کوچکی با کلاه حصیری و عینک که ستاره بزرگِ خندانی را در آغوش دارد، با یک دست لایک می‌دهد و با چشم راست چشمک می‌زند"
+            pos="top-[6%] start-[10%] w-[82%]"
             enter={{ anim: "pop", delay: 0 }}
             loop="animate-wave"
             origin="60% 70%"
             z={10}
           />
 
-          {/* ── 大星星：旋转飞入 + 呼吸摇摆（庆祝核心） ── */}
+          {/* ── ستاره بزرگ: چرخان وارد می‌شود + نفس کشیدن و تاب خوردن (هسته جشن) ── */}
           <Layer
             src="/imgs/site/cat-star-lg.png"
-            pos="top-[2%] right-[2%] w-[19%]"
+            pos="top-[2%] end-[2%] w-[19%]"
             enter={{ anim: "spin", delay: 350 }}
             loop="animate-star-pulse"
             loopDelay={1100}
@@ -118,30 +118,30 @@ const CTAScene: React.FC = () => {
             z={6}
           />
 
-          {/* ── 黄色亮线：左上 pop + 上下浮动 ── */}
+          {/* ── خطوط نور زرد: pop در بالا-چپ + شناور بالا و پایین ── */}
           <Layer
             src="/imgs/site/cat-rays-yellow.png"
-            pos="top-[8%] left-[20%] w-[14%]"
+            pos="top-[8%] start-[20%] w-[14%]"
             enter={{ anim: "pop", delay: 450 }}
             loop="animate-float-y"
             loopDelay={1200}
             z={5}
           />
 
-          {/* ── 橙色亮线：右中 pop + 浮动（错峰） ── */}
+          {/* ── خطوط نور نارنجی: pop در وسط-راست + شناور (با فاصله زمانی) ── */}
           <Layer
             src="/imgs/site/cat-rays-orange.png"
-            pos="top-[44%] right-[1%] w-[16%]"
+            pos="top-[44%] end-[1%] w-[16%]"
             enter={{ anim: "pop", delay: 550 }}
             loop="animate-float-y-md"
             loopDelay={1500}
             z={5}
           />
 
-          {/* ── 小星星：左中 pop + 闪烁 ── */}
+          {/* ── ستاره کوچک: pop در وسط-چپ + چشمک ── */}
           <Layer
             src="/imgs/site/cat-star-sm.png"
-            pos="top-[22%] left-[2%] w-[11%]"
+            pos="top-[22%] start-[2%] w-[11%]"
             enter={{ anim: "pop", delay: 650 }}
             loop="animate-twinkle"
             loopDelay={1300}
@@ -149,10 +149,10 @@ const CTAScene: React.FC = () => {
             z={5}
           />
 
-          {/* ── 小叶子：左下 pop + 摆动 ── */}
+          {/* ── برگ کوچک: pop در پایین-چپ + تاب خوردن ── */}
           <Layer
             src="/imgs/site/cat-leaf.png"
-            pos="bottom-[4%] left-[26%] w-[12%]"
+            pos="bottom-[4%] start-[26%] w-[12%]"
             enter={{ anim: "pop", delay: 750 }}
             loop="animate-sway-leaf"
             loopDelay={1400}
@@ -160,10 +160,10 @@ const CTAScene: React.FC = () => {
             z={4}
           />
 
-          {/* ── 绿色圆点：左下角 pop + pulse（"点击我"的小提示） ── */}
+          {/* ── نقطه سبز: pop در گوشه پایین-چپ + pulse ("روی من کلیک کن"راهنمای کوچک) ── */}
           <Layer
             src="/imgs/site/cat-dot-green.png"
-            pos="bottom-[20%] left-[4%] w-[7%]"
+            pos="bottom-[20%] start-[4%] w-[7%]"
             enter={{ anim: "pop", delay: 850 }}
             loop="animate-dot-pulse"
             loopDelay={1500}

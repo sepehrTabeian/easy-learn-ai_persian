@@ -1,19 +1,19 @@
 /**
- * Context Window 封面
+ * جلد Context Window
  *
- * 隐喻：context window = 一只「横向的玻璃窗」框，模型这一秒看到的所有 token
- *       全在这一段。token 从左边以小药丸的形式排队飘进窗口；窗口右侧露出还剩
- *       的空闲区（虚斜线）。底部一条标尺 0 → 128K。
+ * استعاره: context window = یک قاب «پنجره شیشه‌ای افقی»؛ همه tokenهایی که مدل در این لحظه می‌بیند
+ *       همگی در همین بخش‌اند. tokenها از چپ به شکل قرص‌های کوچک صف می‌کشند و وارد پنجره می‌شوند؛ سمت راست پنجره
+ *       ناحیه خالی باقی‌مانده (هاشور مورب) دیده می‌شود. در پایین یک خط‌کش 0 ← 128K.
  *
- * 跟 AgentMemoryCover（三层档案柜）视觉刻意拉开：
- *   - 这张是 横向单条 + 流入；那张是 纵向多层 + 抽屉
- *   - 这张主色用 butter 暖底；那张是 cream 冷底
- *   - 这张主图元素是「窗框 + token 药丸」；那张是「抽屉柜 + 索引卡」
+ * عمداً از نظر بصری متمایز از AgentMemoryCover (کمد بایگانی سه‌طبقه):
+ *   - این یکی نوار افقی واحد + ورود جریان است؛ آن یکی چندلایه عمودی + کشو
+ *   - رنگ اصلی این یکی پس‌زمینه گرم butter است؛ آن یکی پس‌زمینه سرد cream
+ *   - عنصر اصلی این یکی «قاب پنجره + قرص token» است؛ آن یکی «کمد کشویی + کارت نمایه»
  *
- * hover 行为：
- *   - 顶上排队的 token 药丸往右整体平移一截（仿佛流入）
- *   - 窗口里靠右那段 占用 bar 涨一截
- *   - 右下 ∞ 旋转
+ * رفتار hover:
+ *   - قرص‌های token در صف بالا کمی به راست جابه‌جا می‌شوند (گویی وارد می‌شوند)
+ *   - نوار اشغال در بخش راست پنجره کمی بلندتر می‌شود
+ *   - ∞ پایین-راست می‌چرخد
  */
 import React from "react";
 import CoverShell from "./CoverShell";
@@ -39,14 +39,14 @@ const WIN_W = 248;
 const WIN_H = 44;
 
 const ContextWindowCover: React.FC = () => {
-  // 累计每段的 x 起点
+  // نقطه شروع x تجمعی هر بخش
   let runningX = WIN_X;
   const usedPctTotal = SEGS.reduce((s, x) => s + x.w, 0); // 96
-  const usableUnit = WIN_W / 100; // 每 1% 占用对应的宽度
+  const usableUnit = WIN_W / 100; // عرض متناظر با هر ۱٪ اشغال
 
   return (
     <CoverShell bgClassName="bg-butter" dotOpacity={0.1}>
-      {/* 装饰：左上 sparkle */}
+      {/* تزئین: sparkle بالا-چپ */}
       <g transform="translate(28,26)">
         <g className="origin-center transition-transform duration-700 group-hover:rotate-[110deg]">
           <path
@@ -58,7 +58,7 @@ const ContextWindowCover: React.FC = () => {
         </g>
       </g>
 
-      {/* 装饰：右下 ∞ */}
+      {/* تزئین: ∞ پایین-راست */}
       <g transform="translate(286,170)">
         <g
           className="origin-center transition-transform duration-[1400ms] ease-linear group-hover:rotate-[180deg]"
@@ -79,7 +79,7 @@ const ContextWindowCover: React.FC = () => {
         </g>
       </g>
 
-      {/* 装饰：左下小圆点阵 */}
+      {/* تزئین: ماتریس نقطه کوچک پایین-چپ */}
       <g transform="translate(24,152)">
         {Array.from({ length: 9 }).map((_, i) => {
           const col = i % 3;
@@ -97,7 +97,7 @@ const ContextWindowCover: React.FC = () => {
         })}
       </g>
 
-      {/* 顶部小标签：CONTEXT WINDOW */}
+      {/* برچسب کوچک بالا: CONTEXT WINDOW */}
       <g transform={`translate(${WIN_X},66)`}>
         <rect x="0" y="0" width="120" height="14" rx="3" fill="#241C15" />
         <text
@@ -127,8 +127,8 @@ const ContextWindowCover: React.FC = () => {
         128K tokens
       </text>
 
-      {/* ─── 主窗：横向长条 ─── */}
-      {/* 阴影 */}
+      {/* ─── پنجره اصلی: نوار افقی بلند ─── */}
+      {/* سایه */}
       <rect
         x={WIN_X}
         y={WIN_Y}
@@ -139,7 +139,7 @@ const ContextWindowCover: React.FC = () => {
         opacity="0.9"
         transform="translate(3,3)"
       />
-      {/* 主体（外框） */}
+      {/* بدنه (قاب بیرونی) */}
       <rect
         x={WIN_X}
         y={WIN_Y}
@@ -151,7 +151,7 @@ const ContextWindowCover: React.FC = () => {
         strokeWidth="2.5"
       />
 
-      {/* 内部段 */}
+      {/* بخش‌های داخلی */}
       <g>
         {SEGS.map((seg, idx) => {
           const segW = seg.w * usableUnit;
@@ -188,7 +188,7 @@ const ContextWindowCover: React.FC = () => {
           );
         })}
 
-        {/* 空闲段（hover 时减少） */}
+        {/* بخش خالی (در hover کم می‌شود) */}
         <g className="transition-transform duration-700 ease-spring origin-left">
           <rect
             x={runningX}
@@ -217,7 +217,7 @@ const ContextWindowCover: React.FC = () => {
           </text>
         </g>
 
-        {/* hover 出现：一段额外占用，仿佛新 token 进入 */}
+        {/* در hover ظاهر می‌شود: یک بخش اشغال اضافی، گویی token جدید وارد شده */}
         <rect
           x={runningX}
           y={WIN_Y + 2}
@@ -230,7 +230,7 @@ const ContextWindowCover: React.FC = () => {
         />
       </g>
 
-      {/* ─── 排队中的 token 药丸（顶部） ─── */}
+      {/* ─── قرص‌های token در صف (بالا) ─── */}
       <g
         transform="translate(160,46)"
         className="transition-transform duration-[1100ms] ease-spring group-hover:translate-x-[28px]"
@@ -256,16 +256,16 @@ const ContextWindowCover: React.FC = () => {
             strokeWidth="1.2"
           />
         ))}
-        {/* 流入箭头 */}
+        {/* فلش ورود */}
         <g transform="translate(54,0)">
           <line x1="0" y1="0" x2="10" y2="0" stroke="#241C15" strokeWidth="1.5" />
           <path d="M 6 -3 L 11 0 L 6 3" fill="none" stroke="#241C15" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
         </g>
       </g>
 
-      {/* ─── 底部标尺 ─── */}
+      {/* ─── خط‌کش پایین ─── */}
       <g transform={`translate(${WIN_X},${WIN_Y + WIN_H + 8})`}>
-        {/* 主线 */}
+        {/* خط اصلی */}
         <line x1="0" y1="0" x2={WIN_W} y2="0" stroke="#241C15" strokeWidth="1.5" />
         {/* tick */}
         {[0, 0.25, 0.5, 0.75, 1].map((p, i) => (
@@ -287,7 +287,7 @@ const ContextWindowCover: React.FC = () => {
         ))}
       </g>
 
-      {/* ─── 右下角小标：用量 % ─── */}
+      {/* ─── برچسب کوچک گوشه پایین-راست: درصد مصرف ─── */}
       <g transform="translate(258,156)">
         <rect x="-22" y="-7" width="44" height="14" rx="3" fill="#241C15" />
         <text

@@ -1,11 +1,11 @@
 /**
- * KnowledgeCovers · 封面组件总线
+ * KnowledgeCovers · گذرگاه کامپوننت‌های جلد
  *
- * 新增封面时，只需要：
- *   1. 在本目录新建 <Topic>Cover.tsx
- *   2. 在 COVER_MAP 里按 item.id 注册
+ * هنگام افزودن جلد جدید فقط لازم است:
+ *   ۱. در این پوشه بسازید <Topic>Cover.tsx
+ *   ۲. در COVER_MAP بر اساس item.id ثبت کنید
  *
- * `KnowCard` 会按 item.id 命中后渲染组件，否则 fall back 到原有的 imageUrl 截图。
+ * `KnowCard` پس از تطبیق item.id کامپوننت رندر می‌شود، در غیر این صورت به اسکرین‌شات imageUrl قبلی fall back می‌کند.
  */
 import React from "react";
 import LlmCover from "./LlmCover";

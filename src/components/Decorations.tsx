@@ -1,14 +1,14 @@
 /**
- * Memphis 风装饰 SVG 组件库
- * 全部手写 SVG，无图片依赖。
- * 用途：散落在 Hero / Section 角落作为"亲和点缀"，替代 Freddie 吉祥物的人格化作用。
+ * کتابخانه کامپوننت‌های SVG تزئینی به سبک Memphis
+ * همه SVG دست‌نویس است، بدون وابستگی به تصویر.
+ * کاربرد: در گوشه‌های Hero / Section پخش می‌شوند به‌عنوان"تزئین صمیمی"، جایگزین نقش شخصیت‌بخشی طلسم Freddie.
  */
 
 import React from "react";
 
 type DecorProps = React.SVGProps<SVGSVGElement> & { color?: string };
 
-/* ─────────── 4 角闪光（小） ─────────── */
+/* ─────────── درخشش ۴ پر (کوچک) ─────────── */
 export const Sparkle4: React.FC<DecorProps> = ({
   color = "#241C15",
   ...props
@@ -21,7 +21,7 @@ export const Sparkle4: React.FC<DecorProps> = ({
   </svg>
 );
 
-/* ─────────── 5 角星（带描边） ─────────── */
+/* ─────────── ستاره ۵ پر (با حاشیه) ─────────── */
 export const Star: React.FC<DecorProps & { filled?: boolean }> = ({
   color = "#241C15",
   filled = true,
@@ -38,7 +38,7 @@ export const Star: React.FC<DecorProps & { filled?: boolean }> = ({
   </svg>
 );
 
-/* ─────────── 太阳放射 ─────────── */
+/* ─────────── پرتوهای خورشید ─────────── */
 export const SunBurst: React.FC<DecorProps> = ({
   color = "#241C15",
   ...props
@@ -64,7 +64,7 @@ export const SunBurst: React.FC<DecorProps> = ({
   </svg>
 );
 
-/* ─────────── 手绘风波浪分隔线（横向，可全宽） ─────────── */
+/* ─────────── خط جداکننده موجی دست‌کشیده (افقی، می‌تواند تمام‌عرض باشد) ─────────── */
 export const WavyDivider: React.FC<DecorProps> = ({
   color = "#241C15",
   ...props
@@ -84,7 +84,7 @@ export const WavyDivider: React.FC<DecorProps> = ({
   </svg>
 );
 
-/* ─────────── 手绘曲线（短装饰） ─────────── */
+/* ─────────── منحنی دست‌کشیده (تزئین کوتاه) ─────────── */
 export const Squiggle: React.FC<DecorProps> = ({
   color = "#241C15",
   ...props
@@ -100,7 +100,7 @@ export const Squiggle: React.FC<DecorProps> = ({
   </svg>
 );
 
-/* ─────────── 圆点矩阵 ─────────── */
+/* ─────────── ماتریس نقطه‌ها ─────────── */
 export const DotGrid: React.FC<DecorProps & { rows?: number; cols?: number }> = ({
   color = "#241C15",
   rows = 4,
@@ -122,7 +122,7 @@ export const DotGrid: React.FC<DecorProps & { rows?: number; cols?: number }> = 
   </svg>
 );
 
-/* ─────────── 手绘箭头（弯曲，向下右） ─────────── */
+/* ─────────── فلش دست‌کشیده (خمیده، رو به پایین-راست) ─────────── */
 export const HandArrow: React.FC<DecorProps> = ({
   color = "#241C15",
   ...props
@@ -146,7 +146,7 @@ export const HandArrow: React.FC<DecorProps> = ({
   </svg>
 );
 
-/* ─────────── 手绘圆圈圈起来效果 (用于强调文字) ─────────── */
+/* ─────────── افکت دایره دست‌کشیده دور متن (برای تأکید روی متن) ─────────── */
 export const CircleScribble: React.FC<DecorProps> = ({
   color = "#E07A5F",
   ...props
@@ -167,7 +167,7 @@ export const CircleScribble: React.FC<DecorProps> = ({
   </svg>
 );
 
-/* ─────────── 手绘下划线（双线、不规则） ─────────── */
+/* ─────────── زیرخط دست‌کشیده (دوخطی، نامنظم) ─────────── */
 export const HandUnderline: React.FC<DecorProps> = ({
   color = "#E07A5F",
   ...props
@@ -188,7 +188,7 @@ export const HandUnderline: React.FC<DecorProps> = ({
   </svg>
 );
 
-/* ─────────── 对话气泡 ─────────── */
+/* ─────────── حباب گفتگو ─────────── */
 export const SpeechBubble: React.FC<DecorProps> = ({
   color = "#241C15",
   ...props
@@ -204,7 +204,7 @@ export const SpeechBubble: React.FC<DecorProps> = ({
   </svg>
 );
 
-/* ─────────── 心形（描边） ─────────── */
+/* ─────────── قلب (با حاشیه) ─────────── */
 export const Heart: React.FC<DecorProps & { filled?: boolean }> = ({
   color = "#241C15",
   filled = false,
@@ -221,7 +221,7 @@ export const Heart: React.FC<DecorProps & { filled?: boolean }> = ({
   </svg>
 );
 
-/* ─────────── 大粒泡 / Blob （有机形） ─────────── */
+/* ─────────── حباب بزرگ / Blob (شکل ارگانیک) ─────────── */
 export const Blob: React.FC<DecorProps> = ({
   color = "#E07A5F",
   ...props
@@ -231,7 +231,7 @@ export const Blob: React.FC<DecorProps> = ({
   </svg>
 );
 
-/* ─────────── + 加号（小装饰） ─────────── */
+/* ─────────── علامت + (تزئین کوچک) ─────────── */
 export const Plus: React.FC<DecorProps> = ({
   color = "#241C15",
   ...props
@@ -246,7 +246,7 @@ export const Plus: React.FC<DecorProps> = ({
   </svg>
 );
 
-/* ─────────── 三角形（描边） ─────────── */
+/* ─────────── مثلث (با حاشیه) ─────────── */
 export const Triangle: React.FC<DecorProps & { filled?: boolean }> = ({
   color = "#241C15",
   filled = false,
@@ -264,18 +264,18 @@ export const Triangle: React.FC<DecorProps & { filled?: boolean }> = ({
 );
 
 /* ─────────────────────────────────────────────────────────────────
- * IllustrationSlot — 插画占位符（带需求清单）
+ * IllustrationSlot — جای‌نگهدار تصویرسازی (با فهرست نیازمندی‌ها)
  *
- * 用法：在需要补插画的位置放这个组件。
- * - id: 简短编号 (eg. "HERO-01")，方便沟通时引用
- * - aspect: 推荐宽高比 (eg. "4/5", "1/1", "16/9")
- * - subject: 主体内容描述
- * - style: 风格指引
- * - palette: 推荐配色
- * - notes: 额外说明
+ * روش استفاده: این کامپوننت را جایی بگذارید که تصویرسازی لازم دارد.
+ * - id: شماره کوتاه (مثلاً "HERO-01")، برای ارجاع راحت هنگام گفتگو
+ * - aspect: نسبت ابعاد پیشنهادی (مثلاً "4/5", "1/1", "16/9")
+ * - subject: توصیف محتوای اصلی
+ * - style: راهنمای سبک
+ * - palette: رنگ‌بندی پیشنهادی
+ * - notes: توضیحات اضافی
  *
- * 后期补充：把生成好的图片放到 /public/illustrations/ 下，
- * 用 <img src="/illustrations/xxx.png" /> 替换掉这个占位符即可。
+ * تکمیل بعدی: تصویر تولیدشده را در /public/illustrations/ بگذارید،
+ * با <img src="/illustrations/xxx.png" /> این جای‌نگهدار را جایگزین کنید.
  * ───────────────────────────────────────────────────────────────── */
 export interface IllustrationSlotProps {
   id: string;
@@ -301,7 +301,7 @@ export const IllustrationSlot: React.FC<IllustrationSlotProps> = ({
     style={{ aspectRatio: aspect }}
     data-illustration-slot={id}
   >
-    {/* 顶部小条 */}
+    {/* نوار کوچک بالا */}
     <div className="flex items-center justify-between mb-4">
       <span className="inline-flex items-center gap-1.5 px-2.5 py-1 bg-ink text-white rounded-full font-mono text-[10px] uppercase tracking-wider">
         <Sparkle4 className="w-3 h-3" color="#F4D35E" />
@@ -312,20 +312,20 @@ export const IllustrationSlot: React.FC<IllustrationSlotProps> = ({
       </span>
     </div>
 
-    {/* 主体描述 */}
+    {/* توصیف اصلی */}
     <div className="flex-1 flex flex-col justify-center space-y-3">
       <p className="font-sans font-extrabold text-[15px] text-ink leading-snug">
         {subject}
       </p>
       {style && (
         <p className="font-sans text-[12px] text-ink-secondary leading-relaxed">
-          <span className="font-semibold text-ink/70">风格：</span>
+          <span className="font-semibold text-ink/70">سبک:</span>
           {style}
         </p>
       )}
       {palette && (
         <p className="font-sans text-[12px] text-ink-secondary leading-relaxed">
-          <span className="font-semibold text-ink/70">配色：</span>
+          <span className="font-semibold text-ink/70">رنگ‌بندی:</span>
           {palette}
         </p>
       )}
@@ -336,13 +336,13 @@ export const IllustrationSlot: React.FC<IllustrationSlotProps> = ({
       )}
     </div>
 
-    {/* 装饰角落 */}
+    {/* گوشه تزئینی */}
     <Plus
-      className="absolute top-3 right-3 w-3 h-3 text-ink/30"
+      className="absolute top-3 end-3 w-3 h-3 text-ink/30"
       color="#241C15"
     />
     <Plus
-      className="absolute bottom-3 left-3 w-3 h-3 text-ink/30"
+      className="absolute bottom-3 start-3 w-3 h-3 text-ink/30"
       color="#241C15"
     />
   </div>

@@ -1,23 +1,23 @@
 /**
- * KnowledgeCovers · 通用外壳
+ * KnowledgeCovers · پوسته عمومی
  *
- * 给每张封面提供：
- *   - 16:10 比例自适应填满父容器
- *   - 一致的网格点底纹
- *   - groupHover 触发的微动画 hook（父级 KnowCard 已是 group/peer 容器）
+ * برای هر جلد فراهم می‌کند:
+ *   - نسبت 16:10 که والد را به‌طور تطبیقی پر می‌کند
+ *   - طرح زمینه نقطه‌شبکه‌ای یکسان
+ *   - hook میکروانیمیشن که با groupHover فعال می‌شود (KnowCard والد خودش کانتینر group/peer است)
  *
- * 每张封面只关心自己的"主图形 SVG"，构图统一在这里。
+ * هر جلد فقط به"SVG شکل اصلی"خودش اهمیت می‌دهد و ترکیب‌بندی این‌جا یکسان می‌شود.
  */
 import React from "react";
 
 type CoverShellProps = {
-  /** 背景纯色（Tailwind class），如 bg-butter / bg-teal/10 */
+  /** رنگ پس‌زمینه یکدست (کلاس Tailwind)، مثل bg-butter / bg-teal/10 */
   bgClassName: string;
-  /** 网格点颜色（hex） */
+  /** رنگ نقاط شبکه (hex) */
   dotColor?: string;
-  /** 网格点透明度（0~1） */
+  /** شفافیت نقاط شبکه (۰ تا ۱) */
   dotOpacity?: number;
-  /** 内置 SVG 内容，viewBox 320×200 */
+  /** محتوای SVG داخلی، viewBox 320×200 */
   children: React.ReactNode;
 };
 
@@ -29,7 +29,7 @@ const CoverShell: React.FC<CoverShellProps> = ({
 }) => {
   return (
     <div className={`absolute inset-0 ${bgClassName}`}>
-      {/* 网格点底纹 */}
+      {/* طرح زمینه نقطه‌شبکه‌ای */}
       <svg
         viewBox="0 0 320 200"
         className="absolute inset-0 w-full h-full"
@@ -44,7 +44,7 @@ const CoverShell: React.FC<CoverShellProps> = ({
         <rect width="320" height="200" fill="url(#cover-dots)" />
       </svg>
 
-      {/* 主图形 */}
+      {/* شکل اصلی */}
       <svg
         viewBox="0 0 320 200"
         className="absolute inset-0 w-full h-full"

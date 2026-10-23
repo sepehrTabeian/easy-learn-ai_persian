@@ -5,10 +5,10 @@ const SpeculativeDecodingCover: React.FC = () => (
   <CoverShell bgClassName="bg-butter" dotOpacity={0.08}>
     <text x="28" y="31" fontFamily="Geist Mono, monospace" fontSize="9" fontWeight="700" fill="#241C15">DRAFT</text>
     <g className="transition-transform duration-500 ease-spring group-hover:translate-x-2">
-      {["今", "天", "公", "园"].map((token, i) => (
+      {["امروز", "هوا", "پارک", "برویم"].map((token, i) => (
         <g key={token} transform={`translate(${28 + i * 52},48)`}>
           <rect width="42" height="42" rx="10" fill="#FFFFFF" stroke="#241C15" strokeWidth="2" />
-          <text x="21" y="27" textAnchor="middle" fontFamily="Plus Jakarta Sans, Noto Sans SC, sans-serif" fontSize="14" fontWeight="700" fill="#241C15">{token}</text>
+          <text x="21" y="27" textAnchor="middle" fontFamily="Plus Jakarta Sans, Vazirmatn, sans-serif" fontSize="14" fontWeight="700" fill="#241C15">{token}</text>
         </g>
       ))}
     </g>

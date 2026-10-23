@@ -7,10 +7,10 @@ const KvCacheCover: React.FC = () => (
       <text x="0" y="0" fontFamily="Geist Mono, monospace" fontSize="10" fontWeight="700" fill="#241C15">
         GENERATED TOKENS
       </text>
-      {["今", "天", "天", "气"].map((token, i) => (
+      {["امروز", "هوا", "هوا", "هوا"].map((token, i) => (
         <g key={`${token}-${i}`} transform={`translate(${i * 43},18)`}>
           <rect width="34" height="34" rx="8" fill="#FFFFFF" stroke="#241C15" strokeWidth="2" />
-          <text x="17" y="23" textAnchor="middle" fontFamily="Plus Jakarta Sans, Noto Sans SC, sans-serif" fontSize="14" fontWeight="700" fill="#241C15">
+          <text x="17" y="23" textAnchor="middle" fontFamily="Plus Jakarta Sans, Vazirmatn, sans-serif" fontSize="14" fontWeight="700" fill="#241C15">
             {token}
           </text>
         </g>

@@ -1,19 +1,19 @@
 /**
- * RLHF 封面
+ * جلد RLHF
  *
- * 隐喻：两个候选回答 A / B → 人手指向 A（thumbs up）→ reward 信号回流到模型权重砝码
+ * استعاره: دو پاسخ کاندید A / B ← دست انسان به A اشاره می‌کند (thumbs up) ← سیگنال reward به وزنه وزن‌های مدل برمی‌گردد
  *
- * 视觉构图（viewBox 320×200）：
- *   - 左：两张候选答卡 A / B（A 高亮 butter 底 + 大拇指印章，B 暗淡 + 划掉）
- *   - 中：A 的圆环被一只小手指 / 红心命中 → 一条 reward 箭头流向右边的"model 砝码"
- *   - 右：model 砝码（teal 立方体感）+ 上下两组小箭头表示「权重朝偏好那一侧动」
- *   - 右上：reward stamp（pop 色 +0.81）
- *   - 左下：β·KL 公式碎片
+ * ترکیب‌بندی بصری (viewBox 320×200):
+ *   - چپ: دو کارت پاسخ کاندید A / B (A برجسته با پس‌زمینه butter + مهر شست، B کم‌رنگ + خط‌خورده)
+ *   - وسط: حلقه A توسط یک انگشت کوچک / قلب قرمز هدف گرفته می‌شود ← یک فلش reward به سمت راست می‌رود"وزنه model"
+ *   - راست: وزنه model (حس مکعب teal) + دو گروه فلش کوچک بالا و پایین یعنی «وزن‌ها به سمت ترجیح حرکت می‌کنند»
+ *   - بالا-راست: stamp با reward (رنگ pop +0.81)
+ *   - پایین-چپ: تکه فرمول β·KL
  *
  * hover：
- *   - 大拇指印章 wiggle
- *   - reward 流动 dash 加速
- *   - model 砝码下沉一点（偏好生效感）
+ *   - مهر شست wiggle می‌کند
+ *   - dash روان reward سریع‌تر می‌شود
+ *   - وزنه model کمی پایین می‌رود (حس اثر ترجیح)
  */
 import React from "react";
 import CoverShell from "./CoverShell";
@@ -21,7 +21,7 @@ import CoverShell from "./CoverShell";
 const RlhfCover: React.FC = () => {
   return (
     <CoverShell bgClassName="bg-cream" dotOpacity={0.08}>
-      {/* 左上 stamp：human-rated */}
+      {/* stamp بالا-چپ: human-rated */}
       <g
         transform="translate(40,28) rotate(-7)"
         className="origin-center transition-transform duration-500 group-hover:rotate-2"
@@ -50,7 +50,7 @@ const RlhfCover: React.FC = () => {
         </text>
       </g>
 
-      {/* 右上 stamp：reward +0.81 */}
+      {/* stamp بالا-راست: reward +0.81 */}
       <g
         transform="translate(282,30) rotate(6)"
         className="origin-center transition-transform duration-500 group-hover:rotate-[-4deg] group-hover:scale-110"
@@ -78,7 +78,7 @@ const RlhfCover: React.FC = () => {
         </text>
       </g>
 
-      {/* 左下：β·KL 公式碎片 */}
+      {/* پایین-چپ: تکه فرمول β·KL */}
       <g transform="translate(30,178) rotate(-3)" className="origin-left">
         <rect
           x="-3"
@@ -104,8 +104,8 @@ const RlhfCover: React.FC = () => {
         </text>
       </g>
 
-      {/* === 左侧：两张候选回答卡 === */}
-      {/* 候选 A · chosen */}
+      {/* === چپ: دو کارت پاسخ کاندید === */}
+      {/* کاندید A · chosen */}
       <g
         transform="translate(78,90)"
         className="origin-center transition-transform duration-500 group-hover:-translate-y-1"
@@ -130,13 +130,13 @@ const RlhfCover: React.FC = () => {
         >
           A · chosen
         </text>
-        {/* 三条文本占位线 */}
+        {/* سه خط جای‌نگهدار متن */}
         <line x1="-24" y1="-2" x2="22" y2="-2" stroke="#241C15" strokeWidth="1.2" />
         <line x1="-24" y1="5" x2="14" y2="5" stroke="#241C15" strokeWidth="1.2" />
         <line x1="-24" y1="12" x2="20" y2="12" stroke="#241C15" strokeWidth="1.2" opacity="0.6" />
       </g>
 
-      {/* 候选 B · rejected */}
+      {/* کاندید B · rejected */}
       <g transform="translate(78,150)">
         <rect
           x="-32"
@@ -177,7 +177,7 @@ const RlhfCover: React.FC = () => {
           strokeWidth="1.1"
           opacity="0.6"
         />
-        {/* 划掉 */}
+        {/* خط خورده */}
         <line
           x1="-30"
           y1="14"
@@ -189,13 +189,13 @@ const RlhfCover: React.FC = () => {
         />
       </g>
 
-      {/* === 中间：thumbs up · A 被人选中 === */}
+      {/* === وسط: thumbs up · A توسط انسان انتخاب شده === */}
       <g
         transform="translate(132,90)"
         className="origin-center transition-transform duration-500 group-hover:scale-110 animate-wiggle"
       >
         <circle r="13" fill="#FF4D74" stroke="#241C15" strokeWidth="2" />
-        {/* 拇指简笔 */}
+        {/* طرح ساده شست */}
         <path
           d="M -5 3 L -5 -1 L -2 -1 L -2 -6 Q -2 -8 0 -8 Q 2 -8 2 -6 L 2 -1 L 5 -1 Q 7 -1 7 1 L 7 4 Q 7 6 5 6 L -3 6 Q -5 6 -5 4 Z"
           fill="#FBEFE3"
@@ -205,7 +205,7 @@ const RlhfCover: React.FC = () => {
         />
       </g>
 
-      {/* === A → reward 信号箭头（流动 dash） === */}
+      {/* === فلش سیگنال A ← reward (dash روان) === */}
       <g
         stroke="#E07A5F"
         strokeWidth="2"
@@ -218,7 +218,7 @@ const RlhfCover: React.FC = () => {
       </g>
       <polygon points="210,92 218,96 210,100" fill="#E07A5F" />
 
-      {/* 中部小标签：reward 信号 */}
+      {/* برچسب کوچک وسط: سیگنال reward */}
       <text
         x="180"
         y="72"
@@ -232,12 +232,12 @@ const RlhfCover: React.FC = () => {
         reward
       </text>
 
-      {/* === 右侧：model 砝码（被推动的模型权重） === */}
+      {/* === راست: وزنه model (وزن‌های مدل که هل داده می‌شوند) === */}
       <g
         transform="translate(252,110)"
         className="origin-bottom transition-transform duration-500 group-hover:translate-y-1"
       >
-        {/* 主立方体 */}
+        {/* مکعب اصلی */}
         <rect
           x="-26"
           y="-22"
@@ -248,7 +248,7 @@ const RlhfCover: React.FC = () => {
           stroke="#241C15"
           strokeWidth="2"
         />
-        {/* 顶面高光 */}
+        {/* هایلایت سطح بالا */}
         <rect
           x="-26"
           y="-22"
@@ -278,7 +278,7 @@ const RlhfCover: React.FC = () => {
         >
           policy
         </text>
-        {/* 底座 */}
+        {/* پایه */}
         <rect
           x="-32"
           y="22"
@@ -289,17 +289,17 @@ const RlhfCover: React.FC = () => {
         />
       </g>
 
-      {/* 砝码上下：两组指示权重移动的小箭头 */}
+      {/* بالا و پایین وزنه: دو گروه فلش کوچک نشان‌دهنده حرکت وزن‌ها */}
       <g stroke="#F4D35E" strokeWidth="1.6" fill="#F4D35E" strokeLinecap="round">
-        {/* 上箭头：reward 推 */}
+        {/* فلش بالا: reward هل می‌دهد */}
         <line x1="252" y1="78" x2="252" y2="84" />
         <polygon points="248,84 252,80 256,84" fill="#F4D35E" />
-        {/* 下箭头：KL 拉 */}
+        {/* فلش پایین: KL می‌کشد */}
         <line x1="252" y1="140" x2="252" y2="146" />
         <polygon points="248,140 252,144 256,140" fill="#F4D35E" />
       </g>
 
-      {/* 底部说明：preference → reward → policy */}
+      {/* توضیح پایین: preference → reward → policy */}
       <text
         x="160"
         y="192"

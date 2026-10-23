@@ -1,6 +1,6 @@
 /**
- * 视图切换 · Mailchimp-Freddie 风
- * 选中态：ink 实心反白；未选：白底 ink 文字
+ * تغییر نما · سبک Mailchimp-Freddie
+ * حالت انتخاب: ink توپر با متن معکوس؛ انتخاب‌نشده: پس‌زمینه سفید با متن ink
  */
 
 import React from "react";
@@ -20,13 +20,13 @@ export const ViewToggle: React.FC<ViewToggleProps> = ({ mode, onChange }) => {
         active={mode === "card"}
         onClick={() => onChange("card")}
         icon={<LayoutGrid className="w-4 h-4" strokeWidth={2.5} />}
-        label="卡片"
+        label="کارت"
       />
       <ToggleBtn
         active={mode === "tree"}
         onClick={() => onChange("tree")}
         icon={<Network className="w-4 h-4" strokeWidth={2.5} />}
-        label="树形"
+        label="درختی"
       />
     </div>
   );

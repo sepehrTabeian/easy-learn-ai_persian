@@ -1,20 +1,20 @@
 /**
- * AI 评估 · Mailchimp-Freddie 风（v2）
+ * ارزیابی AI · سبک Mailchimp-Freddie (v2)
  *
- * v2 改造（v1 自检后）：
- *   - Hero 从 "深色营销舞台" → "浅奶油工具页眉"
- *   - 删 Hero 大 stats 卡（数字交给下方 StatsBar，避免重复）
- *   - 装饰 6 → 2 个 + 不对称（右侧锚 / 左下点缀）
- *   - 副标 1 行；高度 ~520 → ~320px；标题左对齐
+ * بازسازی v2 (پس از خودارزیابی v1):
+ *   - Hero از "صحنه بازاریابی تیره" → "به سربرگ ابزاری کرمی کم‌رنگ تغییر کرد"
+ *   - کارت stats بزرگ Hero حذف شد (اعداد به StatsBar پایین سپرده شد تا تکرار نشود)
+ *   - تزئین‌ها از ۶ به ۲ کاهش یافت + نامتقارن (لنگر راست / نقطه پایین-چپ)
+ *   - زیرعنوان ۱ خط؛ ارتفاع ~520 ← ~320px؛ عنوان چپ‌چین
  *
- * 视觉差异化（区别于其他页 Hero）：
- *   AI 模型 = butter-tint 极浅奶油 + 右侧 "档案印章" 锚（butter 大圆）
- *   →→ 本页 = cream 中性奶油 + 右侧 "评测徽章" 锚（teal 大圆）
+ * تمایز بصری (متفاوت با Hero صفحات دیگر):
+ *   مدل‌های AI = butter-tint کرمی بسیار کم‌رنگ + در راست لنگر "مهر بایگانی" (دایره بزرگ butter)
+ *   ←← این صفحه = cream کرمی خنثی + در راست لنگر "نشان ارزیابی" (دایره بزرگ teal)
  *
- * 信息架构：
- *   1. HERO（cream·短·工具页眉）
- *   2. WORKBAR（butter-tint）—— StatsBar + 工具栏
- *   3. CONTENT（白底）—— 卡片网格
+ * معماری اطلاعات:
+ *   ۱. HERO (cream · کوتاه · سربرگ ابزاری)
+ *   ۲. WORKBAR (butter-tint) —— StatsBar + نوار ابزار
+ *   ۳. CONTENT (پس‌زمینه سفید) —— شبکه کارت‌ها
  */
 
 import React, { useState, useMemo } from "react";
@@ -49,16 +49,16 @@ const AIBenchmark: React.FC = () => {
     hasActiveFilters,
   } = useBenchmarkData();
 
-  /* 分组：默认按年份（新→旧）。"none" 时为平铺。 */
+  /* گروه‌بندی: پیش‌فرض بر اساس سال (جدید ← قدیم)."none" تخت است. */
   const [groupBy, setGroupBy] = useState<BenchmarkGroupBy>("year");
 
   /**
-   * 按 groupBy 把已筛选+已排序的 benchmarks 分组。
+   * benchmarks فیلتر و مرتب‌شده را بر اساس groupBy گروه‌بندی می‌کند.
    *
-   * ⚠️ 重要：返回 Map 而不是 Record / plain object！
-   * 因为 V8 引擎会把 plain object 的数字字符串 key（"2024" "2025"）
-   * 自动按数字升序排列，会让"年份 desc"分组完全失效（永远变成升序）。
-   * Map 严格保持插入顺序，是这个场景唯一正确的容器。
+   * ⚠️ مهم: Map برگردانید نه Record / plain object!
+   * چون موتور V8 کلیدهای رشته‌ای عددی plain object را ("2024" "2025"）
+   * خودکار به ترتیب صعودی عددی مرتب می‌کند، که باعث می‌شود"سال desc"گروه‌بندی کاملاً بی‌اثر شود (همیشه صعودی می‌شود).
+   * Map ترتیب درج را دقیقاً حفظ می‌کند و تنها کانتینر درست برای این سناریو است.
    */
   const groupedBenchmarks = useMemo<
     Map<string, Benchmark[]> | undefined
@@ -70,21 +70,21 @@ const AIBenchmark: React.FC = () => {
       let key: string;
       if (groupBy === "year") {
         const y = b.year;
-        key = y && y !== "n/a" ? String(y) : "未标注年份";
+        key = y && y !== "n/a" ? String(y) : "سال نامشخص";
       } else {
-        /* type 分组：用第一个类型 */
-        key = b.type[0] || "未分类";
+        /* گروه‌بندی type: از اولین نوع استفاده می‌شود */
+        key = b.type[0] || "دسته‌بندی‌نشده";
       }
       if (!map.has(key)) map.set(key, []);
       map.get(key)!.push(b);
     });
 
     /**
-     * 排序分组 key：
-     * - groupBy="year" 时，"按年份排序"选项 (year-desc / year-asc) 改用于调整分组顺序方向
-     *   默认 year-desc → 新→旧；选 year-asc → 旧→新
-     *   选其他排序（examples / name）→ 分组顺序保持默认 desc，组内按所选排序
-     * - groupBy="type" 时，分组 key 按字典序
+     * مرتب‌سازی key گروه:
+     * - groupBy="year" وقتی"مرتب‌سازی بر اساس سال"گزینه (year-desc / year-asc) برای تنظیم جهت ترتیب گروه‌ها استفاده می‌شود
+     *   پیش‌فرض year-desc ← جدید ← قدیم؛ انتخاب year-asc ← قدیم ← جدید
+     *   انتخاب مرتب‌سازی دیگر (examples / name) ← ترتیب گروه‌ها پیش‌فرض desc می‌ماند و درون گروه بر اساس انتخاب مرتب می‌شود
+     * - groupBy="type" ، key گروه به ترتیب الفبایی است
      */
     const entries = Array.from(map.entries());
     if (groupBy === "year") {
@@ -102,28 +102,28 @@ const AIBenchmark: React.FC = () => {
     } else {
       entries.sort(([a], [b]) => a.localeCompare(b));
     }
-    /* 用 Map 而不是 Object.fromEntries，避免数字 key 被 V8 自动升序 */
+    /* از Map به‌جای Object.fromEntries استفاده می‌شود تا کلیدهای عددی خودکار صعودی نشوند */
     return new Map(entries);
   }, [benchmarks, groupBy, sortOption]);
 
-  /* Loading 态 */
+  /* حالت Loading */
   if (loading) {
     return (
       <div className="min-h-screen bg-cream flex items-center justify-center px-6">
         <div className="bg-white border-2 border-ink rounded-3xl shadow-stamp px-10 py-12 text-center max-w-md">
           <div className="inline-flex items-center justify-center w-16 h-16 mb-5 border-[3px] border-ink/15 border-t-ink rounded-full animate-spin" />
           <h2 className="font-display font-extrabold text-display-lg text-ink mb-2">
-            正在打开评测档案
+            در حال باز کردن بایگانی ارزیابی
           </h2>
           <p className="font-sans text-ink-secondary">
-            正在获取最新基准测试…
+            در حال دریافت آخرین بنچمارک‌ها…
           </p>
         </div>
       </div>
     );
   }
 
-  /* Error 态 */
+  /* حالت Error */
   if (error) {
     return (
       <div className="min-h-screen bg-cream flex items-center justify-center px-6">
@@ -132,14 +132,14 @@ const AIBenchmark: React.FC = () => {
             😕
           </div>
           <h2 className="font-display font-extrabold text-display-lg text-ink mb-2">
-            档案打不开了
+            بایگانی باز نمی‌شود
           </h2>
           <p className="font-sans text-ink-secondary mb-6">{error}</p>
           <button
             onClick={() => window.location.reload()}
             className="inline-flex items-center gap-2 px-6 py-2.5 bg-ink text-cream font-sans font-bold text-[14px] rounded-full border-2 border-ink shadow-stamp transition-all duration-250 ease-spring hover:-translate-x-1 hover:-translate-y-1 hover:[box-shadow:6px_6px_0_0_#241C15]"
           >
-            重新加载
+            بارگذاری مجدد
           </button>
         </div>
       </div>
@@ -148,22 +148,22 @@ const AIBenchmark: React.FC = () => {
 
   return (
     <div className="relative bg-white">
-      {/* ═══════════════════ HERO v2 · cream 中性奶油「工具页眉」 ═══════════════════ */}
+      {/* ═══════════════════ HERO v2 · «سربرگ ابزاری» کرمی خنثی cream ═══════════════════ */}
       <section className="relative bg-cream border-b-2 border-ink overflow-hidden">
-        {/* 右侧 "评测徽章" 锚 —— teal 大圆 + Star 叠加，不对称分布 */}
+        {/* راست "نشان ارزیابی" لنگر —— دایره بزرگ teal + Star روی هم، توزیع نامتقارن */}
         <div
-          className="absolute -top-12 -right-12 lg:-right-6 w-[260px] h-[260px] rounded-full bg-teal border-2 border-ink hidden md:block"
+          className="absolute -top-12 -end-12 lg:-end-6 w-[260px] h-[260px] rounded-full bg-teal border-2 border-ink hidden md:block"
           aria-hidden
         >
           <Star
-            className="absolute top-[42%] left-[26%] w-12 h-12 text-butter"
+            className="absolute top-[42%] start-[26%] w-12 h-12 text-butter"
             color="#F2D047"
             filled
           />
         </div>
-        {/* 左下 DotGrid 点缀 */}
+        {/* نقطه تزئینی DotGrid پایین-چپ */}
         <DotGrid
-          className="absolute bottom-6 left-[3%] w-24 h-10 text-ink opacity-25 hidden md:block"
+          className="absolute bottom-6 start-[3%] w-24 h-10 text-ink opacity-25 hidden md:block"
           color="#241C15"
           rows={3}
           cols={6}
@@ -173,35 +173,35 @@ const AIBenchmark: React.FC = () => {
           <div className="max-w-[640px]">
             <div className="inline-flex items-center gap-1.5 mb-5 font-mono text-[11px] uppercase tracking-[0.22em] text-ink/65">
               <span className="inline-block w-6 h-px bg-ink/45" />
-              <span>§ Benchmarks · 评测档案</span>
+              <span>§ Benchmarks · بایگانی ارزیابی</span>
             </div>
 
             <h1 className="font-display font-extrabold text-display-lg text-ink mb-4 leading-[1.1]">
-              衡量模型能力，
-              <span className="whitespace-nowrap">先理清评测标准。</span>
+              برای سنجش توانایی مدل،
+              <span className="whitespace-nowrap">اول معیارهای ارزیابی را بشناسید.</span>
             </h1>
 
             <p className="font-sans text-[15px] lg:text-[16px] text-ink-secondary leading-[1.65]">
-              汇总学界与业界主流基准测试，按领域 / 年份多维筛选，
-              一键直达论文、代码与数据集。
+              بنچمارک‌های اصلی دانشگاهی و صنعتی را جمع‌آوری کرده و بر اساس حوزه / سال فیلتر چندبعدی می‌کند،
+              با یک کلیک به مقاله، کد و مجموعه‌داده می‌رسید.
             </p>
           </div>
         </div>
       </section>
 
-      {/* ═══════════════════ WORKBAR · cream 工作台 ═══════════════════ */}
-      {/* 注意：必须无 overflow-hidden + z-20 高于 content section，否则下拉面板会被裁/被卡片遮挡 */}
+      {/* ═══════════════════ WORKBAR · میز کار cream ═══════════════════ */}
+      {/* توجه: نباید overflow-hidden داشته باشد + z-20 باید بالاتر از content section باشد، وگرنه پنل کشویی بریده/زیر کارت‌ها پنهان می‌شود */}
       <section className="relative z-20 bg-cream border-b-2 border-ink">
         <div className="relative max-w-7xl mx-auto px-6 lg:px-8 pt-10 pb-8">
-          {/* 统计栏 —— 主数据展示（接管 Hero 让出的职责） */}
+          {/* نوار آمار —— نمایش داده اصلی (مسئولیتی را که Hero واگذار کرده بر عهده می‌گیرد) */}
           <div className="mb-6">
             <StatsBar
               totalCount={totalCount}
               filteredCount={benchmarks.length}
               hasActiveFilters={hasActiveFilters}
               extras={[
-                { label: "覆盖领域", value: allTypes.length },
-                { label: "跨越年份", value: allYears.length },
+                { label: "حوزه‌های پوشش‌داده‌شده", value: allTypes.length },
+                { label: "بازه سال‌ها", value: allYears.length },
               ]}
             />
           </div>
@@ -230,8 +230,8 @@ const AIBenchmark: React.FC = () => {
             {hasActiveFilters && (
               <div className="mt-4 pt-4 border-t-2 border-ink/10">
                 <div className="flex flex-wrap items-center gap-2">
-                  <span className="font-mono text-[11px] uppercase tracking-[0.16em] text-ink/55 mr-1">
-                    已选条件
+                  <span className="font-mono text-[11px] uppercase tracking-[0.16em] text-ink/55 me-1">
+                    شرایط انتخاب‌شده
                   </span>
                   {filters.selectedTypes.map((type) => (
                     <ActiveChip
@@ -277,9 +277,9 @@ const AIBenchmark: React.FC = () => {
                   ))}
                   <button
                     onClick={clearFilters}
-                    className="font-sans text-[12px] font-semibold text-ink-tertiary hover:text-ink underline underline-offset-2 ml-1"
+                    className="font-sans text-[12px] font-semibold text-ink-tertiary hover:text-ink underline underline-offset-2 ms-1"
                   >
-                    清除全部
+                    پاک کردن همه
                   </button>
                 </div>
               </div>
@@ -288,7 +288,7 @@ const AIBenchmark: React.FC = () => {
         </div>
       </section>
 
-      {/* ═══════════════════ CONTENT · 白底卡片网格（支持分组渲染） ═══════════════════ */}
+      {/* ═══════════════════ CONTENT · شبکه کارت با پس‌زمینه سفید (پشتیبانی از رندر گروه‌بندی) ═══════════════════ */}
       <section className="relative z-10 bg-white">
         <div className="max-w-7xl mx-auto px-6 lg:px-8 py-12">
           <BenchmarkList
@@ -318,7 +318,7 @@ const AIBenchmark: React.FC = () => {
   );
 };
 
-/** 已选条件 chip */
+/** chip شرایط انتخاب‌شده */
 const ActiveChip: React.FC<{
   label: string;
   color: "butter" | "coral" | "teal";
@@ -336,12 +336,12 @@ const ActiveChip: React.FC<{
   }[color];
   return (
     <span
-      className={`inline-flex items-center gap-1.5 pl-3 pr-1.5 py-1 rounded-full border-2 border-ink font-sans font-semibold text-[12px] ${bg}`}
+      className={`inline-flex items-center gap-1.5 ps-3 pe-1.5 py-1 rounded-full border-2 border-ink font-sans font-semibold text-[12px] ${bg}`}
     >
       {label}
       <button
         onClick={onClose}
-        aria-label={`移除 ${label}`}
+        aria-label={`حذف ${label}`}
         className={`inline-flex items-center justify-center w-4 h-4 rounded-full transition-colors ${closeHover}`}
       >
         <span className="text-[14px] leading-none -mt-px">×</span>

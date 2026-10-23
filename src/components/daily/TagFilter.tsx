@@ -1,11 +1,11 @@
 /**
- * 日报标签筛选 · Mailchimp-Freddie stamp 风
+ * فیلتر برچسب گزارش روزانه · سبک stamp در Mailchimp-Freddie
  *
- * 设计要点：
- * - 触发按钮：capsule 形态，激活态 ink 实底；未激活白底。
- * - 320 个标签数量较多，下拉面板内置搜索 + 滚动列表。
- * - 用 createPortal 渲染面板，避免被父容器 overflow / z-index 裁剪。
- * - 面板使用 stamp 风：ink 描线 + 强阴影 + cream 头部。
+ * نکات طراحی:
+ * - دکمه فعال‌ساز: شکل capsule، حالت فعال با پس‌زمینه توپر ink؛ غیرفعال با پس‌زمینه سفید.
+ * - ۳۲۰ برچسب زیاد است، پنل کشویی جستجوی داخلی + فهرست اسکرول‌شونده دارد.
+ * - پنل با createPortal رندر می‌شود تا با overflow / z-index کانتینر والد بریده نشود.
+ * - پنل سبک stamp دارد: خط ink + سایه قوی + سربرگ cream.
  */
 
 import React, { useState, useRef, useEffect, useMemo } from "react";
@@ -42,8 +42,8 @@ export const TagFilter: React.FC<TagFilterProps> = ({
     if (!buttonRef.current) return;
     const rect = buttonRef.current.getBoundingClientRect();
     const panelWidth = 320;
-    /* 面板使用 position: fixed，top/left 应为 viewport 坐标；
-       早期版本加了 window.scrollY，导致页面滚动后面板被算到屏幕外 → 看起来"没反应"。 */
+    /* پنل از position: fixed استفاده می‌کند، top/left باید مختصات viewport باشند؛
+       نسخه‌های اولیه window.scrollY را اضافه کرده بودند و پس از اسکرول صفحه، پنل خارج از صفحه محاسبه می‌شد ← به نظر می‌رسید"واکنشی ندارد"。 */
     const left = Math.max(
       8,
       Math.min(rect.right - panelWidth, window.innerWidth - panelWidth - 8),
@@ -105,12 +105,12 @@ export const TagFilter: React.FC<TagFilterProps> = ({
       <button
         ref={buttonRef}
         onClick={handleToggle}
-        className={`inline-flex items-center gap-2 pl-4 pr-3 py-2.5 rounded-full border-2 border-ink shadow-stamp font-sans font-semibold text-[13px] transition-all duration-250 ease-spring hover:-translate-x-[2px] hover:-translate-y-[2px] hover:[box-shadow:6px_6px_0_0_#241C15] ${
+        className={`inline-flex items-center gap-2 ps-4 pe-3 py-2.5 rounded-full border-2 border-ink shadow-stamp font-sans font-semibold text-[13px] transition-all duration-250 ease-spring hover:-translate-x-[2px] hover:-translate-y-[2px] hover:[box-shadow:6px_6px_0_0_#241C15] ${
           hasActive ? "bg-ink text-cream" : "bg-white text-ink"
         }`}
       >
         <Tag className="w-4 h-4" strokeWidth={2.5} />
-        <span>标签筛选</span>
+        <span>فیلتر برچسب</span>
         {hasActive && (
           <span className="inline-flex items-center justify-center min-w-[20px] h-5 px-1.5 bg-butter text-ink border-2 border-ink rounded-full font-mono font-bold text-[11px]">
             {selectedTags.length}
@@ -136,11 +136,11 @@ export const TagFilter: React.FC<TagFilterProps> = ({
               maxHeight: "min(420px, calc(100vh - 100px))",
             }}
           >
-            {/* 头部 —— cream 底 */}
+            {/* سربرگ —— پس‌زمینه cream */}
             <div className="px-4 py-3 border-b-2 border-ink/10 bg-cream">
               <div className="flex items-center justify-between mb-2.5">
                 <div className="font-mono text-[10px] font-semibold uppercase tracking-[0.2em] text-ink/65">
-                  § 选择标签
+                  § انتخاب برچسب
                 </div>
                 {hasActive && (
                   <button
@@ -149,31 +149,31 @@ export const TagFilter: React.FC<TagFilterProps> = ({
                     }}
                     className="font-sans text-[11px] font-semibold text-ink-tertiary hover:text-ink underline underline-offset-2"
                   >
-                    清空
+                    پاک کردن همه
                   </button>
                 )}
               </div>
               <div className="relative">
                 <Search
-                  className="absolute left-3 top-1/2 -translate-y-1/2 w-[14px] h-[14px] text-ink/55"
+                  className="absolute start-3 top-1/2 -translate-y-1/2 w-[14px] h-[14px] text-ink/55"
                   strokeWidth={2.5}
                 />
                 <input
                   ref={searchInputRef}
                   type="text"
-                  placeholder="搜索标签…"
+                  placeholder="جستجوی برچسب…"
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
-                  className="w-full pl-9 pr-3 py-2 bg-white border-2 border-ink/15 rounded-full font-sans text-[13px] text-ink placeholder:text-ink/40 outline-none focus:border-ink transition-colors"
+                  className="w-full ps-9 pe-3 py-2 bg-white border-2 border-ink/15 rounded-full font-sans text-[13px] text-ink placeholder:text-ink/40 outline-none focus:border-ink transition-colors"
                 />
               </div>
             </div>
 
-            {/* 标签列表 */}
+            {/* فهرست برچسب‌ها */}
             <div className="flex-1 overflow-y-auto p-2">
               {filteredTags.length === 0 ? (
                 <div className="px-4 py-8 text-center font-sans text-[13px] text-ink/55">
-                  {searchTerm ? "未找到匹配标签" : "暂无标签"}
+                  {searchTerm ? "برچسب مطابقی پیدا نشد" : "هنوز برچسبی نیست"}
                 </div>
               ) : (
                 filteredTags.map((tag) => {
@@ -182,13 +182,13 @@ export const TagFilter: React.FC<TagFilterProps> = ({
                     <button
                       key={tag}
                       onClick={() => onTagToggle(tag)}
-                      className={`w-full flex items-center justify-between px-3 py-2 rounded-lg text-left font-sans text-[13px] transition-colors ${
+                      className={`w-full flex items-center justify-between px-3 py-2 rounded-lg text-start font-sans text-[13px] transition-colors ${
                         selected
                           ? "bg-coral text-white font-semibold"
                           : "text-ink hover:bg-cream"
                       }`}
                     >
-                      <span className="truncate pr-2">{tag}</span>
+                      <span className="truncate pe-2">{tag}</span>
                       {selected && (
                         <Check
                           className="w-4 h-4 flex-shrink-0"
@@ -201,7 +201,7 @@ export const TagFilter: React.FC<TagFilterProps> = ({
               )}
             </div>
 
-            {/* 底部 */}
+            {/* پایین */}
             <div className="px-4 py-3 border-t-2 border-ink/10 bg-cream flex items-center justify-between">
               <span className="font-mono text-[11px] text-ink/55">
                 {filteredTags.length} / {allTags.length}
@@ -213,7 +213,7 @@ export const TagFilter: React.FC<TagFilterProps> = ({
                 }}
                 className="inline-flex items-center gap-1 px-4 py-1.5 bg-ink text-cream border-2 border-ink rounded-full font-sans font-bold text-[12px] shadow-[3px_3px_0_0_#241C15] transition-all duration-250 ease-spring hover:-translate-x-[1px] hover:-translate-y-[1px] hover:[box-shadow:4px_4px_0_0_#241C15]"
               >
-                完成
+                انجام شد
                 <X className="w-3 h-3" strokeWidth={3} />
               </button>
             </div>

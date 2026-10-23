@@ -25,10 +25,10 @@ const ToolCard: React.FC<ToolCardProps> = ({
                  hover:scale-[1.02] hover:border-orange-200"
       onClick={handleClick}
     >
-      {/* 图标区域 */}
+      {/* ناحیه آیکون */}
       <div className="p-6 pb-4">
         <div className="flex items-start justify-between mb-4">
-          <div className="flex items-center space-x-4">
+          <div className="flex items-center space-x-4 rtl:space-x-reverse">
             <LazyImage
               src={tool.icon}
               alt={tool.title}
@@ -52,24 +52,24 @@ const ToolCard: React.FC<ToolCardProps> = ({
                                  transition-colors duration-200 flex-shrink-0" />
         </div>
 
-        {/* 描述 */}
+        {/* توضیح */}
         <p className="text-gray-600 text-sm leading-relaxed line-clamp-3 mb-4">
           {tool.description}
         </p>
 
-        {/* 底部操作区 */}
+        {/* ناحیه عملیات پایین */}
         <div className="flex items-center justify-between">
-          <div className="flex items-center space-x-2">
+          <div className="flex items-center space-x-2 rtl:space-x-reverse">
             <Star className="w-4 h-4 text-yellow-400 fill-current" />
-            <span className="text-sm text-gray-500">推荐</span>
+            <span className="text-sm text-gray-500">پیشنهادی</span>
           </div>
           <div className="text-xs text-gray-400 bg-gray-50 px-2 py-1 rounded-lg">
-            点击访问
+            کلیک برای بازدید
           </div>
         </div>
       </div>
 
-      {/* 悬停效果 */}
+      {/* افکت hover */}
       <div className="h-1 bg-gradient-to-r from-orange-500 to-red-500 
                     transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300" />
     </div>

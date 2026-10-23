@@ -2,30 +2,30 @@
     {
         "modelName": "Claude Opus 4.8",
         "company": "Anthropic",
-        "country": "美国",
-        "openSourceStatus": "闭源",
+        "country": "آمریکا",
+        "openSourceStatus": "متن‌بسته",
         "releaseDate": "2026-05-28",
-        "description": "Claude Opus 4.8 是 Anthropic 在 2026 年 5 月发布的旗舰 Opus 升级模型，API 模型 ID 为 claude-opus-4-8；默认支持 1M 上下文（Microsoft Foundry 为 200K）与 128K 输出，提供 adaptive thinking、工具调用、视觉理解和 Fast Mode。相较 Opus 4.7，它重点提升长周期智能体编码、长上下文稳定性、工具触发可靠性与诚实性，适用于大型代码库迁移、复杂研究、金融/法律文档分析和高自治 Agent 工作流。",
+        "description": "Claude Opus 4.8 مدل ارتقایافته پرچم‌دار Opus است که Anthropic در مه ۲۰۲۶ منتشر کرد، با شناسه مدل API به نام claude-opus-4-8؛ به‌طور پیش‌فرض از context با طول 1M (در Microsoft Foundry برابر 200K) و خروجی 128K پشتیبانی می‌کند و adaptive thinking، فراخوانی ابزار، فهم بصری و Fast Mode ارائه می‌دهد. نسبت به Opus 4.7، بر بهبود کدنویسی عامل هوشمند بلندمدت، پایداری context طولانی، قابلیت اطمینان فعال‌سازی ابزار و صداقت تمرکز دارد و برای مهاجرت پایگاه‌های کد بزرگ، پژوهش پیچیده، تحلیل اسناد مالی/حقوقی و جریان‌های کاری Agent با خودمختاری بالا مناسب است.",
         "modelTags": [
-            "文本生成",
-            "深度思考",
-            "视觉理解",
-            "代码增强",
-            "工具调用"
+            "تولید متن",
+            "تفکر عمیق",
+            "درک تصویر",
+            "تقویت کد",
+            "فراخوانی ابزار"
         ],
         "contextWindow": 1000,
         "maxGenerationTokenLength": 128,
         "relatedLinks": [
             {
-                "title": "Claude Opus 4.8 官方发布公告",
+                "title": "اطلاعیه رسمی انتشار Claude Opus 4.8",
                 "url": "https://www.anthropic.com/news/claude-opus-4-8"
             },
             {
-                "title": "Claude Opus 4.8 API 更新说明",
+                "title": "توضیحات به‌روزرسانی API در Claude Opus 4.8",
                 "url": "https://platform.claude.com/docs/en/about-claude/models/whats-new-claude-4-8"
             },
             {
-                "title": "Claude Opus 模型页面",
+                "title": "صفحه مدل Claude Opus",
                 "url": "https://www.anthropic.com/claude/opus"
             }
         ],
@@ -34,30 +34,30 @@
     {
         "modelName": "Claude Opus 4.6",
         "company": "Anthropic",
-        "country": "美国",
-        "openSourceStatus": "闭源",
+        "country": "آمریکا",
+        "openSourceStatus": "متن‌بسته",
         "releaseDate": "2026-02-05",
-        "description": "Claude Opus 4.6 是 Anthropic 的旗舰混合推理模型，支持 200K 标准上下文（Beta 支持 1M）与 128K 输出；在 Terminal-Bench 2.0 智能体编码评测、Humanity's Last Exam 多学科推理测试中取得最高分，在 GDPval-AA 知识工作评测中领先 GPT-5.2 约 144 Elo；具备更强的规划能力、长时智能体任务执行和大代码库可靠性，适用于企业级编码自动化、金融分析与复杂研究场景。",
+        "description": "Claude Opus 4.6 مدل استدلال ترکیبی پرچم‌دار Anthropic است که از context استاندارد 200K (پشتیبانی Beta از 1M) و خروجی 128K پشتیبانی می‌کند؛ در ارزیابی کدنویسی عامل هوشمند Terminal-Bench 2.0 و آزمون استدلال چندرشته‌ای Humanity's Last Exam بالاترین امتیاز را گرفته و در ارزیابی کار دانشی GDPval-AA حدود ۱۴۴ Elo از GPT-5.2 جلوتر است؛ توانایی برنامه‌ریزی قوی‌تر، اجرای وظایف عامل هوشمند طولانی و قابلیت اطمینان در پایگاه‌های کد بزرگ دارد و برای خودکارسازی کدنویسی سازمانی، تحلیل مالی و سناریوهای پژوهشی پیچیده مناسب است.",
         "modelTags": [
-            "文本生成",
-            "深度思考",
-            "视觉理解",
-            "代码增强",
-            "工具调用"
+            "تولید متن",
+            "تفکر عمیق",
+            "درک تصویر",
+            "تقویت کد",
+            "فراخوانی ابزار"
         ],
         "contextWindow": 200,
         "maxGenerationTokenLength": 128,
         "relatedLinks": [
             {
-                "title": "Claude Opus 4.6 官方发布公告",
+                "title": "اطلاعیه رسمی انتشار Claude Opus 4.6",
                 "url": "https://www.anthropic.com/news/claude-opus-4-6"
             },
             {
-                "title": "Claude Opus 4.6 模型页面",
+                "title": "صفحه مدل Claude Opus 4.6",
                 "url": "https://www.anthropic.com/claude/opus"
             },
             {
-                "title": "Claude 文档：模型总览",
+                "title": "مستندات Claude: نمای کلی مدل‌ها",
                 "url": "https://docs.anthropic.com/claude/docs/models-overview"
             }
         ],
@@ -66,30 +66,30 @@
     {
         "modelName": "Claude Sonnet 4.6",
         "company": "Anthropic",
-        "country": "美国",
-        "openSourceStatus": "闭源",
+        "country": "آمریکا",
+        "openSourceStatus": "متن‌بسته",
         "releaseDate": "2026-02-17",
-        "description": "Claude Sonnet 4.6 是 Anthropic 迄今最强的 Sonnet 模型，支持 200K 标准上下文（Beta 支持 1M）与 64K 输出；在编程、计算机使用、长上下文推理、智能体规划等能力上接近旗舰 Opus 4.6 水平，OSWorld 电脑使用评测达 72.5%，在金融分析与办公任务上甚至超越 Opus 4.6；以中端价格提供接近旗舰性能，适用于企业级编码、文档处理与智能体工作流。",
+        "description": "Claude Sonnet 4.6 قوی‌ترین مدل Sonnet تاکنون از Anthropic است که از context استاندارد 200K (پشتیبانی Beta از 1M) و خروجی 64K پشتیبانی می‌کند؛ در برنامه‌نویسی، استفاده از کامپیوتر، استدلال context طولانی و برنامه‌ریزی عامل هوشمند به سطح پرچم‌دار Opus 4.6 نزدیک است، در ارزیابی استفاده از کامپیوتر OSWorld به 72.5% رسیده و در تحلیل مالی و کارهای اداری حتی از Opus 4.6 بهتر است؛ با قیمت میان‌رده عملکردی نزدیک به پرچم‌دار ارائه می‌دهد و برای کدنویسی سازمانی، پردازش اسناد و جریان‌های کاری عامل هوشمند مناسب است.",
         "modelTags": [
-            "文本生成",
-            "深度思考",
-            "视觉理解",
-            "代码增强",
-            "工具调用"
+            "تولید متن",
+            "تفکر عمیق",
+            "درک تصویر",
+            "تقویت کد",
+            "فراخوانی ابزار"
         ],
         "contextWindow": 200,
         "maxGenerationTokenLength": 64,
         "relatedLinks": [
             {
-                "title": "Claude Sonnet 4.6 官方发布公告",
+                "title": "اطلاعیه رسمی انتشار Claude Sonnet 4.6",
                 "url": "https://www.anthropic.com/news/claude-sonnet-4-6"
             },
             {
-                "title": "Claude Sonnet 4.6 模型页面",
+                "title": "صفحه مدل Claude Sonnet 4.6",
                 "url": "https://www.anthropic.com/claude/sonnet"
             },
             {
-                "title": "Claude 文档：模型总览",
+                "title": "مستندات Claude: نمای کلی مدل‌ها",
                 "url": "https://docs.anthropic.com/claude/docs/models-overview"
             }
         ],
@@ -98,30 +98,30 @@
     {
         "modelName": "Claude Haiku 4.5",
         "company": "Anthropic",
-        "country": "美国",
-        "openSourceStatus": "闭源",
+        "country": "آمریکا",
+        "openSourceStatus": "متن‌بسته",
         "releaseDate": "2025-10-15",
-        "description": "Claude Haiku 4.5 是 Anthropic 最新的高性价比与低延迟模型，支持 200K 上下文与 64K 输出；在 SWE-bench Verified 达到 73.3%，在众多代理编程评测中接近 Sonnet 4.5 的水平，同时在电脑使用与子代理编排上表现突出；适合实时对话、客服与并行编码子任务。",
+        "description": "Claude Haiku 4.5 جدیدترین مدل کم‌تأخیر و با صرفه اقتصادی بالای Anthropic است که از context با طول 200K و خروجی 64K پشتیبانی می‌کند؛ در SWE-bench Verified به 73.3% رسیده، در بسیاری از ارزیابی‌های برنامه‌نویسی عاملی به سطح Sonnet 4.5 نزدیک است و در استفاده از کامپیوتر و هماهنگ‌سازی زیرعامل‌ها برجسته عمل می‌کند؛ مناسب برای گفتگوی بلادرنگ، پشتیبانی مشتری و زیروظایف کدنویسی موازی.",
         "modelTags": [
-            "文本生成",
-            "深度思考",
-            "视觉理解",
-            "代码增强",
-            "工具调用"
+            "تولید متن",
+            "تفکر عمیق",
+            "درک تصویر",
+            "تقویت کد",
+            "فراخوانی ابزار"
         ],
         "contextWindow": 200,
         "maxGenerationTokenLength": 64,
         "relatedLinks": [
             {
-                "title": "Claude Haiku 4.5 模型页面",
+                "title": "صفحه مدل Claude Haiku 4.5",
                 "url": "https://www.anthropic.com/claude/haiku"
             },
             {
-                "title": "Claude Haiku 4.5 官方发布公告",
+                "title": "اطلاعیه رسمی انتشار Claude Haiku 4.5",
                 "url": "https://www.anthropic.com/news/claude-haiku-4-5"
             },
             {
-                "title": "Claude 文档：模型总览",
+                "title": "مستندات Claude: نمای کلی مدل‌ها",
                 "url": "https://docs.anthropic.com/claude/docs/models-overview"
             }
         ],
@@ -130,30 +130,30 @@
     {
         "modelName": "Claude Sonnet 4.5",
         "company": "Anthropic",
-        "country": "美国",
-        "openSourceStatus": "闭源",
+        "country": "آمریکا",
+        "openSourceStatus": "متن‌بسته",
         "releaseDate": "2025-09-29",
-        "description": "Claude Sonnet 4.5 是 Anthropic 当前最强的通用编码与智能体模型，支持 200K 上下文与最高 64K 输出；在 SWE-bench Verified 达到 77.2%，在 OSWorld 计算机使用基准达到 61.4%，显著提升长时任务的稳定性、并行工具调用与检索/浏览器操作能力；适用于端到端软件开发、长运行智能体与企业知识处理。",
+        "description": "Claude Sonnet 4.5 قوی‌ترین مدل عمومی کدنویسی و عامل هوشمند فعلی Anthropic است که از context با طول 200K و حداکثر خروجی 64K پشتیبانی می‌کند؛ در SWE-bench Verified به 77.2% و در بنچمارک استفاده از کامپیوتر OSWorld به 61.4% رسیده و پایداری وظایف طولانی، فراخوانی موازی ابزار و توانایی بازیابی/کار با مرورگر را به‌طور محسوسی بهبود داده؛ مناسب برای توسعه نرم‌افزار سرتاسری، عامل‌های هوشمند طولانی‌مدت و پردازش دانش سازمانی.",
         "modelTags": [
-            "文本生成",
-            "深度思考",
-            "视觉理解",
-            "代码增强",
-            "工具调用"
+            "تولید متن",
+            "تفکر عمیق",
+            "درک تصویر",
+            "تقویت کد",
+            "فراخوانی ابزار"
         ],
         "contextWindow": 200,
         "maxGenerationTokenLength": 64,
         "relatedLinks": [
             {
-                "title": "Claude Sonnet 4.5 模型页面",
+                "title": "صفحه مدل Claude Sonnet 4.5",
                 "url": "https://www.anthropic.com/claude/sonnet"
             },
             {
-                "title": "Claude Sonnet 4.5 官方发布公告",
+                "title": "اطلاعیه رسمی انتشار Claude Sonnet 4.5",
                 "url": "https://www.anthropic.com/news/claude-sonnet-4-5"
             },
             {
-                "title": "Claude 文档：模型总览",
+                "title": "مستندات Claude: نمای کلی مدل‌ها",
                 "url": "https://docs.anthropic.com/claude/docs/models-overview"
             }
         ],
@@ -162,26 +162,26 @@
     {
         "modelName": "Claude Opus 4.1",
         "company": "Anthropic",
-        "country": "美国",
-        "openSourceStatus": "闭源",
+        "country": "آمریکا",
+        "openSourceStatus": "متن‌بسته",
         "releaseDate": "2025-08-05",
-        "description": "Claude Opus 4.1 是 Anthropic 的混合推理旗舰模型，采用 Transformer 架构并强化长程推理与工具调用，支持 200K 上下文与 32K 输出；在 SWE-bench Verified 达到 74.5%，提升多文件重构与代码精确性，同时具备视觉理解与深入研究能力，适用于企业级编码自动化、检索分析与内容创作。",
+        "description": "Claude Opus 4.1 مدل پرچم‌دار استدلال ترکیبی Anthropic است که از معماری Transformer استفاده کرده و استدلال بلندمدت و فراخوانی ابزار را تقویت کرده، از context با طول 200K و خروجی 32K پشتیبانی می‌کند؛ در SWE-bench Verified به 74.5% رسیده، بازسازی چندفایلی و دقت کد را بهبود داده و هم‌زمان فهم بصری و توانایی پژوهش عمیق دارد؛ مناسب برای خودکارسازی کدنویسی سازمانی، تحلیل بازیابی و تولید محتوا.",
         "modelTags": [
-            "文本生成",
-            "深度思考",
-            "视觉理解",
-            "代码增强",
-            "工具调用"
+            "تولید متن",
+            "تفکر عمیق",
+            "درک تصویر",
+            "تقویت کد",
+            "فراخوانی ابزار"
         ],
         "contextWindow": 200,
         "maxGenerationTokenLength": 32,
         "relatedLinks": [
             {
-                "title": "Claude Opus 4.1 官方发布公告",
+                "title": "اطلاعیه رسمی انتشار Claude Opus 4.1",
                 "url": " https://www.anthropic.com/news/claude-opus-4-1 "
             },
             {
-                "title": "Claude Opus 4.1 模型页面",
+                "title": "صفحه مدل Claude Opus 4.1",
                 "url": " https://www.anthropic.com/claude/opus "
             }
         ],
@@ -190,30 +190,30 @@
     {
         "modelName": "Claude Sonnet 4",
         "company": "Anthropic",
-        "country": "美国",
-        "openSourceStatus": "闭源",
+        "country": "آمریکا",
+        "openSourceStatus": "متن‌بسته",
         "releaseDate": "2025-05-22",
-        "description": "Claude Sonnet 4 是 4 系列的主力模型，支持 200K 上下文与 64K 输出，并在 Beta 模式下支持 1M 上下文；在 OSWorld 早期版本取得 42.2% 领先成绩，面向高并发与用户交互场景的实用前沿性能，适用于编码、工具调用和长上下文的信息处理。",
+        "description": "Claude Sonnet 4 مدل اصلی سری 4 است که از context با طول 200K و خروجی 64K پشتیبانی می‌کند و در حالت Beta از context با طول 1M پشتیبانی دارد؛ در نسخه اولیه OSWorld با 42.2% پیشتاز بوده و عملکرد پیشرو و کاربردی برای سناریوهای هم‌روندی بالا و تعامل با کاربر ارائه می‌دهد؛ مناسب برای کدنویسی، فراخوانی ابزار و پردازش اطلاعات با context طولانی.",
         "modelTags": [
-            "文本生成",
-            "深度思考",
-            "视觉理解",
-            "代码增强",
-            "工具调用"
+            "تولید متن",
+            "تفکر عمیق",
+            "درک تصویر",
+            "تقویت کد",
+            "فراخوانی ابزار"
         ],
         "contextWindow": 200,
         "maxGenerationTokenLength": 64,
         "relatedLinks": [
             {
-                "title": "Claude Sonnet 4 模型页面",
+                "title": "صفحه مدل Claude Sonnet 4",
                 "url": "https://www.anthropic.com/claude/sonnet"
             },
             {
-                "title": "Claude 4 系列发布公告",
+                "title": "اطلاعیه انتشار سری Claude 4",
                 "url": "https://www.anthropic.com/news/claude-4"
             },
             {
-                "title": "Claude 文档：模型总览（Legacy）",
+                "title": "مستندات Claude: نمای کلی مدل‌ها (Legacy)",
                 "url": "https://docs.anthropic.com/claude/docs/models-overview"
             }
         ],
@@ -222,26 +222,26 @@
     {
         "modelName": "Claude Opus 4.5",
         "company": "Anthropic",
-        "country": "美国",
-        "openSourceStatus": "闭源",
+        "country": "آمریکا",
+        "openSourceStatus": "متن‌بسته",
         "releaseDate": "2025-11-24",
-        "description": "Claude Opus 4.5 是 Anthropic 的旗舰混合推理模型，强化扩展思维与记忆保持，支持 200K 上下文与最高 64K 输出，原生工具调用与视觉理解；是目前全球在编码、智能代理和计算机应用方面表现最佳的模型。",
+        "description": "Claude Opus 4.5 مدل پرچم‌دار استدلال ترکیبی Anthropic است که تفکر گسترده و حفظ حافظه را تقویت کرده، از context با طول 200K و حداکثر خروجی 64K، فراخوانی ابزار بومی و فهم بصری پشتیبانی می‌کند؛ در حال حاضر بهترین مدل جهان در کدنویسی، عامل‌های هوشمند و کاربردهای کامپیوتری است.",
         "modelTags": [
-            "文本生成",
-            "深度思考",
-            "视觉理解",
-            "代码增强",
-            "工具调用"
+            "تولید متن",
+            "تفکر عمیق",
+            "درک تصویر",
+            "تقویت کد",
+            "فراخوانی ابزار"
         ],
         "contextWindow": 200,
         "maxGenerationTokenLength": 64,
         "relatedLinks": [
             {
-                "title": "Claude Opus 4.5 官方发布公告",
+                "title": "اطلاعیه رسمی انتشار Claude Opus 4.5",
                 "url": "https://www.anthropic.com/news/claude-opus-4-5"
             },
             {
-                "title": "Claude 文档：模型总览",
+                "title": "مستندات Claude: نمای کلی مدل‌ها",
                 "url": "https://docs.anthropic.com/en/docs/about-claude/models/overview"
             }
         ],
@@ -250,30 +250,30 @@
     {
         "modelName": "Claude Opus 4",
         "company": "Anthropic",
-        "country": "美国",
-        "openSourceStatus": "闭源",
+        "country": "آمریکا",
+        "openSourceStatus": "متن‌بسته",
         "releaseDate": "2025-05-22",
-        "description": "Claude Opus 4 是 4 代的旗舰推理模型，支持 200K 上下文与 32K 输出，强调复杂问题的分解与深层思考，适合研究类任务、跨文件重构和长程规划；后续由 Opus 4.1 接替并在大多数评测上取得更高分。",
+        "description": "Claude Opus 4 مدل استدلالی پرچم‌دار نسل ۴ است که از context با طول 200K و خروجی 32K پشتیبانی می‌کند و بر تجزیه مسائل پیچیده و تفکر عمیق تأکید دارد؛ مناسب برای وظایف پژوهشی، بازسازی بین‌فایلی و برنامه‌ریزی بلندمدت؛ بعداً Opus 4.1 جایگزین آن شد و در بیشتر ارزیابی‌ها امتیاز بالاتری گرفت.",
         "modelTags": [
-            "文本生成",
-            "深度思考",
-            "视觉理解",
-            "代码增强",
-            "工具调用"
+            "تولید متن",
+            "تفکر عمیق",
+            "درک تصویر",
+            "تقویت کد",
+            "فراخوانی ابزار"
         ],
         "contextWindow": 200,
         "maxGenerationTokenLength": 32,
         "relatedLinks": [
             {
-                "title": "Claude Opus 模型页面",
+                "title": "صفحه مدل Claude Opus",
                 "url": "https://www.anthropic.com/claude/opus"
             },
             {
-                "title": "Claude 4 系列发布公告",
+                "title": "اطلاعیه انتشار سری Claude 4",
                 "url": "https://www.anthropic.com/news/claude-4"
             },
             {
-                "title": "Claude 文档：模型总览（Legacy）",
+                "title": "مستندات Claude: نمای کلی مدل‌ها (Legacy)",
                 "url": "https://docs.anthropic.com/claude/docs/models-overview"
             }
         ],
@@ -282,30 +282,30 @@
     {
         "modelName": "Claude Sonnet 3.7",
         "company": "Anthropic",
-        "country": "美国",
-        "openSourceStatus": "闭源",
+        "country": "آمریکا",
+        "openSourceStatus": "متن‌بسته",
         "releaseDate": "2025-02-24",
-        "description": "Claude Sonnet 3.7 是首个混合推理模型，支持 200K 上下文与 64K 输出（Beta 可到 128K），在编码与工具使用任务上显著提升；SWE-bench Verified 从 33.4% 提升到 49.0%，并引入公开 Beta 的“计算机使用”能力。",
+        "description": "Claude Sonnet 3.7 نخستین مدل استدلال ترکیبی است که از context با طول 200K و خروجی 64K (Beta تا 128K) پشتیبانی می‌کند و در وظایف کدنویسی و استفاده از ابزار به‌طور محسوسی بهبود یافته؛ SWE-bench Verified از 33.4% به 49.0% رسیده و قابلیت «استفاده از کامپیوتر» در Beta عمومی معرفی شده است.",
         "modelTags": [
-            "文本生成",
-            "深度思考",
-            "视觉理解",
-            "代码增强",
-            "工具调用"
+            "تولید متن",
+            "تفکر عمیق",
+            "درک تصویر",
+            "تقویت کد",
+            "فراخوانی ابزار"
         ],
         "contextWindow": 200,
         "maxGenerationTokenLength": 64,
         "relatedLinks": [
             {
-                "title": "Claude Sonnet 模型页面（含 3.7）",
+                "title": "صفحه مدل Claude Sonnet (شامل 3.7)",
                 "url": "https://www.anthropic.com/claude/sonnet"
             },
             {
-                "title": "Claude 3.7 系列发布公告",
+                "title": "اطلاعیه انتشار سری Claude 3.7",
                 "url": "https://www.anthropic.com/news/claude-3-7-sonnet"
             },
             {
-                "title": "Claude 文档：模型总览（Legacy）",
+                "title": "مستندات Claude: نمای کلی مدل‌ها (Legacy)",
                 "url": "https://docs.anthropic.com/claude/docs/models-overview"
             }
         ],
@@ -314,26 +314,26 @@
     {
         "modelName": "Claude Haiku 3.5",
         "company": "Anthropic",
-        "country": "美国",
-        "openSourceStatus": "闭源",
+        "country": "آمریکا",
+        "openSourceStatus": "متن‌بسته",
         "releaseDate": "2024-10-22",
-        "description": "Claude Haiku 3.5 是 3.5 系列的最快模型，支持 200K 上下文与 8K 输出，低时延与更强的指令遵循与工具使用，适合用户界面、子代理与大规模个性化数据处理；在 SWE-bench Verified 达到 40.6%。",
+        "description": "Claude Haiku 3.5 سریع‌ترین مدل سری 3.5 است که از context با طول 200K و خروجی 8K پشتیبانی می‌کند؛ تأخیر کم و پیروی از دستور و استفاده از ابزار قوی‌تر دارد و برای رابط کاربری، زیرعامل‌ها و پردازش داده‌های شخصی‌سازی‌شده در مقیاس بزرگ مناسب است؛ در SWE-bench Verified به 40.6% رسیده است.",
         "modelTags": [
-            "文本生成",
-            "深度思考",
-            "视觉理解",
-            "代码增强",
-            "工具调用"
+            "تولید متن",
+            "تفکر عمیق",
+            "درک تصویر",
+            "تقویت کد",
+            "فراخوانی ابزار"
         ],
         "contextWindow": 200,
         "maxGenerationTokenLength": 8,
         "relatedLinks": [
             {
-                "title": "Claude 3.5 Haiku 发布",
+                "title": "انتشار Claude 3.5 Haiku",
                 "url": "https://www.anthropic.com/news/3-5-models-and-computer-use"
             },
             {
-                "title": "Claude 文档：模型总览（Legacy）",
+                "title": "مستندات Claude: نمای کلی مدل‌ها (Legacy)",
                 "url": "https://docs.anthropic.com/claude/docs/models-overview"
             }
         ],
@@ -342,29 +342,29 @@
     {
         "modelName": "Claude Sonnet 3.5",
         "company": "Anthropic",
-        "country": "美国",
-        "openSourceStatus": "闭源",
+        "country": "آمریکا",
+        "openSourceStatus": "متن‌بسته",
         "releaseDate": "2024-06-21",
-        "description": "Claude Sonnet 3.5 是 3.5 系列的主力中位模型，支持 200K 上下文；在推理、编码与视觉上显著超过 Claude 3 Opus，内部代理编码评测解决率 64%；引入 Claude.ai 的 Artifacts 交互以便实时生成与编辑内容；价格为 $3/MTok 输入、$15/MTok 输出，已在 Claude.ai、iOS、Anthropic API、Amazon Bedrock 与 Vertex AI 上线。",
+        "description": "Claude Sonnet 3.5 مدل میانی اصلی سری 3.5 است که از context با طول 200K پشتیبانی می‌کند؛ در استدلال، کدنویسی و بینایی به‌طور محسوسی از Claude 3 Opus فراتر رفته و نرخ حل در ارزیابی داخلی کدنویسی عاملی 64% است؛ تعامل Artifacts را در Claude.ai برای تولید و ویرایش بلادرنگ محتوا معرفی کرد؛ قیمت ورودی $3/MTok و خروجی $15/MTok است و در Claude.ai، iOS، Anthropic API، Amazon Bedrock و Vertex AI در دسترس است.",
         "modelTags": [
-            "文本生成",
-            "视觉理解",
-            "代码增强",
-            "工具调用"
+            "تولید متن",
+            "درک تصویر",
+            "تقویت کد",
+            "فراخوانی ابزار"
         ],
         "contextWindow": 200,
         "maxGenerationTokenLength": 64,
         "relatedLinks": [
             {
-                "title": "Claude 3.5 Sonnet 官方发布公告",
+                "title": "اطلاعیه رسمی انتشار Claude 3.5 Sonnet",
                 "url": "https://www.anthropic.com/news/claude-3-5-sonnet"
             },
             {
-                "title": "Claude Sonnet 模型页面",
+                "title": "صفحه مدل Claude Sonnet",
                 "url": "https://www.anthropic.com/claude/sonnet"
             },
             {
-                "title": "Claude 文档：模型总览（Legacy）",
+                "title": "مستندات Claude: نمای کلی مدل‌ها (Legacy)",
                 "url": "https://docs.anthropic.com/claude/docs/models-overview"
             }
         ],

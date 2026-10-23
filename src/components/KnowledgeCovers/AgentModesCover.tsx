@@ -1,21 +1,21 @@
 /**
- * Agent Modes 封面
+ * جلد Agent Modes
  *
- * 隐喻：三档运行模式 = 一个变速杆 + 三盏信号灯
- *   - 左侧立面：三色信号灯柱（butter PLAN / coral DEFAULT / teal AUTO）
- *   - 右侧：底座 + 杆，杆顶旋钮写 MODE，停在中间档（DEFAULT）
- *   - 底座下三档刻度（PLAN / DEFAULT / AUTO）
+ * استعاره: سه حالت اجرا = یک دسته دنده + سه چراغ راهنما
+ *   - نمای چپ: ستون چراغ راهنمای سه‌رنگ (butter PLAN / coral DEFAULT / teal AUTO)
+ *   - راست: پایه + اهرم، روی دستگیره بالای اهرم نوشته MODE، روی دنده وسط (DEFAULT) ایستاده
+ *   - زیر پایه درجه‌بندی سه دنده (PLAN / DEFAULT / AUTO)
  *
- * 跟相邻封面拉开：
- *   - AgentCover：中央小角色 + 工具轨道（圆形）
- *   - AgentLoopCover：5 节点循环（圆轨）
- *   - AgentMemoryCover：三层档案柜（纵向抽屉）
- *   - AgentModesCover：左信号柱 + 右变速杆（横向工业感）
+ * متمایز از جلدهای مجاور:
+ *   - AgentCover: شخصیت کوچک مرکزی + مدار ابزار (دایره‌ای)
+ *   - AgentLoopCover: چرخه ۵ گره (مدار دایره‌ای)
+ *   - AgentMemoryCover: کمد بایگانی سه‌طبقه (کشوهای عمودی)
+ *   - AgentModesCover: ستون چراغ در چپ + دسته دنده در راست (حس صنعتی افقی)
  *
  * hover：
- *   - 杆从 DEFAULT 切到 AUTO（向右倾斜 + 平移）
- *   - 三盏灯依次错峰高亮（用 transitionDelay 模拟）
- *   - 旋钮颜色由 coral → teal（跟随档位语义）
+ *   - اهرم از DEFAULT به AUTO می‌رود (کج به راست + جابه‌جایی)
+ *   - سه چراغ به ترتیب با فاصله زمانی روشن می‌شوند (با transitionDelay شبیه‌سازی می‌شود)
+ *   - رنگ دستگیره از coral به teal تغییر می‌کند (مطابق معنای دنده)
  */
 import React from "react";
 import CoverShell from "./CoverShell";
@@ -23,7 +23,7 @@ import CoverShell from "./CoverShell";
 const AgentModesCover: React.FC = () => {
   return (
     <CoverShell bgClassName="bg-cream" dotOpacity={0.08}>
-      {/* 装饰：左上小 sparkle */}
+      {/* تزئین: sparkle کوچک بالا-چپ */}
       <g transform="translate(34,30)">
         <g className="origin-center transition-transform duration-700 group-hover:rotate-[120deg]">
           <path
@@ -35,7 +35,7 @@ const AgentModesCover: React.FC = () => {
         </g>
       </g>
 
-      {/* 装饰：右下小图章 "3" */}
+      {/* تزئین: مهر کوچک پایین-راست "3" */}
       <g transform="translate(286,170)">
         <circle
           cx="0"
@@ -58,9 +58,9 @@ const AgentModesCover: React.FC = () => {
         </text>
       </g>
 
-      {/* ─── 左侧：信号灯柱 ─── */}
+      {/* ─── چپ: ستون چراغ راهنما ─── */}
       <g transform="translate(64,100)">
-        {/* 阴影底 */}
+        {/* زیرسایه */}
         <rect
           x="-22"
           y="-58"
@@ -71,7 +71,7 @@ const AgentModesCover: React.FC = () => {
           opacity="0.85"
           transform="translate(3,3)"
         />
-        {/* 柱体 */}
+        {/* بدنه ستون */}
         <rect
           x="-22"
           y="-58"
@@ -82,7 +82,7 @@ const AgentModesCover: React.FC = () => {
           stroke="#241C15"
           strokeWidth="2.5"
         />
-        {/* 顶帽 */}
+        {/* کلاهک بالا */}
         <rect
           x="-26"
           y="-66"
@@ -91,16 +91,16 @@ const AgentModesCover: React.FC = () => {
           rx="3"
           fill="#241C15"
         />
-        {/* 灯 1 PLAN（butter） */}
+        {/* چراغ ۱ PLAN (butter) */}
         <g
           className="transition-opacity duration-300 ease-spring group-hover:opacity-100"
           style={{ opacity: 0.5, transitionDelay: "0ms" }}
         >
           <circle cx="0" cy="-36" r="13" fill="#F4D35E" stroke="#241C15" strokeWidth="2" />
-          {/* 高光 */}
+          {/* هایلایت */}
           <circle cx="-4" cy="-40" r="3" fill="#FBEFE3" opacity="0.85" />
         </g>
-        {/* 灯 2 DEFAULT（coral） · 默认亮 */}
+        {/* چراغ ۲ DEFAULT (coral) · به‌طور پیش‌فرض روشن */}
         <g
           className="transition-opacity duration-300 ease-spring group-hover:opacity-100"
           style={{ opacity: 1, transitionDelay: "120ms" }}
@@ -108,7 +108,7 @@ const AgentModesCover: React.FC = () => {
           <circle cx="0" cy="0" r="13" fill="#E07A5F" stroke="#241C15" strokeWidth="2" />
           <circle cx="-4" cy="-4" r="3" fill="#FBEFE3" opacity="0.85" />
         </g>
-        {/* 灯 3 AUTO（teal） */}
+        {/* چراغ ۳ AUTO (teal) */}
         <g
           className="transition-opacity duration-300 ease-spring group-hover:opacity-100"
           style={{ opacity: 0.5, transitionDelay: "240ms" }}
@@ -117,7 +117,7 @@ const AgentModesCover: React.FC = () => {
           <circle cx="-4" cy="32" r="3" fill="#FBEFE3" opacity="0.85" />
         </g>
 
-        {/* 立柱小铭牌 */}
+        {/* پلاک کوچک ستون */}
         <g transform="translate(0,72)">
           <rect
             x="-22"
@@ -142,16 +142,16 @@ const AgentModesCover: React.FC = () => {
         </g>
       </g>
 
-      {/* ─── 中线分隔小点 ─── */}
+      {/* ─── نقاط کوچک جداکننده خط وسط ─── */}
       <g transform="translate(126,100)">
         {[-30, 0, 30].map((dy) => (
           <circle key={dy} cx="0" cy={dy} r="1.6" fill="#241C15" opacity="0.4" />
         ))}
       </g>
 
-      {/* ─── 右侧：变速杆 ─── */}
+      {/* ─── راست: دسته دنده ─── */}
       <g transform="translate(220,100)">
-        {/* 底座阴影 */}
+        {/* سایه پایه */}
         <rect
           x="-58"
           y="32"
@@ -162,7 +162,7 @@ const AgentModesCover: React.FC = () => {
           opacity="0.85"
           transform="translate(3,3)"
         />
-        {/* 底座 */}
+        {/* پایه */}
         <rect
           x="-58"
           y="32"
@@ -173,7 +173,7 @@ const AgentModesCover: React.FC = () => {
           stroke="#241C15"
           strokeWidth="2.5"
         />
-        {/* 三档刻度槽 */}
+        {/* شیار درجه‌بندی سه دنده */}
         <line
           x1="-44"
           y1="45"
@@ -184,7 +184,7 @@ const AgentModesCover: React.FC = () => {
           strokeDasharray="3 4"
           opacity="0.55"
         />
-        {/* 档位定位点 */}
+        {/* نقطه تثبیت دنده */}
         {[-40, 0, 40].map((cx, i) => (
           <circle
             key={i}
@@ -196,7 +196,7 @@ const AgentModesCover: React.FC = () => {
           />
         ))}
 
-        {/* 档位标签条 */}
+        {/* نوار برچسب دنده */}
         <g transform="translate(0,72)">
           <text
             x="-40"
@@ -238,12 +238,12 @@ const AgentModesCover: React.FC = () => {
           </text>
         </g>
 
-        {/* 杆（默认 DEFAULT 位置 cx=0, hover 切到 AUTO cx=40） */}
+        {/* اهرم (موقعیت پیش‌فرض DEFAULT در cx=0، در hover به AUTO در cx=40 می‌رود) */}
         <g
           className="transition-transform duration-500 ease-spring group-hover:translate-x-[40px] group-hover:-rotate-[8deg]"
           style={{ transformOrigin: "0px 45px", transformBox: "fill-box" }}
         >
-          {/* 杆身 */}
+          {/* بدنه اهرم */}
           <line
             x1="0"
             y1="45"
@@ -253,9 +253,9 @@ const AgentModesCover: React.FC = () => {
             strokeWidth="6"
             strokeLinecap="round"
           />
-          {/* 旋钮阴影 */}
+          {/* سایه دستگیره */}
           <circle cx="0" cy="-30" r="20" fill="#241C15" opacity="0.85" transform="translate(3,3)" />
-          {/* 旋钮：默认 coral（DEFAULT），hover 切 teal（AUTO） */}
+          {/* دستگیره: به‌طور پیش‌فرض coral (DEFAULT)، در hover به teal (AUTO) تغییر می‌کند */}
           <circle
             cx="0"
             cy="-30"
@@ -264,7 +264,7 @@ const AgentModesCover: React.FC = () => {
             stroke="#241C15"
             strokeWidth="2.5"
           />
-          {/* 旋钮上面的 MODE 字 */}
+          {/* متن MODE روی دستگیره */}
           <text
             x="0"
             y="-26"
@@ -277,7 +277,7 @@ const AgentModesCover: React.FC = () => {
           >
             MODE
           </text>
-          {/* 旋钮上的小档指示线 */}
+          {/* خط کوچک نشانگر دنده روی دستگیره */}
           <line
             x1="0"
             y1="-50"

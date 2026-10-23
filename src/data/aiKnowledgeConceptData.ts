@@ -1,98 +1,98 @@
 /**
- * AI 知视 · 概念讲解数据（单一数据源 / Single Source of Truth）
+ * دانش بصری AI · داده توضیح مفاهیم (منبع واحد داده / Single Source of Truth)
  *
- * 这里是「一个概念」的全部信息：基础字段 + 所属学习线（line）+ 短名（short）。
- * 目录视图按 line 分组，全景视图（知视图谱）也按 line 排地铁线 —— 分类口径完全统一。
- * 概念之间的「关联边」单独维护在 conceptGraphData.ts。
+ * این‌جا همه اطلاعات «یک مفهوم» است: فیلدهای پایه + مسیر یادگیری مربوطه (line) + نام کوتاه (short).
+ * نمای فهرست بر اساس line گروه‌بندی می‌شود، نمای کلی (نقشه دانش بصری) هم خطوط مترو را بر اساس line می‌چیند —— معیار دسته‌بندی کاملاً یکسان است.
+ * «یال‌های ارتباط» بین مفاهیم جداگانه در conceptGraphData.ts نگهداری می‌شوند.
  *
- * ⚠️ 新增一个概念，只需在本文件加一条（含 line），再去 conceptGraphData.ts 补它的关联边即可：
- *    - 分类 / 短名 / 全景坐标 / 枢纽大小 全部自动派生
- *    - 漏填 line 或边引用了不存在的 id，开发模式会在控制台告警
+ * ⚠️ برای افزودن یک مفهوم جدید، فقط یک مورد (شامل line) در این فایل اضافه کنید و سپس در conceptGraphData.ts یال‌های ارتباط آن را تکمیل کنید:
+ *    - دسته‌بندی / نام کوتاه / مختصات نمای کلی / اندازه hub همه خودکار مشتق می‌شوند
+ *    - اگر line فراموش شود یا یال به id ناموجود ارجاع دهد، در حالت توسعه در کنسول هشدار داده می‌شود
  *
- * 数组顺序 = 同一条线内的学习顺序（已按 LEARNING_LINES 的顺序分块排好）。
+ * ترتیب آرایه = ترتیب یادگیری درون یک خط (بر اساس ترتیب LEARNING_LINES دسته‌بندی شده).
  */
 
 import { AIKnowledgeConceptItem, LearningLine } from "../types";
 
 /* ════════════════════════════════════════════════════════════════════
- * 学习线（统一分类体系）· 顺序即推荐学习顺序
+ * مسیرهای یادگیری (سیستم دسته‌بندی یکپارچه) · ترتیب همان ترتیب پیشنهادی یادگیری است
  * ════════════════════════════════════════════════════════════════════ */
 export const LEARNING_LINES: LearningLine[] = [
   {
     id: "foundation",
-    name: "入门基础线",
-    tag: "入门基础",
-    blurb: "看懂大模型到底是什么、怎么读文字、底层架构长什么样",
+    name: "مسیر مبانی مقدماتی",
+    tag: "مبانی مقدماتی",
+    blurb: "بفهمید مدل بزرگ واقعاً چیست، متن را چطور می‌خواند و معماری زیرینش چه شکلی دارد",
     color: "#2A9D8F",
-    startHint: "所有人从这里起步",
+    startHint: "همه از این‌جا شروع می‌کنند",
   },
   {
     id: "prompt",
-    name: "提示词工程线",
-    tag: "提示词",
-    blurb: "学会怎么把话说清楚，让模型听懂你到底要什么",
+    name: "مسیر مهندسی پرامپت",
+    tag: "پرامپت‌ها",
+    blurb: "یاد بگیرید حرفتان را واضح بزنید تا مدل بفهمد دقیقاً چه می‌خواهید",
     color: "#7A28CB",
-    startHint: "会用 ChatGPT 就能学",
+    startHint: "اگر با ChatGPT کار کرده‌اید می‌توانید یاد بگیرید",
   },
   {
     id: "arch",
-    name: "架构家族线",
-    tag: "架构家族",
-    blurb: "Transformer 衍生出的几大模型流派，挑一个深入",
+    name: "مسیر خانواده معماری‌ها",
+    tag: "خانواده معماری‌ها",
+    blurb: "چند شاخه اصلی مدل که از Transformer مشتق شده‌اند؛ یکی را انتخاب و عمیق شوید",
     color: "#6D597A",
-    startHint: "懂了 Transformer 再来",
+    startHint: "بعد از فهم Transformer بیایید",
   },
   {
     id: "train",
-    name: "训练对齐线",
-    tag: "训练对齐",
-    blurb: "一个模型从喂数据到学会听话、学会推理的全过程",
+    name: "مسیر آموزش و هم‌ترازی",
+    tag: "آموزش و هم‌ترازی",
+    blurb: "کل فرایند یک مدل از خوردن داده تا یادگیری فرمان‌برداری و استدلال",
     color: "#3D8B40",
-    startHint: "想知道模型怎么练出来",
+    startHint: "می‌خواهید بدانید مدل چگونه آموزش داده می‌شود",
   },
   {
     id: "finetune",
-    name: "微调调参线",
-    tag: "微调调参",
-    blurb: "拿现成模型改造成你要的样子，以及那几个关键旋钮",
+    name: "مسیر تنظیم دقیق و پارامترها",
+    tag: "تنظیم دقیق و پارامترها",
+    blurb: "تبدیل مدل آماده به شکلی که می‌خواهید، و چند پیچ تنظیم کلیدی",
     color: "#E8A33D",
-    startHint: "已有模型，想改造它",
+    startHint: "مدل دارید و می‌خواهید آن را تغییر دهید",
   },
   {
     id: "deploy",
-    name: "压缩部署线",
-    tag: "压缩部署",
-    blurb: "把大模型压小、打包、真正跑起来",
+    name: "مسیر فشرده‌سازی و استقرار",
+    tag: "فشرده‌سازی و استقرار",
+    blurb: "کوچک کردن مدل بزرگ، بسته‌بندی و واقعاً اجرا کردن آن",
     color: "#C44536",
-    startHint: "模型练好了，怎么用起来",
+    startHint: "مدل آموزش دیده، حالا چطور از آن استفاده کنیم",
   },
   {
     id: "agent",
-    name: "Agent 应用线",
+    name: "مسیر کاربردهای Agent",
     tag: "Agent",
-    blurb: "让模型不只答题，而是会调工具、分步骤把事做完",
+    blurb: "مدل فقط به سؤال جواب ندهد، بلکه ابزار صدا بزند و کارها را گام‌به‌گام انجام دهد",
     color: "#E07A5F",
-    startHint: "想让 AI 真正干活",
+    startHint: "می‌خواهید AI واقعاً کار انجام دهد",
   },
   {
     id: "rag",
-    name: "检索增强线",
-    tag: "检索增强",
-    blurb: "给模型外挂资料库，治它不懂装懂的毛病",
+    name: "مسیر بازیابی تقویت‌شده",
+    tag: "بازیابی تقویت‌شده",
+    blurb: "به مدل یک کتابخانه بیرونی وصل کنید تا عادت «نمی‌دانم ولی وانمود می‌کنم» را درمان کنید",
     color: "#2A6F97",
-    startHint: "嫌模型瞎编 / 知识过时",
+    startHint: "از چرندگویی مدل / دانش قدیمی آن خسته‌اید",
   },
   {
     id: "safety",
-    name: "AI 安全线",
-    tag: "AI 安全",
-    blurb: "看懂模型会怎样被带偏，再给输入、权限和输出加上防线",
+    name: "مسیر امنیت AI",
+    tag: "امنیت AI",
+    blurb: "بفهمید مدل چگونه منحرف می‌شود و سپس برای ورودی، دسترسی‌ها و خروجی خط دفاعی بگذارید",
     color: "#FF4D74",
-    startHint: "AI 开始读资料、调工具时",
+    startHint: "وقتی AI شروع به خواندن منابع و صدا زدن ابزار می‌کند",
   },
 ];
 
-/** 学习线快查表：id → 元信息 */
+/** جدول مرجع سریع مسیرهای یادگیری: id ← metadata */
 export const lineById: Record<string, LearningLine> = LEARNING_LINES.reduce(
   (acc, l) => {
     acc[l.id] = l;
@@ -101,107 +101,107 @@ export const lineById: Record<string, LearningLine> = LEARNING_LINES.reduce(
   {} as Record<string, LearningLine>,
 );
 
-/** 概念短名：优先用 short，否则自动去掉「轻松理解」前缀 */
+/** نام کوتاه مفهوم: اولویت با short، در غیر این صورت پیشوند «درک آسان» خودکار حذف می‌شود */
 export const conceptShortLabel = (item: {
   title: string;
   short?: string;
-}): string => item.short ?? item.title.replace(/^轻松理解\s*/, "").trim();
+}): string => item.short ?? item.title.replace(/^درک آسان\s*/, "").trim();
 
 /* ════════════════════════════════════════════════════════════════════
- * 概念清单（按学习线分块；数组顺序 = 线内学习顺序）
+ * فهرست مفاهیم (بر اساس مسیر یادگیری دسته‌بندی شده؛ ترتیب آرایه = ترتیب یادگیری درون مسیر)
  * ════════════════════════════════════════════════════════════════════ */
 export const aiKnowledgeConceptData: AIKnowledgeConceptItem[] = [
-  /* ── 入门基础线 ── */
+  /* ── مسیر مبانی مقدماتی ── */
   {
     id: "nlp",
-    title: "轻松理解 NLP",
-    description: "NLP 是自然语言处理的缩写，是人工智能领域的一个重要分支",
-    category: "模型微调",
+    title: "درک آسان NLP",
+    description: "NLP مخفف پردازش زبان طبیعی است و یکی از شاخه‌های مهم حوزه هوش مصنوعی است",
+    category: "تنظیم دقیق مدل",
     line: "foundation",
     imageUrl: "/imgs/nlp.png",
     htmlUrl: "/nlp/index.html",
   },
   {
     id: "token",
-    title: "轻松理解 Token",
+    title: "درک آسان Token",
     description:
-      "Token 是模型在生成文本时的最小单位，每个 Token 代表一个词或词的一部分。",
-    category: "模型基础",
+      "Token کوچک‌ترین واحدی است که مدل هنگام تولید متن استفاده می‌کند؛ هر Token نماینده یک کلمه یا بخشی از یک کلمه است.",
+    category: "مبانی مدل",
     line: "foundation",
     imageUrl: "/imgs/token.png",
     htmlUrl: "/token/index.html",
   },
   {
     id: "llm",
-    title: "轻松理解LLM",
+    title: "درک آسان LLM",
     description:
-      "LLM 是一种革命性的人工智能技术， 正在重新定义机器理解和生成自然语言的能力。",
-    category: "模型基础",
+      "LLM یک فناوری انقلابی هوش مصنوعی است که توانایی ماشین در فهم و تولید زبان طبیعی را از نو تعریف می‌کند.",
+    category: "مبانی مدل",
     line: "foundation",
     imageUrl: "/imgs/llm.png",
     htmlUrl: "/llm/index.html",
   },
   {
     id: "transformer",
-    title: "轻松理解 Transformer",
+    title: "درک آسان Transformer",
     description:
-      "Transformer 是一种革命性的人工智能技术，正在重新定义机器理解和生成自然语言的能力。",
-    category: "模型基础",
+      "Transformer یک فناوری انقلابی هوش مصنوعی است که توانایی ماشین در فهم و تولید زبان طبیعی را از نو تعریف می‌کند.",
+    category: "مبانی مدل",
     line: "foundation",
     imageUrl: "/imgs/transformer.png",
     htmlUrl: "/transformer/index.html",
   },
   {
     id: "attention",
-    title: "轻松理解 注意力机制",
+    title: "درک آسان مکانیزم توجه",
     description:
-      "注意力机制让模型为当前内容挑选相关位置，并按权重拿回需要的信息。",
-    category: "模型基础",
+      "مکانیزم توجه به مدل اجازه می‌دهد برای محتوای فعلی موقعیت‌های مرتبط را انتخاب کند و اطلاعات لازم را بر اساس وزن بازیابی کند.",
+    category: "مبانی مدل",
     line: "foundation",
-    short: "注意力",
+    short: "توجه",
     imageUrl: "/imgs/attention.png",
     htmlUrl: "/attention/index.html",
   },
   {
     id: "multi-head-attention",
-    title: "轻松理解 Multi-Head Attention",
+    title: "درک آسان Multi-Head Attention",
     description:
-      "多头注意力并行运行多组注意力，让模型同时观察文字里的不同关系。",
-    category: "模型基础",
+      "توجه چندسر چند گروه توجه را موازی اجرا می‌کند تا مدل هم‌زمان روابط مختلف در متن را ببیند.",
+    category: "مبانی مدل",
     line: "foundation",
-    short: "多头注意力",
+    short: "توجه چندسر",
     imageUrl: "/imgs/multi-head-attention.png",
     htmlUrl: "/multi-head-attention/index.html",
   },
   {
     id: "multi-query-attention",
-    title: "轻松理解 Multi-Query Attention",
+    title: "درک آسان Multi-Query Attention",
     description:
-      "Multi-Query Attention 保留多个查询头，同时让它们共享同一组键和值。",
-    category: "模型基础",
+      "Multi-Query Attention چند سرِ query را نگه می‌دارد و هم‌زمان اجازه می‌دهد همه یک مجموعه key و value مشترک داشته باشند.",
+    category: "مبانی مدل",
     line: "foundation",
     short: "MQA",
     imageUrl: "/imgs/multi-query-attention.png",
     htmlUrl: "/multi-query-attention/index.html",
   },
 
-  /* ── 提示词工程线 ── */
+  /* ── مسیر مهندسی پرامپت ── */
   {
     id: "prompt",
-    title: "轻松理解 Prompt",
+    title: "درک آسان Prompt",
     description:
-      "Prompt 是你发给模型的那段指令文本，告诉它你要它干什么，是用大模型的第一入口。",
-    category: "提示词",
+      "Prompt همان متن دستوری است که برای مدل می‌فرستید و به آن می‌گویید چه کاری انجام دهد؛ اولین درگاه استفاده از مدل‌های بزرگ است.",
+    category: "پرامپت‌ها",
     line: "prompt",
     imageUrl: "/imgs/prompt.png",
     htmlUrl: "/prompt/index.html",
   },
   {
     id: "system-prompt",
-    title: "轻松理解 System Prompt",
+    title: "درک آسان System Prompt",
     description:
-      "System Prompt 是预设在对话最前面的指令，用来定模型的角色、边界、语气和输出格式。",
-    category: "提示词",
+      "System Prompt دستوری است که از پیش در ابتدای گفتگو تنظیم می‌شود تا نقش، مرزها، لحن و قالب خروجی مدل را تعیین کند.",
+    category: "پرامپت‌ها",
     line: "prompt",
     short: "System Prompt",
     imageUrl: "/imgs/system-prompt.png",
@@ -209,10 +209,10 @@ export const aiKnowledgeConceptData: AIKnowledgeConceptItem[] = [
   },
   {
     id: "few-shot",
-    title: "轻松理解 Few-shot",
+    title: "درک آسان Few-shot",
     description:
-      "Few-shot 是在 prompt 里给模型几个示例，让它照着格式和思路完成新任务，不用重新训练。",
-    category: "提示词",
+      "Few-shot یعنی در prompt چند نمونه به مدل بدهید تا با الگو گرفتن از قالب و طرز فکر آن‌ها کار جدید را انجام دهد، بدون آموزش مجدد.",
+    category: "پرامپت‌ها",
     line: "prompt",
     short: "Few-shot",
     imageUrl: "/imgs/few-shot.png",
@@ -220,351 +220,351 @@ export const aiKnowledgeConceptData: AIKnowledgeConceptItem[] = [
   },
   {
     id: "chain-of-thought",
-    title: "轻松理解 Chain of Thought",
+    title: "درک آسان Chain of Thought",
     description:
-      "Chain of Thought 让模型先一步步写出推理过程再给答案，复杂问题做对的比例明显更高。",
-    category: "提示词",
+      "Chain of Thought باعث می‌شود مدل اول فرایند استدلال را گام‌به‌گام بنویسد و بعد پاسخ دهد؛ نرخ درستی در مسائل پیچیده به‌طور محسوسی بالاتر می‌رود.",
+    category: "پرامپت‌ها",
     line: "prompt",
     short: "CoT",
     imageUrl: "/imgs/chain-of-thought.png",
     htmlUrl: "/chain-of-thought/index.html",
   },
 
-  /* ── 架构家族线 ── */
+  /* ── مسیر خانواده معماری‌ها ── */
   {
     id: "bert",
-    title: "轻松理解 BERT",
+    title: "درک آسان BERT",
     description:
-      "BERT（基于 Encoder-Only 架构） 是 Google 在 2018 年发布的预训练语言模型。",
-    category: "模型基础",
+      "BERT (مبتنی بر معماری Encoder-Only) یک مدل زبانی پیش‌آموزش‌دیده است که Google در سال ۲۰۱۸ منتشر کرد.",
+    category: "مبانی مدل",
     line: "arch",
     imageUrl: "/imgs/bert.png",
     htmlUrl: "/bert/index.html",
   },
   {
     id: "gpt",
-    title: "轻松理解 GPT",
+    title: "درک آسان GPT",
     description:
-      "GPT（基于 Decoder-Only PLM 架构） 是 OpenAI 在 2022 年发布的预训练语言模型。",
-    category: "模型基础",
+      "GPT (مبتنی بر معماری Decoder-Only PLM) یک مدل زبانی پیش‌آموزش‌دیده است که OpenAI در سال ۲۰۲۲ منتشر کرد.",
+    category: "مبانی مدل",
     line: "arch",
     imageUrl: "/imgs/gpt.png",
     htmlUrl: "/gpt/index.html",
   },
   {
     id: "llama",
-    title: "轻松理解 Llama",
+    title: "درک آسان Llama",
     description:
-      "LLama（基于 Decoder-Only 架构） 是 Meta 在 2023 年发布的预训练语言模型。",
-    category: "模型基础",
+      "LLama (مبتنی بر معماری Decoder-Only) یک مدل زبانی پیش‌آموزش‌دیده است که Meta در سال ۲۰۲۳ منتشر کرد.",
+    category: "مبانی مدل",
     line: "arch",
     imageUrl: "/imgs/llama.png",
     htmlUrl: "/llama/index.html",
   },
   {
     id: "t5",
-    title: "轻松理解 T5",
+    title: "درک آسان T5",
     description:
-      "T5（基于 Encoder-Decoder 架构） 是由 Google 提出的一种预训练语言模型。",
-    category: "模型基础",
+      "T5 (مبتنی بر معماری Encoder-Decoder) یک مدل زبانی پیش‌آموزش‌دیده است که Google ارائه کرد.",
+    category: "مبانی مدل",
     line: "arch",
     imageUrl: "/imgs/t5.png",
     htmlUrl: "/t5/index.html",
   },
   {
     id: "moe",
-    title: "轻松理解 MoE",
-    description: "一种基于专家路由的模型架构，能够并行处理不同任务。",
-    category: "模型基础",
+    title: "درک آسان MoE",
+    description: "یک معماری مدل مبتنی بر مسیریابی متخصص‌ها که می‌تواند کارهای مختلف را موازی پردازش کند.",
+    category: "مبانی مدل",
     line: "arch",
     imageUrl: "/imgs/moe.png",
     htmlUrl: "/moe/index.html",
   },
   {
     id: "multimodality",
-    title: "轻松理解多模态",
-    description: "让AI理解和生成图片、视频、音频等多种模态数据",
-    category: "模型基础",
+    title: "درک آسان چندوجهی",
+    description: "AI را قادر می‌سازد داده‌هایی از وجه‌های مختلف مثل تصویر، ویدئو و صدا را بفهمد و تولید کند",
+    category: "مبانی مدل",
     line: "arch",
     imageUrl: "/imgs/multimodality.png",
     htmlUrl: "/multimodality/index.html",
   },
   {
     id: "modality-encoding",
-    title: "轻松理解 模态编码",
-    description: "模态编码把图片和声音切成片段，再转换成模型能够继续计算的数字。",
-    category: "模型基础",
+    title: "درک آسان کدگذاری وجه",
+    description: "کدگذاری وجه تصویر و صدا را به قطعه‌هایی تقسیم می‌کند و سپس به اعدادی تبدیل می‌کند که مدل بتواند روی آن‌ها محاسبه کند.",
+    category: "مبانی مدل",
     line: "arch",
-    short: "模态编码",
+    short: "کدگذاری وجه",
     imageUrl: "/imgs/modality-encoding.png",
     htmlUrl: "/modality-encoding/index.html",
   },
   {
     id: "representation-space",
-    title: "轻松理解 表示空间",
-    description: "表示空间用数字位置和方向保存内容特征，让模型能够比较、组合和更新含义。",
-    category: "模型基础",
+    title: "درک آسان فضای بازنمایی",
+    description: "فضای بازنمایی ویژگی‌های محتوا را با موقعیت و جهت عددی ذخیره می‌کند تا مدل بتواند معانی را مقایسه، ترکیب و به‌روزرسانی کند.",
+    category: "مبانی مدل",
     line: "arch",
-    short: "表示空间",
+    short: "فضای بازنمایی",
     imageUrl: "/imgs/representation-space.png",
     htmlUrl: "/representation-space/index.html",
   },
   {
     id: "deepseek-r1",
-    title: "轻松理解 DeepSeek R1",
-    description: "DeepSeek R1 通过创新算法让大语言模型获得强大推理能力。",
-    category: "模型基础",
+    title: "درک آسان DeepSeek R1",
+    description: "DeepSeek R1 با الگوریتم‌های نوآورانه به مدل زبانی بزرگ توانایی استدلال قوی می‌دهد.",
+    category: "مبانی مدل",
     line: "arch",
     imageUrl: "/imgs/deepseek-r1.png",
     htmlUrl: "/deepseek-r1/index.html",
   },
 
-  /* ── 训练对齐线 ── */
+  /* ── مسیر آموزش و هم‌ترازی ── */
   {
     id: "training-dataset",
-    title: "轻松理解 训练数据集",
+    title: "درک آسان مجموعه‌داده آموزشی",
     description:
-      "训练数据集是喂给模型学习用的那一大批材料，它的质量、覆盖范围和清洗程度，很大程度决定了模型的能力。",
-    category: "训练数据",
+      "مجموعه‌داده آموزشی همان حجم زیاد موادی است که برای یادگیری به مدل داده می‌شود؛ کیفیت، پوشش و میزان پاک‌سازی آن تا حد زیادی توانایی مدل را تعیین می‌کند.",
+    category: "داده آموزشی",
     line: "train",
-    short: "训练数据集",
+    short: "مجموعه‌داده آموزشی",
     imageUrl: "/imgs/training-dataset.png",
     htmlUrl: "/training-dataset/index.html",
   },
   {
     id: "data-cleaning",
-    title: "轻松理解 数据清洗",
+    title: "درک آسان پاک‌سازی داده",
     description:
-      "数据清洗是把又脏又乱的原始数据挑一遍：去重、去噪、过滤低质和有害内容、统一格式，让模型读到的都是干净料。",
-    category: "训练数据",
+      "پاک‌سازی داده یعنی داده خام کثیف و درهم را یک بار غربال کنیم: حذف تکراری‌ها، حذف نویز، فیلتر محتوای کم‌کیفیت و مضر، یکسان‌سازی قالب، تا مدل فقط داده تمیز بخواند.",
+    category: "داده آموزشی",
     line: "train",
-    short: "数据清洗",
+    short: "پاک‌سازی داده",
     imageUrl: "/imgs/data-cleaning.png",
     htmlUrl: "/data-cleaning/index.html",
   },
   {
     id: "data-annotation",
-    title: "轻松理解 数据标注",
+    title: "درک آسان برچسب‌گذاری داده",
     description:
-      "数据标注是给原始数据贴上「正确答案」或标签，用于监督微调、效果评估和偏好学习，可由人工或半自动完成。",
-    category: "训练数据",
+      "برچسب‌گذاری داده یعنی چسباندن «پاسخ درست» یا برچسب به داده خام، برای تنظیم دقیق نظارت‌شده، ارزیابی نتیجه و یادگیری ترجیح؛ می‌تواند انسانی یا نیمه‌خودکار انجام شود.",
+    category: "داده آموزشی",
     line: "train",
-    short: "数据标注",
+    short: "برچسب‌گذاری داده",
     imageUrl: "/imgs/data-annotation.png",
     htmlUrl: "/data-annotation/index.html",
   },
   {
     id: "dataset-construction",
-    title: "轻松理解 数据集构建",
+    title: "درک آسان ساخت مجموعه‌داده",
     description:
-      "数据集构建是用 Easy Dataset 等工具，把文档自动加工成模型能直接学的问答数据，并完成清洗、生成与导出。",
-    category: "训练数据",
+      "ساخت مجموعه‌داده یعنی با ابزارهایی مثل Easy Dataset اسناد را خودکار به داده پرسش و پاسخی تبدیل کنیم که مدل مستقیم بتواند یاد بگیرد، و پاک‌سازی، تولید و خروجی گرفتن را انجام دهیم.",
+    category: "داده آموزشی",
     line: "train",
-    short: "数据集构建",
+    short: "ساخت مجموعه‌داده",
     imageUrl: "/imgs/dataset-construction.png",
     htmlUrl: "/dataset-construction/index.html",
   },
   {
     id: "mga",
-    title: "轻松理解 MGA",
+    title: "درک آسان MGA",
     description:
-      "MGA 是一种创新的数据增强方法，通过轻量级框架将现有语料系统重构为多样化变体。",
-    category: "数据合成",
+      "MGA یک روش نوآورانه تقویت داده است که با یک چارچوب سبک، پیکره موجود را به‌طور نظام‌مند به گونه‌های متنوع بازسازی می‌کند.",
+    category: "ترکیب داده",
     line: "train",
     imageUrl: "/imgs/mga.png",
     htmlUrl: "/mga/index.html",
   },
   {
     id: "pretrain",
-    title: "轻松理解预训练",
-    description: "预训练是大语言模型训练的第一阶段",
-    category: "模型训练",
+    title: "درک آسان پیش‌آموزش",
+    description: "پیش‌آموزش نخستین مرحله آموزش مدل زبانی بزرگ است",
+    category: "آموزش مدل",
     line: "train",
     imageUrl: "/imgs/pretrain.png",
     htmlUrl: "/pretrain/index.html",
   },
   {
     id: "sft",
-    title: "轻松理解 SFT",
-    description: "SFT 是将预训练模型转化为实用AI助手的关键步骤",
-    category: "模型微调",
+    title: "درک آسان SFT",
+    description: "SFT گام کلیدی تبدیل مدل پیش‌آموزش‌دیده به دستیار کاربردی AI است",
+    category: "تنظیم دقیق مدل",
     line: "train",
     imageUrl: "/imgs/sft.png",
     htmlUrl: "/sft/index.html",
   },
   {
     id: "rlhf",
-    title: "轻松理解 RLHF",
-    description: "通过强化学习将人类的主观偏好转化为模型的客观优化目标。",
-    category: "模型微调",
+    title: "درک آسان RLHF",
+    description: "با یادگیری تقویتی، ترجیحات ذهنی انسان را به هدف بهینه‌سازی عینی مدل تبدیل می‌کند.",
+    category: "تنظیم دقیق مدل",
     line: "train",
     imageUrl: "/imgs/rlhf.png",
     htmlUrl: "/rlhf/index.html",
   },
   {
     id: "reward-model",
-    title: "轻松理解奖励模型",
-    description: "奖励模型学习人类对回答的偏好，并为新的模型输出给出相对分数。",
-    category: "模型微调",
+    title: "درک آسان مدل پاداش",
+    description: "مدل پاداش ترجیح انسان نسبت به پاسخ‌ها را یاد می‌گیرد و به خروجی‌های جدید مدل امتیاز نسبی می‌دهد.",
+    category: "تنظیم دقیق مدل",
     line: "train",
-    short: "奖励模型",
+    short: "مدل پاداش",
     imageUrl: "/imgs/reward-model.png",
     htmlUrl: "/reward-model/index.html",
   },
   {
     id: "dpo",
-    title: "轻松理解 DPO",
-    description: "DPO 直接使用回答偏好数据调整模型，省去独立奖励模型和强化学习。",
-    category: "模型微调",
+    title: "درک آسان DPO",
+    description: "DPO مستقیماً با داده ترجیح پاسخ‌ها مدل را تنظیم می‌کند و مدل پاداش مستقل و یادگیری تقویتی را حذف می‌کند.",
+    category: "تنظیم دقیق مدل",
     line: "train",
     short: "DPO",
     imageUrl: "/imgs/dpo.png",
     htmlUrl: "/dpo/index.html",
   },
-  /* ── 微调调参线 ── */
+  /* ── مسیر تنظیم دقیق و پارامترها ── */
   {
     id: "whyfinetune",
-    title: "轻松理解为什么要微调",
-    description: "长文本、知识库、微调的对比",
-    category: "模型微调",
+    title: "درک آسان چرا تنظیم دقیق",
+    description: "مقایسه متن طولانی، پایگاه دانش و تنظیم دقیق",
+    category: "تنظیم دقیق مدل",
     line: "finetune",
-    short: "为何微调",
+    short: "چرا تنظیم دقیق",
     imageUrl: "/imgs/whyfinetune.png",
     htmlUrl: "/whyfinetune/index.html",
   },
   {
     id: "finetune",
-    title: "轻松理解模型微调方法",
-    description: "不同微调方法：全参数微调、LoRA微调、冻结微调的对比",
-    category: "模型微调",
+    title: "درک آسان روش‌های تنظیم دقیق مدل",
+    description: "مقایسه روش‌های مختلف تنظیم دقیق: تنظیم دقیق تمام‌پارامتر، تنظیم دقیق LoRA و تنظیم دقیق منجمد",
+    category: "تنظیم دقیق مدل",
     line: "finetune",
-    short: "微调方法",
+    short: "روش‌های تنظیم دقیق",
     imageUrl: "/imgs/finetune.png",
     htmlUrl: "/finetune/index.html",
   },
   {
     id: "lora",
-    title: "轻松理解 LoRA",
-    description: "LoRA 是当前最受欢迎的大模型高效微调方法之一",
-    category: "模型微调",
+    title: "درک آسان LoRA",
+    description: "LoRA یکی از محبوب‌ترین روش‌های کارآمد تنظیم دقیق مدل‌های بزرگ در حال حاضر است",
+    category: "تنظیم دقیق مدل",
     line: "finetune",
     imageUrl: "/imgs/lora.png",
     htmlUrl: "/lora/index.html",
   },
   {
     id: "lora-rank",
-    title: "轻松理解微调参数：Lora秩",
-    description: "LoRA Rank 决定了模型微调时的表达能力",
-    category: "模型微调",
+    title: "درک آسان پارامتر تنظیم دقیق: رتبه LoRA",
+    description: "LoRA Rank توان بیان مدل را هنگام تنظیم دقیق تعیین می‌کند",
+    category: "تنظیم دقیق مدل",
     line: "finetune",
-    short: "LoRA 秩",
+    short: "رتبه LoRA",
     imageUrl: "/imgs/lora-rank.png",
     htmlUrl: "/lora-rank/index.html",
   },
   {
     id: "lr",
-    title: "轻松理解微调参数：学习率",
-    description: "学习率决定了模型在每次更新时参数调整的幅度。",
-    category: "模型微调",
+    title: "درک آسان پارامتر تنظیم دقیق: نرخ یادگیری",
+    description: "نرخ یادگیری میزان تغییر پارامترها در هر به‌روزرسانی مدل را تعیین می‌کند.",
+    category: "تنظیم دقیق مدل",
     line: "finetune",
-    short: "学习率",
+    short: "نرخ یادگیری",
     imageUrl: "/imgs/lr.png",
     htmlUrl: "/learning-rate/index.html",
   },
   {
     id: "epochs",
-    title: "轻松理解微调参数：训练轮数",
-    description: "一个 Epoch 表示模型完整地遍历一次整个训练数据集。",
-    category: "模型微调",
+    title: "درک آسان پارامتر تنظیم دقیق: تعداد دوره‌ها",
+    description: "یک Epoch یعنی مدل یک بار به‌طور کامل کل مجموعه‌داده آموزشی را پیمایش کند.",
+    category: "تنظیم دقیق مدل",
     line: "finetune",
-    short: "训练轮数",
+    short: "تعداد دوره‌ها",
     imageUrl: "/imgs/epochs.png",
     htmlUrl: "/epochs/index.html",
   },
   {
     id: "bs",
-    title: "轻松理解微调参数：批量大小",
+    title: "درک آسان پارامتر تنظیم دقیق: اندازه دسته",
     description:
-      "批量大小是指在训练过程中，每次更新模型参数时所使用的样本数量。",
-    category: "模型微调",
+      "اندازه دسته یعنی تعداد نمونه‌هایی که در فرایند آموزش در هر بار به‌روزرسانی پارامترهای مدل استفاده می‌شود.",
+    category: "تنظیم دقیق مدل",
     line: "finetune",
-    short: "批量大小",
+    short: "اندازه دسته",
     imageUrl: "/imgs/bs.png",
     htmlUrl: "/batch-size/index.html",
   },
   {
     id: "loss",
-    title: "轻松理解 Loss",
-    description: "Loss 是模型在训练过程中用于衡量预测值与真实值之间差异的指标",
-    category: "模型微调",
+    title: "درک آسان Loss",
+    description: "Loss معیاری است که مدل در فرایند آموزش برای سنجش اختلاف مقدار پیش‌بینی و مقدار واقعی استفاده می‌کند",
+    category: "تنظیم دقیق مدل",
     line: "finetune",
     imageUrl: "/imgs/loss.png",
     htmlUrl: "/loss/index.html",
   },
   {
     id: "deepspeed",
-    title: "轻松理解 DeepSpeed",
-    description: "一款深度学习优化库，目标就是为了简化分布式训练与推理过程",
-    category: "模型微调",
+    title: "درک آسان DeepSpeed",
+    description: "یک کتابخانه بهینه‌سازی یادگیری عمیق که هدفش ساده کردن فرایند آموزش و استنتاج توزیع‌شده است",
+    category: "تنظیم دقیق مدل",
     line: "finetune",
     imageUrl: "/imgs/deepspeed.png",
     htmlUrl: "/deepspeed/index.html",
   },
 
-  /* ── 压缩部署线 ── */
+  /* ── مسیر فشرده‌سازی و استقرار ── */
   {
     id: "distill",
-    title: "轻松理解模型蒸馏",
-    description: "模型蒸馏是将复杂大模型知识压缩到轻量小模型的技术。",
-    category: "模型基础",
+    title: "درک آسان تقطیر مدل",
+    description: "تقطیر مدل فناوری فشرده کردن دانش یک مدل بزرگ پیچیده در یک مدل کوچک سبک است.",
+    category: "مبانی مدل",
     line: "deploy",
     imageUrl: "/imgs/distill.png",
     htmlUrl: "/distill/index.html",
   },
   {
     id: "quantization",
-    title: "轻松理解模型量化",
-    description: "模型量化是将模型权重转换为较低精度表示的技术。",
-    category: "模型基础",
+    title: "درک آسان کوانتیزه‌سازی مدل",
+    description: "کوانتیزه‌سازی مدل فناوری تبدیل وزن‌های مدل به نمایش با دقت پایین‌تر است.",
+    category: "مبانی مدل",
     line: "deploy",
     imageUrl: "/imgs/quantization.png",
     htmlUrl: "/quantization/index.html",
   },
   {
     id: "gguf",
-    title: "轻松理解 GGUF",
-    description: "GGUF 是一种实现更高效模型存储、加载和部署的格式",
-    category: "模型部署",
+    title: "درک آسان GGUF",
+    description: "GGUF قالبی برای ذخیره، بارگذاری و استقرار کارآمدتر مدل است",
+    category: "استقرار مدل",
     line: "deploy",
     imageUrl: "/imgs/gguf.png",
     htmlUrl: "/gguf/index.html",
   },
   {
     id: "deployment",
-    title: "轻松理解 模型部署",
-    description: "对比 Ollama 和 VLLM 两大主流本地部署方案",
-    category: "模型部署",
+    title: "درک آسان استقرار مدل",
+    description: "مقایسه Ollama و VLLM، دو راهکار اصلی استقرار محلی",
+    category: "استقرار مدل",
     line: "deploy",
     imageUrl: "/imgs/deployment.png",
     htmlUrl: "/deploy/index.html",
   },
   {
     id: "model-inference",
-    title: "轻松理解 模型推理",
+    title: "درک آسان استنتاج مدل",
     description:
-      "模型推理是把输入交给训练好的模型，让它一步步计算并生成回答的运行过程。",
-    category: "模型部署",
+      "استنتاج مدل فرایند اجرایی است که ورودی را به مدل آموزش‌دیده می‌دهد تا گام‌به‌گام محاسبه کند و پاسخ تولید کند.",
+    category: "استقرار مدل",
     line: "deploy",
-    short: "模型推理",
+    short: "استنتاج مدل",
     imageUrl: "/imgs/model-inference.png",
     htmlUrl: "/model-inference/index.html",
   },
   {
     id: "kv-cache",
-    title: "轻松理解 KV Cache",
+    title: "درک آسان KV Cache",
     description:
-      "KV Cache 保存生成过程中已经算过的历史内容，让后续 Token 不必反复重算前文。",
-    category: "模型部署",
+      "KV Cache محتوای تاریخچه‌ای که در فرایند تولید محاسبه شده را ذخیره می‌کند تا Tokenهای بعدی مجبور نباشند متن قبلی را دوباره محاسبه کنند.",
+    category: "استقرار مدل",
     line: "deploy",
     short: "KV Cache",
     imageUrl: "/imgs/kv-cache.png",
@@ -572,43 +572,43 @@ export const aiKnowledgeConceptData: AIKnowledgeConceptItem[] = [
   },
   {
     id: "continuous-batching",
-    title: "轻松理解 Continuous Batching",
+    title: "درک آسان Continuous Batching",
     description:
-      "Continuous Batching 会在每轮生成后动态补进新请求，让显卡少空等并提高推理吞吐。",
-    category: "模型部署",
+      "Continuous Batching پس از هر دور تولید درخواست‌های جدید را پویا اضافه می‌کند تا کارت گرافیک کمتر بیکار بماند و توان عملیاتی استنتاج بالا برود.",
+    category: "استقرار مدل",
     line: "deploy",
-    short: "连续批处理",
+    short: "دسته‌بندی پیوسته",
     imageUrl: "/imgs/continuous-batching.png",
     htmlUrl: "/continuous-batching/index.html",
   },
   {
     id: "speculative-decoding",
-    title: "轻松理解 推测解码",
+    title: "درک آسان رمزگشایی گمانه‌ای",
     description:
-      "推测解码让更快的助手先写草稿，再由主模型成批验证，以减少主模型的生成轮数。",
-    category: "模型部署",
+      "رمزگشایی گمانه‌ای اجازه می‌دهد یک دستیار سریع‌تر اول پیش‌نویس بنویسد و سپس مدل اصلی آن را دسته‌ای تأیید کند تا دورهای تولید مدل اصلی کم شود.",
+    category: "استقرار مدل",
     line: "deploy",
-    short: "推测解码",
+    short: "رمزگشایی گمانه‌ای",
     imageUrl: "/imgs/speculative-decoding.png",
     htmlUrl: "/speculative-decoding/index.html",
   },
   {
     id: "structured-output",
-    title: "轻松理解 结构化输出",
+    title: "درک آسان خروجی ساختاریافته",
     description:
-      "结构化输出按预先规定的字段和类型生成结果，让程序能稳定读取 JSON 等固定格式。",
-    category: "模型部署",
+      "خروجی ساختاریافته نتیجه را بر اساس فیلدها و نوع‌های از پیش تعیین‌شده تولید می‌کند تا برنامه بتواند قالب‌های ثابتی مثل JSON را پایدار بخواند.",
+    category: "استقرار مدل",
     line: "deploy",
-    short: "结构化输出",
+    short: "خروجی ساختاریافته",
     imageUrl: "/imgs/structured-output.png",
     htmlUrl: "/structured-output/index.html",
   },
   {
     id: "safetensors",
-    title: "轻松理解 Safetensors",
+    title: "درک آسان Safetensors",
     description:
-      "Safetensors 是一种只存模型权重数字的文件格式，加载时不跑任何代码，安全又快。",
-    category: "模型部署",
+      "Safetensors یک قالب فایل است که فقط اعداد وزن مدل را ذخیره می‌کند و هنگام بارگذاری هیچ کدی اجرا نمی‌کند؛ امن و سریع.",
+    category: "استقرار مدل",
     line: "deploy",
     short: "Safetensors",
     imageUrl: "/imgs/safetensors.png",
@@ -616,10 +616,10 @@ export const aiKnowledgeConceptData: AIKnowledgeConceptItem[] = [
   },
   {
     id: "onnx",
-    title: "轻松理解 ONNX",
+    title: "درک آسان ONNX",
     description:
-      "ONNX 把整张模型计算图存成通用格式，让模型能跨框架、跨设备原样跑起来。",
-    category: "模型部署",
+      "ONNX کل گراف محاسباتی مدل را در یک قالب عمومی ذخیره می‌کند تا مدل بتواند بین فریم‌ورک‌ها و دستگاه‌ها بدون تغییر اجرا شود.",
+    category: "استقرار مدل",
     line: "deploy",
     short: "ONNX",
     imageUrl: "/imgs/onnx.png",
@@ -627,21 +627,21 @@ export const aiKnowledgeConceptData: AIKnowledgeConceptItem[] = [
   },
   {
     id: "precision-formats",
-    title: "轻松理解 大模型精度格式",
+    title: "درک آسان فرمت‌های دقت مدل بزرگ",
     description:
-      "精度格式说的是模型里每个数字用多少位存、怎么切分：FP32、BF16、FP16、FP8。",
-    category: "模型部署",
+      "فرمت دقت یعنی هر عدد در مدل با چند بیت ذخیره و چگونه تقسیم شود: FP32، BF16، FP16، FP8.",
+    category: "استقرار مدل",
     line: "deploy",
-    short: "精度格式",
+    short: "فرمت دقت",
     imageUrl: "/imgs/precision-formats.png",
     htmlUrl: "/precision-formats/index.html",
   },
 
-  /* ── Agent 应用线 ── */
+  /* ── مسیر کاربردهای Agent ── */
   {
     id: "agent",
-    title: "轻松理解Agent",
-    description: "让 AI 不只是答题机器，而是会做事的智能体",
+    title: "درک آسان Agent",
+    description: "AI نه فقط ماشین پاسخ‌گویی، بلکه عاملی هوشمند که کار انجام می‌دهد",
     category: "Agent",
     line: "agent",
     imageUrl: "/imgs/agent.png",
@@ -649,9 +649,9 @@ export const aiKnowledgeConceptData: AIKnowledgeConceptItem[] = [
   },
   {
     id: "agent-loop",
-    title: "轻松理解 Agent Loop",
+    title: "درک آسان Agent Loop",
     description:
-      "Agent 的迭代执行循环：LLM 在循环里反复推理、调工具、看结果，直到任务做完。",
+      "چرخه اجرای تکراری Agent: LLM در یک حلقه بارها استدلال می‌کند، ابزار صدا می‌زند و نتیجه را می‌بیند تا کار تمام شود.",
     category: "Agent",
     line: "agent",
     imageUrl: "/imgs/agent-loop.png",
@@ -659,9 +659,9 @@ export const aiKnowledgeConceptData: AIKnowledgeConceptItem[] = [
   },
   {
     id: "function-calling",
-    title: "轻松理解Function Calling",
+    title: "درک آسان Function Calling",
     description:
-      "Function Calling 是大语言模型与外部数据源、工具交互的重要方式。",
+      "Function Calling روش مهم تعامل مدل‌های زبانی بزرگ با منابع داده و ابزارهای بیرونی است.",
     category: "Agent",
     line: "agent",
     imageUrl: "/imgs/function-calling.png",
@@ -669,9 +669,9 @@ export const aiKnowledgeConceptData: AIKnowledgeConceptItem[] = [
   },
   {
     id: "mcp",
-    title: "轻松理解MCP",
+    title: "درک آسان MCP",
     description:
-      "一个开放标准协议，目的就是为了解决 AI 模型与外部数据源、工具交互的难题。",
+      "یک پروتکل استاندارد باز که هدفش حل مشکل تعامل مدل‌های AI با منابع داده و ابزارهای بیرونی است.",
     category: "Agent",
     line: "agent",
     imageUrl: "/imgs/mcp.png",
@@ -679,9 +679,9 @@ export const aiKnowledgeConceptData: AIKnowledgeConceptItem[] = [
   },
   {
     id: "sub-agent",
-    title: "轻松理解 SubAgent",
+    title: "درک آسان SubAgent",
     description:
-      "把会污染主上下文的探索性工作扔到独立空间，只把精华带回主对话。",
+      "کارهای اکتشافی که context اصلی را آلوده می‌کنند به یک فضای مستقل فرستاده می‌شوند و فقط عصاره آن به گفتگوی اصلی برمی‌گردد.",
     category: "Agent",
     line: "agent",
     imageUrl: "/imgs/sub-agent.png",
@@ -689,9 +689,9 @@ export const aiKnowledgeConceptData: AIKnowledgeConceptItem[] = [
   },
   {
     id: "agent-todo",
-    title: "轻松理解 Agent TodoList",
+    title: "درک آسان Agent TodoList",
     description:
-      "Agent 的 Checklist 机制：防遗忘、给用户看进度、支撑复杂编排。",
+      "مکانیزم Checklist در Agent: جلوگیری از فراموشی، نمایش پیشرفت به کاربر و پشتیبانی از هماهنگ‌سازی پیچیده.",
     category: "Agent",
     line: "agent",
     short: "TodoList",
@@ -700,30 +700,30 @@ export const aiKnowledgeConceptData: AIKnowledgeConceptItem[] = [
   },
   {
     id: "agent-modes",
-    title: "轻松理解 Agent 运行模式",
-    description: "Plan / Default / Auto 三档：在自主性和安全性之间找平衡点。",
+    title: "درک آسان حالت‌های اجرای Agent",
+    description: "سه حالت Plan / Default / Auto: یافتن نقطه تعادل بین خودمختاری و امنیت.",
     category: "Agent",
     line: "agent",
-    short: "运行模式",
+    short: "حالت‌های اجرا",
     imageUrl: "/imgs/agent-modes.png",
     htmlUrl: "/agent-modes/index.html",
   },
   {
     id: "agent-sandbox",
-    title: "轻松理解 Agent 沙箱",
+    title: "درک آسان Sandbox در Agent",
     description:
-      "给 Agent 划一块安全围栏：文件系统 + 网络两条隔离线，OS 层强制。",
+      "یک حصار امن برای Agent: دو خط ایزوله‌سازی فایل‌سیستم + شبکه، که در سطح OS اجباری می‌شود.",
     category: "Agent",
     line: "agent",
-    short: "沙箱",
+    short: "Sandbox",
     imageUrl: "/imgs/agent-sandbox.png",
     htmlUrl: "/agent-sandbox/index.html",
   },
   {
     id: "agent-memory",
-    title: "轻松理解 Agent 记忆",
+    title: "درک آسان حافظه Agent",
     description:
-      "Agent 在 context window 之外持有信息：跨对话记住偏好、配置、踩过的坑。",
+      "Agent اطلاعات را بیرون از context window نگه می‌دارد: ترجیحات، تنظیمات و اشتباهات گذشته را بین گفتگوها به خاطر می‌سپارد.",
     category: "Agent",
     line: "agent",
     imageUrl: "/imgs/agent-memory.png",
@@ -731,9 +731,9 @@ export const aiKnowledgeConceptData: AIKnowledgeConceptItem[] = [
   },
   {
     id: "context-window",
-    title: "轻松理解 Context Window",
+    title: "درک آسان Context Window",
     description:
-      "LLM 的全部「工作内存」：每次请求时塞给它的那段文本，临时且有限。",
+      "کل «حافظه کاری» LLM: همان متنی که در هر درخواست به آن داده می‌شود، موقت و محدود.",
     category: "Agent",
     line: "agent",
     imageUrl: "/imgs/context-window.png",
@@ -741,33 +741,33 @@ export const aiKnowledgeConceptData: AIKnowledgeConceptItem[] = [
   },
   {
     id: "multi-agent",
-    title: "轻松理解 Multi Agent",
+    title: "درک آسان Multi Agent",
     description:
-      "把一个大任务拆给几个各管一摊的 Agent：规划、执行、审查、总结，分工又协作。",
+      "یک کار بزرگ را بین چند Agent که هر کدام مسئول بخشی‌اند تقسیم کنید: برنامه‌ریزی، اجرا، بازبینی و جمع‌بندی، با تقسیم کار و همکاری.",
     category: "Agent",
     line: "agent",
-    short: "多智能体",
+    short: "چندعاملی",
     imageUrl: "/imgs/multi-agent.png",
     htmlUrl: "/multi-agent/index.html",
   },
   {
     id: "context-engineering",
-    title: "轻松理解 Context Engineering",
+    title: "درک آسان Context Engineering",
     description:
-      "管理模型每次干活时看到的那段信息：挑哪些放进去、怎么压、怎么分开放。",
+      "مدیریت اطلاعاتی که مدل در هر بار کار می‌بیند: کدام‌ها را داخل بگذاریم، چطور فشرده کنیم، چطور جدا قرار دهیم.",
     category: "Agent",
     line: "agent",
-    short: "上下文工程",
+    short: "مهندسی context",
     imageUrl: "/imgs/context-engineering.png",
     htmlUrl: "/context-engineering/index.html",
   },
 
-  /* ── 检索增强线 ── */
+  /* ── مسیر بازیابی تقویت‌شده ── */
   {
     id: "rag",
-    title: "轻松理解RAG",
+    title: "درک آسان RAG",
     description:
-      "RAG 即检索增强生成技术，是大语言模型领域解决事实性问题的重要方案。",
+      "RAG یعنی فناوری تولید تقویت‌شده با بازیابی، راهکاری مهم در حوزه مدل‌های زبانی بزرگ برای حل مسائل واقعیت‌محور.",
     category: "RAG",
     line: "rag",
     imageUrl: "/imgs/rag.png",
@@ -775,9 +775,9 @@ export const aiKnowledgeConceptData: AIKnowledgeConceptItem[] = [
   },
   {
     id: "embedding",
-    title: "轻松理解 Embedding",
+    title: "درک آسان Embedding",
     description:
-      "Embedding 把文字、图片等内容变成向量，让机器能按语义相似度查找和比较。",
+      "Embedding محتوایی مثل متن و تصویر را به بردار تبدیل می‌کند تا ماشین بتواند بر اساس شباهت معنایی جستجو و مقایسه کند.",
     category: "RAG",
     line: "rag",
     imageUrl: "/imgs/embedding.png",
@@ -785,8 +785,8 @@ export const aiKnowledgeConceptData: AIKnowledgeConceptItem[] = [
   },
   {
     id: "chunk",
-    title: "轻松理解 Chunk",
-    description: "Chunk 是把长资料切成小片段，让 RAG 能按问题找回刚好够用的内容。",
+    title: "درک آسان Chunk",
+    description: "Chunk یعنی تقسیم منابع طولانی به قطعه‌های کوچک تا RAG بتواند بر اساس سؤال محتوای دقیقاً کافی را بازیابی کند.",
     category: "RAG",
     line: "rag",
     imageUrl: "/imgs/chunk.png",
@@ -794,9 +794,9 @@ export const aiKnowledgeConceptData: AIKnowledgeConceptItem[] = [
   },
   {
     id: "vector-database",
-    title: "轻松理解向量数据库",
+    title: "درک آسان پایگاه داده برداری",
     description:
-      "向量数据库负责存向量、按相似度检索，并把权限和来源条件一起管住。",
+      "پایگاه داده برداری مسئول ذخیره بردارها و بازیابی بر اساس شباهت است و شرایط دسترسی و منبع را هم با هم مدیریت می‌کند.",
     category: "RAG",
     line: "rag",
     imageUrl: "/imgs/vector-database.png",
@@ -804,9 +804,9 @@ export const aiKnowledgeConceptData: AIKnowledgeConceptItem[] = [
   },
   {
     id: "recall-rerank",
-    title: "轻松理解召回与重排",
+    title: "درک آسان بازیابی و رتبه‌بندی مجدد",
     description:
-      "召回先找出候选资料，重排再把最能支撑答案的片段放到前面。",
+      "بازیابی اول منابع کاندید را پیدا می‌کند، سپس رتبه‌بندی مجدد قطعه‌هایی را که بهتر از پاسخ پشتیبانی می‌کنند جلو می‌آورد.",
     category: "RAG",
     line: "rag",
     imageUrl: "/imgs/recall-rerank.png",
@@ -814,20 +814,20 @@ export const aiKnowledgeConceptData: AIKnowledgeConceptItem[] = [
   },
   {
     id: "knowledge-graph",
-    title: "轻松理解知识图谱",
+    title: "درک آسان گراف دانش",
     description:
-      "知识图谱把人、地点和事物连起来，并写清它们之间的关系。",
+      "گراف دانش افراد، مکان‌ها و چیزها را به هم وصل می‌کند و روابط بینشان را روشن می‌نویسد.",
     category: "RAG",
     line: "rag",
-    short: "知识图谱",
+    short: "گراف دانش",
     imageUrl: "/imgs/knowledge-graph.png",
     htmlUrl: "/knowledge-graph/index.html",
   },
   {
     id: "graphrag",
-    title: "轻松理解 GraphRAG",
+    title: "درک آسان GraphRAG",
     description:
-      "GraphRAG 沿着事物之间的关系找资料，再把找到的内容交给 AI 回答。",
+      "GraphRAG در امتداد روابط بین چیزها منابع را پیدا می‌کند و سپس محتوای یافته‌شده را برای پاسخ به AI می‌دهد.",
     category: "RAG",
     line: "rag",
     short: "GraphRAG",
@@ -836,21 +836,21 @@ export const aiKnowledgeConceptData: AIKnowledgeConceptItem[] = [
   },
   {
     id: "illusion",
-    title: "轻松理解模型幻觉",
-    description: "模型幻觉是模型在生成文本时出现的不真实、不合理的现象。",
-    category: "模型基础",
+    title: "درک آسان توهم مدل",
+    description: "توهم مدل پدیده‌ای غیرواقعی و نامعقول است که هنگام تولید متن توسط مدل رخ می‌دهد.",
+    category: "مبانی مدل",
     line: "rag",
     imageUrl: "/imgs/illusion.png",
     htmlUrl: "/illusion/index.html",
   },
 
-  /* ── AI 安全线 ── */
+  /* ── مسیر امنیت AI ── */
   {
     id: "prompt-injection",
-    title: "轻松理解 Prompt Injection",
+    title: "درک آسان Prompt Injection",
     description:
-      "Prompt Injection 把不可信文字混进任务，让 AI 改听另一套要求。",
-    category: "AI 安全",
+      "Prompt Injection متن غیرقابل‌اعتماد را وارد کار می‌کند تا AI به مجموعه دستور دیگری گوش دهد.",
+    category: "امنیت AI",
     line: "safety",
     short: "Prompt Injection",
     imageUrl: "/imgs/prompt-injection.png",
@@ -858,21 +858,21 @@ export const aiKnowledgeConceptData: AIKnowledgeConceptItem[] = [
   },
   {
     id: "jailbreak",
-    title: "轻松理解模型越狱",
+    title: "درک آسان جیلبریک مدل",
     description:
-      "模型越狱用特殊表达绕过内容安全限制，诱导模型回答原本会拒绝的请求。",
-    category: "AI 安全",
+      "جیلبریک مدل با عبارت‌های خاص محدودیت‌های ایمنی محتوا را دور می‌زند و مدل را به پاسخ دادن به درخواست‌هایی که معمولاً رد می‌کند وادار می‌کند.",
+    category: "امنیت AI",
     line: "safety",
-    short: "模型越狱",
+    short: "جیلبریک مدل",
     imageUrl: "/imgs/jailbreak.png",
     htmlUrl: "/jailbreak/index.html",
   },
   {
     id: "ai-guardrails",
-    title: "轻松理解 AI Guardrails",
+    title: "درک آسان AI Guardrails",
     description:
-      "AI Guardrails 在输入、行动和输出周围放置检查、权限与人工确认。",
-    category: "AI 安全",
+      "AI Guardrails در اطراف ورودی، اقدام و خروجی بررسی، دسترسی و تأیید انسانی قرار می‌دهد.",
+    category: "امنیت AI",
     line: "safety",
     short: "AI Guardrails",
     imageUrl: "/imgs/ai-guardrails.png",
@@ -881,20 +881,20 @@ export const aiKnowledgeConceptData: AIKnowledgeConceptItem[] = [
 ];
 
 /**
- * 概念讲解分类色板 (Mailchimp-Freddie 主题色)
+ * پالت رنگ دسته‌بندی توضیح مفاهیم (رنگ‌های تم Mailchimp-Freddie)
  *
- * 概念视图分组已统一到学习线（颜色取 LEARNING_LINES.color），此表保留给视频精讲视图复用。
+ * گروه‌بندی نمای مفاهیم به مسیرهای یادگیری یکپارچه شده (رنگ از LEARNING_LINES.color گرفته می‌شود)، این جدول برای استفاده مجدد در نمای توضیح ویدئویی نگه داشته شده است.
  */
 export const categoryColors: Record<string, string> = {
-  模型基础: "bg-butter text-ink",
-  模型微调: "bg-butter-soft text-ink",
-  模型部署: "bg-butter-tint text-ink",
-  模型训练: "bg-cream text-ink",
-  模型评估: "bg-cream text-ink",
-  数据增强: "bg-cream text-ink",
-  数据合成: "bg-cream text-ink",
+  "مبانی مدل": "bg-butter text-ink",
+  "تنظیم دقیق مدل": "bg-butter-soft text-ink",
+  "استقرار مدل": "bg-butter-tint text-ink",
+  "آموزش مدل": "bg-cream text-ink",
+  "ارزیابی مدل": "bg-cream text-ink",
+  "تقویت داده": "bg-cream text-ink",
+  "ترکیب داده": "bg-cream text-ink",
   Agent: "bg-coral text-white",
   RAG: "bg-teal text-white",
-  提示词: "bg-pop text-white",
-  "AI 安全": "bg-pop text-white",
+  "پرامپت‌ها": "bg-pop text-white",
+  "امنیت AI": "bg-pop text-white",
 };

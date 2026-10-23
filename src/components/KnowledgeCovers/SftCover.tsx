@@ -1,20 +1,20 @@
 /**
- * SFT 封面
+ * جلد SFT
  *
- * 隐喻：左边 (Q, A) 卡片对像传送带一样被一个一个吃进去 → 中央是 base 模型球 →
- *   球被 <|im_start|>...<|im_end|> chat-template "套子" 包住 → 右边变成会对话的 chat 模型
+ * استعاره: در چپ جفت کارت‌های (Q, A) مثل نوار نقاله یکی‌یکی بلعیده می‌شوند ← در مرکز توپ مدل base است ←
+ *   توپ با <|im_start|>...<|im_end|> chat-template "روکش" پوشانده می‌شود ← در راست به مدل chat تبدیل می‌شود که می‌تواند گفتگو کند
  *
- * 视觉构图（viewBox 320×200）：
- *   - 左：3 张 (Q, A) 卡叠在一起，标 instruction · response
- *   - 中：base 模型球（teal 圆）+ ChatML special token 环绕（coral 标签）
- *   - 右：chat 气泡，里面是 ✓ + 一行答案
- *   - 顶部 stamp："→ chat model"
- *   - 底部 caption："base + (q,a) × N"
+ * ترکیب‌بندی بصری (viewBox 320×200):
+ *   - چپ: ۳ کارت (Q, A) روی هم، با برچسب instruction · response
+ *   - وسط: توپ مدل base (دایره teal) + special tokenهای ChatML دور آن (برچسب‌های coral)
+ *   - راست: حباب chat، داخل آن ✓ + یک خط پاسخ
+ *   - stamp بالا:"→ chat model"
+ *   - caption پایین:"base + (q,a) × N"
  *
  * hover：
- *   - 卡片队列推进一步
- *   - chat-template 标签微微旋转（套子收紧感）
- *   - 右侧气泡轻浮上 1px
+ *   - صف کارت‌ها یک گام جلو می‌رود
+ *   - برچسب chat-template کمی می‌چرخد (حس سفت شدن روکش)
+ *   - حباب راست 1px کمی بالا می‌رود
  */
 import React from "react";
 import CoverShell from "./CoverShell";
@@ -22,7 +22,7 @@ import CoverShell from "./CoverShell";
 const SftCover: React.FC = () => {
   return (
     <CoverShell bgClassName="bg-butter-soft" dotOpacity={0.08}>
-      {/* 顶部 stamp · → chat */}
+      {/* stamp بالا · → chat */}
       <g
         transform="translate(258,28) rotate(7)"
         className="origin-center transition-transform duration-500 group-hover:rotate-[-4deg] group-hover:scale-110"
@@ -50,7 +50,7 @@ const SftCover: React.FC = () => {
         </text>
       </g>
 
-      {/* 左上 stamp · base */}
+      {/* stamp بالا-چپ · base */}
       <g
         transform="translate(38,28) rotate(-7)"
         className="origin-center transition-transform duration-500 group-hover:rotate-2"
@@ -79,7 +79,7 @@ const SftCover: React.FC = () => {
         </text>
       </g>
 
-      {/* 左下：caption */}
+      {/* پایین-چپ: caption */}
       <text
         x="38"
         y="188"
@@ -91,8 +91,8 @@ const SftCover: React.FC = () => {
         base + (q, a) × N
       </text>
 
-      {/* === 左侧：(Q, A) 卡片队列 === */}
-      {/* 卡 3（最远 · 半透） */}
+      {/* === چپ: صف کارت‌های (Q, A) === */}
+      {/* کارت ۳ (دورترین · نیمه‌شفاف) */}
       <g
         transform="translate(34,100) rotate(-3)"
         opacity="0.45"
@@ -110,7 +110,7 @@ const SftCover: React.FC = () => {
         />
       </g>
 
-      {/* 卡 2（中间 · 半透） */}
+      {/* کارت ۲ (وسط · نیمه‌شفاف) */}
       <g
         transform="translate(46,98) rotate(2)"
         opacity="0.7"
@@ -128,7 +128,7 @@ const SftCover: React.FC = () => {
         />
       </g>
 
-      {/* 卡 1（前置 · 完整） */}
+      {/* کارت ۱ (جلو · کامل) */}
       <g
         transform="translate(62,95)"
         className="origin-center transition-transform duration-500 group-hover:translate-x-3"
@@ -143,7 +143,7 @@ const SftCover: React.FC = () => {
           stroke="#241C15"
           strokeWidth="2"
         />
-        {/* Q 行 */}
+        {/* ردیف Q */}
         <text
           x="-22"
           y="-15"
@@ -157,7 +157,7 @@ const SftCover: React.FC = () => {
         </text>
         <line x1="-12" y1="-16" x2="22" y2="-16" stroke="#241C15" strokeWidth="1.1" />
         <line x1="-12" y1="-10" x2="14" y2="-10" stroke="#241C15" strokeWidth="1.1" opacity="0.6" />
-        {/* A 行 */}
+        {/* ردیف A */}
         <text
           x="-22"
           y="5"
@@ -174,7 +174,7 @@ const SftCover: React.FC = () => {
         <line x1="-12" y1="16" x2="20" y2="16" stroke="#241C15" strokeWidth="1.1" opacity="0.6" />
       </g>
 
-      {/* === 流动箭头：卡片 → base 球 === */}
+      {/* === فلش جریان: کارت ← توپ base === */}
       <g
         stroke="#E07A5F"
         strokeWidth="2"
@@ -187,8 +187,8 @@ const SftCover: React.FC = () => {
       </g>
       <polygon points="138,96 146,100 138,104" fill="#E07A5F" />
 
-      {/* === 中央：base 模型球 + chat template 包裹 === */}
-      {/* 套子 · <|im_start|> 左标签 */}
+      {/* === مرکز: توپ مدل base + پوشش chat template === */}
+      {/* روکش · <|im_start|> برچسب چپ */}
       <g
         transform="translate(160,68)"
         className="origin-bottom transition-transform duration-500 group-hover:translate-y-[-3px]"
@@ -217,7 +217,7 @@ const SftCover: React.FC = () => {
         </text>
       </g>
 
-      {/* base 球 */}
+      {/* توپ base */}
       <g
         transform="translate(160,108)"
         className="origin-center transition-transform duration-500 group-hover:scale-105"
@@ -238,7 +238,7 @@ const SftCover: React.FC = () => {
         </text>
       </g>
 
-      {/* 套子 · <|im_end|> 右标签 */}
+      {/* روکش · <|im_end|> برچسب راست */}
       <g
         transform="translate(160,148)"
         className="origin-top transition-transform duration-500 group-hover:translate-y-[3px]"
@@ -267,7 +267,7 @@ const SftCover: React.FC = () => {
         </text>
       </g>
 
-      {/* === 中→右：reward 流动箭头 === */}
+      {/* === وسط ← راست: فلش جریان reward === */}
       <g
         stroke="#241C15"
         strokeWidth="2"
@@ -281,12 +281,12 @@ const SftCover: React.FC = () => {
       </g>
       <polygon points="232,104 240,108 232,112" fill="#241C15" opacity="0.7" />
 
-      {/* === 右侧：chat 气泡 === */}
+      {/* === راست: حباب chat === */}
       <g
         transform="translate(272,108)"
         className="origin-center transition-transform duration-500 group-hover:-translate-y-1"
       >
-        {/* 气泡主体 */}
+        {/* بدنه حباب */}
         <rect
           x="-32"
           y="-26"
@@ -297,7 +297,7 @@ const SftCover: React.FC = () => {
           stroke="#241C15"
           strokeWidth="2"
         />
-        {/* 气泡尾巴 */}
+        {/* دم حباب */}
         <polygon
           points="-32,16 -38,24 -28,12"
           fill="#F4D35E"
@@ -305,7 +305,7 @@ const SftCover: React.FC = () => {
           strokeWidth="2"
           strokeLinejoin="round"
         />
-        {/* ✓ + 文本占位 */}
+        {/* ✓ + متن جای‌نگهدار */}
         <circle cx="-22" cy="-14" r="4.5" fill="#1B4B5A" stroke="#241C15" strokeWidth="1.4" />
         <path
           d="M -25 -14 L -23 -12 L -19 -16"

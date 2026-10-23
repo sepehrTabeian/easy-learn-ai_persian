@@ -1,30 +1,30 @@
 /**
- * NLP 封面
+ * جلد NLP
  *
- * 隐喻：「字 → 数」的转换。一句话 → 切成 token 方块 → 每个 token 变成一串小数字 → 输出
+ * استعاره: تبدیل «متن ← عدد». یک جمله ← به مربع‌های token بریده می‌شود ← هر token به رشته‌ای از اعداد کوچک تبدیل می‌شود ← خروجی
  *
- * 视觉构图（viewBox 320×200）：
- *   - 左：一段中文短句方块（cream 底 + ink 描边）写「今天天气真好」
- *   - 中上：5 个彩色 token 方块（butter / coral / teal / cream / white），表示分词
- *   - 中下：每个 token 下方挂一串高低不一的向量小柱（"数字"）
- *   - 右：一个 "y" 小圆点出口（teal）表示模型输出
- *   - 右上：「token → vec」印章（pop 色）
- *   - 左下：BPE / 100k vocab 公式碎片
+ * ترکیب‌بندی بصری (viewBox 320×200):
+ *   - چپ: مربع یک جمله کوتاه فارسی (پس‌زمینه cream + حاشیه ink) با نوشته «امروز هوا خیلی خوب است»
+ *   - بالا وسط: ۵ مربع token رنگی (butter / coral / teal / cream / white)، نشان‌دهنده توکن‌سازی
+ *   - پایین وسط: زیر هر token یک رشته ستون کوچک برداری با ارتفاع‌های مختلف آویزان است ("عدد"）
+ *   - راست: یک "y" خروجی نقطه کوچک (teal) نشان‌دهنده خروجی مدل
+ *   - بالا-راست: مهر «token → vec» (رنگ pop)
+ *   - پایین-چپ: تکه فرمول BPE / 100k vocab
  *
- * hover：token 方块依次微缩放，向量柱波动，连接线流动 dash 加速。
+ * hover: مربع‌های token به ترتیب کمی بزرگ و کوچک می‌شوند، ستون‌های برداری نوسان می‌کنند، dash روان خطوط اتصال سریع‌تر می‌شود.
  */
 import React from "react";
 import CoverShell from "./CoverShell";
 
 const TOKENS: { text: string; tone: string; textColor: string }[] = [
-  { text: "今天", tone: "#F4D35E", textColor: "#241C15" }, // butter
-  { text: "天气", tone: "#FBEFE3", textColor: "#241C15" }, // cream
-  { text: "真", tone: "#E07A5F", textColor: "#FBEFE3" },   // coral
-  { text: "好", tone: "#1B4B5A", textColor: "#FBEFE3" },   // teal
+  { text: "امروز", tone: "#F4D35E", textColor: "#241C15" }, // butter
+  { text: "هوا", tone: "#FBEFE3", textColor: "#241C15" }, // cream
+  { text: "واقعاً", tone: "#E07A5F", textColor: "#FBEFE3" },   // coral
+  { text: "خوب", tone: "#1B4B5A", textColor: "#FBEFE3" },   // teal
   { text: "!", tone: "#FFFFFF", textColor: "#241C15" },    // white
 ];
 
-/* 每个 token 下方的 6 维向量柱高度（稳定随机感） */
+/* ارتفاع ستون‌های بردار ۶ بعدی زیر هر token (حس تصادفی پایدار) */
 const VECTOR_HEIGHTS: number[][] = [
   [6, 12, 5, 9, 7, 11],
   [9, 4, 11, 8, 13, 5],
@@ -43,7 +43,7 @@ const VEC_Y0 = 92;
 const NlpCover: React.FC = () => {
   return (
     <CoverShell bgClassName="bg-cream" dotOpacity={0.08}>
-      {/* 右上：token→vec 印章 */}
+      {/* بالا-راست: مهر token→vec */}
       <g
         transform="translate(286,28) rotate(8)"
         className="origin-center transition-transform duration-500 group-hover:rotate-[-4deg] group-hover:scale-110"
@@ -72,7 +72,7 @@ const NlpCover: React.FC = () => {
         </text>
       </g>
 
-      {/* 左下：BPE 公式碎片 */}
+      {/* پایین-چپ: تکه فرمول BPE */}
       <g transform="translate(28,178) rotate(-3)" className="origin-left">
         <rect
           x="-3"
@@ -98,7 +98,7 @@ const NlpCover: React.FC = () => {
         </text>
       </g>
 
-      {/* ① 输入句 (左侧大方块) */}
+      {/* ① جمله ورودی (مربع بزرگ چپ) */}
       <g
         transform="translate(36,108)"
         className="origin-center transition-transform duration-500 group-hover:translate-x-1"
@@ -113,7 +113,7 @@ const NlpCover: React.FC = () => {
           stroke="#241C15"
           strokeWidth="2"
         />
-        {/* 文字行 1 */}
+        {/* خط متن ۱ */}
         <text
           y="-8"
           textAnchor="middle"
@@ -122,7 +122,7 @@ const NlpCover: React.FC = () => {
           fontWeight="700"
           fill="#241C15"
         >
-          今天天气
+          امروز هوا
         </text>
         <text
           y="6"
@@ -132,7 +132,7 @@ const NlpCover: React.FC = () => {
           fontWeight="700"
           fill="#241C15"
         >
-          真好!
+          خیلی خوب است!
         </text>
         {/* label */}
         <rect
@@ -156,7 +156,7 @@ const NlpCover: React.FC = () => {
         </text>
       </g>
 
-      {/* 输入 → tokens 箭头 */}
+      {/* فلش ورودی ← tokens */}
       <g>
         <line
           x1="62"
@@ -171,7 +171,7 @@ const NlpCover: React.FC = () => {
         <polygon points="91,105 97,108 91,111" fill="#241C15" />
       </g>
 
-      {/* ② 5 个 token 方块 + 向量柱 */}
+      {/* ② ۵ مربع token + ستون‌های بردار */}
       {TOKENS.map((tok, i) => {
         const x = TOKENS_X0 + i * (TOKEN_W + TOKEN_GAP);
         const heights = VECTOR_HEIGHTS[i];
@@ -180,7 +180,7 @@ const NlpCover: React.FC = () => {
             key={`tok-${i}`}
             className="origin-center transition-transform duration-500 group-hover:scale-[1.04]"
           >
-            {/* token 方块 */}
+            {/* مربع token */}
             <g transform={`translate(${x + TOKEN_W / 2}, ${TOKENS_Y})`}>
               <rect
                 x={-TOKEN_W / 2}
@@ -204,7 +204,7 @@ const NlpCover: React.FC = () => {
               </text>
             </g>
 
-            {/* token → 向量柱 的连接小线 */}
+            {/* خط کوچک اتصال token ← ستون بردار */}
             <line
               x1={x + TOKEN_W / 2}
               y1={TOKENS_Y + TOKEN_H / 2}
@@ -216,9 +216,9 @@ const NlpCover: React.FC = () => {
               strokeDasharray="1.2 1.4"
             />
 
-            {/* 向量柱 6 维 */}
+            {/* ستون بردار ۶ بعدی */}
             <g transform={`translate(${x + 4}, ${VEC_Y0 + 30})`}>
-              {/* 基线 */}
+              {/* خط پایه */}
               <line
                 x1="0"
                 y1="0"
@@ -248,7 +248,7 @@ const NlpCover: React.FC = () => {
         );
       })}
 
-      {/* tokens 上方小 caption */}
+      {/* caption کوچک بالای tokens */}
       <text
         x={TOKENS_X0 + (TOKENS.length * (TOKEN_W + TOKEN_GAP)) / 2 - TOKEN_GAP / 2}
         y={TOKENS_Y - 22}
@@ -261,7 +261,7 @@ const NlpCover: React.FC = () => {
         5 tokens
       </text>
 
-      {/* 向量柱下方 caption */}
+      {/* caption زیر ستون‌های بردار */}
       <text
         x={TOKENS_X0 + (TOKENS.length * (TOKEN_W + TOKEN_GAP)) / 2 - TOKEN_GAP / 2}
         y={VEC_Y0 + 50}
@@ -271,10 +271,10 @@ const NlpCover: React.FC = () => {
         fill="#88837C"
         letterSpacing="0.8"
       >
-        embedding · 6d (示意)
+        embedding · 6d (نمایشی)
       </text>
 
-      {/* ③ 向量 → 模型 → 输出 箭头 */}
+      {/* ③ فلش بردار ← مدل ← خروجی */}
       <g>
         <line
           x1={TOKENS_X0 + TOKENS.length * (TOKEN_W + TOKEN_GAP) - TOKEN_GAP}
@@ -290,7 +290,7 @@ const NlpCover: React.FC = () => {
         <polygon points="293,105 299,108 293,111" fill="#241C15" />
       </g>
 
-      {/* 出口 y 小圆点 */}
+      {/* نقطه کوچک خروجی y */}
       <g transform="translate(304,108)">
         <circle r="6" fill="#1B4B5A" stroke="#241C15" strokeWidth="1.5" />
         <text
@@ -305,7 +305,7 @@ const NlpCover: React.FC = () => {
         </text>
       </g>
 
-      {/* 底部 step 提示 */}
+      {/* راهنمای step پایین */}
       <text
         x="160"
         y="186"

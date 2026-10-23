@@ -2,11 +2,11 @@ import React from "react";
 import CoverShell from "./CoverShell";
 
 const PAIRS = [
-  { g: "学术", a: "研究者", x: 192, y: 64, color: "#1B4B5A" },
-  { g: "故事", a: "小学生", x: 248, y: 92, color: "#E07A5F" },
-  { g: "新闻", a: "白领", x: 256, y: 132, color: "#88837C" },
-  { g: "口播", a: "听众", x: 224, y: 168, color: "#1B4B5A" },
-  { g: "政策", a: "决策者", x: 168, y: 184, color: "#FF4D74" },
+  { g: "آکادمیک", a: "پژوهشگر", x: 192, y: 64, color: "#1B4B5A" },
+  { g: "داستان", a: "دانش‌آموز دبستانی", x: 248, y: 92, color: "#E07A5F" },
+  { g: "خبر", a: "کارمند", x: 256, y: 132, color: "#88837C" },
+  { g: "گویندگی", a: "شنونده", x: 224, y: 168, color: "#1B4B5A" },
+  { g: "سیاست", a: "تصمیم‌گیرنده", x: 168, y: 184, color: "#FF4D74" },
 ];
 
 export default function MgaCover() {
@@ -46,7 +46,7 @@ export default function MgaCover() {
             fontWeight="700"
             letterSpacing="0.1em"
           >
-            原文
+            متن اصلی
           </text>
         </g>
 

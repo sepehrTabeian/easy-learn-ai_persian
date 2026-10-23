@@ -1,6 +1,6 @@
 /**
- * 树形节点组件
- * 递归渲染树形结构的每个节点
+ * کامپوننت گره درخت
+ * رندر بازگشتی هر گره ساختار درختی
  */
 
 import React, { useState } from "react";
@@ -19,7 +19,7 @@ import { ModelDetailModal } from "./ModelDetailModal";
 interface TreeNodeProps {
   node: TreeNodeType;
   level: number;
-  parentExpanded?: boolean; // 父节点是否展开
+  parentExpanded?: boolean; // آیا گره والد باز است
 }
 
 export const TreeNode: React.FC<TreeNodeProps> = ({
@@ -27,13 +27,13 @@ export const TreeNode: React.FC<TreeNodeProps> = ({
   level,
   parentExpanded = false,
 }) => {
-  // 默认展开公司层级，或者当父节点是status类型且展开时，自动展开
+  // به‌طور پیش‌فرض سطح شرکت باز است، یا وقتی گره والد از نوع status است و باز شده، خودکار باز می‌شود
   const [isExpanded, setIsExpanded] = useState(
     level === 0 || (level === 2 && parentExpanded)
   );
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  // 当父节点展开状态改变时，更新子节点状态
+  // وقتی وضعیت باز بودن گره والد تغییر کند، وضعیت گره فرزند به‌روزرسانی می‌شود
   React.useEffect(() => {
     if (level === 2 && parentExpanded) {
       setIsExpanded(true);
@@ -42,7 +42,7 @@ export const TreeNode: React.FC<TreeNodeProps> = ({
 
   const hasChildren = node.children && node.children.length > 0;
 
-  // 格式化日期
+  // قالب‌بندی تاریخ
   const formatDate = (dateStr: string) => {
     try {
       const date = new Date(dateStr);
@@ -58,18 +58,18 @@ export const TreeNode: React.FC<TreeNodeProps> = ({
     }
   };
 
-  // 获取国家图标
+  // دریافت آیکون کشور
   const getCountryFlag = (country: string) => {
     const flags: Record<string, string> = {
-      美国: "🇺🇸",
-      中国: "🇨🇳",
-      英国: "🇬🇧",
-      德国: "🇩🇪",
+      آمریکا: "🇺🇸",
+      چین: "🇨🇳",
+      انگلیس: "🇬🇧",
+      آلمان: "🇩🇪",
     };
     return flags[country] || "🌍";
   };
 
-  // 获取节点图标
+  // دریافت آیکون گره
   const getIcon = () => {
     switch (node.type) {
       case "company":
@@ -77,7 +77,7 @@ export const TreeNode: React.FC<TreeNodeProps> = ({
       case "status":
         return <Shield className="w-4 h-4 text-green-600" />;
       case "model":
-        return null; // 模型节点显示公司图标
+        return null; // گره مدل آیکون شرکت را نمایش می‌دهد
       case "submodel":
         return <GitBranch className="w-3.5 h-3.5 text-purple-500" />;
       default:
@@ -85,7 +85,7 @@ export const TreeNode: React.FC<TreeNodeProps> = ({
     }
   };
 
-  // 获取节点样式
+  // دریافت استایل گره
   const getNodeStyle = () => {
     const baseStyle =
       "flex items-center gap-2 px-3 py-2 rounded-lg transition-all duration-200";
@@ -98,24 +98,24 @@ export const TreeNode: React.FC<TreeNodeProps> = ({
       case "model":
         return `${baseStyle} hover:bg-purple-50 cursor-pointer text-gray-700`;
       case "submodel":
-        return `${baseStyle} hover:bg-purple-50 cursor-pointer text-gray-700`; // 与父模型字体大小一致
+        return `${baseStyle} hover:bg-purple-50 cursor-pointer text-gray-700`; // هم‌اندازه با فونت مدل والد
       default:
         return baseStyle;
     }
   };
 
-  // 处理节点点击
+  // پردازش کلیک روی گره
   const handleNodeClick = () => {
     if ((node.type === "model" || node.type === "submodel") && node.model) {
-      // 有实际模型数据的节点：打开详情弹框
+      // گره‌هایی که داده مدل واقعی دارند: باز کردن پنجره جزئیات
       setIsModalOpen(true);
     } else if (hasChildren) {
-      // 其他有子节点的节点（包括虚拟父节点）：展开/收起
+      // سایر گره‌هایی که فرزند دارند (شامل گره والد مجازی): باز/بسته کردن
       setIsExpanded(!isExpanded);
     }
   };
 
-  // 处理展开/收起按钮点击
+  // پردازش کلیک دکمه باز/بسته
   const handleToggleClick = (e: React.MouseEvent) => {
     e.stopPropagation();
     setIsExpanded(!isExpanded);
@@ -125,13 +125,13 @@ export const TreeNode: React.FC<TreeNodeProps> = ({
 
   return (
     <div>
-      {/* 节点内容 */}
+      {/* محتوای گره */}
       <div
         className={getNodeStyle()}
         style={{ paddingLeft: `${level * 24 + 12}px` }}
         onClick={handleNodeClick}
       >
-        {/* 展开/收起按钮或占位符 */}
+        {/* دکمه باز/بسته یا جای‌نگهدار */}
         {hasChildren ? (
           <button
             onClick={handleToggleClick}
@@ -144,25 +144,25 @@ export const TreeNode: React.FC<TreeNodeProps> = ({
             )}
           </button>
         ) : (
-          // 所有节点都显示占位符以保持对齐
+          // همه گره‌ها جای‌نگهدار نمایش می‌دهند تا هم‌تراز بمانند
           <div className="w-5 flex-shrink-0" />
         )}
 
-        {/* 公司层级显示国家图标（在图标之前） */}
+        {/* سطح شرکت آیکون کشور را نمایش می‌دهد (پیش از آیکون) */}
         {node.type === "company" &&
           node.children &&
           node.children.length > 0 && (
-            <span className="text-lg flex-shrink-0 mr-1">
+            <span className="text-lg flex-shrink-0 me-1">
               {getCountryFlag(node.country || "")}
             </span>
           )}
 
-        {/* 节点图标 */}
+        {/* آیکون گره */}
         {node.type === "model" || node.type === "submodel" ? (
-          // 模型节点显示公司图标，子模型添加缩进体现层级
+          // گره مدل آیکون شرکت را نمایش می‌دهد، زیرمدل‌ها با تورفتگی سلسله‌مراتب را نشان می‌دهند
           <div className="flex items-center gap-2 flex-shrink-0">
             {node.type === "submodel" && (
-              <div className="w-4 border-l-2 border-b-2 border-gray-300 h-6 -mb-3" />
+              <div className="w-4 border-s-2 border-b-2 border-gray-300 h-6 -mb-3" />
             )}
             {node.model ? (
               <img
@@ -174,7 +174,7 @@ export const TreeNode: React.FC<TreeNodeProps> = ({
                 }}
               />
             ) : (
-              // 虚拟父节点（parent是代称分类）显示文件夹图标
+              // گره والد مجازی (parent یک دسته‌بندی نمادین است) آیکون پوشه نمایش می‌دهد
               <GitBranch className="w-5 h-5 text-gray-500 flex-shrink-0" />
             )}
           </div>
@@ -182,11 +182,11 @@ export const TreeNode: React.FC<TreeNodeProps> = ({
           <div className="flex-shrink-0">{getIcon()}</div>
         )}
 
-        {/* 节点名称和发布时间 */}
+        {/* نام گره و تاریخ انتشار */}
         <div className="flex items-center gap-2 flex-1 min-w-0">
           <span className="truncate">{node.name}</span>
 
-          {/* 模型发布时间（仅模型和子模型显示） - 次要标签样式 */}
+          {/* تاریخ انتشار مدل (فقط برای مدل و زیرمدل نمایش داده می‌شود) - استایل برچسب فرعی */}
           {(node.type === "model" || node.type === "submodel") &&
             node.model && (
               <span className="flex items-center gap-1 px-2 py-0.5 bg-gray-100 border border-gray-200 rounded text-xs text-gray-600 flex-shrink-0">
@@ -195,7 +195,7 @@ export const TreeNode: React.FC<TreeNodeProps> = ({
             )}
         </div>
 
-        {/* 子节点数量 */}
+        {/* تعداد گره‌های فرزند */}
         {node.count !== undefined && node.count > 0 && (
           <span className="flex-shrink-0 px-2 py-0.5 bg-gray-100 text-gray-600 rounded-full text-xs font-medium">
             {node.count}
@@ -203,7 +203,7 @@ export const TreeNode: React.FC<TreeNodeProps> = ({
         )}
       </div>
 
-      {/* 子节点 */}
+      {/* گره‌های فرزند */}
       {isExpanded && hasChildren && (
         <div>
           {node.children!.map((child) => (
@@ -217,7 +217,7 @@ export const TreeNode: React.FC<TreeNodeProps> = ({
         </div>
       )}
 
-      {/* 详情弹框 */}
+      {/* پنجره جزئیات */}
       {node.model && (
         <ModelDetailModal
           model={node.model}

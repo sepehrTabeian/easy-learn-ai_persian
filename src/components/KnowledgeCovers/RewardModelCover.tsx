@@ -18,7 +18,7 @@ const RewardModelCover: React.FC = () => (
     <path d="M122 126 C143 126 148 139 169 139" fill="none" stroke="#E07A5F" strokeWidth="3" strokeDasharray="5 4" className="animate-dash-flow" />
     <g className="origin-center transition-transform duration-500 ease-spring group-hover:scale-105">
       <rect x="170" y="48" width="118" height="113" rx="18" fill="#1B4B5A" stroke="#241C15" strokeWidth="2.5" />
-      <text x="229" y="71" textAnchor="middle" fontFamily="Plus Jakarta Sans, Noto Sans SC, sans-serif" fontSize="12" fontWeight="800" fill="#FBEFE3">奖励模型</text>
+      <text x="229" y="71" textAnchor="middle" fontFamily="Plus Jakarta Sans, Vazirmatn, sans-serif" fontSize="12" fontWeight="800" fill="#FBEFE3">مدل پاداش</text>
       <line x1="191" y1="89" x2="267" y2="89" stroke="#FBEFE3" strokeWidth="2" opacity="0.5" />
       <rect x="193" y="101" width="72" height="18" rx="9" fill="#F4D35E" stroke="#241C15" strokeWidth="1.5" />
       <text x="229" y="114" textAnchor="middle" fontFamily="Geist Mono, monospace" fontSize="10" fontWeight="800" fill="#241C15">A  +1.7</text>

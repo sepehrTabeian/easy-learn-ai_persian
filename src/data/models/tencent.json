@@ -1,51 +1,51 @@
 [
     {
         "modelName": "hunyuan-t1",
-        "company": "腾讯",
-        "country": "中国",
-        "openSourceStatus": "闭源",
+        "company": "Tencent",
+        "country": "چین",
+        "openSourceStatus": "متن‌بسته",
         "releaseDate": "2025-08-22",
-        "description": "混元 T1 是腾讯推出的强推理与长文本模型，采用 Hybrid-Transformer-Mamba 与 MoE 架构，强化高难数学、复杂逻辑与代码能力，支持工具调用与搜索增强，最大 32K 输入与 64K 输出，解码效率优化；适用于企业问答、研发辅助与决策分析等场景。",
+        "description": "Hunyuan T1 مدل استدلال قوی و متن طولانی Tencent است که از معماری Hybrid-Transformer-Mamba و MoE استفاده می‌کند، توانایی ریاضی دشوار، منطق پیچیده و کد را تقویت کرده، از فراخوانی ابزار و تقویت جستجو پشتیبانی می‌کند، حداکثر ورودی 32K و خروجی 64K دارد و بهره‌وری رمزگشایی آن بهینه شده؛ مناسب برای پرسش و پاسخ سازمانی، کمک توسعه و تحلیل تصمیم‌گیری.",
         "modelTags": [
-            "文本生成",
-            "深度思考",
-            "工具调用"
+            "تولید متن",
+            "تفکر عمیق",
+            "فراخوانی ابزار"
         ],
         "contextWindow": 32,
         "maxGenerationTokenLength": 64,
         "relatedLinks": [
             {
-                "title": "腾讯混元大模型 产品概述（hunyuan-T1）",
+                "title": "نمای کلی محصول مدل بزرگ Tencent Hunyuan (hunyuan-T1)",
                 "url": "https://cloud.tencent.com/document/product/1729/104753"
             },
             {
-                "title": "混元生文计费概述（模型列表与价格）",
+                "title": "نمای کلی قیمت‌گذاری تولید متن Hunyuan (فهرست مدل‌ها و قیمت)",
                 "url": "https://cloud.tencent.com/document/product/1729/97731"
             }
         ]
     },
     {
         "modelName": "hy3-preview",
-        "company": "腾讯",
-        "country": "中国",
-        "openSourceStatus": "闭源",
+        "company": "Tencent",
+        "country": "چین",
+        "openSourceStatus": "متن‌بسته",
         "releaseDate": "2026-05",
-        "description": "hy3-preview 是腾讯混元在 TokenHub 与 OpenAI 兼容接口中推荐的新一代预览模型，腾讯文档在多个接口示例中提示原 hyllm、hunyuan-code、hunyuan-turbos 等模型可迁移到 hy3-preview；支持文本生成、复杂推理和工具调用，适合作为混元新一代通用/编码/智能体能力的迁移目标。",
+        "description": "hy3-preview مدل پیش‌نمایش نسل جدیدی است که Tencent Hunyuan در TokenHub و رابط سازگار با OpenAI پیشنهاد می‌کند؛ مستندات Tencent در چند نمونه رابط اشاره کرده‌اند که مدل‌های قبلی مثل hyllm، hunyuan-code و hunyuan-turbos را می‌توان به hy3-preview منتقل کرد؛ از تولید متن، استدلال پیچیده و فراخوانی ابزار پشتیبانی می‌کند و به‌عنوان مقصد مهاجرت توانایی‌های عمومی/کدنویسی/عامل هوشمند نسل جدید Hunyuan مناسب است.",
         "modelTags": [
-            "文本生成",
-            "深度思考",
-            "代码增强",
-            "工具调用"
+            "تولید متن",
+            "تفکر عمیق",
+            "تقویت کد",
+            "فراخوانی ابزار"
         ],
         "contextWindow": 256,
         "maxGenerationTokenLength": 64,
         "relatedLinks": [
             {
-                "title": "腾讯云 TokenHub 模型列表（hy3-preview）",
+                "title": "فهرست مدل‌های Tencent Cloud TokenHub (hy3-preview)",
                 "url": "https://cloud.tencent.com/document/product/1729/111007"
             },
             {
-                "title": "腾讯混元模型服务产品概述",
+                "title": "نمای کلی محصول سرویس مدل Tencent Hunyuan",
                 "url": "https://cloud.tencent.com/document/product/1729/104753"
             }
         ],
@@ -53,48 +53,48 @@
     },
     {
         "modelName": "hunyuan-turbos",
-        "company": "腾讯",
-        "country": "中国",
-        "openSourceStatus": "闭源",
+        "company": "Tencent",
+        "country": "چین",
+        "openSourceStatus": "متن‌بسته",
         "releaseDate": "2025-03-25",
-        "description": "混元 TurboS 是腾讯旗舰通用模型，基于升级的后训练策略与 MoE 结构，提升指令遵循、文创质量与理科推理，支持工具调用与多轮对话，最大 32K 输入与 16K 输出，兼顾速度与成本；适合内容创作、知识问答与业务自动化。",
+        "description": "Hunyuan TurboS مدل عمومی پرچم‌دار Tencent است که بر پایه راهبرد پس‌آموزش ارتقایافته و ساختار MoE، پیروی از دستور، کیفیت خلاقیت ادبی و استدلال علمی را بهبود داده، از فراخوانی ابزار و گفتگوی چنددوره‌ای پشتیبانی می‌کند، حداکثر ورودی 32K و خروجی 16K دارد و سرعت و هزینه را با هم دارد؛ مناسب برای تولید محتوا، پرسش و پاسخ دانشی و خودکارسازی کسب‌وکار.",
         "modelTags": [
-            "文本生成",
-            "工具调用"
+            "تولید متن",
+            "فراخوانی ابزار"
         ],
         "contextWindow": 32,
         "maxGenerationTokenLength": 16,
         "relatedLinks": [
             {
-                "title": "腾讯混元大模型 产品概述（hunyuan-TurboS）",
+                "title": "نمای کلی محصول مدل بزرگ Tencent Hunyuan (hunyuan-TurboS)",
                 "url": "https://cloud.tencent.com/document/product/1729/104753"
             },
             {
-                "title": "混元 OpenAI 兼容接口示例（chat completions）",
+                "title": "نمونه رابط سازگار با OpenAI در Hunyuan (chat completions)",
                 "url": "https://cloud.tencent.com/document/product/1729/111007"
             }
         ]
     },
     {
         "modelName": "hunyuan-turbos-longtext-128k",
-        "company": "腾讯",
-        "country": "中国",
-        "openSourceStatus": "闭源",
+        "company": "Tencent",
+        "country": "چین",
+        "openSourceStatus": "متن‌بسته",
         "releaseDate": "2025-03-25",
-        "description": "擅长处理长文任务如文档摘要和文档问答等，同时也具备处理通用文本生成任务的能力。在长文本的分析和生成上表现优异，能有效应对复杂和详尽的长文内容处理需求。",
+        "description": "در پردازش وظایف متن طولانی مثل خلاصه‌سازی اسناد و پرسش و پاسخ اسناد مهارت دارد و هم‌زمان توانایی پردازش وظایف تولید متن عمومی را هم دارد. در تحلیل و تولید متن طولانی عالی عمل می‌کند و می‌تواند به‌طور مؤثر نیازهای پردازش محتوای طولانی پیچیده و مفصل را برآورده کند.",
         "modelTags": [
-            "文本生成",
-            "工具调用"
+            "تولید متن",
+            "فراخوانی ابزار"
         ],
         "contextWindow": 128,
         "maxGenerationTokenLength": 6,
         "relatedLinks": [
             {
-                "title": "腾讯混元大模型 产品概述（hunyuan-TurboS）",
+                "title": "نمای کلی محصول مدل بزرگ Tencent Hunyuan (hunyuan-TurboS)",
                 "url": "https://cloud.tencent.com/document/product/1729/104753"
             },
             {
-                "title": "混元 OpenAI 兼容接口示例（chat completions）",
+                "title": "نمونه رابط سازگار با OpenAI در Hunyuan (chat completions)",
                 "url": "https://cloud.tencent.com/document/product/1729/111007"
             }
         ],
@@ -102,14 +102,14 @@
     },
     {
         "modelName": "hunyuan-a13b",
-        "company": "腾讯",
-        "country": "中国",
-        "openSourceStatus": "开源",
+        "company": "Tencent",
+        "country": "چین",
+        "openSourceStatus": "متن‌باز",
         "releaseDate": "2025-06-25",
-        "description": "腾讯混元团队2025年6月发布并开源MoE模型，总参数80B（A13B）。拥有256K上下文窗口，强大的Agent 能力，用户可以在回答效率与深度间自由切换。",
+        "description": "تیم Tencent Hunyuan در ژوئن ۲۰۲۵ مدل MoE را منتشر و متن‌باز کرد، با کل پارامترهای 80B (A13B). پنجره context با طول 256K و توانایی قوی Agent دارد و کاربر می‌تواند آزادانه بین بهره‌وری و عمق پاسخ جابه‌جا شود.",
         "modelTags": [
-            "文本生成",
-            "工具调用"
+            "تولید متن",
+            "فراخوانی ابزار"
         ],
         "contextWindow": 224,
         "maxGenerationTokenLength": 32,
@@ -122,15 +122,15 @@
     },
     {
         "modelName": "hunyuan-a13b-thinking",
-        "company": "腾讯",
-        "country": "中国",
-        "openSourceStatus": "开源",
+        "company": "Tencent",
+        "country": "چین",
+        "openSourceStatus": "متن‌باز",
         "releaseDate": "2025-06-25",
-        "description": "腾讯混元团队2025年6月推出的混合推理模型，总参数量80B，激活数量13B，拥有快/慢思考模式，集成了深度研究智能体。",
+        "description": "مدل استدلال ترکیبی که تیم Tencent Hunyuan در ژوئن ۲۰۲۵ عرضه کرد، با کل پارامترهای 80B و پارامترهای فعال 13B، حالت‌های تفکر سریع/آهسته دارد و عامل هوشمند پژوهش عمیق را یکپارچه کرده است.",
         "modelTags": [
-            "文本生成",
-            "工具调用",
-            "深度思考"
+            "تولید متن",
+            "فراخوانی ابزار",
+            "تفکر عمیق"
         ],
         "contextWindow": 224,
         "maxGenerationTokenLength": 32,
@@ -143,51 +143,51 @@
     },
     {
         "modelName": "hunyuan-vision",
-        "company": "腾讯",
-        "country": "中国",
-        "openSourceStatus": "闭源",
+        "company": "Tencent",
+        "country": "چین",
+        "openSourceStatus": "متن‌بسته",
         "releaseDate": "2025-01-03",
-        "description": "混元 Vision 是腾讯多模态图生文模型，支持在对话中输入图片与文本并输出文本，涵盖图片理解、场景分析与多轮推理，结合搜索增强提升时效；适用于图文问答、业务质检与内容审核等。",
+        "description": "Hunyuan Vision مدل چندوجهی تصویر به متن Tencent است که از ورودی تصویر و متن در گفتگو و خروجی متن پشتیبانی می‌کند، فهم تصویر، تحلیل صحنه و استدلال چنددوره‌ای را پوشش می‌دهد و با تقویت جستجو به‌روز بودن را بهبود می‌دهد؛ مناسب برای پرسش و پاسخ تصویری، بازرسی کیفیت کسب‌وکار و بازبینی محتوا.",
         "modelTags": [
-            "视觉理解",
-            "文本生成",
-            "工具调用"
+            "درک تصویر",
+            "تولید متن",
+            "فراخوانی ابزار"
         ],
         "contextWindow": 6,
         "maxGenerationTokenLength": 16,
         "relatedLinks": [
             {
-                "title": "混元对话接口示例：hunyuan-vision 图生文",
+                "title": "نمونه رابط گفتگوی Hunyuan: تصویر به متن hunyuan-vision",
                 "url": "https://cloud.tencent.com/document/product/1729/105701"
             },
             {
-                "title": "混元生文计费概述（多模态图片 token 说明）",
+                "title": "نمای کلی قیمت‌گذاری تولید متن Hunyuan (توضیح token تصویر چندوجهی)",
                 "url": "https://cloud.tencent.com/document/product/1729/97731"
             }
         ]
     },
     {
         "modelName": "hunyuan-t1-vision",
-        "company": "腾讯",
-        "country": "中国",
-        "openSourceStatus": "闭源",
+        "company": "Tencent",
+        "country": "چین",
+        "openSourceStatus": "متن‌بسته",
         "releaseDate": "2025-09-16",
-        "description": "混元最新版 t1-vision 视觉深度思考模型，相比上一版模型在通用图文问答、视觉定位、OCR、图表、拍题解题、看图创作等任务上全面提升，显著优化了英文和小语种能力。",
+        "description": "جدیدترین نسخه t1-vision از Hunyuan، مدل تفکر عمیق بصری، که نسبت به نسخه قبلی در وظایفی مثل پرسش و پاسخ تصویری عمومی، مکان‌یابی بصری، OCR، نمودار، حل مسئله با عکس و خلق از روی تصویر به‌طور جامع بهبود یافته و توانایی انگلیسی و زبان‌های کم‌گویشور را به‌طور محسوسی بهینه کرده است.",
         "modelTags": [
-            "视觉理解",
-            "深度思考",
-            "文本生成",
-            "工具调用"
+            "درک تصویر",
+            "تفکر عمیق",
+            "تولید متن",
+            "فراخوانی ابزار"
         ],
         "contextWindow": 28,
         "maxGenerationTokenLength": 20,
         "relatedLinks": [
             {
-                "title": "混元对话接口示例：hunyuan-vision 图生文",
+                "title": "نمونه رابط گفتگوی Hunyuan: تصویر به متن hunyuan-vision",
                 "url": "https://cloud.tencent.com/document/product/1729/105701"
             },
             {
-                "title": "混元生文计费概述（多模态图片 token 说明）",
+                "title": "نمای کلی قیمت‌گذاری تولید متن Hunyuan (توضیح token تصویر چندوجهی)",
                 "url": "https://cloud.tencent.com/document/product/1729/97731"
             }
         ],
@@ -195,25 +195,25 @@
     },
     {
         "modelName": "hunyuan-turbos-vision",
-        "company": "腾讯",
-        "country": "中国",
-        "openSourceStatus": "闭源",
+        "company": "Tencent",
+        "country": "چین",
+        "openSourceStatus": "متن‌بسته",
         "releaseDate": "2025-06-26",
-        "description": "此模型适用于图文理解场景，是基于混元最新 turbos 的新一代视觉语言旗舰大模型，聚焦图文理解相关任务，包括基于图片的实体识别、知识问答、文案创作、拍照解题等方面，相比前一代模型全面提升。",
+        "description": "این مدل برای سناریوهای فهم تصویر و متن مناسب است؛ نسل جدید مدل بزرگ پرچم‌دار زبانی-بصری بر پایه جدیدترین turbos از Hunyuan است که بر وظایف مرتبط با فهم تصویر و متن تمرکز دارد، شامل تشخیص موجودیت بر اساس تصویر، پرسش و پاسخ دانشی، نوشتن متن تبلیغاتی و حل مسئله با عکس، و نسبت به نسل قبل به‌طور جامع بهبود یافته است.",
         "modelTags": [
-            "视觉理解",
-            "文本生成",
-            "工具调用"
+            "درک تصویر",
+            "تولید متن",
+            "فراخوانی ابزار"
         ],
         "contextWindow": 16,
         "maxGenerationTokenLength": 16,
         "relatedLinks": [
             {
-                "title": "混元对话接口示例：hunyuan-vision 图生文",
+                "title": "نمونه رابط گفتگوی Hunyuan: تصویر به متن hunyuan-vision",
                 "url": "https://cloud.tencent.com/document/product/1729/105701"
             },
             {
-                "title": "混元生文计费概述（多模态图片 token 说明）",
+                "title": "نمای کلی قیمت‌گذاری تولید متن Hunyuan (توضیح token تصویر چندوجهی)",
                 "url": "https://cloud.tencent.com/document/product/1729/97731"
             }
         ],
@@ -221,131 +221,131 @@
     },
     {
         "modelName": "hunyuan-code",
-        "company": "腾讯",
-        "country": "中国",
-        "openSourceStatus": "闭源",
+        "company": "Tencent",
+        "country": "چین",
+        "openSourceStatus": "متن‌بسته",
         "releaseDate": "2024-11-12",
-        "description": "混元 Code 为代码增强专项模型，基于混元 MoE 体系与高质量代码语料精调，擅长代码生成、补全与重构，支持多语言与跨项目上下文理解，结合工具调用可执行测试与检索，适用于企业研发提效、单测生成与遗留系统改造；上下文与最大输出官方未公开。",
+        "description": "Hunyuan Code مدل تخصصی تقویت‌شده کد است که بر پایه سیستم MoE در Hunyuan و تنظیم دقیق با پیکره کد باکیفیت ساخته شده، در تولید، تکمیل و بازسازی کد مهارت دارد، از چندزبانه و فهم context بین‌پروژه‌ای پشتیبانی می‌کند و با فراخوانی ابزار می‌تواند تست و بازیابی اجرا کند؛ مناسب برای افزایش بهره‌وری توسعه سازمانی، تولید تست واحد و نوسازی سیستم‌های قدیمی؛ context و حداکثر خروجی به‌طور رسمی اعلام نشده‌اند.",
         "modelTags": [
-            "代码增强",
-            "文本生成",
-            "工具调用"
+            "تقویت کد",
+            "تولید متن",
+            "فراخوانی ابزار"
         ],
         "contextWindow": 4,
         "maxGenerationTokenLength": 4,
         "relatedLinks": [
             {
-                "title": "混元生文计费概述",
+                "title": "نمای کلی قیمت‌گذاری تولید متن Hunyuan",
                 "url": "https://cloud.tencent.com/document/product/1729/97731"
             },
             {
-                "title": "腾讯混元大模型 产品概述",
+                "title": "نمای کلی محصول مدل بزرگ Tencent Hunyuan",
                 "url": "https://cloud.tencent.com/document/product/1729/104753"
             }
         ]
     },
     {
         "modelName": "hunyuan-standard",
-        "company": "腾讯",
-        "country": "中国",
-        "openSourceStatus": "闭源",
+        "company": "Tencent",
+        "country": "چین",
+        "openSourceStatus": "متن‌بسته",
         "releaseDate": "2025-02-10",
-        "description": "混元 Standard 采用混合专家（MoE）结构与更优路由策略，面向 32K 长文本场景优化，官方标称最大输入 30K、最大输出 2K；在中文理解、文本生成与基础工具调用上表现均衡，适用于通用问答、摘要与业务流程编排。",
+        "description": "Hunyuan Standard از ساختار ترکیب متخصصان (MoE) و راهبرد مسیریابی بهتر استفاده می‌کند و برای سناریوهای متن طولانی 32K بهینه شده؛ حداکثر ورودی رسمی 30K و حداکثر خروجی 2K؛ در فهم چینی، تولید متن و فراخوانی ابزار پایه متعادل عمل می‌کند و برای پرسش و پاسخ عمومی، خلاصه‌سازی و هماهنگ‌سازی فرایندهای کسب‌وکار مناسب است.",
         "modelTags": [
-            "文本生成",
-            "深度思考",
-            "工具调用"
+            "تولید متن",
+            "تفکر عمیق",
+            "فراخوانی ابزار"
         ],
         "contextWindow": 30,
         "maxGenerationTokenLength": 2,
         "relatedLinks": [
             {
-                "title": "腾讯混元大模型 产品概述",
+                "title": "نمای کلی محصول مدل بزرگ Tencent Hunyuan",
                 "url": "https://cloud.tencent.com/document/product/1729/104753"
             },
             {
-                "title": "混元生文计费概述（模型列表与价格）",
+                "title": "نمای کلی قیمت‌گذاری تولید متن Hunyuan (فهرست مدل‌ها و قیمت)",
                 "url": "https://cloud.tencent.com/document/product/1729/97731"
             }
         ]
     },
     {
         "modelName": "hunyuan-lite",
-        "company": "腾讯",
-        "country": "中国",
-        "openSourceStatus": "闭源",
+        "company": "Tencent",
+        "country": "چین",
+        "openSourceStatus": "متن‌بسته",
         "releaseDate": "2024-10-30",
-        "description": "混元 Lite 升级为 MoE 结构，官方上下文窗口 256K、最大输入 250K、最大输出 6K，在 NLP、代码与数学多项评测领先同类开源模型；适合大规模文档处理、长文摘要与代码审阅场景，兼顾性价比与时延。",
+        "description": "Hunyuan Lite به ساختار MoE ارتقا یافته، پنجره context رسمی 256K، حداکثر ورودی 250K و حداکثر خروجی 6K دارد و در چندین ارزیابی NLP، کد و ریاضی از مدل‌های متن‌باز هم‌رده جلوتر است؛ مناسب برای پردازش اسناد در مقیاس بزرگ، خلاصه متن طولانی و بازبینی کد، با تعادل صرفه اقتصادی و تأخیر.",
         "modelTags": [
-            "文本生成",
-            "代码增强"
+            "تولید متن",
+            "تقویت کد"
         ],
         "contextWindow": 250,
         "maxGenerationTokenLength": 6,
         "relatedLinks": [
             {
-                "title": "腾讯混元大模型 产品概述",
+                "title": "نمای کلی محصول مدل بزرگ Tencent Hunyuan",
                 "url": "https://cloud.tencent.com/document/product/1729/104753"
             },
             {
-                "title": "混元对话接口：ChatCompletions（hunyuan-lite 说明）",
+                "title": "رابط گفتگوی Hunyuan: ChatCompletions (توضیح hunyuan-lite)",
                 "url": "https://cloud.tencent.com/document/product/1729/105701"
             }
         ]
     },
     {
         "modelName": "HunyuanImage 3.0",
-        "company": "腾讯",
-        "country": "中国",
-        "openSourceStatus": "开源",
+        "company": "Tencent",
+        "country": "چین",
+        "openSourceStatus": "متن‌باز",
         "releaseDate": "2025-09-28",
-        "description": "混元图像 3.0 是腾讯开源的文生图模型，采用 MoE+Transfusion 统一自回归架构（总参 80B、推理激活 13B），具备世界知识推理、千字级长文本理解与精确文字渲染，生成效果接近商业级，适用于海报设计、科普可视化与创意内容生产。",
+        "description": "Hunyuan Image 3.0 مدل متن‌باز تولید تصویر از متن Tencent است که از معماری خودبازگشتی یکپارچه MoE+Transfusion (کل پارامترها 80B، فعال در استنتاج 13B) استفاده می‌کند، توانایی استدلال دانش جهانی، فهم متن طولانی در حد هزار کلمه و رندر دقیق متن دارد و نتیجه تولید آن به سطح تجاری نزدیک است؛ مناسب برای طراحی پوستر، تجسم علمی-آموزشی و تولید محتوای خلاقانه.",
         "modelTags": [
-            "图片生成"
+            "تولید تصویر"
         ],
         "maxOutputResolution": "1024 × 1024",
         "relatedLinks": [
             {
-                "title": "HunyuanImage 3.0 官方站点",
+                "title": "وب‌سایت رسمی HunyuanImage 3.0",
                 "url": "https://hunyuan.tencent.com/image"
             },
             {
-                "title": "HunyuanImage 3.0 GitHub 开源仓库",
+                "title": "مخزن متن‌باز GitHub مدل HunyuanImage 3.0",
                 "url": "https://github.com/Tencent-Hunyuan/HunyuanImage-3.0"
             },
             {
-                "title": "HunyuanImage 3.0 模型卡（Hugging Face）",
+                "title": "کارت مدل HunyuanImage 3.0 (Hugging Face)",
                 "url": "https://huggingface.co/tencent/HunyuanImage-3.0"
             },
             {
-                "title": "HunyuanImage 3.0 技术报告（arXiv）",
+                "title": "گزارش فنی HunyuanImage 3.0 (arXiv)",
                 "url": "https://arxiv.org/abs/2509.23951"
             }
         ]
     },
     {
         "modelName": "HunyuanVideo 1.5",
-        "company": "腾讯",
-        "country": "中国",
-        "openSourceStatus": "开源",
+        "company": "Tencent",
+        "country": "چین",
+        "openSourceStatus": "متن‌باز",
         "releaseDate": "2025-11-21",
-        "description": "HunyuanVideo 1.5 由腾讯混元团队开源，采用 8.3B DiT 与 3D 因果 VAE、SSTA 稀疏注意力和渐进训练，统一支持文生/图生视频；原生 480P/720P，配超分至 1080P，强调语义对齐、运动连贯与指令遵循，适用于短片创作、广告与社媒内容。",
+        "description": "HunyuanVideo 1.5 توسط تیم Tencent Hunyuan متن‌باز شده و از DiT با 8.3B و 3D VAE علّی، توجه پراکنده SSTA و آموزش تدریجی استفاده می‌کند و تولید ویدئو از متن/تصویر را یکپارچه پشتیبانی می‌کند؛ وضوح بومی 480P/720P با فوق‌وضوح تا 1080P، با تأکید بر هم‌ترازی معنایی، پیوستگی حرکت و پیروی از دستور؛ مناسب برای خلق فیلم کوتاه، تبلیغات و محتوای شبکه‌های اجتماعی.",
         "modelTags": [
-            "视频生成"
+            "تولید ویدئو"
         ],
         "outputImageMaxResolution": "1080P",
         "maxGenerationVideoDuration": "10",
         "relatedLinks": [
             {
-                "title": "HunyuanVideo 1.5 官方 GitHub 仓库",
+                "title": "مخزن رسمی GitHub مدل HunyuanVideo 1.5",
                 "url": "https://github.com/Tencent-Hunyuan/HunyuanVideo-1.5"
             },
             {
-                "title": "HunyuanVideo 1.5 技术报告（PDF）",
+                "title": "گزارش فنی HunyuanVideo 1.5 (PDF)",
                 "url": "https://github.com/Tencent-Hunyuan/HunyuanVideo-1.5/blob/main/assets/HunyuanVideo_1_5.pdf"
             },
             {
-                "title": "混元文生视频（在线体验）",
+                "title": "تولید ویدئو از متن Hunyuan (تجربه آنلاین)",
                 "url": "https://hunyuan.tencent.com/video/zh?tabIndex=0"
             }
         ]

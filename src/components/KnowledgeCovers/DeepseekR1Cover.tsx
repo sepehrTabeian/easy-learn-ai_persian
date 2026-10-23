@@ -1,19 +1,19 @@
 /**
- * DeepSeek R1 封面
+ * جلد DeepSeek R1
  *
- * 隐喻：一个 prompt 进入模型 →
- *   模型内部冒出 `<think>` 思考气泡（多步推理框）→
- *   中间一道 "Wait." 反思闪电 → 最后给出答案。
- *   右上 R1 stamp + 左下 GRPO 公式碎片。
+ * استعاره: یک prompt وارد مدل می‌شود ←
+ *   درون مدل بیرون می‌آید `<think>` حباب فکر (کادر استدلال چندمرحله‌ای) ←
+ *   در وسط یک "Wait." صاعقه بازاندیشی ← در نهایت پاسخ داده می‌شود.
+ *   stamp R1 در بالا-راست + تکه فرمول GRPO در پایین-چپ.
  *
- * 视觉构图（viewBox 320×200）：
- *   - 左：user prompt 卡（"x² = ?"）
- *   - 中：3 个相连的思考气泡（rect rounded），中间那个被 coral 闪电劈一下
- *   - 右：answer 卡 "= 5"，带 ✓ stamp
- *   - 右上 stamp "R1"（butter）
- *   - 左下 mono 碎片：A=(r−μ)/σ
+ * ترکیب‌بندی بصری (viewBox 320×200):
+ *   - چپ: کارت user prompt ("x² = ?"）
+ *   - وسط: ۳ حباب فکر به هم پیوسته (rect rounded)، وسطی را صاعقه coral می‌زند
+ *   - راست: کارت answer "= 5"، با stamp ✓
+ *   - stamp بالا-راست "R1"（butter）
+ *   - تکه mono پایین-چپ: A=(r−μ)/σ
  *
- * hover：闪电 wiggle；思考气泡上下浮；reward stamp 微旋转。
+ * hover: صاعقه wiggle می‌کند؛ حباب‌های فکر بالا و پایین شناورند؛ reward stamp کمی می‌چرخد.
  */
 import React from "react";
 import CoverShell from "./CoverShell";
@@ -21,7 +21,7 @@ import CoverShell from "./CoverShell";
 const DeepseekR1Cover: React.FC = () => {
   return (
     <CoverShell bgClassName="bg-butter" dotOpacity={0.08}>
-      {/* 右上 stamp · R1 */}
+      {/* stamp بالا-راست · R1 */}
       <g
         transform="translate(286,30) rotate(8)"
         className="origin-center transition-transform duration-500 group-hover:rotate-[-3deg] group-hover:scale-110"
@@ -49,7 +49,7 @@ const DeepseekR1Cover: React.FC = () => {
         </text>
       </g>
 
-      {/* 左下：GRPO advantage 公式碎片 */}
+      {/* پایین-چپ: تکه فرمول advantage در GRPO */}
       <g transform="translate(30,178) rotate(-3)" className="origin-left">
         <rect
           x="-3"
@@ -75,7 +75,7 @@ const DeepseekR1Cover: React.FC = () => {
         </text>
       </g>
 
-      {/* 装饰：上方装饰弧 —— 推理流 */}
+      {/* تزئین: کمان تزئینی بالا —— جریان استدلال */}
       <path
         d="M 38 60 Q 160 36 282 60"
         stroke="#E07A5F"
@@ -86,7 +86,7 @@ const DeepseekR1Cover: React.FC = () => {
         opacity="0.45"
       />
 
-      {/* === 左侧：user prompt 卡 === */}
+      {/* === چپ: کارت user prompt === */}
       <g
         transform="translate(40,100)"
         className="origin-center transition-transform duration-500 group-hover:-translate-x-1"
@@ -125,13 +125,13 @@ const DeepseekR1Cover: React.FC = () => {
         </text>
       </g>
 
-      {/* 箭头 prompt → think */}
+      {/* فلش prompt ← think */}
       <g stroke="#241C15" strokeWidth="1.6" fill="none">
         <line x1="64" y1="100" x2="86" y2="100" strokeLinecap="round" />
         <polygon points="84,96 90,100 84,104" fill="#241C15" />
       </g>
 
-      {/* === 中央：3 个思考气泡 === */}
+      {/* === مرکز: ۳ حباب فکر === */}
       <g className="transition-transform duration-500 ease-out">
         {/* think 1 */}
         <g transform="translate(110,86)" className="animate-float-y-sm">
@@ -145,7 +145,7 @@ const DeepseekR1Cover: React.FC = () => {
             stroke="#241C15"
             strokeWidth="1.8"
           />
-          {/* 占位横线 */}
+          {/* خط افقی جای‌نگهدار */}
           <line x1="-12" y1="-6" x2="12" y2="-6" stroke="#241C15" strokeWidth="1.2" opacity="0.6" />
           <line x1="-12" y1="-1" x2="8" y2="-1" stroke="#241C15" strokeWidth="1.2" opacity="0.5" />
           <line x1="-12" y1="4" x2="10" y2="4" stroke="#241C15" strokeWidth="1.2" opacity="0.4" />
@@ -161,7 +161,7 @@ const DeepseekR1Cover: React.FC = () => {
           </text>
         </g>
 
-        {/* think 2 · 被闪电劈中 */}
+        {/* think 2 · صاعقه به آن خورده */}
         <g transform="translate(160,114)">
           <rect
             x="-20"
@@ -198,7 +198,7 @@ const DeepseekR1Cover: React.FC = () => {
           </text>
         </g>
 
-        {/* 闪电（aha moment）从右上劈下来 */}
+        {/* صاعقه (aha moment) از بالا-راست فرود می‌آید */}
         <g
           transform="translate(174,82)"
           className="origin-center animate-wiggle"
@@ -239,20 +239,20 @@ const DeepseekR1Cover: React.FC = () => {
           </text>
         </g>
 
-        {/* 三气泡之间的虚线 */}
+        {/* خط نقطه‌چین بین سه حباب */}
         <g stroke="#241C15" strokeWidth="1" strokeDasharray="2 2.5" fill="none" opacity="0.55">
           <path d="M 128 88 Q 142 100 142 112" />
           <path d="M 178 112 Q 194 100 192 88" />
         </g>
       </g>
 
-      {/* 箭头 think → answer */}
+      {/* فلش think ← answer */}
       <g stroke="#241C15" strokeWidth="1.6" fill="none">
         <line x1="232" y1="100" x2="254" y2="100" strokeLinecap="round" />
         <polygon points="252,96 258,100 252,104" fill="#241C15" />
       </g>
 
-      {/* === 右侧：answer 卡 === */}
+      {/* === راست: کارت answer === */}
       <g
         transform="translate(280,100)"
         className="origin-center transition-transform duration-500 group-hover:translate-x-1"
@@ -292,7 +292,7 @@ const DeepseekR1Cover: React.FC = () => {
         </text>
       </g>
 
-      {/* 右上小 ✓ stamp，挂在 answer 卡角上 */}
+      {/* stamp کوچک ✓ بالا-راست، آویزان از گوشه کارت answer */}
       <g transform="translate(298,80)" className="origin-center transition-transform duration-500 group-hover:scale-125">
         <circle cx="0" cy="0" r="7" fill="#FF4D74" stroke="#241C15" strokeWidth="1.5" />
         <path
@@ -305,7 +305,7 @@ const DeepseekR1Cover: React.FC = () => {
         />
       </g>
 
-      {/* 底部 caption */}
+      {/* caption پایین */}
       <text
         x="160"
         y="192"

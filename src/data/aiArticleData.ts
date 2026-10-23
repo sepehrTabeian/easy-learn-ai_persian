@@ -1,13 +1,13 @@
 /**
- * AI 文章 · 编辑专栏数据
+ * مقالات AI · داده ستون سردبیری
  *
- * 所有文章都是用 beautiful-article skill 生成的单文件 HTML，
- * 放在 `public/article/` 目录下：
- *   - 单文件型：public/article/<id>.html         → htmlUrl: "/article/<id>.html"
- *   - 多资源型：public/article/<id>/index.html   → htmlUrl: "/article/<id>/index.html"
+ * همه مقالات HTML تک‌فایلی هستند که با skill به نام beautiful-article تولید شده‌اند،
+ * در `public/article/` پوشه قرار دارند:
+ *   - نوع تک‌فایلی: public/article/<id>.html         → htmlUrl: "/article/<id>.html"
+ *   - نوع چندمنبعی: public/article/<id>/index.html   → htmlUrl: "/article/<id>/index.html"
  *
- * 列表页按 publishDate 倒序展示，按年份自动分组。
- * 新增 category 直接写新值即可，UI 会按"出现顺序"自动收集成 chip。
+ * صفحه فهرست به ترتیب نزولی publishDate نمایش می‌دهد و خودکار بر اساس سال گروه‌بندی می‌کند.
+ * برای category جدید کافی است مقدار جدید بنویسید، UI بر اساس"ترتیب ظهور"خودکار آن‌ها را به chip جمع می‌کند.
  */
 
 import { AIArticleItem } from "../types";
@@ -15,9 +15,9 @@ import { AIArticleItem } from "../types";
 export const aiArticleData: AIArticleItem[] = [
   {
     id: "agent-framework",
-    title: "Agent Framework 的设计与思考",
-    lead: "问题不在于某个系统算不算 Agent，而在于框架是否让你掌控每一步进入 LLM 的上下文。",
-    category: "长文",
+    title: "طراحی و تفکر Agent Framework",
+    lead: "مسئله این نیست که یک سیستم Agent حساب می‌شود یا نه، بلکه این است که آیا فریم‌ورک به شما اجازه می‌دهد بر context هر گامی که وارد LLM می‌شود کنترل داشته باشید.",
+    category: "مقاله بلند",
     publishDate: "2025-04-20",
     readingMinutes: 23,
     theme: "Freddie",
@@ -26,9 +26,9 @@ export const aiArticleData: AIArticleItem[] = [
   },
   {
     id: "codex-sandbox",
-    title: "Codex Sandbox 的设计与实践",
-    lead: "Agent 要像开发者一样在本机读文件、跑测试、改代码，但它不能因此获得无限制的本地权限。",
-    category: "长文",
+    title: "طراحی و پیاده‌سازی Codex Sandbox",
+    lead: "Agent باید مثل یک توسعه‌دهنده روی ماشین محلی فایل بخواند، تست اجرا کند و کد تغییر دهد، اما نباید به همین دلیل دسترسی نامحدود محلی بگیرد.",
+    category: "مقاله بلند",
     publishDate: "2026-05-13",
     readingMinutes: 23,
     theme: "Press",
@@ -37,9 +37,9 @@ export const aiArticleData: AIArticleItem[] = [
   },
   {
     id: "long-task-harness",
-    title: "面向长任务场景的 Harness 设计",
-    lead: "当模型会写代码以后，外部编排决定它能不能把复杂应用做完、做对、做得有品味。",
-    category: "长文",
+    title: "طراحی Harness برای سناریوهای کار طولانی",
+    lead: "وقتی مدل کدنویسی بلد باشد، هماهنگ‌سازی بیرونی تعیین می‌کند که آیا می‌تواند یک برنامه پیچیده را کامل، درست و با سلیقه بسازد.",
+    category: "مقاله بلند",
     publishDate: "2026-03-24",
     readingMinutes: 19,
     theme: "Press",
@@ -48,9 +48,9 @@ export const aiArticleData: AIArticleItem[] = [
   },
   {
     id: "code-agent",
-    title: "设计对 Agent 友好的代码仓库",
-    lead: "OpenAI 团队用 Codex 构建了一个没有人工手写代码的内部产品。",
-    category: "长文",
+    title: "طراحی مخزن کد سازگار با Agent",
+    lead: "تیم OpenAI با Codex یک محصول داخلی ساخت که هیچ کدی در آن دستی نوشته نشده است.",
+    category: "مقاله بلند",
     publishDate: "2026-02-11",
     readingMinutes: 20,
     theme: "Press",
@@ -59,9 +59,9 @@ export const aiArticleData: AIArticleItem[] = [
   },
   {
     id: "research",
-    title: "用多 Agent 进行深度研究",
-    lead: "Claude Research 背后的架构、提示词、评估与工程教训。",
-    category: "报告",
+    title: "استفاده از چند Agent برای پژوهش عمیق",
+    lead: "معماری، پرامپت‌ها، ارزیابی و درس‌های مهندسی پشت Claude Research.",
+    category: "گزارش",
     publishDate: "2025-06-31",
     readingMinutes: 18,
     theme: "Tufte",
@@ -70,9 +70,9 @@ export const aiArticleData: AIArticleItem[] = [
   },
   {
     id: "tools",
-    title: "Agent Tools 设计的最佳实践",
-    lead: "Anthropic 工程团队关于 Tools 的五条原则，与一套评测驱动的方法。",
-    category: "长文",
+    title: "بهترین شیوه‌های طراحی Agent Tools",
+    lead: "پنج اصل تیم مهندسی Anthropic درباره Tools، همراه با یک روش مبتنی بر ارزیابی.",
+    category: "مقاله بلند",
     publishDate: "2025-09-11",
     readingMinutes: 21,
     theme: "Freddie",
@@ -81,9 +81,9 @@ export const aiArticleData: AIArticleItem[] = [
   },
   {
     id: "skill",
-    title: "Agent Skill 是如何进化的？",
-    lead: "把 Skill 文档当成被训练的对象，而不是被复制粘贴的 prompt。",
-    category: "解释文",
+    title: "Agent Skill چگونه تکامل می‌یابد؟",
+    lead: "سند Skill را به‌عنوان چیزی که آموزش می‌بیند در نظر بگیرید، نه prompt که کپی و پیست می‌شود.",
+    category: "مقاله توضیحی",
     publishDate: "2026-05-28",
     readingMinutes: 8,
     theme: "Freddie",
@@ -92,9 +92,9 @@ export const aiArticleData: AIArticleItem[] = [
   },
   {
     id: "harness",
-    title: "Agent Harness 的解剖图",
-    lead: "智能在模型里；让智能变得有用的，是它周围的那套系统。",
-    category: "长文",
+    title: "کالبدشکافی Agent Harness",
+    lead: "هوش درون مدل است؛ آن‌چه هوش را مفید می‌کند، سیستمی است که دور آن قرار دارد.",
+    category: "مقاله بلند",
     publishDate: "2026-03-10",
     readingMinutes: 12,
     theme: "Vignelli",
@@ -103,9 +103,9 @@ export const aiArticleData: AIArticleItem[] = [
   },
   {
     id: "prompt-cache",
-    title: "提示词缓存对 Agent 有多重要？",
-    lead: "缓存命中率是 Agent 的 SLO，Claude Code 团队的反直觉经验。",
-    category: "长文",
+    title: "کش پرامپت برای Agent چقدر مهم است؟",
+    lead: "نرخ برخورد کش SLO یک Agent است؛ تجربه‌های خلاف شهود تیم Claude Code.",
+    category: "مقاله بلند",
     publishDate: "2026-04-30",
     readingMinutes: 15,
     theme: "Bayer",
@@ -114,9 +114,9 @@ export const aiArticleData: AIArticleItem[] = [
   },
   {
     id: "context",
-    title: "面向 Agent 的高效上下文工程",
-    lead: "本文探讨如何高效地筛选与管理驱动 AI Agent 运转的上下文。",
-    category: "长文",
+    title: "مهندسی context کارآمد برای Agentها",
+    lead: "این مقاله بررسی می‌کند چگونه context که AI Agent را به کار می‌اندازد کارآمد انتخاب و مدیریت کنیم.",
+    category: "مقاله بلند",
     publishDate: "2025-09-29",
     readingMinutes: 16,
     theme: "Tufte",
@@ -126,30 +126,30 @@ export const aiArticleData: AIArticleItem[] = [
   {
     id: "transformer",
     title: "Attention Is All You Need",
-    lead: "一篇重塑现代 AI 的论文，逐层拆给你看。",
-    category: "长文",
+    lead: "مقاله‌ای که AI مدرن را از نو شکل داد، لایه‌به‌لایه برایتان تشریح می‌شود.",
+    category: "مقاله بلند",
     publishDate: "2017-06-12",
     readingMinutes: 30,
     theme: "Tufte",
-    tags: ["Transformer", "Attention", "AI", "论文"],
+    tags: ["Transformer", "Attention", "AI", "مقاله"],
     htmlUrl: "/article/tansformer.html",
   },
   {
     id: "agent-eval",
-    title: "把 AI Agent 的评测讲清楚",
-    lead: "让 Agent 有用的那些能力，恰恰让它难以评测 — 这是一份来自 Anthropic 的指南。",
-    category: "长文",
+    title: "ارزیابی AI Agentها به زبان روشن",
+    lead: "همان توانایی‌هایی که Agent را مفید می‌کنند، ارزیابی آن را دشوار می‌کنند — راهنمایی از Anthropic.",
+    category: "مقاله بلند",
     publishDate: "2026-01-09",
     readingMinutes: 25,
     theme: "Tufte",
-    tags: ["Agent", "评测", "Anthropic", "Claude"],
+    tags: ["Agent", "ارزیابی", "Anthropic", "Claude"],
     htmlUrl: "/article/agent-eval.html",
   },
   {
     id: "agent-loop-codex",
-    title: "Codex 的 Agent Loop 是怎么做的？",
-    lead: "Open AI 官方分享：在 Responses API 之上，一条对话是如何被反复 “展开” 的。",
-    category: "长文",
+    title: "Agent Loop در Codex چگونه کار می‌کند؟",
+    lead: "اشتراک رسمی Open AI: روی Responses API، یک گفتگو چگونه بارها و بارها «باز» می‌شود.",
+    category: "مقاله بلند",
     publishDate: "2026-01-23",
     readingMinutes: 18,
     theme: "Sottsass",
@@ -158,26 +158,26 @@ export const aiArticleData: AIArticleItem[] = [
   },
 ];
 
-/** 列表页过滤 chip：按数据出现顺序收集 + "全部" 哨兵在最前 */
+/** chip فیلتر صفحه فهرست: به ترتیب ظهور داده جمع می‌شود + "همه" نگهبان در ابتدا */
 export const articleCategories = (() => {
   const seen: string[] = [];
   for (const item of aiArticleData) {
     if (!seen.includes(item.category)) seen.push(item.category);
   }
-  return ["全部", ...seen];
+  return ["همه", ...seen];
 })();
 
-/** 类型 → 角标配色（与全站 stamp 调色板一致；未命中走 cream/ink 兜底） */
+/** نوع ← رنگ برچسب گوشه (هم‌سو با پالت stamp کل سایت؛ در صورت عدم تطابق از cream/ink استفاده می‌شود) */
 export const articleCategoryColor: Record<string, string> = {
-  解释: "#F4D35E",   // butter
-  复盘: "#E07A5F",     // coral
-  长文: "#1B4B5A",     // teal
-  教程: "#FBE891",     // butter-soft
-  评论: "#241C15",     // ink
-  访谈: "#FBEFE3",     // cream
-  报告: "#FF4D74",   // pop
+  "توضیح": "#F4D35E",   // butter
+  "مرور": "#E07A5F",     // coral
+  "مقاله بلند": "#1B4B5A",     // teal
+  "آموزش": "#FBE891",     // butter-soft
+  "نقد": "#241C15",     // ink
+  "مصاحبه": "#FBEFE3",     // cream
+  "گزارش": "#FF4D74",   // pop
 };
 
-/** 按 id 查文章（详情页 404 兜底用） */
+/** یافتن مقاله با id (برای پشتیبان 404 صفحه جزئیات) */
 export const findArticleById = (id: string): AIArticleItem | undefined =>
   aiArticleData.find((a) => a.id === id);

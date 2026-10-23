@@ -23,18 +23,18 @@ type PromptTab = "learning" | "translation" | "original";
 
 const tabs: Record<PromptTab, { label: string; hint: string; icon: React.ReactNode }> = {
   learning: {
-    label: "学习分析",
-    hint: "先看结构和设计思路",
+    label: "تحلیل آموزشی",
+    hint: "اول ساختار و ایده طراحی را ببینید",
     icon: <GraduationCap className="w-4 h-4" strokeWidth={2.5} />,
   },
   translation: {
-    label: "中文翻译",
-    hint: "完整中文对照",
+    label: "ترجمه",
+    hint: "ترجمه کامل",
     icon: <Languages className="w-4 h-4" strokeWidth={2.5} />,
   },
   original: {
-    label: "原文",
-    hint: "保留原始 Prompt",
+    label: "متن اصلی",
+    hint: "Prompt اصلی حفظ شده",
     icon: <FileText className="w-4 h-4" strokeWidth={2.5} />,
   },
 };
@@ -109,14 +109,14 @@ const AIPromptDetail: React.FC = () => {
         <div className="bg-white border-2 border-ink rounded-3xl shadow-stamp-lg p-8 text-center max-w-md">
           <AlertCircle className="w-10 h-10 text-coral mx-auto mb-4" />
           <h1 className="font-display font-extrabold text-[28px] text-ink">
-            没找到这份提示词
+            این پرامپت پیدا نشد
           </h1>
           <button
             onClick={() => navigate("/ai-prompts")}
             className="mt-6 inline-flex items-center gap-2 px-5 py-3 bg-butter border-2 border-ink rounded-full font-sans font-extrabold text-[14px] shadow-stamp"
           >
             <ArrowLeft className="w-4 h-4" />
-            回到提示词目录
+            بازگشت به فهرست پرامپت‌ها
           </button>
         </div>
       </div>
@@ -139,7 +139,7 @@ const AIPromptDetail: React.FC = () => {
             className="inline-flex items-center gap-2 font-sans font-bold text-[14px] text-white/70 hover:text-white transition-colors"
           >
             <ArrowLeft className="w-4 h-4" strokeWidth={2.5} />
-            回到提示词目录
+            بازگشت به فهرست پرامپت‌ها
           </Link>
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 mt-8 items-end">
             <div className="lg:col-span-8">
@@ -157,9 +157,9 @@ const AIPromptDetail: React.FC = () => {
               </p>
             </div>
             <div className="lg:col-span-4 grid grid-cols-2 gap-3">
-              <InfoCard label="难度" value={item.difficulty} />
-              <InfoCard label="类型" value={item.promptType} />
-              <InfoCard label="版本" value={item.versionLabel} wide />
+              <InfoCard label="سختی" value={item.difficulty} />
+              <InfoCard label="نوع" value={item.promptType} />
+              <InfoCard label="نسخه" value={item.versionLabel} wide />
             </div>
           </div>
         </div>
@@ -174,7 +174,7 @@ const AIPromptDetail: React.FC = () => {
                 <button
                   key={tab}
                   onClick={() => setActiveTab(tab)}
-                  className={`flex items-center gap-3 px-4 py-3 border-2 border-ink rounded-2xl text-left transition-all duration-250 ease-spring ${
+                  className={`flex items-center gap-3 px-4 py-3 border-2 border-ink rounded-2xl text-start transition-all duration-250 ease-spring ${
                     active
                       ? "bg-butter shadow-stamp"
                       : "bg-white hover:bg-butter/60"
@@ -220,7 +220,7 @@ const AIPromptDetail: React.FC = () => {
                 ) : (
                   <Copy className="w-4 h-4" strokeWidth={2.5} />
                 )}
-                {copied ? "已复制" : "复制当前内容"}
+                {copied ? "کپی شد" : "کپی محتوای فعلی"}
               </button>
             </div>
             <div className="p-5 md:p-8 lg:p-10">
@@ -229,7 +229,7 @@ const AIPromptDetail: React.FC = () => {
           </main>
 
           <aside className="lg:sticky lg:top-24 space-y-5">
-            <SideBlock title="学习模块">
+            <SideBlock title="ماژول‌های آموزشی">
               <div className="flex flex-wrap gap-2">
                 {item.learningModules.map((module) => (
                   <span
@@ -241,11 +241,11 @@ const AIPromptDetail: React.FC = () => {
                 ))}
               </div>
             </SideBlock>
-            <SideBlock title="亮点">
+            <SideBlock title="نکات برجسته">
               <ul className="space-y-3">
                 {item.highlights.map((text, index) => (
                   <li key={text} className="font-sans text-[13.5px] text-ink-secondary leading-[1.65]">
-                    <span className="font-serif italic text-coral mr-2">
+                    <span className="font-serif italic text-coral me-2">
                       {index + 1}.
                     </span>
                     {text}
@@ -253,7 +253,7 @@ const AIPromptDetail: React.FC = () => {
                 ))}
               </ul>
             </SideBlock>
-            <SideBlock title="别直接照抄">
+            <SideBlock title="مستقیم کپی نکنید">
               <ul className="space-y-2">
                 {item.cautions.map((text) => (
                   <li key={text} className="font-sans text-[13.5px] text-ink-secondary leading-[1.65]">
@@ -263,7 +263,7 @@ const AIPromptDetail: React.FC = () => {
               </ul>
             </SideBlock>
             {related.length > 0 && (
-              <SideBlock title="继续读">
+              <SideBlock title="ادامه مطالعه">
                 <div className="space-y-2.5">
                   {related.map((prompt) => (
                     <Link
@@ -330,7 +330,7 @@ const Reader: React.FC<{
       <div className="min-h-[420px] flex items-center justify-center">
         <div className="text-center">
           <Loader2 className="w-10 h-10 text-coral animate-spin mx-auto mb-4" />
-          <p className="font-sans font-semibold text-ink/65">正在打开资料...</p>
+          <p className="font-sans font-semibold text-ink/65">در حال باز کردن منابع...</p>
         </div>
       </div>
     );
@@ -339,18 +339,18 @@ const Reader: React.FC<{
   if (state === "missing") {
     return (
       <Notice
-        title="这部分还在整理"
+        title="این بخش هنوز در حال آماده‌سازی است"
         body={
           activeTab === "translation"
-            ? "中文翻译文件还没有生成。你可以先切到原文阅读。"
-            : "学习分析文件还没有生成。后续补齐后这里会自动展示。"
+            ? "فایل ترجمه هنوز تولید نشده است. می‌توانید اول به متن اصلی بروید و آن را بخوانید."
+            : "فایل تحلیل آموزشی هنوز تولید نشده است. پس از تکمیل این‌جا خودکار نمایش داده می‌شود."
         }
       />
     );
   }
 
   if (state === "error") {
-    return <Notice title="资料加载失败" body="请检查索引路径或稍后再试。" />;
+    return <Notice title="بارگذاری منابع ناموفق بود" body="لطفاً مسیر نمایه را بررسی کنید یا بعداً دوباره امتحان کنید." />;
   }
 
   return (
@@ -404,17 +404,17 @@ const mdComponents = {
     </p>
   ),
   ul: ({ children }: MdProps) => (
-    <ul className="font-sans text-[15.5px] md:text-[16.5px] text-ink leading-[1.85] mb-5 space-y-2 list-none pl-0">
+    <ul className="font-sans text-[15.5px] md:text-[16.5px] text-ink leading-[1.85] mb-5 space-y-2 list-none ps-0">
       {children}
     </ul>
   ),
   ol: ({ children }: MdProps) => (
-    <ol className="font-sans text-[15.5px] md:text-[16.5px] text-ink leading-[1.85] mb-5 space-y-2 list-decimal pl-6">
+    <ol className="font-sans text-[15.5px] md:text-[16.5px] text-ink leading-[1.85] mb-5 space-y-2 list-decimal ps-6">
       {children}
     </ol>
   ),
   li: ({ children }: MdProps) => (
-    <li className="pl-1 marker:text-coral">{children}</li>
+    <li className="ps-1 marker:text-coral">{children}</li>
   ),
   a: ({ children, href }: MdProps & { href?: string }) => (
     <a
@@ -446,7 +446,7 @@ const mdComponents = {
     </pre>
   ),
   blockquote: ({ children }: MdProps) => (
-    <blockquote className="my-6 pl-5 pr-5 py-4 bg-butter/25 border-l-[4px] border-coral rounded-r-2xl font-sans text-[15px] text-ink-secondary leading-[1.75]">
+    <blockquote className="my-6 ps-5 pe-5 py-4 bg-butter/25 border-s-[4px] border-coral rounded-e-2xl font-sans text-[15px] text-ink-secondary leading-[1.75]">
       {children}
     </blockquote>
   ),

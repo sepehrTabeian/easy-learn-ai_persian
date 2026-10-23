@@ -1,16 +1,16 @@
 /**
- * Agent 封面
+ * جلد Agent
  *
- * 隐喻：Agent = 一个会思考、会动手、会观察的小脑 + 循环 + 工具触手。
+ * استعاره: Agent = مغز کوچکی که فکر می‌کند، دست به کار می‌شود و مشاهده می‌کند + چرخه + شاخک‌های ابزار.
  *
- * 视觉构图（viewBox 320×200）：
- *   - 中央：coral 圆角矩形小角色（写「AGT」），有眼睛和小天线
- *   - 周围：虚线椭圆轨道（dashed circle）表示 Think→Act→Observe 循环
- *   - 轨道上挂 3 个工具节点（齿轮 / 闪电 / 数据库）
- *   - 三个动作标签 THINK / ACT / OBSERVE 排在三角
- *   - 装饰：左上 sparkle、右下小圆点
+ * ترکیب‌بندی بصری (viewBox 320×200):
+ *   - مرکز: شخصیت کوچک مستطیل گوشه‌گرد coral (نوشته «AGT»)، با چشم و آنتن کوچک
+ *   - اطراف: مدار بیضی نقطه‌چین (dashed circle) نشان‌دهنده چرخه Think→Act→Observe
+ *   - ۳ گره ابزار روی مدار (چرخ‌دنده / صاعقه / پایگاه داده)
+ *   - سه برچسب عمل THINK / ACT / OBSERVE در سه گوشه
+ *   - تزئین: sparkle بالا-چپ، نقطه کوچک پایین-راست
  *
- * hover 行为：循环轨道顺时针轻微转动；中央角色轻轻点头；工具节点做错峰浮动。
+ * رفتار hover: مدار چرخه کمی ساعت‌گرد می‌چرخد؛ شخصیت مرکزی آرام سر تکان می‌دهد؛ گره‌های ابزار با فاصله زمانی شناور می‌شوند.
  */
 import React from "react";
 import CoverShell from "./CoverShell";
@@ -18,7 +18,7 @@ import CoverShell from "./CoverShell";
 const AgentCover: React.FC = () => {
   return (
     <CoverShell bgClassName="bg-cream" dotOpacity={0.08}>
-      {/* 装饰：左上 sparkle */}
+      {/* تزئین: sparkle بالا-چپ */}
       <g transform="translate(36,32)">
         <g className="origin-center rotate-[20deg] transition-transform duration-700 group-hover:rotate-[110deg]">
           <path
@@ -30,12 +30,12 @@ const AgentCover: React.FC = () => {
         </g>
       </g>
 
-      {/* 装饰：右下 ring */}
+      {/* تزئین: ring پایین-راست */}
       <g transform="translate(290,170)">
         <circle cx="0" cy="0" r="6" fill="#1B4B5A" stroke="#241C15" strokeWidth="1.5" />
       </g>
 
-      {/* 外圈虚线循环轨道（椭圆）—— 静态，不再整体旋转，避免虚线重栅格化卡顿 */}
+      {/* مدار چرخه نقطه‌چین بیرونی (بیضی) —— ایستا، دیگر کل آن نمی‌چرخد تا از لگ rasterize مجدد نقطه‌چین جلوگیری شود */}
       <g transform="translate(160,100)">
         <g>
           <ellipse
@@ -49,7 +49,7 @@ const AgentCover: React.FC = () => {
             strokeDasharray="5 6"
             opacity="0.55"
           />
-          {/* 轨道上 3 个箭头点（循环方向暗示） */}
+          {/* ۳ نقطه فلش روی مدار (اشاره به جهت چرخه) */}
           {[0, 120, 240].map((deg) => {
             const rad = (deg * Math.PI) / 180;
             const x = Math.cos(rad) * 115;
@@ -63,41 +63,41 @@ const AgentCover: React.FC = () => {
         </g>
       </g>
 
-      {/* 三个工具节点（在虚线圆上的方位） */}
-      {/* 工具 1：齿轮（左上） */}
-      <ToolNode x={62} y={62} label="工具" color="#F4D35E" hoverClassName="group-hover:-translate-y-1">
+      {/* سه گره ابزار (موقعیت روی دایره نقطه‌چین) */}
+      {/* ابزار ۱: چرخ‌دنده (بالا-چپ) */}
+      <ToolNode x={62} y={62} label="ابزار" color="#F4D35E" hoverClassName="group-hover:-translate-y-1">
         <Gear />
       </ToolNode>
-      {/* 工具 2：闪电（右上） */}
-      <ToolNode x={258} y={62} label="行动" color="#1B4B5A" hoverClassName="group-hover:translate-y-1">
+      {/* ابزار ۲: صاعقه (بالا-راست) */}
+      <ToolNode x={258} y={62} label="اقدام" color="#1B4B5A" hoverClassName="group-hover:translate-y-1">
         <Bolt />
       </ToolNode>
-      {/* 工具 3：眼睛（正下） */}
-      <ToolNode x={160} y={180} label="观察" color="#FBEFE3" hoverClassName="group-hover:-translate-y-1">
+      {/* ابزار ۳: چشم (پایین وسط) */}
+      <ToolNode x={160} y={180} label="مشاهده" color="#FBEFE3" hoverClassName="group-hover:-translate-y-1">
         <Eye />
       </ToolNode>
 
-      {/* 中央：Agent 小角色 */}
+      {/* مرکز: شخصیت کوچک Agent */}
       <g transform="translate(160,100)">
         <g
           className="origin-center transition-transform duration-400 ease-spring group-hover:-rotate-3 group-hover:scale-[1.03]"
           style={{ transformBox: "fill-box" }}
         >
-          {/* 阴影底 */}
+          {/* زیرسایه */}
           <rect x="-30" y="-26" width="60" height="52" rx="12" fill="#241C15" transform="translate(3,3)" opacity="0.85" />
-          {/* 主体 */}
+          {/* بدنه اصلی */}
           <rect x="-30" y="-26" width="60" height="52" rx="12" fill="#E07A5F" stroke="#241C15" strokeWidth="2.5" />
-          {/* 天线 */}
+          {/* آنتن */}
           <line x1="0" y1="-26" x2="0" y2="-36" stroke="#241C15" strokeWidth="2.5" strokeLinecap="round" />
           <circle cx="0" cy="-38" r="3.5" fill="#F4D35E" stroke="#241C15" strokeWidth="2" />
-          {/* 眼睛 */}
+          {/* چشم‌ها */}
           <circle cx="-9" cy="-8" r="3.2" fill="#FBEFE3" stroke="#241C15" strokeWidth="1.5" />
           <circle cx="-9" cy="-8" r="1.4" fill="#241C15" />
           <circle cx="9" cy="-8" r="3.2" fill="#FBEFE3" stroke="#241C15" strokeWidth="1.5" />
           <circle cx="9" cy="-8" r="1.4" fill="#241C15" />
-          {/* 嘴 */}
+          {/* دهان */}
           <path d="M -6 6 Q 0 11 6 6" fill="none" stroke="#241C15" strokeWidth="2" strokeLinecap="round" />
-          {/* 底标 AGT */}
+          {/* برچسب پایینی AGT */}
           <text
             x="0"
             y="22"
@@ -116,7 +116,7 @@ const AgentCover: React.FC = () => {
   );
 };
 
-/* ----- 工具节点 ----- */
+/* ----- گره‌های ابزار ----- */
 
 const ToolNode: React.FC<{
   x: number;
@@ -145,7 +145,7 @@ const ToolNode: React.FC<{
           x="0"
           y="3"
           textAnchor="middle"
-          fontFamily="Plus Jakarta Sans, Noto Sans SC, sans-serif"
+          fontFamily="Plus Jakarta Sans, Vazirmatn, sans-serif"
           fontSize="9"
           fontWeight="700"
           fill="#FBEFE3"
@@ -157,11 +157,11 @@ const ToolNode: React.FC<{
   </g>
 );
 
-/* ----- 工具图标 ----- */
+/* ----- آیکون‌های ابزار ----- */
 
 const Gear: React.FC = () => (
   <g>
-    {/* 8 颗齿 */}
+    {/* ۸ دندانه */}
     {Array.from({ length: 8 }).map((_, i) => {
       const deg = i * 45;
       const rad = (deg * Math.PI) / 180;

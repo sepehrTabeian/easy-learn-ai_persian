@@ -1,12 +1,12 @@
 /**
- * PrecisionFormats 封面（大模型精度格式）
+ * جلد PrecisionFormats (فرمت‌های دقت مدل بزرگ)
  *
- * 隐喻：同一个数 π，用不同位数的格子存出来 —— 格子越少，存得越「凑整」。
+ * استعاره: یک عدد π با خانه‌هایی با تعداد بیت مختلف ذخیره می‌شود —— هرچه خانه کمتر، ذخیره «گردتر» است.
  *
- * 视觉构图（viewBox 320×200）：
- *   - 四行「位格子条」FP32 / BF16 / FP16 / FP8，长度递减
- *   - 每条用三段色：符号(ink) / 指数(coral) / 尾数(butter-deep)
- *   - 右侧：π 的存储近似值随格式变糙
+ * ترکیب‌بندی بصری (viewBox 320×200):
+ *   - چهار ردیف «نوار خانه‌های بیت» FP32 / BF16 / FP16 / FP8، با طول کاهشی
+ *   - هر نوار سه بخش رنگی دارد: علامت (ink) / توان (coral) / مانتیس (butter-deep)
+ *   - راست: تقریب ذخیره‌شده π با تغییر فرمت زمخت‌تر می‌شود
  */
 import React from "react";
 import CoverShell from "./CoverShell";
@@ -20,7 +20,7 @@ const BARS: Bar[] = [
   { name: "FP8", sign: 1, exp: 4, mant: 3 },
 ];
 
-const CELL = 5.2; // 每个位的像素宽
+const CELL = 5.2; // عرض پیکسلی هر بیت
 const GAP = 1.2;
 
 const PrecisionFormatsCover: React.FC = () => {
@@ -35,7 +35,7 @@ const PrecisionFormatsCover: React.FC = () => {
         ];
         return (
           <g key={b.name} transform={`translate(28,${y})`}>
-            {/* 格式名 */}
+            {/* نام فرمت */}
             <text
               x="0"
               y="9"
@@ -46,7 +46,7 @@ const PrecisionFormatsCover: React.FC = () => {
             >
               {b.name}
             </text>
-            {/* 位格子 */}
+            {/* خانه بیت */}
             <g
               transform="translate(38,0)"
               className="origin-left transition-transform duration-500 group-hover:translate-x-1"
@@ -69,19 +69,19 @@ const PrecisionFormatsCover: React.FC = () => {
         );
       })}
 
-      {/* 右上：图例点 */}
+      {/* بالا-راست: نقطه‌های راهنما */}
       <g transform="translate(228,24)" fontFamily="Geist Mono, monospace" fontSize="7.5" fill="#241C15">
         <rect x="0" y="-6" width="7" height="7" rx="1.5" fill="#241C15" />
-        <text x="11" y="0">符号</text>
+        <text x="11" y="0">علامت</text>
         <rect x="40" y="-6" width="7" height="7" rx="1.5" fill="#E07A5F" />
-        <text x="51" y="0">指数</text>
+        <text x="51" y="0">توان</text>
       </g>
       <g transform="translate(228,38)" fontFamily="Geist Mono, monospace" fontSize="7.5" fill="#241C15">
         <rect x="0" y="-6" width="7" height="7" rx="1.5" fill="#E5BD3A" />
-        <text x="11" y="0">尾数</text>
+        <text x="11" y="0">مانتیس</text>
       </g>
 
-      {/* 底部：π 凑整 stamp */}
+      {/* پایین: stamp گرد کردن π */}
       <g transform="translate(255,176) rotate(-6)" className="origin-center transition-transform duration-500 group-hover:rotate-2">
         <rect x="-50" y="-12" width="100" height="24" rx="5" fill="#241C15" stroke="#241C15" strokeWidth="1.8" />
         <text

@@ -1,13 +1,13 @@
 /**
  * IllustrationImage
  *
- * 真实插画图片占位组件 —— 用于替换 IllustrationSlot 的占位卡。
- * 滚到可视区才触发入场动画（避免页面打开瞬间所有插画一起播）。
+ * کامپوننت جای‌نگهدار تصویر واقعی —— برای جایگزینی کارت جای‌نگهدار IllustrationSlot.
+ * انیمیشن ورود فقط با رسیدن به ناحیه قابل‌مشاهده اجرا می‌شود (تا همه تصاویر هم‌زمان با باز شدن صفحه پخش نشوند).
  *
  * Usage:
  *   <IllustrationImage
  *     src="/imgs/site/Illustration-AIK-01.png"
- *     alt="拿放大镜的角色在书架前找概念"
+ *     alt="شخصیتی با ذره‌بین که جلوی قفسه کتاب دنبال مفاهیم می‌گردد"
  *     animation="up"
  *   />
  */
@@ -20,15 +20,15 @@ type AnimationKind = "up" | "pop" | "fade" | "down" | "spin";
 interface IllustrationImageProps {
   src: string;
   alt: string;
-  /** 默认 "up"（向上浮起） */
+  /** پیش‌فرض "up"(شناور به بالا) */
   animation?: AnimationKind;
-  /** 动画延迟（ms） */
+  /** تأخیر انیمیشن (ms) */
   delay?: number;
-  /** 触发阈值 0~1，默认 0.25 */
+  /** آستانه اجرا ۰ تا ۱، پیش‌فرض ۰٫۲۵ */
   threshold?: number;
-  /** 额外 className（用于尺寸/aspect 等容器约束） */
+  /** className اضافی (برای محدودیت‌های اندازه/aspect کانتینر) */
   className?: string;
-  /** img 标签的额外 className */
+  /** className اضافی برای تگ img */
   imgClassName?: string;
 }
 

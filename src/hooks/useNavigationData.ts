@@ -15,7 +15,7 @@ export const useNavigationData = () => {
         const navigationData = await navigationApiUtils.fetchNavigationData();
         setData(navigationData);
       } catch (err) {
-        setError(err instanceof Error ? err.message : '加载失败');
+        setError(err instanceof Error ? err.message : 'بارگذاری ناموفق بود');
       } finally {
         setLoading(false);
       }
@@ -85,7 +85,7 @@ export const usePagination = <T>(items: T[], itemsPerPage: number = 30) => {
     goToPage(currentPage - 1);
   };
 
-  // 重置页码（当items改变时）
+  // بازنشانی شماره صفحه (وقتی items تغییر کند)
   useEffect(() => {
     setCurrentPage(1);
   }, [items]);

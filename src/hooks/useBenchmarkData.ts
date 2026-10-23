@@ -1,6 +1,6 @@
 /**
- * AI 基准测试数据管理 Hook
- * 负责数据加载、筛选、排序和搜索
+ * Hook مدیریت داده بنچمارک AI
+ * مسئول بارگذاری، فیلتر، مرتب‌سازی و جستجوی داده
  */
 
 import { useState, useEffect, useMemo, useCallback } from "react";
@@ -32,7 +32,7 @@ export const useBenchmarkData = () => {
         setBenchmarks(data);
         setError(null);
       } catch (err) {
-        setError(err instanceof Error ? err.message : "加载失败");
+        setError(err instanceof Error ? err.message : "بارگذاری ناموفق بود");
       } finally {
         setLoading(false);
       }

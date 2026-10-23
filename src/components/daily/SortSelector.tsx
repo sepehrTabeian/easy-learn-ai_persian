@@ -1,6 +1,6 @@
 /**
- * 日报排序选择器 · Mailchimp-Freddie stamp 风
- * 与 benchmark/model 模块同语系：capsule 按钮 + ink 描线 + stamp 阴影。
+ * انتخابگر مرتب‌سازی گزارش روزانه · سبک stamp در Mailchimp-Freddie
+ * هم‌زبان با ماژول‌های benchmark/model: دکمه capsule + خط ink + سایه stamp.
  */
 
 import React from "react";
@@ -14,8 +14,8 @@ interface SortSelectorProps {
 }
 
 const options: { value: DailySortOption; label: string }[] = [
-  { value: "date-desc", label: "最新优先" },
-  { value: "date-asc", label: "最早优先" },
+  { value: "date-desc", label: "جدیدترین اول" },
+  { value: "date-asc", label: "قدیمی‌ترین اول" },
 ];
 
 export const SortSelector: React.FC<SortSelectorProps> = ({
@@ -23,12 +23,12 @@ export const SortSelector: React.FC<SortSelectorProps> = ({
   onChange,
 }) => {
   return (
-    <div className="flex items-center gap-2 pl-4 pr-3 py-2.5 bg-white border-2 border-ink rounded-full shadow-stamp transition-all duration-250 ease-spring hover:-translate-x-[2px] hover:-translate-y-[2px] hover:[box-shadow:6px_6px_0_0_#241C15]">
+    <div className="flex items-center gap-2 ps-4 pe-3 py-2.5 bg-white border-2 border-ink rounded-full shadow-stamp transition-all duration-250 ease-spring hover:-translate-x-[2px] hover:-translate-y-[2px] hover:[box-shadow:6px_6px_0_0_#241C15]">
       <ArrowUpDown className="w-4 h-4 text-ink/65" strokeWidth={2.5} />
       <select
         value={value}
         onChange={(e) => onChange(e.target.value as DailySortOption)}
-        className="appearance-none bg-transparent border-none outline-none font-sans font-semibold text-[13px] text-ink cursor-pointer pr-1"
+        className="appearance-none bg-transparent border-none outline-none font-sans font-semibold text-[13px] text-ink cursor-pointer pe-1"
       >
         {options.map((option) => (
           <option key={option.value} value={option.value}>

@@ -4,44 +4,44 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        // 主色系：奶油黄 (品牌 hero 色) + 暖白 + 暖近黑
+        // سیستم رنگ اصلی: زرد کرمی (رنگ hero برند) + سفید گرم + تقریباً مشکی گرم
         butter: {
-          DEFAULT: "#F4D35E", // 主奶油黄
-          deep: "#E5BD3A", // 略深，用于 hover
-          soft: "#FBE891", // 略浅，用于次表面
-          tint: "#FEF6D3", // 极浅，几乎是 cream，用于区块过渡
+          DEFAULT: "#F4D35E", // زرد کرمی اصلی
+          deep: "#E5BD3A", // کمی تیره‌تر، برای hover
+          soft: "#FBE891", // کمی روشن‌تر، برای سطح ثانویه
+          tint: "#FEF6D3", // بسیار روشن، تقریباً cream، برای انتقال بین بخش‌ها
         },
-        cream: "#FBEFE3", // 暖奶油 surface
+        cream: "#FBEFE3", // surface کرمی گرم
         ink: {
-          DEFAULT: "#241C15", // 暖近黑 (永远不用纯黑)
+          DEFAULT: "#241C15", // تقریباً مشکی گرم (هرگز مشکی خالص استفاده نشود)
           secondary: "#5A5147",
           tertiary: "#88837C",
         },
-        // 装饰强调色 (Memphis pop palette, 极少量使用)
-        coral: "#E07A5F", // 珊瑚红 — 主装饰
-        teal: "#1B4B5A", // 深 teal — 偶尔对比
-        pop: "#FF4D74", // 玫粉 — 警示/强调
+        // رنگ‌های تأکیدی تزئینی (Memphis pop palette، با مقدار بسیار کم)
+        coral: "#E07A5F", // قرمز مرجانی — تزئین اصلی
+        teal: "#1B4B5A", // teal تیره — گاهی برای تضاد
+        pop: "#FF4D74", // صورتی — هشدار/تأکید
       },
       fontFamily: {
-        // 正文：西文 Plus Jakarta + 中文 Noto Sans SC
+        // متن بدنه: لاتین Plus Jakarta + فارسی Vazirmatn
         sans: [
           '"Plus Jakarta Sans"',
-          '"Noto Sans SC"',
+          '"Vazirmatn"',
           "-apple-system",
           "BlinkMacSystemFont",
-          '"PingFang SC"',
+          '"Tahoma"',
           "system-ui",
           "sans-serif",
         ],
-        // Display 标题：中文优先 Smiley Sans (unicode-range 限定 CJK)，西文 Plus Jakarta
-        // 浏览器会自动按字符 unicode 选字体：中文 → Smiley Sans，英文/数字 → Plus Jakarta
+        // عنوان Display: برای حروف چینی Smiley Sans (محدود به CJK با unicode-range)، لاتین Plus Jakarta، فارسی Vazirmatn
+        // مرورگر خودکار بر اساس unicode کاراکتر فونت را انتخاب می‌کند: چینی ← Smiley Sans، انگلیسی/اعداد ← Plus Jakarta، فارسی ← Vazirmatn
         display: [
           '"Smiley Sans"',
           '"Plus Jakarta Sans"',
-          '"Noto Sans SC"',
+          '"Vazirmatn"',
           "-apple-system",
           "BlinkMacSystemFont",
-          '"PingFang SC"',
+          '"Tahoma"',
           "system-ui",
           "sans-serif",
         ],
@@ -55,8 +55,8 @@ module.exports = {
         ],
       },
       fontSize: {
-        // 中文标题: line-height 不能太小 (中文字符可视高度近 1em)
-        // letter-spacing 收紧但不夸张 (中文负 spacing 会挤字)
+        // عنوان‌ها: line-height نباید خیلی کم باشد (ارتفاع دیداری حروف فارسی و چینی نزدیک 1em است)
+        // letter-spacing فشرده اما نه اغراق‌آمیز (فاصله منفی حروف را به هم می‌چسباند و اتصال حروف فارسی را خراب می‌کند)
         "display-2xl": [
           "clamp(3.25rem, 8vw, 7.25rem)",
           {
@@ -100,17 +100,17 @@ module.exports = {
         "5xl": "2.5rem",
       },
       boxShadow: {
-        // Mailchimp 签名 "stamp" 阴影 —— offset，无 blur，黑色
+        // امضای Mailchimp "stamp" سایه —— offset، بدون blur، مشکی
         stamp: "4px 4px 0 0 #241C15",
         "stamp-lg": "6px 6px 0 0 #241C15",
         "stamp-xl": "8px 8px 0 0 #241C15",
         "stamp-hover": "10px 10px 0 0 #241C15",
-        // 软阴影 (悬浮态、温暖)
+        // سایه نرم (حالت شناور، گرم)
         soft: "0 4px 12px rgba(36, 28, 21, 0.08)",
         "soft-lg": "0 12px 32px rgba(36, 28, 21, 0.12)",
       },
       transitionTimingFunction: {
-        // 弹簧曲线，hover 微弹起感
+        // منحنی فنری، حس پرش کوچک در hover
         spring: "cubic-bezier(0.34, 1.56, 0.64, 1)",
         editorial: "cubic-bezier(0.22, 1, 0.36, 1)",
       },
@@ -130,14 +130,14 @@ module.exports = {
         "pulse-bulb": "pulseBulb 2.6s ease-in-out infinite",
         twinkle: "twinkle 2.2s ease-in-out infinite",
         breath: "breath 4.5s ease-in-out infinite",
-        // 入场动画
+        // انیمیشن‌های ورود
         "enter-pop": "enterPop 0.7s cubic-bezier(0.34, 1.56, 0.64, 1) both",
         "enter-up": "enterUp 0.85s cubic-bezier(0.22, 1, 0.36, 1) both",
         "enter-down": "enterDown 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) both",
         "enter-spin":
           "enterSpin 1s cubic-bezier(0.34, 1.56, 0.64, 1) both",
         "enter-fade": "enterFade 1.2s ease-out both",
-        // Manifesto 成长剧场 (8s 循环)
+        // تئاتر رشد Manifesto (چرخه ۸ ثانیه‌ای)
         "m-seed": "mSeed 8s ease-in-out infinite",
         "m-sprout": "mSprout 8s ease-in-out infinite",
         "m-young": "mYoung 8s ease-in-out infinite",
@@ -145,7 +145,7 @@ module.exports = {
         "m-can": "mCan 8s ease-in-out infinite",
         "m-drops": "mDrops 8s linear infinite",
         "m-spark": "mSpark 8s ease-out infinite",
-        // CTA 庆祝场景
+        // صحنه جشن CTA
         wave: "wave 6s ease-in-out infinite",
         "star-pulse": "starPulse 5s ease-in-out infinite",
         "dot-pulse": "dotPulse 2.5s ease-in-out infinite",
@@ -201,7 +201,7 @@ module.exports = {
           "0%, 100%": { transform: "translateY(0)" },
           "50%": { transform: "translateY(-6px)" },
         },
-        // ─── 入场 keyframes ───
+        // ─── keyframes ورود ───
         enterPop: {
           "0%": { opacity: "0", transform: "scale(0.3)" },
           "60%": { opacity: "1", transform: "scale(1.12)" },
@@ -239,7 +239,7 @@ module.exports = {
           "0%": { opacity: "0" },
           "100%": { opacity: "1" },
         },
-        // ─── Manifesto 成长剧场 keyframes (12s 周期) ───
+        // ─── keyframes تئاتر رشد Manifesto (دوره ۱۲ ثانیه‌ای) ───
         mSeed: {
           "0%": { opacity: "1", transform: "scale(1)" },
           "26%, 30%": {
@@ -316,8 +316,8 @@ module.exports = {
           "85%": { opacity: "0.55", transform: "scale(1)" },
           "92%, 100%": { opacity: "0", transform: "scale(0.5)" },
         },
-        // ─── CTA 庆祝场景 keyframes ───
-        // 主角偶尔挥手 (90% 静止，10% 抖动几下)
+        // ─── keyframes صحنه جشن CTA ───
+        // شخصیت اصلی گاهی دست تکان می‌دهد (۹۰٪ ثابت، ۱۰٪ چند لرزش)
         wave: {
           "0%, 70%, 100%": { transform: "rotate(0deg)" },
           "74%": { transform: "rotate(-5deg)" },
@@ -326,14 +326,14 @@ module.exports = {
           "86%": { transform: "rotate(3deg)" },
           "92%": { transform: "rotate(0deg)" },
         },
-        // 大星星呼吸 + 摇摆旋转
+        // ستاره بزرگ نفس می‌کشد + تاب و چرخش
         starPulse: {
           "0%, 100%": { transform: "rotate(-6deg) scale(1)" },
           "25%": { transform: "rotate(4deg) scale(1.06)" },
           "50%": { transform: "rotate(8deg) scale(1)" },
           "75%": { transform: "rotate(-2deg) scale(1.04)" },
         },
-        // 绿色圆点 scale + opacity pulse
+        // نقطه سبز scale + opacity pulse
         dotPulse: {
           "0%, 100%": { opacity: "0.7", transform: "scale(0.88)" },
           "50%": { opacity: "1", transform: "scale(1.18)" },

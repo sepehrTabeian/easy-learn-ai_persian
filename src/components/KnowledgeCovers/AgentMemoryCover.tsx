@@ -1,24 +1,24 @@
 /**
- * Agent Memory 封面
+ * جلد Agent Memory
  *
- * 隐喻：长期记忆 = 一个三层档案柜（情景 / 语义 / 程序）；
- *      context window 是临时的"工作台"，要用就从抽屉里取一张卡片往上送。
+ * استعاره: حافظه بلندمدت = یک کمد بایگانی سه‌طبقه (اپیزودیک / معنایی / رویه‌ای)؛
+ *      context window موقتی است"میز کار"؛ هر وقت لازم باشد یک کارت از کشو بیرون آورده و بالا فرستاده می‌شود.
  *
- * 视觉构图（viewBox 320×200）：
- *   - 顶部小条：context window（临时 · 虚线边）
- *   - 中央：三层档案柜 抽屉 (butter / coral / teal)
- *   - 抽屉之间有"取出"箭头 上行
- *   - 装饰：左上 sparkle、右下 ∞ 标
+ * ترکیب‌بندی بصری (viewBox 320×200):
+ *   - نوار کوچک بالا: context window (موقت · حاشیه نقطه‌چین)
+ *   - مرکز: کشوهای کمد بایگانی سه‌طبقه (butter / coral / teal)
+ *   - بین کشوها"بیرون آوردن"فلش رو به بالا
+ *   - تزئین: sparkle بالا-چپ، نشان ∞ پایین-راست
  *
- * hover：三个抽屉错峰滑出一点；中间抽屉的卡片向上滑入 context；右下 ∞ 旋转。
+ * hover: سه کشو با فاصله زمانی کمی بیرون می‌آیند؛ کارت کشوی وسط به بالا وارد context می‌شود؛ ∞ پایین-راست می‌چرخد.
  */
 import React from "react";
 import CoverShell from "./CoverShell";
 
 const DRAWERS = [
-  { label: "情景", en: "EPISODIC", color: "#F4D35E", textOn: "#241C15" },
-  { label: "语义", en: "SEMANTIC", color: "#E07A5F", textOn: "#FBEFE3" },
-  { label: "程序", en: "PROCEDURAL", color: "#1B4B5A", textOn: "#FBEFE3" },
+  { label: "اپیزودیک", en: "EPISODIC", color: "#F4D35E", textOn: "#241C15" },
+  { label: "معنایی", en: "SEMANTIC", color: "#E07A5F", textOn: "#FBEFE3" },
+  { label: "رویه‌ای", en: "PROCEDURAL", color: "#1B4B5A", textOn: "#FBEFE3" },
 ];
 
 const CABINET_X = 130;
@@ -30,7 +30,7 @@ const DRAWER_GAP = 4;
 const AgentMemoryCover: React.FC = () => {
   return (
     <CoverShell bgClassName="bg-cream" dotOpacity={0.08}>
-      {/* 装饰：左上 sparkle */}
+      {/* تزئین: sparkle بالا-چپ */}
       <g transform="translate(34,30)">
         <g className="origin-center transition-transform duration-700 group-hover:rotate-[110deg]">
           <path
@@ -42,7 +42,7 @@ const AgentMemoryCover: React.FC = () => {
         </g>
       </g>
 
-      {/* 装饰：右下 ∞ */}
+      {/* تزئین: ∞ پایین-راست */}
       <g transform="translate(282,172)">
         <g className="origin-center transition-transform duration-[1400ms] ease-linear group-hover:rotate-[180deg]" style={{ transformBox: "fill-box" }}>
           <circle cx="0" cy="0" r="11" fill="#FBEFE3" stroke="#241C15" strokeWidth="1.8" />
@@ -60,7 +60,7 @@ const AgentMemoryCover: React.FC = () => {
         </g>
       </g>
 
-      {/* 装饰：左下小圆点阵 */}
+      {/* تزئین: ماتریس نقطه کوچک پایین-چپ */}
       <g transform="translate(28,150)">
         {Array.from({ length: 9 }).map((_, i) => {
           const col = i % 3;
@@ -78,11 +78,11 @@ const AgentMemoryCover: React.FC = () => {
         })}
       </g>
 
-      {/* ─── 顶部：CONTEXT WINDOW（临时工作台） ─── */}
+      {/* ─── بالا: CONTEXT WINDOW (میز کار موقت) ─── */}
       <g transform="translate(160,40)">
-        {/* 阴影 */}
+        {/* سایه */}
         <rect x="-65" y="-12" width="130" height="24" rx="6" fill="#241C15" opacity="0.85" transform="translate(2,2)" />
-        {/* 主体 · 虚线边表示"临时" */}
+        {/* بدنه اصلی · حاشیه نقطه‌چین نشان‌دهنده"موقت" */}
         <rect
           x="-65"
           y="-12"
@@ -105,7 +105,7 @@ const AgentMemoryCover: React.FC = () => {
         >
           CONTEXT WINDOW
         </text>
-        {/* 右侧小占用条 */}
+        {/* نوار کوچک اشغال در سمت راست */}
         <rect x="20" y="-4" width="40" height="8" rx="4" fill="#241C15" opacity="0.1" />
         <rect
           x="20"
@@ -118,7 +118,7 @@ const AgentMemoryCover: React.FC = () => {
         />
       </g>
 
-      {/* ─── 取出箭头：从中间抽屉上行到 context ─── */}
+      {/* ─── فلش بیرون آوردن: از کشوی وسط بالا به context ─── */}
       <g transform="translate(160,60)">
         <line
           x1="0"
@@ -140,9 +140,9 @@ const AgentMemoryCover: React.FC = () => {
         />
       </g>
 
-      {/* ─── 中央：三层档案柜 ─── */}
+      {/* ─── مرکز: کمد بایگانی سه‌طبقه ─── */}
       <g transform={`translate(${CABINET_X},${CABINET_Y})`}>
-        {/* 柜体外阴影 */}
+        {/* سایه بیرونی بدنه کمد */}
         <rect
           x="-3"
           y="-3"
@@ -153,7 +153,7 @@ const AgentMemoryCover: React.FC = () => {
           opacity="0.85"
           transform="translate(3,3)"
         />
-        {/* 柜体底 */}
+        {/* کف بدنه کمد */}
         <rect
           x="-3"
           y="-3"
@@ -165,7 +165,7 @@ const AgentMemoryCover: React.FC = () => {
           strokeWidth="2.5"
         />
 
-        {/* 三层抽屉 */}
+        {/* کشوهای سه‌طبقه */}
         {DRAWERS.map((d, i) => (
           <g
             key={d.en}
@@ -195,25 +195,25 @@ const AgentMemoryCover: React.FC = () => {
                 stroke="#241C15"
                 strokeWidth="2"
               />
-              {/* 抽屉拉手 */}
+              {/* دستگیره کشو */}
               <circle
                 cx={CABINET_W - 12}
                 cy={i * (DRAWER_H + DRAWER_GAP) + 4 + DRAWER_H / 2}
                 r="3"
                 fill="#241C15"
               />
-              {/* 抽屉标签 */}
+              {/* برچسب کشو */}
               <text
                 x="14"
                 y={i * (DRAWER_H + DRAWER_GAP) + 4 + DRAWER_H / 2 + 2.5}
-                fontFamily='"Plus Jakarta Sans", "Noto Sans SC", sans-serif'
+                fontFamily='"Plus Jakarta Sans", "Vazirmatn", sans-serif'
                 fontSize="13"
                 fontWeight="800"
                 fill={d.textOn}
               >
                 {d.label}
               </text>
-              {/* 英文小标 */}
+              {/* برچسب کوچک انگلیسی */}
               <text
                 x="44"
                 y={i * (DRAWER_H + DRAWER_GAP) + 4 + DRAWER_H / 2 + 2}
@@ -226,7 +226,7 @@ const AgentMemoryCover: React.FC = () => {
               >
                 {d.en}
               </text>
-              {/* 编号 */}
+              {/* شماره */}
               <text
                 x={CABINET_W - 26}
                 y={i * (DRAWER_H + DRAWER_GAP) + 4 + DRAWER_H / 2 + 2}
@@ -242,7 +242,7 @@ const AgentMemoryCover: React.FC = () => {
           </g>
         ))}
 
-        {/* 顶部小标签：MEMORY */}
+        {/* برچسب کوچک بالا: MEMORY */}
         <g transform="translate(0,-6)">
           <rect
             x="-2"
@@ -267,7 +267,7 @@ const AgentMemoryCover: React.FC = () => {
         </g>
       </g>
 
-      {/* 一张飞向 context 的小卡片（hover 时上移） */}
+      {/* کارت کوچکی که به سمت context پرواز می‌کند (در hover بالا می‌رود) */}
       <g
         transform="translate(160,80)"
         className="transition-all duration-600 ease-spring opacity-0 group-hover:opacity-100 group-hover:-translate-y-[26px]"

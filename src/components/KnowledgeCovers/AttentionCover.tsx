@@ -4,12 +4,12 @@ import CoverShell from "./CoverShell";
 const AttentionCover: React.FC = () => (
   <CoverShell bgClassName="bg-teal/15" dotOpacity={0.08}>
     <g className="origin-center transition-transform duration-500 ease-spring group-hover:scale-[1.03]" style={{ transformBox: "fill-box" }}>
-      {["小","猫","趴","在","窗","边"].map((token, index) => {
+      {["یک","گربه","خوابیده","کنار","پنجره","است"].map((token, index) => {
         const weight = [15, 90, 20, 25, 65, 80][index];
         return (
           <g key={token} transform={`translate(${35 + index * 43},118)`}>
             <rect width="34" height="34" rx="8" fill={weight > 60 ? "#F4D35E" : "#FFFFFF"} stroke="#241C15" strokeWidth="2" />
-            <text x="17" y="23" textAnchor="middle" fontFamily="Plus Jakarta Sans, Noto Sans SC, sans-serif" fontSize="14" fontWeight="800" fill="#241C15">{token}</text>
+            <text x="17" y="23" textAnchor="middle" fontFamily="Plus Jakarta Sans, Vazirmatn, sans-serif" fontSize="14" fontWeight="800" fill="#241C15">{token}</text>
             <rect x="4" y={-12 - weight / 3} width="26" height={weight / 3} rx="4" fill={weight > 60 ? "#E07A5F" : "#1B4B5A"} stroke="#241C15" strokeWidth="1.5" />
           </g>
         );

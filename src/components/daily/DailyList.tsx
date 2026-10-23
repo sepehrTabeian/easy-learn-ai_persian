@@ -1,18 +1,18 @@
 /**
- * 日报 archive 列表 · 报纸目录风
+ * فهرست archive گزارش روزانه · سبک فهرست روزنامه
  *
- * 隐喻：杂志 / 数字简报的"往期目录"
+ * استعاره: مجله / خبرنامه دیجیتال"فهرست شماره‌های گذشته"
  *
- * 渲染模式：
- *   - groups Map 传入 → 按月/年分组渲染，每组一个 mono volume head + 该组 issue 行
- *   - groups 未传 → 平铺渲染
+ * حالت رندر:
+ *   - groups Map داده شود ← رندر گروه‌بندی بر اساس ماه/سال، هر گروه یک volume head با mono + ردیف‌های issue آن گروه
+ *   - groups داده نشود ← رندر تخت
  *
- * 月分组标题用 "Vol.MM / YYYY 年 M 月  ······  N ISSUES" 报纸风
+ * عنوان گروه ماه با "Vol.MM / YYYY / M  ······  N ISSUES" سبک روزنامه
  *
- * issueNumberMap：父层传入 date → № 编号的映射
- *   (因为编号要基于"日报在全集中的序号"，而非分组内顺序，否则切排序会乱)
+ * issueNumberMap: لایه والد نگاشت date ← شماره № را می‌دهد
+ *   (چون شماره باید بر اساس"ترتیب گزارش در کل مجموعه"باشد، نه ترتیب درون گروه، وگرنه با تغییر مرتب‌سازی به هم می‌ریزد)
  *
- * 三态：loading / error / empty 都用 stamp 风容器
+ * سه حالت: loading / error / empty همه با کانتینر سبک stamp
  */
 
 import React from "react";
@@ -27,9 +27,9 @@ interface DailyListProps {
   error: string | null;
   hasActiveFilters?: boolean;
   onClearFilters?: () => void;
-  /** date → 全集中的 № 编号 */
+  /** date ← شماره № در کل مجموعه */
   issueNumberMap?: Map<string, number>;
-  /** 跳过头条（第一条），避免与 TodayHero 重复 */
+  /** رد شدن از تیتر اول (مورد اول)، برای جلوگیری از تکرار با TodayHero */
   skipDate?: string;
 }
 
@@ -54,10 +54,10 @@ export const DailyList: React.FC<DailyListProps> = ({
       <div className="border border-ink/15 rounded-2xl px-10 py-16 text-center max-w-md mx-auto">
         <div className="inline-flex items-center justify-center w-12 h-12 mb-5 border-[3px] border-ink/15 border-t-ink rounded-full animate-spin" />
         <h3 className="font-display font-extrabold text-[20px] text-ink mb-1.5">
-          正在装订今日档案
+          در حال صحافی بایگانی امروز
         </h3>
         <p className="font-sans text-[14px] text-ink-secondary">
-          正在拉取最新日报…
+          در حال دریافت آخرین گزارش‌های روزانه…
         </p>
       </div>
     );
@@ -71,7 +71,7 @@ export const DailyList: React.FC<DailyListProps> = ({
           § Error
         </div>
         <h3 className="font-display font-extrabold text-[20px] text-ink mb-1.5">
-          档案打不开了
+          بایگانی باز نمی‌شود
         </h3>
         <p className="font-sans text-[14px] text-ink-secondary mb-6">
           {error}
@@ -80,7 +80,7 @@ export const DailyList: React.FC<DailyListProps> = ({
           onClick={() => window.location.reload()}
           className="inline-flex items-center gap-2 px-5 py-2 bg-ink text-cream font-sans font-bold text-[13px] rounded-full border-2 border-ink shadow-stamp transition-all duration-250 ease-spring hover:-translate-x-[2px] hover:-translate-y-[2px] hover:[box-shadow:6px_6px_0_0_#241C15]"
         >
-          重新加载
+          بارگذاری مجدد
         </button>
       </div>
     );
@@ -95,26 +95,26 @@ export const DailyList: React.FC<DailyListProps> = ({
           § Empty
         </div>
         <h3 className="font-display font-extrabold text-[20px] text-ink mb-1.5">
-          {hasActiveFilters ? "没找到匹配的日报" : "暂无日报"}
+          {hasActiveFilters ? "گزارش روزانه مطابقی پیدا نشد" : "هنوز گزارش روزانه‌ای نیست"}
         </h3>
         <p className="font-sans text-[14px] text-ink-secondary mb-6">
           {hasActiveFilters
-            ? "试试别的关键词，或者清掉筛选条件再看看。"
-            : "新一期日报正在编辑中，敬请期待。"}
+            ? "کلیدواژه دیگری امتحان کنید یا فیلترها را پاک کرده و دوباره ببینید."
+            : "شماره جدید گزارش روزانه در حال ویرایش است، منتظر باشید."}
         </p>
         {hasActiveFilters && onClearFilters && (
           <button
             onClick={onClearFilters}
             className="font-sans text-[13px] font-semibold text-ink underline underline-offset-4 decoration-2 decoration-coral hover:text-coral transition-colors"
           >
-            清除筛选 →
+            پاک کردن فیلترها ←
           </button>
         )}
       </div>
     );
   }
 
-  /* 分组渲染 */
+  /* رندر گروه‌بندی‌شده */
   if (groups && groups.size > 0) {
     return (
       <div className="space-y-12 lg:space-y-14">
@@ -141,7 +141,7 @@ export const DailyList: React.FC<DailyListProps> = ({
     );
   }
 
-  /* 平铺渲染 */
+  /* رندر تخت */
   return (
     <div>
       {dailyList
@@ -159,16 +159,16 @@ export const DailyList: React.FC<DailyListProps> = ({
 };
 
 /* ──────────────────────────────────────────────
- * 分组标题 —— 报纸卷期风
- *   Vol.MM / YYYY 年 M 月  ··············  N ISSUES
+ * عنوان گروه —— سبک شماره و جلد روزنامه
+ *   Vol.MM / YYYY / M  ··············  N ISSUES
  * ────────────────────────────────────────────── */
 const VolumeHead: React.FC<{ label: string; count: number }> = ({
   label,
   count,
 }) => {
-  /* 从 "2026 年 5 月" / "2026 年" 中解出 vol 编号（仅用于装饰，无意义校验） */
-  const monthMatch = label.match(/(\d{4})\s*年\s*(\d{1,2})\s*月/);
-  const yearMatch = label.match(/^(\d{4})\s*年$/);
+  /* از "2026 / 5" / "سال 2026" شماره vol استخراج می‌شود (فقط برای تزئین، بدون اعتبارسنجی معنادار) */
+  const monthMatch = label.match(/(\d{4})\s*\/\s*(\d{1,2})/);
+  const yearMatch = label.match(/^سال\s*(\d{4})$/);
   const volTag = monthMatch
     ? `Vol.${String(monthMatch[2]).padStart(2, "0")}`
     : yearMatch

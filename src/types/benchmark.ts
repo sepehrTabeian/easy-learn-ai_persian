@@ -1,5 +1,5 @@
 /**
- * AI 基准测试相关类型定义
+ * تعریف نوع‌های مرتبط با بنچمارک AI
  */
 
 export interface Benchmark {

@@ -1,22 +1,22 @@
 /**
- * MoE 封面
+ * جلد MoE
  *
- * 隐喻：一个 token 进来 → router 决定路由 → N 个 expert 方块（2 个被点亮，其余暗）→ 输出
+ * استعاره: یک token وارد می‌شود ← router مسیر را تعیین می‌کند ← N مربع expert (۲ تا روشن، بقیه خاموش) ← خروجی
  *
- * 视觉构图（viewBox 320×200）：
- *   - 左：tok 圆，coral 描边，标签 "tok"
- *   - 中：router 长方块（butter），上下写 "router"
- *   - 右：4×4 expert 网格 16 块；2 块亮（coral），14 块暗
- *   - 连线：router → 2 个 active expert 用实线 + 流动 dash；其它用极淡虚线
- *   - 右上："top-2" 印章
- *   - 左下：DeepSeek 公式碎片装饰
+ * ترکیب‌بندی بصری (viewBox 320×200):
+ *   - چپ: دایره tok با حاشیه coral و برچسب "tok"
+ *   - وسط: مستطیل router (butter)، بالا و پایین نوشته "router"
+ *   - راست: شبکه 4×4 از ۱۶ expert؛ ۲ تا روشن (coral)، ۱۴ تا خاموش
+ *   - خطوط اتصال: router ← ۲ expert فعال با خط پیوسته + dash روان؛ بقیه با نقطه‌چین بسیار کم‌رنگ
+ *   - بالا-راست:"top-2" مهر
+ *   - پایین-چپ: تزئین تکه فرمول DeepSeek
  *
- * hover 行为：active expert 微缩放 + 颜色加深，连接线流动 dash 加速，token 微晃。
+ * رفتار hover: expert فعال کمی بزرگ می‌شود + رنگ تیره‌تر، dash روان خطوط اتصال سریع‌تر می‌شود، token کمی می‌لرزد.
  */
 import React from "react";
 import CoverShell from "./CoverShell";
 
-/* 16 个 expert 的网格坐标（4×4） · 第 2 行第 1 个、第 3 行第 3 个 是 active */
+/* مختصات شبکه ۱۶ expert (4×4) · اولی در ردیف ۲ و سومی در ردیف ۳ active هستند */
 const EXPERT_CELLS = (() => {
   const cells: { x: number; y: number; active: boolean }[] = [];
   const X0 = 192;
@@ -36,7 +36,7 @@ const ACTIVE_CELLS = EXPERT_CELLS.filter((c) => c.active);
 const MoeCover: React.FC = () => {
   return (
     <CoverShell bgClassName="bg-cream" dotOpacity={0.08}>
-      {/* 左上装饰：activation 比例 stamp */}
+      {/* تزئین بالا-چپ: stamp نسبت activation */}
       <g
         transform="translate(38,30) rotate(-6)"
         className="origin-center transition-transform duration-500 group-hover:rotate-3"
@@ -60,11 +60,11 @@ const MoeCover: React.FC = () => {
           fontWeight="800"
           fill="#FBEFE3"
         >
-          5.5% 激活
+          5.5% فعال
         </text>
       </g>
 
-      {/* 右上：top-2 印章 */}
+      {/* بالا-راست: مهر top-2 */}
       <g
         transform="translate(290,32) rotate(8)"
         className="origin-center transition-transform duration-500 group-hover:rotate-[-4deg] group-hover:scale-110"
@@ -93,7 +93,7 @@ const MoeCover: React.FC = () => {
         </text>
       </g>
 
-      {/* 左下：公式碎片装饰 */}
+      {/* پایین-چپ: تزئین تکه فرمول */}
       <g transform="translate(28,178) rotate(-3)" className="origin-left">
         <rect
           x="-3"
@@ -119,7 +119,7 @@ const MoeCover: React.FC = () => {
         </text>
       </g>
 
-      {/* 入口 token */}
+      {/* token ورودی */}
       <g
         transform="translate(38,108)"
         className="origin-center transition-transform duration-500 group-hover:translate-x-1"
@@ -138,7 +138,7 @@ const MoeCover: React.FC = () => {
         </text>
       </g>
 
-      {/* token → router 箭头 */}
+      {/* فلش token ← router */}
       <g>
         <line
           x1="54"
@@ -152,7 +152,7 @@ const MoeCover: React.FC = () => {
         <polygon points="106,104 114,108 106,112" fill="#241C15" />
       </g>
 
-      {/* router 主体 */}
+      {/* بدنه router */}
       <g transform="translate(140,108)">
         <rect
           x="-26"
@@ -184,7 +184,7 @@ const MoeCover: React.FC = () => {
         >
           W·x
         </text>
-        {/* 三个小通道线（视觉装饰：路由器内部 N 路输出） */}
+        {/* سه خط کانال کوچک (تزئین بصری: N خروجی داخل router) */}
         {[-9, 0, 9].map((yOff, i) => (
           <line
             key={i}
@@ -200,14 +200,14 @@ const MoeCover: React.FC = () => {
         ))}
       </g>
 
-      {/* router → 所有 expert 的淡虚连线（背景） */}
+      {/* خطوط نقطه‌چین کم‌رنگ router ← همه expertها (پس‌زمینه) */}
       <g stroke="#241C15" strokeWidth="0.7" opacity="0.18" strokeDasharray="2 3">
         {EXPERT_CELLS.filter((c) => !c.active).map((c, i) => (
           <line key={`bg-${i}`} x1="166" y1="108" x2={c.x} y2={c.y} />
         ))}
       </g>
 
-      {/* router → active expert 的实线 + 流动 dash */}
+      {/* خط پیوسته router ← expert فعال + dash روان */}
       <g
         stroke="#E07A5F"
         strokeWidth="1.8"
@@ -221,7 +221,7 @@ const MoeCover: React.FC = () => {
         ))}
       </g>
 
-      {/* 16 个 expert 方块 */}
+      {/* ۱۶ مربع expert */}
       {EXPERT_CELLS.map((c, i) => (
         <g
           key={`exp-${i}`}
@@ -256,7 +256,7 @@ const MoeCover: React.FC = () => {
         </g>
       ))}
 
-      {/* 网格右下角小标签 */}
+      {/* برچسب کوچک گوشه پایین-راست شبکه */}
       <text
         x="278"
         y="142"
@@ -268,7 +268,7 @@ const MoeCover: React.FC = () => {
         16 experts
       </text>
 
-      {/* expert 网格 → tok-out 合并箭头 */}
+      {/* فلش ادغام شبکه expert ← tok-out */}
       <g>
         <line
           x1="262"
@@ -282,12 +282,12 @@ const MoeCover: React.FC = () => {
         <polygon points="288,104 296,108 288,112" fill="#241C15" />
       </g>
 
-      {/* 出口 small dot · 表示 y 输出 */}
+      {/* small dot خروجی · نمایانگر خروجی y */}
       <g transform="translate(304,108)">
         <circle r="5.5" fill="#1B4B5A" stroke="#241C15" strokeWidth="1.5" />
       </g>
 
-      {/* 左下：路由进度提示 */}
+      {/* پایین-چپ: نشانگر پیشرفت مسیریابی */}
       <text
         x="160"
         y="180"

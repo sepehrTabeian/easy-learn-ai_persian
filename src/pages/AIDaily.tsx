@@ -1,23 +1,23 @@
 /**
- * AI 日报 · 数字简报 / 杂志 archive 风
+ * گزارش روزانه AI · سبک خبرنامه دیجیتال / archive مجله
  *
- * 隐喻：Easy AI 日报 = 每日出版的数字简报（Stratechery / Stripe Press / Substack archive 语言）
- *   ─ Mailchimp 本身就是 newsletter 产品出身，这是它视觉语言最自然的应用场景
+ * استعاره: گزارش روزانه Easy AI = خبرنامه دیجیتالی که هر روز منتشر می‌شود (زبان Stratechery / Stripe Press / archive در Substack)
+ *   ─ خود Mailchimp از محصول newsletter آمده، این طبیعی‌ترین سناریوی کاربرد زبان بصری آن است
  *
- * 信息架构：
- *   1. MASTHEAD    报头：大字刊名 + 副刊词 + 卷期 meta + 1px ink rule line
- *   2. TODAY       今日刊：最新一期单独头版头条卡（唯一保留 stamp 大卡）
- *   3. ARCHIVE     往期目录：轻量工具栏 + 按月分组 hr 行式条目
+ * معماری اطلاعات:
+ *   ۱. MASTHEAD    سرلوحه: نام نشریه درشت + شعار + meta شماره و جلد + خط 1px ink
+ *   ۲. TODAY       شماره امروز: کارت تیتر اول صفحه اول جدا برای جدیدترین شماره (تنها کارت بزرگ stamp باقی‌مانده)
+ *   ۳. ARCHIVE     فهرست شماره‌های گذشته: نوار ابزار سبک + موارد ردیفی با hr گروه‌بندی‌شده بر اساس ماه
  *
- * 关键差异（vs AIBenchmark 工具页眉模板）：
- *   ─ 主角是"出版物"不是"档案管理工具"
- *   ─ 字号戏剧化对比撑出版物感（不引入 serif，靠 display + mono 元信息）
- *   ─ 去掉大装饰圆 / butter-tint 大色块
- *   ─ 工具栏下沉到 archive 区内，最新一期优先入眼
- *   ─ archive 条目是 hr 分隔行（不是 stamp 卡），密度高、轻装饰
+ * تفاوت کلیدی (در مقایسه با قالب سربرگ ابزاری AIBenchmark):
+ *   ─ نقش اصلی"نشریه"است، نه"ابزار مدیریت بایگانی"
+ *   ─ تقابل نمایشی اندازه فونت حس نشریه را می‌سازد (بدون serif، با display + metadata با mono)
+ *   ─ حذف دایره‌های تزئینی بزرگ / بلوک‌های رنگی بزرگ butter-tint
+ *   ─ نوار ابزار به داخل بخش archive منتقل شده، جدیدترین شماره اول دیده می‌شود
+ *   ─ موارد archive ردیف‌های جداشده با hr هستند (نه کارت stamp)، تراکم بالا، تزئین کم
  *
- * 数据：117 篇日报、320 标签 → 默认按月分组
- *   分组 key 用 Map（避免 V8 把 "2024" "2025" 数字 key 自动升序）
+ * داده: ۱۱۷ گزارش روزانه، ۳۲۰ برچسب ← پیش‌فرض گروه‌بندی بر اساس ماه
+ *   key گروه از Map استفاده می‌کند (تا V8 "2024" "2025" کلیدهای عددی را خودکار صعودی نکند)
  */
 
 import React, { useMemo, useRef, useState } from "react";
@@ -37,7 +37,7 @@ import {
 } from "../components/daily/GroupSelector";
 import { DailyReport } from "../types/daily";
 
-const WEEKDAYS = ["日", "一", "二", "三", "四", "五", "六"] as const;
+const WEEKDAYS = ["یکشنبه", "دوشنبه", "سه‌شنبه", "چهارشنبه", "پنجشنبه", "جمعه", "شنبه"] as const;
 
 const AIDaily: React.FC = () => {
   const navigate = useNavigate();
@@ -59,7 +59,7 @@ const AIDaily: React.FC = () => {
 
   const archiveRef = useRef<HTMLElement>(null);
 
-  /* 全集 № 编号映射：最新一期 = № 最大 = totalCount */
+  /* نگاشت شماره № کل مجموعه: جدیدترین شماره = بزرگ‌ترین № = totalCount */
   const issueNumberMap = useMemo<Map<string, number>>(() => {
     const map = new Map<string, number>();
     const byDateDesc = [...dailyList].sort(
@@ -73,7 +73,7 @@ const AIDaily: React.FC = () => {
     return map;
   }, [dailyList]);
 
-  /* 今日头条：原始数据中最新的一篇（不受筛选/排序影响） */
+  /* تیتر امروز: جدیدترین مورد در داده اصلی (تحت تأثیر فیلتر/مرتب‌سازی نیست) */
   const todayIssue = useMemo<DailyReport | undefined>(() => {
     if (dailyList.length === 0) return undefined;
     return [...dailyList].sort(
@@ -82,7 +82,7 @@ const AIDaily: React.FC = () => {
     )[0];
   }, [dailyList]);
 
-  /* archive 排序后列表 */
+  /* فهرست archive پس از مرتب‌سازی */
   const sortedList = useMemo<DailyReport[]>(() => {
     const arr = [...filteredList];
     arr.sort((a, b) => {
@@ -93,24 +93,24 @@ const AIDaily: React.FC = () => {
     return arr;
   }, [filteredList, sortOption]);
 
-  /* 分组 —— Map 保插入顺序 */
+  /* گروه‌بندی —— Map ترتیب درج را حفظ می‌کند */
   const grouped = useMemo<Map<string, DailyReport[]> | undefined>(() => {
     if (groupBy === "none") return undefined;
     const map = new Map<string, DailyReport[]>();
     sortedList.forEach((d) => {
       const dateObj = new Date(d.date);
       const valid = !Number.isNaN(dateObj.getTime());
-      const year = valid ? dateObj.getFullYear() : "未标注";
+      const year = valid ? dateObj.getFullYear() : "نامشخص";
       const month = valid ? dateObj.getMonth() + 1 : "—";
       const key =
-        groupBy === "year" ? `${year} 年` : `${year} 年 ${month} 月`;
+        groupBy === "year" ? `سال ${year}` : `${year} / ${month}`;
       if (!map.has(key)) map.set(key, []);
       map.get(key)!.push(d);
     });
     return map;
   }, [sortedList, groupBy]);
 
-  /* 报头 meta：总刊数 / 卷起讫日期 */
+  /* meta سرلوحه: تعداد کل شماره‌ها / تاریخ شروع و پایان جلد */
   const masthead = useMemo(() => {
     if (dailyList.length === 0)
       return { total: 0, firstDate: "—", lastDate: "—" };
@@ -146,15 +146,15 @@ const AIDaily: React.FC = () => {
   return (
     <div className="relative bg-white">
       {/* ═══════════════════════════════════════════════════════════════
-       * MASTHEAD · 报头
+       * MASTHEAD · سرلوحه
        *
-       * 设计：极简，留白主导。1px rule line 上下夹住报头条。
-       * 大字 "Easy AI 日报" + 副刊词，meta 信息一行 mono。
-       * 不放装饰图形——出版物的视觉权威来自排版本身。
+       * طراحی: بسیار مینیمال، فضای خالی غالب. خط 1px بالا و پایین نوار سرلوحه را دربرمی‌گیرد.
+       * حروف درشت "گزارش روزانه Easy AI" + شعار، اطلاعات meta در یک خط mono.
+       * هیچ شکل تزئینی گذاشته نمی‌شود —— اعتبار بصری نشریه از خود صفحه‌آرایی می‌آید.
        * ═══════════════════════════════════════════════════════════════ */}
       <section className="bg-white border-b border-ink">
         <div className="max-w-6xl mx-auto px-6 lg:px-8 pt-16 lg:pt-20 pb-10 lg:pb-12">
-          {/* 上 rule line + § eyebrow */}
+          {/* خط بالا + eyebrow با § */}
           <div className="flex items-center gap-3 mb-6">
             <span className="font-mono text-[10px] font-semibold uppercase tracking-[0.28em] text-ink/55">
               § Easy AI · Daily Brief
@@ -165,46 +165,46 @@ const AIDaily: React.FC = () => {
             </span>
           </div>
 
-          {/* 大字刊名 */}
+          {/* نام نشریه درشت */}
           <h1 className="font-display font-extrabold text-ink mb-5 leading-[1.02] tracking-[-0.02em]">
             <span className="block text-[clamp(2.8rem,7vw,5.5rem)]">
               Easy AI{" "}
               <span className="relative inline-block">
-                日报
+                اخبار روزانه
                 <span
-                  className="absolute -bottom-2 lg:-bottom-3 left-0 right-0 h-[10px] lg:h-[14px] bg-butter -z-0 rounded-sm"
+                  className="absolute -bottom-2 lg:-bottom-3 start-0 end-0 h-[10px] lg:h-[14px] bg-butter -z-0 rounded-sm"
                   aria-hidden
                 />
               </span>
             </span>
           </h1>
 
-          {/* 副刊词 */}
+          {/* شعار */}
           <p className="font-sans text-[16px] lg:text-[17px] text-ink-secondary leading-[1.6] max-w-2xl mb-7">
-            每日为你装订最新的 AI 行业动态 ——
-            企业、模型、Agent、基础设施，
-            <span className="whitespace-nowrap">一份简报读完。</span>
+            هر روز جدیدترین تحولات صنعت AI را برایتان صحافی می‌کنیم ——
+            شرکت‌ها، مدل‌ها، Agentها، زیرساخت،
+            <span className="whitespace-nowrap">در یک خبرنامه.</span>
           </p>
 
-          {/* meta 行 —— 共 N 期 · 卷起讫 · 出版人 */}
+          {/* ردیف meta —— در مجموع N شماره · شروع و پایان جلد · ناشر */}
           <div className="flex flex-wrap items-center gap-x-5 gap-y-2 font-mono text-[11px] lg:text-[12px] text-ink/55 tabular-nums">
             <span>
-              共{" "}
-              <span className="font-bold text-ink">{masthead.total}</span> 期
+              در مجموع{" "}
+              <span className="font-bold text-ink">{masthead.total}</span> شماره
             </span>
             <span className="text-ink/25">·</span>
             <span>
               {masthead.firstDate} —— {masthead.lastDate}
             </span>
             <span className="text-ink/25">·</span>
-            <span>{allTags.length} 标签维度</span>
+            <span>{allTags.length} بعد برچسب</span>
             <span className="text-ink/25">·</span>
-            <span>持续更新中</span>
+            <span>در حال به‌روزرسانی مداوم</span>
             <button
               onClick={scrollToArchive}
-              className="ml-auto inline-flex items-center gap-1 font-sans font-semibold text-[12px] text-ink hover:text-coral transition-colors group"
+              className="ms-auto inline-flex items-center gap-1 font-sans font-semibold text-[12px] text-ink hover:text-coral transition-colors group"
             >
-              查阅往期归档
+              مرور بایگانی شماره‌های گذشته
               <ArrowRight
                 className="w-3.5 h-3.5 transition-transform group-hover:translate-x-0.5"
                 strokeWidth={2.5}
@@ -215,11 +215,11 @@ const AIDaily: React.FC = () => {
       </section>
 
       {/* ═══════════════════════════════════════════════════════════════
-       * TODAY · 今日刊（头版头条）
+       * TODAY · شماره امروز (تیتر اول صفحه اول)
        *
-       * 这是 Hero CTA：让用户一进来就能看到 / 点击最新一期。
-       * 唯一保留 stamp 大卡，强化"头版"地位。
-       * 报纸式排版：mono 印记顶部 + 大字标题 + 标签 dot 链 + coral 主 CTA。
+       * این CTA در Hero است: کاربر به محض ورود جدیدترین شماره را ببیند / کلیک کند.
+       * تنها کارت بزرگ stamp باقی‌مانده، برای تقویت جایگاه"صفحه اول".
+       * صفحه‌آرایی روزنامه‌ای: نشان mono در بالا + عنوان درشت + زنجیره dot برچسب‌ها + CTA اصلی coral.
        * ═══════════════════════════════════════════════════════════════ */}
       {todayIssue && !loading && (
         <section className="bg-white">
@@ -234,11 +234,11 @@ const AIDaily: React.FC = () => {
       )}
 
       {/* ═══════════════════════════════════════════════════════════════
-       * ARCHIVE · 往期目录
+       * ARCHIVE · فهرست شماره‌های گذشته
        *
-       * 工具栏在这里出现（不在最顶部）。
-       * 视觉权重比"今日刊"低 ── 用 cream 极淡背景条 + 1px ink/15 rule 上分隔。
-       * archive 条目是 hr 分隔行，密度高。
+       * نوار ابزار این‌جا ظاهر می‌شود (نه در بالاترین نقطه).
+       * وزن بصری از"شماره امروز"کمتر است ── با نوار پس‌زمینه بسیار کم‌رنگ cream + جداکننده بالای 1px با ink/15.
+       * موارد archive ردیف‌های جداشده با hr هستند، با تراکم بالا.
        * ═══════════════════════════════════════════════════════════════ */}
       <section
         ref={archiveRef}
@@ -248,7 +248,7 @@ const AIDaily: React.FC = () => {
           {/* archive head */}
           <div className="flex items-center gap-3 mb-8 lg:mb-10">
             <span className="font-mono text-[10px] font-semibold uppercase tracking-[0.28em] text-ink/55">
-              § Archive · 往期目录
+              § Archive · فهرست شماره‌های گذشته
             </span>
             <span className="flex-1 border-t border-ink/15" />
             <span className="font-mono text-[11px] font-semibold text-ink/55 tabular-nums">
@@ -258,7 +258,7 @@ const AIDaily: React.FC = () => {
             </span>
           </div>
 
-          {/* 工具栏 —— 轻量 inline，不再套 white card stamp */}
+          {/* نوار ابزار —— inline سبک، دیگر داخل white card stamp نیست */}
           <div className="mb-10 lg:mb-12">
             <div className="flex flex-wrap items-center gap-2.5 lg:gap-3">
               <SearchBar
@@ -277,12 +277,12 @@ const AIDaily: React.FC = () => {
 
             {hasActiveFilters && (
               <div className="mt-4 flex flex-wrap items-center gap-2">
-                <span className="font-mono text-[10px] uppercase tracking-[0.22em] text-ink/45 mr-1">
+                <span className="font-mono text-[10px] uppercase tracking-[0.22em] text-ink/45 me-1">
                   Active
                 </span>
                 {hasSearch && (
                   <ActiveChip
-                    label={`搜索 ${searchTerm}`}
+                    label={`جستجو ${searchTerm}`}
                     onClose={() => setSearchTerm("")}
                   />
                 )}
@@ -295,15 +295,15 @@ const AIDaily: React.FC = () => {
                 ))}
                 <button
                   onClick={clearAll}
-                  className="font-sans text-[12px] font-semibold text-ink-tertiary hover:text-coral underline underline-offset-2 ml-1"
+                  className="font-sans text-[12px] font-semibold text-ink-tertiary hover:text-coral underline underline-offset-2 ms-1"
                 >
-                  清除全部
+                  پاک کردن همه
                 </button>
               </div>
             )}
           </div>
 
-          {/* archive 列表 */}
+          {/* فهرست archive */}
           <DailyList
             dailyList={sortedList}
             groups={grouped}
@@ -312,7 +312,7 @@ const AIDaily: React.FC = () => {
             hasActiveFilters={hasActiveFilters}
             onClearFilters={clearAll}
             issueNumberMap={issueNumberMap}
-            /* 不在 archive 重复展示今日头条 */
+            /* تیتر امروز در archive تکرار نمی‌شود */
             skipDate={
               !hasActiveFilters && sortOption === "date-desc"
                 ? todayIssue?.date
@@ -341,7 +341,7 @@ const AIDaily: React.FC = () => {
 };
 
 /* ════════════════════════════════════════════════════════════════════
- * TodayHero · 今日刊头版头条
+ * TodayHero · تیتر اول صفحه اول شماره امروز
  * ──────────────────────────────────────────────────────────────────── */
 
 interface TodayHeroProps {
@@ -363,7 +363,7 @@ const TodayHero: React.FC<TodayHeroProps> = ({
         "0",
       )}.${String(dateObj.getDate()).padStart(2, "0")}`
     : daily.date;
-  const weekday = valid ? `周${WEEKDAYS[dateObj.getDay()]}` : "—";
+  const weekday = valid ? `${WEEKDAYS[dateObj.getDay()]}` : "—";
 
   return (
     <article
@@ -378,7 +378,7 @@ const TodayHero: React.FC<TodayHeroProps> = ({
         }
       }}
     >
-      {/* 顶部"刊期条" —— mono 元信息 + coral LATEST 印戳 */}
+      {/* بالا"نوار شماره" —— metadata با mono + مهر LATEST به رنگ coral */}
       <div className="flex items-center justify-between gap-4 px-6 lg:px-10 pt-6 lg:pt-7 pb-4 border-b border-dotted border-ink/25">
         <div className="flex flex-wrap items-center gap-x-3 gap-y-1 font-mono text-[11px] lg:text-[12px] font-semibold uppercase tracking-[0.18em] text-ink/65 tabular-nums">
           <span>§ Latest Issue</span>
@@ -394,13 +394,13 @@ const TodayHero: React.FC<TodayHeroProps> = ({
         </span>
       </div>
 
-      {/* 头版大字标题 */}
+      {/* عنوان درشت صفحه اول */}
       <div className="px-6 lg:px-10 pt-8 lg:pt-10 pb-7">
         <h2 className="font-display font-extrabold text-ink leading-[1.18] tracking-[-0.01em] text-[clamp(1.6rem,3.2vw,2.4rem)] mb-6 lg:mb-7 group-hover:text-coral transition-colors duration-300">
           {daily.title}
         </h2>
 
-        {/* 标签链 —— dot 分隔，报纸栏目风 */}
+        {/* زنجیره برچسب —— جداشده با dot، سبک ستون روزنامه */}
         {daily.tags && daily.tags.length > 0 && (
           <div className="flex flex-wrap items-center font-mono text-[12px] text-ink/55 mb-7 lg:mb-8">
             {daily.tags.slice(0, 6).map((tag, i) => (
@@ -410,12 +410,12 @@ const TodayHero: React.FC<TodayHeroProps> = ({
               </span>
             ))}
             {daily.tags.length > 6 && (
-              <span className="ml-2 text-ink/35">+{daily.tags.length - 6}</span>
+              <span className="ms-2 text-ink/35">+{daily.tags.length - 6}</span>
             )}
           </div>
         )}
 
-        {/* CTA + 提示 */}
+        {/* CTA + راهنما */}
         <div className="flex items-center justify-between gap-4 flex-wrap">
           <span
             onClick={(e) => {
@@ -424,11 +424,11 @@ const TodayHero: React.FC<TodayHeroProps> = ({
             }}
             className="inline-flex items-center gap-2 px-6 py-2.5 bg-coral text-white border-2 border-ink rounded-full font-sans font-bold text-[14px] shadow-stamp transition-all duration-250 ease-spring group-hover:bg-ink hover:-translate-x-[2px] hover:-translate-y-[2px] hover:[box-shadow:6px_6px_0_0_#241C15]"
           >
-            阅读最新刊
+            خواندن جدیدترین شماره
             <ArrowRight className="w-4 h-4" strokeWidth={2.5} />
           </span>
           <span className="font-mono text-[11px] text-ink/40 italic">
-            "最新一期已送达 · 点击展开"
+            "جدیدترین شماره رسید · برای باز کردن کلیک کنید"
           </span>
         </div>
       </div>
@@ -437,18 +437,18 @@ const TodayHero: React.FC<TodayHeroProps> = ({
 };
 
 /* ════════════════════════════════════════════════════════════════════
- * 已选条件 chip · 极轻量
+ * chip شرایط انتخاب‌شده · بسیار سبک
  * ──────────────────────────────────────────────────────────────────── */
 
 const ActiveChip: React.FC<{ label: string; onClose: () => void }> = ({
   label,
   onClose,
 }) => (
-  <span className="inline-flex items-center gap-1.5 pl-3 pr-1.5 py-0.5 bg-cream border border-ink/15 rounded-full font-sans font-semibold text-[12px] text-ink">
+  <span className="inline-flex items-center gap-1.5 ps-3 pe-1.5 py-0.5 bg-cream border border-ink/15 rounded-full font-sans font-semibold text-[12px] text-ink">
     <span className="max-w-[180px] truncate">{label}</span>
     <button
       onClick={onClose}
-      aria-label={`移除 ${label}`}
+      aria-label={`حذف ${label}`}
       className="inline-flex items-center justify-center w-4 h-4 rounded-full text-ink/55 hover:bg-ink/10 hover:text-ink transition-colors"
     >
       <span className="text-[14px] leading-none -mt-px">×</span>

@@ -19,17 +19,17 @@ import PromptViewSwitch from "../components/PromptViewSwitch";
 
 const AIPrompts: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState("");
-  const [selectedCategory, setSelectedCategory] = useState("全部");
-  const [selectedModule, setSelectedModule] = useState("全部");
+  const [selectedCategory, setSelectedCategory] = useState("همه");
+  const [selectedModule, setSelectedModule] = useState("همه");
 
   const categories = useMemo(
-    () => ["全部", ...Array.from(new Set(aiPromptIndex.map((item) => item.category)))],
+    () => ["همه", ...Array.from(new Set(aiPromptIndex.map((item) => item.category)))],
     [],
   );
 
   const modules = useMemo(
     () => [
-      "全部",
+      "همه",
       ...Array.from(new Set(aiPromptIndex.flatMap((item) => item.learningModules))),
     ],
     [],
@@ -46,9 +46,9 @@ const AIPrompts: React.FC = () => {
     const q = searchQuery.trim().toLowerCase();
     return aiPromptIndex.filter((item) => {
       const inCategory =
-        selectedCategory === "全部" || item.category === selectedCategory;
+        selectedCategory === "همه" || item.category === selectedCategory;
       const inModule =
-        selectedModule === "全部" ||
+        selectedModule === "همه" ||
         item.learningModules.includes(selectedModule as AIPromptLearningModule);
       const text = [
         item.product,
@@ -75,13 +75,13 @@ const AIPrompts: React.FC = () => {
     <div className="relative bg-white overflow-hidden">
       <section className="relative bg-butter border-b-2 border-ink overflow-hidden">
         <DotGrid
-          className="absolute bottom-8 left-[6%] w-20 h-12 text-ink opacity-35 hidden md:block"
+          className="absolute bottom-8 start-[6%] w-20 h-12 text-ink opacity-35 hidden md:block"
           color="#241C15"
           rows={3}
           cols={5}
         />
         <Star
-          className="absolute top-16 right-[7%] w-9 h-9 -rotate-12 text-coral hidden md:block"
+          className="absolute top-16 end-[7%] w-9 h-9 -rotate-12 text-coral hidden md:block"
           color="#E07A5F"
           filled
         />
@@ -90,13 +90,13 @@ const AIPrompts: React.FC = () => {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
             <div className="lg:col-span-7">
               <h1 className="font-display font-extrabold text-display-xl text-ink">
-                <span className="whitespace-nowrap">像读源码一样，</span>{" "}
+                <span className="whitespace-nowrap">مثل خواندن کد منبع،</span>{" "}
                 <span className="whitespace-nowrap">
-                  读懂
-                  <span className="relative inline-block ml-[0.05em]">
-                    <span className="relative z-10">优秀提示词</span>
+                  بفهمید
+                  <span className="relative inline-block ms-[0.05em]">
+                    <span className="relative z-10">پرامپت‌های عالی را</span>
                     <HandUnderline
-                      className="absolute -bottom-2 left-0 right-0 w-full h-3"
+                      className="absolute -bottom-2 start-0 end-0 w-full h-3"
                       color="#E07A5F"
                     />
                   </span>
@@ -104,15 +104,15 @@ const AIPrompts: React.FC = () => {
                 </span>
               </h1>
               <p className="font-sans font-medium text-[17px] md:text-[19px] leading-[1.65] text-ink/85 max-w-[700px] mt-5 lg:mt-6">
-                把优秀 AI 产品的 Prompt 拆成原文、中文翻译和学习分析。
-                先找到一个真实样本，再看它如何安排身份、工具、边界和工作流。
+                Prompt محصولات عالی AI را به متن اصلی، ترجمه و تحلیل آموزشی تفکیک می‌کنیم.
+                اول یک نمونه واقعی پیدا کنید، سپس ببینید چگونه هویت، ابزارها، مرزها و جریان کار را می‌چیند.
               </p>
 
               <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-2 xl:grid-cols-4 gap-y-4 gap-x-6 max-w-[720px] mt-8 pt-5 border-t-2 border-ink/15">
-                <MetaItem label="提示词" value={`${aiPromptIndex.length} 份`} />
-                <MetaItem label="场景" value={`${categories.length - 1} 类`} />
-                <MetaItem label="学习模块" value={`${moduleCount} 个`} />
-                <MetaItem label="阅读方式" value="原文 / 翻译 / 分析" />
+                <MetaItem label="پرامپت‌ها" value={`${aiPromptIndex.length} عدد`} />
+                <MetaItem label="سناریو" value={`${categories.length - 1} دسته`} />
+                <MetaItem label="ماژول‌های آموزشی" value={`${moduleCount} مورد`} />
+                <MetaItem label="روش خواندن" value="متن اصلی / ترجمه / تحلیل" />
               </div>
             </div>
 
@@ -130,37 +130,37 @@ const AIPrompts: React.FC = () => {
               <input
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                placeholder="搜索产品、标签或模块，例如 Cursor / 工具调用 / 安全规则"
-                className="w-full pl-12 pr-12 py-4 bg-white border-2 border-ink rounded-full font-sans text-[15px] text-ink placeholder:text-ink/40 shadow-stamp transition-all duration-250 ease-spring focus:outline-none focus:-translate-x-[2px] focus:-translate-y-[2px] focus:[box-shadow:6px_6px_0_0_#241C15]"
+                placeholder="جستجوی محصول، برچسب یا ماژول، مثلاً Cursor / فراخوانی ابزار / قوانین امنیتی"
+                className="w-full ps-12 pe-12 py-4 bg-white border-2 border-ink rounded-full font-sans text-[15px] text-ink placeholder:text-ink/40 shadow-stamp transition-all duration-250 ease-spring focus:outline-none focus:-translate-x-[2px] focus:-translate-y-[2px] focus:[box-shadow:6px_6px_0_0_#241C15]"
               />
               <Search
-                className="absolute left-5 top-1/2 -translate-y-1/2 w-5 h-5 text-ink/55"
+                className="absolute start-5 top-1/2 -translate-y-1/2 w-5 h-5 text-ink/55"
                 strokeWidth={2.5}
               />
               {searchQuery && (
                 <button
                   onClick={() => setSearchQuery("")}
-                  aria-label="清除搜索"
-                  className="absolute right-3.5 top-1/2 -translate-y-1/2 p-2 rounded-full hover:bg-ink/5"
+                  aria-label="پاک کردن جستجو"
+                  className="absolute end-3.5 top-1/2 -translate-y-1/2 p-2 rounded-full hover:bg-ink/5"
                 >
                   <X className="w-4 h-4 text-ink/60" strokeWidth={2.5} />
                 </button>
               )}
             </div>
-            <div className="font-mono text-[12px] text-ink/55 lg:text-right pt-1">
-              当前显示 <span className="font-bold text-ink">{filteredPrompts.length}</span> 份
+            <div className="font-mono text-[12px] text-ink/55 lg:text-end pt-1">
+              نمایش فعلی <span className="font-bold text-ink">{filteredPrompts.length}</span> عدد
             </div>
           </div>
 
           <div className="mt-6 space-y-4">
             <FilterLine
-              label="场景"
+              label="سناریو"
               values={categories}
               active={selectedCategory}
               onChange={setSelectedCategory}
             />
             <FilterLine
-              label="模块"
+              label="ماژول"
               values={modules}
               active={selectedModule}
               onChange={setSelectedModule}
@@ -185,8 +185,8 @@ const AIPrompts: React.FC = () => {
             <EmptyState
               onClear={() => {
                 setSearchQuery("");
-                setSelectedCategory("全部");
-                setSelectedModule("全部");
+                setSelectedCategory("همه");
+                setSelectedModule("همه");
               }}
             />
           )}
@@ -209,24 +209,24 @@ const HeroGuide: React.FC = () => {
   const steps = [
     {
       icon: <Languages className="w-5 h-5" strokeWidth={2.5} />,
-      title: "先读翻译",
-      body: "看懂每段规则在说什么",
+      title: "اول ترجمه را بخوانید",
+      body: "بفهمید هر بخش از قوانین چه می‌گوید",
     },
     {
       icon: <GraduationCap className="w-5 h-5" strokeWidth={2.5} />,
-      title: "再看拆解",
-      body: "理解为什么这样设计",
+      title: "سپس تحلیل را ببینید",
+      body: "بفهمید چرا این‌طور طراحی شده",
     },
     {
       icon: <Sparkles className="w-5 h-5" strokeWidth={2.5} />,
-      title: "最后迁移",
-      body: "改成自己的 Agent 模式",
+      title: "در آخر منتقل کنید",
+      body: "آن را به الگوی Agent خودتان تبدیل کنید",
     },
   ];
 
   return (
     <div className="relative">
-      <div className="absolute -top-4 -right-3 w-16 h-16 bg-coral border-2 border-ink rounded-full shadow-stamp hidden md:block" />
+      <div className="absolute -top-4 -end-3 w-16 h-16 bg-coral border-2 border-ink rounded-full shadow-stamp hidden md:block" />
       <div className="relative bg-white border-2 border-ink rounded-[28px] shadow-stamp-xl overflow-hidden">
         <div className="bg-ink text-white px-5 py-3 border-b-2 border-ink flex items-center justify-between">
           <div className="flex items-center gap-2">
@@ -245,10 +245,10 @@ const HeroGuide: React.FC = () => {
             </div>
             <div>
               <h2 className="font-display font-extrabold text-[25px] text-ink leading-tight">
-                三步读法
+                روش خواندن سه‌مرحله‌ای
               </h2>
               <p className="font-sans text-[14px] text-ink-secondary leading-[1.65] mt-1.5">
-                不追求一次复制，而是读出结构，学会迁移。
+                دنبال کپی یک‌باره نباشید، بلکه ساختار را بخوانید و انتقال دادن را یاد بگیرید.
               </p>
             </div>
           </div>
@@ -339,7 +339,7 @@ const PromptTile: React.FC<{
         </div>
         {productCount > 1 && (
           <span className="shrink-0 inline-flex items-center px-2.5 py-1 rounded-full bg-white border border-ink/15 font-mono text-[10px] font-bold uppercase tracking-[0.08em] text-ink/55">
-            {productCount} 份
+            {productCount} عدد
           </span>
         )}
       </div>
@@ -363,7 +363,7 @@ const PromptTile: React.FC<{
       </div>
       <div className="flex items-center justify-between mt-6 pt-5 border-t border-ink/10">
         <span className="font-sans font-bold text-[13px] text-ink">
-          原文 / 翻译 / 分析
+          متن اصلی / ترجمه / تحلیل
         </span>
         <ArrowRight
           className="w-5 h-5 text-ink transition-transform duration-250 group-hover:translate-x-1"
@@ -391,16 +391,16 @@ const ModuleChip: React.FC<{
 const EmptyState: React.FC<{ onClear: () => void }> = ({ onClear }) => (
   <div className="bg-cream border-2 border-ink rounded-3xl shadow-stamp-lg p-8 text-center max-w-xl mx-auto">
     <h3 className="font-display font-extrabold text-[28px] text-ink">
-      没找到对应提示词
+      پرامپت مربوطه پیدا نشد
     </h3>
     <p className="font-sans text-[15px] text-ink-secondary mt-3">
-      可以换个关键词，或者清空筛选回到完整目录。
+      کلیدواژه دیگری امتحان کنید، یا فیلترها را پاک کنید و به فهرست کامل برگردید.
     </p>
     <button
       onClick={onClear}
       className="mt-6 inline-flex items-center px-6 py-3 bg-butter border-2 border-ink rounded-full font-sans font-extrabold text-[14px] text-ink shadow-stamp"
     >
-      清空筛选
+      پاک کردن فیلترها
     </button>
   </div>
 );

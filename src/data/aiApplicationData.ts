@@ -1,36 +1,36 @@
 /**
- * 作品集数据 · Works
+ * داده مجموعه آثار · Works
  *
  * ─────────────────────────────────────────────────────────────
- * 字段速查（详细类型见 src/types/index.ts）
+ * مرجع سریع فیلدها (نوع‌های کامل در src/types/index.ts)
  * ─────────────────────────────────────────────────────────────
- * id          稳定 ID（URL 和锚点用）
- * title       作品名
- * description 一句话定位（grid 卡片显示 2 行）
- * category    分类（按出现顺序自动循环 butter / coral / teal / cream 四色）
- * imageUrl    封面截图（建议 16:9）
- * tags        标签数组（grid 卡片显示）
- * actions     ⭐ 推荐：自定义按钮组
+ * id          شناسه پایدار (برای URL و anchor)
+ * title       نام اثر
+ * description معرفی یک‌جمله‌ای (در کارت grid دو خط نمایش داده می‌شود)
+ * category    دسته‌بندی (به ترتیب ظهور خودکار بین چهار رنگ butter / coral / teal / cream می‌چرخد)
+ * imageUrl    اسکرین‌شات جلد (پیشنهاد 16:9)
+ * tags        آرایه برچسب‌ها (در کارت grid نمایش داده می‌شود)
+ * actions     ⭐ پیشنهادی: گروه دکمه‌های سفارشی
  *
  * ─────────────────────────────────────────────────────────────
- * actions 写法示例
+ * نمونه نوشتن actions
  * ─────────────────────────────────────────────────────────────
  *
  *   actions: [
- *     // 1. 内嵌站内打开
- *     { label: "在线体验", type: "embed",    url: "/translate/index.html" },
+ *     // ۱. باز کردن درون سایت
+ *     { label: "تجربه آنلاین", type: "embed",    url: "/translate/index.html" },
  *
- *     // 2. 跳外部文档
- *     { label: "读文档",   type: "external", url: "https://example.com/docs" },
+ *     // ۲. رفتن به مستندات خارجی
+ *     { label: "خواندن مستندات",   type: "external", url: "https://example.com/docs" },
  *
- *     // 3. 跳 GitHub
- *     { label: "源码",     type: "external", url: "https://github.com/..." },
+ *     // ۳. رفتن به GitHub
+ *     { label: "کد منبع",     type: "external", url: "https://github.com/..." },
  *   ]
  *
- *   ❶ 不写 actions 时，会自动从下面的 demoUrl / githubUrl 派生（向后兼容）
- *   ❷ 第一个按钮默认 coral 主按钮，后续按钮白底次按钮
- *   ❸ 想手动控制可加 variant: "primary" | "secondary"
- *   ❹ 每张卡建议 1~3 个按钮，多了视觉会乱
+ *   ❶ اگر actions نوشته نشود، خودکار از demoUrl / githubUrl زیر مشتق می‌شود (سازگاری با نسخه قبل)
+ *   ❷ دکمه اول به‌طور پیش‌فرض دکمه اصلی coral است و دکمه‌های بعدی دکمه فرعی با پس‌زمینه سفید
+ *   ❸ برای کنترل دستی می‌توان variant اضافه کرد: "primary" | "secondary"
+ *   ❹ برای هر کارت ۱ تا ۳ دکمه پیشنهاد می‌شود، بیشتر از آن بصری شلوغ می‌شود
  */
 
 import { AIApplicationItem } from "../types";
@@ -39,23 +39,23 @@ export const aiApplicationData: AIApplicationItem[] = [
   {
     id: "easy-dataset",
     title: "Easy Dataset",
-    description: "数据集生产和管理工具，提供文档解析、智能分割、数据清洗、合成、增强等能力。",
-    category: "数据合成",
+    description: "ابزار تولید و مدیریت مجموعه‌داده، با قابلیت‌های تجزیه اسناد، تقسیم هوشمند، پاک‌سازی، ترکیب و تقویت داده.",
+    category: "ترکیب داده",
     imageUrl: "/imgs/easy-dataset.png",
-    tags: ["LLM", "数据合成", "模型微调", "RAG"],
+    tags: ["LLM", "ترکیب داده", "تنظیم دقیق مدل", "RAG"],
     actions: [
       {
-        label: "查看文档",
+        label: "مشاهده مستندات",
         type: "external",
         url: "https://docs.easy-dataset.com/",
       },
       {
-        label: "视频教程",
+        label: "آموزش ویدئویی",
         type: "external",
         url: "https://space.bilibili.com/474921808/search?keyword=Easy+Dataset",
       },
       {
-        label: "源码",
+        label: "کد منبع",
         type: "external",
         url: "https://github.com/ConardLi/easy-learn-ai/tree/main/ai-app/translate",
       },
@@ -64,18 +64,18 @@ export const aiApplicationData: AIApplicationItem[] = [
   {
     id: "easy-agent ",
     title: "Easy Agent",
-    description: "一个完整复刻 Claude Code 体验的开源本地终端 Agent。",
+    description: "یک Agent ترمینال محلی متن‌باز که تجربه Claude Code را کامل بازسازی می‌کند.",
     category: "Agent",
     imageUrl: "/imgs/easy-agent.jpeg",
     tags: ["LLM", "Agent", "CLI"],
     actions: [
       {
-        label: "开发教程",
+        label: "آموزش توسعه",
         type: "external",
         url: "https://mmh1.top/#/knowledge-planet",
       },
       {
-        label: "源码",
+        label: "کد منبع",
         type: "external",
         url: "https://github.com/ConardLi/easy-agent",
       },
@@ -84,23 +84,23 @@ export const aiApplicationData: AIApplicationItem[] = [
   {
     id: "web-video-presentation",
     title: "Web Video Presentation Skill",
-    description: "一个 Skill：让 AI 把文章、课程、产品演示和 talk 等做成视频（网页模拟）。",
+    description: "یک Skill: به AI کمک می‌کند مقالات، دوره‌ها، دموی محصول و talkها را به ویدئو (شبیه‌سازی وب) تبدیل کند.",
     category: "Skills",
     imageUrl: "/imgs/web-video-presentation.png",
-    tags: ["Agent", "Skill", "视频制作"],
+    tags: ["Agent", "Skill", "ساخت ویدئو"],
     actions: [
       {
-        label: "查看 Skill 制作的视频效果",
+        label: "مشاهده ویدئوی ساخته‌شده با Skill",
         type: "embed",
         url: "/web-video-presentation/index.html",
       },
       {
-        label: "下载 Skill",
+        label: "دانلود Skill",
         type: "external",
         url: "https://github.com/ConardLi/garden-skills#web-video-presentation",
       },
       {
-        label: "源码",
+        label: "کد منبع",
         type: "external",
         url: "https://github.com/ConardLi/garden-skills",
       },
@@ -109,23 +109,23 @@ export const aiApplicationData: AIApplicationItem[] = [
   {
     id: "web-design-engineer",
     title: "Web Design Engineer Skill",
-    description: "一个 Skill：引导 AI 生成惊艳的网页效果，避免千篇一律的 AI 俗套设计。",
+    description: "یک Skill: AI را راهنمایی می‌کند تا جلوه‌های وب خیره‌کننده بسازد و از طراحی‌های تکراری و کلیشه‌ای AI دوری کند.",
     category: "Skills",
     imageUrl: "/imgs/web-design-skill.png",
     tags: ["Agent", "Skill", "Web Design"],
     actions: [
       {
-        label: "查看 Skill 制作的网页效果",
+        label: "مشاهده صفحه وب ساخته‌شده با Skill",
         type: "embed",
         url: "/web-design-engineer/index.html",
       },
       {
-        label: "下载 Skill",
+        label: "دانلود Skill",
         type: "external",
         url: "https://github.com/ConardLi/garden-skills#web-design-engineer",
       },
       {
-        label: "源码",
+        label: "کد منبع",
         type: "external",
         url: "https://github.com/ConardLi/garden-skills",
       },
@@ -134,18 +134,18 @@ export const aiApplicationData: AIApplicationItem[] = [
   {
     id: "beautiful-article",
     title: "Beautiful Article Skill",
-    description: "一个 Skill： 把任意素材编辑成一篇精美的文章。",
+    description: "یک Skill: هر محتوایی را به یک مقاله زیبا تبدیل می‌کند.",
     category: "Skills",
     imageUrl: "/imgs/beautiful-article-skill.webp",
     tags: ["Agent", "Skill", "Article"],
     actions: [
       {
-        label: "查看 Skill 制作的文章效果",
+        label: "مشاهده مقاله ساخته‌شده با Skill",
         type: "external",
         url: "https://mmh1.top/#/ai-article",
       },
       {
-        label: "下载 Skill",
+        label: "دانلود Skill",
         type: "external",
         url: "https://github.com/ConardLi/garden-skills#beautiful-article",
       },
@@ -159,23 +159,23 @@ export const aiApplicationData: AIApplicationItem[] = [
   {
     id: "gpt-image-2",
     title: "GPT Image 2 Skill",
-    description: "一个 Skill：帮助你使用 GPT Image 2 快速复刻主流生图玩法。",
+    description: "یک Skill: به شما کمک می‌کند با GPT Image 2 سبک‌های رایج تولید تصویر را سریع بازسازی کنید.",
     category: "Skills",
     imageUrl: "/imgs/gpt-image-2.webp",
     tags: ["Agent", "Skill", "Image Generation"],
     actions: [
       {
-        label: "查看 GPT Image2 生图玩法",
+        label: "مشاهده سبک‌های تولید تصویر GPT Image2",
         type: "external",
         url: "https://gpt-image2.mmh1.top/",
       },
       {
-        label: "下载 Skill",
+        label: "دانلود Skill",
         type: "external",
         url: "https://github.com/ConardLi/garden-skills#gpt-image-2",
       },
       {
-        label: "源码",
+        label: "کد منبع",
         type: "external",
         url: "https://github.com/ConardLi/garden-skills",
       },
@@ -184,13 +184,13 @@ export const aiApplicationData: AIApplicationItem[] = [
   {
     id: "easy-llm-cli",
     title: "Easy LLM CLI",
-    description: "Gemini CLI 的多 LLM 模型适配版本（已停止维护，请迁移至 Easy Agent）",
+    description: "نسخه سازگارشده Gemini CLI با چند مدل LLM (نگهداری آن متوقف شده، لطفاً به Easy Agent مهاجرت کنید)",
     category: "Agent",
     imageUrl: "/imgs/easy-llm-cli.png",
     tags: ["LLM", "Agent", "CLI"],
     actions: [
       {
-        label: "查看仓库",
+        label: "مشاهده مخزن",
         type: "external",
         url: "https://github.com/ConardLi/easy-llm-cli",
       },
@@ -198,19 +198,19 @@ export const aiApplicationData: AIApplicationItem[] = [
   },
   {
     id: "translate-agent",
-    title: "专业翻译 Agent",
-    description: "专业的翻译 Agent，支持多语言、多种风格智能翻译",
+    title: "Agent ترجمه حرفه‌ای",
+    description: "Agent ترجمه حرفه‌ای، با پشتیبانی از چند زبان و ترجمه هوشمند در سبک‌های مختلف",
     category: "Agent",
     imageUrl: "/imgs/translate.png",
-    tags: ["LLM", "翻译", "Agent"],
+    tags: ["LLM", "ترجمه", "Agent"],
     actions: [
       {
-        label: "在线体验",
+        label: "تجربه آنلاین",
         type: "embed",
         url: "/translate/index.html",
       },
       {
-        label: "源码",
+        label: "کد منبع",
         type: "external",
         url: "https://github.com/ConardLi/easy-learn-ai/tree/main/ai-app/translate",
       },
@@ -220,8 +220,8 @@ export const aiApplicationData: AIApplicationItem[] = [
 ];
 
 /**
- * @deprecated SaaS 蓝紫渐变调色盘，已被新组件中的 Mailchimp-Freddie
- * 调色循环（butter / coral / teal / cream）取代，保留只为防止其他历史
- * 代码 import 失败。下次清理时可安全删除。
+ * @deprecated پالت رنگ گرادیان آبی-بنفش SaaS، که با چرخه رنگ Mailchimp-Freddie در کامپوننت‌های جدید
+ * (butter / coral / teal / cream) جایگزین شده، فقط برای جلوگیری از شکست import در کدهای قدیمی دیگر
+ * نگه داشته شده. در پاک‌سازی بعدی می‌توان با خیال راحت حذف کرد.
  */
 export const applicationCategoryColors: Record<string, string> = {};

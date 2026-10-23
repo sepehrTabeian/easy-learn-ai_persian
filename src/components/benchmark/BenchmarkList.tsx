@@ -1,11 +1,11 @@
 /**
- * 基准测试列表 · Mailchimp-Freddie 风
+ * فهرست بنچمارک‌ها · سبک Mailchimp-Freddie
  *
- * 支持两种渲染模式：
- *   - 不分组：直接平铺卡片网格
- *   - 分组：分组标题 + 计数 chip + ink 横线 + 卡片网格（参考 ModelList）
+ * از دو حالت رندر پشتیبانی می‌کند:
+ *   - بدون گروه‌بندی: شبکه کارت‌ها مستقیم چیده می‌شود
+ *   - گروه‌بندی: عنوان گروه + chip شمارش + خط افقی ink + شبکه کارت‌ها (مرجع ModelList)
  *
- * Loading / Error / Empty 全部 stamp 风
+ * Loading / Error / Empty همه به سبک stamp
  */
 
 import React from "react";
@@ -15,9 +15,9 @@ import { Database, AlertCircle } from "lucide-react";
 
 interface BenchmarkListProps {
   /**
-   * 当 groups 提供时，使用分组渲染；否则使用 benchmarks 平铺。
-   * 必须是 Map（不能是 plain object），否则数字字符串 key
-   * 会被 V8 自动按数字升序，导致 year 分组顺序失效。
+   * وقتی groups ارائه شود، رندر گروه‌بندی‌شده استفاده می‌شود؛ در غیر این صورت benchmarks به‌صورت تخت.
+   * باید Map باشد (نه plain object)، در غیر این صورت کلیدهای رشته‌ای عددی
+   * توسط V8 خودکار به ترتیب صعودی عددی مرتب می‌شوند و ترتیب گروه‌بندی year از بین می‌رود.
    */
   benchmarks: Benchmark[];
   groups?: Map<string, Benchmark[]>;
@@ -38,9 +38,9 @@ export const BenchmarkList: React.FC<BenchmarkListProps> = ({
           <div className="w-16 h-16 border-[3px] border-ink/15 border-t-ink rounded-full animate-spin" />
         </div>
         <p className="font-display font-extrabold text-[20px] text-ink mb-1">
-          正在加载基准测试
+          در حال بارگذاری بنچمارک‌ها
         </p>
-        <p className="font-sans text-[13px] text-ink-secondary">稍候片刻…</p>
+        <p className="font-sans text-[13px] text-ink-secondary">لطفاً کمی صبر کنید…</p>
       </div>
     );
   }
@@ -52,7 +52,7 @@ export const BenchmarkList: React.FC<BenchmarkListProps> = ({
           <AlertCircle className="w-8 h-8 text-white" strokeWidth={2.5} />
         </div>
         <h3 className="font-display font-extrabold text-display-lg text-ink mb-2">
-          加载失败
+          بارگذاری ناموفق بود
         </h3>
         <p className="font-sans text-ink-secondary max-w-md text-center mb-6">
           {error}
@@ -61,14 +61,14 @@ export const BenchmarkList: React.FC<BenchmarkListProps> = ({
           onClick={() => window.location.reload()}
           className="inline-flex items-center gap-2 px-6 py-2.5 bg-ink text-cream font-sans font-bold text-[14px] rounded-full border-2 border-ink shadow-stamp transition-all duration-250 ease-spring hover:-translate-x-1 hover:-translate-y-1 hover:[box-shadow:6px_6px_0_0_#241C15]"
         >
-          重新加载
+          بارگذاری مجدد
         </button>
       </div>
     );
   }
 
   const isGrouped = !!groups;
-  /* Map.entries() 按插入顺序遍历，正是我们排好的顺序（数字 key 不会被自动升序） */
+  /* Map.entries() به ترتیب درج پیمایش می‌کند، که دقیقاً همان ترتیبی است که ما چیده‌ایم (کلیدهای عددی خودکار صعودی نمی‌شوند) */
   const groupEntries = groups ? Array.from(groups.entries()) : [];
   const isEmpty = isGrouped
     ? groupEntries.length === 0
@@ -81,10 +81,10 @@ export const BenchmarkList: React.FC<BenchmarkListProps> = ({
           <Database className="w-7 h-7 text-ink/65" strokeWidth={2.5} />
         </div>
         <h3 className="font-display font-extrabold text-display-lg text-ink mb-2">
-          未找到相关基准测试
+          بنچمارک مرتبطی پیدا نشد
         </h3>
         <p className="font-sans text-ink-secondary text-center max-w-sm">
-          尝试调整筛选条件或更换关键词
+          شرایط فیلتر را تغییر دهید یا کلیدواژه دیگری امتحان کنید
         </p>
       </div>
     );
@@ -95,7 +95,7 @@ export const BenchmarkList: React.FC<BenchmarkListProps> = ({
       <div className="space-y-12">
         {groupEntries.map(([groupName, groupItems]) => (
           <div key={groupName}>
-            {/* 分组 heading —— 与 ModelList 风格一致 */}
+            {/* heading گروه —— هم‌سبک با ModelList */}
             <div className="mb-6">
               <div className="flex items-baseline gap-3 mb-2">
                 <h2 className="font-display font-extrabold text-[26px] lg:text-[30px] text-ink leading-none">
@@ -108,7 +108,7 @@ export const BenchmarkList: React.FC<BenchmarkListProps> = ({
               <div className="h-[3px] w-16 bg-ink rounded-full" />
             </div>
 
-            {/* 该组卡片网格 */}
+            {/* شبکه کارت‌های این گروه */}
             <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6">
               {groupItems.map((benchmark, index) => (
                 <BenchmarkCard
@@ -123,7 +123,7 @@ export const BenchmarkList: React.FC<BenchmarkListProps> = ({
     );
   }
 
-  /* 不分组：平铺 */
+  /* بدون گروه‌بندی: تخت */
   return (
     <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6">
       {benchmarks.map((benchmark, index) => (

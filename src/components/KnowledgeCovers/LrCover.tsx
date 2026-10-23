@@ -1,26 +1,26 @@
 /**
- * Learning Rate 封面
+ * جلد Learning Rate
  *
- * 隐喻：参数空间的步长 ── 同一坡上 3 个 θ 球往最低点跳，箭头长度 = lr。
- *   小 lr 球：步小，离最低点很远还在挣扎
- *   适中 lr 球：刚好踩到谷底
- *   大 lr 球：步大到弹出对面墙，loss 反弹
+ * استعاره: اندازه گام در فضای پارامتر ── روی یک شیب، ۳ توپ θ به سمت پایین‌ترین نقطه می‌پرند، طول فلش = lr.
+ *   توپ lr کوچک: گام‌های کوچک، هنوز از پایین‌ترین نقطه خیلی دور است و تقلا می‌کند
+ *   توپ lr متعادل: دقیقاً به ته دره می‌رسد
+ *   توپ lr بزرگ: گام آن‌قدر بزرگ است که به دیواره روبه‌رو برمی‌خورد و loss بالا می‌رود
  *
- * 视觉构图（viewBox 320×200）：
- *   ─ 中间一条 bowl 抛物线（teal 实线），代表 loss 山坡
- *   ─ 左：小 lr 链（短箭头 ×3，停在半山腰）
- *   ─ 中：适中 lr 链（中箭头 ×2，停在谷底）
- *   ─ 右：大 lr 链（长箭头 ×1，弹到对面更高处 + NaN 警示 stamp）
- *   ─ 右上：「lr」butter stamp
- *   ─ 左下：「θ ← θ − lr·∇L」公式装饰条
- *   ─ 顶部：3 行小标签 small / ok / big
+ * ترکیب‌بندی بصری (viewBox 320×200):
+ *   ─ یک سهمی bowl در وسط (خط پیوسته teal)، نماینده شیب loss
+ *   ─ چپ: زنجیره lr کوچک (فلش کوتاه ×3، وسط شیب می‌ایستد)
+ *   ─ وسط: زنجیره lr متعادل (فلش متوسط ×2، در ته دره می‌ایستد)
+ *   ─ راست: زنجیره lr بزرگ (فلش بلند ×1، به نقطه بالاتر روبه‌رو می‌پرد + stamp هشدار NaN)
+ *   ─ بالا-راست: stamp با butter «lr»
+ *   ─ پایین-چپ: نوار تزئینی فرمول «θ ← θ − lr·∇L»
+ *   ─ بالا: ۳ ردیف برچسب کوچک small / ok / big
  */
 import React from "react";
 import CoverShell from "./CoverShell";
 
-/* bowl 抛物线 L(θ) = (θ−2)² 缩放到 SVG 坐标 */
+/* سهمی bowl با L(θ) = (θ−2)² به مختصات SVG مقیاس داده می‌شود */
 function lossY(theta: number): number {
-  /* loss ∈ [0..18] → y ∈ [148..40]（loss 越大 y 越小） */
+  /* loss ∈ [0..18] ← y ∈ [148..40] (هرچه loss بزرگ‌تر، y کوچک‌تر) */
   const l = Math.min(18, (theta - 2) * (theta - 2));
   return 148 - (l / 18) * 108;
 }
@@ -39,17 +39,17 @@ function bowlPath(): string {
 }
 
 const LrCover: React.FC = () => {
-  /* 三组小球轨迹 */
-  /* small lr=0.05：从 -3 出发 4 步还远 */
+  /* سه گروه مسیر توپ */
+  /* small lr=0.05: از -3 شروع می‌کند و پس از ۴ گام هنوز دور است */
   const smallTrail = simulate(-3, 0.05, 4);
-  /* ok lr=0.4：从 -3 出发 4 步到 2 附近 */
+  /* ok lr=0.4: از -3 شروع می‌کند و در ۴ گام به نزدیکی 2 می‌رسد */
   const okTrail = simulate(-3, 0.4, 4);
-  /* big lr=1.05：从 -3 出发 2 步弹到对面 */
+  /* big lr=1.05: از -3 شروع می‌کند و در ۲ گام به طرف مقابل می‌پرد */
   const bigTrail = simulate(-3, 1.05, 2);
 
   return (
     <CoverShell bgClassName="bg-butter" dotOpacity={0.07}>
-      {/* 右上：lr stamp */}
+      {/* بالا-راست: stamp با lr */}
       <g
         transform="translate(286,28) rotate(-7)"
         className="origin-center transition-transform duration-500 group-hover:rotate-2 group-hover:scale-110"
@@ -77,7 +77,7 @@ const LrCover: React.FC = () => {
         </text>
       </g>
 
-      {/* 左上：标题条 */}
+      {/* بالا-چپ: نوار عنوان */}
       <g transform="translate(70,30)">
         <rect
           x="-3"
@@ -103,7 +103,7 @@ const LrCover: React.FC = () => {
         </text>
       </g>
 
-      {/* 左下：公式装饰 */}
+      {/* پایین-چپ: تزئین فرمول */}
       <g transform="translate(28,182) rotate(-3)" className="origin-left">
         <rect
           x="-3"
@@ -129,7 +129,7 @@ const LrCover: React.FC = () => {
         </text>
       </g>
 
-      {/* 主 loss 山坡 */}
+      {/* شیب اصلی loss */}
       <path
         d={bowlPath()}
         fill="none"
@@ -139,7 +139,7 @@ const LrCover: React.FC = () => {
         strokeLinejoin="round"
       />
 
-      {/* 谷底 marker */}
+      {/* marker ته دره */}
       <line x1={thetaX(2)} y1={lossY(2) - 5} x2={thetaX(2)} y2="156" stroke="#241C15" strokeWidth="0.9" strokeDasharray="2 2" opacity="0.5" />
       <text
         x={thetaX(2)}
@@ -152,16 +152,16 @@ const LrCover: React.FC = () => {
         θ*
       </text>
 
-      {/* small lr 轨迹（深灰 短箭头） */}
-      <BallTrail trail={smallTrail} color="#88837C" tagColor="#88837C" tag="lr 小" tagY={32} groupClass="" />
+      {/* مسیر small lr (خاکستری تیره، فلش کوتاه) */}
+      <BallTrail trail={smallTrail} color="#88837C" tagColor="#88837C" tag="lr کوچک" tagY={32} groupClass="" />
 
-      {/* ok lr 轨迹（butter 实色） */}
-      <BallTrail trail={okTrail} color="#241C15" tagColor="#241C15" tag="lr 刚好" tagY={48} groupClass="origin-center transition-transform duration-500 group-hover:scale-110" />
+      {/* مسیر ok lr (رنگ توپر butter) */}
+      <BallTrail trail={okTrail} color="#241C15" tagColor="#241C15" tag="lr مناسب" tagY={48} groupClass="origin-center transition-transform duration-500 group-hover:scale-110" />
 
-      {/* big lr 轨迹（coral · 弹到对面） */}
-      <BallTrail trail={bigTrail} color="#E07A5F" tagColor="#E07A5F" tag="lr 大" tagY={64} groupClass="" />
+      {/* مسیر big lr (coral · به طرف مقابل می‌پرد) */}
+      <BallTrail trail={bigTrail} color="#E07A5F" tagColor="#E07A5F" tag="lr بزرگ" tagY={64} groupClass="" />
 
-      {/* big 末尾 NaN 警示 */}
+      {/* هشدار NaN در انتهای big */}
       {bigTrail.length > 0 && (() => {
         const last = bigTrail[bigTrail.length - 1];
         return (
@@ -197,7 +197,7 @@ const LrCover: React.FC = () => {
   );
 };
 
-/* ── 模拟梯度下降 · L(θ) = (θ−2)² · 返回 θ 序列 ──────────────────────────── */
+/* ── شبیه‌سازی گرادیان کاهشی · L(θ) = (θ−2)² · دنباله θ را برمی‌گرداند ──────────────────────────── */
 function simulate(theta0: number, lr: number, steps: number): number[] {
   const arr: number[] = [theta0];
   let t = theta0;
@@ -209,7 +209,7 @@ function simulate(theta0: number, lr: number, steps: number): number[] {
   return arr;
 }
 
-/* ── 轨迹 + 球 ───────────────────────────────────────────────────────────── */
+/* ── مسیر + توپ ───────────────────────────────────────────────────────────── */
 const BallTrail: React.FC<{
   trail: number[];
   color: string;
@@ -220,7 +220,7 @@ const BallTrail: React.FC<{
 }> = ({ trail, color, tag, tagY, tagColor, groupClass }) => {
   return (
     <g className={groupClass}>
-      {/* 步与步之间的箭头线 */}
+      {/* خط فلش بین گام‌ها */}
       {trail.slice(1).map((t, i) => {
         const prev = trail[i];
         return (
@@ -239,7 +239,7 @@ const BallTrail: React.FC<{
         );
       })}
 
-      {/* 中间步小点 */}
+      {/* نقطه کوچک گام‌های میانی */}
       {trail.slice(0, -1).map((t, i) => (
         <circle
           key={`mid-${i}`}
@@ -252,7 +252,7 @@ const BallTrail: React.FC<{
         />
       ))}
 
-      {/* 终点大球 */}
+      {/* توپ بزرگ نقطه پایانی */}
       {trail.length > 0 && (
         <circle
           cx={thetaX(trail[trail.length - 1])}
@@ -264,7 +264,7 @@ const BallTrail: React.FC<{
         />
       )}
 
-      {/* 起点小标签 */}
+      {/* برچسب کوچک نقطه شروع */}
       <text
         x={thetaX(trail[0]) - 6}
         y={tagY}

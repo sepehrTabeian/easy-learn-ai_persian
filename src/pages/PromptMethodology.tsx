@@ -76,8 +76,8 @@ const PromptMethodology: React.FC = () => {
         label: law.shortTitle,
         law,
       })),
-      { kind: "patterns", id: "patterns", serial: "＋", label: "组合模式" },
-      { kind: "checklist", id: "checklist", serial: "✓", label: "自检清单" },
+      { kind: "patterns", id: "patterns", serial: "＋", label: "الگوهای ترکیبی" },
+      { kind: "checklist", id: "checklist", serial: "✓", label: "چک‌لیست خودارزیابی" },
     ],
     [],
   );
@@ -139,26 +139,26 @@ const PromptMethodology: React.FC = () => {
 
 const MethodologyHero: React.FC = () => {
   const stats = [
-    { label: "核心法则", value: "12 条" },
-    { label: "样本来源", value: "40 份" },
-    { label: "组合模式", value: "5 组" },
-    { label: "自检维度", value: "12 项" },
+    { label: "قواعد اصلی", value: "۱۲ قاعده" },
+    { label: "منبع نمونه‌ها", value: "۴۰ نمونه" },
+    { label: "الگوهای ترکیبی", value: "۵ گروه" },
+    { label: "ابعاد خودارزیابی", value: "۱۲ مورد" },
   ];
   return (
     <section className="relative bg-butter border-b-2 border-ink overflow-hidden">
       <DotGrid
-        className="absolute bottom-7 right-[5%] w-20 h-12 text-ink opacity-30 hidden md:block"
+        className="absolute bottom-7 end-[5%] w-20 h-12 text-ink opacity-30 hidden md:block"
         color="#241C15"
         rows={3}
         cols={5}
       />
       <Star
-        className="absolute top-14 left-[6%] w-8 h-8 -rotate-12 text-coral hidden lg:block"
+        className="absolute top-14 start-[6%] w-8 h-8 -rotate-12 text-coral hidden lg:block"
         color="#E07A5F"
         filled
       />
       <Sparkle4
-        className="absolute top-20 right-[13%] w-5 h-5 text-ink/35 hidden lg:block"
+        className="absolute top-20 end-[13%] w-5 h-5 text-ink/35 hidden lg:block"
         color="#241C15"
       />
       <div className="relative max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-10 pt-9 lg:pt-11 pb-11 lg:pb-12">
@@ -166,11 +166,11 @@ const MethodologyHero: React.FC = () => {
 
         <div className="max-w-[820px]">
           <h1 className="font-display font-extrabold text-[34px] sm:text-[44px] lg:text-[54px] leading-[1.08] text-ink">
-            顶级 AI Agent{" "}
+            AI Agent برتر{" "}
             <span className="relative inline-block">
-              <span className="relative z-10">提示词设计方法论</span>
+              <span className="relative z-10">روش‌شناسی طراحی پرامپت</span>
               <HandUnderline
-                className="absolute -bottom-2 left-0 right-0 w-full h-3"
+                className="absolute -bottom-2 start-0 end-0 w-full h-3"
                 color="#E07A5F"
               />
             </span>
@@ -207,9 +207,9 @@ const DeskNav: React.FC<{
   <aside className="hidden lg:block lg:sticky lg:top-24 self-start">
     <div className="bg-white border-2 border-ink rounded-3xl shadow-stamp-lg overflow-hidden">
       <div className="bg-ink text-white px-5 py-3.5 flex items-center justify-between">
-        <span className="font-display font-extrabold text-[15px]">目录</span>
+        <span className="font-display font-extrabold text-[15px]">فهرست</span>
         <span className="font-mono text-[10px] uppercase tracking-[0.18em] text-white/45">
-          12 法则 + 附录
+          ۱۲ قاعده + پیوست
         </span>
       </div>
       <nav className="p-2.5 max-h-[calc(100vh-9rem)] overflow-y-auto">
@@ -223,7 +223,7 @@ const DeskNav: React.FC<{
               )}
               <button
                 onClick={() => onPick(item.id)}
-                className={`group w-full flex items-center gap-3 px-2.5 py-2 rounded-2xl text-left transition-all duration-200 ${
+                className={`group w-full flex items-center gap-3 px-2.5 py-2 rounded-2xl text-start transition-all duration-200 ${
                   isActive ? "bg-ink text-white" : "hover:bg-cream text-ink"
                 }`}
               >
@@ -287,7 +287,7 @@ const LawDetail: React.FC<{ law: MethodologyLaw }> = ({ law }) => (
     <header className="relative bg-cream border-b-2 border-ink px-6 md:px-8 py-6 md:py-7">
       <div className="flex items-center justify-between gap-4">
         <span className="inline-flex items-center gap-2 px-3 py-1 bg-white border border-ink/15 rounded-full font-mono text-[10px] uppercase tracking-[0.16em] text-ink/55">
-          法则 {law.index} / 12
+          قاعده {law.index} / 12
         </span>
         <span className="inline-flex items-center justify-center w-11 h-11 rounded-2xl bg-ink text-white border-2 border-ink shadow-stamp shrink-0">
           {lawIcons[law.icon]}
@@ -303,7 +303,7 @@ const LawDetail: React.FC<{ law: MethodologyLaw }> = ({ law }) => (
     </header>
 
     <div className="p-6 md:p-8 space-y-9">
-      <Field title="解决什么问题">
+      <Field title="چه مشکلی را حل می‌کند">
         <p className="font-sans text-[15.5px] md:text-[16px] text-ink leading-[1.9]">
           {law.problem}
         </p>
@@ -326,18 +326,18 @@ const LawDetail: React.FC<{ law: MethodologyLaw }> = ({ law }) => (
         )}
       </Field>
 
-      <Field title="可复用模板">
+      <Field title="قالب قابل استفاده مجدد">
         <TemplatePanel template={law.template} />
       </Field>
 
-      <Field title="典型案例">
+      <Field title="نمونه‌های شاخص">
         <p className="-mt-1 mb-3 font-sans text-[12.5px] text-ink/50">
-          点击产品名可跳转到对应的提示词详情 ↗
+          روی نام محصول کلیک کنید تا به جزئیات پرامپت مربوطه بروید ↗
         </p>
         <CaseTable cases={law.cases} />
       </Field>
 
-      <Field title="不宜照抄" danger>
+      <Field title="نباید کپی شود" danger>
         <ul className="bg-pop/[0.06] border-2 border-pop/25 rounded-2xl p-4 md:p-5 space-y-3">
           {law.cautions.map((caution) => (
             <li
@@ -379,13 +379,13 @@ const CaseTable: React.FC<{ cases: MethodologyLaw["cases"] }> = ({ cases }) => (
   <div className="border-2 border-ink rounded-2xl overflow-hidden">
     <div className="hidden md:grid grid-cols-[150px_minmax(0,1.4fr)_minmax(0,1fr)] bg-ink text-white">
       <div className="px-4 py-2.5 font-mono text-[10px] uppercase tracking-[0.14em] text-white/70">
-        产品
+        محصول
       </div>
-      <div className="px-4 py-2.5 font-mono text-[10px] uppercase tracking-[0.14em] text-white/70 border-l border-white/12">
-        写法
+      <div className="px-4 py-2.5 font-mono text-[10px] uppercase tracking-[0.14em] text-white/70 border-s border-white/12">
+        روش نوشتن
       </div>
-      <div className="px-4 py-2.5 font-mono text-[10px] uppercase tracking-[0.14em] text-white/70 border-l border-white/12">
-        亮点
+      <div className="px-4 py-2.5 font-mono text-[10px] uppercase tracking-[0.14em] text-white/70 border-s border-white/12">
+        نکات برجسته
       </div>
     </div>
     <div>
@@ -399,17 +399,17 @@ const CaseTable: React.FC<{ cases: MethodologyLaw["cases"] }> = ({ cases }) => (
           <div className="px-4 pt-3.5 md:py-3.5">
             <ProductChip product={item.product} />
           </div>
-          <div className="px-4 pt-2 md:pt-3.5 md:py-3.5 md:border-l border-ink/8">
+          <div className="px-4 pt-2 md:pt-3.5 md:py-3.5 md:border-s border-ink/8">
             <span className="md:hidden font-mono text-[9px] uppercase tracking-[0.14em] text-ink/40 block mb-0.5">
-              写法
+              روش نوشتن
             </span>
             <p className="font-sans text-[14px] text-ink leading-[1.65]">
               {item.approach}
             </p>
           </div>
-          <div className="px-4 pt-2 pb-3.5 md:py-3.5 md:border-l border-ink/8">
+          <div className="px-4 pt-2 pb-3.5 md:py-3.5 md:border-s border-ink/8">
             <span className="md:hidden font-mono text-[9px] uppercase tracking-[0.14em] text-ink/40 block mb-0.5">
-              亮点
+              نکات برجسته
             </span>
             <p className="flex items-start gap-1.5 font-sans text-[13.5px] text-ink-secondary leading-[1.6]">
               <Lightbulb
@@ -437,8 +437,8 @@ const ProductChip: React.FC<{ product: string }> = ({ product }) => {
   return (
     <Link
       to={`/ai-prompts/${promptId}`}
-      title={`查看 ${product} 的提示词详情`}
-      className="group/chip inline-flex items-center gap-1 pl-3 pr-2 py-1 bg-butter border border-ink/20 rounded-full font-sans font-extrabold text-[12.5px] text-ink transition-all duration-200 ease-spring hover:bg-ink hover:text-white hover:border-ink hover:-translate-y-[1px] hover:shadow-stamp"
+      title={`مشاهده ${product} جزئیات پرامپت`}
+      className="group/chip inline-flex items-center gap-1 ps-3 pe-2 py-1 bg-butter border border-ink/20 rounded-full font-sans font-extrabold text-[12.5px] text-ink transition-all duration-200 ease-spring hover:bg-ink hover:text-white hover:border-ink hover:-translate-y-[1px] hover:shadow-stamp"
     >
       <span>{product}</span>
       <ArrowUpRight
@@ -458,7 +458,7 @@ const TemplatePanel: React.FC<{ template: string }> = ({ template }) => (
         <span className="w-2.5 h-2.5 rounded-full bg-coral" />
         <span className="w-2.5 h-2.5 rounded-full bg-butter" />
         <span className="w-2.5 h-2.5 rounded-full bg-teal" />
-        <span className="ml-2 font-mono text-[10px] uppercase tracking-[0.18em] text-white/45">
+        <span className="ms-2 font-mono text-[10px] uppercase tracking-[0.18em] text-white/45">
           Template
         </span>
       </div>
@@ -494,7 +494,7 @@ const CopyButton: React.FC<{ text: string }> = ({ text }) => {
       ) : (
         <Copy className="w-3.5 h-3.5" strokeWidth={2.5} />
       )}
-      {copied ? "已复制" : "复制模板"}
+      {copied ? "کپی شد" : "کپی قالب"}
     </button>
   );
 };
@@ -505,13 +505,13 @@ const PatternsView: React.FC = () => (
   <article className="bg-white border-2 border-ink rounded-[28px] shadow-stamp-lg overflow-hidden">
     <header className="bg-cream border-b-2 border-ink px-6 md:px-8 py-6 md:py-7">
       <span className="inline-flex items-center gap-2 px-3 py-1 bg-white border border-ink/15 rounded-full font-mono text-[10px] uppercase tracking-[0.16em] text-ink/55">
-        附录
+        پیوست
       </span>
       <h2 className="font-display font-extrabold text-[27px] md:text-[34px] text-ink leading-[1.15] mt-4">
-        跨法则的高阶组合模式
+        الگوهای ترکیبی پیشرفته بین قواعد
       </h2>
       <p className="font-sans text-[15px] text-ink-secondary leading-[1.7] mt-2 max-w-2xl">
-        把多条法则编织在一起的 5 种结构性技巧，让提示词从“规则堆砌”升级为“可维护的系统”。
+        ۵ تکنیک ساختاری برای بافتن چند قاعده با هم، تا پرامپت از «انباشت قوانین» به «سیستمی قابل نگهداری» ارتقا یابد.
       </p>
     </header>
     <div className="p-6 md:p-8 grid grid-cols-1 md:grid-cols-2 gap-5">
@@ -528,7 +528,7 @@ const PatternsView: React.FC = () => (
             </span>
             <div className="min-w-0">
               <div className="font-mono text-[10px] uppercase tracking-[0.18em] text-ink/45">
-                模式 {pattern.letter}
+                وجود ندارد {pattern.letter}
               </div>
               <h3 className="font-display font-extrabold text-[18px] text-ink leading-tight">
                 {pattern.title}
@@ -538,7 +538,7 @@ const PatternsView: React.FC = () => (
           <div className="p-5 flex flex-col flex-1">
             <div className="flex items-start gap-1.5 mb-3">
               <span className="font-mono text-[10px] uppercase tracking-[0.12em] text-ink/45 shrink-0 pt-0.5">
-                来源
+                منبع
               </span>
               <span className="font-sans font-semibold text-[12.5px] text-ink leading-snug">
                 {pattern.source}
@@ -576,10 +576,10 @@ const ChecklistView: React.FC = () => {
     <article className="bg-white border-2 border-ink rounded-[28px] shadow-stamp-lg overflow-hidden">
       <header className="bg-cream border-b-2 border-ink px-6 md:px-8 py-6 md:py-7">
         <span className="inline-flex items-center gap-2 px-3 py-1 bg-white border border-ink/15 rounded-full font-mono text-[10px] uppercase tracking-[0.16em] text-ink/55">
-          结语
+          سخن پایانی
         </span>
         <h2 className="font-display font-extrabold text-[27px] md:text-[34px] text-ink leading-[1.15] mt-4">
-          一份提示词的自检清单
+          چک‌لیست خودارزیابی یک پرامپت
         </h2>
         <p className="font-sans text-[15px] text-ink-secondary leading-[1.7] mt-2 max-w-2xl">
           {methodologyIntro.closing}
@@ -593,7 +593,7 @@ const ChecklistView: React.FC = () => {
               <ListChecks className="w-[18px] h-[18px]" strokeWidth={2.4} />
             </span>
             <span className="font-display font-extrabold text-[17px] text-ink">
-              {allDone ? "全部命中，工业级 ✦" : "勾掉已覆盖的维度"}
+              {allDone ? "همه موارد برآورده شد، در سطح صنعتی ✦" : "ابعاد پوشش‌داده‌شده را تیک بزنید"}
             </span>
           </div>
           <div className="font-display font-extrabold text-[22px] leading-none text-ink">
@@ -617,7 +617,7 @@ const ChecklistView: React.FC = () => {
                 key={item.dimension}
                 onClick={() => toggle(index)}
                 aria-pressed={isOn}
-                className={`group flex items-start gap-3 text-left px-4 py-3.5 rounded-2xl border-2 transition-all duration-250 ease-spring ${
+                className={`group flex items-start gap-3 text-start px-4 py-3.5 rounded-2xl border-2 transition-all duration-250 ease-spring ${
                   isOn
                     ? "bg-butter/30 border-ink"
                     : "bg-white border-ink/15 hover:border-ink/45"
@@ -665,29 +665,29 @@ const DetailFooter: React.FC<{
     <button
       onClick={onPrev}
       disabled={!prev}
-      className="group flex items-center gap-3 px-4 py-3.5 bg-white border-2 border-ink rounded-2xl text-left shadow-stamp transition-all duration-250 ease-spring disabled:opacity-35 disabled:cursor-not-allowed enabled:hover:-translate-x-[2px] enabled:hover:-translate-y-[2px] enabled:hover:[box-shadow:6px_6px_0_0_#241C15]"
+      className="group flex items-center gap-3 px-4 py-3.5 bg-white border-2 border-ink rounded-2xl text-start shadow-stamp transition-all duration-250 ease-spring disabled:opacity-35 disabled:cursor-not-allowed enabled:hover:-translate-x-[2px] enabled:hover:-translate-y-[2px] enabled:hover:[box-shadow:6px_6px_0_0_#241C15]"
     >
       <ChevronLeft className="w-5 h-5 shrink-0 text-ink" strokeWidth={2.5} />
       <span className="min-w-0">
         <span className="block font-mono text-[10px] uppercase tracking-[0.14em] text-ink/45">
-          上一条
+          مورد قبلی
         </span>
         <span className="block font-sans font-extrabold text-[14px] text-ink truncate">
-          {prev ? prev.label : "已是开头"}
+          {prev ? prev.label : "این اولین مورد است"}
         </span>
       </span>
     </button>
     <button
       onClick={onNext}
       disabled={!next}
-      className="group flex items-center justify-end gap-3 px-4 py-3.5 bg-ink border-2 border-ink rounded-2xl text-right shadow-stamp transition-all duration-250 ease-spring disabled:opacity-35 disabled:cursor-not-allowed enabled:hover:-translate-x-[2px] enabled:hover:-translate-y-[2px] enabled:hover:[box-shadow:6px_6px_0_0_#241C15]"
+      className="group flex items-center justify-end gap-3 px-4 py-3.5 bg-ink border-2 border-ink rounded-2xl text-end shadow-stamp transition-all duration-250 ease-spring disabled:opacity-35 disabled:cursor-not-allowed enabled:hover:-translate-x-[2px] enabled:hover:-translate-y-[2px] enabled:hover:[box-shadow:6px_6px_0_0_#241C15]"
     >
       <span className="min-w-0">
         <span className="block font-mono text-[10px] uppercase tracking-[0.14em] text-white/45">
-          下一条
+          مورد بعدی
         </span>
         <span className="block font-sans font-extrabold text-[14px] text-white truncate">
-          {next ? next.label : "已到结尾"}
+          {next ? next.label : "به انتها رسیدید"}
         </span>
       </span>
       <ChevronRight className="w-5 h-5 shrink-0 text-white" strokeWidth={2.5} />

@@ -1,266 +1,270 @@
+<div dir="rtl">
+
 <div align="center">
   <h1>Easy AI</h1>
-  <p><strong>让 AI 学习变得真的简单。</strong> 一个面向 AI 学习者、开发者和创作者的知识网站。</p>
+  <p><strong>یادگیری AI را واقعاً ساده می‌کنیم.</strong> یک وب‌سایت دانش برای یادگیرندگان، توسعه‌دهندگان و تولیدکنندگان محتوای AI.</p>
 </div>
 
 <img src="./public/imgs/banner.png" />
 
-## 项目定位
+## جایگاه پروژه
 
-Easy AI 把复杂的 AI 概念、模型信息、评测基准、教程、提示词样本和行业动态，整理成适合阅读、查询、比较和持续追踪的形式。
+Easy AI مفاهیم پیچیده AI، اطلاعات مدل‌ها، بنچمارک‌های ارزیابی، آموزش‌ها، نمونه‌های پرامپت و تحولات صنعت را به شکلی مرتب می‌کند که برای خواندن، جستجو، مقایسه و دنبال کردن مداوم مناسب باشد.
 
-它不是一个堆链接的资料库，而是一个经过编辑整理的 AI 学习入口：你可以从一个概念开始理解原理，也可以直接查询模型参数、拆解优秀提示词、追踪最新日报、阅读教程，或者找到可用的 AI 工具。
+این یک مخزن انباشته از لینک نیست، بلکه یک درگاه یادگیری AI است که با دقت ویرایش و مرتب شده: می‌توانید از یک مفهوم شروع کنید و اصل آن را بفهمید، یا مستقیم پارامترهای مدل‌ها را جستجو کنید، پرامپت‌های عالی را تحلیل کنید، جدیدترین گزارش‌های روزانه را دنبال کنید، آموزش بخوانید یا ابزارهای AI قابل استفاده پیدا کنید.
 
-## 功能模块
+## ماژول‌ها
 
-| 模块 | 说明 |
+| ماژول | توضیح |
 |------|------|
-| **[AI 知视](https://mmh1.top/#/ai-knowledge)** | 用图文和互动页面解释 AI 关键核心概念 |
-| **[AI 文章](https://mmh1.top/#/ai-article)** | 编辑专栏长文，按时间线浏览，用精美单页 HTML 承载深度阅读 |
-| **[AI 提示词](https://mmh1.top/#/ai-prompts)** | 收录和拆解优秀 AI 产品提示词，提供原文、中文翻译和学习分析 |
-| **[AI 作品](https://mmh1.top/#/ai-application)** | 花园老师开源的 AI 相关作品合集 |
-| **[AI 模型](https://mmh1.top/#/ai-model)** | 主流大模型信息，支持搜索、筛选、卡片视图和族谱树视图 |
-| **[AI 评估](https://mmh1.top/#/ai-benchmark)** | 汇总主流评测基准，帮助理解模型能力边界 |
-| **[AI 日报](https://mmh1.top/#/ai-daily)** | 每日精选 AI 行业动态和技术进展 |
-| **[AI 教程](https://mmh1.top/#/ai-tutorial)** | 体系化整理视频、文档和实战教程 |
-| **[知识星球](https://mmh1.top/#/knowledge-planet)** | 深度内容、持续更新和社群交流入口 |
+| **[دانش بصری AI](https://mmh1.top/#/ai-knowledge)** | توضیح مفاهیم کلیدی و اصلی AI با تصویر، متن و صفحات تعاملی |
+| **[مقالات AI](https://mmh1.top/#/ai-article)** | مقالات بلند ستون سردبیری، مرور بر اساس خط زمانی، با صفحات HTML تک‌فایلی زیبا برای مطالعه عمیق |
+| **[پرامپت‌های AI](https://mmh1.top/#/ai-prompts)** | گردآوری و تحلیل پرامپت‌های عالی محصولات AI، با متن اصلی، ترجمه و تحلیل آموزشی |
+| **[آثار AI](https://mmh1.top/#/ai-application)** | مجموعه آثار متن‌باز مرتبط با AI از معلم «باغ» |
+| **[مدل‌های AI](https://mmh1.top/#/ai-model)** | اطلاعات مدل‌های بزرگ اصلی، با پشتیبانی از جستجو، فیلتر، نمای کارتی و نمای درختی شجره‌نامه |
+| **[ارزیابی AI](https://mmh1.top/#/ai-benchmark)** | گردآوری بنچمارک‌های اصلی ارزیابی، برای کمک به فهم مرزهای توانایی مدل‌ها |
+| **[گزارش روزانه AI](https://mmh1.top/#/ai-daily)** | تحولات منتخب روزانه صنعت AI و پیشرفت‌های فنی |
+| **[آموزش‌های AI](https://mmh1.top/#/ai-tutorial)** | آموزش‌های ویدئویی، مستندات و تمرین‌های عملی به‌صورت نظام‌مند |
+| **[سیاره دانش](https://mmh1.top/#/knowledge-planet)** | درگاه محتوای عمیق، به‌روزرسانی مداوم و تبادل در جامعه |
 
 
-## 详细内容清单
+## فهرست کامل محتوا
 
-下面保留完整内容清单，方便直接跳转和查看当前已收录主题。
+فهرست کامل محتوا در ادامه آمده تا بتوانید مستقیم به موضوعات ثبت‌شده فعلی بروید و آن‌ها را ببینید.
 
-### 📚 AI 知视：轻松理解各种 AI 相关概念
+### 📚 دانش بصری AI: مفاهیم مرتبط با AI را به‌آسانی درک کنید
 
-| 分类 | 主题内容 | 状态 |
+| دسته‌بندی | محتوای موضوع | وضعیت |
 |------|----------|------|
-| 入门 | **[轻松理解 NLP](https://mmh1.top/#/ai-knowledge/nlp)** - 人工智能中处理自然语言的分支 | ✅  |
-| 入门 | **[轻松理解 Token](https://mmh1.top/#/ai-knowledge/token)** - 模型在生成文本时的最小单位，每个 Token 代表一个词或词的一部分 | ✅  |
-| 入门 | **[轻松理解 LLM](https://mmh1.top/#/ai-knowledge/llm)** - 革命性的人工智能技术，重新定义机器理解能力 | ✅  |
-| 入门 | **[轻松理解 Transformer](https://mmh1.top/#/ai-knowledge/transformer)** - 自注意力架构，高效处理长文本 | ✅  |
-| 入门 | **[轻松理解 注意力机制](https://mmh1.top/#/ai-knowledge/attention)** - 让模型判断当前内容该重点参考哪里 | ✅ |
-| 入门 | **[轻松理解 Multi-Head Attention](https://mmh1.top/#/ai-knowledge/multi-head-attention)** - 用多个注意力头观察不同关系 | ✅ |
-| 入门 | **[轻松理解 Multi-Query Attention](https://mmh1.top/#/ai-knowledge/multi-query-attention)** - 多个查询头共享同一组键和值 | ✅ |
-| 入门 | **轻松理解 Grouped Query Attention** - 分组共享键和值，兼顾速度和效果 | 👷 |
-| 入门 | **轻松理解 Flash Attention** - 减少显存读写，加速注意力计算 | 👷 |
-| 入门 | **轻松理解 Sliding Window Attention** - 每段文字只关注附近内容 | 👷 |
-| 入门 | **轻松理解 Dual Chunk Attention** - 分块扩展模型的上下文长度 | 👷 |
-| 入门 | **轻松理解 矩阵与秩** - 理解矩阵信息量和低秩结构 | 👷 |
-| 入门 | **轻松理解 Temperature 与 Top-p** - 控制回答的稳定程度和候选范围 | 👷 |
-| 提示词 | **[轻松理解 Prompt](https://mmh1.top/#/ai-knowledge/prompt)** - 人和模型沟通任务意图的指令文本，是使用大模型的第一入口 | ✅  |
-| 提示词 | **[轻松理解 System Prompt](https://mmh1.top/#/ai-knowledge/system-prompt)** - 用来设定模型的角色、边界、语气和优先规则 | ✅  |
-| 提示词 | **[轻松理解 Few-shot Learning](https://mmh1.top/#/ai-knowledge/few-shot)** - 通过给模型几个示例，让模型模仿格式和思路完成新任务 | ✅  |
-| 提示词 | **[轻松理解 Chain of Thought](https://mmh1.top/#/ai-knowledge/chain-of-thought)** - 让模型显式拆解推理步骤，提升复杂问题的解题稳定性 | ✅  |
-| 架构 | **[轻松理解 BERT](https://mmh1.top/#/ai-knowledge/bert)** - 基于 Encoder-Only 架构的预训练语言模型 | ✅  |
-| 架构 | **[轻松理解 GPT](https://mmh1.top/#/ai-knowledge/gpt)** - 基于 Decoder-Only PLM 架构的预训练语言模型 | ✅  |
-| 架构 | **[轻松理解 Llama](https://mmh1.top/#/ai-knowledge/llama)** - 基于 Decoder-Only 架构的预训练语言模型 | ✅  |
-| 架构 | **[轻松理解 T5](https://mmh1.top/#/ai-knowledge/t5)** - 基于 Encoder-Decoder 架构的预训练语言模型 | ✅  |
-| 架构 | **[轻松理解 MoE](https://mmh1.top/#/ai-knowledge/moe)** - 一种基于专家路由的模型架构，能够并行处理不同任务 | ✅  |
-| 架构 | **[轻松理解 多模态](https://mmh1.top/#/ai-knowledge/multimodality)** - 让 AI 理解和生成图片、视频、音频等多种模态数据 | ✅  |
-| 架构 | **[轻松理解 模态编码](https://mmh1.top/#/ai-knowledge/modality-encoding)** - 把图片和音频转换成模型能处理的数据 | ✅ |
-| 架构 | **[轻松理解 表示空间](https://mmh1.top/#/ai-knowledge/representation-space)** - 模型怎样用空间位置表达含义 | ✅ |
-| 架构 | **[轻松理解 DeepSeek R1](https://mmh1.top/#/ai-knowledge/deepseek-r1)** - 通过创新算法让大语言模型获得强大推理能力 | ✅  |
-| 架构 | **轻松理解 RoPE 位置编码** - 让模型知道文字的顺序和相对距离 | 👷 |
-| 训练 | **[轻松理解 预训练](https://mmh1.top/#/ai-knowledge/pretrain)** - 大语言模型训练的第一阶段 | ✅  |
-| 训练 | **[轻松理解 SFT](https://mmh1.top/#/ai-knowledge/sft)** - 将预训练模型转化为实用 AI 助手的关键步骤 | ✅  |
-| 训练 | **[轻松理解 RLHF](https://mmh1.top/#/ai-knowledge/rlhf)** - 通过强化学习将人类的主观偏好转化为模型的客观优化目标 | ✅  |
-| 训练 | **[轻松理解 奖励模型](https://mmh1.top/#/ai-knowledge/reward-model)** - 在 RLHF 中学习人类偏好，为模型输出打分 | ✅ |
-| 训练 | **[轻松理解 DPO](https://mmh1.top/#/ai-knowledge/dpo)** - 不用强化学习也能做偏好对齐的一种主流训练方法 | ✅ |
-| 训练 | **[轻松理解 训练数据集](https://mmh1.top/#/ai-knowledge/training-dataset)** - 模型能力很大程度来自数据质量、覆盖范围和清洗方式 | ✅ |
-| 训练 | **[轻松理解 数据标注](https://mmh1.top/#/ai-knowledge/data-annotation)** - 人工或半自动给数据加标签，用于监督微调、评估和偏好学习 | ✅ |
-| 训练 | **[轻松理解 数据清洗](https://mmh1.top/#/ai-knowledge/data-cleaning)** - 去除重复、脏数据、低质样本，提升模型训练和检索效果 | ✅ |
-| 训练 | **[轻松理解 数据集构建](https://mmh1.top/#/ai-knowledge/dataset-construction)** - 用 Easy Dataset 等工具自动化构造、清洗和生成训练数据集 | ✅ |
-| 训练 | **[轻松理解 MGA](https://mmh1.top/#/ai-knowledge/mga)** - 通过轻量级框架将现有语料系统重构为多样化变体 | ✅  |
-| 训练 | **轻松理解 梯度与反向传播** - 根据错误方向调整模型参数 | 👷 |
-| 训练 | **轻松理解 优化器** - 决定模型参数每一步怎样更新 | 👷 |
-| 评估 | **轻松理解 模型评估** - 用指标、测试集和人工判断衡量模型是否真的好用 | 👷 |
-| 评估 | **轻松理解 LLM-as-a-Judge** - 用大模型给其他模型的回答打分 | 👷 |
-| 评估 | **轻松理解 困惑度** - 衡量模型预测下一段文字的把握程度 | 👷 |
-| 微调 | **[轻松理解 为什么要微调](https://mmh1.top/#/ai-knowledge/whyfinetune)** - 长文本、知识库、微调的对比分析 | ✅  |
-| 微调 | **[轻松理解 模型微调方法](https://mmh1.top/#/ai-knowledge/finetune)** - 全参数微调、LoRA 微调、冻结微调对比 | ✅  |
-| 微调 | **[轻松理解 LoRA](https://mmh1.top/#/ai-knowledge/lora)** - 当前最受欢迎的大模型高效微调方法之一 | ✅  |
-| 微调 | **[轻松理解 微调参数：LoRA 秩](https://mmh1.top/#/ai-knowledge/lora-rank)** - 决定模型微调时表达能力的关键参数 | ✅  |
-| 微调 | **[轻松理解 微调参数：学习率](https://mmh1.top/#/ai-knowledge/lr)** - 决定模型参数调整幅度的关键参数 | ✅  |
-| 微调 | **[轻松理解 微调参数：训练轮数](https://mmh1.top/#/ai-knowledge/epochs)** - 模型完整遍历训练数据集的次数 | ✅  |
-| 微调 | **[轻松理解 微调参数：批量大小](https://mmh1.top/#/ai-knowledge/bs)** - 每次更新模型参数时的样本数量 | ✅  |
-| 微调 | **[轻松理解 Loss](https://mmh1.top/#/ai-knowledge/loss)** - 模型在训练过程中用于衡量预测值与真实值之间差异的指标 | ✅  |
-| 微调 | **轻松理解 拟合与过拟合** - 模型怎样学习规律，又为何会记得太死 | 👷 |
-| 微调 | **[轻松理解 DeepSpeed](https://mmh1.top/#/ai-knowledge/deepspeed)** - 深度学习优化库，可以简化分布式训练与推理过程 | ✅  |
-| 部署 | **[轻松理解 模型蒸馏](https://mmh1.top/#/ai-knowledge/distill)** - 将复杂大模型知识压缩到轻量小模型的技术 | ✅  |
-| 部署 | **[轻松理解 模型量化](https://mmh1.top/#/ai-knowledge/quantization)** - 将模型权重转换为较低精度表示的技术 | ✅  |
-| 部署 | **[轻松理解 GGUF](https://mmh1.top/#/ai-knowledge/gguf)** - 实现更高效模型存储、加载和部署的格式 | ✅  |
-| 部署 | **[轻松理解 Safetensors](https://mmh1.top/#/ai-knowledge/safetensors)** - 安全高效地保存和加载模型权重 | ✅  |
-| 部署 | **[轻松理解 ONNX](https://mmh1.top/#/ai-knowledge/onnx)** - 让模型跨框架转换和部署 | ✅  |
-| 部署 | **[轻松理解 大模型精度格式](https://mmh1.top/#/ai-knowledge/precision-formats)** - 看懂 FP32、BF16、FP16 和 FP8 | ✅  |
-| 部署 | **[轻松理解 模型部署](https://mmh1.top/#/ai-knowledge/deployment)** - 对比 Ollama 和 VLLM 两大主流本地部署方案 | ✅  |
-| 部署 | **[轻松理解 模型推理](https://mmh1.top/#/ai-knowledge/model-inference)** - 模型接收输入并生成输出的运行过程，是部署后的核心环节 | ✅ |
-| 部署 | **[轻松理解 KV Cache](https://mmh1.top/#/ai-knowledge/kv-cache)** - 缓存历史注意力计算结果，加速长文本生成 | ✅ |
-| 部署 | **轻松理解 vLLM** - 高性能大模型推理服务框架，适合高并发部署 | 👷 |
-| 部署 | **轻松理解 Ollama** - 面向本地运行大模型的轻量工具，适合个人和开发调试 | 👷 |
-| 部署 | **[轻松理解 Continuous Batching](https://mmh1.top/#/ai-knowledge/continuous-batching)** - 动态安排请求，提高推理吞吐 | ✅ |
-| 部署 | **[轻松理解 推测解码](https://mmh1.top/#/ai-knowledge/speculative-decoding)** - 先猜多个 Token，再由大模型验证 | ✅ |
-| 部署 | **[轻松理解 结构化输出](https://mmh1.top/#/ai-knowledge/structured-output)** - 让模型稳定生成 JSON 等固定格式 | ✅ |
-| Agent | **[轻松理解 Agent](https://mmh1.top/#/ai-knowledge/agent)** - 让 AI 不只是答题机器，而是会做事的智能体 | ✅  |
-| Agent | **[轻松理解 Agent Loop](https://mmh1.top/#/ai-knowledge/agent-loop)** - Agent 在循环中反复推理、调用工具、观察结果，直到任务完成 | ✅  |
-| Agent | **[轻松理解 Function Calling](https://mmh1.top/#/ai-knowledge/function-calling)** - 大语言模型与外部数据源、工具交互的重要方式 | ✅  |
-| Agent | **[轻松理解 MCP](https://mmh1.top/#/ai-knowledge/mcp)** - 开放标准协议，解决 AI 模型与外部数据源交互难题 | ✅  |
-| Agent | **[轻松理解 SubAgent](https://mmh1.top/#/ai-knowledge/sub-agent)** - 将探索性任务放到独立空间执行，只把关键结果带回主上下文 | ✅  |
-| Agent | **[轻松理解 Multi Agent](https://mmh1.top/#/ai-knowledge/multi-agent)** - 多个 Agent 分工合作，比如规划、执行、审查、总结 | ✅ |
-| Agent | **[轻松理解 Agent TodoList](https://mmh1.top/#/ai-knowledge/agent-todo)** - 用清单机制防遗忘、展示进度，并支撑复杂任务编排 | ✅  |
-| Agent | **[轻松理解 Agent 运行模式](https://mmh1.top/#/ai-knowledge/agent-modes)** - 理解 Plan / Default / Auto 等模式在自主性与安全性之间的取舍 | ✅  |
-| Agent | **[轻松理解 Agent 沙箱](https://mmh1.top/#/ai-knowledge/agent-sandbox)** - 通过文件系统与网络隔离，为 Agent 划定安全边界 | ✅  |
-| Agent | **[轻松理解 Agent 记忆](https://mmh1.top/#/ai-knowledge/agent-memory)** - 让 Agent 在上下文窗口之外记住偏好、配置与历史经验 | ✅  |
-| Agent | **[轻松理解 Context Window](https://mmh1.top/#/ai-knowledge/context-window)** - 理解大模型每次请求中可使用的临时工作内存 | ✅  |
-| Agent | **[轻松理解 Context Engineering](https://mmh1.top/#/ai-knowledge/context-engineering)** - 管理模型每次工作时看到的信息 | ✅ |
-| Agent | **轻松理解 Harness** - 驱动你的 Agent 更持续稳定地工作 | 👷 |
-| Agent | **轻松理解 Skills** - Agent 通用外部能力和流程拓展的标准 | 👷 |
-| Agent | **轻松理解 Vibe Coding** - 用自然语言和 AI 协作完成编程 | 👷 |
-| 检索 | **[轻松理解 RAG](https://mmh1.top/#/ai-knowledge/rag)** - 检索增强生成技术，解决大语言模型事实性问题 | ✅  |
-| 检索 | **[轻松理解 模型幻觉](https://mmh1.top/#/ai-knowledge/illusion)** - 模型在生成文本时出现的不真实、不合理的现象 | ✅  |
-| 检索 | **[轻松理解 Embedding](https://mmh1.top/#/ai-knowledge/embedding)** - 把文本、图片等内容转换成向量，让机器可以计算语义相似度 | ✅  |
-| 检索 | **[轻松理解 向量数据库](https://mmh1.top/#/ai-knowledge/vector-database)** - 专门存储和检索 Embedding 向量的数据库，是 RAG 的核心基础设施 | ✅ |
-| 检索 | **[轻松理解 Chunk](https://mmh1.top/#/ai-knowledge/chunk)** - RAG 中把长文档切成小片段的过程，直接影响召回质量 | ✅ |
-| 检索 | **[轻松理解 召回与重排](https://mmh1.top/#/ai-knowledge/recall-rerank)** - 先粗略找出相关资料，再精排出最有价值内容，提升 RAG 答案质量 | ✅ |
-| 检索 | **轻松理解 Hybrid Search** - 同时使用关键词检索和向量检索，兼顾精确匹配和语义匹配 | 👷 |
-| 检索 | **[轻松理解 GraphRAG](https://mmh1.top/#/ai-knowledge/graphrag)** - 沿着实体关系找资料，回答跨文档与整体问题 | ✅ |
-| 检索 | **[轻松理解 知识图谱](https://mmh1.top/#/ai-knowledge/knowledge-graph)** - 用实体和关系组织知识，支持多跳查询 | ✅ |
-| 安全 | **[轻松理解 Prompt Injection](https://mmh1.top/#/ai-knowledge/prompt-injection)** - 不可信文字混进任务，让 AI 改听另一套要求 | ✅ |
-| 安全 | **[轻松理解 AI Guardrails](https://mmh1.top/#/ai-knowledge/ai-guardrails)** - 在输入、行动和输出周围放置检查、权限与人工确认 | ✅ |
-| 安全 | **[轻松理解 模型越狱](https://mmh1.top/#/ai-knowledge/jailbreak)** - 特殊表达绕过内容安全限制，诱导模型回答原本会拒绝的请求 | ✅ |
-| 安全 | **轻松理解 数据投毒** - 用恶意数据污染训练或知识库 | 👷 |
+| مقدماتی | **[درک آسان NLP](https://mmh1.top/#/ai-knowledge/nlp)** - شاخه‌ای از هوش مصنوعی که زبان طبیعی را پردازش می‌کند | ✅  |
+| مقدماتی | **[درک آسان Token](https://mmh1.top/#/ai-knowledge/token)** - کوچک‌ترین واحد مدل هنگام تولید متن؛ هر Token نماینده یک کلمه یا بخشی از یک کلمه است | ✅  |
+| مقدماتی | **[درک آسان LLM](https://mmh1.top/#/ai-knowledge/llm)** - فناوری انقلابی هوش مصنوعی که توانایی فهم ماشین را از نو تعریف می‌کند | ✅  |
+| مقدماتی | **[درک آسان Transformer](https://mmh1.top/#/ai-knowledge/transformer)** - معماری خودتوجهی، پردازش کارآمد متن طولانی | ✅  |
+| مقدماتی | **[درک آسان مکانیزم توجه](https://mmh1.top/#/ai-knowledge/attention)** - به مدل اجازه می‌دهد تشخیص دهد برای محتوای فعلی به کجا بیشتر توجه کند | ✅ |
+| مقدماتی | **[درک آسان Multi-Head Attention](https://mmh1.top/#/ai-knowledge/multi-head-attention)** - مشاهده روابط مختلف با چند سر توجه | ✅ |
+| مقدماتی | **[درک آسان Multi-Query Attention](https://mmh1.top/#/ai-knowledge/multi-query-attention)** - چند سرِ query یک مجموعه key و value مشترک دارند | ✅ |
+| مقدماتی | **درک آسان Grouped Query Attention** - اشتراک گروهی key و value، با تعادل سرعت و کیفیت | 👷 |
+| مقدماتی | **درک آسان Flash Attention** - کاهش خواندن و نوشتن حافظه گرافیکی، شتاب محاسبه توجه | 👷 |
+| مقدماتی | **درک آسان Sliding Window Attention** - هر بخش متن فقط به محتوای نزدیک توجه می‌کند | 👷 |
+| مقدماتی | **درک آسان Dual Chunk Attention** - گسترش طول context مدل با تقسیم به بلوک‌ها | 👷 |
+| مقدماتی | **درک آسان ماتریس و رتبه** - فهم میزان اطلاعات ماتریس و ساختار کم‌رتبه | 👷 |
+| مقدماتی | **درک آسان Temperature و Top-p** - کنترل میزان پایداری پاسخ و دامنه کاندیدها | 👷 |
+| پرامپت | **[درک آسان Prompt](https://mmh1.top/#/ai-knowledge/prompt)** - متن دستوری که قصد وظیفه را بین انسان و مدل منتقل می‌کند؛ نخستین درگاه استفاده از مدل‌های بزرگ | ✅  |
+| پرامپت | **[درک آسان System Prompt](https://mmh1.top/#/ai-knowledge/system-prompt)** - برای تعیین نقش، مرزها، لحن و قوانین اولویت مدل | ✅  |
+| پرامپت | **[درک آسان Few-shot Learning](https://mmh1.top/#/ai-knowledge/few-shot)** - با دادن چند نمونه به مدل، مدل از قالب و طرز فکر تقلید می‌کند و کار جدید را انجام می‌دهد | ✅  |
+| پرامپت | **[درک آسان Chain of Thought](https://mmh1.top/#/ai-knowledge/chain-of-thought)** - مدل گام‌های استدلال را صریحاً تجزیه می‌کند و پایداری حل مسائل پیچیده بالا می‌رود | ✅  |
+| معماری | **[درک آسان BERT](https://mmh1.top/#/ai-knowledge/bert)** - مدل زبانی پیش‌آموزش‌دیده مبتنی بر معماری Encoder-Only | ✅  |
+| معماری | **[درک آسان GPT](https://mmh1.top/#/ai-knowledge/gpt)** - مدل زبانی پیش‌آموزش‌دیده مبتنی بر معماری Decoder-Only PLM | ✅  |
+| معماری | **[درک آسان Llama](https://mmh1.top/#/ai-knowledge/llama)** - مدل زبانی پیش‌آموزش‌دیده مبتنی بر معماری Decoder-Only | ✅  |
+| معماری | **[درک آسان T5](https://mmh1.top/#/ai-knowledge/t5)** - مدل زبانی پیش‌آموزش‌دیده مبتنی بر معماری Encoder-Decoder | ✅  |
+| معماری | **[درک آسان MoE](https://mmh1.top/#/ai-knowledge/moe)** - معماری مدل مبتنی بر مسیریابی متخصص‌ها که می‌تواند وظایف مختلف را موازی پردازش کند | ✅  |
+| معماری | **[درک آسان چندوجهی](https://mmh1.top/#/ai-knowledge/multimodality)** - AI داده‌های چندوجهی مثل تصویر، ویدئو و صدا را می‌فهمد و تولید می‌کند | ✅  |
+| معماری | **[درک آسان کدگذاری وجه](https://mmh1.top/#/ai-knowledge/modality-encoding)** - تبدیل تصویر و صدا به داده‌ای که مدل می‌تواند پردازش کند | ✅ |
+| معماری | **[درک آسان فضای بازنمایی](https://mmh1.top/#/ai-knowledge/representation-space)** - مدل چگونه با موقعیت مکانی معنا را بیان می‌کند | ✅ |
+| معماری | **[درک آسان DeepSeek R1](https://mmh1.top/#/ai-knowledge/deepseek-r1)** - با الگوریتم‌های نوآورانه به مدل زبانی بزرگ توانایی استدلال قوی می‌دهد | ✅  |
+| معماری | **درک آسان کدگذاری موقعیت RoPE** - به مدل ترتیب و فاصله نسبی کلمات را می‌فهماند | 👷 |
+| آموزش | **[درک آسان پیش‌آموزش](https://mmh1.top/#/ai-knowledge/pretrain)** - نخستین مرحله آموزش مدل زبانی بزرگ | ✅  |
+| آموزش | **[درک آسان SFT](https://mmh1.top/#/ai-knowledge/sft)** - گام کلیدی تبدیل مدل پیش‌آموزش‌دیده به دستیار کاربردی AI | ✅  |
+| آموزش | **[درک آسان RLHF](https://mmh1.top/#/ai-knowledge/rlhf)** - با یادگیری تقویتی، ترجیحات ذهنی انسان را به هدف بهینه‌سازی عینی مدل تبدیل می‌کند | ✅  |
+| آموزش | **[درک آسان مدل پاداش](https://mmh1.top/#/ai-knowledge/reward-model)** - در RLHF ترجیحات انسان را یاد می‌گیرد و به خروجی مدل امتیاز می‌دهد | ✅ |
+| آموزش | **[درک آسان DPO](https://mmh1.top/#/ai-knowledge/dpo)** - روش آموزشی رایجی که بدون یادگیری تقویتی هم هم‌ترازی ترجیح را انجام می‌دهد | ✅ |
+| آموزش | **[درک آسان مجموعه‌داده آموزشی](https://mmh1.top/#/ai-knowledge/training-dataset)** - توانایی مدل تا حد زیادی از کیفیت، پوشش و روش پاک‌سازی داده می‌آید | ✅ |
+| آموزش | **[درک آسان برچسب‌گذاری داده](https://mmh1.top/#/ai-knowledge/data-annotation)** - برچسب زدن انسانی یا نیمه‌خودکار به داده، برای تنظیم دقیق نظارت‌شده، ارزیابی و یادگیری ترجیح | ✅ |
+| آموزش | **[درک آسان پاک‌سازی داده](https://mmh1.top/#/ai-knowledge/data-cleaning)** - حذف تکراری‌ها، داده‌های کثیف و نمونه‌های کم‌کیفیت، برای بهبود آموزش مدل و نتیجه بازیابی | ✅ |
+| آموزش | **[درک آسان ساخت مجموعه‌داده](https://mmh1.top/#/ai-knowledge/dataset-construction)** - ساخت، پاک‌سازی و تولید خودکار مجموعه‌داده آموزشی با ابزارهایی مثل Easy Dataset | ✅ |
+| آموزش | **[درک آسان MGA](https://mmh1.top/#/ai-knowledge/mga)** - با یک چارچوب سبک، پیکره موجود را به‌طور نظام‌مند به گونه‌های متنوع بازسازی می‌کند | ✅  |
+| آموزش | **درک آسان گرادیان و پس‌انتشار** - تنظیم پارامترهای مدل بر اساس جهت خطا | 👷 |
+| آموزش | **درک آسان بهینه‌ساز** - تعیین می‌کند پارامترهای مدل در هر گام چگونه به‌روز شوند | 👷 |
+| ارزیابی | **درک آسان ارزیابی مدل** - سنجش این‌که مدل واقعاً کارآمد است با معیارها، مجموعه آزمون و قضاوت انسانی | 👷 |
+| ارزیابی | **درک آسان LLM-as-a-Judge** - امتیاز دادن به پاسخ‌های مدل‌های دیگر با یک مدل بزرگ | 👷 |
+| ارزیابی | **درک آسان سرگشتگی (Perplexity)** - سنجش میزان اطمینان مدل در پیش‌بینی ادامه متن | 👷 |
+| تنظیم دقیق | **[درک آسان چرا تنظیم دقیق](https://mmh1.top/#/ai-knowledge/whyfinetune)** - تحلیل مقایسه‌ای متن طولانی، پایگاه دانش و تنظیم دقیق | ✅  |
+| تنظیم دقیق | **[درک آسان روش‌های تنظیم دقیق مدل](https://mmh1.top/#/ai-knowledge/finetune)** - مقایسه تنظیم دقیق تمام‌پارامتر، تنظیم دقیق LoRA و تنظیم دقیق منجمد | ✅  |
+| تنظیم دقیق | **[درک آسان LoRA](https://mmh1.top/#/ai-knowledge/lora)** - یکی از محبوب‌ترین روش‌های کارآمد تنظیم دقیق مدل‌های بزرگ در حال حاضر | ✅  |
+| تنظیم دقیق | **[درک آسان پارامتر تنظیم دقیق: رتبه LoRA](https://mmh1.top/#/ai-knowledge/lora-rank)** - پارامتر کلیدی که توان بیان مدل را هنگام تنظیم دقیق تعیین می‌کند | ✅  |
+| تنظیم دقیق | **[درک آسان پارامتر تنظیم دقیق: نرخ یادگیری](https://mmh1.top/#/ai-knowledge/lr)** - پارامتر کلیدی که میزان تغییر پارامترهای مدل را تعیین می‌کند | ✅  |
+| تنظیم دقیق | **[درک آسان پارامتر تنظیم دقیق: تعداد دوره‌ها](https://mmh1.top/#/ai-knowledge/epochs)** - تعداد دفعاتی که مدل کل مجموعه‌داده آموزشی را پیمایش می‌کند | ✅  |
+| تنظیم دقیق | **[درک آسان پارامتر تنظیم دقیق: اندازه دسته](https://mmh1.top/#/ai-knowledge/bs)** - تعداد نمونه‌ها در هر بار به‌روزرسانی پارامترهای مدل | ✅  |
+| تنظیم دقیق | **[درک آسان Loss](https://mmh1.top/#/ai-knowledge/loss)** - معیاری که مدل در آموزش برای سنجش اختلاف پیش‌بینی و مقدار واقعی استفاده می‌کند | ✅  |
+| تنظیم دقیق | **درک آسان برازش و بیش‌برازش** - مدل چگونه الگو یاد می‌گیرد و چرا گاهی بیش از حد حفظ می‌کند | 👷 |
+| تنظیم دقیق | **[درک آسان DeepSpeed](https://mmh1.top/#/ai-knowledge/deepspeed)** - کتابخانه بهینه‌سازی یادگیری عمیق که آموزش و استنتاج توزیع‌شده را ساده می‌کند | ✅  |
+| استقرار | **[درک آسان تقطیر مدل](https://mmh1.top/#/ai-knowledge/distill)** - فناوری فشرده کردن دانش مدل بزرگ پیچیده در مدل کوچک سبک | ✅  |
+| استقرار | **[درک آسان کوانتیزه‌سازی مدل](https://mmh1.top/#/ai-knowledge/quantization)** - فناوری تبدیل وزن‌های مدل به نمایش با دقت پایین‌تر | ✅  |
+| استقرار | **[درک آسان GGUF](https://mmh1.top/#/ai-knowledge/gguf)** - قالبی برای ذخیره، بارگذاری و استقرار کارآمدتر مدل | ✅  |
+| استقرار | **[درک آسان Safetensors](https://mmh1.top/#/ai-knowledge/safetensors)** - ذخیره و بارگذاری امن و کارآمد وزن‌های مدل | ✅  |
+| استقرار | **[درک آسان ONNX](https://mmh1.top/#/ai-knowledge/onnx)** - تبدیل و استقرار مدل بین فریم‌ورک‌ها | ✅  |
+| استقرار | **[درک آسان فرمت‌های دقت مدل بزرگ](https://mmh1.top/#/ai-knowledge/precision-formats)** - فهم FP32، BF16، FP16 و FP8 | ✅  |
+| استقرار | **[درک آسان استقرار مدل](https://mmh1.top/#/ai-knowledge/deployment)** - مقایسه Ollama و VLLM، دو راهکار اصلی استقرار محلی | ✅  |
+| استقرار | **[درک آسان استنتاج مدل](https://mmh1.top/#/ai-knowledge/model-inference)** - فرایند اجرایی دریافت ورودی و تولید خروجی توسط مدل؛ حلقه اصلی پس از استقرار | ✅ |
+| استقرار | **[درک آسان KV Cache](https://mmh1.top/#/ai-knowledge/kv-cache)** - کش نتایج محاسبه توجه قبلی، شتاب تولید متن طولانی | ✅ |
+| استقرار | **درک آسان vLLM** - فریم‌ورک سرویس استنتاج مدل بزرگ با کارایی بالا، مناسب استقرار با هم‌روندی بالا | 👷 |
+| استقرار | **درک آسان Ollama** - ابزار سبک برای اجرای محلی مدل‌های بزرگ، مناسب استفاده شخصی و اشکال‌زدایی توسعه | 👷 |
+| استقرار | **[درک آسان Continuous Batching](https://mmh1.top/#/ai-knowledge/continuous-batching)** - زمان‌بندی پویای درخواست‌ها، افزایش توان عملیاتی استنتاج | ✅ |
+| استقرار | **[درک آسان رمزگشایی گمانه‌ای](https://mmh1.top/#/ai-knowledge/speculative-decoding)** - اول چند Token حدس زده می‌شود، سپس مدل بزرگ تأیید می‌کند | ✅ |
+| استقرار | **[درک آسان خروجی ساختاریافته](https://mmh1.top/#/ai-knowledge/structured-output)** - مدل قالب‌های ثابتی مثل JSON را پایدار تولید می‌کند | ✅ |
+| Agent | **[درک آسان Agent](https://mmh1.top/#/ai-knowledge/agent)** - AI نه فقط ماشین پاسخ‌گویی، بلکه عاملی هوشمند که کار انجام می‌دهد | ✅  |
+| Agent | **[درک آسان Agent Loop](https://mmh1.top/#/ai-knowledge/agent-loop)** - Agent در یک حلقه بارها استدلال می‌کند، ابزار فراخوانی می‌کند و نتیجه را مشاهده می‌کند تا کار تمام شود | ✅  |
+| Agent | **[درک آسان Function Calling](https://mmh1.top/#/ai-knowledge/function-calling)** - روش مهم تعامل مدل‌های زبانی بزرگ با منابع داده و ابزارهای بیرونی | ✅  |
+| Agent | **[درک آسان MCP](https://mmh1.top/#/ai-knowledge/mcp)** - پروتکل استاندارد باز برای حل مشکل تعامل مدل‌های AI با منابع داده بیرونی | ✅  |
+| Agent | **[درک آسان SubAgent](https://mmh1.top/#/ai-knowledge/sub-agent)** - وظایف اکتشافی در فضای مستقل اجرا می‌شوند و فقط نتایج کلیدی به context اصلی برمی‌گردند | ✅  |
+| Agent | **[درک آسان Multi Agent](https://mmh1.top/#/ai-knowledge/multi-agent)** - چند Agent با تقسیم کار همکاری می‌کنند، مثل برنامه‌ریزی، اجرا، بازبینی و جمع‌بندی | ✅ |
+| Agent | **[درک آسان Agent TodoList](https://mmh1.top/#/ai-knowledge/agent-todo)** - با مکانیزم چک‌لیست از فراموشی جلوگیری، پیشرفت را نمایش و هماهنگ‌سازی وظایف پیچیده را پشتیبانی می‌کند | ✅  |
+| Agent | **[درک آسان حالت‌های اجرای Agent](https://mmh1.top/#/ai-knowledge/agent-modes)** - فهم انتخاب بین خودمختاری و امنیت در حالت‌هایی مثل Plan / Default / Auto | ✅  |
+| Agent | **[درک آسان Sandbox در Agent](https://mmh1.top/#/ai-knowledge/agent-sandbox)** - با ایزوله‌سازی فایل‌سیستم و شبکه برای Agent مرز امنیتی تعیین می‌کند | ✅  |
+| Agent | **[درک آسان حافظه Agent](https://mmh1.top/#/ai-knowledge/agent-memory)** - Agent بیرون از پنجره context ترجیحات، تنظیمات و تجربه گذشته را به خاطر می‌سپارد | ✅  |
+| Agent | **[درک آسان Context Window](https://mmh1.top/#/ai-knowledge/context-window)** - فهم حافظه کاری موقتی که مدل بزرگ در هر درخواست در اختیار دارد | ✅  |
+| Agent | **[درک آسان Context Engineering](https://mmh1.top/#/ai-knowledge/context-engineering)** - مدیریت اطلاعاتی که مدل در هر بار کار می‌بیند | ✅ |
+| Agent | **درک آسان Harness** - Agent شما را برای کار پایدارتر و مداوم‌تر به حرکت درمی‌آورد | 👷 |
+| Agent | **درک آسان Skills** - استاندارد گسترش توانایی‌های بیرونی عمومی و فرایندهای Agent | 👷 |
+| Agent | **درک آسان Vibe Coding** - برنامه‌نویسی با همکاری AI به زبان طبیعی | 👷 |
+| بازیابی | **[درک آسان RAG](https://mmh1.top/#/ai-knowledge/rag)** - فناوری تولید تقویت‌شده با بازیابی، برای حل مسائل واقعیت‌محور مدل‌های زبانی بزرگ | ✅  |
+| بازیابی | **[درک آسان توهم مدل](https://mmh1.top/#/ai-knowledge/illusion)** - پدیده غیرواقعی و نامعقولی که هنگام تولید متن توسط مدل رخ می‌دهد | ✅  |
+| بازیابی | **[درک آسان Embedding](https://mmh1.top/#/ai-knowledge/embedding)** - تبدیل محتوایی مثل متن و تصویر به بردار تا ماشین بتواند شباهت معنایی را محاسبه کند | ✅  |
+| بازیابی | **[درک آسان پایگاه داده برداری](https://mmh1.top/#/ai-knowledge/vector-database)** - پایگاه داده مخصوص ذخیره و بازیابی بردارهای Embedding؛ زیرساخت اصلی RAG | ✅ |
+| بازیابی | **[درک آسان Chunk](https://mmh1.top/#/ai-knowledge/chunk)** - فرایند تقسیم اسناد طولانی به قطعه‌های کوچک در RAG که مستقیماً بر کیفیت بازیابی اثر دارد | ✅ |
+| بازیابی | **[درک آسان بازیابی و رتبه‌بندی مجدد](https://mmh1.top/#/ai-knowledge/recall-rerank)** - اول منابع مرتبط به‌طور تقریبی پیدا می‌شوند، سپس ارزشمندترین محتوا دقیق رتبه‌بندی می‌شود تا کیفیت پاسخ RAG بالا برود | ✅ |
+| بازیابی | **درک آسان Hybrid Search** - استفاده هم‌زمان از بازیابی کلیدواژه‌ای و برداری، با تعادل تطبیق دقیق و تطبیق معنایی | 👷 |
+| بازیابی | **[درک آسان GraphRAG](https://mmh1.top/#/ai-knowledge/graphrag)** - یافتن منابع در امتداد روابط موجودیت‌ها، برای پاسخ به سؤالات بین‌سندی و کلی | ✅ |
+| بازیابی | **[درک آسان گراف دانش](https://mmh1.top/#/ai-knowledge/knowledge-graph)** - سازمان‌دهی دانش با موجودیت‌ها و روابط، با پشتیبانی از پرسش چندپرشی | ✅ |
+| امنیت | **[درک آسان Prompt Injection](https://mmh1.top/#/ai-knowledge/prompt-injection)** - متن غیرقابل‌اعتماد وارد وظیفه می‌شود و AI به دستورهای دیگری گوش می‌دهد | ✅ |
+| امنیت | **[درک آسان AI Guardrails](https://mmh1.top/#/ai-knowledge/ai-guardrails)** - قرار دادن بررسی، دسترسی و تأیید انسانی در اطراف ورودی، اقدام و خروجی | ✅ |
+| امنیت | **[درک آسان جیلبریک مدل](https://mmh1.top/#/ai-knowledge/jailbreak)** - عبارت‌های خاص محدودیت‌های ایمنی محتوا را دور می‌زنند و مدل را به پاسخ درخواست‌هایی که رد می‌کرد وادار می‌کنند | ✅ |
+| امنیت | **درک آسان مسموم‌سازی داده** - آلوده کردن آموزش یا پایگاه دانش با داده مخرب | 👷 |
 
-> 💡 持续更新中 ...
+> 💡 در حال به‌روزرسانی مداوم ...
 ---
 
-### 🔑 AI 提示词：像读源码一样读懂优秀提示词
+### 🔑 پرامپت‌های AI: پرامپت‌های عالی را مثل خواندن کد منبع بفهمید
 
-收录 Claude Code、Cursor、Manus、Devin、Windsurf、v0、Kiro、Codex CLI、Gemini CLI、Cline、Lovable、Qoder 等 AI 产品的系统提示词、Agent 提示词和模式提示词，把原文、中文翻译和学习分析放在同一个阅读流程里。
+پرامپت‌های سیستمی، پرامپت‌های Agent و پرامپت‌های حالت محصولات AI مثل Claude Code، Cursor، Manus، Devin، Windsurf، v0، Kiro، Codex CLI، Gemini CLI، Cline، Lovable و Qoder را گردآوری کرده و متن اصلی، ترجمه و تحلیل آموزشی را در یک جریان خواندن قرار داده‌ایم.
 
-| 功能特性 | 说明 |
+| قابلیت | توضیح |
 |----------|------|
-| **提示词目录** | 当前收录 40 份样本，支持按产品、标签、场景和学习模块搜索筛选 |
-| **三段式阅读** | 每份提示词提供原文、中文翻译和学习分析，便于对照结构与设计意图 |
-| **学习模块标注** | 按身份定义、工具调用、安全规则、工作流程、输出风格、上下文管理等维度拆解 |
-| **方法论总结** | 从 40 份顶级 AI 工具提示词中提炼 12 条 Agent 提示词设计法则 |
-| **复用边界提醒** | 标注适用场景、亮点和不宜照抄的产品化细节 |
+| **فهرست پرامپت‌ها** | در حال حاضر ۴۰ نمونه ثبت شده، با پشتیبانی از جستجو و فیلتر بر اساس محصول، برچسب، سناریو و ماژول آموزشی |
+| **خواندن سه‌بخشی** | هر پرامپت متن اصلی، ترجمه و تحلیل آموزشی دارد تا ساختار و هدف طراحی را مقایسه کنید |
+| **برچسب ماژول‌های آموزشی** | تحلیل بر اساس ابعادی مثل تعریف هویت، فراخوانی ابزار، قوانین امنیتی، جریان کار، سبک خروجی و مدیریت context |
+| **جمع‌بندی روش‌شناسی** | ۱۲ قاعده طراحی پرامپت Agent استخراج‌شده از پرامپت‌های ۴۰ ابزار برتر AI |
+| **یادآوری مرزهای استفاده مجدد** | علامت‌گذاری سناریوهای مناسب، نکات برجسته و جزئیات محصولی که نباید کپی شوند |
 
-> 💡 **访问地址**：[AI 提示词目录](https://mmh1.top/#/ai-prompts) / [提示词设计方法论](https://mmh1.top/#/ai-prompts/methodology)
+> 💡 **آدرس دسترسی**: [فهرست پرامپت‌های AI](https://mmh1.top/#/ai-prompts) / [روش‌شناسی طراحی پرامپت](https://mmh1.top/#/ai-prompts/methodology)
 
 ---
 
-### 🎓 AI 教程：结合实战案例的完整教程体系
+### 🎓 آموزش‌های AI: سیستم آموزشی کامل همراه با نمونه‌های عملی
 
-| 分类 | 主题内容 | 状态 |
+| دسته‌بندی | محتوای موضوع | وضعیت |
 |------|----------|------|
-| AI 入门 | **[建立AI整体认知 - AI 技术是如何演进的？](https://www.bilibili.com/video/BV1nbJmzqEQJ)** | ✅ |
-| 模型部署 | **[教你搭建一个纯本地、可联网、带本地知识库的私人 DeepSeek](https://www.bilibili.com/video/BV1LYA8eCESA)** | ✅ |
-| 模型微调 | **[如何把你的 DeePseek-R1 微调为某个领域的专家？（理论篇）](https://www.bilibili.com/video/BV1WQAUeVEuj)** | ✅ |
-| 模型微调 | **[如何把你的 DeePseek-R1 微调为某个领域的专家？（实战篇）](https://www.bilibili.com/video/BV1s2AUe2EBq/)** | ✅ |
-| 模型微调 | **[LLaMA Factory 微调教程（二）：入门和安装使用](https://www.bilibili.com/video/BV1oTEwzcEeZ/)** | ✅ |
-| 模型微调 | **[LLaMA Factory 微调教程（二）：如何构建高质量数据集](https://www.bilibili.com/video/BV1MRMnz1EGW/)** | ✅ |
-| 模型微调 | **[LLaMA Factory 微调教程（三）：如何调整微调参数及显存消耗](https://www.bilibili.com/video/BV1BaM8zHEgh)** | ✅ |
-| 模型微调 | **[LLaMA Factory 微调教程（四）：如何观测微调过程及模型导出](https://www.bilibili.com/video/BV1GUKhzkEHA)** | ✅ |
-| 模型微调 | **[LLaMA Factory 微调教程（完整版）：从零微调一个专属领域大模型](https://www.bilibili.com/video/BV1djgRzxEts)** | ✅ |
-| 模型评估 | **[大模型评估入门，及业界主流测试基准](https://www.bilibili.com/video/BV1HnB7BjEAN/)** | ✅ |
-| 模型评估 | **[垂直领域模型评估：一键生成测试集 + 自动化评估实践指南](https://www.bilibili.com/video/BV1CRrVB7Eb4)** | ✅ |
-| 数据集 | **[想微调特定领域的模型，数据集究竟要怎么搞？](https://www.bilibili.com/video/BV1z9RLYWEjq/)** | ✅ |
-| 数据集 | **[如何把领域文献批量转换为可供模型微调的数据集？](https://www.bilibili.com/video/BV1y8QpYGE57/)** | ✅ |
-| 数据集 | **[使用 Easy Dataset 构造数据集实践教程](https://www.bilibili.com/video/BV1fyJhzHEb7/)** | ✅ |
-| 数据集 | **[五个数据集构建实战案例](https://www.bilibili.com/video/BV1Rq1hBtEJa/)** | ✅ |
-| Agent | **[MCP + 数据库，一种提高结构化数据检索精度的新方式](https://www.bilibili.com/video/BV12nRzYPEiK/)** | ✅ |
-| Agent | **[全网最细，看完你就能理解 MCP 的核心原理！](https://www.bilibili.com/video/BV1LQocYjEVt)** | ✅ |
-| Agent | **[MCP 比传统应用面临着更大的安全威胁！](https://mp.weixin.qq.com/s/MJ-T5Dtn9FxqjMhgdXX9Qw)** | ✅ |
-| Agent | **[一期带你彻底搞懂 Agent Skills，从原理到实战！](https://www.bilibili.com/video/BV1GXzaByEEo/)** | ✅ |
-| Agent | **[Agent Skills 实现知识库检索，比传统 RAG 效果更好吗？](https://www.bilibili.com/video/BV1RkFAznESD/)** | ✅ |
-| Agent | **[OpenClaw 多智能体团队搭建实战教程](https://www.bilibili.com/video/BV1HxQSBgEvC/)** | ✅ |
-| Agent | **[最近爆火的 Harness Engineering 到底是啥？一期讲透！](https://www.bilibili.com/video/BV1Zk9FBwELs/)** | ✅ |
-| Agent | **[Harness 实践：让 Agent 全自动制作知识讲解视频](https://www.bilibili.com/video/BV1ypdgBCE9B/)** | ✅ |
-| Agent | **[Harness 实践：将任何文字编辑为精美的文章](https://www.bilibili.com/video/BV1ayLD6uERL)** | ✅ |
-> 💡 持续更新中 ...
+| مقدمات AI | **[ساختن شناخت کلی از AI - فناوری AI چگونه تکامل یافته است؟](https://www.bilibili.com/video/BV1nbJmzqEQJ)** | ✅ |
+| استقرار مدل | **[آموزش ساخت یک DeepSeek شخصی کاملاً محلی، متصل به اینترنت و با پایگاه دانش محلی](https://www.bilibili.com/video/BV1LYA8eCESA)** | ✅ |
+| تنظیم دقیق مدل | **[چگونه DeePseek-R1 خود را به متخصص یک حوزه تنظیم دقیق کنیم؟ (بخش نظری)](https://www.bilibili.com/video/BV1WQAUeVEuj)** | ✅ |
+| تنظیم دقیق مدل | **[چگونه DeePseek-R1 خود را به متخصص یک حوزه تنظیم دقیق کنیم؟ (بخش عملی)](https://www.bilibili.com/video/BV1s2AUe2EBq/)** | ✅ |
+| تنظیم دقیق مدل | **[آموزش تنظیم دقیق با LLaMA Factory (بخش دوم): مقدمات، نصب و استفاده](https://www.bilibili.com/video/BV1oTEwzcEeZ/)** | ✅ |
+| تنظیم دقیق مدل | **[آموزش تنظیم دقیق با LLaMA Factory (بخش دوم): چگونه مجموعه‌داده باکیفیت بسازیم](https://www.bilibili.com/video/BV1MRMnz1EGW/)** | ✅ |
+| تنظیم دقیق مدل | **[آموزش تنظیم دقیق با LLaMA Factory (بخش سوم): تنظیم پارامترهای تنظیم دقیق و مصرف حافظه گرافیکی](https://www.bilibili.com/video/BV1BaM8zHEgh)** | ✅ |
+| تنظیم دقیق مدل | **[آموزش تنظیم دقیق با LLaMA Factory (بخش چهارم): مشاهده فرایند تنظیم دقیق و خروجی گرفتن از مدل](https://www.bilibili.com/video/BV1GUKhzkEHA)** | ✅ |
+| تنظیم دقیق مدل | **[آموزش تنظیم دقیق با LLaMA Factory (نسخه کامل): تنظیم دقیق یک مدل بزرگ اختصاصی حوزه از صفر](https://www.bilibili.com/video/BV1djgRzxEts)** | ✅ |
+| ارزیابی مدل | **[مقدمه ارزیابی مدل‌های بزرگ و بنچمارک‌های اصلی صنعت](https://www.bilibili.com/video/BV1HnB7BjEAN/)** | ✅ |
+| ارزیابی مدل | **[ارزیابی مدل حوزه تخصصی: راهنمای عملی تولید یک‌کلیکی مجموعه آزمون + ارزیابی خودکار](https://www.bilibili.com/video/BV1CRrVB7Eb4)** | ✅ |
+| مجموعه‌داده | **[برای تنظیم دقیق مدل یک حوزه خاص، مجموعه‌داده را دقیقاً چطور بسازیم؟](https://www.bilibili.com/video/BV1z9RLYWEjq/)** | ✅ |
+| مجموعه‌داده | **[چگونه منابع یک حوزه را به‌صورت دسته‌ای به مجموعه‌داده قابل استفاده برای تنظیم دقیق تبدیل کنیم؟](https://www.bilibili.com/video/BV1y8QpYGE57/)** | ✅ |
+| مجموعه‌داده | **[آموزش عملی ساخت مجموعه‌داده با Easy Dataset](https://www.bilibili.com/video/BV1fyJhzHEb7/)** | ✅ |
+| مجموعه‌داده | **[پنج نمونه عملی ساخت مجموعه‌داده](https://www.bilibili.com/video/BV1Rq1hBtEJa/)** | ✅ |
+| Agent | **[MCP + پایگاه داده، روشی جدید برای افزایش دقت بازیابی داده ساختاریافته](https://www.bilibili.com/video/BV12nRzYPEiK/)** | ✅ |
+| Agent | **[دقیق‌ترین توضیح در اینترنت؛ با دیدن آن اصول اصلی MCP را می‌فهمید!](https://www.bilibili.com/video/BV1LQocYjEVt)** | ✅ |
+| Agent | **[MCP نسبت به برنامه‌های سنتی با تهدیدهای امنیتی بزرگ‌تری روبه‌روست!](https://mp.weixin.qq.com/s/MJ-T5Dtn9FxqjMhgdXX9Qw)** | ✅ |
+| Agent | **[در یک قسمت Agent Skills را کاملاً بفهمید، از اصول تا عمل!](https://www.bilibili.com/video/BV1GXzaByEEo/)** | ✅ |
+| Agent | **[بازیابی پایگاه دانش با Agent Skills؛ آیا از RAG سنتی بهتر است؟](https://www.bilibili.com/video/BV1RkFAznESD/)** | ✅ |
+| Agent | **[آموزش عملی ساخت تیم چندعاملی با OpenClaw](https://www.bilibili.com/video/BV1HxQSBgEvC/)** | ✅ |
+| Agent | **[Harness Engineering که اخیراً محبوب شده دقیقاً چیست؟ در یک قسمت کامل توضیح می‌دهیم!](https://www.bilibili.com/video/BV1Zk9FBwELs/)** | ✅ |
+| Agent | **[عمل با Harness: Agent کاملاً خودکار ویدئوی توضیح دانش می‌سازد](https://www.bilibili.com/video/BV1ypdgBCE9B/)** | ✅ |
+| Agent | **[عمل با Harness: ویرایش هر متنی به یک مقاله زیبا](https://www.bilibili.com/video/BV1ayLD6uERL)** | ✅ |
+> 💡 در حال به‌روزرسانی مداوم ...
 
 ---
 
-### 📝 AI 文章：编辑专栏长文阅读
+### 📝 مقالات AI: مطالعه مقالات بلند ستون سردبیری
 
-用 beautiful-article 生成的精美排版的文章。
+مقالاتی با صفحه‌آرایی زیبا که با beautiful-article تولید شده‌اند.
 
-| 类型 | 文章 | 标签 |
+| نوع | مقاله | برچسب |
 |------|------|------|
-| 长文 | **[Codex Sandbox 的设计与实践](https://mmh1.top/#/ai-article/codex-sandbox)** | Agent / Sandbox / Codex |
-| 解释文 | **[Agent Skill 是如何进化的？](https://mmh1.top/#/ai-article/skill)** | Agent / Skill / Microsoft |
-| 长文 | **[提示词缓存对 Agent 有多重要？](https://mmh1.top/#/ai-article/prompt-cache)** | Agent / Prompt Cache / Anthropic |
-| 长文 | **[面向长任务场景的 Harness 设计](https://mmh1.top/#/ai-article/long-task-harness)** | Agent / Harness / Claude |
-| 长文 | **[Agent Harness 的解剖图](https://mmh1.top/#/ai-article/harness)** | Agent / Harness / Langchain |
-| 长文 | **[设计对 Agent 友好的代码仓库](https://mmh1.top/#/ai-article/code-agent)** | Agent / Code / OpenAI |
-| 长文 | **[Codex 的 Agent Loop 是怎么做的？](https://mmh1.top/#/ai-article/agent-loop-codex)** | Agent / Codex / OpenAI |
-| 长文 | **[把 AI Agent 的评测讲清楚](https://mmh1.top/#/ai-article/agent-eval)** | Agent / 评测 / Anthropic |
-| 长文 | **[面向 Agent 的高效上下文工程](https://mmh1.top/#/ai-article/context)** | Agent / Context / Anthropic |
-| 长文 | **[Agent Tools 设计的最佳实践](https://mmh1.top/#/ai-article/tools)** | Agent / Tools / Anthropic |
-| 报告 | **[用多 Agent 进行深度研究](https://mmh1.top/#/ai-article/research)** | Agent / Research / Claude |
-| 长文 | **[Agent Framework 的设计与思考](https://mmh1.top/#/ai-article/agent-framework)** | Agent / Framework / Langchain |
-| 长文 | **[Attention Is All You Need](https://mmh1.top/#/ai-article/transformer)** | Transformer / Attention / 论文 |
+| مقاله بلند | **[طراحی و پیاده‌سازی Codex Sandbox](https://mmh1.top/#/ai-article/codex-sandbox)** | Agent / Sandbox / Codex |
+| مقاله توضیحی | **[Agent Skill چگونه تکامل می‌یابد؟](https://mmh1.top/#/ai-article/skill)** | Agent / Skill / Microsoft |
+| مقاله بلند | **[کش پرامپت برای Agent چقدر مهم است؟](https://mmh1.top/#/ai-article/prompt-cache)** | Agent / Prompt Cache / Anthropic |
+| مقاله بلند | **[طراحی Harness برای سناریوهای کار طولانی](https://mmh1.top/#/ai-article/long-task-harness)** | Agent / Harness / Claude |
+| مقاله بلند | **[کالبدشکافی Agent Harness](https://mmh1.top/#/ai-article/harness)** | Agent / Harness / Langchain |
+| مقاله بلند | **[طراحی مخزن کد سازگار با Agent](https://mmh1.top/#/ai-article/code-agent)** | Agent / Code / OpenAI |
+| مقاله بلند | **[Agent Loop در Codex چگونه کار می‌کند؟](https://mmh1.top/#/ai-article/agent-loop-codex)** | Agent / Codex / OpenAI |
+| مقاله بلند | **[ارزیابی AI Agentها به زبان روشن](https://mmh1.top/#/ai-article/agent-eval)** | Agent / ارزیابی / Anthropic |
+| مقاله بلند | **[مهندسی context کارآمد برای Agentها](https://mmh1.top/#/ai-article/context)** | Agent / Context / Anthropic |
+| مقاله بلند | **[بهترین شیوه‌های طراحی Agent Tools](https://mmh1.top/#/ai-article/tools)** | Agent / Tools / Anthropic |
+| گزارش | **[استفاده از چند Agent برای پژوهش عمیق](https://mmh1.top/#/ai-article/research)** | Agent / Research / Claude |
+| مقاله بلند | **[طراحی و تفکر Agent Framework](https://mmh1.top/#/ai-article/agent-framework)** | Agent / Framework / Langchain |
+| مقاله بلند | **[Attention Is All You Need](https://mmh1.top/#/ai-article/transformer)** | Transformer / Attention / مقاله علمی |
 
-> 💡 **访问地址**：[AI 文章编辑专栏](https://mmh1.top/#/ai-article)
+> 💡 **آدرس دسترسی**: [ستون سردبیری مقالات AI](https://mmh1.top/#/ai-article)
 
 ---
 
 
-### 🤖 AI 模型：全面的 AI 模型数据库
+### 🤖 مدل‌های AI: پایگاه داده جامع مدل‌های AI
 
-汇聚主流 AI 大模型信息，提供模型参数、能力特点、发布时间等关键数据，帮助你快速了解和对比各类 AI 模型。
+اطلاعات مدل‌های بزرگ اصلی AI را گرد آورده و داده‌های کلیدی مثل پارامترهای مدل، ویژگی‌های توانایی و زمان انتشار را ارائه می‌دهد تا سریع انواع مدل‌های AI را بشناسید و مقایسه کنید.
 
-| 功能特性 | 说明 |
+| قابلیت | توضیح |
 |----------|------|
-| **模型检索** | 支持按名称、公司、标签等多维度搜索筛选 |
-| **模型对比** | 展示上下文窗口、最大输出、开源状态等核心参数 |
-| **分类浏览** | 按公司分组或按发布时间排序浏览 |
-| **实时更新** | 持续收录最新发布的 AI 模型信息 |
+| **جستجوی مدل** | پشتیبانی از جستجو و فیلتر چندبعدی بر اساس نام، شرکت، برچسب و غیره |
+| **مقایسه مدل** | نمایش پارامترهای اصلی مثل پنجره context، حداکثر خروجی و وضعیت متن‌باز |
+| **مرور دسته‌بندی‌شده** | مرور با گروه‌بندی بر اساس شرکت یا مرتب‌سازی بر اساس زمان انتشار |
+| **به‌روزرسانی بلادرنگ** | ثبت مداوم اطلاعات جدیدترین مدل‌های AI منتشرشده |
 
-> 💡 **访问地址**：[AI 模型库](https://mmh1.top/#/ai-model)
+> 💡 **آدرس دسترسی**: [کتابخانه مدل‌های AI](https://mmh1.top/#/ai-model)
 
 ---
 
-### 📊 AI 评估：权威的 AI 评测基准数据库
+### 📊 ارزیابی AI: پایگاه داده معتبر بنچمارک‌های ارزیابی AI
 
-收录 AI 领域主流评测基准，涵盖语言理解、推理能力、多模态、代码生成等多个维度，助力了解 AI 模型能力评估体系。
+بنچمارک‌های اصلی ارزیابی حوزه AI را گرد آورده که ابعادی مثل فهم زبان، توانایی استدلال، چندوجهی و تولید کد را پوشش می‌دهد و به فهم سیستم ارزیابی توانایی مدل‌های AI کمک می‌کند.
 
-| 基准类型 | 示例基准 |
+| نوع بنچمارک | بنچمارک‌های نمونه |
 |----------|----------|
-| **语言理解** | MMLU、GLUE、SuperGLUE、HellaSwag |
-| **推理能力** | ARC-AGI-1、ARC-AGI-2、GSM8K、MATH |
-| **数学推理** | FrontierMath、AIME、Olympiad Bench |
-| **多模态** | MMMU、Video-MMMU、VQA |
-| **代码生成** | HumanEval、MBPP、SWE-bench、SciCode |
-| **智能体** | MCP-Atlas、GAIA、MLE-bench |
+| **فهم زبان** | MMLU، GLUE، SuperGLUE، HellaSwag |
+| **توانایی استدلال** | ARC-AGI-1، ARC-AGI-2، GSM8K، MATH |
+| **استدلال ریاضی** | FrontierMath، AIME، Olympiad Bench |
+| **چندوجهی** | MMMU، Video-MMMU، VQA |
+| **تولید کد** | HumanEval، MBPP، SWE-bench، SciCode |
+| **عامل هوشمند** | MCP-Atlas، GAIA، MLE-bench |
 
-> 💡 **访问地址**：[AI 基准库](https://mmh1.top/#/ai-benchmark)
-
----
-
-### 📰 AI 日报：精选最新 AI 行业动态和技术突破
-
-精选各渠道 AI 一手新闻，每日汇总报告。
-
-> 💡 **访问地址**：[AI 基准库](https://mmh1.top/#/ai-daily)
+> 💡 **آدرس دسترسی**: [کتابخانه بنچمارک‌های AI](https://mmh1.top/#/ai-benchmark)
 
 ---
 
-## Connect · code秘密花园（ConardLi）
+### 📰 گزارش روزانه AI: جدیدترین تحولات صنعت AI و پیشرفت‌های فنی منتخب
 
-| 平台 | 账号名称 | 链接 |
+خبرهای دست اول AI از کانال‌های مختلف گزینش و هر روز در یک گزارش جمع‌بندی می‌شوند.
+
+> 💡 **آدرس دسترسی**: [گزارش روزانه AI](https://mmh1.top/#/ai-daily)
+
+---
+
+## Connect · code باغ مخفی (ConardLi)
+
+| پلتفرم | نام حساب | لینک |
 | --- | --- | --- |
-| X/Twitter | code秘密花园 | https://x.com/GardenConardLi  |
-| B 站 | code秘密花园 | https://space.bilibili.com/474921808 |
-| 抖音 | code秘密花园 | https://v.douyin.com/i5b33Xfv/ |
-| YouTube | code秘密花园 | https://www.youtube.com/@garden-conard |
-| 小红书 | code秘密花园 | https://www.xiaohongshu.com/user/profile/5af45e78f7e8b903d6e04618 |
-| 公众号 | code秘密花园 | https://cdn.jsdelivr.net/gh/ConardLi/easy-dataset@main/public/imgs/weichat.jpg |
+| X/Twitter | code باغ مخفی | https://x.com/GardenConardLi  |
+| Bilibili | code باغ مخفی | https://space.bilibili.com/474921808 |
+| Douyin | code باغ مخفی | https://v.douyin.com/i5b33Xfv/ |
+| YouTube | code باغ مخفی | https://www.youtube.com/@garden-conard |
+| Xiaohongshu | code باغ مخفی | https://www.xiaohongshu.com/user/profile/5af45e78f7e8b903d6e04618 |
+| حساب رسمی WeChat | code باغ مخفی | https://cdn.jsdelivr.net/gh/ConardLi/easy-dataset@main/public/imgs/weichat.jpg |
 | GitHub | ConardLi | https://github.com/ConardLi |
-| 个人网站 | Easy AI | https://mmh1.top |
+| وب‌سایت شخصی | Easy AI | https://mmh1.top |
 
 ---
 
 <div align="center">
-  <p>🎯 让 AI 学习变得简单 | 🚀 让知识传播更高效</p>
+  <p>🎯 یادگیری AI را ساده می‌کنیم | 🚀 انتشار دانش را کارآمدتر می‌کنیم</p>
   <p>Made with ❤️ for the AI learning community</p>
+</div>
+
 </div>

@@ -1,16 +1,16 @@
 /**
- * Finetune 封面
+ * جلد Finetune
  *
- * 隐喻：base 大方块「W」一动不动，旁边并联一对细矩阵「B」×「A」 —— 就是 LoRA 的几何核心。
+ * استعاره: مربع بزرگ base با «W» بی‌حرکت است و کنار آن یک جفت ماتریس باریک «B»×«A» موازی قرار دارد —— این هسته هندسی LoRA است.
  *
- * 视觉构图（viewBox 320×200）：
- *   - 中央偏左：W 大方块（深 ink）+ 「冻」stamp
- *   - 中央偏右：+ 号 → B（细高方块 coral）× A（细扁方块 teal）→ butter outline 圈住整组
- *   - 上方装饰：三个浮动 chip「LoRA · QLoRA · DoRA」
- *   - 右上：「↓99.6%」参数减少 stamp
- *   - 底：rank=8 mono 注脚
+ * ترکیب‌بندی بصری (viewBox 320×200):
+ *   - مرکز متمایل به چپ: مربع بزرگ W (ink تیره) + stamp «منجمد»
+ *   - مرکز متمایل به راست: علامت + ← B (مربع باریک و بلند coral) × A (مربع باریک و پهن teal) ← کل گروه با outline به رنگ butter احاطه شده
+ *   - تزئین بالا: سه chip شناور «LoRA · QLoRA · DoRA»
+ *   - بالا-راست: stamp کاهش پارامتر «↓99.6%»
+ *   - پایین: پانویس mono با rank=8
  *
- * hover：B、A 微微向外推（说明可拆解），W 不动 + chip 顺序错位。
+ * hover: B و A کمی به بیرون رانده می‌شوند (یعنی قابل تفکیک‌اند)، W ثابت می‌ماند + chipها به ترتیب جابه‌جا می‌شوند.
  */
 import React from "react";
 import CoverShell from "./CoverShell";
@@ -18,7 +18,7 @@ import CoverShell from "./CoverShell";
 const FinetuneCover: React.FC = () => {
   return (
     <CoverShell bgClassName="bg-butter-soft" dotOpacity={0.08}>
-      {/* 上方装饰：3 个方法 chip 横排 */}
+      {/* تزئین بالا: ۳ chip روش در یک ردیف افقی */}
       <g
         fontFamily="Geist Mono, monospace"
         fontSize="8.5"
@@ -53,7 +53,7 @@ const FinetuneCover: React.FC = () => {
         ))}
       </g>
 
-      {/* 右上：参数压缩 stamp */}
+      {/* بالا-راست: stamp فشرده‌سازی پارامتر */}
       <g
         transform="translate(280,30) rotate(-10)"
         className="origin-center transition-transform duration-500 group-hover:rotate-3 group-hover:scale-110"
@@ -81,8 +81,8 @@ const FinetuneCover: React.FC = () => {
         </text>
       </g>
 
-      {/* === 中央主图：W + B × A === */}
-      {/* W 大方块 · base 冻结 */}
+      {/* === تصویر اصلی مرکز: W + B × A === */}
+      {/* مربع بزرگ W · base منجمد */}
       <g
         transform="translate(80,108)"
         className="transition-transform duration-500"
@@ -97,7 +97,7 @@ const FinetuneCover: React.FC = () => {
           stroke="#241C15"
           strokeWidth="2"
         />
-        {/* 网格底纹 */}
+        {/* طرح زمینه شبکه‌ای */}
         <g stroke="#FBEFE3" strokeWidth="0.6" opacity="0.25">
           {[-20, -8, 4, 16].map((v) => (
             <g key={`grid-${v}`}>
@@ -117,7 +117,7 @@ const FinetuneCover: React.FC = () => {
         >
           W
         </text>
-        {/* 冻 stamp */}
+        {/* stamp منجمد */}
         <g transform="translate(28,-28) rotate(8)">
           <rect
             x="-10"
@@ -138,12 +138,12 @@ const FinetuneCover: React.FC = () => {
             fontWeight="800"
             fill="#241C15"
           >
-            冻
+            منجمد
           </text>
         </g>
       </g>
 
-      {/* + 号 */}
+      {/* علامت + */}
       <text
         x="138"
         y="115"
@@ -157,11 +157,11 @@ const FinetuneCover: React.FC = () => {
         +
       </text>
 
-      {/* LoRA 旁路：butter outline 大圈住 B × A */}
+      {/* مسیر جانبی LoRA: outline بزرگ butter دور B × A */}
       <g
         className="transition-transform duration-500 ease-out group-hover:translate-x-1"
       >
-        {/* 外圈 */}
+        {/* حلقه بیرونی */}
         <rect
           x="156"
           y="76"
@@ -183,10 +183,10 @@ const FinetuneCover: React.FC = () => {
           fill="#241C15"
           letterSpacing="1.4"
         >
-          LoRA · 训这里
+          LoRA · این‌جا آموزش می‌بیند
         </text>
 
-        {/* B 矩阵：细高 coral */}
+        {/* ماتریس B: باریک و بلند coral */}
         <g
           transform="translate(178,108)"
           className="transition-transform duration-500 ease-out group-hover:-translate-x-1"
@@ -230,7 +230,7 @@ const FinetuneCover: React.FC = () => {
           </text>
         </g>
 
-        {/* × 号 */}
+        {/* علامت × */}
         <text
           x="208"
           y="113"
@@ -244,7 +244,7 @@ const FinetuneCover: React.FC = () => {
           ×
         </text>
 
-        {/* A 矩阵：细扁 teal */}
+        {/* ماتریس A: باریک و پهن teal */}
         <g
           transform="translate(244,108)"
           className="transition-transform duration-500 ease-out group-hover:translate-x-1"
@@ -289,7 +289,7 @@ const FinetuneCover: React.FC = () => {
         </g>
       </g>
 
-      {/* 底部 mono 注脚 */}
+      {/* پانویس mono پایین */}
       <g transform="translate(160,176)">
         <rect
           x="-58"
@@ -311,7 +311,7 @@ const FinetuneCover: React.FC = () => {
           letterSpacing="1.4"
           fill="#F4D35E"
         >
-          r = 8 · 训 0.4%
+          r = 8 · آموزش 0.4%
         </text>
       </g>
     </CoverShell>

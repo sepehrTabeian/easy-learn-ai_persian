@@ -1,6 +1,6 @@
 /**
- * 模型树形结构工具函数
- * 将扁平的模型列表转换为树形结构
+ * توابع ابزار ساختار درختی مدل
+ * تبدیل فهرست تخت مدل‌ها به ساختار درختی
  */
 
 import { AIModel } from "../types/model";
@@ -16,11 +16,11 @@ export interface TreeNode {
 }
 
 /**
- * 构建树形结构
- * 结构：公司 -> 开源状态 -> 父模型 -> 子模型
+ * ساخت ساختار درختی
+ * ساختار: شرکت -> وضعیت متن‌باز -> مدل والد -> زیرمدل
  */
 export const buildModelTree = (models: AIModel[]): TreeNode[] => {
-  // 按公司分组
+  // گروه‌بندی بر اساس شرکت
   const companyMap = new Map<string, AIModel[]>();
 
   models.forEach((model) => {
@@ -30,11 +30,11 @@ export const buildModelTree = (models: AIModel[]): TreeNode[] => {
     companyMap.get(model.company)!.push(model);
   });
 
-  // 构建树形结构
+  // ساخت ساختار درختی
   const tree: TreeNode[] = [];
 
   companyMap.forEach((companyModels, companyName) => {
-    // 按开源状态分组
+    // گروه‌بندی بر اساس وضعیت متن‌باز
     const statusMap = new Map<string, AIModel[]>();
 
     companyModels.forEach((model) => {
@@ -44,17 +44,17 @@ export const buildModelTree = (models: AIModel[]): TreeNode[] => {
       statusMap.get(model.openSourceStatus)!.push(model);
     });
 
-    // 构建开源状态节点
+    // ساخت گره وضعیت متن‌باز
     const statusNodes: TreeNode[] = [];
 
     statusMap.forEach((statusModels, status) => {
-      // 分离父模型和子模型
+      // جدا کردن مدل‌های والد و زیرمدل‌ها
       const parentModels = statusModels.filter((m) => !m.parent);
       const childModels = statusModels.filter((m) => m.parent);
 
-      // 构建模型节点
+      // ساخت گره مدل
       const modelNodes: TreeNode[] = parentModels.map((model) => {
-        // 查找该模型的子模型
+        // یافتن زیرمدل‌های این مدل
         const children = childModels
           .filter((child) => child.parent === model.modelName)
           .map((child) => ({
@@ -74,15 +74,15 @@ export const buildModelTree = (models: AIModel[]): TreeNode[] => {
         };
       });
 
-      // 处理孤儿子模型（parent不是实际模型名称的情况）
+      // پردازش زیرمدل‌های یتیم (وقتی parent نام یک مدل واقعی نیست)
       const orphanChildren = childModels.filter((child) => {
-        // 检查是否有实际的父模型
+        // بررسی وجود مدل والد واقعی
         return !parentModels.some(
           (parent) => parent.modelName === child.parent
         );
       });
 
-      // 按parent分组孤儿子模型
+      // گروه‌بندی زیرمدل‌های یتیم بر اساس parent
       const orphanGroups = new Map<string, AIModel[]>();
       orphanChildren.forEach((child) => {
         if (!orphanGroups.has(child.parent!)) {
@@ -91,7 +91,7 @@ export const buildModelTree = (models: AIModel[]): TreeNode[] => {
         orphanGroups.get(child.parent!)!.push(child);
       });
 
-      // 为每个孤儿组创建虚拟父节点
+      // ساخت گره والد مجازی برای هر گروه یتیم
       orphanGroups.forEach((children, parentName) => {
         const virtualChildren = children.map((child) => ({
           id: `${companyName}-${status}-${parentName}-${child.modelName}`,
@@ -113,7 +113,7 @@ export const buildModelTree = (models: AIModel[]): TreeNode[] => {
         id: `${companyName}-${status}`,
         name: status,
         type: "status",
-        count: statusModels.length, // 该开源/闭源分类下的所有模型数量
+        count: statusModels.length, // تعداد همه مدل‌ها در این دسته متن‌باز/متن‌بسته
         children: modelNodes,
       });
     });
@@ -128,6 +128,6 @@ export const buildModelTree = (models: AIModel[]): TreeNode[] => {
     });
   });
 
-  // 按公司名称排序
+  // مرتب‌سازی بر اساس نام شرکت
   return tree.sort((a, b) => a.name.localeCompare(b.name));
 };

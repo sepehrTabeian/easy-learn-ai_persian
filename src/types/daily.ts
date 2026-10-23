@@ -1,5 +1,5 @@
 /**
- * AI 日报相关类型定义
+ * تعریف نوع‌های مرتبط با گزارش روزانه AI
  */
 
 export interface DailyReport {

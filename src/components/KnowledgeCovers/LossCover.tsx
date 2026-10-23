@@ -1,21 +1,21 @@
 /**
- * Loss 封面
+ * جلد Loss
  *
- * 隐喻：一条不断下降的训练 loss 曲线 + 当前 step 的小球 + 「→ 0」靶心。
+ * استعاره: یک منحنی loss آموزش که مدام پایین می‌آید + توپ کوچک step فعلی + هدف «← 0».
  *
- * 视觉构图（viewBox 320×200）：
- *   - 背景：coral，配深色网格点
- *   - 主图：3 条 loss 衰减曲线（2 条历史轨迹淡，1 条主线粗 + 球）
- *   - 主线尾巴 → 0 标签（teal stamp）
- *   - 右上：当前 loss 数字 stamp（butter）
- *   - 左下：mono "training step →"
+ * ترکیب‌بندی بصری (viewBox 320×200):
+ *   - پس‌زمینه: coral، با نقاط شبکه تیره
+ *   - تصویر اصلی: ۳ منحنی کاهش loss (۲ مسیر تاریخی کم‌رنگ، ۱ خط اصلی ضخیم + توپ)
+ *   - انتهای خط اصلی ← برچسب 0 (stamp به رنگ teal)
+ *   - بالا-راست: stamp عدد loss فعلی (butter)
+ *   - پایین-چپ: mono "training step →"
  *
- * hover 行为：球继续滑向 0（向右下方位移），历史轨迹微微消散。
+ * رفتار hover: توپ به لغزیدن به سمت 0 ادامه می‌دهد (جابه‌جایی به پایین-راست)، مسیرهای تاریخی کمی محو می‌شوند.
  */
 import React from "react";
 import CoverShell from "./CoverShell";
 
-/* 给一条 loss-decay 曲线生成 SVG path · 公式 y = y0 * exp(-k * (x - x0)/L) + asymp + noise */
+/* تولید SVG path برای یک منحنی loss-decay · فرمول y = y0 * exp(-k * (x - x0)/L) + asymp + noise */
 function decayPath(
   x0: number,
   y0: number,
@@ -39,18 +39,18 @@ function decayPath(
 }
 
 const LossCover: React.FC = () => {
-  /* 主曲线：从 (45, 50) 衰减到 (280, ~160) */
+  /* منحنی اصلی: کاهش از (45, 50) به (280, ~160) */
   const main = decayPath(45, 110, 50, 2.6, 280, 235, 1, 1.4);
   const past1 = decayPath(45, 100, 70, 2.2, 280, 235, 3, 1.8);
   const past2 = decayPath(45, 95, 85, 1.8, 280, 235, 5, 2.4);
 
-  /* 球的位置 = 主曲线尾部 */
+  /* موقعیت توپ = انتهای منحنی اصلی */
   const ballX = 268;
   const ballY = 155;
 
   return (
     <CoverShell bgClassName="bg-coral" dotColor="#241C15" dotOpacity={0.1}>
-      {/* 左上 eyebrow 装饰 · 一组下降数字 */}
+      {/* تزئین eyebrow بالا-چپ · یک گروه عدد نزولی */}
       <g
         fontFamily="Geist Mono, monospace"
         fontSize="9"
@@ -64,7 +64,7 @@ const LossCover: React.FC = () => {
         <text x="160" y="58">0.81</text>
       </g>
 
-      {/* 右上：当前 loss stamp（butter） */}
+      {/* بالا-راست: stamp با loss فعلی (butter) */}
       <g
         transform="translate(282,30) rotate(-6)"
         className="origin-center transition-transform duration-500 group-hover:rotate-2 group-hover:scale-110"
@@ -105,15 +105,15 @@ const LossCover: React.FC = () => {
         </text>
       </g>
 
-      {/* 坐标轴 */}
+      {/* محورهای مختصات */}
       <g stroke="#241C15" strokeWidth="1.5" strokeLinecap="round" opacity="0.85">
-        {/* x 轴 */}
+        {/* محور x */}
         <line x1="36" y1="175" x2="295" y2="175" />
-        {/* y 轴 */}
+        {/* محور y */}
         <line x1="36" y1="40" x2="36" y2="175" />
       </g>
 
-      {/* y 轴刻度 */}
+      {/* درجه‌بندی محور y */}
       <g
         stroke="#241C15"
         strokeWidth="1"
@@ -125,7 +125,7 @@ const LossCover: React.FC = () => {
         <line x1="36" y1="160" x2="295" y2="160" />
       </g>
 
-      {/* 历史轨迹（淡） */}
+      {/* مسیرهای تاریخی (کم‌رنگ) */}
       <g
         fill="none"
         strokeLinejoin="round"
@@ -136,7 +136,7 @@ const LossCover: React.FC = () => {
         <path d={past1} stroke="#241C15" strokeWidth="1.4" opacity="0.5" strokeDasharray="4 3" />
       </g>
 
-      {/* 主 loss 曲线 */}
+      {/* منحنی اصلی loss */}
       <path
         d={main}
         fill="none"
@@ -146,7 +146,7 @@ const LossCover: React.FC = () => {
         strokeLinecap="round"
       />
 
-      {/* 球当前位置 · hover 时往 0 滑 */}
+      {/* موقعیت فعلی توپ · در hover به سمت 0 می‌لغزد */}
       <g
         className="transition-transform duration-500 ease-out group-hover:translate-x-1 group-hover:translate-y-1"
         style={{ transformOrigin: `${ballX}px ${ballY}px` }}
@@ -162,7 +162,7 @@ const LossCover: React.FC = () => {
         />
       </g>
 
-      {/* 终点 → 0 靶心（右下） */}
+      {/* نقطه پایانی ← هدف 0 (پایین-راست) */}
       <g
         transform="translate(298,168)"
         className="transition-transform duration-500 group-hover:translate-x-1"
@@ -191,7 +191,7 @@ const LossCover: React.FC = () => {
         </text>
       </g>
 
-      {/* 左下：step 标签 */}
+      {/* پایین-چپ: برچسب step */}
       <g transform="translate(36,190)">
         <text
           x="0"
@@ -206,7 +206,7 @@ const LossCover: React.FC = () => {
         </text>
       </g>
 
-      {/* y 轴 label */}
+      {/* label محور y */}
       <g transform="translate(24,40)">
         <text
           x="0"
@@ -221,7 +221,7 @@ const LossCover: React.FC = () => {
         </text>
       </g>
 
-      {/* 中段竖虚线 + 当前 step 标 */}
+      {/* خط نقطه‌چین عمودی وسط + برچسب step فعلی */}
       <g opacity="0.6">
         <line
           x1={ballX}

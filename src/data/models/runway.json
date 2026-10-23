@@ -2,22 +2,22 @@
     {
         "modelName": "Gen-3 Alpha",
         "company": "Runway",
-        "country": "美国",
-        "openSourceStatus": "闭源",
+        "country": "آمریکا",
+        "openSourceStatus": "متن‌بسته",
         "releaseDate": "2024-06-17",
-        "description": "Gen-3 Alpha 是 Runway 推出的下一代视频生成基础模型，采用多模态大规模训练并以高密度时序标注强化运动理解，显著提升保真度、角色一致性与镜头运动。原生支持文生视频与图生视频，提供 Motion Brush、Advanced Camera Controls、Director Mode 等精细控制，适用于广告创意、短片分镜与社媒内容。",
+        "description": "Gen-3 Alpha نسل بعدی مدل پایه تولید ویدئوی Runway است که از آموزش چندوجهی در مقیاس بزرگ استفاده می‌کند و با برچسب‌گذاری زمانی متراکم فهم حرکت را تقویت کرده و وفاداری، یکنواختی شخصیت و حرکت دوربین را به‌طور محسوسی بهبود داده. به‌طور بومی از تولید ویدئو از متن و تصویر پشتیبانی می‌کند و کنترل‌های دقیقی مثل Motion Brush، Advanced Camera Controls و Director Mode ارائه می‌دهد؛ مناسب برای خلاقیت تبلیغاتی، استوری‌بورد فیلم کوتاه و محتوای شبکه‌های اجتماعی.",
         "modelTags": [
-            "视频生成"
+            "تولید ویدئو"
         ],
         "outputImageMaxResolution": "1280x768",
         "maxGenerationVideoDuration": "10",
         "relatedLinks": [
             {
-                "title": "Gen-3 Alpha 官方发布页（Runway Research）",
+                "title": "صفحه رسمی انتشار Gen-3 Alpha (Runway Research)",
                 "url": "https://runwayml.com/research/introducing-gen-3-alpha"
             },
             {
-                "title": "Gen-3 Alpha 使用与规格说明（Help Center）",
+                "title": "توضیح استفاده و مشخصات Gen-3 Alpha (Help Center)",
                 "url": "https://help.runwayml.com/hc/en-us/articles/30266515017875-Creating-with-Gen-3-Alpha-and-Gen-3-Alpha-Turbo"
             }
         ]
@@ -25,22 +25,22 @@
     {
         "modelName": "Gen-4",
         "company": "Runway",
-        "country": "美国",
-        "openSourceStatus": "闭源",
+        "country": "آمریکا",
+        "openSourceStatus": "متن‌بسته",
         "releaseDate": "2025-04-07",
-        "description": "Runway Gen-4 是 Runway 推出的可控视频生成模型，需输入图像，以参考图像与文本指令联合驱动生成；强调世界一致性与角色、地点连续性，支持固定种子与多纵横比分辨率、24fps，输出 5/10 秒片段，适用于广告创意、短片分镜与社媒内容制作。",
+        "description": "Runway Gen-4 مدل تولید ویدئوی کنترل‌پذیر Runway است که به ورودی تصویر نیاز دارد و با تصویر مرجع و دستور متنی به‌طور مشترک تولید را هدایت می‌کند؛ بر یکنواختی جهان و پیوستگی شخصیت و مکان تأکید دارد، از seed ثابت و وضوح‌های چندنسبتی و 24fps پشتیبانی می‌کند و کلیپ‌های ۵/۱۰ ثانیه‌ای خروجی می‌دهد؛ مناسب برای خلاقیت تبلیغاتی، استوری‌بورد فیلم کوتاه و تولید محتوای شبکه‌های اجتماعی.",
         "modelTags": [
-            "视频生成"
+            "تولید ویدئو"
         ],
         "outputImageMaxResolution": "1584x672",
         "maxGenerationVideoDuration": "10",
         "relatedLinks": [
             {
-                "title": "Gen-4 Turbo 面向所有用户（Changelog）",
+                "title": "Gen-4 Turbo برای همه کاربران (Changelog)",
                 "url": "https://runwayml.com/changelog"
             },
             {
-                "title": "Gen-4 视频使用与规格（Help Center）",
+                "title": "استفاده و مشخصات ویدئوی Gen-4 (Help Center)",
                 "url": "https://help.runwayml.com/hc/en-us/articles/37327109429011-Creating-with-Gen-4-Video"
             },
             {

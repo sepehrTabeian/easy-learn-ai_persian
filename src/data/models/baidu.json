@@ -1,30 +1,30 @@
 [
     {
         "modelName": "ERNIE-5.0-Thinking-Preview",
-        "company": "百度",
-        "country": "中国",
-        "openSourceStatus": "闭源",
+        "company": "Baidu",
+        "country": "چین",
+        "openSourceStatus": "متن‌بسته",
         "releaseDate": "2025-11-13",
-        "description": "ERNIE-5.0-Thinking-Preview 是百度推出的原生全模态基础模型，采用超稀疏混合专家架构与统一建模，强化长链路推理与深度思考，具备文本、图像、音频、视频的理解与生成；适用于内容创作、智能体编排、检索问答与企业自动化。",
+        "description": "ERNIE-5.0-Thinking-Preview مدل پایه تمام‌وجهی بومی Baidu است که از معماری ترکیب متخصصان فوق‌پراکنده و مدل‌سازی یکپارچه استفاده می‌کند، استدلال زنجیره‌ای طولانی و تفکر عمیق را تقویت کرده و فهم و تولید متن، تصویر، صدا و ویدئو را دارد؛ مناسب برای تولید محتوا، هماهنگ‌سازی عامل‌های هوشمند، پرسش و پاسخ بازیابی و خودکارسازی سازمانی.",
         "modelTags": [
-            "文本生成",
-            "深度思考",
-            "视觉理解",
-            "工具调用"
+            "تولید متن",
+            "تفکر عمیق",
+            "درک تصویر",
+            "فراخوانی ابزار"
         ],
         "contextWindow": 128,
         "maxGenerationTokenLength": 119,
         "relatedLinks": [
             {
-                "title": "Baidu World 2025 新闻稿：发布 ERNIE 5.0",
+                "title": "بیانیه خبری Baidu World 2025: انتشار ERNIE 5.0",
                 "url": "https://www.prnewswire.com/news-releases/baidu-unveils-ernie-5-0-and-a-series-of-ai-applications-at-baidu-world-2025--ramps-up-global-push-302614531.html"
             },
             {
-                "title": "文心大模型5.0（百科）",
+                "title": "مدل بزرگ ERNIE 5.0 (دانشنامه)",
                 "url": "https://baike.baidu.com/item/文心大模型5.0/66960333"
             },
             {
-                "title": "模型列表（ERNIE 思考模型说明）",
+                "title": "فهرست مدل‌ها (توضیح مدل‌های تفکری ERNIE)",
                 "url": "https://cloud.baidu.com/doc/WENXINWORKSHOP/s/Wm9cvy6rl"
             }
         ],
@@ -32,27 +32,27 @@
     },
     {
         "modelName": "ERNIE-5.1-Thinking",
-        "company": "百度",
-        "country": "中国",
-        "openSourceStatus": "闭源",
+        "company": "Baidu",
+        "country": "چین",
+        "openSourceStatus": "متن‌بسته",
         "releaseDate": "2026-05",
-        "description": "ERNIE-5.1-Thinking 是百度文心 5.1 系列的深度思考模型，面向复杂推理、代码与智能体任务；百度智能云产品页将文心大模型 5.1 标注为最新模型，强调多模态、长上下文与企业应用能力，适用于企业问答、研究分析、内容生成与工具调用工作流。",
+        "description": "ERNIE-5.1-Thinking مدل تفکر عمیق سری ERNIE 5.1 از Baidu است که برای استدلال پیچیده، کد و وظایف عامل هوشمند طراحی شده؛ صفحه محصول Baidu AI Cloud مدل بزرگ ERNIE 5.1 را جدیدترین مدل معرفی کرده و بر چندوجهی، context طولانی و توانایی کاربرد سازمانی تأکید دارد؛ مناسب برای پرسش و پاسخ سازمانی، تحلیل پژوهشی، تولید محتوا و جریان‌های کاری فراخوانی ابزار.",
         "modelTags": [
-            "文本生成",
-            "深度思考",
-            "视觉理解",
-            "代码增强",
-            "工具调用"
+            "تولید متن",
+            "تفکر عمیق",
+            "درک تصویر",
+            "تقویت کد",
+            "فراخوانی ابزار"
         ],
         "contextWindow": 128,
         "maxGenerationTokenLength": 128,
         "relatedLinks": [
             {
-                "title": "百度智能云千帆大模型平台：文心大模型 5.1",
+                "title": "پلتفرم مدل بزرگ Qianfan در Baidu AI Cloud: مدل بزرگ ERNIE 5.1",
                 "url": "https://cloud.baidu.com/product/model.html"
             },
             {
-                "title": "文心模型列表",
+                "title": "فهرست مدل‌های ERNIE",
                 "url": "https://cloud.baidu.com/doc/WENXINWORKSHOP/s/Wm9cvy6rl"
             }
         ],
@@ -60,24 +60,24 @@
     },
     {
         "modelName": "ERNIE-4.5-Turbo-128K",
-        "company": "百度",
-        "country": "中国",
-        "openSourceStatus": "闭源",
+        "company": "Baidu",
+        "country": "چین",
+        "openSourceStatus": "متن‌بسته",
         "releaseDate": "2025-04-25",
-        "description": "ERNIE-4.5-Turbo-128K 是百度文心一言系列的长上下文旗舰模型，基于改进的 Transformer 与知识增强训练，支持 128K 上下文（123K 输入、12K 输出），在去幻觉、逻辑推理与代码生成上显著提升，适用于长文档检索问答、企业知识助手、代码开发与复杂工作流编排。",
+        "description": "ERNIE-4.5-Turbo-128K مدل پرچم‌دار context طولانی سری ERNIE Bot از Baidu است که بر پایه Transformer بهبودیافته و آموزش تقویت‌شده با دانش ساخته شده، از context با طول 128K (ورودی 123K، خروجی 12K) پشتیبانی می‌کند و در کاهش توهم، استدلال منطقی و تولید کد به‌طور محسوسی بهبود یافته؛ مناسب برای پرسش و پاسخ بازیابی اسناد طولانی، دستیار دانش سازمانی، توسعه کد و هماهنگ‌سازی جریان‌های کاری پیچیده.",
         "modelTags": [
-            "文本生成",
-            "工具调用"
+            "تولید متن",
+            "فراخوانی ابزار"
         ],
         "contextWindow": 128,
         "maxGenerationTokenLength": 123,
         "relatedLinks": [
             {
-                "title": "最新文心大模型上线千帆，性能飞跃，价格大降",
+                "title": "جدیدترین مدل بزرگ ERNIE در Qianfan عرضه شد؛ جهش عملکرد و کاهش شدید قیمت",
                 "url": " https://qianfan.cloud.baidu.com/qianfandev/topic/685928 "
             },
             {
-                "title": "文心4.5Turbo、X1Turbo发布（Create2025）",
+                "title": "انتشار ERNIE 4.5 Turbo و X1 Turbo (Create2025)",
                 "url": " https://qianfan.cloud.baidu.com/qianfandev/topic/685917 "
             }
         ],
@@ -85,25 +85,25 @@
     },
     {
         "modelName": "ERNIE-4.5-Turbo-VL-32K",
-        "company": "百度",
-        "country": "中国",
-        "openSourceStatus": "闭源",
+        "company": "Baidu",
+        "country": "چین",
+        "openSourceStatus": "متن‌بسته",
         "releaseDate": "2025-04-25",
-        "description": "ERNIE-4.5-Turbo-VL-32K 是面向多模态的文心模型，采用视觉编码器与文本解码器协同架构，首次支持 32K 上下文长度，显著提升图片理解、跨模态创作与翻译、代码相关视觉任务；适用于电商商品理解、图文问答、报表与图表解析、企业多模态业务助手等场景。",
+        "description": "ERNIE-4.5-Turbo-VL-32K مدل ERNIE برای چندوجهی است که از معماری همکاری رمزگذار بصری و رمزگشای متنی استفاده می‌کند، برای نخستین بار از context با طول 32K پشتیبانی می‌کند و فهم تصویر، خلق و ترجمه بین‌وجهی و وظایف بصری مرتبط با کد را به‌طور محسوسی بهبود می‌دهد؛ مناسب برای فهم کالاهای فروشگاهی، پرسش و پاسخ تصویری، تجزیه گزارش و نمودار و دستیار کسب‌وکار چندوجهی سازمانی.",
         "modelTags": [
-            "视觉理解",
-            "文本生成",
-            "工具调用"
+            "درک تصویر",
+            "تولید متن",
+            "فراخوانی ابزار"
         ],
         "contextWindow": 32,
         "maxGenerationTokenLength": 27,
         "relatedLinks": [
             {
-                "title": "最新文心大模型上线千帆，性能飞跃，价格大降",
+                "title": "جدیدترین مدل بزرگ ERNIE در Qianfan عرضه شد؛ جهش عملکرد و کاهش شدید قیمت",
                 "url": " https://qianfan.cloud.baidu.com/qianfandev/topic/685928 "
             },
             {
-                "title": "文心4.5Turbo、X1Turbo发布（Create2025）",
+                "title": "انتشار ERNIE 4.5 Turbo و X1 Turbo (Create2025)",
                 "url": " https://qianfan.cloud.baidu.com/qianfandev/topic/685917 "
             }
         ],
@@ -111,25 +111,25 @@
     },
     {
         "modelName": "ERNIE-X1-Turbo-32K",
-        "company": "百度",
-        "country": "中国",
-        "openSourceStatus": "闭源",
+        "company": "Baidu",
+        "country": "چین",
+        "openSourceStatus": "متن‌بسته",
         "releaseDate": "2025-04-25",
-        "description": "ERNIE-X1-Turbo-32K 属于文心深度思考系列的强化版本，基于改进的推理训练与过程监督，支持 32K 上下文，兼顾准确性、创意与逻辑规划；在中文知识问答、复杂数学与代码推理、智能体工具调用等场景表现更优，适用于企业级问答系统与长链路推理应用。",
+        "description": "ERNIE-X1-Turbo-32K نسخه تقویت‌شده سری تفکر عمیق ERNIE است که بر پایه آموزش استدلال بهبودیافته و نظارت بر فرایند ساخته شده، از context با طول 32K پشتیبانی می‌کند و دقت، خلاقیت و برنامه‌ریزی منطقی را با هم دارد؛ در پرسش و پاسخ دانش چینی، ریاضیات پیچیده و استدلال کد و فراخوانی ابزار عامل هوشمند عملکرد بهتری دارد؛ مناسب برای سیستم‌های پرسش و پاسخ سازمانی و کاربردهای استدلال زنجیره‌ای طولانی.",
         "modelTags": [
-            "深度思考",
-            "文本生成",
-            "工具调用"
+            "تفکر عمیق",
+            "تولید متن",
+            "فراخوانی ابزار"
         ],
         "contextWindow": 32,
         "maxGenerationTokenLength": 23,
         "relatedLinks": [
             {
-                "title": "最新文心大模型上线千帆，性能飞跃，价格大降",
+                "title": "جدیدترین مدل بزرگ ERNIE در Qianfan عرضه شد؛ جهش عملکرد و کاهش شدید قیمت",
                 "url": " https://qianfan.cloud.baidu.com/qianfandev/topic/685928 "
             },
             {
-                "title": "文心4.5Turbo、X1Turbo发布（Create2025）",
+                "title": "انتشار ERNIE 4.5 Turbo و X1 Turbo (Create2025)",
                 "url": " https://qianfan.cloud.baidu.com/qianfandev/topic/685917 "
             }
         ],
@@ -137,26 +137,26 @@
     },
     {
         "modelName": "ERNIE-X1.1-Turbo-32K",
-        "company": "百度",
-        "country": "中国",
-        "openSourceStatus": "闭源",
+        "company": "Baidu",
+        "country": "چین",
+        "openSourceStatus": "متن‌بسته",
         "releaseDate": "2026-04",
-        "description": "ERNIE-X1.1-Turbo-32K 是百度文心 X1 深度思考系列的升级版本，千帆模型列表将 X1.1 作为新一代推理模型提供；支持 32K 上下文，面向数学、代码、复杂问答和多步工具调用，适合企业级推理助手、研发分析与长链路决策场景。",
+        "description": "ERNIE-X1.1-Turbo-32K نسخه ارتقایافته سری تفکر عمیق ERNIE X1 از Baidu است؛ فهرست مدل‌های Qianfan نسخه X1.1 را به‌عنوان نسل جدید مدل استدلالی ارائه می‌کند؛ از context با طول 32K پشتیبانی می‌کند و برای ریاضی، کد، پرسش و پاسخ پیچیده و فراخوانی ابزار چندگامی طراحی شده؛ مناسب برای دستیار استدلال سازمانی، تحلیل توسعه و سناریوهای تصمیم‌گیری زنجیره‌ای طولانی.",
         "modelTags": [
-            "文本生成",
-            "深度思考",
-            "代码增强",
-            "工具调用"
+            "تولید متن",
+            "تفکر عمیق",
+            "تقویت کد",
+            "فراخوانی ابزار"
         ],
         "contextWindow": 32,
         "maxGenerationTokenLength": 32,
         "relatedLinks": [
             {
-                "title": "文心模型列表（ERNIE X1.1 系列）",
+                "title": "فهرست مدل‌های ERNIE (سری ERNIE X1.1)",
                 "url": "https://cloud.baidu.com/doc/WENXINWORKSHOP/s/Wm9cvy6rl"
             },
             {
-                "title": "百度智能云千帆大模型平台",
+                "title": "پلتفرم مدل بزرگ Qianfan در Baidu AI Cloud",
                 "url": "https://cloud.baidu.com/product/model.html"
             }
         ],
@@ -164,24 +164,24 @@
     },
     {
         "modelName": "ERNIE-4.0-Turbo-8K",
-        "company": "百度",
-        "country": "中国",
-        "openSourceStatus": "闭源",
+        "company": "Baidu",
+        "country": "چین",
+        "openSourceStatus": "متن‌بسته",
         "releaseDate": "2024-08-21",
-        "description": "ERNIE-4.0-Turbo-8K 是百度自研旗舰模型的增强版，采用优化的 Transformer 推理服务并自动对接百度搜索，支持 5K 输入+2K 输出、8K 上下文，擅长复杂问答、长文生成与工具调用，适用于企业知识问答、内容创作与智能客服等场景。",
+        "description": "ERNIE-4.0-Turbo-8K نسخه تقویت‌شده مدل پرچم‌دار خودساخته Baidu است که از سرویس استنتاج Transformer بهینه‌شده استفاده می‌کند و خودکار به جستجوی Baidu متصل می‌شود، از ورودی 5K + خروجی 2K و context با طول 8K پشتیبانی می‌کند و در پرسش و پاسخ پیچیده، تولید متن طولانی و فراخوانی ابزار مهارت دارد؛ مناسب برای پرسش و پاسخ دانش سازمانی، تولید محتوا و پشتیبانی مشتری هوشمند.",
         "modelTags": [
-            "文本生成",
-            "工具调用"
+            "تولید متن",
+            "فراخوانی ابزار"
         ],
         "contextWindow": 8,
         "maxGenerationTokenLength": 2,
         "relatedLinks": [
             {
-                "title": "ERNIE-4.0-Turbo-8K 推理服务 API",
+                "title": "API سرویس استنتاج ERNIE-4.0-Turbo-8K",
                 "url": " https://cloud.baidu.com/doc/WENXINWORKSHOP/s/7lxwwtafj "
             },
             {
-                "title": "ERNIE-4.0-Turbo-8K-Preview 推理服务 API",
+                "title": "API سرویس استنتاج ERNIE-4.0-Turbo-8K-Preview",
                 "url": " https://cloud.baidu.com/doc/WENXINWORKSHOP/s/flxwku3ea "
             }
         ],
@@ -189,24 +189,24 @@
     },
     {
         "modelName": "ERNIE-4.0-Turbo-128K",
-        "company": "百度",
-        "country": "中国",
-        "openSourceStatus": "闭源",
+        "company": "Baidu",
+        "country": "چین",
+        "openSourceStatus": "متن‌بسته",
         "releaseDate": "2024-08-21",
-        "description": "ERNIE-4.0-Turbo-128K 是百度文心旗舰模型的长上下文版本，基于 Transformer 与知识增强训练，支持 128K 上下文并可联动百度搜索插件，长文档整体效果优于 ERNIE-3.5-128K；擅长长文本生成、复杂问答与工具调用，适用于企业知识库问答、文档处理与研发协作场景。",
+        "description": "ERNIE-4.0-Turbo-128K نسخه context طولانی مدل پرچم‌دار ERNIE از Baidu است که بر پایه Transformer و آموزش تقویت‌شده با دانش ساخته شده، از context با طول 128K پشتیبانی می‌کند و می‌تواند با افزونه جستجوی Baidu کار کند؛ عملکرد کلی در اسناد طولانی بهتر از ERNIE-3.5-128K است؛ در تولید متن طولانی، پرسش و پاسخ پیچیده و فراخوانی ابزار مهارت دارد؛ مناسب برای پرسش و پاسخ پایگاه دانش سازمانی، پردازش اسناد و همکاری توسعه.",
         "modelTags": [
-            "文本生成",
-            "工具调用"
+            "تولید متن",
+            "فراخوانی ابزار"
         ],
         "contextWindow": 128,
         "maxGenerationTokenLength": 4,
         "relatedLinks": [
             {
-                "title": "ERNIE-4.0-Turbo-128K 推理服务 API",
+                "title": "API سرویس استنتاج ERNIE-4.0-Turbo-128K",
                 "url": " https://cloud.baidu.com/doc/WENXINWORKSHOP/s/7m0oog4ra "
             },
             {
-                "title": "ERNIE 4.0 Turbo 精调服务上线公告（千帆社区）",
+                "title": "اطلاعیه عرضه سرویس تنظیم دقیق ERNIE 4.0 Turbo (جامعه Qianfan)",
                 "url": " https://qianfan.cloud.baidu.com/qianfandev/topic/361594 "
             }
         ],
@@ -214,24 +214,24 @@
     },
     {
         "modelName": "ERNIE-4.0-8K",
-        "company": "百度",
-        "country": "中国",
-        "openSourceStatus": "闭源",
+        "company": "Baidu",
+        "country": "چین",
+        "openSourceStatus": "متن‌بسته",
         "releaseDate": "2023-10-17",
-        "description": "ERNIE-4.0-8K 属于文心 4.0 旗舰系列，采用 Transformer 与知识增强方案，支持约 5K 输入 + 2K 输出与 8K 上下文，并可接入百度搜索保障信息时效；具备文本生成、指令遵循与工具调用能力，适用于企业内容创作、智能客服、文档问答与应用开发等场景。",
+        "description": "ERNIE-4.0-8K عضو سری پرچم‌دار ERNIE 4.0 است که از Transformer و راهکار تقویت با دانش استفاده می‌کند، از حدود 5K ورودی + 2K خروجی و context با طول 8K پشتیبانی می‌کند و می‌تواند برای تضمین به‌روز بودن اطلاعات به جستجوی Baidu متصل شود؛ توانایی تولید متن، پیروی از دستور و فراخوانی ابزار دارد؛ مناسب برای تولید محتوای سازمانی، پشتیبانی مشتری هوشمند، پرسش و پاسخ اسناد و توسعه برنامه.",
         "modelTags": [
-            "文本生成",
-            "工具调用"
+            "تولید متن",
+            "فراخوانی ابزار"
         ],
         "contextWindow": 8,
         "maxGenerationTokenLength": 2,
         "relatedLinks": [
             {
-                "title": "ERNIE-4.0-8K 推理服务 API",
+                "title": "API سرویس استنتاج ERNIE-4.0-8K",
                 "url": " https://cloud.baidu.com/doc/WENXINWORKSHOP/s/clntwmv7t "
             },
             {
-                "title": "文心大模型4.0发布（百度百科）",
+                "title": "انتشار مدل بزرگ ERNIE 4.0 (دانشنامه Baidu)",
                 "url": " https://baike.baidu.com/item/ERNIE4.0/64296404 "
             }
         ],
@@ -239,30 +239,30 @@
     },
     {
         "modelName": "ERNIE-4.5-VL-28B-A3B",
-        "company": "百度",
-        "country": "中国",
-        "openSourceStatus": "开源",
+        "company": "Baidu",
+        "country": "چین",
+        "openSourceStatus": "متن‌باز",
         "releaseDate": "2025-06-30",
-        "description": "ERNIE-4.5-VL-28B-A3B 是百度开源的轻量多模态 MoE 模型，28B 总参数、3B 激活，联合训练文本/图像/视频，支持 128K 上下文与可选思考模式，强化视觉推理、视觉定位与工具调用，适用于图文问答、文档与图表解析、视频理解、工业检测与多模态检索等场景。",
+        "description": "ERNIE-4.5-VL-28B-A3B مدل MoE چندوجهی سبک و متن‌باز Baidu است با 28B پارامتر کل و 3B فعال، که متن/تصویر/ویدئو را به‌طور مشترک آموزش دیده، از context با طول 128K و حالت تفکر اختیاری پشتیبانی می‌کند و استدلال بصری، مکان‌یابی بصری و فراخوانی ابزار را تقویت کرده؛ مناسب برای پرسش و پاسخ تصویری، تجزیه اسناد و نمودار، فهم ویدئو، بازرسی صنعتی و بازیابی چندوجهی.",
         "modelTags": [
-            "文本生成",
-            "视觉理解",
-            "深度思考",
-            "工具调用"
+            "تولید متن",
+            "درک تصویر",
+            "تفکر عمیق",
+            "فراخوانی ابزار"
         ],
         "contextWindow": 128,
         "maxGenerationTokenLength": 0,
         "relatedLinks": [
             {
-                "title": "ERNIE 4.5 开源发布博客",
+                "title": "وبلاگ انتشار متن‌باز ERNIE 4.5",
                 "url": "https://ernie.baidu.com/blog/posts/ernie4.5/"
             },
             {
-                "title": "ERNIE-4.5 技术报告",
+                "title": "گزارش فنی ERNIE-4.5",
                 "url": "https://yiyan.baidu.com/blog/publication/ERNIE_Technical_Report.pdf"
             },
             {
-                "title": "PaddlePaddle/ERNIE 官方开源仓库",
+                "title": "مخزن متن‌باز رسمی PaddlePaddle/ERNIE",
                 "url": "https://github.com/PaddlePaddle/ERNIE"
             }
         ],
@@ -270,29 +270,29 @@
     },
     {
         "modelName": "ERNIE-4.5-21B-A3B",
-        "company": "百度",
-        "country": "中国",
-        "openSourceStatus": "开源",
+        "company": "Baidu",
+        "country": "چین",
+        "openSourceStatus": "متن‌باز",
         "releaseDate": "2025-06-30",
-        "description": "ERNIE-4.5-21B-A3B 是百度开源的文本 MoE 大模型，采用异构多模态专家架构与 PaddlePaddle 训练，单 token 激活 3B 参数，并结合 PD 资源解耦与 FP8/低比特量化优化，支持 32K 上下文，擅长长文本生成、复杂逻辑推理与工具调用，适用于智能客服、知识检索、业务自动化等场景。",
+        "description": "ERNIE-4.5-21B-A3B مدل بزرگ MoE متنی و متن‌باز Baidu است که از معماری متخصصان چندوجهی ناهمگن و آموزش PaddlePaddle استفاده می‌کند، برای هر token 3B پارامتر فعال می‌کند و با جداسازی منابع PD و بهینه‌سازی کوانتیزه‌سازی FP8/کم‌بیت همراه است، از context با طول 32K پشتیبانی می‌کند و در تولید متن طولانی، استدلال منطقی پیچیده و فراخوانی ابزار مهارت دارد؛ مناسب برای پشتیبانی مشتری هوشمند، بازیابی دانش و خودکارسازی کسب‌وکار.",
         "modelTags": [
-            "文本生成",
-            "深度思考",
-            "工具调用"
+            "تولید متن",
+            "تفکر عمیق",
+            "فراخوانی ابزار"
         ],
         "contextWindow": 128,
         "maxGenerationTokenLength": 0,
         "relatedLinks": [
             {
-                "title": "ERNIE 4.5 开源发布博客",
+                "title": "وبلاگ انتشار متن‌باز ERNIE 4.5",
                 "url": "https://ernie.baidu.com/blog/posts/ernie4.5/ "
             },
             {
-                "title": "ERNIE-4.5 技术报告",
+                "title": "گزارش فنی ERNIE-4.5",
                 "url": "https://yiyan.baidu.com/blog/publication/ERNIE_Technical_Report.pdf"
             },
             {
-                "title": "PaddlePaddle/ERNIE 官方开源仓库",
+                "title": "مخزن متن‌باز رسمی PaddlePaddle/ERNIE",
                 "url": "https://github.com/PaddlePaddle/ERNIE "
             }
         ],
@@ -300,29 +300,29 @@
     },
     {
         "modelName": "ERNIE-4.5-300B-A47B",
-        "company": "百度",
-        "country": "中国",
-        "openSourceStatus": "开源",
+        "company": "Baidu",
+        "country": "چین",
+        "openSourceStatus": "متن‌باز",
         "releaseDate": "2025-06-30",
-        "description": "ERNIE-4.5-300B-A47B是百度文心大模型4.5系列的旗舰文本模型，采用MoE架构，拥有300B参数总量和47B激活参数，具备强大的文本理解、生成、逻辑推理和代码能力，在多项基准评测中超越DeepSeek-V3、Qwen3等模型，适用于知识问答、内容创作和复杂推理场景。",
+        "description": "ERNIE-4.5-300B-A47B مدل متنی پرچم‌دار سری مدل بزرگ ERNIE 4.5 از Baidu است که از معماری MoE استفاده می‌کند، 300B پارامتر کل و 47B پارامتر فعال دارد و توانایی قوی فهم و تولید متن، استدلال منطقی و کد دارد؛ در چندین بنچمارک از مدل‌هایی مثل DeepSeek-V3 و Qwen3 فراتر رفته و برای پرسش و پاسخ دانشی، تولید محتوا و سناریوهای استدلال پیچیده مناسب است.",
         "modelTags": [
-            "文本生成",
-            "深度思考",
-            "工具调用"
+            "تولید متن",
+            "تفکر عمیق",
+            "فراخوانی ابزار"
         ],
         "contextWindow": 128,
         "maxGenerationTokenLength": 0,
         "relatedLinks": [
             {
-                "title": "百度文心大模型4.5系列官方发布公告",
+                "title": "اطلاعیه رسمی انتشار سری مدل بزرگ ERNIE 4.5 از Baidu",
                 "url": "https://www.dahecube.com/article.html?artid=229246?recid=462"
             },
             {
-                "title": "文心大模型4.5系列开源新闻",
+                "title": "خبر متن‌باز شدن سری مدل بزرگ ERNIE 4.5",
                 "url": "https://m.thepaper.cn/newsDetail_forward_31067189"
             },
             {
-                "title": "ERNIE-4.5技术特点介绍",
+                "title": "معرفی ویژگی‌های فنی ERNIE-4.5",
                 "url": "https://www.xinhuanet.com/info/20250521/12548be14a5c4580aedbe151828bd1e7/c.html"
             }
         ],
@@ -330,30 +330,30 @@
     },
     {
         "modelName": "ERNIE-4.5-VL-424B-A47B",
-        "company": "百度",
-        "country": "中国",
-        "openSourceStatus": "开源",
+        "company": "Baidu",
+        "country": "چین",
+        "openSourceStatus": "متن‌باز",
         "releaseDate": "2025-06-30",
-        "description": "ERNIE-4.5-VL-424B-A47B是百度文心大模型4.5系列的旗舰多模态模型，采用MoE架构，拥有424B参数总量和47B激活参数，具备优秀的多模态理解能力(支持文字、图片、音频、视频)和跨模态推理能力，能理解梗图、讽刺漫画等复杂内容，适用于多模态内容创作、图像理解和视频分析等场景。",
+        "description": "ERNIE-4.5-VL-424B-A47B مدل چندوجهی پرچم‌دار سری مدل بزرگ ERNIE 4.5 از Baidu است که از معماری MoE استفاده می‌کند، 424B پارامتر کل و 47B پارامتر فعال دارد و توانایی عالی فهم چندوجهی (پشتیبانی از متن، تصویر، صدا و ویدئو) و استدلال بین‌وجهی دارد؛ می‌تواند محتوای پیچیده‌ای مثل میم و کاریکاتور طنز را بفهمد و برای تولید محتوای چندوجهی، فهم تصویر و تحلیل ویدئو مناسب است.",
         "modelTags": [
-            "文本生成",
-            "深度思考",
-            "视觉理解",
-            "工具调用"
+            "تولید متن",
+            "تفکر عمیق",
+            "درک تصویر",
+            "فراخوانی ابزار"
         ],
         "contextWindow": 128,
         "maxGenerationTokenLength": 0,
         "relatedLinks": [
             {
-                "title": "百度文心大模型4.5系列官方发布公告",
+                "title": "اطلاعیه رسمی انتشار سری مدل بزرگ ERNIE 4.5 از Baidu",
                 "url": "https://www.dahecube.com/article.html?artid=229246?recid=462"
             },
             {
-                "title": "文心大模型4.5系列开源新闻",
+                "title": "خبر متن‌باز شدن سری مدل بزرگ ERNIE 4.5",
                 "url": "https://m.thepaper.cn/newsDetail_forward_31067189"
             },
             {
-                "title": "ERNIE-4.5-VL技术特点介绍",
+                "title": "معرفی ویژگی‌های فنی ERNIE-4.5-VL",
                 "url": "https://www.xinhuanet.com/info/20250521/12548be14a5c4580aedbe151828bd1e7/c.html"
             }
         ],

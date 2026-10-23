@@ -1,22 +1,22 @@
 /**
- * DeepSpeed 封面
+ * جلد DeepSpeed
  *
- * 隐喻：一个超大模型 → 被拆成 4 份摊到 4 张 GPU 方块上。
+ * استعاره: یک مدل بسیار بزرگ ← به ۴ بخش تقسیم و روی ۴ مربع GPU پخش می‌شود.
  *
- * 视觉构图（viewBox 320×200）：
- *   - 左上：一个大「Model 70B」气泡（cream + ink 描边，stamp）
- *   - 中央：4 条曲线从大模型扇出
- *   - 右下：4 张 GPU 方块（coral / butter / teal / pop），每个里有 1/4 的小方块表示「自己那份」
- *   - 右上：「÷4」压缩 stamp
- *   - 左下：ZeRO mono 装饰
+ * ترکیب‌بندی بصری (viewBox 320×200):
+ *   - بالا-چپ: یک حباب بزرگ «Model 70B» (cream + حاشیه ink، stamp)
+ *   - مرکز: ۴ منحنی از مدل بزرگ باز می‌شوند
+ *   - پایین-راست: ۴ مربع GPU (coral / butter / teal / pop)، در هر کدام یک مربع کوچک ۱/۴ نشان‌دهنده «سهم خودش»
+ *   - بالا-راست: stamp فشرده‌سازی «÷4»
+ *   - پایین-چپ: تزئین mono با ZeRO
  *
- * hover：4 张 GPU 方块各自向外微浮动，扇形线流动 dash 加速。
+ * hover: ۴ مربع GPU هر کدام کمی به بیرون شناور می‌شوند، dash روان خطوط بادبزنی سریع‌تر می‌شود.
  */
 import React from "react";
 import CoverShell from "./CoverShell";
 
 const GPU_BOXES = [
-  { x: 218, y: 60, color: "#E07A5F", piece: 0 }, // coral · GPU0 持有第 0 片
+  { x: 218, y: 60, color: "#E07A5F", piece: 0 }, // coral · GPU0 تکه ۰ را نگه می‌دارد
   { x: 268, y: 60, color: "#E5BD3A", piece: 1 }, // butter · GPU1
   { x: 218, y: 120, color: "#1B4B5A", piece: 2 }, // teal · GPU2
   { x: 268, y: 120, color: "#FF4D74", piece: 3 }, // pop · GPU3
@@ -27,7 +27,7 @@ const MODEL = { x: 78, y: 88 };
 const DeepspeedCover: React.FC = () => {
   return (
     <CoverShell bgClassName="bg-butter" dotOpacity={0.07}>
-      {/* 右上 ÷4 stamp */}
+      {/* stamp ÷4 بالا-راست */}
       <g
         transform="translate(286,28) rotate(-7)"
         className="origin-center transition-transform duration-500 group-hover:rotate-2 group-hover:scale-110"
@@ -55,7 +55,7 @@ const DeepspeedCover: React.FC = () => {
         </text>
       </g>
 
-      {/* 左上小标签 ZeRO-3 */}
+      {/* برچسب کوچک بالا-چپ ZeRO-3 */}
       <g transform="translate(60,30)">
         <rect
           x="-30"
@@ -81,7 +81,7 @@ const DeepspeedCover: React.FC = () => {
         </text>
       </g>
 
-      {/* 左下：DeepSpeed mono 装饰 */}
+      {/* پایین-چپ: تزئین mono با DeepSpeed */}
       <g transform="translate(28,178) rotate(-3)" className="origin-left">
         <rect
           x="-3"
@@ -107,12 +107,12 @@ const DeepspeedCover: React.FC = () => {
         </text>
       </g>
 
-      {/* 中央大「Model 70B」气泡 */}
+      {/* حباب بزرگ «Model 70B» در مرکز */}
       <g
         transform={`translate(${MODEL.x},${MODEL.y})`}
         className="origin-center transition-transform duration-500 group-hover:-translate-x-1"
       >
-        {/* 外圈 cream 气泡 */}
+        {/* حباب cream بیرونی */}
         <rect
           x="-38"
           y="-30"
@@ -123,12 +123,12 @@ const DeepspeedCover: React.FC = () => {
           stroke="#241C15"
           strokeWidth="2"
         />
-        {/* 内部 4 段堆叠 = 完整模型 */}
+        {/* ۴ بخش روی هم در داخل = مدل کامل */}
         <rect x="-30" y="-22" width="60" height="10" rx="2" fill="#E07A5F" stroke="#241C15" strokeWidth="1.2" />
         <rect x="-30" y="-10" width="60" height="10" rx="2" fill="#E5BD3A" stroke="#241C15" strokeWidth="1.2" />
         <rect x="-30" y="2" width="60" height="10" rx="2" fill="#1B4B5A" stroke="#241C15" strokeWidth="1.2" />
         <rect x="-30" y="14" width="60" height="10" rx="2" fill="#FF4D74" stroke="#241C15" strokeWidth="1.2" />
-        {/* 标签 */}
+        {/* برچسب */}
         <text
           x="0"
           y="-36"
@@ -142,7 +142,7 @@ const DeepspeedCover: React.FC = () => {
         </text>
       </g>
 
-      {/* 4 条扇形连线：从模型 → 4 张 GPU */}
+      {/* ۴ خط اتصال بادبزنی: از مدل ← ۴ GPU */}
       <g
         stroke="#241C15"
         strokeWidth="1.4"
@@ -161,7 +161,7 @@ const DeepspeedCover: React.FC = () => {
         ))}
       </g>
 
-      {/* 中间小漏斗节点 */}
+      {/* گره قیف کوچک وسط */}
       <g transform="translate(160,90)">
         <circle r="7.5" fill="#241C15" stroke="#241C15" strokeWidth="1.5" />
         <text
@@ -176,7 +176,7 @@ const DeepspeedCover: React.FC = () => {
         </text>
       </g>
 
-      {/* 4 张 GPU 方块 · 每个里画 4 格，自己那格满色，其他浅色 */}
+      {/* ۴ مربع GPU · در هر کدام ۴ خانه، خانه خودش پررنگ و بقیه کم‌رنگ */}
       {GPU_BOXES.map((g, i) => (
         <g
           key={`gpu-${i}`}
@@ -186,7 +186,7 @@ const DeepspeedCover: React.FC = () => {
             transformOrigin: `${g.x}px ${g.y}px`,
           }}
         >
-          {/* 外框 */}
+          {/* قاب بیرونی */}
           <rect
             x="-22"
             y="-22"
@@ -197,7 +197,7 @@ const DeepspeedCover: React.FC = () => {
             stroke="#241C15"
             strokeWidth="1.8"
           />
-          {/* 4 格内部 */}
+          {/* ۴ خانه داخلی */}
           {[0, 1, 2, 3].map((idx) => {
             const cx = (idx % 2) * 18 - 18;
             const cy = Math.floor(idx / 2) * 18 - 18;
@@ -217,7 +217,7 @@ const DeepspeedCover: React.FC = () => {
               />
             );
           })}
-          {/* GPU 编号 */}
+          {/* شماره GPU */}
           <text
             y="-28"
             textAnchor="middle"
@@ -231,7 +231,7 @@ const DeepspeedCover: React.FC = () => {
         </g>
       ))}
 
-      {/* 底部 caption */}
+      {/* caption پایین */}
       <text
         x="160"
         y="195"

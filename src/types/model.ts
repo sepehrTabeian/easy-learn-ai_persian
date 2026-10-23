@@ -1,5 +1,5 @@
 /**
- * AI 模型相关类型定义
+ * تعریف نوع‌های مرتبط با مدل AI
  */
 
 export interface RelatedLink {
@@ -11,7 +11,7 @@ export interface AIModel {
   modelName: string;
   company: string;
   country: string;
-  openSourceStatus: "开源" | "闭源";
+  openSourceStatus: "متن‌باز" | "متن‌بسته";
   releaseDate: string;
   description: string;
   modelTags: string[];

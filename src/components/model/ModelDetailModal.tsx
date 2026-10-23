@@ -1,13 +1,13 @@
 /**
- * 模型详情弹窗 · Mailchimp-Freddie 风
+ * پنجره جزئیات مدل · سبک Mailchimp-Freddie
  *
- * 改造要点：
- *   - 删紫蓝粉数据格渐变 → cream + ink/12 边
- *   - 删 backdrop-blur-sm → ink/45 实色遮罩
- *   - 删 blue/purple 渐变标签 → cream + ink/15 边 chip
- *   - 删 shadow-2xl → shadow-stamp-lg（offset 阴影）
- *   - 顶 strip 用 ModelCard 同款公司哈希色
- *   - 关闭按钮、链接、章节标题统一字体与配色
+ * نکات بازسازی:
+ *   - حذف گرادیان بنفش-آبی-صورتی خانه‌های داده ← cream + حاشیه ink/12
+ *   - حذف backdrop-blur-sm ← پوشش توپر ink/45
+ *   - حذف برچسب‌های گرادیان blue/purple ← chip با cream + حاشیه ink/15
+ *   - حذف shadow-2xl ← shadow-stamp-lg (سایه offset)
+ *   - strip بالا از همان رنگ هش شرکت در ModelCard استفاده می‌کند
+ *   - دکمه بستن، لینک‌ها و عنوان بخش‌ها فونت و رنگ یکسان دارند
  */
 
 import React, { useEffect } from "react";
@@ -21,7 +21,7 @@ interface ModelDetailModalProps {
   onClose: () => void;
 }
 
-/** 公司 → 品牌色 strip（与 ModelCard 一致） */
+/** شرکت ← strip رنگ برند (هم‌سو با ModelCard) */
 const companyAccent = (company: string): string => {
   const palette = [
     "bg-butter",
@@ -39,13 +39,13 @@ const companyAccent = (company: string): string => {
 
 const countryFlag = (country: string): string => {
   const flags: Record<string, string> = {
-    美国: "🇺🇸",
-    中国: "🇨🇳",
-    英国: "🇬🇧",
-    德国: "🇩🇪",
-    法国: "🇫🇷",
-    加拿大: "🇨🇦",
-    日本: "🇯🇵",
+    آمریکا: "🇺🇸",
+    چین: "🇨🇳",
+    انگلیس: "🇬🇧",
+    آلمان: "🇩🇪",
+    فرانسه: "🇫🇷",
+    کانادا: "🇨🇦",
+    ژاپن: "🇯🇵",
   };
   return flags[country] || "🌍";
 };
@@ -63,7 +63,7 @@ const formatDate = (dateStr: string): string => {
 };
 
 const formatTokenSize = (n: number | undefined): string => {
-  if (!n || n <= 0) return "暂无";
+  if (!n || n <= 0) return "موجود نیست";
   if (n >= 1000) {
     const m = n / 1000;
     return Number.isInteger(m) ? `${m}M` : `${m.toFixed(1)}M`;
@@ -96,15 +96,15 @@ export const ModelDetailModal: React.FC<ModelDetailModalProps> = ({
 
   return createPortal(
     <div className="fixed inset-0 z-[1000] flex items-center justify-center p-4 animate-[enterFade_0.18s_ease-out_both]">
-      {/* 实色遮罩 —— 无 blur */}
+      {/* پوشش توپر —— بدون blur */}
       <div className="absolute inset-0 bg-ink/45" onClick={onClose} />
 
       {/* Modal shell */}
       <div className="relative bg-white border-2 border-ink rounded-3xl shadow-stamp-xl max-w-3xl w-full max-h-[88vh] overflow-hidden flex flex-col animate-[enterPop_0.32s_cubic-bezier(0.34,1.56,0.64,1)_both]">
-        {/* 顶 strip —— 公司哈希色（与 ModelCard 一致） */}
+        {/* strip بالا —— رنگ هش شرکت (هم‌سو با ModelCard) */}
         <div className={`h-2 ${accent} border-b-2 border-ink`} aria-hidden />
 
-        {/* 头部 */}
+        {/* سربرگ */}
         <div className="flex items-start justify-between px-6 lg:px-8 pt-6 pb-5 border-b-2 border-ink/10">
           <div className="flex items-start gap-4 flex-1 min-w-0">
             <div className="flex-shrink-0">
@@ -136,9 +136,9 @@ export const ModelDetailModal: React.FC<ModelDetailModalProps> = ({
                   {formatDate(model.releaseDate)}
                 </span>
                 <span
-                  className={`inline-flex items-center gap-1.5 font-semibold ${model.openSourceStatus === "开源" ? "text-teal" : "text-ink-tertiary"}`}
+                  className={`inline-flex items-center gap-1.5 font-semibold ${model.openSourceStatus === "متن‌باز" ? "text-teal" : "text-ink-tertiary"}`}
                 >
-                  {model.openSourceStatus === "开源" ? (
+                  {model.openSourceStatus === "متن‌باز" ? (
                     <Unlock className="w-3.5 h-3.5" strokeWidth={2.5} />
                   ) : (
                     <Lock className="w-3.5 h-3.5" strokeWidth={2.5} />
@@ -149,43 +149,43 @@ export const ModelDetailModal: React.FC<ModelDetailModalProps> = ({
             </div>
           </div>
 
-          {/* 关闭按钮 —— stamp mini */}
+          {/* دکمه بستن —— stamp mini */}
           <button
             onClick={onClose}
-            aria-label="关闭"
-            className="flex-shrink-0 inline-flex items-center justify-center w-9 h-9 ml-3 bg-white border-2 border-ink rounded-full shadow-stamp transition-all duration-250 ease-spring hover:-translate-x-[2px] hover:-translate-y-[2px] hover:[box-shadow:6px_6px_0_0_#241C15]"
+            aria-label="بستن"
+            className="flex-shrink-0 inline-flex items-center justify-center w-9 h-9 ms-3 bg-white border-2 border-ink rounded-full shadow-stamp transition-all duration-250 ease-spring hover:-translate-x-[2px] hover:-translate-y-[2px] hover:[box-shadow:6px_6px_0_0_#241C15]"
           >
             <X className="w-4 h-4 text-ink" strokeWidth={2.5} />
           </button>
         </div>
 
-        {/* 内容区域 */}
+        {/* ناحیه محتوا */}
         <div className="flex-1 overflow-y-auto px-6 lg:px-8 py-7 space-y-7 bg-white">
-          {/* 核心参数 */}
+          {/* پارامترهای اصلی */}
           <section>
-            <SectionTitle>核心参数</SectionTitle>
+            <SectionTitle>پارامترهای اصلی</SectionTitle>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               <ParamCell
-                label="上下文窗口"
+                label="پنجره context"
                 value={formatTokenSize(model.contextWindow)}
               />
               <ParamCell
-                label="最大输出"
+                label="حداکثر خروجی"
                 value={formatTokenSize(model.maxGenerationTokenLength)}
               />
               {model.maxOutputResolution && (
                 <ParamCell
-                  label="最大输出分辨率"
+                  label="حداکثر وضوح خروجی"
                   value={model.maxOutputResolution}
                 />
               )}
             </div>
           </section>
 
-          {/* 功能标签 */}
+          {/* برچسب‌های قابلیت */}
           {model.modelTags.length > 0 && (
             <section>
-              <SectionTitle>功能标签</SectionTitle>
+              <SectionTitle>برچسب‌های قابلیت</SectionTitle>
               <div className="flex flex-wrap gap-2">
                 {model.modelTags.map((tag, index) => (
                   <span
@@ -200,18 +200,18 @@ export const ModelDetailModal: React.FC<ModelDetailModalProps> = ({
             </section>
           )}
 
-          {/* 模型介绍 */}
+          {/* معرفی مدل */}
           <section>
-            <SectionTitle>模型介绍</SectionTitle>
+            <SectionTitle>معرفی مدل</SectionTitle>
             <p className="font-sans text-[14px] lg:text-[15px] text-ink-secondary leading-[1.75]">
               {model.description}
             </p>
           </section>
 
-          {/* 相关资源 */}
+          {/* منابع مرتبط */}
           {model.relatedLinks.length > 0 && (
             <section>
-              <SectionTitle>相关资源</SectionTitle>
+              <SectionTitle>منابع مرتبط</SectionTitle>
               <div className="space-y-2">
                 {model.relatedLinks.map((link, index) => (
                   <a
@@ -240,7 +240,7 @@ export const ModelDetailModal: React.FC<ModelDetailModalProps> = ({
   );
 };
 
-/** Section 标题：display 字体 + ink 横线 */
+/** عنوان Section: فونت display + خط افقی ink */
 const SectionTitle: React.FC<{ children: React.ReactNode }> = ({ children }) => (
   <div className="flex items-baseline gap-3 mb-4">
     <h3 className="font-display font-extrabold text-[17px] lg:text-[19px] text-ink leading-none">
@@ -250,7 +250,7 @@ const SectionTitle: React.FC<{ children: React.ReactNode }> = ({ children }) => 
   </div>
 );
 
-/** 参数格：cream 底 + ink/12 边 + 标签上数字下 */
+/** خانه پارامتر: پس‌زمینه cream + حاشیه ink/12 + برچسب بالا عدد پایین */
 const ParamCell: React.FC<{ label: string; value: string }> = ({
   label,
   value,

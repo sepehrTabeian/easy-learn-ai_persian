@@ -1,18 +1,18 @@
 /**
- * GGUF 封面
+ * جلد GGUF
  *
- * 隐喻：一个 .gguf 文件盒子被剖开，内部 4 层（GGUF magic / metadata / tensor info / weights）
- * 叠成一个垂直堆栈；左侧是 hex 字节流装饰，右侧是 Q4_K_M stamp。
+ * استعاره: یک جعبه فایل .gguf باز شده و ۴ لایه داخلی آن (GGUF magic / metadata / tensor info / weights)
+ * به‌صورت یک پشته عمودی روی هم قرار دارند؛ سمت چپ تزئین جریان بایت hex و سمت راست stamp با Q4_K_M است.
  *
- * 视觉构图（viewBox 320×200）：
- *   - 中央偏左：一个垂直 4 段栈，magic 8B / metadata 2.5MB / tensor info 35KB / data 4.92GB
- *     按近似比例分高度但都看得见；颜色 ink/teal/butter/coral/pop
- *   - 左上：hex 「47 47 55 46」装饰
- *   - 右下：Q4_K_M stamp 倾斜
- *   - 右上：「single file」标签
- *   - 中下方装饰：tokens / arch=llama 小标签
+ * ترکیب‌بندی بصری (viewBox 320×200):
+ *   - مرکز متمایل به چپ: یک پشته عمودی ۴ بخشی، magic 8B / metadata 2.5MB / tensor info 35KB / data 4.92GB
+ *     ارتفاع‌ها تقریباً متناسب‌اند اما همه دیده می‌شوند؛ رنگ‌ها ink/teal/butter/coral/pop
+ *   - بالا-چپ: تزئین hex «47 47 55 46»
+ *   - پایین-راست: stamp کج Q4_K_M
+ *   - بالا-راست: برچسب «single file»
+ *   - تزئین پایین وسط: برچسب‌های کوچک tokens / arch=llama
  *
- * hover 行为：堆栈轻微展开（每段间距增大），右下 stamp 旋正。
+ * رفتار hover: پشته کمی باز می‌شود (فاصله بخش‌ها بیشتر می‌شود)، stamp پایین-راست صاف می‌شود.
  */
 import React from "react";
 import CoverShell from "./CoverShell";
@@ -27,7 +27,7 @@ const SEGMENTS = [
 const GgufCover: React.FC = () => {
   return (
     <CoverShell bgClassName="bg-cream" dotOpacity={0.08}>
-      {/* 左上：hex 装饰 */}
+      {/* بالا-چپ: تزئین hex */}
       <g
         transform="translate(28, 24)"
         className="transition-transform duration-500 ease-out group-hover:translate-y-0.5"
@@ -56,7 +56,7 @@ const GgufCover: React.FC = () => {
         </text>
       </g>
 
-      {/* 文件名 caption */}
+      {/* caption نام فایل */}
       <text
         x="119"
         y="20"
@@ -69,7 +69,7 @@ const GgufCover: React.FC = () => {
         Llama-3.1-8B-Q4_K_M.gguf
       </text>
 
-      {/* 中央：垂直 4 段堆栈（用 group-hover 展开） */}
+      {/* مرکز: پشته عمودی ۴ بخشی (با group-hover باز می‌شود) */}
       <g transform="translate(110, 0)">
         {SEGMENTS.map((s, i) => (
           <g
@@ -77,7 +77,7 @@ const GgufCover: React.FC = () => {
             className="transition-transform duration-500 ease-out"
             style={{
               transformOrigin: "center",
-              // hover 时每段额外 y offset
+              // offset اضافی y هر بخش در hover
               transform: `translateY(${i * 0}px)`,
             }}
           >
@@ -106,7 +106,7 @@ const GgufCover: React.FC = () => {
           </g>
         ))}
 
-        {/* tensor data 段加斜线 hatch 装饰 */}
+        {/* تزئین hatch مورب روی بخش tensor data */}
         <g opacity="0.18">
           {Array.from({ length: 8 }).map((_, i) => (
             <line
@@ -121,7 +121,7 @@ const GgufCover: React.FC = () => {
           ))}
         </g>
 
-        {/* 总体边框 */}
+        {/* حاشیه کلی */}
         <rect
           x="-52"
           y="22"
@@ -134,7 +134,7 @@ const GgufCover: React.FC = () => {
         />
       </g>
 
-      {/* 中右 装饰：metadata KV 浮飘标签 */}
+      {/* تزئین وسط-راست: برچسب شناور metadata KV */}
       <g
         fontFamily="Geist Mono, monospace"
         fontSize="7"
@@ -150,7 +150,7 @@ const GgufCover: React.FC = () => {
         <text x="202" y="74">tokens=128k</text>
       </g>
 
-      {/* 右下：Q4_K_M stamp */}
+      {/* پایین-راست: stamp با Q4_K_M */}
       <g
         transform="translate(258, 152) rotate(-8)"
         className="origin-center transition-transform duration-500 group-hover:rotate-2 group-hover:scale-110"
@@ -178,7 +178,7 @@ const GgufCover: React.FC = () => {
         </text>
       </g>
 
-      {/* 右上：single-file pill */}
+      {/* بالا-راست: pill با single-file */}
       <g
         transform="translate(258, 28) rotate(4)"
         className="origin-center transition-transform duration-500 group-hover:-rotate-3"
@@ -207,7 +207,7 @@ const GgufCover: React.FC = () => {
         </text>
       </g>
 
-      {/* 底部 caption */}
+      {/* caption پایین */}
       <g transform="translate(28, 184) rotate(-3)" className="origin-left">
         <rect
           x="-3"

@@ -1,22 +1,22 @@
 /**
- * Agent Sandbox 封面
+ * جلد Agent Sandbox
  *
- * 隐喻：围栏（方形虚线 + 角部 ✕ 防护标）里一个 Agent 小角色，
- *      围栏外有 3 个攻击箭头试图穿入，箭头头部都被弹回（变成 ✕）。
+ * استعاره: یک شخصیت کوچک Agent درون یک حصار (مربع نقطه‌چین + علامت‌های محافظ ✕ در گوشه‌ها)،
+ *      بیرون حصار ۳ فلش حمله تلاش می‌کنند وارد شوند و سر همه فلش‌ها برگشت می‌خورد (به ✕ تبدیل می‌شود).
  *
- * 视觉构图（viewBox 320×200）：
- *   - 中央偏左：butter 填底的方形围栏（虚线边）+ 4 角的 ✕ 防护标
- *   - 围栏中心：Agent 小角色（teal 主体 + cream 眼睛）
- *   - 围栏外 3 个角度：cmd 标签 + 入向箭头 + 弹回 ✕ 标
- *   - 装饰：左上 sparkle、右下 SHIELD 圆标
+ * ترکیب‌بندی بصری (viewBox 320×200):
+ *   - مرکز متمایل به چپ: حصار مربعی با پس‌زمینه butter (حاشیه نقطه‌چین) + علامت‌های محافظ ✕ در ۴ گوشه
+ *   - مرکز حصار: شخصیت کوچک Agent (بدنه teal + چشم‌های cream)
+ *   - ۳ زاویه بیرون حصار: برچسب cmd + فلش ورودی + علامت ✕ برگشتی
+ *   - تزئین: sparkle بالا-چپ، نشان دایره‌ای SHIELD پایین-راست
  *
- * 跟相邻 Agent 系列拉开：
- *   - AgentCover：圆轨道 + 工具触手
- *   - AgentLoopCover：椭圆 + 5 阶段节点
- *   - AgentMemoryCover：抽屉柜
- *   - 这里：方形围栏 + 弹回箭头，整体偏「边界 + 阻挡」语义
+ * متمایز از سری Agent مجاور:
+ *   - AgentCover: مدار دایره‌ای + شاخک‌های ابزار
+ *   - AgentLoopCover: بیضی + ۵ گره مرحله
+ *   - AgentMemoryCover: کمد کشویی
+ *   - این‌جا: حصار مربعی + فلش‌های برگشتی، در کل معنای «مرز + مانع»
  *
- * hover：4 角 ✕ 防护标顺时针轻转；围栏内 Agent 微缩放；外部箭头小幅前后晃。
+ * hover: علامت‌های محافظ ✕ در ۴ گوشه کمی ساعت‌گرد می‌چرخند؛ Agent درون حصار کمی بزرگ و کوچک می‌شود؛ فلش‌های بیرونی کمی جلو و عقب می‌روند.
  */
 import React from "react";
 import CoverShell from "./CoverShell";
@@ -36,7 +36,7 @@ const FENCE_RX = 14;
 const AgentSandboxCover: React.FC = () => {
   return (
     <CoverShell bgClassName="bg-cream" dotOpacity={0.08}>
-      {/* 装饰：左上 sparkle */}
+      {/* تزئین: sparkle بالا-چپ */}
       <g transform="translate(34,28)">
         <g className="origin-center transition-transform duration-700 group-hover:rotate-[120deg]">
           <path
@@ -48,7 +48,7 @@ const AgentSandboxCover: React.FC = () => {
         </g>
       </g>
 
-      {/* 装饰：右下 SHIELD 小圆标 */}
+      {/* تزئین: نشان دایره‌ای کوچک SHIELD پایین-راست */}
       <g transform="translate(286,172)">
         <g
           className="origin-center transition-transform duration-[1200ms] ease-spring group-hover:rotate-[-30deg]"
@@ -66,10 +66,10 @@ const AgentSandboxCover: React.FC = () => {
         </g>
       </g>
 
-      {/* ─── 外部攻击箭头（先画，让围栏盖在上面） ─── */}
+      {/* ─── فلش‌های حمله بیرونی (اول رسم می‌شوند تا حصار روی آن‌ها قرار بگیرد) ─── */}
       {ATTACKS.map((a, i) => {
         const rad = (a.angle * Math.PI) / 180;
-        // 箭头起点（围栏外远处）+ 终点（围栏边缘上的弹回点）
+        // نقطه شروع فلش (دور، بیرون حصار) + نقطه پایان (نقطه برگشت روی لبه حصار)
         const startR = 110;
         const endR = 78;
         const sx = CENTER_X + Math.cos(rad) * startR;
@@ -81,7 +81,7 @@ const AgentSandboxCover: React.FC = () => {
         const ly = CENTER_Y + Math.sin(rad) * labelR;
         return (
           <g key={i}>
-            {/* cmd 标签 */}
+            {/* برچسب cmd */}
             <g transform={`translate(${lx},${ly})`}>
               <rect
                 x="-20"
@@ -106,7 +106,7 @@ const AgentSandboxCover: React.FC = () => {
               </text>
             </g>
 
-            {/* 入向虚线箭头 + 微晃 */}
+            {/* فلش نقطه‌چین ورودی + لرزش خفیف */}
             <g
               className="transition-transform duration-500 ease-spring group-hover:scale-95"
               style={{ transformOrigin: `${sx}px ${sy}px`, transformBox: "fill-box" }}
@@ -126,7 +126,7 @@ const AgentSandboxCover: React.FC = () => {
               </g>
             </g>
 
-            {/* 弹回 ✕ 标 */}
+            {/* علامت ✕ برگشتی */}
             <g transform={`translate(${ex},${ey})`}>
               <circle cx="0" cy="0" r="6" fill="#FBEFE3" stroke="#E07A5F" strokeWidth="1.6" />
               <path
@@ -140,7 +140,7 @@ const AgentSandboxCover: React.FC = () => {
         );
       })}
 
-      {/* ─── 围栏阴影 ─── */}
+      {/* ─── سایه حصار ─── */}
       <rect
         x={CENTER_X - FENCE_W / 2 + 3}
         y={CENTER_Y - FENCE_H / 2 + 3}
@@ -150,7 +150,7 @@ const AgentSandboxCover: React.FC = () => {
         fill="#241C15"
         opacity="0.85"
       />
-      {/* 围栏主体（虚线边） */}
+      {/* بدنه حصار (حاشیه نقطه‌چین) */}
       <rect
         x={CENTER_X - FENCE_W / 2}
         y={CENTER_Y - FENCE_H / 2}
@@ -164,7 +164,7 @@ const AgentSandboxCover: React.FC = () => {
         strokeDasharray="6 4"
       />
 
-      {/* SANDBOX 顶部小标 */}
+      {/* برچسب کوچک بالای SANDBOX */}
       <g transform={`translate(${CENTER_X},${CENTER_Y - FENCE_H / 2 - 8})`}>
         <rect x="-32" y="-8" width="64" height="14" rx="3" fill="#241C15" />
         <text
@@ -181,7 +181,7 @@ const AgentSandboxCover: React.FC = () => {
         </text>
       </g>
 
-      {/* 围栏 4 角 ✕ 防护标，hover 顺时针转 */}
+      {/* علامت‌های محافظ ✕ در ۴ گوشه حصار، در hover ساعت‌گرد می‌چرخند */}
       {[
         { x: CENTER_X - FENCE_W / 2, y: CENTER_Y - FENCE_H / 2 },
         { x: CENTER_X + FENCE_W / 2, y: CENTER_Y - FENCE_H / 2 },
@@ -204,27 +204,27 @@ const AgentSandboxCover: React.FC = () => {
         </g>
       ))}
 
-      {/* ─── 中央：Agent 小角色 ─── */}
+      {/* ─── مرکز: شخصیت کوچک Agent ─── */}
       <g transform={`translate(${CENTER_X},${CENTER_Y})`}>
         <g
           className="origin-center transition-transform duration-500 ease-spring group-hover:scale-105"
           style={{ transformBox: "fill-box" }}
         >
-          {/* 阴影 */}
+          {/* سایه */}
           <rect x="-22" y="-18" width="44" height="36" rx="9" fill="#241C15" opacity="0.85" transform="translate(2,2)" />
-          {/* 主体 */}
+          {/* بدنه اصلی */}
           <rect x="-22" y="-18" width="44" height="36" rx="9" fill="#1B4B5A" stroke="#241C15" strokeWidth="2" />
-          {/* 天线 */}
+          {/* آنتن */}
           <line x1="0" y1="-18" x2="0" y2="-26" stroke="#241C15" strokeWidth="2" strokeLinecap="round" />
           <circle cx="0" cy="-28" r="2.6" fill="#F4D35E" stroke="#241C15" strokeWidth="1.5" />
-          {/* 眼睛 */}
+          {/* چشم‌ها */}
           <circle cx="-7" cy="-5" r="2.6" fill="#FBEFE3" stroke="#241C15" strokeWidth="1.2" />
           <circle cx="-7" cy="-5" r="1.1" fill="#241C15" />
           <circle cx="7" cy="-5" r="2.6" fill="#FBEFE3" stroke="#241C15" strokeWidth="1.2" />
           <circle cx="7" cy="-5" r="1.1" fill="#241C15" />
-          {/* 微笑（在围栏里活得很开心） */}
+          {/* لبخند (درون حصار خیلی شاد زندگی می‌کند) */}
           <path d="M -5 5 Q 0 9 5 5" fill="none" stroke="#FBEFE3" strokeWidth="1.6" strokeLinecap="round" />
-          {/* AGENT 底标 */}
+          {/* برچسب پایینی AGENT */}
           <text
             x="0"
             y="15"
@@ -241,7 +241,7 @@ const AgentSandboxCover: React.FC = () => {
         </g>
       </g>
 
-      {/* 底部 OS 强制小标 */}
+      {/* برچسب کوچک اجبار OS در پایین */}
       <g transform="translate(160,180)">
         <rect x="-46" y="-8" width="92" height="14" rx="7" fill="#FBEFE3" stroke="#241C15" strokeWidth="1.6" />
         <text

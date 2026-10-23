@@ -1,21 +1,21 @@
 /**
- * Batch Size 封面
+ * جلد Batch Size
  *
- * 隐喻：N 个样本方块 → 各算各的梯度（小箭头）→ 漏斗求平均 → 一个大箭头 → θ 球往下挪一格。
+ * استعاره: N مربع نمونه ← هر کدام گرادیان خودش را حساب می‌کند (فلش کوچک) ← قیف میانگین می‌گیرد ← یک فلش بزرگ ← توپ θ یک خانه پایین می‌رود.
  *
- * 视觉构图（viewBox 320×200）：
- *   - 左：3×2 = 6 个 batch 样本方块（每个里画一个小斜线箭头表示该样本的梯度方向）
- *   - 中：6 条收束线汇到一个"平均"圆点，再射出一个大 coral 箭头
- *   - 右：θ 球（butter 色 + ink 描边），加一个虚线箭头表示"更新后位置"
- *   - 右上：「N=6」stamp
- *   - 左下：「∇̄ = ⅙ Σ ∇」mono 公式装饰
+ * ترکیب‌بندی بصری (viewBox 320×200):
+ *   - چپ: ۳×۲ = ۶ مربع نمونه batch (در هر کدام یک فلش مورب کوچک جهت گرادیان آن نمونه را نشان می‌دهد)
+ *   - وسط: ۶ خط همگرا به یک"میانگین"نقطه می‌رسند و سپس یک فلش بزرگ coral شلیک می‌شود
+ *   - راست: توپ θ (رنگ butter + حاشیه ink)، به‌علاوه یک فلش نقطه‌چین که نشان می‌دهد"موقعیت پس از به‌روزرسانی"
+ *   - بالا-راست: stamp «N=6»
+ *   - پایین-چپ: تزئین فرمول mono «∇̄ = ⅙ Σ ∇»
  *
- * hover：6 个样本盒微浮动、收束线流动 dash 加速、θ 球轻微落下。
+ * hover: ۶ جعبه نمونه کمی شناور می‌شوند، dash روان خطوط همگرا سریع‌تر می‌شود، توپ θ کمی پایین می‌افتد.
  */
 import React from "react";
 import CoverShell from "./CoverShell";
 
-/* 6 个样本盒的位置（3 列 × 2 行） */
+/* موقعیت ۶ جعبه نمونه (۳ ستون × ۲ ردیف) */
 const SAMPLE_BOXES = [
   { x: 38, y: 60, grad: [3, -2] },
   { x: 68, y: 60, grad: [2, -3] },
@@ -30,7 +30,7 @@ const FUNNEL = { x: 152, y: 76 };
 const BsCover: React.FC = () => {
   return (
     <CoverShell bgClassName="bg-butter" dotOpacity={0.07}>
-      {/* 右上：N=6 stamp */}
+      {/* بالا-راست: stamp با N=6 */}
       <g
         transform="translate(286,28) rotate(-7)"
         className="origin-center transition-transform duration-500 group-hover:rotate-2 group-hover:scale-110"
@@ -58,7 +58,7 @@ const BsCover: React.FC = () => {
         </text>
       </g>
 
-      {/* 左上小标签：batch */}
+      {/* برچسب کوچک بالا-چپ: batch */}
       <g transform="translate(67,32)">
         <rect
           x="-30"
@@ -84,7 +84,7 @@ const BsCover: React.FC = () => {
         </text>
       </g>
 
-      {/* 左下：公式装饰 */}
+      {/* پایین-چپ: تزئین فرمول */}
       <g transform="translate(28,178) rotate(-3)" className="origin-left">
         <rect
           x="-3"
@@ -110,7 +110,7 @@ const BsCover: React.FC = () => {
         </text>
       </g>
 
-      {/* 6 个样本盒 + 各自的小梯度箭头 */}
+      {/* ۶ جعبه نمونه + فلش گرادیان کوچک هر کدام */}
       {SAMPLE_BOXES.map((s, i) => (
         <g
           key={`s-${i}`}
@@ -127,7 +127,7 @@ const BsCover: React.FC = () => {
             stroke="#241C15"
             strokeWidth="1.6"
           />
-          {/* 样本编号 */}
+          {/* شماره نمونه */}
           <text
             y="-4"
             textAnchor="middle"
@@ -137,7 +137,7 @@ const BsCover: React.FC = () => {
           >
             x{i + 1}
           </text>
-          {/* 小梯度箭头 */}
+          {/* فلش گرادیان کوچک */}
           <line
             x1="0"
             y1="1"
@@ -151,7 +151,7 @@ const BsCover: React.FC = () => {
         </g>
       ))}
 
-      {/* 6 条收束线 -> 漏斗中心 */}
+      {/* ۶ خط همگرا -> مرکز قیف */}
       <g
         stroke="#241C15"
         strokeWidth="0.9"
@@ -164,7 +164,7 @@ const BsCover: React.FC = () => {
         ))}
       </g>
 
-      {/* 漏斗中心：平均圆点 */}
+      {/* مرکز قیف: نقطه میانگین */}
       <g transform={`translate(${FUNNEL.x},${FUNNEL.y})`}>
         <circle r="9" fill="#1B4B5A" stroke="#241C15" strokeWidth="1.8" />
         <text
@@ -179,7 +179,7 @@ const BsCover: React.FC = () => {
         </text>
       </g>
 
-      {/* 大梯度箭头：漏斗 -> θ 球 */}
+      {/* فلش گرادیان بزرگ: قیف -> توپ θ */}
       <g>
         <line
           x1={FUNNEL.x + 9}
@@ -193,9 +193,9 @@ const BsCover: React.FC = () => {
         <polygon points="240,100 248,105 240,110" fill="#241C15" />
       </g>
 
-      {/* θ 球（参数）+ 更新前后两个位置 */}
+      {/* توپ θ (پارامتر) + دو موقعیت قبل و بعد از به‌روزرسانی */}
       <g>
-        {/* 原 θ（淡色 ring） */}
+        {/* θ قبلی (ring کم‌رنگ) */}
         <circle
           cx="262"
           cy="105"
@@ -216,7 +216,7 @@ const BsCover: React.FC = () => {
         >
           θ
         </text>
-        {/* 新 θ（实心 butter）—— 沿 ∇̄ 方向往下挪 */}
+        {/* θ جدید (butter توپر) —— در جهت ∇̄ پایین می‌رود */}
         <line
           x1="262"
           y1="115"
@@ -245,7 +245,7 @@ const BsCover: React.FC = () => {
         </g>
       </g>
 
-      {/* 底部小流水标签 */}
+      {/* برچسب کوچک جریان در پایین */}
       <text
         x="160"
         y="166"

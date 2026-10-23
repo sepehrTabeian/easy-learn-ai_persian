@@ -1,16 +1,16 @@
 /**
  * useInView
- * - 监听元素是否进入视口
- * - 主要用于"滚到这里才触发"的入场动画（CTAScene / ManifestoScene 等）
+ * - بررسی این‌که آیا عنصر وارد viewport شده است
+ * - عمدتاً برای"فقط با اسکرول تا این‌جا اجرا شود"انیمیشن‌های ورود (CTAScene / ManifestoScene و غیره)
  *
  * Usage:
  *   const [ref, inView] = useInView<HTMLDivElement>({ threshold: 0.25 });
  *   return <div ref={ref}>{inView && <AnimatedContent />}</div>;
  *
  * Options:
- *   - threshold: 元素可见比例阈值（0~1），默认 0.2
- *   - rootMargin: 提前/延后触发的边距，默认 "0px"
- *   - once: 是否只触发一次（适合入场动画），默认 true
+ *   - threshold: آستانه نسبت دیده‌شدن عنصر (۰ تا ۱)، پیش‌فرض ۰٫۲
+ *   - rootMargin: حاشیه برای اجرای زودتر/دیرتر، پیش‌فرض "0px"
+ *   - once: آیا فقط یک بار اجرا شود (مناسب انیمیشن ورود)، پیش‌فرض true
  */
 
 import { useEffect, useRef, useState } from "react";
@@ -33,7 +33,7 @@ export function useInView<T extends HTMLElement>(
     const node = ref.current;
     if (!node) return;
 
-    // SSR / 老浏览器降级：直接判定为可见，避免动画永远不触发
+    // کاهش سطح برای SSR / مرورگرهای قدیمی: مستقیم دیده‌شده فرض می‌شود تا انیمیشن هرگز بی‌اجرا نماند
     if (typeof IntersectionObserver === "undefined") {
       setInView(true);
       return;

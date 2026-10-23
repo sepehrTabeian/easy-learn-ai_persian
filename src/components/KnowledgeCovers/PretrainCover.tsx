@@ -1,17 +1,17 @@
 /**
- * Pretrain 封面
+ * جلد Pretrain
  *
- * 隐喻：四股数据流 → 模型容器（内部权重 8×8 点阵）→ 「BASE」出炉 stamp。
- * 容器上方一杆 Chinchilla 20:1 小天平：左压 N（参数砝码），右压 D（数据砝码）。
+ * استعاره: چهار جریان داده ← ظرف مدل (ماتریس نقطه‌ای وزن 8×8 داخلی) ← stamp «BASE» از تنور بیرون می‌آید.
+ * بالای ظرف یک ترازوی کوچک Chinchilla 20:1: سمت چپ N (وزنه پارامتر)، سمت راست D (وزنه داده).
  *
- * 视觉构图（viewBox 320×200）：
- *   - 左：4 个数据 chip（WEB / CODE / BOOK / MATH）竖排
- *   - 中：弧形流线汇聚进 model 容器（rounded rect with 8×8 weight dots）
- *   - 右：「BASE」圆形 stamp，配 ↓ loss tag
- *   - 顶部：Chinchilla 20:1 天平，左盘 N，右盘 D 倾斜
- *   - 底部：极淡 loss 衰减线
+ * ترکیب‌بندی بصری (viewBox 320×200):
+ *   - چپ: ۴ chip داده (WEB / CODE / BOOK / MATH) به‌صورت عمودی
+ *   - وسط: خطوط جریان کمانی به ظرف model همگرا می‌شوند (rounded rect with 8×8 weight dots)
+ *   - راست: stamp دایره‌ای «BASE»، همراه با برچسب ↓ loss
+ *   - بالا: ترازوی Chinchilla 20:1، کفه چپ N و کفه راست D کج
+ *   - پایین: خط کاهش loss بسیار کم‌رنگ
  *
- * hover：流线变实，权重点变亮，天平倾斜更明显。
+ * hover: خطوط جریان پررنگ می‌شوند، نقاط وزن روشن‌تر می‌شوند، کجی ترازو بیشتر می‌شود.
  */
 import React from "react";
 import CoverShell from "./CoverShell";
@@ -26,14 +26,14 @@ const DATA_CHIPS = [
 const PretrainCover: React.FC = () => {
   return (
     <CoverShell bgClassName="bg-cream" dotOpacity={0.08}>
-      {/* 顶部：Chinchilla 天平 */}
+      {/* بالا: ترازوی Chinchilla */}
       <g
         transform="translate(160,30)"
         className="transition-transform duration-600 group-hover:rotate-[-6deg] origin-center"
       >
-        {/* 立柱 */}
+        {/* ستون */}
         <line x1="0" y1="-2" x2="0" y2="20" stroke="#241C15" strokeWidth="2" />
-        {/* 横梁 · 略倾斜 */}
+        {/* تیر افقی · کمی کج */}
         <line
           x1="-32"
           y1="-3"
@@ -43,7 +43,7 @@ const PretrainCover: React.FC = () => {
           strokeWidth="2.2"
           strokeLinecap="round"
         />
-        {/* 左盘 · N 砝码 */}
+        {/* کفه چپ · وزنه N */}
         <g transform="translate(-32,-3)">
           <line x1="0" y1="0" x2="0" y2="8" stroke="#241C15" strokeWidth="1.2" />
           <rect
@@ -68,7 +68,7 @@ const PretrainCover: React.FC = () => {
             N
           </text>
         </g>
-        {/* 右盘 · D 砝码（更大块 = 现代过训） */}
+        {/* کفه راست · وزنه D (بلوک بزرگ‌تر = بیش‌آموزی مدرن) */}
         <g transform="translate(32,3)">
           <line x1="0" y1="0" x2="0" y2="6" stroke="#241C15" strokeWidth="1.2" />
           <rect
@@ -95,7 +95,7 @@ const PretrainCover: React.FC = () => {
         </g>
       </g>
 
-      {/* 右上：20:1 stamp */}
+      {/* بالا-راست: stamp با 20:1 */}
       <g
         transform="translate(288,38) rotate(8)"
         className="origin-center transition-transform duration-500 group-hover:rotate-1 group-hover:scale-110"
@@ -123,7 +123,7 @@ const PretrainCover: React.FC = () => {
         </text>
       </g>
 
-      {/* 左：4 个数据 chip 竖排 */}
+      {/* چپ: ۴ chip داده به‌صورت عمودی */}
       {DATA_CHIPS.map((d, i) => {
         const y = 72 + i * 22;
         return (
@@ -159,7 +159,7 @@ const PretrainCover: React.FC = () => {
         );
       })}
 
-      {/* 弧形流线：4 chip → 模型 */}
+      {/* خطوط جریان کمانی: ۴ chip ← مدل */}
       <g
         stroke="#241C15"
         strokeWidth="1.1"
@@ -175,7 +175,7 @@ const PretrainCover: React.FC = () => {
         <path d="M 56 138 Q 110 130 144 130" />
       </g>
 
-      {/* 中央：model 容器 · 内部 8x8 权重点 */}
+      {/* مرکز: ظرف model · نقاط وزن 8x8 داخلی */}
       <g transform="translate(184,118)">
         <rect
           x="-40"
@@ -187,13 +187,13 @@ const PretrainCover: React.FC = () => {
           stroke="#241C15"
           strokeWidth="2.2"
         />
-        {/* 8x6 权重点 */}
+        {/* نقاط وزن 8x6 */}
         <g>
           {Array.from({ length: 6 }).flatMap((_, j) =>
             Array.from({ length: 8 }).map((_, i) => {
               const cx = -34 + i * 9;
               const cy = -25 + j * 9;
-              // 几个 coral 高亮 = 学到的"知识"
+              // چند هایلایت coral = یادگرفته‌ها"دانش"
               const lit = (i * 3 + j * 5) % 11 === 0;
               const med = (i + j) % 4 === 0;
               return (
@@ -214,7 +214,7 @@ const PretrainCover: React.FC = () => {
             }),
           )}
         </g>
-        {/* model 标 */}
+        {/* برچسب model */}
         <text
           x="0"
           y="-37"
@@ -226,11 +226,11 @@ const PretrainCover: React.FC = () => {
           fill="#241C15"
           opacity="0.6"
         >
-          MODEL · 权重
+          MODEL · وزن‌ها
         </text>
       </g>
 
-      {/* 模型 → BASE 箭头 */}
+      {/* فلش مدل ← BASE */}
       <g
         stroke="#241C15"
         strokeWidth="1.8"
@@ -247,7 +247,7 @@ const PretrainCover: React.FC = () => {
         <polygon points="252,113 252,123 260,118" />
       </g>
 
-      {/* 右：BASE 圆 stamp */}
+      {/* راست: stamp دایره‌ای BASE */}
       <g
         transform="translate(286,118)"
         className="transition-transform duration-500 group-hover:scale-110 origin-center"
@@ -286,7 +286,7 @@ const PretrainCover: React.FC = () => {
         </text>
       </g>
 
-      {/* 底部：loss 衰减线（淡） */}
+      {/* پایین: خط کاهش loss (کم‌رنگ) */}
       <g opacity="0.4">
         <path
           d="M 30 178 Q 80 168 130 164 T 230 158 T 290 156"
@@ -304,7 +304,7 @@ const PretrainCover: React.FC = () => {
           fill="#241C15"
           opacity="0.6"
         >
-          loss ↓ · 几万亿 next-token
+          loss ↓ · چند ده تریلیون next-token
         </text>
       </g>
     </CoverShell>

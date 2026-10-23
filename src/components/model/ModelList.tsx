@@ -1,6 +1,6 @@
 /**
- * 模型列表 · Mailchimp-Freddie 风
- * 分组 heading：ink 实色 + butter 计数 chip + ink 横线
+ * فهرست مدل‌ها · سبک Mailchimp-Freddie
+ * heading گروه: رنگ توپر ink + chip شمارش butter + خط افقی ink
  */
 
 import React from "react";
@@ -25,10 +25,10 @@ export const ModelList: React.FC<ModelListProps> = ({
           🔍
         </div>
         <h3 className="font-display font-extrabold text-display-lg text-ink mb-2">
-          没有找到匹配的模型
+          مدل مطابقی پیدا نشد
         </h3>
         <p className="font-sans text-ink-secondary">
-          请尝试调整筛选条件或更换搜索关键词
+          شرایط فیلتر را تغییر دهید یا کلیدواژه جستجوی دیگری امتحان کنید
         </p>
       </div>
     );

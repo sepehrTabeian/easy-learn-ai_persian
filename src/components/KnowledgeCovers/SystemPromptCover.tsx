@@ -1,16 +1,16 @@
 /**
- * System Prompt 封面
+ * جلد System Prompt
  *
- * 隐喻：一张用图钉钉在对话最顶上的「规则卡 / 设定面板」（SYSTEM），
- *       下面才是用户消息气泡 —— 体现「system 先于 user、钉在最前面定规矩」。
+ * استعاره: یک «کارت قوانین / پنل تنظیمات» (SYSTEM) که با پونز به بالای گفتگو سنجاق شده،
+ *       زیر آن حباب‌های پیام کاربر قرار دارند —— یعنی «system پیش از user است و در ابتدا قوانین را تعیین می‌کند».
  *
- * 视觉构图（viewBox 320×200）：
- *   - 顶部居中：coral 圆角规则卡，内有 SYSTEM 标 + 三条规则横线
- *   - 卡顶：一枚图钉徽章（cream 圆 + ink 钉）
- *   - 卡下：一条 user 气泡（白）+ 一条回复气泡（butter-tint），靠下错位
- *   - 装饰：左上 sparkle、右下小 ring
+ * ترکیب‌بندی بصری (viewBox 320×200):
+ *   - بالا وسط: کارت قوانین گوشه‌گرد coral، شامل برچسب SYSTEM + سه خط افقی قانون
+ *   - بالای کارت: یک نشان پونز (دایره cream + میخ ink)
+ *   - زیر کارت: یک حباب user (سفید) + یک حباب پاسخ (butter-tint)، با جابه‌جایی رو به پایین
+ *   - تزئین: sparkle بالا-چپ، ring کوچک پایین-راست
  *
- * hover：规则卡轻轻上浮 + 图钉微转；两条气泡错峰下沉，强化「卡在最上、消息在下」。
+ * hover: کارت قوانین آرام بالا می‌رود + پونز کمی می‌چرخد؛ دو حباب با فاصله زمانی پایین می‌روند و «کارت در بالا، پیام‌ها در پایین» را تقویت می‌کنند.
  */
 import React from "react";
 import CoverShell from "./CoverShell";
@@ -18,7 +18,7 @@ import CoverShell from "./CoverShell";
 const SystemPromptCover: React.FC = () => {
   return (
     <CoverShell bgClassName="bg-cream" dotOpacity={0.08}>
-      {/* 装饰：左上 sparkle */}
+      {/* تزئین: sparkle بالا-چپ */}
       <g transform="translate(34,30)">
         <g className="origin-center rotate-[15deg] transition-transform duration-700 group-hover:rotate-[120deg]">
           <path
@@ -30,13 +30,13 @@ const SystemPromptCover: React.FC = () => {
         </g>
       </g>
 
-      {/* 装饰：右下小 ring */}
+      {/* تزئین: ring کوچک پایین-راست */}
       <g transform="translate(292,172)">
         <circle cx="0" cy="0" r="6" fill="#1B4B5A" stroke="#241C15" strokeWidth="1.5" />
       </g>
 
-      {/* ─── 下层：用户气泡（先画，被规则卡压在上方之后） ─── */}
-      {/* 回复气泡（左下，butter-tint） */}
+      {/* ─── لایه پایین: حباب‌های کاربر (اول رسم می‌شوند، بعد کارت قوانین رویشان قرار می‌گیرد) ─── */}
+      {/* حباب پاسخ (پایین-چپ، butter-tint) */}
       <g
         transform="translate(56,150)"
         className="transition-transform duration-500 ease-spring group-hover:translate-y-[3px]"
@@ -47,7 +47,7 @@ const SystemPromptCover: React.FC = () => {
         <line x1="12" y1="23" x2="66" y2="23" stroke="#241C15" strokeWidth="2.5" strokeLinecap="round" opacity="0.4" />
       </g>
 
-      {/* user 气泡（右下，白） */}
+      {/* حباب user (پایین-راست، سفید) */}
       <g
         transform="translate(190,158)"
         className="transition-transform duration-500 ease-spring group-hover:translate-y-[5px]"
@@ -69,17 +69,17 @@ const SystemPromptCover: React.FC = () => {
         <circle cx="65" cy="15" r="2" fill="#241C15" opacity="0.4" />
       </g>
 
-      {/* ─── 上层：规则卡（SYSTEM，coral，钉在最顶） ─── */}
+      {/* ─── لایه بالا: کارت قوانین (SYSTEM، coral، در بالاترین نقطه سنجاق شده) ─── */}
       <g
         transform="translate(60,46)"
         className="transition-transform duration-500 ease-spring group-hover:-translate-y-[3px]"
       >
-        {/* 阴影底 */}
+        {/* زیرسایه */}
         <rect x="0" y="0" width="200" height="82" rx="13" fill="#241C15" transform="translate(3.5,3.5)" />
-        {/* 主体 */}
+        {/* بدنه اصلی */}
         <rect x="0" y="0" width="200" height="82" rx="13" fill="#E07A5F" stroke="#241C15" strokeWidth="2.5" />
 
-        {/* SYSTEM 标 */}
+        {/* برچسب SYSTEM */}
         <text
           x="18"
           y="26"
@@ -91,29 +91,29 @@ const SystemPromptCover: React.FC = () => {
         >
           SYSTEM
         </text>
-        {/* 角标：你看不到 */}
+        {/* برچسب گوشه: شما نمی‌بینید */}
         <g transform="translate(133,14)">
           <rect x="0" y="0" width="52" height="15" rx="7.5" fill="#241C15" />
           <text
             x="26"
             y="11"
             textAnchor="middle"
-            fontFamily="Plus Jakarta Sans, Noto Sans SC, sans-serif"
+            fontFamily="Plus Jakarta Sans, Vazirmatn, sans-serif"
             fontSize="8"
             fontWeight="700"
             fill="#FBEFE3"
           >
-            你看不到
+            شما نمی‌بینید
           </text>
         </g>
 
-        {/* 三条规则横线 */}
+        {/* سه خط افقی قانون */}
         <line x1="18" y1="44" x2="160" y2="44" stroke="#FBEFE3" strokeWidth="3" strokeLinecap="round" opacity="0.92" />
         <line x1="18" y1="56" x2="140" y2="56" stroke="#FBEFE3" strokeWidth="3" strokeLinecap="round" opacity="0.78" />
         <line x1="18" y1="68" x2="100" y2="68" stroke="#FBEFE3" strokeWidth="3" strokeLinecap="round" opacity="0.62" />
       </g>
 
-      {/* 图钉徽章（卡顶居中偏左，hover 微转） */}
+      {/* نشان پونز (بالای کارت، کمی چپ‌تر از وسط، در hover کمی می‌چرخد) */}
       <g transform="translate(82,46)">
         <g className="origin-center transition-transform duration-500 ease-spring group-hover:rotate-[18deg]">
           <circle cx="0" cy="0" r="11" fill="#FBEFE3" stroke="#241C15" strokeWidth="2.5" />
@@ -122,7 +122,7 @@ const SystemPromptCover: React.FC = () => {
         </g>
       </g>
 
-      {/* 连接：从规则卡指向下方消息（短虚线 + 箭头） */}
+      {/* اتصال: از کارت قوانین به پیام‌های پایین (نقطه‌چین کوتاه + فلش) */}
       <g className="transition-opacity duration-500 group-hover:opacity-100" opacity="0.55">
         <line x1="160" y1="132" x2="160" y2="146" stroke="#241C15" strokeWidth="2" strokeDasharray="3 3" strokeLinecap="round" />
         <path d="M 156 142 L 160 148 L 164 142" stroke="#241C15" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round" />

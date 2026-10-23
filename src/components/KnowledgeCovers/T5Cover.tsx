@@ -1,24 +1,24 @@
 /**
- * T5 封面
+ * جلد T5
  *
- * 隐喻：encoder 框（左）+ decoder 框（右）+ 中间 cross-attention 箭头串。
- * 左下「translate English to German:」前缀小印章，右上「That is good.」→「Das ist gut.」转换示意。
+ * استعاره: کادر encoder (چپ) + کادر decoder (راست) + رشته فلش‌های cross-attention در وسط.
+ * پایین-چپ مهر کوچک پیشوند «translate English to German:»، بالا-راست نمایش تبدیل «That is good.» ← «Das ist gut.».
  *
- * 跟 transformer cover（4 层堆叠 + Q/K/V chip + token 弧线）差异化：
- *   ─ transformer 是「self-attention · Q/K/V 拆三件套」
- *   ─ 这里是「encoder ↔ decoder · text-to-text · 多任务前缀」
+ * تمایز با transformer cover (پشته ۴ لایه + chipهای Q/K/V + کمان‌های token):
+ *   ─ transformer یعنی «self-attention · تفکیک سه‌گانه Q/K/V»
+ *   ─ این‌جا یعنی «encoder ↔ decoder · text-to-text · پیشوند چندوظیفه‌ای»
  *
- * 跟 bert cover（一句话 + [MASK] + top-3 候选）差异化：
- *   ─ bert 是单 token mask 视觉
- *   ─ 这里是 encoder-decoder 双框 + 字符串转换视觉
+ * تمایز با bert cover (یک جمله + [MASK] + top-3 کاندید):
+ *   ─ bert تصویر mask تک token است
+ *   ─ این‌جا دو کادر encoder-decoder + تصویر تبدیل رشته است
  *
- * 视觉构图（viewBox 320×200）：
- *   ─ 左上 stamp「2019 · arXiv 1910.10683」（teal 横向 pill）
- *   ─ 顶部一行任务前缀 chip 流（4 个）
- *   ─ 中央偏左：encoder 框（4 层堆叠 · teal 描边）
- *   ─ 中央偏右：decoder 框（4 层堆叠 · coral 描边）
- *   ─ 中间：3 条 cross-attention dash 箭头（encoder → decoder）
- *   ─ 底部：「That is good.」→「Das ist gut.」字符串转换
+ * ترکیب‌بندی بصری (viewBox 320×200):
+ *   ─ stamp بالا-چپ «2019 · arXiv 1910.10683» (pill افقی teal)
+ *   ─ در بالا یک ردیف جریان chip پیشوند وظیفه (۴ عدد)
+ *   ─ مرکز متمایل به چپ: کادر encoder (پشته ۴ لایه · حاشیه teal)
+ *   ─ مرکز متمایل به راست: کادر decoder (پشته ۴ لایه · حاشیه coral)
+ *   ─ وسط: ۳ فلش dash برای cross-attention (encoder ← decoder)
+ *   ─ پایین: تبدیل رشته «That is good.» ← «Das ist gut.»
  */
 import React from "react";
 import CoverShell from "./CoverShell";
@@ -28,7 +28,7 @@ const TASK_CHIPS = ["translate:", "summarize:", "cola:", "stsb:"];
 const T5Cover: React.FC = () => {
   return (
     <CoverShell bgClassName="bg-cream" dotOpacity={0.07}>
-      {/* 左上 stamp：T5 + 论文编号 */}
+      {/* stamp بالا-چپ: T5 + شماره مقاله */}
       <g
         transform="translate(54,24) rotate(-5)"
         className="origin-center transition-transform duration-500 group-hover:rotate-2"
@@ -57,7 +57,7 @@ const T5Cover: React.FC = () => {
         </text>
       </g>
 
-      {/* 顶部右侧：任务前缀 chip 横排（4 个） */}
+      {/* سمت راست بالا: chipهای پیشوند وظیفه در یک ردیف (۴ عدد) */}
       <g transform="translate(166,18)">
         {TASK_CHIPS.map((label, i) => (
           <g
@@ -91,9 +91,9 @@ const T5Cover: React.FC = () => {
         ))}
       </g>
 
-      {/* encoder 框（左） */}
+      {/* کادر encoder (چپ) */}
       <g transform="translate(36,58)">
-        {/* 框 */}
+        {/* کادر */}
         <rect
           x="0"
           y="0"
@@ -116,7 +116,7 @@ const T5Cover: React.FC = () => {
         >
           ENCODER
         </text>
-        {/* 4 层堆叠 */}
+        {/* پشته ۴ لایه */}
         {Array.from({ length: 4 }).map((_, i) => (
           <rect
             key={`e-${i}`}
@@ -140,11 +140,11 @@ const T5Cover: React.FC = () => {
           fill="#88837C"
           letterSpacing="0.5"
         >
-          双向 attention
+          attention دوطرفه
         </text>
       </g>
 
-      {/* decoder 框（右） */}
+      {/* کادر decoder (راست) */}
       <g transform="translate(186,58)">
         <rect
           x="0"
@@ -191,11 +191,11 @@ const T5Cover: React.FC = () => {
           fill="#88837C"
           letterSpacing="0.5"
         >
-          因果 mask + cross-attn
+          mask علّی + cross-attn
         </text>
       </g>
 
-      {/* cross-attention：3 条 dash 箭头从 encoder → decoder */}
+      {/* cross-attention: ۳ فلش dash از encoder ← decoder */}
       {[0, 1, 2].map((i) => {
         const y = 70 + i * 22;
         return (
@@ -230,9 +230,9 @@ const T5Cover: React.FC = () => {
         cross-attention
       </text>
 
-      {/* 底部：字符串转换示例 */}
+      {/* پایین: نمونه تبدیل رشته */}
       <g transform="translate(0,168)">
-        {/* 输入 */}
+        {/* ورودی */}
         <rect
           x="22"
           y="0"
@@ -256,7 +256,7 @@ const T5Cover: React.FC = () => {
           That is good.
         </text>
 
-        {/* 箭头 */}
+        {/* فلش */}
         <line
           x1="142"
           y1="11"
@@ -269,7 +269,7 @@ const T5Cover: React.FC = () => {
         />
         <polygon points="174,7 178,11 174,15" fill="#E07A5F" />
 
-        {/* 输出 */}
+        {/* خروجی */}
         <rect
           x="180"
           y="0"
@@ -294,7 +294,7 @@ const T5Cover: React.FC = () => {
         </text>
       </g>
 
-      {/* 左下小标：text-to-text */}
+      {/* برچسب کوچک پایین-چپ: text-to-text */}
       <g transform="translate(56,196) rotate(-2)" className="origin-left">
         <rect
           x="-2"

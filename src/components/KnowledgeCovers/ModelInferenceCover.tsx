@@ -8,10 +8,10 @@ const ModelInferenceCover: React.FC = () => (
       <text x="70" y="94" textAnchor="middle" fontFamily="Geist Mono, monospace" fontSize="9" fontWeight="700" fill="#241C15">
         INPUT
       </text>
-      <g fontFamily="Plus Jakarta Sans, Noto Sans SC, sans-serif" fontSize="12" fontWeight="700" fill="#241C15">
-        <text x="49" y="116">帮</text>
-        <text x="68" y="116">我</text>
-        <text x="87" y="116">写</text>
+      <g fontFamily="Plus Jakarta Sans, Vazirmatn, sans-serif" fontSize="12" fontWeight="700" fill="#241C15">
+        <text x="49" y="116">کمک</text>
+        <text x="68" y="116">کن</text>
+        <text x="87" y="116">بنویسم</text>
       </g>
     </g>
 
@@ -40,10 +40,10 @@ const ModelInferenceCover: React.FC = () => (
     <path d="M245 100 L236 95 V105 Z" fill="#241C15" />
 
     <g className="transition-transform duration-500 ease-spring group-hover:-translate-y-1">
-      {["模", "型", "回", "答"].map((token, i) => (
+      {["مدل", "پاسخ", "می‌دهد", "پاسخ"].map((token, i) => (
         <g key={token} transform={`translate(${250 + (i % 2) * 28},${70 + Math.floor(i / 2) * 34})`}>
           <rect width="23" height="25" rx="6" fill={i === 3 ? "#E07A5F" : "#FFFFFF"} stroke="#241C15" strokeWidth="2" />
-          <text x="11.5" y="17" textAnchor="middle" fontFamily="Plus Jakarta Sans, Noto Sans SC, sans-serif" fontSize="11" fontWeight="700" fill="#241C15">
+          <text x="11.5" y="17" textAnchor="middle" fontFamily="Plus Jakarta Sans, Vazirmatn, sans-serif" fontSize="11" fontWeight="700" fill="#241C15">
             {token}
           </text>
         </g>

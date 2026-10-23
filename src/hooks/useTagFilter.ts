@@ -1,6 +1,6 @@
 /**
- * 标签筛选功能的自定义 Hook
- * 提供标签筛选功能，支持多标签选择
+ * Hook سفارشی قابلیت فیلتر برچسب
+ * قابلیت فیلتر برچسب را فراهم می‌کند، با پشتیبانی از انتخاب چند برچسب
  */
 
 import { useState, useMemo } from 'react';
@@ -9,16 +9,16 @@ import { DailyReport } from '../types/daily';
 export const useTagFilter = (dailyList: DailyReport[]) => {
   const [selectedTags, setSelectedTags] = useState<string[]>([]);
 
-  // 获取所有可用标签（去重并排序）
+  // دریافت همه برچسب‌های موجود (حذف تکراری و مرتب‌سازی)
   const allTags = useMemo(() => {
     const tagMap = new Map<string, string>();
     dailyList.forEach(item => {
       item.tags.forEach(tag => {
         const trimmedTag = tag.trim();
         if (trimmedTag !== '') {
-          // 使用标准化的key进行去重（去除空格、转小写）
+          // حذف تکراری با key استانداردشده (حذف فاصله، تبدیل به حروف کوچک)
           const normalizedKey = trimmedTag.replace(/\s+/g, '').toLowerCase();
-          // 如果还没有这个标签，或者当前标签更规范（没有多余空格），则使用当前标签
+          // اگر این برچسب هنوز نیست، یا برچسب فعلی استانداردتر است (فاصله اضافه ندارد)، از برچسب فعلی استفاده می‌شود
           if (!tagMap.has(normalizedKey) || trimmedTag.length < tagMap.get(normalizedKey)!.length) {
             tagMap.set(normalizedKey, trimmedTag);
           }
@@ -28,7 +28,7 @@ export const useTagFilter = (dailyList: DailyReport[]) => {
     return Array.from(tagMap.values()).sort();
   }, [dailyList]);
 
-  // 根据选中的标签筛选日报
+  // فیلتر گزارش‌های روزانه بر اساس برچسب‌های انتخاب‌شده
   const filteredByTags = useMemo(() => {
     if (selectedTags.length === 0) {
       return dailyList;
@@ -41,19 +41,19 @@ export const useTagFilter = (dailyList: DailyReport[]) => {
     );
   }, [dailyList, selectedTags]);
 
-  // 添加标签到筛选列表
+  // افزودن برچسب به فهرست فیلتر
   const addTag = (tag: string) => {
     if (!selectedTags.includes(tag)) {
       setSelectedTags(prev => [...prev, tag]);
     }
   };
 
-  // 从筛选列表中移除标签
+  // حذف برچسب از فهرست فیلتر
   const removeTag = (tag: string) => {
     setSelectedTags(prev => prev.filter(t => t !== tag));
   };
 
-  // 切换标签选择状态
+  // تغییر وضعیت انتخاب برچسب
   const toggleTag = (tag: string) => {
     if (selectedTags.includes(tag)) {
       removeTag(tag);
@@ -62,7 +62,7 @@ export const useTagFilter = (dailyList: DailyReport[]) => {
     }
   };
 
-  // 清除所有选中的标签
+  // پاک کردن همه برچسب‌های انتخاب‌شده
   const clearTags = () => {
     setSelectedTags([]);
   };

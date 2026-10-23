@@ -1,20 +1,20 @@
 /**
- * MCP 封面
+ * جلد MCP
  *
- * 隐喻：MCP 是「AI 的 USB-C」—— 一个中心 hub 把 3 个 client 和 4 个 server 全部连起来。
+ * استعاره: MCP «USB-C هوش مصنوعی» است —— یک hub مرکزی که ۳ client و ۴ server را به هم وصل می‌کند.
  *
- * 视觉构图（viewBox 320×200）：
- *   - 中：MCP hub（teal 圆角方块，写「MCP」+ json-rpc）
- *   - 左：3 个 client（Claude / Cursor / VS Code 风格小卡片）
- *   - 右：4 个 server（GitHub / Postgres / Slack / Sentry 风格小卡片）
- *   - hub 与每张卡片之间一条线 · 全是流动 dash
- *   - 右上 stamp：「USB-C · AI」
- *   - 左下 mono：「json-rpc 2.0 · 2024-11」
+ * ترکیب‌بندی بصری (viewBox 320×200):
+ *   - وسط: MCP hub (مربع گوشه‌گرد teal با نوشته «MCP» + json-rpc)
+ *   - چپ: ۳ client (کارت‌های کوچک به سبک Claude / Cursor / VS Code)
+ *   - راست: ۴ server (کارت‌های کوچک به سبک GitHub / Postgres / Slack / Sentry)
+ *   - بین hub و هر کارت یک خط · همه dash روان
+ *   - stamp بالا-راست: «USB-C · AI»
+ *   - mono پایین-چپ: «json-rpc 2.0 · 2024-11»
  *
  * hover：
- *   - 连线 dash 加速流动
- *   - hub 微缩放
- *   - 卡片轻微浮动
+ *   - dash خطوط اتصال سریع‌تر جریان می‌یابد
+ *   - hub کمی بزرگ و کوچک می‌شود
+ *   - کارت‌ها کمی شناور می‌شوند
  */
 import React from "react";
 import CoverShell from "./CoverShell";
@@ -25,7 +25,7 @@ type Node = {
   label: string;
   bg: string;
   fg: string;
-  /** mono 子标 */
+  /** زیربرچسب mono */
   sub: string;
   rot?: number;
 };
@@ -86,7 +86,7 @@ const NodeChip: React.FC<{ n: Node; align: "left" | "right" }> = ({ n, align }) 
       >
         {n.sub}
       </text>
-      {/* 接口小点 */}
+      {/* نقطه کوچک رابط */}
       <circle
         cx={align === "left" ? w / 2 : -w / 2}
         cy="0"
@@ -102,7 +102,7 @@ const NodeChip: React.FC<{ n: Node; align: "left" | "right" }> = ({ n, align }) 
 const McpCover: React.FC = () => {
   return (
     <CoverShell bgClassName="bg-cream" dotOpacity={0.08}>
-      {/* 右上 stamp: USB-C · AI */}
+      {/* stamp بالا-راست: USB-C · AI */}
       <g
         transform="translate(280,24) rotate(7)"
         className="origin-center transition-transform duration-500 group-hover:rotate-[-4deg] group-hover:scale-110"
@@ -130,7 +130,7 @@ const McpCover: React.FC = () => {
         </text>
       </g>
 
-      {/* 左下 stamp: json-rpc */}
+      {/* stamp پایین-چپ: json-rpc */}
       <g transform="translate(30,182) rotate(-3)" className="origin-left">
         <rect
           x="-3"
@@ -156,7 +156,7 @@ const McpCover: React.FC = () => {
         </text>
       </g>
 
-      {/* 连线：每个 client → hub */}
+      {/* خط اتصال: هر client ← hub */}
       <g
         stroke="#241C15"
         strokeWidth="1.5"
@@ -169,7 +169,7 @@ const McpCover: React.FC = () => {
           <line key={`c-${i}`} x1={c.x + 30} y1={c.y} x2={HUB.x - 22} y2={HUB.y} />
         ))}
       </g>
-      {/* 连线：hub → 每个 server */}
+      {/* خط اتصال: hub ← هر server */}
       <g
         stroke="#241C15"
         strokeWidth="1.5"
@@ -183,12 +183,12 @@ const McpCover: React.FC = () => {
         ))}
       </g>
 
-      {/* 中央 MCP hub */}
+      {/* MCP hub مرکزی */}
       <g
         transform={`translate(${HUB.x},${HUB.y})`}
         className="origin-center transition-transform duration-500 group-hover:scale-105"
       >
-        {/* 外圈装饰 */}
+        {/* تزئین حلقه بیرونی */}
         <circle
           r="28"
           fill="none"
@@ -207,7 +207,7 @@ const McpCover: React.FC = () => {
           stroke="#241C15"
           strokeWidth="2"
         />
-        {/* 顶面高光 */}
+        {/* هایلایت سطح بالا */}
         <rect
           x="-22"
           y="-22"
@@ -240,7 +240,7 @@ const McpCover: React.FC = () => {
           hub
         </text>
 
-        {/* 左右 两个接口缺口（USB-C 形象） */}
+        {/* دو شکاف رابط در چپ و راست (تصویر USB-C) */}
         <rect
           x="-25"
           y="-4"
@@ -263,16 +263,16 @@ const McpCover: React.FC = () => {
         />
       </g>
 
-      {/* 左侧 client 卡片 */}
+      {/* کارت‌های client در چپ */}
       {CLIENTS.map((c, i) => (
         <NodeChip key={`cl-${i}`} n={c} align="left" />
       ))}
-      {/* 右侧 server 卡片 */}
+      {/* کارت‌های server در راست */}
       {SERVERS.map((s, i) => (
         <NodeChip key={`sv-${i}`} n={s} align="right" />
       ))}
 
-      {/* 底部说明：N+M ↘ */}
+      {/* توضیح پایین: N+M ↘ */}
       <text
         x="160"
         y="194"

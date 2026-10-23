@@ -1,9 +1,9 @@
 /**
- * 基准测试统计栏 · Mailchimp-Freddie 风（v2）
+ * نوار آمار بنچمارک · سبک Mailchimp-Freddie (v2)
  *
- * v2 改造：接管 Hero 让出的"主数据展示"职责
- *   - 显示多维度数字：N 基准 / X 领域 / Y 年份
- *   - 筛选生效时插入 coral 强调的"筛选结果"项
+ * بازسازی v2: مسئولیت"نمایش داده‌های اصلی"را که Hero واگذار کرده بر عهده می‌گیرد
+ *   - نمایش اعداد چندبعدی: N بنچمارک / X حوزه / Y سال
+ *   - هنگام اعمال فیلتر، با تأکید coral درج می‌شود"نتیجه فیلتر"مورد
  */
 
 import React from "react";
@@ -32,7 +32,7 @@ export const StatsBar: React.FC<StatsBarProps> = ({
       <div className="flex flex-wrap items-center gap-x-8 gap-y-4">
         <StatItemView
           icon={<Database className="w-4 h-4" strokeWidth={2.5} />}
-          label="收录基准"
+          label="بنچمارک ثبت‌شده"
           value={totalCount}
           primary
         />
@@ -49,19 +49,19 @@ export const StatsBar: React.FC<StatsBarProps> = ({
             <Divider />
             <StatItemView
               icon={<FilterIcon className="w-4 h-4" strokeWidth={2.5} />}
-              label="筛选结果"
+              label="نتیجه فیلتر"
               value={filteredCount}
               accent
             />
           </>
         )}
 
-        <div className="ml-auto inline-flex items-baseline gap-1.5">
+        <div className="ms-auto inline-flex items-baseline gap-1.5">
           <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-ink/55">
             Status
           </span>
           <span className="font-display font-extrabold text-[14px] text-ink">
-            持续更新
+            به‌روزرسانی مداوم
           </span>
         </div>
       </div>

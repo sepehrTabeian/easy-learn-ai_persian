@@ -1,17 +1,17 @@
 /**
- * Manifesto 区"成长剧场"动画组件
+ * بخش Manifesto"تئاتر رشد"کامپوننت انیمیشن
  *
- * 8 秒循环讲一个故事：种子 → 浇水 → 发芽 → 长大 → 长成知识之树
+ * یک چرخه ۸ ثانیه‌ای که یک داستان می‌گوید: دانه ← آبیاری ← جوانه زدن ← رشد ← تبدیل به درخت دانش
  *
- * 滚到这里才启动：用 IntersectionObserver 监听，进入视口后才挂载 Layer
- * 这样保证用户每次看到的都是从「种子」开始的完整剧场，而不是中间某一帧
+ * فقط با اسکرول تا این‌جا شروع می‌شود: با IntersectionObserver گوش می‌دهد و پس از ورود به viewport لایه‌ها را mount می‌کند
+ * این‌طور تضمین می‌شود که کاربر هر بار تئاتر کامل را از «دانه» ببیند، نه از یک فریم وسط
  *
- * 素材：
- *   x1 = 种子   x2 = 小苗   x3 = 长苗   x6 = 大树
- *   x4 = 浇水壶  x5 = 水滴   x7 = sparkle 装饰板
+ * منابع:
+ *   x1 = دانه   x2 = جوانه   x3 = نهال بلند   x6 = درخت بزرگ
+ *   x4 = آبپاش  x5 = قطره آب   x7 = صفحه تزئینی sparkle
  *
- * 所有植物 stage 共用 transform-origin: 50% 100%（底部锚点）
- * 这样缩放时根部固定，看起来真的是"从土里长起来"
+ * همه stageهای گیاه از transform-origin: 50% 100% مشترک استفاده می‌کنند (نقطه لنگر پایین)
+ * این‌طور هنگام بزرگ‌نمایی ریشه ثابت می‌ماند و واقعاً به نظر می‌رسد"از خاک بیرون می‌روید"
  */
 
 import React from "react";
@@ -21,13 +21,13 @@ interface LayerProps {
   src: string;
   alt?: string;
   pos: string;
-  /** 完整 animation className（必须是字面量，Tailwind 才能扫到） */
+  /** className کامل انیمیشن (باید literal باشد تا Tailwind بتواند اسکن کند) */
   anim: string;
   /** transform-origin */
   origin?: string;
   /** z-index */
   z?: number;
-  /** 额外样式 */
+  /** استایل اضافی */
   style?: React.CSSProperties;
 }
 
@@ -56,7 +56,7 @@ const Layer: React.FC<LayerProps> = ({
 );
 
 const ManifestoScene: React.FC = () => {
-  // 滚入视口才启动剧场，保证从种子开始演
+  // تئاتر فقط با ورود به viewport شروع می‌شود تا از دانه اجرا شود
   const [ref, inView] = useInView<HTMLDivElement>({ threshold: 0.25 });
 
   return (
@@ -66,7 +66,7 @@ const ManifestoScene: React.FC = () => {
     >
       {inView && (
         <>
-          {/* ── sparkle 装饰板（大树成长完成时爆发） ── */}
+          {/* ── صفحه تزئینی sparkle (وقتی رشد درخت بزرگ تمام شد منفجر می‌شود) ── */}
           <Layer
             src="/imgs/site/x7.png"
             pos="inset-0 w-full h-full"
@@ -74,55 +74,55 @@ const ManifestoScene: React.FC = () => {
             z={1}
           />
 
-          {/* ── 种子（开场） ── */}
+          {/* ── دانه (شروع) ── */}
           <Layer
             src="/imgs/site/x1.png"
-            pos="bottom-[5%] left-[25%] w-[50%]"
+            pos="bottom-[5%] start-[25%] w-[50%]"
             anim="animate-m-seed"
             origin="50% 100%"
             z={5}
           />
 
-          {/* ── 小苗（破土） ── */}
+          {/* ── جوانه (بیرون آمدن از خاک) ── */}
           <Layer
             src="/imgs/site/x2.png"
-            pos="bottom-[5%] left-[28%] w-[44%]"
+            pos="bottom-[5%] start-[28%] w-[44%]"
             anim="animate-m-sprout"
             origin="50% 100%"
             z={5}
           />
 
-          {/* ── 长苗（长高） ── */}
+          {/* ── نهال بلند (قد کشیدن) ── */}
           <Layer
             src="/imgs/site/x3.png"
-            pos="bottom-[5%] left-[28%] w-[44%]"
+            pos="bottom-[5%] start-[28%] w-[44%]"
             anim="animate-m-young"
             origin="50% 100%"
             z={5}
           />
 
-          {/* ── 大树（终态） ── */}
+          {/* ── درخت بزرگ (حالت نهایی) ── */}
           <Layer
             src="/imgs/site/x6.png"
-            pos="bottom-[2%] left-[14%] w-[72%]"
+            pos="bottom-[2%] start-[14%] w-[72%]"
             anim="animate-m-tree"
             origin="50% 100%"
             z={5}
           />
 
-          {/* ── 浇水壶（从右上飞入倾斜倒水） ── */}
+          {/* ── آبپاش (از بالا-راست پرواز می‌کند و کج شده آب می‌ریزد) ── */}
           <Layer
             src="/imgs/site/x4.png"
-            pos="top-[6%] right-[2%] w-[44%]"
+            pos="top-[6%] end-[2%] w-[44%]"
             anim="animate-m-can"
             origin="60% 50%"
             z={10}
           />
 
-          {/* ── 水滴（从壶嘴落下，对齐镜像后的壶嘴位置 ~left:50%, top:38%） ── */}
+          {/* ── قطره آب (از لوله آبپاش می‌افتد، هم‌تراز با موقعیت لوله پس از قرینه‌سازی ~left:50%, top:38%) ── */}
           <Layer
             src="/imgs/site/x5.png"
-            pos="top-[34%] left-[42%] w-[28%]"
+            pos="top-[34%] start-[42%] w-[28%]"
             anim="animate-m-drops"
             z={8}
           />

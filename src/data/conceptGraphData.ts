@@ -1,11 +1,11 @@
 /**
- * AI 知视 · 概念关联图谱（边 + 派生节点）
+ * دانش بصری AI · نقشه ارتباط مفاهیم (یال‌ها + گره‌های مشتق‌شده)
  *
- * 节点不在这里重复定义 —— 直接从单一数据源 aiKnowledgeConceptData 派生
- * （分类 = line、短名 = short/title 派生）。这里只维护「关联边」这种图谱独有的语义信息。
+ * گره‌ها این‌جا دوباره تعریف نمی‌شوند —— مستقیماً از منبع داده واحد aiKnowledgeConceptData مشتق می‌شوند
+ * (دسته‌بندی = line، نام کوتاه = مشتق از short/title). این‌جا فقط اطلاعات معنایی خاص گراف یعنی «یال‌های ارتباط» نگهداری می‌شود.
  *
- * 新增概念时：先在 aiKnowledgeConceptData 加条目（含 line），再来这里补它的关联边。
- * 开发模式下会校验：① 有概念漏填 line ② 边引用了不存在的概念 id —— 都会 console.warn。
+ * هنگام افزودن مفهوم: اول در aiKnowledgeConceptData مورد را اضافه کنید (شامل line)، سپس این‌جا یال‌های ارتباط آن را تکمیل کنید.
+ * در حالت توسعه بررسی می‌شود: ① مفهومی که line ندارد ② یالی که به id مفهوم ناموجود ارجاع می‌دهد —— هر دو console.warn می‌دهند.
  */
 
 import {
@@ -15,17 +15,17 @@ import {
   lineById,
 } from "./aiKnowledgeConceptData";
 
-/** 学习线元信息在数据源里定义，这里转出方便图谱侧统一引用 */
+/** metadata مسیرهای یادگیری در منبع داده تعریف شده و این‌جا برای ارجاع یکپارچه در سمت گراف export می‌شود */
 export { LEARNING_LINES, lineById };
 
-/** 6 种关系，用于边的配色与图例 */
+/** ۶ نوع رابطه، برای رنگ‌بندی یال‌ها و راهنما */
 export type RelationType =
-  | "prereq" // 前置：先懂 A 才好懂 B
-  | "mechanism" // 机制/组成：A 是 B 内部的一环
-  | "sibling" // 平行：同层可横向对比
-  | "solution" // 方案：A 用来解决 B 的问题
-  | "vs" // 对照：互为替代 / 易混
-  | "bridge"; // 跨类桥：连接两个大主题
+  | "prereq" // پیش‌نیاز: اول A را بفهمید تا B را راحت بفهمید
+  | "mechanism" // مکانیزم/اجزا: A بخشی از درون B است
+  | "sibling" // موازی: در یک سطح و قابل مقایسه افقی
+  | "solution" // راهکار: A برای حل مشکل B استفاده می‌شود
+  | "vs" // مقابله: جایگزین یکدیگر / به‌راحتی اشتباه گرفته می‌شوند
+  | "bridge"; // پل بین‌دسته‌ای: دو موضوع بزرگ را به هم وصل می‌کند
 
 export interface RelationMeta {
   label: string;
@@ -34,25 +34,25 @@ export interface RelationMeta {
 }
 
 export const RELATION_META: Record<RelationType, RelationMeta> = {
-  prereq: { label: "前置 · 先学这个", color: "#2A9D8F" },
-  mechanism: { label: "机制 · 它的内部一环", color: "#E07A5F" },
-  sibling: { label: "平行 · 同层可对比", color: "#6D597A", dashed: true },
-  solution: { label: "方案 · 用来解决它", color: "#3D8B40" },
-  vs: { label: "对照 · 易混 / 可替代", color: "#C98A1C", dashed: true },
-  bridge: { label: "跨主题 · 连接另一片", color: "#2A6F97", dashed: true },
+  prereq: { label: "پیش‌نیاز · اول این را یاد بگیرید", color: "#2A9D8F" },
+  mechanism: { label: "مکانیزم · بخشی از درون آن", color: "#E07A5F" },
+  sibling: { label: "موازی · قابل مقایسه در یک سطح", color: "#6D597A", dashed: true },
+  solution: { label: "راهکار · برای حل آن استفاده می‌شود", color: "#3D8B40" },
+  vs: { label: "مقابله · به‌راحتی اشتباه گرفته می‌شود / جایگزین", color: "#C98A1C", dashed: true },
+  bridge: { label: "بین‌موضوعی · به بخش دیگری وصل می‌شود", color: "#2A6F97", dashed: true },
 };
 
 export interface GraphNode {
   id: string;
-  /** 地铁图上显示的短名 */
+  /** نام کوتاهی که روی نقشه مترو نمایش داده می‌شود */
   label: string;
-  /** 原始分类（保留作历史信息） */
+  /** دسته‌بندی اصلی (به‌عنوان اطلاعات تاریخی نگه داشته شده) */
   category: string;
-  /** 一句话描述（关联自数据源，全景面板用） */
+  /** توضیح یک‌جمله‌ای (از منبع داده، برای پنل نمای کلی) */
   desc: string;
-  /** 所属学习线 id */
+  /** id مسیر یادگیری مربوطه */
   line: string;
-  /** 枢纽节点：核心入口 / 多线交汇，画得更大 */
+  /** گره hub: درگاه اصلی / محل تلاقی چند خط، بزرگ‌تر رسم می‌شود */
   hub?: boolean;
 }
 
@@ -62,12 +62,12 @@ export interface GraphEdge {
   type: RelationType;
 }
 
-/** 全局推荐起点（地图上发光提示「从这里开始」） */
+/** نقطه شروع پیشنهادی سراسری (روی نقشه با درخشش «از این‌جا شروع کنید» نشان داده می‌شود) */
 export const RECOMMENDED_START = "llm";
 
 /**
- * 枢纽节点（可选 · 仅影响视觉大小）：核心入口 / 多线交汇。
- * 漏标只是不放大，无功能影响。
+ * گره‌های hub (اختیاری · فقط روی اندازه بصری اثر دارد): درگاه اصلی / محل تلاقی چند خط.
+ * اگر علامت‌گذاری فراموش شود فقط بزرگ نمی‌شود، اثری بر عملکرد ندارد.
  */
 const HUB_IDS = new Set([
   "llm",
@@ -79,7 +79,7 @@ const HUB_IDS = new Set([
 ]);
 
 /* ────────────────────────────────────────────────
- * 节点表 —— 从单一数据源派生，按数据源顺序（即线内学习顺序）
+ * جدول گره‌ها —— مشتق از منبع داده واحد، به ترتیب منبع داده (یعنی ترتیب یادگیری درون خط)
  * ──────────────────────────────────────────────── */
 export const GRAPH_NODES: GraphNode[] = aiKnowledgeConceptData.map((c) => ({
   id: c.id,
@@ -90,7 +90,7 @@ export const GRAPH_NODES: GraphNode[] = aiKnowledgeConceptData.map((c) => ({
   hub: HUB_IDS.has(c.id) || undefined,
 }));
 
-/** 按学习线分组的节点（顺序：LEARNING_LINES → 线内数据源顺序） */
+/** گره‌های گروه‌بندی‌شده بر اساس مسیر یادگیری (ترتیب: LEARNING_LINES ← ترتیب منبع داده درون خط) */
 export const NODES_BY_LINE: Record<string, GraphNode[]> = (() => {
   const map: Record<string, GraphNode[]> = {};
   LEARNING_LINES.forEach((l) => (map[l.id] = []));
@@ -101,16 +101,16 @@ export const NODES_BY_LINE: Record<string, GraphNode[]> = (() => {
 })();
 
 /* ────────────────────────────────────────────────
- * 关联边（无向唯一，含关系类型）
+ * یال‌های ارتباط (بی‌جهت و یکتا، شامل نوع رابطه)
  * ──────────────────────────────────────────────── */
 export const GRAPH_EDGES: GraphEdge[] = [
-  // —— 提示词工程族内部 ——
+  // —— درون خانواده مهندسی پرامپت ——
   { a: "prompt", b: "system-prompt", type: "mechanism" },
   { a: "prompt", b: "few-shot", type: "mechanism" },
   { a: "prompt", b: "chain-of-thought", type: "mechanism" },
   { a: "few-shot", b: "chain-of-thought", type: "sibling" },
   { a: "system-prompt", b: "few-shot", type: "sibling" },
-  // —— 提示词工程 → 基础 / 其它族 桥 ——
+  // —— مهندسی پرامپت ← پل به مبانی / خانواده‌های دیگر ——
   { a: "prompt", b: "llm", type: "bridge" },
   { a: "prompt", b: "token", type: "bridge" },
   { a: "system-prompt", b: "context-window", type: "mechanism" },
@@ -119,7 +119,7 @@ export const GRAPH_EDGES: GraphEdge[] = [
   { a: "few-shot", b: "whyfinetune", type: "vs" },
   { a: "chain-of-thought", b: "deepseek-r1", type: "bridge" },
   { a: "chain-of-thought", b: "token", type: "bridge" },
-  // —— Agent 族内部 ——
+  // —— درون خانواده Agent ——
   { a: "agent", b: "agent-loop", type: "mechanism" },
   { a: "agent", b: "function-calling", type: "mechanism" },
   { a: "agent", b: "context-window", type: "mechanism" },
@@ -152,14 +152,14 @@ export const GRAPH_EDGES: GraphEdge[] = [
   { a: "context-engineering", b: "agent-memory", type: "vs" },
   { a: "context-engineering", b: "kv-cache", type: "bridge" },
   { a: "context-engineering", b: "agent", type: "bridge" },
-  // —— Agent 族 → 模型基础 桥 ——
+  // —— خانواده Agent ← پل به مبانی مدل ——
   { a: "agent", b: "llm", type: "bridge" },
   { a: "context-window", b: "llm", type: "bridge" },
   { a: "context-window", b: "token", type: "bridge" },
   { a: "function-calling", b: "llm", type: "bridge" },
   { a: "agent-loop", b: "token", type: "bridge" },
   { a: "agent-memory", b: "token", type: "bridge" },
-  // —— 模型基础 / 架构 ——
+  // —— مبانی مدل / معماری ——
   { a: "llm", b: "token", type: "prereq" },
   { a: "llm", b: "nlp", type: "prereq" },
   { a: "nlp", b: "token", type: "prereq" },
@@ -189,12 +189,12 @@ export const GRAPH_EDGES: GraphEdge[] = [
   { a: "multi-head-attention", b: "multi-query-attention", type: "prereq" },
   { a: "multi-query-attention", b: "kv-cache", type: "mechanism" },
   { a: "multi-query-attention", b: "transformer", type: "mechanism" },
-  // —— 推理 / 压缩 ——
+  // —— استنتاج / فشرده‌سازی ——
   { a: "deepseek-r1", b: "distill", type: "mechanism" },
   { a: "deepseek-r1", b: "rlhf", type: "mechanism" },
   { a: "deepseek-r1", b: "llm", type: "bridge" },
   { a: "distill", b: "quantization", type: "vs" },
-  // —— 幻觉 / 检索 ——
+  // —— توهم / بازیابی ——
   { a: "illusion", b: "rag", type: "solution" },
   { a: "illusion", b: "agent-memory", type: "bridge" },
   { a: "rag", b: "embedding", type: "mechanism" },
@@ -221,12 +221,12 @@ export const GRAPH_EDGES: GraphEdge[] = [
   { a: "rag", b: "context-window", type: "mechanism" },
   { a: "rag", b: "agent", type: "solution" },
   { a: "rag", b: "whyfinetune", type: "vs" },
-  // —— AI 安全 ——
+  // —— امنیت AI ——
   { a: "prompt-injection", b: "jailbreak", type: "vs" },
   { a: "prompt-injection", b: "ai-guardrails", type: "solution" },
   { a: "jailbreak", b: "ai-guardrails", type: "solution" },
   { a: "ai-guardrails", b: "agent-sandbox", type: "mechanism" },
-  // —— 训练 / 对齐 ——
+  // —— آموزش / هم‌ترازی ——
   { a: "pretrain", b: "sft", type: "prereq" },
   { a: "sft", b: "rlhf", type: "prereq" },
   { a: "rlhf", b: "pretrain", type: "mechanism" },
@@ -239,7 +239,7 @@ export const GRAPH_EDGES: GraphEdge[] = [
   { a: "mga", b: "distill", type: "vs" },
   { a: "loss", b: "pretrain", type: "mechanism" },
   { a: "loss", b: "sft", type: "mechanism" },
-  // —— 训练数据（数据线）——
+  // —— داده آموزشی (خط داده) ——
   { a: "training-dataset", b: "pretrain", type: "prereq" },
   { a: "training-dataset", b: "sft", type: "prereq" },
   { a: "data-cleaning", b: "training-dataset", type: "mechanism" },
@@ -253,7 +253,7 @@ export const GRAPH_EDGES: GraphEdge[] = [
   { a: "dataset-construction", b: "data-annotation", type: "mechanism" },
   { a: "dataset-construction", b: "mga", type: "sibling" },
   { a: "dataset-construction", b: "chunk", type: "bridge" },
-  // —— 微调 / 参数 ——
+  // —— تنظیم دقیق / پارامترها ——
   { a: "whyfinetune", b: "finetune", type: "prereq" },
   { a: "finetune", b: "lora", type: "mechanism" },
   { a: "finetune", b: "sft", type: "sibling" },
@@ -270,13 +270,13 @@ export const GRAPH_EDGES: GraphEdge[] = [
   { a: "deepspeed", b: "bs", type: "mechanism" },
   { a: "deepspeed", b: "lora", type: "mechanism" },
   { a: "deepspeed", b: "quantization", type: "bridge" },
-  // —— 部署 ——
+  // —— استقرار ——
   { a: "quantization", b: "gguf", type: "mechanism" },
   { a: "quantization", b: "deployment", type: "mechanism" },
   { a: "gguf", b: "deployment", type: "mechanism" },
   { a: "deployment", b: "deepspeed", type: "mechanism" },
   { a: "deployment", b: "bs", type: "bridge" },
-  // —— 部署 · 权重格式 / 精度（safetensors / onnx / precision-formats）——
+  // —— استقرار · قالب وزن / دقت (safetensors / onnx / precision-formats) ——
   { a: "safetensors", b: "precision-formats", type: "bridge" },
   { a: "safetensors", b: "gguf", type: "vs" },
   { a: "safetensors", b: "onnx", type: "vs" },
@@ -305,7 +305,7 @@ export const GRAPH_EDGES: GraphEdge[] = [
   { a: "structured-output", b: "ai-guardrails", type: "mechanism" },
 ];
 
-/** 邻接索引：id → 相连的 { id, type }[]（无向） */
+/** نمایه مجاورت: id ← مرتبط‌ها { id, type }[] (بی‌جهت) */
 export const ADJACENCY: Record<string, { id: string; type: RelationType }[]> =
   (() => {
     const map: Record<string, { id: string; type: RelationType }[]> = {};
@@ -318,7 +318,7 @@ export const ADJACENCY: Record<string, { id: string; type: RelationType }[]> =
   })();
 
 /* ────────────────────────────────────────────────
- * 开发模式校验：漏挂线 / 边 typo 早暴露
+ * بررسی حالت توسعه: خط فراموش‌شده / typo در یال زود آشکار شود
  * ──────────────────────────────────────────────── */
 declare const process: { env: { NODE_ENV?: string } };
 
@@ -327,10 +327,10 @@ if (typeof process !== "undefined" && process.env.NODE_ENV !== "production") {
 
   aiKnowledgeConceptData.forEach((c) => {
     if (!c.line) {
-      console.warn(`[知视图谱] 概念「${c.id}」缺少 line 字段，全景视图不会收录它`);
+      console.warn(`[نقشه دانش بصری] مفهوم «${c.id}» فیلد line ندارد و نمای کلی آن را شامل نمی‌شود`);
     } else if (!lineById[c.line]) {
       console.warn(
-        `[知视图谱] 概念「${c.id}」的 line="${c.line}" 不在 LEARNING_LINES 中`,
+        `[نقشه دانش بصری] مفهوم «${c.id}» دارای line="${c.line}" است که در LEARNING_LINES وجود ندارد`,
       );
     }
   });
@@ -338,7 +338,7 @@ if (typeof process !== "undefined" && process.env.NODE_ENV !== "production") {
   GRAPH_EDGES.forEach((e, i) => {
     if (!ids.has(e.a) || !ids.has(e.b)) {
       console.warn(
-        `[知视图谱] 第 ${i + 1} 条边引用了不存在的概念 id：${e.a} ↔ ${e.b}`,
+        `[نقشه دانش بصری] یال شماره ${i + 1} به id مفهوم ناموجود ارجاع می‌دهد: ${e.a} ↔ ${e.b}`,
       );
     }
   });

@@ -1,6 +1,6 @@
 /**
- * AI 基准测试 API 工具模块
- * 负责加载和处理基准测试数据
+ * ماژول ابزار API بنچمارک AI
+ * مسئول بارگذاری و پردازش داده بنچمارک
  */
 
 import { Benchmark } from "../types/benchmark";
@@ -8,19 +8,19 @@ import benchmarkData from "./bench/bentch.json";
 
 export const benchmarkApiUtils = {
   /**
-   * 获取基准测试列表
+   * دریافت فهرست بنچمارک‌ها
    */
   async fetchBenchmarkList(): Promise<Benchmark[]> {
     try {
       return benchmarkData as Benchmark[];
     } catch (error) {
       console.error("Error fetching benchmark list:", error);
-      throw new Error("获取基准测试列表失败，请稍后重试");
+      throw new Error("دریافت فهرست بنچمارک‌ها ناموفق بود، لطفاً بعداً دوباره امتحان کنید");
     }
   },
 
   /**
-   * 获取所有类型标签
+   * دریافت همه برچسب‌های نوع
    */
   getAllTypes(benchmarks: Benchmark[]): string[] {
     const types = new Set<string>();
@@ -31,7 +31,7 @@ export const benchmarkApiUtils = {
   },
 
   /**
-   * 获取所有年份
+   * دریافت همه سال‌ها
    */
   getAllYears(benchmarks: Benchmark[]): string[] {
     const years = new Set<string>();
@@ -44,7 +44,7 @@ export const benchmarkApiUtils = {
   },
 
   /**
-   * 获取所有许可证
+   * دریافت همه مجوزها
    */
   getAllLicenses(benchmarks: Benchmark[]): string[] {
     const licenses = new Set<string>();

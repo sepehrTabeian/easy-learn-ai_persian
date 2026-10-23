@@ -1,17 +1,17 @@
 /**
- * 日报详情 · 数字简报 article 排版
+ * جزئیات گزارش روزانه · صفحه‌آرایی article خبرنامه دیجیتال
  *
- * 隐喻继续与列表页统一：Easy AI 日报 = 每日出版的数字简报
- *   ─ 顶部 sticky 导航条（返回 + 分享 + 新窗）
- *   ─ Detail Masthead：刊期条 + 大字标题 + 标签 dot 链
- *   ─ Article：完全自定义 ReactMarkdown components，替换掉 github-markdown.css
- *   ─ Footer：上一刊 / 下一刊 prev-next 卡片 + 返回 archive
+ * استعاره هم‌سو با صفحه فهرست: گزارش روزانه Easy AI = خبرنامه دیجیتالی که هر روز منتشر می‌شود
+ *   ─ نوار ناوبری sticky بالا (بازگشت + اشتراک‌گذاری + پنجره جدید)
+ *   ─ Detail Masthead: نوار شماره + عنوان درشت + زنجیره dot برچسب‌ها
+ *   ─ Article: کامپوننت‌های کاملاً سفارشی ReactMarkdown، جایگزین github-markdown.css
+ *   ─ Footer: کارت‌های prev-next شماره قبل / شماره بعد + بازگشت به archive
  *
- * 设计关键：
- *   ─ 不引入 serif（与首页一致），靠 display + sans + mono 三套字体的
- *     字号、weight、tracking 对比，撑起出版物排版
- *   ─ 主体放在 max-w-[720px] 阅读宽度（约 16em，单栏长读最舒适）
- *   ─ 链接 coral 下划线 / 引用块 cream 左边线 / 代码块 cream 底
+ * نکات کلیدی طراحی:
+ *   ─ بدون serif (هم‌سو با صفحه اصلی)، با سه خانواده فونت display + sans + mono و تقابل
+ *     اندازه، weight و tracking صفحه‌آرایی نشریه ساخته می‌شود
+ *   ─ بدنه در عرض خواندن max-w-[720px] (حدود 16em، راحت‌ترین برای خواندن طولانی تک‌ستونی)
+ *   ─ لینک با زیرخط coral / بلوک نقل‌قول با خط کناری cream / بلوک کد با پس‌زمینه cream
  */
 
 import React, { useEffect, useMemo } from "react";
@@ -23,7 +23,7 @@ import toast from "react-hot-toast";
 import { useDailyList, useDailyContent } from "../../hooks/useDailyData";
 import { DailyReport } from "../../types/daily";
 
-const WEEKDAYS = ["日", "一", "二", "三", "四", "五", "六"] as const;
+const WEEKDAYS = ["یکشنبه", "دوشنبه", "سه‌شنبه", "چهارشنبه", "پنجشنبه", "جمعه", "شنبه"] as const;
 
 const formatDate = (dateStr: string) => {
   try {
@@ -34,7 +34,7 @@ const formatDate = (dateStr: string) => {
         2,
         "0",
       )}.${String(d.getDate()).padStart(2, "0")}`,
-      weekday: `周${WEEKDAYS[d.getDay()]}`,
+      weekday: `${WEEKDAYS[d.getDay()]}`,
     };
   } catch {
     return { ymd: dateStr, weekday: "—" };
@@ -51,7 +51,7 @@ export const DailyDetail: React.FC = () => {
     if (!date) navigate("/ai-daily");
   }, [date, navigate]);
 
-  /* 当前刊 + 前后两期（按日期降序：prev = 更老一期，next = 更新一期） */
+  /* شماره فعلی + دو شماره قبل و بعد (به ترتیب نزولی تاریخ: prev = شماره قدیمی‌تر، next = شماره جدیدتر) */
   const { current, prev, next, issueNumber } = useMemo<{
     current?: DailyReport;
     prev?: DailyReport;
@@ -67,7 +67,7 @@ export const DailyDetail: React.FC = () => {
     if (idx < 0) return {};
     return {
       current: sorted[idx],
-      /* prev：在视觉上"上一期"对应"更老一期"（按时间，往后看） */
+      /* prev: از نظر بصری"شماره قبل"متناظر با"شماره قدیمی‌تر"(بر حسب زمان، نگاه به عقب) */
       prev: sorted[idx + 1],
       next: sorted[idx - 1],
       issueNumber: sorted.length - idx,
@@ -78,15 +78,15 @@ export const DailyDetail: React.FC = () => {
     try {
       if (navigator.share) {
         await navigator.share({
-          title: current?.title || `Easy AI 日报 · ${date}`,
+          title: current?.title || `گزارش روزانه Easy AI · ${date}`,
           url: window.location.href,
         });
       } else {
         await navigator.clipboard.writeText(window.location.href);
-        toast.success("链接已复制到剪贴板");
+        toast.success("لینک در کلیپ‌بورد کپی شد");
       }
     } catch {
-      /* 用户取消分享不算错 */
+      /* لغو اشتراک‌گذاری توسط کاربر خطا محسوب نمی‌شود */
     }
   };
 
@@ -98,10 +98,10 @@ export const DailyDetail: React.FC = () => {
         <div className="max-w-[920px] mx-auto px-6 lg:px-10 pt-20 pb-20 text-center">
           <div className="inline-flex items-center justify-center w-12 h-12 mb-5 border-[3px] border-ink/15 border-t-ink rounded-full animate-spin" />
           <h2 className="font-display font-extrabold text-[22px] text-ink mb-1.5">
-            正在打开本期日报
+            در حال باز کردن گزارش این شماره
           </h2>
           <p className="font-sans text-[14px] text-ink-secondary">
-            正在加载正文内容…
+            در حال بارگذاری متن…
           </p>
         </div>
       </div>
@@ -119,7 +119,7 @@ export const DailyDetail: React.FC = () => {
               § Error
             </div>
             <h2 className="font-display font-extrabold text-[22px] text-ink mb-1.5">
-              本期日报打不开了
+              گزارش این شماره باز نمی‌شود
             </h2>
             <p className="font-sans text-[14px] text-ink-secondary mb-6">
               {error}
@@ -128,7 +128,7 @@ export const DailyDetail: React.FC = () => {
               onClick={() => window.location.reload()}
               className="inline-flex items-center gap-2 px-5 py-2 bg-ink text-cream font-sans font-bold text-[13px] rounded-full border-2 border-ink shadow-stamp transition-all duration-250 ease-spring hover:-translate-x-[2px] hover:-translate-y-[2px] hover:[box-shadow:6px_6px_0_0_#241C15]"
             >
-              重新加载
+              بارگذاری مجدد
             </button>
           </div>
         </div>
@@ -146,17 +146,17 @@ export const DailyDetail: React.FC = () => {
             § Not Found
           </div>
           <h2 className="font-display font-extrabold text-[22px] text-ink mb-1.5">
-            未找到这期日报
+            این شماره از گزارش روزانه پیدا نشد
           </h2>
           <p className="font-sans text-[14px] text-ink-secondary mb-6">
-            可能链接已失效，或这期还未出版。
+            شاید لینک منقضی شده یا این شماره هنوز منتشر نشده است.
           </p>
           <Link
             to="/ai-daily"
             className="inline-flex items-center gap-2 px-5 py-2 bg-ink text-cream font-sans font-bold text-[13px] rounded-full border-2 border-ink shadow-stamp transition-all duration-250 ease-spring hover:-translate-x-[2px] hover:-translate-y-[2px] hover:[box-shadow:6px_6px_0_0_#241C15]"
           >
             <ArrowLeft className="w-4 h-4" strokeWidth={2.5} />
-            返回往期目录
+            بازگشت به فهرست شماره‌های گذشته
           </Link>
         </div>
       </div>
@@ -168,25 +168,25 @@ export const DailyDetail: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-white">
-      {/* ═════════ 顶部 sticky 导航条 ═════════ */}
+      {/* ═════════ نوار ناوبری sticky بالا ═════════ */}
       <DetailNav onBack={() => navigate("/ai-daily")} onShare={handleShare} />
 
       {/* ═════════ Detail Masthead ═════════ */}
-      {/* 删去 title（日报标题过长，放大字会非常丑）。
-         没有 title 之后，让 № 编号成为头部视觉主角，
-         分类区放大成 Masthead 主体。 */}
+      {/* title حذف شد (عنوان گزارش روزانه خیلی طولانی است و درشت کردنش خیلی زشت می‌شود).
+         پس از حذف title، شماره № نقش اصلی بصری سربرگ را می‌گیرد،
+         و بخش دسته‌بندی بزرگ شده و بدنه Masthead می‌شود. */}
       <header className="bg-white border-b border-ink/10">
         <div className="max-w-[920px] mx-auto px-6 lg:px-10 pt-12 lg:pt-16 pb-10 lg:pb-12">
           {/* eyebrow rule */}
           <div className="flex items-center gap-3 mb-7 font-mono text-[10px] lg:text-[11px] font-semibold uppercase tracking-[0.28em] text-ink/55">
-            <span>§ Latest Issue · 本期日报</span>
+            <span>§ Latest Issue · گزارش این شماره</span>
             <span className="flex-1 border-t border-dotted border-ink/20" />
             <span className="text-ink/45 hidden sm:inline">
               Easy AI Daily
             </span>
           </div>
 
-          {/* № 编号 大字 + 日期 baseline 对齐 —— 替代被删去的标题，成为视觉主角 */}
+          {/* شماره № درشت + هم‌ترازی baseline با تاریخ —— جایگزین عنوان حذف‌شده و نقش اصلی بصری */}
           <div className="flex items-end gap-5 lg:gap-7 mb-12 lg:mb-14 flex-wrap">
             {issueNumber != null && (
               <div
@@ -201,19 +201,19 @@ export const DailyDetail: React.FC = () => {
                 {dateInfo.ymd}
               </span>
               <span className="text-ink/55 text-[12px] lg:text-[13px]">
-                出版于 · {dateInfo.weekday}
+                منتشرشده در · {dateInfo.weekday}
               </span>
             </div>
           </div>
 
-          {/* ─── filed under · 分类区 ─── 成为 Masthead 的次重点 */}
+          {/* ─── filed under · بخش دسته‌بندی ─── تأکید دوم Masthead */}
           {tags.length > 0 && (
             <div>
               <div className="flex items-center gap-3 mb-4 font-mono text-[10px] lg:text-[11px] font-semibold uppercase tracking-[0.28em] text-ink/55">
-                <span>¶ Filed Under · 本期分类</span>
+                <span>¶ Filed Under · دسته‌بندی‌های این شماره</span>
                 <span className="flex-1 border-t border-ink/15" />
                 <span className="text-ink/45 tabular-nums">
-                  {String(tags.length).padStart(2, "0")} 个
+                  {String(tags.length).padStart(2, "0")} مورد
                 </span>
               </div>
               <div className="flex flex-wrap gap-2.5 lg:gap-3">
@@ -240,7 +240,7 @@ export const DailyDetail: React.FC = () => {
         </div>
       </article>
 
-      {/* ═════════ Footer · 上一刊 / 下一刊 ═════════ */}
+      {/* ═════════ Footer · شماره قبل / شماره بعد ═════════ */}
       <footer className="bg-white border-t border-ink">
         <div className="max-w-[920px] mx-auto px-6 lg:px-10 py-12 lg:py-16">
           <div className="flex items-center gap-3 mb-7 font-mono text-[10px] font-semibold uppercase tracking-[0.28em] text-ink/55">
@@ -273,33 +273,33 @@ export const DailyDetail: React.FC = () => {
               className="inline-flex items-center gap-2 px-5 py-2.5 bg-white text-ink border-2 border-ink rounded-full font-sans font-bold text-[13px] shadow-stamp transition-all duration-250 ease-spring hover:-translate-x-[2px] hover:-translate-y-[2px] hover:[box-shadow:6px_6px_0_0_#241C15]"
             >
               <ArrowLeft className="w-4 h-4" strokeWidth={2.5} />
-              返回往期目录
+              بازگشت به فهرست شماره‌های گذشته
             </Link>
             <button
               onClick={handleShare}
               className="inline-flex items-center gap-2 px-5 py-2.5 bg-coral text-white border-2 border-ink rounded-full font-sans font-bold text-[13px] shadow-stamp transition-all duration-250 ease-spring hover:-translate-x-[2px] hover:-translate-y-[2px] hover:[box-shadow:6px_6px_0_0_#241C15]"
             >
               <Share2 className="w-4 h-4" strokeWidth={2.5} />
-              分享本期
+              اشتراک‌گذاری این شماره
             </button>
           </div>
         </div>
       </footer>
 
-      {/* ═════════ Article 自定义 prose 样式 ═════════ */}
+      {/* ═════════ استایل prose سفارشی Article ═════════ */}
       <style>{articleStyles}</style>
     </div>
   );
 };
 
 /* ════════════════════════════════════════════════════════════════════
- * TagChip · "分类邮戳"
+ * TagChip · "مهر پستی دسته‌بندی"
  *
- * 设计：所有 chip 都用 butter 底 + ink 边 + 小 stamp 阴影。
- *   - 同色让"本期分类"成为一个统一识别的视觉块
- *   - stamp 阴影让它真的像贴在档案袋上的小邮戳
- *   - hover 微弹起：1px shift + 阴影加深
- *   - 点击跳转到 archive 并预选该分类标签
+ * طراحی: همه chipها پس‌زمینه butter + حاشیه ink + سایه stamp کوچک دارند.
+ *   - هم‌رنگی باعث می‌شود"دسته‌بندی‌های این شماره"یک بلوک بصری یکپارچه و قابل‌تشخیص شوند
+ *   - سایه stamp آن را واقعاً شبیه مهر پستی کوچکی روی پاکت بایگانی می‌کند
+ *   - hover کمی بالا می‌پرد: جابه‌جایی 1px + سایه تیره‌تر
+ *   - کلیک به archive می‌رود و آن برچسب دسته‌بندی را از پیش انتخاب می‌کند
  * ──────────────────────────────────────────────────────────────────── */
 
 const TagChip: React.FC<{ label: string }> = ({ label }) => {
@@ -307,8 +307,8 @@ const TagChip: React.FC<{ label: string }> = ({ label }) => {
     <Link
       to={`/ai-daily?tag=${encodeURIComponent(label)}`}
       onClick={(e) => {
-        /* HashRouter 不支持 query，直接跳列表页（archive 会清空筛选）。
-           保留 href 用于右键复制链接，但实际只是回列表。 */
+        /* HashRouter از query پشتیبانی نمی‌کند، مستقیم به صفحه فهرست می‌رود (archive فیلترها را پاک می‌کند).
+           href برای کپی لینک با کلیک راست حفظ شده، اما در عمل فقط به فهرست برمی‌گردد. */
         e.preventDefault();
         window.location.hash = `#/ai-daily`;
       }}
@@ -320,7 +320,7 @@ const TagChip: React.FC<{ label: string }> = ({ label }) => {
 };
 
 /* ════════════════════════════════════════════════════════════════════
- * 顶部 sticky 导航条
+ * نوار ناوبری sticky بالا
  * ──────────────────────────────────────────────────────────────────── */
 
 const DetailNav: React.FC<{
@@ -334,17 +334,17 @@ const DetailNav: React.FC<{
       <div className="max-w-[920px] mx-auto px-6 lg:px-10 h-12 lg:h-14 flex items-center justify-between">
         <button
           onClick={onBack}
-          className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full font-sans font-semibold text-[13px] text-ink-secondary hover:text-ink hover:bg-cream transition-colors -ml-2.5"
+          className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full font-sans font-semibold text-[13px] text-ink-secondary hover:text-ink hover:bg-cream transition-colors -ms-2.5"
         >
           <ArrowLeft className="w-4 h-4" strokeWidth={2.5} />
-          往期目录
+          فهرست شماره‌های گذشته
         </button>
         <div className="flex items-center gap-1">
           {onShare && (
             <button
               onClick={onShare}
               className="inline-flex items-center justify-center w-9 h-9 rounded-full text-ink-secondary hover:text-ink hover:bg-cream transition-colors"
-              aria-label="分享"
+              aria-label="اشتراک‌گذاری"
             >
               <Share2 className="w-[18px] h-[18px]" strokeWidth={2} />
             </button>
@@ -352,7 +352,7 @@ const DetailNav: React.FC<{
           <button
             onClick={handleOpenNewTab}
             className="inline-flex items-center justify-center w-9 h-9 rounded-full text-ink-secondary hover:text-ink hover:bg-cream transition-colors"
-            aria-label="新窗口打开"
+            aria-label="باز کردن در پنجره جدید"
           >
             <ExternalLink className="w-[18px] h-[18px]" strokeWidth={2} />
           </button>
@@ -363,7 +363,7 @@ const DetailNav: React.FC<{
 };
 
 /* ════════════════════════════════════════════════════════════════════
- * 上一刊 / 下一刊 卡
+ * کارت شماره قبل / شماره بعد
  * ──────────────────────────────────────────────────────────────────── */
 
 const PrevNextCard: React.FC<{
@@ -390,15 +390,15 @@ const PrevNextCard: React.FC<{
     <button
       type="button"
       onClick={() => onClick(daily)}
-      className="group bg-white border-2 border-ink rounded-2xl p-5 lg:p-6 shadow-stamp transition-all duration-250 ease-spring hover:-translate-x-[2px] hover:-translate-y-[2px] hover:[box-shadow:6px_6px_0_0_#241C15] text-left flex flex-col gap-3"
+      className="group bg-white border-2 border-ink rounded-2xl p-5 lg:p-6 shadow-stamp transition-all duration-250 ease-spring hover:-translate-x-[2px] hover:-translate-y-[2px] hover:[box-shadow:6px_6px_0_0_#241C15] text-start flex flex-col gap-3"
     >
       <div className="flex items-center gap-2 font-mono text-[10px] font-semibold uppercase tracking-[0.22em] text-ink/55">
         {isPrev ? (
           <ArrowLeft className="w-3.5 h-3.5" strokeWidth={2.5} />
         ) : null}
-        <span>{isPrev ? "Previous · 上一刊" : "Next · 下一刊"}</span>
+        <span>{isPrev ? "Previous · شماره قبل" : "Next · شماره بعد"}</span>
         {!isPrev ? (
-          <ArrowRight className="w-3.5 h-3.5 ml-auto" strokeWidth={2.5} />
+          <ArrowRight className="w-3.5 h-3.5 ms-auto" strokeWidth={2.5} />
         ) : null}
       </div>
 
@@ -412,7 +412,7 @@ const PrevNextCard: React.FC<{
           </>
         )}
         <span>{dateInfo.ymd}</span>
-        <span className="ml-1 text-ink/35">{dateInfo.weekday}</span>
+        <span className="ms-1 text-ink/35">{dateInfo.weekday}</span>
       </div>
 
       <h4 className="font-display font-extrabold text-[15px] lg:text-[16px] text-ink leading-[1.4] line-clamp-2 group-hover:text-coral transition-colors">
@@ -423,15 +423,15 @@ const PrevNextCard: React.FC<{
 };
 
 /* ════════════════════════════════════════════════════════════════════
- * ReactMarkdown components 覆盖
+ * بازنویسی components در ReactMarkdown
  *
- * 关键：替换 github-markdown.css 默认样式，让正文与 Mailchimp-Freddie
- * 风一致。所有元素都使用 design tokens（font-display / font-sans /
+ * کلیدی: جایگزینی استایل پیش‌فرض github-markdown.css تا متن با سبک Mailchimp-Freddie
+ * هم‌سو باشد. همه عناصر از design tokens استفاده می‌کنند (font-display / font-sans /
  * font-mono / text-ink / coral / cream / butter）。
  * ──────────────────────────────────────────────────────────────────── */
 
-/* 注意：因 react-markdown 类型对子组件 props 极宽松，这里给最常用元素
- * 做自定义；未列出元素走 daily-article 全局 CSS 样式。 */
+/* توجه: چون نوع props زیرکامپوننت‌ها در react-markdown بسیار آزاد است، این‌جا برای پرکاربردترین عناصر
+ * سفارشی‌سازی شده؛ عناصر فهرست‌نشده از استایل CSS سراسری daily-article استفاده می‌کنند. */
 type MdProps = {
   children?: React.ReactNode;
   href?: string;
@@ -443,34 +443,34 @@ type MdProps = {
 };
 
 const mdComponents = {
-  /* h1 → 极少用；预留为大字标题 */
+  /* h1 ← به‌ندرت استفاده می‌شود؛ برای عنوان درشت رزرو شده */
   h1: ({ children }: MdProps) => (
     <h2 className="font-display font-extrabold text-[26px] lg:text-[30px] text-ink leading-[1.2] mt-12 mb-5 tracking-[-0.01em]">
       {children}
     </h2>
   ),
-  /* h2 → 节标题，coral dot 前缀 */
+  /* h2 ← عنوان بخش، با پیشوند dot به رنگ coral */
   h2: ({ children }: MdProps) => (
     <h3 className="font-display font-extrabold text-[20px] lg:text-[24px] text-ink leading-[1.25] mt-12 mb-5 tracking-[-0.01em]">
-      <span className="inline-block w-2 h-2 rounded-full bg-coral mr-3 align-middle -translate-y-1" />
+      <span className="inline-block w-2 h-2 rounded-full bg-coral me-3 align-middle -translate-y-1" />
       {children}
     </h3>
   ),
-  /* h3 → 三级；预留 */
+  /* h3 ← سطح سوم؛ رزرو */
   h3: ({ children }: MdProps) => (
     <h4 className="font-display font-extrabold text-[18px] lg:text-[20px] text-ink leading-[1.35] mt-10 mb-4 tracking-[-0.005em]">
       {children}
     </h4>
   ),
-  /* ★ h4 → 日报"栏目分类"（关键路标）★
-     实测日报 markdown 用 #### 作为大栏目分类（"研究与方法" / "Agent 与工具链" / "模型与能力" 等）。
-     必须是文章里最显眼的视觉路标，不能淹没在正文里。
-     设计：上方留白 + coral § eyebrow + display 大字 + 粗 ink 下划线。 */
+  /* ★ h4 ← گزارش روزانه"دسته‌بندی ستون"(نشانه راه کلیدی) ★
+     در عمل markdown گزارش روزانه از #### برای دسته‌بندی ستون‌های بزرگ استفاده می‌کند ("پژوهش و روش" / "Agent و زنجیره ابزار" / "مدل و توانایی" و غیره).
+     باید برجسته‌ترین نشانه بصری مقاله باشد و در متن غرق نشود.
+     طراحی: فاصله بالا + eyebrow با § به رنگ coral + متن درشت display + زیرخط ضخیم ink. */
   h4: ({ children }: MdProps) => (
     <div className="mt-16 lg:mt-20 mb-7 first:mt-3">
       <div className="flex items-center gap-2.5 mb-3 font-mono text-[10px] lg:text-[11px] font-semibold uppercase tracking-[0.3em] text-coral">
         <span className="text-[14px] leading-none">§</span>
-        <span>Section · 本期栏目</span>
+        <span>Section · ستون این شماره</span>
         <span className="flex-1 border-t border-dotted border-ink/20" />
       </div>
       <h2 className="font-display font-extrabold text-[24px] lg:text-[28px] text-ink leading-[1.2] tracking-[-0.01em] pb-3 border-b-[3px] border-ink">
@@ -478,15 +478,15 @@ const mdComponents = {
       </h2>
     </div>
   ),
-  /* ★ h5 → 日报"新闻条目标题" ★
-     日报 markdown 用 ##### 作为每条新闻的标题。
-     比 h4 (栏目分类) 弱一档，但比正文显眼。 */
+  /* ★ h5 ← گزارش روزانه"عنوان مورد خبری" ★
+     markdown گزارش روزانه از ##### برای عنوان هر خبر استفاده می‌کند.
+     یک درجه ضعیف‌تر از h4 (دسته‌بندی ستون)، اما برجسته‌تر از متن. */
   h5: ({ children }: MdProps) => (
     <h3 className="font-display font-extrabold text-[17px] lg:text-[19px] text-ink leading-[1.4] mt-9 mb-3 tracking-[-0.005em]">
       {children}
     </h3>
   ),
-  /* h6 → 兜底 */
+  /* h6 ← پشتیبان */
   h6: ({ children }: MdProps) => (
     <h4 className="font-display font-bold text-[15px] lg:text-[16px] text-ink-secondary leading-[1.45] mt-7 mb-2.5">
       {children}
@@ -508,24 +508,24 @@ const mdComponents = {
     </a>
   ),
   ul: ({ children }: MdProps) => (
-    <ul className="font-sans text-[15.5px] lg:text-[16.5px] text-ink leading-[1.85] mb-5 space-y-2 pl-0 list-none">
+    <ul className="font-sans text-[15.5px] lg:text-[16.5px] text-ink leading-[1.85] mb-5 space-y-2 ps-0 list-none">
       {children}
     </ul>
   ),
   ol: ({ children }: MdProps) => (
-    <ol className="font-sans text-[15.5px] lg:text-[16.5px] text-ink leading-[1.85] mb-5 space-y-2 pl-0 list-none counter-reset-[md-li]">
+    <ol className="font-sans text-[15.5px] lg:text-[16.5px] text-ink leading-[1.85] mb-5 space-y-2 ps-0 list-none counter-reset-[md-li]">
       {children}
     </ol>
   ),
   li: ({ children }: MdProps) => (
-    <li className="relative pl-5 before:content-['—'] before:absolute before:left-0 before:top-0 before:text-coral before:font-bold">
+    <li className="relative ps-5 before:content-['—'] before:absolute before:start-0 before:top-0 before:text-coral before:font-bold">
       {children}
     </li>
   ),
-  /* blockquote → 日报常用作"相关链接"附注块。
-     不用 italic（中文强制斜体会糊）；用 cream 底 + coral 左条 + 略小字号区分主次。 */
+  /* blockquote ← در گزارش روزانه معمولاً برای"لینک‌های مرتبط"بلوک پانویس استفاده می‌شود.
+     italic استفاده نمی‌شود (کج کردن اجباری حروف غیرلاتین تار می‌شود)؛ با پس‌زمینه cream + نوار کناری coral + اندازه فونت کمی کوچک‌تر سلسله‌مراتب مشخص می‌شود. */
   blockquote: ({ children }: MdProps) => (
-    <blockquote className="my-5 pl-4 pr-4 py-3 bg-cream/60 border-l-[3px] border-coral rounded-r-lg font-sans text-[13.5px] lg:text-[14px] text-ink-secondary leading-[1.7]">
+    <blockquote className="my-5 ps-4 pe-4 py-3 bg-cream/60 border-s-[3px] border-coral rounded-e-lg font-sans text-[13.5px] lg:text-[14px] text-ink-secondary leading-[1.7]">
       {children}
     </blockquote>
   ),
@@ -589,7 +589,7 @@ const mdComponents = {
     <thead className="bg-cream border-b-2 border-ink">{children}</thead>
   ),
   th: ({ children }: MdProps) => (
-    <th className="px-4 py-2.5 text-left font-mono font-semibold text-[12px] uppercase tracking-[0.08em] text-ink/75">
+    <th className="px-4 py-2.5 text-start font-mono font-semibold text-[12px] uppercase tracking-[0.08em] text-ink/75">
       {children}
     </th>
   ),
@@ -598,7 +598,7 @@ const mdComponents = {
   ),
 };
 
-/* daily-article 全局兜底（未被 components 覆盖的 case） */
+/* پشتیبان سراسری daily-article (caseهایی که components پوشش نداده‌اند) */
 const articleStyles = `
   .daily-article > :first-child { margin-top: 0 !important; }
   .daily-article > :last-child { margin-bottom: 0 !important; }

@@ -1,48 +1,48 @@
 /**
- * Transformer 封面
+ * جلد Transformer
  *
- * 隐喻：4 层 transformer block 堆叠 + 一行 token 通过 cross-attention 弧线互连，
- *      右侧 Q/K/V 三个 chip 拆出 attention 三件套。
+ * استعاره: پشته ۴ لایه block ترنسفورمر + یک ردیف token که با کمان‌های cross-attention به هم وصل‌اند،
+ *      در راست سه chip با Q/K/V سه‌گانه attention را جدا می‌کنند.
  *
- * 跟 bert cover（一句话 + [MASK] + top-3 候选 + 收敛箭头到 mask）区别：
- *   ─ bert 是「单词被 mask · 双向预测」隐喻
- *   ─ 这里是「token 之间互连 · 层堆 · Q/K/V」架构隐喻
+ * تفاوت با bert cover (یک جمله + [MASK] + top-3 کاندید + فلش همگرا به mask):
+ *   ─ bert استعاره «mask شدن کلمه · پیش‌بینی دوطرفه» است
+ *   ─ این‌جا استعاره معماری «اتصال بین tokenها · پشته لایه‌ها · Q/K/V» است
  *
- * 视觉构图（viewBox 320×200）：
- *   ─ 左上 stamp「2017 · arXiv 1706.03762」（coral 横向 pill）
- *   ─ 右上 8 个小方点（multi-head 视觉）
- *   ─ 中央偏左：4 层 transformer block 堆叠
- *   ─ 中央偏右：Q / K / V 三块 chip 卡（butter / coral / teal）
- *   ─ 底部：4 个 input token，token 之间用 attention 弧线连
- *   ─ 底部 caption：self-attention · 一次性所有词
+ * ترکیب‌بندی بصری (viewBox 320×200):
+ *   ─ stamp بالا-چپ «2017 · arXiv 1706.03762» (pill افقی coral)
+ *   ─ ۸ نقطه مربعی کوچک بالا-راست (تصویر multi-head)
+ *   ─ مرکز متمایل به چپ: پشته ۴ لایه block ترنسفورمر
+ *   ─ مرکز متمایل به راست: سه کارت chip با Q / K / V (butter / coral / teal)
+ *   ─ پایین: ۴ input token که با کمان‌های attention به هم وصل‌اند
+ *   ─ caption پایین: self-attention · همه کلمات یک‌جا
  *
- * hover：弧线流动加速 + multi-head 点呼吸 + Q/K/V chip 微旋。
+ * hover: جریان کمان‌ها سریع‌تر + نقاط multi-head نفس می‌کشند + chipهای Q/K/V کمی می‌چرخند.
  */
 import React from "react";
 import CoverShell from "./CoverShell";
 
-const TOKENS = ["猫", "坐", "沙发", "上"];
+const TOKENS = ["گربه", "نشسته", "مبل", "روی"];
 
-/* token 位置：底部一行 */
+/* موقعیت token: یک ردیف در پایین */
 const TOK_Y = 168;
 const TOK_W = 26;
 const TOK_H = 22;
 const TOK_GAP = 8;
-const TOK_X0 = 36; // 第一个 token 中心 x
+const TOK_X0 = 36; // x مرکز اولین token
 const tokX = (i: number) => TOK_X0 + i * (TOK_W + TOK_GAP);
 
-/* attention 弧：(from, to) 对。手挑 4 条，越过 block 堆向上突起 */
+/* کمان attention: جفت (from, to). ۴ تا دستی انتخاب شده‌اند و از روی پشته block به بالا برآمده‌اند */
 const ARCS: { a: number; b: number; tone: string }[] = [
-  { a: 0, b: 2, tone: "#E07A5F" }, // 猫 → 沙发
-  { a: 1, b: 3, tone: "#1B4B5A" }, // 坐 → 上
-  { a: 0, b: 3, tone: "#241C15" }, // 猫 → 上
-  { a: 2, b: 3, tone: "#F4D35E" }, // 沙发 → 上
+  { a: 0, b: 2, tone: "#E07A5F" }, // گربه ← مبل
+  { a: 1, b: 3, tone: "#1B4B5A" }, // نشسته ← روی
+  { a: 0, b: 3, tone: "#241C15" }, // گربه ← روی
+  { a: 2, b: 3, tone: "#F4D35E" }, // مبل ← روی
 ];
 
 const TransformerCover: React.FC = () => {
   return (
     <CoverShell bgClassName="bg-cream" dotOpacity={0.08}>
-      {/* 左上 stamp：2017 论文 ID */}
+      {/* stamp بالا-چپ: ID مقاله 2017 */}
       <g
         transform="translate(54,28) rotate(-5)"
         className="origin-center transition-transform duration-500 group-hover:rotate-3"
@@ -71,7 +71,7 @@ const TransformerCover: React.FC = () => {
         </text>
       </g>
 
-      {/* 右上：8 个 head 小方点 */}
+      {/* بالا-راست: ۸ نقطه مربعی کوچک head */}
       <g
         transform="translate(238,28)"
         className="origin-center transition-transform duration-500 group-hover:translate-y-[-2px]"
@@ -109,7 +109,7 @@ const TransformerCover: React.FC = () => {
         </text>
       </g>
 
-      {/* 中央偏左：4 层 transformer block 堆叠 */}
+      {/* مرکز متمایل به چپ: پشته ۴ لایه block ترنسفورمر */}
       <g transform="translate(56,58)">
         {Array.from({ length: 4 }).map((_, i) => (
           <g key={`blk-${i}`}>
@@ -134,7 +134,7 @@ const TransformerCover: React.FC = () => {
             >
               layer {4 - i}
             </text>
-            {/* 每层右侧：attention + ffn 两个小标记 */}
+            {/* سمت راست هر لایه: دو نشانه کوچک attention + ffn */}
             <circle
               cx="92"
               cy={i * 24 + 10}
@@ -155,7 +155,7 @@ const TransformerCover: React.FC = () => {
             />
           </g>
         ))}
-        {/* ×N 标 */}
+        {/* برچسب ×N */}
         <text
           x="59"
           y="106"
@@ -170,7 +170,7 @@ const TransformerCover: React.FC = () => {
         </text>
       </g>
 
-      {/* 中央偏右：Q / K / V 三块 chip */}
+      {/* مرکز متمایل به راست: سه chip با Q / K / V */}
       <g transform="translate(212,62)">
         {[
           { label: "Q", fill: "#E07A5F", text: "#FBEFE3", y: 0 },
@@ -202,7 +202,7 @@ const TransformerCover: React.FC = () => {
             >
               {q.label}
             </text>
-            {/* 小柱条 */}
+            {/* ستون کوچک */}
             <g transform="translate(26,5)">
               {[5, 8, 11, 6, 9].map((h, j) => (
                 <rect
@@ -219,7 +219,7 @@ const TransformerCover: React.FC = () => {
             </g>
           </g>
         ))}
-        {/* softmax 收敛箭头 → output */}
+        {/* فلش همگرای softmax ← output */}
         <path
           d="M 74 11 Q 96 41 74 71"
           stroke="#241C15"
@@ -243,13 +243,13 @@ const TransformerCover: React.FC = () => {
         </text>
       </g>
 
-      {/* token 行（底部）+ 弧形 attention 连线（在 block 之上突起） */}
-      {/* attention 弧线先画（在 token 之下层） */}
+      {/* ردیف token (پایین) + خطوط کمانی attention (بالای block برآمده) */}
+      {/* کمان‌های attention اول رسم می‌شوند (لایه زیر token) */}
       {ARCS.map((arc, i) => {
         const xA = tokX(arc.a) + TOK_W / 2;
         const xB = tokX(arc.b) + TOK_W / 2;
         const yBase = TOK_Y - TOK_H / 2 - 2;
-        const peak = 152 - i * 4; // 不同弧顶高
+        const peak = 152 - i * 4; // ارتفاع‌های مختلف رأس کمان
         const cx = (xA + xB) / 2;
         return (
           <path
@@ -266,7 +266,7 @@ const TransformerCover: React.FC = () => {
         );
       })}
 
-      {/* token 方块 */}
+      {/* مربع token */}
       {TOKENS.map((t, i) => (
         <g
           key={`tk-${i}`}
@@ -297,7 +297,7 @@ const TransformerCover: React.FC = () => {
         </g>
       ))}
 
-      {/* 左下：架构小标 */}
+      {/* پایین-چپ: برچسب کوچک معماری */}
       <g transform="translate(28,193) rotate(-2)" className="origin-left">
         <rect
           x="-2"
@@ -319,11 +319,11 @@ const TransformerCover: React.FC = () => {
           letterSpacing="0.6"
           fill="#F4D35E"
         >
-          decoder-only · 2026 主流
+          decoder-only · جریان اصلی 2026
         </text>
       </g>
 
-      {/* 右下 caption */}
+      {/* caption پایین-راست */}
       <text
         x="248"
         y="194"

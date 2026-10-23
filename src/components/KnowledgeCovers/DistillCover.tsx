@@ -1,27 +1,27 @@
 /**
- * Distill 封面
+ * جلد Distill
  *
- * 隐喻：老师（大圆 · 满脑神经元）→ 概率粒子流 →  学生（小圆 · 神经元少但有 coral 高亮）。
+ * استعاره: معلم (دایره بزرگ · مغز پر از نورون) ← جریان ذرات احتمال ← دانش‌آموز (دایره کوچک · نورون کمتر اما با هایلایت coral).
  *
- * 视觉构图（viewBox 320×200）：
- *   - 左：教师圆（大，r=42）填满 8x8 神经元点阵，几个 coral 高亮点
- *   - 中：从教师"漏"出 5 个不同高度的概率柱（暗知识粒子），按 softmax 分布排开
- *   - 右：学生圆（小，r=28）只有 4x4 神经元，但保留了 2 个 coral 高亮 —— 学到了暗知识
- *   - 上方一条 coral 弧从老师飘向学生，代表"知识流"
- *   - 装饰：右上"T=4" 温度 stamp、左下温度计/分布刻线
+ * ترکیب‌بندی بصری (viewBox 320×200):
+ *   - چپ: دایره معلم (بزرگ، r=42) پر از ماتریس نقطه‌ای نورون 8x8، چند نقطه هایلایت coral
+ *   - وسط: از معلم"نشت می‌کند"۵ ستون احتمال با ارتفاع‌های مختلف (ذرات دانش تاریک)، طبق توزیع softmax چیده می‌شوند
+ *   - راست: دایره دانش‌آموز (کوچک، r=28) فقط 4x4 نورون دارد اما ۲ هایلایت coral را حفظ کرده —— دانش تاریک را یاد گرفته
+ *   - یک کمان coral در بالا از معلم به دانش‌آموز می‌رود، نماینده"جریان دانش"
+ *   - تزئین: بالا-راست"T=4" stamp دما، پایین-چپ دماسنج/خطوط درجه‌بندی توزیع
  *
- * hover：粒子流向学生加速；学生神经元的高亮点变多；老师向学生略微倾斜。
+ * hover: جریان ذرات به سمت دانش‌آموز سریع‌تر می‌شود؛ نقاط هایلایت نورون‌های دانش‌آموز بیشتر می‌شوند؛ معلم کمی به سمت دانش‌آموز خم می‌شود.
  */
 import React from "react";
 import CoverShell from "./CoverShell";
 
-/* 5 类的预归一化概率（教师 softmax T=4 输出），决定中间柱条高度 */
+/* احتمال پیش‌نرمال‌سازی ۵ کلاس (خروجی softmax معلم با T=4)، ارتفاع ستون‌های وسط را تعیین می‌کند */
 const SOFT_PROBS = [0.46, 0.19, 0.17, 0.115, 0.07];
 
 const DistillCover: React.FC = () => {
   return (
     <CoverShell bgClassName="bg-butter" dotOpacity={0.07}>
-      {/* 上方装饰弧 —— 知识流 */}
+      {/* کمان تزئینی بالا —— جریان دانش */}
       <path
         d="M 76 56 Q 160 24 244 76"
         stroke="#E07A5F"
@@ -33,7 +33,7 @@ const DistillCover: React.FC = () => {
         className="transition-opacity duration-500 group-hover:opacity-90"
       />
 
-      {/* 右上：温度 stamp */}
+      {/* بالا-راست: stamp دما */}
       <g
         transform="translate(285,28) rotate(-6)"
         className="origin-center transition-transform duration-500 group-hover:rotate-3 group-hover:scale-110"
@@ -61,7 +61,7 @@ const DistillCover: React.FC = () => {
         </text>
       </g>
 
-      {/* 左下：分布刻线装饰 */}
+      {/* پایین-چپ: تزئین خطوط درجه‌بندی توزیع */}
       <g transform="translate(28,176)" className="origin-left">
         <rect
           x="-2"
@@ -87,7 +87,7 @@ const DistillCover: React.FC = () => {
         </text>
       </g>
 
-      {/* ① 教师 · 大圆 · 满脑神经元 */}
+      {/* ① معلم · دایره بزرگ · مغز پر از نورون */}
       <g transform="translate(70,100)" className="transition-transform duration-500 group-hover:translate-x-1">
         <circle cx="0" cy="0" r="42" fill="#FFFFFF" stroke="#241C15" strokeWidth="2.4" />
         <defs>
@@ -116,7 +116,7 @@ const DistillCover: React.FC = () => {
             }),
           )}
         </g>
-        {/* 老师标签 */}
+        {/* برچسب معلم */}
         <rect
           x="-22"
           y="34"
@@ -141,7 +141,7 @@ const DistillCover: React.FC = () => {
         </text>
       </g>
 
-      {/* ② 中间 · 概率柱（5 根）：暗知识粒子 */}
+      {/* ② وسط · ستون‌های احتمال (۵ عدد): ذرات دانش تاریک */}
       <g transform="translate(160,118)">
         {SOFT_PROBS.map((p, i) => {
           const x = -34 + i * 16;
@@ -166,7 +166,7 @@ const DistillCover: React.FC = () => {
                 strokeWidth="1.5"
                 opacity={isTop ? 1 : 0.85}
               />
-              {/* 顶部小圆点（粒子感） */}
+              {/* نقطه کوچک بالا (حس ذره) */}
               <circle
                 cx={x}
                 cy={-h - 3}
@@ -177,7 +177,7 @@ const DistillCover: React.FC = () => {
             </g>
           );
         })}
-        {/* 底线 */}
+        {/* خط پایه */}
         <line
           x1="-46"
           y1="0"
@@ -189,7 +189,7 @@ const DistillCover: React.FC = () => {
         />
       </g>
 
-      {/* 中间标签：probabilities */}
+      {/* برچسب وسط: probabilities */}
       <g transform="translate(160,138)">
         <text
           x="0"
@@ -206,7 +206,7 @@ const DistillCover: React.FC = () => {
         </text>
       </g>
 
-      {/* ③ 学生 · 小圆 · 少神经元但保留高亮 */}
+      {/* ③ دانش‌آموز · دایره کوچک · نورون کم اما هایلایت حفظ شده */}
       <g transform="translate(248,108)" className="transition-transform duration-500 group-hover:-translate-x-1">
         <circle cx="0" cy="0" r="28" fill="#FFFFFF" stroke="#241C15" strokeWidth="2.4" />
         <defs>
@@ -220,7 +220,7 @@ const DistillCover: React.FC = () => {
               const x = -22 + i * 12 + 6;
               const y = -22 + j * 12 + 6;
               const seed = (i * 31 + j * 17) % 7;
-              /* 学生只在两个位置保留高亮 —— 暗知识被精炼地传过来了 */
+              /* دانش‌آموز فقط در دو موقعیت هایلایت را حفظ کرده —— دانش تاریک به‌صورت فشرده منتقل شده */
               const hi = seed === 1 || seed === 4;
               return (
                 <circle
@@ -236,7 +236,7 @@ const DistillCover: React.FC = () => {
             }),
           )}
         </g>
-        {/* 学生标签 */}
+        {/* برچسب دانش‌آموز */}
         <rect
           x="-22"
           y="22"
@@ -261,7 +261,7 @@ const DistillCover: React.FC = () => {
         </text>
       </g>
 
-      {/* 老师 → 中间柱 → 学生 的细线 */}
+      {/* خط باریک معلم ← ستون‌های وسط ← دانش‌آموز */}
       <line
         x1="110"
         y1="100"

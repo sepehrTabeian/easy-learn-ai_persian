@@ -14,7 +14,7 @@ const MultiQueryAttentionCover: React.FC = () => (
       ))}
       <rect x="76" y="122" width="168" height="48" rx="14" fill="#F4D35E" stroke="#241C15" strokeWidth="2.5" />
       <text x="160" y="143" textAnchor="middle" fontFamily="Geist Mono, monospace" fontSize="11" fontWeight="900" fill="#241C15">SHARED K · V</text>
-      <text x="160" y="159" textAnchor="middle" fontFamily="Plus Jakarta Sans, Noto Sans SC, sans-serif" fontSize="10" fontWeight="800" fill="#241C15">只保存一组前文线索和信息</text>
+      <text x="160" y="159" textAnchor="middle" fontFamily="Plus Jakarta Sans, Vazirmatn, sans-serif" fontSize="10" fontWeight="800" fill="#241C15">فقط یک مجموعه از سرنخ‌ها و اطلاعات متن قبلی را نگه می‌دارد</text>
     </g>
   </CoverShell>
 );

@@ -1,36 +1,36 @@
 /**
- * GPT 封面
+ * جلد GPT
  *
- * 隐喻：一个 ChatGPT 对话气泡里冒出三个一路放大的代际节点 ——
- *   GPT-1 (小灰点) → GPT-3 (中红点) → GPT-5 (大粉点)
- *   底下一行 token 序列 `next token →` 暗示「猜下一个 token」目标 8 年不变。
- *   右上 stamp「OpenAI · 2018→2026」，左上小 think 气泡冒「reasoning」字样表示 o 系合流。
+ * استعاره: درون یک حباب گفتگوی ChatGPT سه گره نسلی که مدام بزرگ‌تر می‌شوند ظاهر می‌شوند ——
+ *   GPT-1 (نقطه خاکستری کوچک) ← GPT-3 (نقطه قرمز متوسط) ← GPT-5 (نقطه صورتی بزرگ)
+ *   در پایین یک ردیف دنباله token `next token →` اشاره به این‌که هدف «حدس token بعدی» ۸ سال ثابت مانده است.
+ *   stamp بالا-راست «OpenAI · 2018→2026»، حباب کوچک think در بالا-چپ با عبارت «reasoning» نشان‌دهنده ادغام سری o.
  *
- * 视觉构图（viewBox 320×200）：
- *   ─ 顶部 y=24：左侧 think mini 气泡 / 右侧 stamp 2018→2026
- *   ─ 中部主舞台：大对话气泡 (rect rx=18) 占据中央
- *     里面横向排 3 个圆形节点（参数演化）+ 连接线
- *   ─ 底部 y=170：token 行（5 个小方块），最后一个是高亮 「next」
+ * ترکیب‌بندی بصری (viewBox 320×200):
+ *   ─ بالا y=24: حباب mini با think در چپ / stamp 2018→2026 در راست
+ *   ─ صحنه اصلی وسط: حباب گفتگوی بزرگ (rect rx=18) مرکز را اشغال کرده
+ *     داخل آن ۳ گره دایره‌ای به‌صورت افقی (تحول پارامترها) + خطوط اتصال
+ *   ─ پایین y=170: ردیف token (۵ مربع کوچک)، آخری «next» برجسته است
  *
- * hover：3 个节点轻微 float-y · stamp 微旋转
+ * hover: ۳ گره کمی float-y می‌شوند · stamp کمی می‌چرخد
  */
 import React from "react";
 import CoverShell from "./CoverShell";
 
-/* 三代节点 · params 决定半径 */
+/* گره‌های سه نسل · params شعاع را تعیین می‌کند */
 const GENS = [
   { x: 95, name: "GPT-1", year: "'18", r: 10, fill: "#88837C", text: "117M" },
   { x: 160, name: "GPT-3", year: "'20", r: 16, fill: "#E07A5F", text: "175B" },
   { x: 225, name: "GPT-5", year: "'25", r: 22, fill: "#FF4D74", text: "?" },
 ];
 
-/* 底部 token 行 */
+/* ردیف token پایین */
 const TOKENS = ["o", "p", "e", "n", "?"];
 
 const GptCover: React.FC = () => {
   return (
     <CoverShell bgClassName="bg-cream" dotOpacity={0.08}>
-      {/* 右上 stamp · OpenAI · 2018→2026 */}
+      {/* stamp بالا-راست · OpenAI · 2018→2026 */}
       <g
         transform="translate(282,28) rotate(-6)"
         className="origin-center transition-transform duration-500 group-hover:rotate-3"
@@ -59,7 +59,7 @@ const GptCover: React.FC = () => {
         </text>
       </g>
 
-      {/* 左上 think 小气泡 · 暗示 o 系 */}
+      {/* حباب کوچک think بالا-چپ · اشاره به سری o */}
       <g
         transform="translate(34,30) rotate(-4)"
         className="origin-center transition-transform duration-500 group-hover:translate-y-[-2px]"
@@ -86,7 +86,7 @@ const GptCover: React.FC = () => {
         >
           &lt;think&gt;
         </text>
-        {/* 气泡小尾巴 */}
+        {/* دم کوچک حباب */}
         <polygon
           points="-4,11 0,16 4,11"
           fill="#1B4B5A"
@@ -95,7 +95,7 @@ const GptCover: React.FC = () => {
         />
       </g>
 
-      {/* 中央主气泡 · ChatGPT 对话框 */}
+      {/* حباب اصلی مرکزی · کادر گفتگوی ChatGPT */}
       <g transform="translate(160,108)">
         <rect
           x="-110"
@@ -107,7 +107,7 @@ const GptCover: React.FC = () => {
           stroke="#241C15"
           strokeWidth="2"
         />
-        {/* 气泡左下尾巴 */}
+        {/* دم حباب پایین-چپ */}
         <polygon
           points="-90,38 -78,52 -72,38"
           fill="#FFFFFF"
@@ -116,7 +116,7 @@ const GptCover: React.FC = () => {
           strokeLinejoin="round"
         />
 
-        {/* 顶部小标签 · GPT */}
+        {/* برچسب کوچک بالا · GPT */}
         <text
           x="-94"
           y="-22"
@@ -129,8 +129,8 @@ const GptCover: React.FC = () => {
           GPT · DECODER-ONLY
         </text>
 
-        {/* 3 个代节点 + 连接虚线（坐标系基于 -110~110 中心） */}
-        {/* 连接虚线（先画底层） */}
+        {/* ۳ گره نسل + خط نقطه‌چین اتصال (دستگاه مختصات بر مبنای مرکز -110~110) */}
+        {/* خط نقطه‌چین اتصال (اول لایه زیرین رسم می‌شود) */}
         {GENS.slice(0, -1).map((g, i) => {
           const next = GENS[i + 1];
           return (
@@ -189,7 +189,7 @@ const GptCover: React.FC = () => {
         ))}
       </g>
 
-      {/* 底部 token 行 · next token 隐喻 */}
+      {/* ردیف token پایین · استعاره next token */}
       <g transform="translate(160,176)">
         <text
           x="-100"

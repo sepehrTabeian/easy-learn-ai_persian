@@ -1,16 +1,16 @@
 /**
- * ConceptMap — AI 知视「全景视图」（地铁线路图 + 关联高亮）
+ * ConceptMap — «نمای کلی» دانش بصری AI (نقشه خطوط مترو + برجسته‌سازی ارتباط‌ها)
  *
- * 设计意图（对应用户诉求：从哪开始 / 怎么学 / 学到什么 / 关联是什么）：
- *   1. 顶部「学习主线一览」7 张卡 —— 一眼看清一共有哪几条学习路线、各自从哪起步
- *   2. 中部「地铁线路图」—— 每条彩色线就是一条学习顺序，从左往右、到头折返往下
- *   3. 把鼠标放到任意概念上（或点一下）—— 高亮它和别的概念的关联，按 6 种关系上色
- *   4. 点「打开讲解」—— 进入该概念的交互式讲解站
+ * هدف طراحی (پاسخ به نیاز کاربر: از کجا شروع کنم / چطور یاد بگیرم / چه یاد می‌گیرم / ارتباط‌ها چیست):
+ *   ۱. بالا «نگاه کلی به مسیرهای یادگیری» با ۷ کارت —— در یک نگاه ببینید چند مسیر یادگیری وجود دارد و هر کدام از کجا شروع می‌شود
+ *   ۲. وسط «نقشه خطوط مترو» —— هر خط رنگی یک ترتیب یادگیری است، از چپ به راست و در انتها برمی‌گردد به ردیف پایین
+ *   ۳. ماوس را روی هر مفهومی ببرید (یا یک بار کلیک کنید) —— ارتباط آن با مفاهیم دیگر برجسته می‌شود و بر اساس ۶ نوع رابطه رنگ می‌گیرد
+ *   ۴. روی «باز کردن توضیح» کلیک کنید —— وارد سایت توضیح تعاملی آن مفهوم می‌شوید
  *
- * 布局：蛇形折弯（boustrophedon）—— 每条线最多排 COLS 站，超出就折到下一行
- * 并反向往回走（圆角拐弯），长线自动盘起来，整张图宽度受控、不会无限拉长。
+ * چیدمان: خم مارپیچ (boustrophedon) —— هر خط حداکثر COLS ایستگاه دارد و بیشتر از آن به ردیف بعد می‌رود
+ * و در جهت مخالف برمی‌گردد (پیچ با گوشه گرد)، خطوط بلند خودکار جمع می‌شوند و عرض کل نقشه کنترل‌شده است و بی‌نهایت کش نمی‌آید.
  *
- * 纯 SVG + React，无第三方图形库。
+ * فقط SVG + React، بدون کتابخانه گرافیکی شخص ثالث.
  */
 
 import React, { useMemo, useState } from "react";
@@ -33,22 +33,22 @@ import {
   type RelationType,
 } from "../data/conceptGraphData";
 
-/* ── 布局常量 ── */
-const COLS = 6; // 每行最多几站，超出折返
-const LABEL_W = 150; // 左侧线名留白
-const COL_GAP = 178; // 同行相邻站水平间距
-const ROW_GAP = 88; // 折返行间距
-const PAD_TOP = 30; // 线条带内·首行上留白
-const PAD_BOTTOM = 26; // 线条带内·末行下留白
+/* ── ثابت‌های چیدمان ── */
+const COLS = 6; // حداکثر ایستگاه در هر ردیف، بیشتر از آن برمی‌گردد
+const LABEL_W = 150; // فضای خالی سمت چپ برای نام خط
+const COL_GAP = 178; // فاصله افقی ایستگاه‌های مجاور در یک ردیف
+const ROW_GAP = 88; // فاصله ردیف‌های برگشتی
+const PAD_TOP = 30; // فضای خالی بالای ردیف اول در نوار خط
+const PAD_BOTTOM = 26; // فضای خالی پایین ردیف آخر در نوار خط
 const PILL_H = 36;
 const HUB_H = 44;
-const MAX_H = HUB_H; // 行高基准
+const MAX_H = HUB_H; // مبنای ارتفاع ردیف
 const DETAIL_PANEL_W = 290;
 const DETAIL_PANEL_H = 420;
 const DETAIL_PANEL_MARGIN = 16;
 const DETAIL_PANEL_GAP = 18;
 
-/** 估算 station 宽度（中文字宽 ~15，英文 ~8） */
+/** تخمین عرض station (عرض حرف چینی حدود ۱۵، انگلیسی حدود ۸) */
 const estWidth = (label: string): number => {
   let w = 0;
   for (const ch of label) w += /[\x00-\xff]/.test(ch) ? 8 : 15;
@@ -70,24 +70,24 @@ interface LineLayout {
   color: string;
   yTop: number;
   bandH: number;
-  /** 该线节点中心点序列（用于画地铁折线） */
+  /** دنباله نقاط مرکزی گره‌های این خط (برای رسم خط شکسته مترو) */
   path: { cx: number; cy: number }[];
 }
 
 const ConceptMap: React.FC<{
-  /** 点击「打开讲解」时回调概念 id，由父组件负责跳转 */
+  /** هنگام کلیک روی «باز کردن توضیح»، id مفهوم را callback می‌کند و کامپوننت والد مسئول انتقال است */
   onSelectConcept: (id: string) => void;
 }> = ({ onSelectConcept }) => {
   const [hoverId, setHoverId] = useState<string | null>(null);
   const [selectedId, setSelectedId] = useState<string | null>(null);
   const displayId = selectedId ?? hoverId;
 
-  /* 蛇形折弯布局：算出每个节点坐标 + 每条线的条带与折线 */
+  /* چیدمان خم مارپیچ: مختصات هر گره + نوار و خط شکسته هر خط را حساب می‌کند */
   const { placed, byId, lineLayouts, width, height } = useMemo(() => {
     const map = new Map<string, Placed>();
     const list: Placed[] = [];
     const layouts: LineLayout[] = [];
-    const baseX = LABEL_W + 96; // 第一站圆心 x（给左侧 pill 留出半宽）
+    const baseX = LABEL_W + 96; // مرکز دایره ایستگاه اول x (نصف عرض برای pill سمت چپ کنار گذاشته می‌شود)
 
     let cursorY = 8;
     LEARNING_LINES.forEach((line) => {
@@ -100,7 +100,7 @@ const ConceptMap: React.FC<{
       lineNodes.forEach((node, i) => {
         const row = Math.floor(i / COLS);
         const colInRow = i % COLS;
-        // 蛇形：偶数行从左到右，奇数行从右到左（折返处同列 → 竖直连接）
+        // مارپیچ: ردیف‌های زوج از چپ به راست، ردیف‌های فرد از راست به چپ (محل برگشت در همان ستون ← اتصال عمودی)
         const col = row % 2 === 0 ? colInRow : COLS - 1 - colInRow;
         const cx = baseX + col * COL_GAP;
         const cy = firstRowY + row * ROW_GAP;
@@ -141,7 +141,7 @@ const ConceptMap: React.FC<{
     };
   }, []);
 
-  /* 当前高亮节点的邻居集合（含关系类型） */
+  /* مجموعه همسایه‌های گره برجسته فعلی (شامل نوع رابطه) */
   const neighbors = useMemo(() => {
     if (!displayId) return null;
     const m = new Map<string, RelationType>();
@@ -188,7 +188,7 @@ const ConceptMap: React.FC<{
       })()
     : DETAIL_PANEL_MARGIN;
 
-  /* 选中节点的关联，按关系类型分组（用于侧面板） */
+  /* ارتباط‌های گره انتخاب‌شده، گروه‌بندی بر اساس نوع رابطه (برای پنل کناری) */
   const groupedRelations = useMemo(() => {
     if (!selectedId) return [];
     const groups = new Map<RelationType, { id: string; label: string }[]>();
@@ -203,24 +203,24 @@ const ConceptMap: React.FC<{
 
   return (
     <div>
-      {/* ───────── 引导文案 ───────── */}
+      {/* ───────── متن راهنما ───────── */}
       <div className="max-w-3xl mb-10">
         <div className="inline-flex items-center gap-2 px-3.5 py-1.5 bg-white border-2 border-ink rounded-full shadow-stamp font-sans font-semibold text-[12px] text-ink mb-5">
           <Sparkles className="w-3.5 h-3.5 text-coral" strokeWidth={2.5} />
-          全景视图 · 知视图谱
+          نمای کلی · نقشه دانش بصری
         </div>
         <h2 className="font-display font-extrabold text-[28px] md:text-[36px] leading-[1.15] text-ink">
-          这 40 个概念，其实是一张网
+          این ۴۰ مفهوم در واقع یک شبکه‌اند
         </h2>
         <p className="font-sans text-[15px] md:text-[16px] leading-[1.7] text-ink/70 mt-4">
-          每一条彩色线，就是一条从头到尾的学习路线，顺着往前学就行（到头会折回下一排）。
-          把鼠标放到任意一个概念上，能看到它和谁有关系；
-          <span className="font-semibold text-ink">点一下，就进入它的讲解。</span>
-          不知道从哪开始？先看 <StartTag /> 那一站。
+          هر خط رنگی یک مسیر یادگیری از ابتدا تا انتهاست؛ کافی است در امتداد آن پیش بروید (در انتها به ردیف بعد برمی‌گردد).
+          ماوس را روی هر مفهومی ببرید تا ببینید با چه چیزهایی ارتباط دارد؛
+          <span className="font-semibold text-ink">یک بار کلیک کنید تا وارد توضیح آن شوید.</span>
+          نمی‌دانید از کجا شروع کنید؟ اول ببینید <StartTag /> آن ایستگاه را.
         </p>
       </div>
 
-      {/* ───────── 学习主线一览（7 张卡）───────── */}
+      {/* ───────── نگاه کلی به مسیرهای یادگیری (۷ کارت) ───────── */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 mb-12">
         {LEARNING_LINES.map((line) => (
           <div
@@ -228,10 +228,10 @@ const ConceptMap: React.FC<{
             className="relative bg-white border-2 border-ink rounded-2xl p-4 shadow-stamp"
           >
             <span
-              className="absolute top-0 left-5 -translate-y-1/2 inline-flex items-center px-2.5 py-0.5 rounded-full border-2 border-ink font-mono text-[10.5px] font-bold text-white"
+              className="absolute top-0 start-5 -translate-y-1/2 inline-flex items-center px-2.5 py-0.5 rounded-full border-2 border-ink font-mono text-[10.5px] font-bold text-white"
               style={{ backgroundColor: line.color }}
             >
-              {NODES_BY_LINE[line.id]?.length ?? 0} 站
+              {NODES_BY_LINE[line.id]?.length ?? 0} ایستگاه
             </span>
             <h3 className="font-display font-extrabold text-[16px] text-ink mt-1 flex items-center gap-2">
               <span
@@ -251,11 +251,11 @@ const ConceptMap: React.FC<{
         ))}
       </div>
 
-      {/* ───────── 地铁线路图 ───────── */}
+      {/* ───────── نقشه خطوط مترو ───────── */}
       <div className="relative">
         <div className="lg:hidden font-sans text-[12px] text-ink/45 mb-2 flex items-center gap-1.5">
           <MousePointerClick className="w-3.5 h-3.5" strokeWidth={2.5} />
-          点概念看关联、进入讲解
+          روی مفهوم کلیک کنید تا ارتباط‌ها را ببینید و وارد توضیح شوید
         </div>
 
         <div className="overflow-x-auto rounded-3xl border-2 border-ink bg-cream shadow-stamp-lg">
@@ -266,9 +266,9 @@ const ConceptMap: React.FC<{
             className="block min-w-full"
             onMouseLeave={() => setHoverId(null)}
             role="img"
-            aria-label="AI 概念关联地铁图"
+            aria-label="نقشه متروی ارتباط مفاهیم AI"
           >
-            {/* 行背景条纹 + 行标题 */}
+            {/* نوار پس‌زمینه ردیف + عنوان ردیف */}
             {lineLayouts.map((ln, li) => (
               <g key={`band-${ln.id}`}>
                 <rect
@@ -310,7 +310,7 @@ const ConceptMap: React.FC<{
               </g>
             ))}
 
-            {/* 地铁折线（蛇形拐弯）—— 圆角连接同线各站 */}
+            {/* خط شکسته مترو (پیچ مارپیچ) —— ایستگاه‌های یک خط را با گوشه گرد به هم وصل می‌کند */}
             {lineLayouts.map((ln) => {
               if (ln.path.length < 2) return null;
               const d =
@@ -333,7 +333,7 @@ const ConceptMap: React.FC<{
               );
             })}
 
-            {/* 关联高亮曲线（仅 hover/选中时）—— 跨线关系 */}
+            {/* منحنی برجسته‌سازی ارتباط (فقط هنگام hover/انتخاب) —— رابطه بین خطوط */}
             {displayId &&
               neighbors &&
               Array.from(neighbors.entries()).map(([nid, type]) => {
@@ -358,7 +358,7 @@ const ConceptMap: React.FC<{
                 );
               })}
 
-            {/* 站点 */}
+            {/* ایستگاه‌ها */}
             {placed.map((p) => {
               const dimmed = isDimmed(p.id);
               const isActive = p.id === displayId;
@@ -434,7 +434,7 @@ const ConceptMap: React.FC<{
           </svg>
         </div>
 
-        {/* 选中详情面板 */}
+        {/* پنل جزئیات انتخاب‌شده */}
         {selectedNode && (
           <div
             className="absolute w-[290px] max-w-[calc(100%-2rem)] max-h-[min(520px,calc(100vh-7rem))] overflow-y-auto bg-white border-2 border-ink rounded-2xl shadow-stamp-lg p-5 z-10"
@@ -442,8 +442,8 @@ const ConceptMap: React.FC<{
           >
             <button
               onClick={() => setSelectedId(null)}
-              aria-label="关闭"
-              className="absolute top-3 right-3 p-1 rounded-full hover:bg-ink/5 transition-colors"
+              aria-label="بستن"
+              className="absolute top-3 end-3 p-1 rounded-full hover:bg-ink/5 transition-colors"
             >
               <X className="w-4 h-4 text-ink/60" strokeWidth={2.5} />
             </button>
@@ -463,7 +463,7 @@ const ConceptMap: React.FC<{
             )}
 
             {groupedRelations.length > 0 ? (
-              <div className="mt-4 space-y-3 max-h-[240px] overflow-y-auto pr-1">
+              <div className="mt-4 space-y-3 max-h-[240px] overflow-y-auto pe-1">
                 {groupedRelations.map(([type, items]) => {
                   const meta = RELATION_META[type];
                   return (
@@ -494,7 +494,7 @@ const ConceptMap: React.FC<{
               </div>
             ) : (
               <p className="font-sans text-[13px] text-ink/55 mt-4">
-                这个概念暂时没标注关联。
+                برای این مفهوم هنوز ارتباطی ثبت نشده است.
               </p>
             )}
 
@@ -502,7 +502,7 @@ const ConceptMap: React.FC<{
               onClick={() => onSelectConcept(selectedNode.id)}
               className="group w-full mt-4 inline-flex items-center justify-center gap-2 px-4 py-2.5 bg-ink text-white border-2 border-ink rounded-full font-sans font-bold text-[13.5px] shadow-stamp transition-all duration-250 ease-spring hover:-translate-x-[2px] hover:-translate-y-[2px] hover:[box-shadow:5px_5px_0_0_#241C15]"
             >
-              打开《{selectedNode.label}》讲解
+              باز کردن «{selectedNode.label}» توضیح
               <ArrowUpRight
                 className="w-4 h-4 transition-transform duration-250 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
                 strokeWidth={2.5}
@@ -512,10 +512,10 @@ const ConceptMap: React.FC<{
         )}
       </div>
 
-      {/* ───────── 关系图例 ───────── */}
+      {/* ───────── راهنمای روابط ───────── */}
       <div className="mt-6 flex flex-wrap items-center gap-x-5 gap-y-2">
         <span className="font-sans font-semibold text-[12px] text-ink/55">
-          线的颜色表示关系：
+          رنگ خط نشان‌دهنده نوع رابطه است:
         </span>
         {(Object.keys(RELATION_META) as RelationType[]).map((t) => {
           const meta = RELATION_META[t];
@@ -544,7 +544,7 @@ const ConceptMap: React.FC<{
   );
 };
 
-/** 推荐起点小药丸（与图上发光起点同色） */
+/** قرص کوچک نقطه شروع پیشنهادی (هم‌رنگ نقطه شروع درخشان روی نقشه) */
 const StartTag: React.FC = () => {
   const node = GRAPH_NODES.find((n) => n.id === RECOMMENDED_START);
   const line = LEARNING_LINES.find((l) => l.id === node?.line);

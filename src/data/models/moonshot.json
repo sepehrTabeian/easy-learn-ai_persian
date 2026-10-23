@@ -1,330 +1,330 @@
 [
     {
         "modelName": "moonshot-v1-8k",
-        "company": "月之暗面",
-        "country": "中国",
-        "openSourceStatus": "闭源",
+        "company": "Moonshot AI",
+        "country": "چین",
+        "openSourceStatus": "متن‌بسته",
         "releaseDate": "2024-01-31",
-        "description": "moonshot-v1-8k 是 Kimi 的通用文本生成模型，支持 8K 上下文，兼容 Chat Completions 接口，具备稳健指令遵循与长文本处理能力，支持工具调用、JSON Mode 与 Partial Mode，适用于对话问答、摘要整理、内容创作及轻量代码生成等场景。",
+        "description": "moonshot-v1-8k مدل عمومی تولید متن Kimi است که از context با طول 8K پشتیبانی می‌کند، با رابط Chat Completions سازگار است، پیروی پایدار از دستور و توانایی پردازش متن طولانی دارد و از فراخوانی ابزار، JSON Mode و Partial Mode پشتیبانی می‌کند؛ مناسب برای پرسش و پاسخ گفتگویی، خلاصه‌سازی، تولید محتوا و تولید کد سبک.",
         "modelTags": [
-            "文本生成",
-            "工具调用"
+            "تولید متن",
+            "فراخوانی ابزار"
         ],
         "contextWindow": 8,
         "maxGenerationTokenLength": 0,
         "relatedLinks": [
             {
-                "title": "主要概念：模型列表（moonshot-v1 系列）",
+                "title": "مفاهیم اصلی: فهرست مدل‌ها (سری moonshot-v1)",
                 "url": "https://platform.moonshot.cn/docs/introduction"
             },
             {
-                "title": "为什么要推出 Kimi Latest（提及 moonshot-v1 系列与 128k）",
+                "title": "چرا Kimi Latest عرضه شد (اشاره به سری moonshot-v1 و 128k)",
                 "url": "https://platform.moonshot.cn/blog/posts/kimi-latest"
             }
         ]
     },
     {
         "modelName": "moonshot-v1-32k",
-        "company": "月之暗面",
-        "country": "中国",
-        "openSourceStatus": "闭源",
+        "company": "Moonshot AI",
+        "country": "چین",
+        "openSourceStatus": "متن‌بسته",
         "releaseDate": "2024-01-31",
-        "description": "moonshot-v1-32k 面向长文本生成与理解，提供 32K 上下文窗口，兼容 OpenAI 风格 API，支持工具调用、JSON Mode 与 Partial Mode，适合多文档综合、长段落写作、结构化抽取和业务分析等企业级场景。",
+        "description": "moonshot-v1-32k برای تولید و فهم متن طولانی طراحی شده، پنجره context با طول 32K ارائه می‌دهد، با API به سبک OpenAI سازگار است و از فراخوانی ابزار، JSON Mode و Partial Mode پشتیبانی می‌کند؛ مناسب برای سناریوهای سازمانی مثل ترکیب چند سند، نوشتن پاراگراف‌های طولانی، استخراج ساختاریافته و تحلیل کسب‌وکار.",
         "modelTags": [
-            "文本生成",
-            "工具调用"
+            "تولید متن",
+            "فراخوانی ابزار"
         ],
         "contextWindow": 32,
         "maxGenerationTokenLength": 0,
         "relatedLinks": [
             {
-                "title": "主要概念：模型列表（moonshot-v1 系列）",
+                "title": "مفاهیم اصلی: فهرست مدل‌ها (سری moonshot-v1)",
                 "url": "https://platform.moonshot.cn/docs/introduction"
             },
             {
-                "title": "开始使用 Kimi API（Chat Completions）",
+                "title": "شروع کار با Kimi API (Chat Completions)",
                 "url": "https://platform.moonshot.cn/docs/guide/start-using-kimi-api"
             }
         ]
     },
     {
         "modelName": "moonshot-v1-128k",
-        "company": "月之暗面",
-        "country": "中国",
-        "openSourceStatus": "闭源",
+        "company": "Moonshot AI",
+        "country": "چین",
+        "openSourceStatus": "متن‌بسته",
         "releaseDate": "2024-01-31",
-        "description": "moonshot-v1-128k 提供 128K 超长上下文窗口，适合长文档问答、合同与技术规范解析、跨章节创作与复杂指令任务，支持工具调用、JSON Mode 与 Partial Mode，便于搭建稳定的企业级长文本处理与自动化工作流。",
+        "description": "moonshot-v1-128k پنجره context فوق‌طولانی 128K ارائه می‌دهد و برای پرسش و پاسخ اسناد طولانی، تجزیه قراردادها و مشخصات فنی، خلق بین‌فصلی و وظایف دستوری پیچیده مناسب است؛ از فراخوانی ابزار، JSON Mode و Partial Mode پشتیبانی می‌کند و ساخت پردازش متن طولانی و جریان‌های کاری خودکار پایدار سازمانی را آسان می‌کند.",
         "modelTags": [
-            "文本生成",
-            "工具调用"
+            "تولید متن",
+            "فراخوانی ابزار"
         ],
         "contextWindow": 128,
         "maxGenerationTokenLength": 0,
         "relatedLinks": [
             {
-                "title": "主要概念：模型列表（moonshot-v1 系列）",
+                "title": "مفاهیم اصلی: فهرست مدل‌ها (سری moonshot-v1)",
                 "url": "https://platform.moonshot.cn/docs/introduction"
             },
             {
-                "title": "为什么要推出 Kimi Latest（提及 128k 与 moonshot-v1）",
+                "title": "چرا Kimi Latest عرضه شد (اشاره به 128k و moonshot-v1)",
                 "url": "https://platform.moonshot.cn/blog/posts/kimi-latest"
             }
         ]
     },
     {
         "modelName": "moonshot-v1-8k-vision-preview",
-        "company": "月之暗面",
-        "country": "中国",
-        "openSourceStatus": "闭源",
+        "company": "Moonshot AI",
+        "country": "چین",
+        "openSourceStatus": "متن‌بسته",
         "releaseDate": "2025-01-13",
-        "description": "moonshot-v1-8k-vision-preview 为图片理解模型，支持 8K 上下文与每张图片固定 1024 Token 计费，具备 OCR、颜色与形状识别等能力，支持多轮对话、流式输出、工具调用与 JSON Mode，适用于票据/表单识别、图表解析、界面截图理解等场景。",
+        "description": "moonshot-v1-8k-vision-preview مدل فهم تصویر است که از context با طول 8K و قیمت‌گذاری ثابت 1024 Token برای هر تصویر پشتیبانی می‌کند، توانایی‌هایی مثل OCR و تشخیص رنگ و شکل دارد و از گفتگوی چنددوره‌ای، خروجی جریانی، فراخوانی ابزار و JSON Mode پشتیبانی می‌کند؛ مناسب برای تشخیص رسید/فرم، تجزیه نمودار و فهم اسکرین‌شات رابط کاربری.",
         "modelTags": [
-            "视觉理解",
-            "文本生成",
-            "工具调用"
+            "درک تصویر",
+            "تولید متن",
+            "فراخوانی ابزار"
         ],
         "contextWindow": 8,
         "maxGenerationTokenLength": 0,
         "relatedLinks": [
             {
-                "title": "使用 Kimi 视觉模型（Vision）官方指南",
+                "title": "راهنمای رسمی استفاده از مدل بصری Kimi (Vision)",
                 "url": "https://platform.moonshot.cn/docs/guide/use-kimi-vision-model"
             },
             {
-                "title": "开放平台 Changelog：vision 模型上线（2025-01-13）",
+                "title": "Changelog پلتفرم باز: عرضه مدل vision (2025-01-13)",
                 "url": "https://platform.moonshot.cn/blog/posts/changelog"
             }
         ]
     },
     {
         "modelName": "moonshot-v1-32k-vision-preview",
-        "company": "月之暗面",
-        "country": "中国",
-        "openSourceStatus": "闭源",
+        "company": "Moonshot AI",
+        "country": "چین",
+        "openSourceStatus": "متن‌بسته",
         "releaseDate": "2025-01-13",
-        "description": "moonshot-v1-32k-vision-preview 在 32K 上下文下提供更稳定的多图理解能力，支持多轮对话、流式输出、工具调用与 JSON Mode；在图像与文本混合输入场景中可进行结构化信息抽取，适用于复杂文档截图解析与业务图像问答。",
+        "description": "moonshot-v1-32k-vision-preview در context با طول 32K توانایی پایدارتر فهم چندتصویری ارائه می‌دهد و از گفتگوی چنددوره‌ای، خروجی جریانی، فراخوانی ابزار و JSON Mode پشتیبانی می‌کند؛ در سناریوهای ورودی ترکیبی تصویر و متن می‌تواند اطلاعات ساختاریافته استخراج کند؛ مناسب برای تجزیه اسکرین‌شات اسناد پیچیده و پرسش و پاسخ تصاویر کسب‌وکار.",
         "modelTags": [
-            "视觉理解",
-            "文本生成",
-            "工具调用"
+            "درک تصویر",
+            "تولید متن",
+            "فراخوانی ابزار"
         ],
         "contextWindow": 32,
         "maxGenerationTokenLength": 0,
         "relatedLinks": [
             {
-                "title": "使用 Kimi 视觉模型（Vision）官方指南",
+                "title": "راهنمای رسمی استفاده از مدل بصری Kimi (Vision)",
                 "url": "https://platform.moonshot.cn/docs/guide/use-kimi-vision-model"
             },
             {
-                "title": "开放平台 Changelog：vision 模型上线（2025-01-13）",
+                "title": "Changelog پلتفرم باز: عرضه مدل vision (2025-01-13)",
                 "url": "https://platform.moonshot.cn/blog/posts/changelog"
             }
         ]
     },
     {
         "modelName": "moonshot-v1-128k-vision-preview",
-        "company": "月之暗面",
-        "country": "中国",
-        "openSourceStatus": "闭源",
+        "company": "Moonshot AI",
+        "country": "چین",
+        "openSourceStatus": "متن‌بسته",
         "releaseDate": "2025-01-13",
-        "description": "moonshot-v1-128k-vision-preview 提供 128K 上下文的图片理解与文本生成能力，支持工具调用、JSON Mode 与 Partial Mode；适合超长任务链与多图融合的视觉问答、复杂图表/界面截图解析与跨页面关联信息抽取等场景。",
+        "description": "moonshot-v1-128k-vision-preview توانایی فهم تصویر و تولید متن با context با طول 128K ارائه می‌دهد و از فراخوانی ابزار، JSON Mode و Partial Mode پشتیبانی می‌کند؛ مناسب برای زنجیره وظایف فوق‌طولانی و پرسش و پاسخ بصری با ادغام چند تصویر، تجزیه نمودار/اسکرین‌شات رابط پیچیده و استخراج اطلاعات مرتبط بین صفحات.",
         "modelTags": [
-            "视觉理解",
-            "文本生成",
-            "工具调用"
+            "درک تصویر",
+            "تولید متن",
+            "فراخوانی ابزار"
         ],
         "contextWindow": 128,
         "maxGenerationTokenLength": 0,
         "relatedLinks": [
             {
-                "title": "使用 Kimi 视觉模型（Vision）官方指南",
+                "title": "راهنمای رسمی استفاده از مدل بصری Kimi (Vision)",
                 "url": "https://platform.moonshot.cn/docs/guide/use-kimi-vision-model"
             },
             {
-                "title": "开放平台 Changelog：vision 模型上线（2025-01-13）",
+                "title": "Changelog پلتفرم باز: عرضه مدل vision (2025-01-13)",
                 "url": "https://platform.moonshot.cn/blog/posts/changelog"
             }
         ]
     },
     {
         "modelName": "kimi-k2",
-        "company": "月之暗面",
-        "country": "中国",
-        "openSourceStatus": "开源",
+        "company": "Moonshot AI",
+        "country": "چین",
+        "openSourceStatus": "متن‌باز",
         "releaseDate": "2025-07-11",
-        "description": "kimi-k2-0711-preview 为 K2 开源基础版本，采用 1T 总参数、32B 激活参数的 MoE 架构，支持 128K 上下文，面向代码生成、调试与智能体搭建；在工具调用与工作流编排方面表现出色，适合编程助手与复杂任务代理。",
+        "description": "kimi-k2-0711-preview نسخه پایه متن‌باز K2 است که از معماری MoE با 1T پارامتر کل و 32B پارامتر فعال استفاده می‌کند، از context با طول 128K پشتیبانی می‌کند و برای تولید کد، اشکال‌زدایی و ساخت عامل هوشمند طراحی شده؛ در فراخوانی ابزار و هماهنگ‌سازی جریان کار عالی عمل می‌کند؛ مناسب برای دستیار برنامه‌نویسی و عامل وظایف پیچیده.",
         "modelTags": [
-            "代码增强",
-            "文本生成",
-            "工具调用",
-            "深度思考"
+            "تقویت کد",
+            "تولید متن",
+            "فراخوانی ابزار",
+            "تفکر عمیق"
         ],
         "contextWindow": 128,
         "maxGenerationTokenLength": 32,
         "relatedLinks": [
             {
-                "title": "Kimi K2 技术报告",
+                "title": "گزارش فنی Kimi K2",
                 "url": "https://arxiv.org/abs/2507.20534"
             },
             {
-                "title": "Kimi K2 模型更新 0905 博客（提及最初 7 月 11 日发布）",
+                "title": "وبلاگ به‌روزرسانی مدل Kimi K2 0905 (اشاره به انتشار اولیه ۱۱ ژوئیه)",
                 "url": "https://platform.moonshot.cn/blog/posts/kimi-k2-0905"
             },
             {
-                "title": "Kimi K2 Github 地址",
+                "title": "آدرس GitHub مدل Kimi K2",
                 "url": "https://github.com/moonshotai/kimi-K2"
             }
         ]
     },
     {
         "modelName": "kimi-k2-0905-preview",
-        "company": "月之暗面",
-        "country": "中国",
-        "openSourceStatus": "开源",
+        "company": "Moonshot AI",
+        "country": "چین",
+        "openSourceStatus": "متن‌باز",
         "releaseDate": "2025-09-05",
-        "description": "kimi-k2-0905-preview 是 K2 的升级版本，扩展上下文至 256K，并显著提升 Agentic Coding 能力与前端代码质量；兼容 OpenAI 接口，适合企业级代码生成、自动化运维与多工具协同的智能体工作流。",
+        "description": "kimi-k2-0905-preview نسخه ارتقایافته K2 است که context را تا 256K گسترش داده و توانایی Agentic Coding و کیفیت کد فرانت‌اند را به‌طور محسوسی بهبود داده؛ با رابط OpenAI سازگار است و برای تولید کد سازمانی، عملیات خودکار و جریان‌های کاری عامل هوشمند با همکاری چند ابزار مناسب است.",
         "modelTags": [
-            "代码增强",
-            "文本生成",
-            "工具调用",
-            "深度思考"
+            "تقویت کد",
+            "تولید متن",
+            "فراخوانی ابزار",
+            "تفکر عمیق"
         ],
         "contextWindow": 256,
         "maxGenerationTokenLength": 32,
         "relatedLinks": [
             {
-                "title": "Kimi K2 技术报告",
+                "title": "گزارش فنی Kimi K2",
                 "url": "https://arxiv.org/abs/2507.20534"
             },
             {
-                "title": "Kimi K2 模型更新 0905 博客（提及最初 7 月 11 日发布）",
+                "title": "وبلاگ به‌روزرسانی مدل Kimi K2 0905 (اشاره به انتشار اولیه ۱۱ ژوئیه)",
                 "url": "https://platform.moonshot.cn/blog/posts/kimi-k2-0905"
             },
             {
-                "title": "Kimi K2 Github 地址",
+                "title": "آدرس GitHub مدل Kimi K2",
                 "url": "https://github.com/moonshotai/kimi-K2"
             }
         ]
     },
     {
         "modelName": "kimi-k2-thinking",
-        "company": "月之暗面",
-        "country": "中国",
-        "openSourceStatus": "开源",
+        "company": "Moonshot AI",
+        "country": "چین",
+        "openSourceStatus": "متن‌باز",
         "releaseDate": "2025-11-06",
-        "description": "kimi-k2-thinking 为 K2 的长思考模型，提供 256K 上下文，支持多步工具调用与复杂推理，擅长分解任务、稳健输出结构化结果；适用于复杂业务流程编排、长链路问题求解与高可靠智能体系统构建。",
+        "description": "kimi-k2-thinking مدل تفکر طولانی K2 است که context با طول 256K ارائه می‌دهد، از فراخوانی ابزار چندگامی و استدلال پیچیده پشتیبانی می‌کند و در تجزیه وظایف و خروجی پایدار نتایج ساختاریافته مهارت دارد؛ مناسب برای هماهنگ‌سازی فرایندهای کسب‌وکار پیچیده، حل مسائل زنجیره‌ای طولانی و ساخت سیستم‌های عامل هوشمند با قابلیت اطمینان بالا.",
         "modelTags": [
-            "深度思考",
-            "文本生成",
-            "工具调用",
-            "代码增强"
+            "تفکر عمیق",
+            "تولید متن",
+            "فراخوانی ابزار",
+            "تقویت کد"
         ],
         "contextWindow": 256,
         "maxGenerationTokenLength": 32,
         "relatedLinks": [
             {
-                "title": "Kimi K2 快速开始（列出 thinking 版本与 256K）",
+                "title": "شروع سریع Kimi K2 (فهرست نسخه thinking و 256K)",
                 "url": "https://platform.moonshot.cn/docs/guide/kimi-k2-quickstart"
             },
             {
-                "title": "开放平台 Changelog：K2 Think 模型发布（2025-11-06）",
+                "title": "Changelog پلتفرم باز: انتشار مدل K2 Think (2025-11-06)",
                 "url": "https://platform.moonshot.cn/blog/posts/changelog"
             },
             {
-                "title": "Kimi K2 Thinking 模型 Hugging Face 地址",
+                "title": "آدرس Hugging Face مدل Kimi K2 Thinking",
                 "url": "https://huggingface.co/moonshotai/Kimi-K2-Thinking"
             }
         ]
     },
     {
         "modelName": "Kimi-VL-A3B-Thinking",
-        "company": "月之暗面",
-        "country": "中国",
-        "openSourceStatus": "开源",
+        "company": "Moonshot AI",
+        "country": "چین",
+        "openSourceStatus": "متن‌باز",
         "releaseDate": "2025-06-21",
-        "description": "Kimi-VL-A3B-Thinking 是 Moonshot AI 开源 MoE 视觉语言模型，采用 16.4B 总参、2.8B 激活的 A3B 结构与 MoonViT 视觉编码器，强化 Long‑CoT 与 RL 训练，支持 128K 上下文，提升多模态推理、视频理解与长文档解析，适用于图文问答、图表解析与智能体工作流；单次输出上限官方未公开。",
+        "description": "Kimi-VL-A3B-Thinking مدل زبانی-بصری MoE متن‌باز Moonshot AI است که از ساختار A3B با 16.4B پارامتر کل و 2.8B فعال و رمزگذار بصری MoonViT استفاده می‌کند، آموزش Long‑CoT و RL را تقویت کرده، از context با طول 128K پشتیبانی می‌کند و استدلال چندوجهی، فهم ویدئو و تجزیه اسناد طولانی را بهبود داده؛ مناسب برای پرسش و پاسخ تصویری، تجزیه نمودار و جریان‌های کاری عامل هوشمند؛ حد خروجی هر بار به‌طور رسمی اعلام نشده است.",
         "modelTags": [
-            "文本生成",
-            "视觉理解",
-            "深度思考",
-            "工具调用"
+            "تولید متن",
+            "درک تصویر",
+            "تفکر عمیق",
+            "فراخوانی ابزار"
         ],
         "contextWindow": 128,
         "maxGenerationTokenLength": 0,
         "relatedLinks": [
             {
-                "title": "Kimi-VL 开源仓库（GitHub）",
+                "title": "مخزن متن‌باز Kimi-VL (GitHub)",
                 "url": "https://github.com/moonshotai/Kimi-VL"
             },
             {
-                "title": "Kimi-VL-A3B-Thinking 模型卡片（Hugging Face）",
+                "title": "کارت مدل Kimi-VL-A3B-Thinking (Hugging Face)",
                 "url": "https://huggingface.co/moonshotai/Kimi-VL-A3B-Thinking"
             },
             {
-                "title": "Kimi-VL-A3B-Thinking-2506 模型卡片（Hugging Face）",
+                "title": "کارت مدل Kimi-VL-A3B-Thinking-2506 (Hugging Face)",
                 "url": "https://huggingface.co/moonshotai/Kimi-VL-A3B-Thinking-2506"
             },
             {
-                "title": "Kimi-VL 技术报告（arXiv）",
+                "title": "گزارش فنی Kimi-VL (arXiv)",
                 "url": "https://arxiv.org/abs/2504.07491"
             }
         ]
     },
     {
         "modelName": "Kimi-Linear-48B-A3B-Instruct",
-        "company": "月之暗面",
-        "country": "中国",
-        "openSourceStatus": "开源",
+        "company": "Moonshot AI",
+        "country": "چین",
+        "openSourceStatus": "متن‌باز",
         "releaseDate": "2025-10-30",
-        "description": "Kimi-Linear-48B-A3B-Instruct 是 Moonshot AI 开源长上下文模型，采用混合线性注意力 Kimi Delta Attention（KDA）与 MLA 架构，48B 总参、约 3B 激活，支持 1M 上下文；KV 缓存占用降低最高 75%，解码吞吐提升最高 6×，适合长文档生成、推理对话与高并发智能体场景；单次输出上限官方未公开。",
+        "description": "Kimi-Linear-48B-A3B-Instruct مدل context طولانی متن‌باز Moonshot AI است که از توجه خطی ترکیبی Kimi Delta Attention (KDA) و معماری MLA استفاده می‌کند، 48B پارامتر کل و حدود 3B فعال دارد و از context با طول 1M پشتیبانی می‌کند؛ اشغال کش KV تا ۷۵٪ کاهش و توان عملیاتی رمزگشایی تا ۶ برابر افزایش می‌یابد؛ مناسب برای تولید اسناد طولانی، گفتگوی استدلالی و سناریوهای عامل هوشمند با هم‌روندی بالا؛ حد خروجی هر بار به‌طور رسمی اعلام نشده است.",
         "modelTags": [
-            "文本生成",
-            "工具调用"
+            "تولید متن",
+            "فراخوانی ابزار"
         ],
         "contextWindow": 1000,
         "maxGenerationTokenLength": 0,
         "relatedLinks": [
             {
-                "title": "Kimi Linear 开源仓库（GitHub）",
+                "title": "مخزن متن‌باز Kimi Linear (GitHub)",
                 "url": "https://github.com/moonshotai/Kimi-Linear"
             },
             {
-                "title": "Kimi-Linear-48B-A3B-Instruct 模型卡片（Hugging Face）",
+                "title": "کارت مدل Kimi-Linear-48B-A3B-Instruct (Hugging Face)",
                 "url": "https://huggingface.co/moonshotai/Kimi-Linear-48B-A3B-Instruct"
             },
             {
-                "title": "Kimi Linear 技术报告（arXiv）",
+                "title": "گزارش فنی Kimi Linear (arXiv)",
                 "url": "https://arxiv.org/abs/2510.26692"
             }
         ]
     },
     {
         "modelName": "Kimi K2.5",
-        "company": "月之暗面",
-        "country": "中国",
-        "openSourceStatus": "开源",
+        "company": "Moonshot AI",
+        "country": "چین",
+        "openSourceStatus": "متن‌باز",
         "releaseDate": "2026-01-27",
-        "description": "Kimi K2.5 是月之暗面推出的全能型多模态大模型，采用原生多模态架构设计，支持视觉与文本输入，将视觉理解、推理、编程、Agent 等能力集成于一体。其核心亮点是 Agent Swarm 智能体集群技术，可自动调度最多100个子智能体并行处理任务，支持高达1500次工具调用，复杂任务处理效率最高提升约4.5倍。模型基于约15万亿视觉与文本混合数据预训练，参数规模达1万亿，在多项权威基准测试中取得开源 SOTA 表现。",
+        "description": "Kimi K2.5 مدل بزرگ چندوجهی همه‌کاره Moonshot AI است که با معماری چندوجهی بومی طراحی شده، از ورودی تصویر و متن پشتیبانی می‌کند و توانایی‌های فهم بصری، استدلال، برنامه‌نویسی و Agent را یکپارچه کرده است. نکته برجسته اصلی آن فناوری خوشه عامل هوشمند Agent Swarm است که می‌تواند خودکار تا ۱۰۰ زیرعامل را برای پردازش موازی وظایف زمان‌بندی کند، از حداکثر ۱۵۰۰ فراخوانی ابزار پشتیبانی می‌کند و بهره‌وری پردازش وظایف پیچیده را تا حدود ۴٫۵ برابر افزایش می‌دهد. مدل بر پایه حدود ۱۵ تریلیون داده ترکیبی تصویر و متن پیش‌آموزش دیده، مقیاس پارامتر آن به ۱ تریلیون می‌رسد و در چندین بنچمارک معتبر عملکرد SOTA متن‌باز داشته است.",
         "modelTags": [
-            "文本生成",
-            "深度思考",
-            "视觉理解",
-            "代码增强",
-            "工具调用"
+            "تولید متن",
+            "تفکر عمیق",
+            "درک تصویر",
+            "تقویت کد",
+            "فراخوانی ابزار"
         ],
         "contextWindow": 256,
         "maxGenerationTokenLength": 0,
         "relatedLinks": [
             {
-                "title": "Kimi K2.5 Hugging Face 开源主页",
+                "title": "صفحه متن‌باز Kimi K2.5 در Hugging Face",
                 "url": "https://huggingface.co/moonshotai/Kimi-K2.5"
             },
             {
-                "title": "Kimi K2.5 魔搭社区开源地址",
+                "title": "آدرس متن‌باز Kimi K2.5 در جامعه ModelScope",
                 "url": "https://modelscope.cn/models/moonshotai/Kimi-K2.5"
             },
             {
-                "title": "Kimi K2.5 官方发布公告",
+                "title": "اطلاعیه رسمی انتشار Kimi K2.5",
                 "url": "https://www.kimi.com/blog/kimi-k2-5.html"
             }
         ],
@@ -332,31 +332,31 @@
     },
     {
         "modelName": "Kimi K2.6",
-        "company": "月之暗面",
-        "country": "中国",
-        "openSourceStatus": "开源",
+        "company": "Moonshot AI",
+        "country": "چین",
+        "openSourceStatus": "متن‌باز",
         "releaseDate": "2026-04-20",
-        "description": "Kimi K2.6 是月之暗面最新多模态 Agent 模型，官方称其为 Kimi 当前最智能模型，支持文本、图片、视频输入，兼具思考/非思考模式与工具调用；提供 256K 上下文，强化长程代码编写、指令遵循、自我纠错和复杂软件工程任务，适合 Agentic Coding、视觉理解与长链路自动化执行。",
+        "description": "Kimi K2.6 جدیدترین مدل Agent چندوجهی Moonshot AI است که به گفته رسمی هوشمندترین مدل فعلی Kimi است؛ از ورودی متن، تصویر و ویدئو پشتیبانی می‌کند و حالت‌های تفکری/غیرتفکری و فراخوانی ابزار را با هم دارد؛ context با طول 256K ارائه می‌دهد و کدنویسی بلندمدت، پیروی از دستور، خوداصلاحی و وظایف پیچیده مهندسی نرم‌افزار را تقویت کرده؛ مناسب برای Agentic Coding، فهم بصری و اجرای خودکار زنجیره‌ای طولانی.",
         "modelTags": [
-            "文本生成",
-            "深度思考",
-            "视觉理解",
-            "代码增强",
-            "工具调用"
+            "تولید متن",
+            "تفکر عمیق",
+            "درک تصویر",
+            "تقویت کد",
+            "فراخوانی ابزار"
         ],
         "contextWindow": 256,
         "maxGenerationTokenLength": 32,
         "relatedLinks": [
             {
-                "title": "Kimi K2.6 官方快速开始",
+                "title": "شروع سریع رسمی Kimi K2.6",
                 "url": "https://platform.kimi.ai/docs/guide/kimi-k2-6-quickstart"
             },
             {
-                "title": "Kimi API 模型列表（含 K2.6 与 256K）",
+                "title": "فهرست مدل‌های Kimi API (شامل K2.6 و 256K)",
                 "url": "https://platform.kimi.ai/docs/models"
             },
             {
-                "title": "Kimi 开放平台首页：Latest Models",
+                "title": "صفحه اصلی پلتفرم باز Kimi: Latest Models",
                 "url": "https://platform.kimi.ai/"
             }
         ],

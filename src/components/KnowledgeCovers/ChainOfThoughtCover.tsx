@@ -1,15 +1,15 @@
 /**
- * Chain of Thought 封面
+ * جلد Chain of Thought
  *
- * 隐喻：思维链 = 一串相连的推理步骤（题 → 1 → 2 → 答），一块接一块推到答案；
- *       上方淡淡画一个「直接一跳到答案」的弧线做对比（带 ✕），衬出「拆步骤推理」更稳。
+ * استعاره: زنجیره فکر = رشته‌ای از گام‌های استدلالی پیوسته (سؤال ← ۱ ← ۲ ← پاسخ)، گام‌به‌گام تا پاسخ پیش می‌رود؛
+ *       در بالا به‌طور کم‌رنگ یک کمان «پرش مستقیم به پاسخ» برای مقایسه کشیده شده (با ✕) تا نشان دهد «استدلال گام‌به‌گام» مطمئن‌تر است.
  *
- * 视觉构图（viewBox 320×200）：
- *   - 上行：题点 → 大跨度虚线弧（一跳）→ 答块（✕），整体压暗
- *   - 主行：4 个 pop 紫圆角块用链接箭头串起来，末块 butter 底 + ✓
+ * ترکیب‌بندی بصری (viewBox 320×200):
+ *   - ردیف بالا: نقطه سؤال ← کمان نقطه‌چین با دهانه بزرگ (یک پرش) ← بلوک پاسخ (✕)، کل آن تیره‌تر
+ *   - ردیف اصلی: ۴ بلوک گوشه‌گرد بنفش pop با فلش‌های اتصال به هم وصل شده‌اند، بلوک آخر با پس‌زمینه butter + ✓
  *
- * hover 行为：主链各节点错峰轻轻上浮 + 末块的 ✓ 弹一下；上方「一跳」弧线整体下沉变淡。
- * 配色只用 token；描边统一 #241C15。
+ * رفتار hover: گره‌های زنجیره اصلی با فاصله زمانی آرام بالا می‌روند + ✓ بلوک آخر یک پرش می‌کند؛ کمان «یک پرش» بالا پایین می‌رود و کم‌رنگ می‌شود.
+ * رنگ‌ها فقط از token استفاده می‌کنند؛ حاشیه‌ها یکسان #241C15.
  */
 import React from "react";
 import CoverShell from "./CoverShell";
@@ -17,11 +17,11 @@ import CoverShell from "./CoverShell";
 const ChainOfThoughtCover: React.FC = () => {
   return (
     <CoverShell bgClassName="bg-cream" dotOpacity={0.07}>
-      {/* ── 上行：直接一跳（对比，压暗）── */}
+      {/* ── ردیف بالا: پرش مستقیم (مقایسه، تیره‌شده) ── */}
       <g opacity="0.4" className="transition-transform duration-500 ease-spring group-hover:translate-y-1">
-        {/* 题点 */}
+        {/* نقطه سؤال */}
         <circle cx="46" cy="52" r="9" fill="#1B4B5A" stroke="#241C15" strokeWidth="2" />
-        {/* 一跳弧线 */}
+        {/* کمان یک پرش */}
         <path
           d="M 58 50 Q 165 6 262 48"
           fill="none"
@@ -31,7 +31,7 @@ const ChainOfThoughtCover: React.FC = () => {
           strokeLinecap="round"
         />
         <path d="M 254 42 L 264 49 L 253 53" fill="none" stroke="#241C15" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-        {/* 答块 + ✕ */}
+        {/* بلوک پاسخ + ✕ */}
         <g transform="translate(284,52)">
           <rect x="-16" y="-13" width="32" height="26" rx="7" fill="#FBEFE3" stroke="#241C15" strokeWidth="2" />
           <path d="M -5 -5 L 5 5 M 5 -5 L -5 5" stroke="#FF4D74" strokeWidth="2.6" strokeLinecap="round" />
@@ -40,17 +40,17 @@ const ChainOfThoughtCover: React.FC = () => {
           x="150"
           y="22"
           textAnchor="middle"
-          fontFamily="Plus Jakarta Sans, Noto Sans SC, sans-serif"
+          fontFamily="Plus Jakarta Sans, Vazirmatn, sans-serif"
           fontSize="10"
           fontWeight="700"
           fill="#241C15"
         >
-          直接答
+          پاسخ مستقیم
         </text>
       </g>
 
-      {/* ── 主行：推理链 ── */}
-      {/* 链接箭头（先画，压在节点下） */}
+      {/* ── ردیف اصلی: زنجیره استدلال ── */}
+      {/* فلش اتصال (اول رسم می‌شود، زیر گره‌ها) */}
       {[
         [70, 130],
         [148, 208],
@@ -69,22 +69,22 @@ const ChainOfThoughtCover: React.FC = () => {
         </g>
       ))}
 
-      <ChainNode cx={44} label="题" tone="q" delay={0} />
+      <ChainNode cx={44} label="سؤال" tone="q" delay={0} />
       <ChainNode cx={122} label="1" tone="step" delay={90} />
       <ChainNode cx={200} label="2" tone="step" delay={180} />
-      <ChainNode cx={278} label="答" tone="answer" delay={270} check />
+      <ChainNode cx={278} label="پاسخ" tone="answer" delay={270} check />
 
-      {/* 主行标签 */}
+      {/* برچسب ردیف اصلی */}
       <text
         x="160"
         y="178"
         textAnchor="middle"
-        fontFamily="Plus Jakarta Sans, Noto Sans SC, sans-serif"
+        fontFamily="Plus Jakarta Sans, Vazirmatn, sans-serif"
         fontSize="11"
         fontWeight="800"
         fill="#241C15"
       >
-        先想再答 · 一步步推
+        اول فکر کن بعد جواب بده · گام‌به‌گام
       </text>
     </CoverShell>
   );
@@ -105,15 +105,15 @@ const ChainNode: React.FC<{
         className="transition-transform duration-500 ease-spring group-hover:-translate-y-1.5"
         style={{ transitionDelay: `${delay}ms`, transformBox: "fill-box", transformOrigin: "center" }}
       >
-        {/* 阴影 */}
+        {/* سایه */}
         <rect x="-22" y="-19" width="44" height="38" rx="9" fill="#241C15" transform="translate(2.5,2.5)" opacity="0.9" />
-        {/* 主体 */}
+        {/* بدنه اصلی */}
         <rect x="-22" y="-19" width="44" height="38" rx="9" fill={fill} stroke="#241C15" strokeWidth="2.5" />
         <text
           x="0"
           y={check ? -2 : 5}
           textAnchor="middle"
-          fontFamily="Plus Jakarta Sans, Noto Sans SC, sans-serif"
+          fontFamily="Plus Jakarta Sans, Vazirmatn, sans-serif"
           fontSize="15"
           fontWeight="800"
           fill={fg}

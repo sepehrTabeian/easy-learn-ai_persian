@@ -1,26 +1,26 @@
 /**
- * Agent Loop 封面
+ * جلد Agent Loop
  *
- * 隐喻：五阶段循环本身 —— Perceive · Reason · Plan · Act · Observe 沿环排列，
- *      箭头串成闭环。视觉重点在「Loop」，跟 AgentCover（强调 Agent 小角色 + 工具）拉开区分。
+ * استعاره: خودِ چرخه پنج‌مرحله‌ای —— Perceive · Reason · Plan · Act · Observe در امتداد حلقه چیده شده‌اند،
+ *      و فلش‌ها یک حلقه بسته می‌سازند. تمرکز بصری روی «Loop» است تا از AgentCover (که بر شخصیت Agent + ابزار تأکید دارد) متمایز شود.
  *
- * 视觉构图（viewBox 320×200）：
- *   - 中央：cream 圆 + Geist Mono "LOOP" 大字
- *   - 围绕中央：5 个不同色阶段节点（butter/coral/teal/pop/ink）
- *   - 节点之间用箭头串成闭环（顺时针）
- *   - 装饰：左上 small sparkle、右下 small arrow
+ * ترکیب‌بندی بصری (viewBox 320×200):
+ *   - مرکز: دایره cream + Geist Mono "LOOP" حروف درشت
+ *   - دور مرکز: ۵ گره مرحله با رنگ‌های مختلف (butter/coral/teal/pop/ink)
+ *   - گره‌ها با فلش به یک حلقه بسته (ساعت‌گرد) وصل می‌شوند
+ *   - تزئین: small sparkle بالا-چپ، small arrow پایین-راست
  *
- * hover：整个环慢速顺时针旋转；中央 LOOP 字微缩放；当前 active 节点跳一下。
+ * hover: کل حلقه آرام ساعت‌گرد می‌چرخد؛ متن LOOP در مرکز کمی بزرگ و کوچک می‌شود؛ گره active فعلی یک پرش می‌کند.
  */
 import React from "react";
 import CoverShell from "./CoverShell";
 
 const STAGES = [
-  { label: "感知", color: "#F4D35E", textOnFill: "#241C15" },
-  { label: "推理", color: "#E07A5F", textOnFill: "#FBEFE3" },
-  { label: "规划", color: "#1B4B5A", textOnFill: "#FBEFE3" },
-  { label: "行动", color: "#FF4D74", textOnFill: "#FBEFE3" },
-  { label: "观察", color: "#241C15", textOnFill: "#FBEFE3" },
+  { label: "ادراک", color: "#F4D35E", textOnFill: "#241C15" },
+  { label: "استدلال", color: "#E07A5F", textOnFill: "#FBEFE3" },
+  { label: "برنامه‌ریزی", color: "#1B4B5A", textOnFill: "#FBEFE3" },
+  { label: "اقدام", color: "#FF4D74", textOnFill: "#FBEFE3" },
+  { label: "مشاهده", color: "#241C15", textOnFill: "#FBEFE3" },
 ];
 
 const CENTER_X = 160;
@@ -34,7 +34,7 @@ const AgentLoopCover: React.FC = () => {
 
   return (
     <CoverShell bgClassName="bg-cream" dotOpacity={0.08}>
-      {/* 装饰：左上小齿轮 sparkle */}
+      {/* تزئین: sparkle چرخ‌دنده کوچک بالا-چپ */}
       <g transform="translate(34,30)">
         <g className="origin-center transition-transform duration-700 group-hover:rotate-90">
           <path
@@ -46,7 +46,7 @@ const AgentLoopCover: React.FC = () => {
         </g>
       </g>
 
-      {/* 装饰：右下小箭头 + 数字 */}
+      {/* تزئین: فلش کوچک + عدد پایین-راست */}
       <g transform="translate(280,172)">
         <circle
           cx="0"
@@ -69,9 +69,9 @@ const AgentLoopCover: React.FC = () => {
         </text>
       </g>
 
-      {/* ─── 主体：静态环（不再整体旋转，避免重栅格化虚线椭圆造成卡顿）─── */}
+      {/* ─── بدنه اصلی: حلقه ایستا (دیگر کل آن نمی‌چرخد تا rasterize مجدد بیضی نقطه‌چین لگ ایجاد نکند) ─── */}
       <g transform={`translate(${CENTER_X},${CENTER_Y})`}>
-        {/* 椭圆轨道（虚线） */}
+        {/* مدار بیضی (نقطه‌چین) */}
         <ellipse
           cx="0"
           cy="0"
@@ -84,14 +84,14 @@ const AgentLoopCover: React.FC = () => {
           opacity="0.45"
         />
 
-        {/* 5 个阶段节点 */}
+        {/* ۵ گره مرحله */}
         {STAGES.map((stage, i) => {
-          const angle = -Math.PI / 2 + (i * 2 * Math.PI) / stageCount; // 从顶上开始
+          const angle = -Math.PI / 2 + (i * 2 * Math.PI) / stageCount; // از بالا شروع می‌شود
           const x = Math.cos(angle) * ORBIT_RX;
           const y = Math.sin(angle) * ORBIT_RY;
           const nextAngle =
             -Math.PI / 2 + ((i + 1) * 2 * Math.PI) / stageCount;
-          // 节点之间的连接箭头 —— 在两节点中间画一个小三角，方向顺时针
+          // فلش‌های اتصال بین گره‌ها —— مثلث کوچکی در وسط دو گره، جهت ساعت‌گرد
           const midAngle = (angle + nextAngle) / 2;
           const mx = Math.cos(midAngle) * ORBIT_RX;
           const my = Math.sin(midAngle) * ORBIT_RY;
@@ -99,7 +99,7 @@ const AgentLoopCover: React.FC = () => {
 
           return (
             <g key={stage.label}>
-              {/* 顺时针箭头标 */}
+              {/* علامت فلش ساعت‌گرد */}
               <g transform={`translate(${mx},${my}) rotate(${tangentDeg})`}>
                 <path
                   d="M -3.5 -3 L 4 0 L -3.5 3 Z"
@@ -108,10 +108,10 @@ const AgentLoopCover: React.FC = () => {
                 />
               </g>
 
-              {/* 阶段节点圆 —— 静态（不再 hover 缩放，避免 5 个含文字子树同时
-                  弹性缩放反复重栅格化文字造成卡顿） */}
+              {/* دایره گره مرحله —— ایستا (دیگر در hover بزرگ نمی‌شود تا ۵ زیردرخت متنی هم‌زمان
+                  با بزرگ‌نمایی کشسان متن را مدام rasterize نکنند و لگ ایجاد نشود) */}
               <g transform={`translate(${x},${y})`}>
-                {/* 阴影 */}
+                {/* سایه */}
                 <circle
                   cx="2"
                   cy="2"
@@ -119,7 +119,7 @@ const AgentLoopCover: React.FC = () => {
                   fill="#241C15"
                   opacity="0.85"
                 />
-                {/* 实体 */}
+                {/* بدنه */}
                 <circle
                   cx="0"
                   cy="0"
@@ -128,19 +128,19 @@ const AgentLoopCover: React.FC = () => {
                   stroke="#241C15"
                   strokeWidth="2"
                 />
-                {/* 阶段中文标 */}
+                {/* برچسب فارسی مرحله */}
                 <text
                   x="0"
                   y="3"
                   textAnchor="middle"
-                  fontFamily='"Plus Jakarta Sans", "Noto Sans SC", sans-serif'
+                  fontFamily='"Plus Jakarta Sans", "Vazirmatn", sans-serif'
                   fontSize="9.5"
                   fontWeight="800"
                   fill={stage.textOnFill}
                 >
                   {stage.label}
                 </text>
-                {/* 编号小角标 */}
+                {/* نشانه کوچک شماره */}
                 <g transform={`translate(${NODE_R - 3},${-NODE_R + 4})`}>
                   <circle
                     cx="0"
@@ -168,13 +168,13 @@ const AgentLoopCover: React.FC = () => {
         })}
       </g>
 
-      {/* ─── 中央 LOOP 文字 ─── */}
+      {/* ─── متن LOOP در مرکز ─── */}
       <g transform={`translate(${CENTER_X},${CENTER_Y})`}>
         <g
           className="origin-center transition-transform duration-400 ease-spring group-hover:scale-105"
           style={{ transformBox: "fill-box" }}
         >
-          {/* 底圆阴影 */}
+          {/* سایه دایره زیرین */}
           <circle
             cx="3"
             cy="3"
@@ -182,7 +182,7 @@ const AgentLoopCover: React.FC = () => {
             fill="#241C15"
             opacity="0.85"
           />
-          {/* 主圆 */}
+          {/* دایره اصلی */}
           <circle
             cx="0"
             cy="0"
@@ -191,7 +191,7 @@ const AgentLoopCover: React.FC = () => {
             stroke="#241C15"
             strokeWidth="2.5"
           />
-          {/* LOOP 文字 */}
+          {/* متن LOOP */}
           <text
             x="0"
             y="-2"
@@ -204,7 +204,7 @@ const AgentLoopCover: React.FC = () => {
           >
             LOOP
           </text>
-          {/* 下方小说明 */}
+          {/* توضیح کوچک پایینی */}
           <text
             x="0"
             y="11"
@@ -218,7 +218,7 @@ const AgentLoopCover: React.FC = () => {
             5 PHASES
           </text>
 
-          {/* 中心点的循环弧（小圆下方的循环 hint） */}
+          {/* کمان چرخه در نقطه مرکزی (اشاره چرخه زیر دایره کوچک) */}
           <path
             d="M -12 16 Q 0 22 12 16"
             fill="none"

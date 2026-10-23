@@ -1,13 +1,13 @@
 /**
- * AI 模型 API 请求工具模块
- * 负责加载和处理模型数据
+ * ماژول ابزار درخواست API مدل AI
+ * مسئول بارگذاری و پردازش داده مدل
  */
 
 import { AIModel } from "../types/model";
 
 /**
- * 自动加载 src/data/models/ 目录下所有提供商的 JSON 文件并合并。
- * 新增提供商只需在该目录添加一个 <provider>.json 文件，无需改动此处代码。
+ * همه فایل‌های JSON تأمین‌کنندگان در پوشه src/data/models/ را خودکار بارگذاری و ادغام می‌کند.
+ * برای افزودن تأمین‌کننده جدید فقط یک <provider>فایل .json در این پوشه اضافه کنید، نیازی به تغییر این کد نیست.
  */
 function loadAllModels(): AIModel[] {
   const context = import.meta.webpackContext("../data/models", {
@@ -26,14 +26,14 @@ function loadAllModels(): AIModel[] {
 
 export const modelApiUtils = {
   /**
-   * 获取模型列表
+   * دریافت فهرست مدل‌ها
    */
   async fetchModelList(): Promise<AIModel[]> {
     try {
       return loadAllModels();
     } catch (error) {
       console.error("Error fetching model list:", error);
-      throw new Error("获取模型列表失败，请稍后重试");
+      throw new Error("دریافت فهرست مدل‌ها ناموفق بود، لطفاً بعداً دوباره امتحان کنید");
     }
   },
 };

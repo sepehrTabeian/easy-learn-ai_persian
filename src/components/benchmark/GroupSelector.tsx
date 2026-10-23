@@ -1,6 +1,6 @@
 /**
- * 基准测试分组选择器 · Mailchimp-Freddie 风
- * 默认按年份（新→旧）分组，可切换不分组
+ * انتخابگر گروه‌بندی بنچمارک · سبک Mailchimp-Freddie
+ * به‌طور پیش‌فرض بر اساس سال (جدید ← قدیم) گروه‌بندی می‌شود، قابل تغییر به بدون گروه‌بندی
  */
 
 import React from "react";
@@ -14,9 +14,9 @@ interface GroupSelectorProps {
 }
 
 const groupOptions: { value: BenchmarkGroupBy; label: string }[] = [
-  { value: "year", label: "按年份分组" },
-  { value: "type", label: "按类型分组" },
-  { value: "none", label: "不分组" },
+  { value: "year", label: "گروه‌بندی بر اساس سال" },
+  { value: "type", label: "گروه‌بندی بر اساس نوع" },
+  { value: "none", label: "بدون گروه‌بندی" },
 ];
 
 export const GroupSelector: React.FC<GroupSelectorProps> = ({
@@ -25,12 +25,12 @@ export const GroupSelector: React.FC<GroupSelectorProps> = ({
 }) => {
   return (
     <div className="relative">
-      <div className="flex items-center gap-2 pl-4 pr-3 py-2.5 bg-white border-2 border-ink rounded-full shadow-stamp transition-all duration-250 ease-spring hover:-translate-x-[2px] hover:-translate-y-[2px] hover:[box-shadow:6px_6px_0_0_#241C15]">
+      <div className="flex items-center gap-2 ps-4 pe-3 py-2.5 bg-white border-2 border-ink rounded-full shadow-stamp transition-all duration-250 ease-spring hover:-translate-x-[2px] hover:-translate-y-[2px] hover:[box-shadow:6px_6px_0_0_#241C15]">
         <LayoutGrid className="w-4 h-4 text-ink/65" strokeWidth={2.5} />
         <select
           value={value}
           onChange={(e) => onChange(e.target.value as BenchmarkGroupBy)}
-          className="appearance-none bg-transparent font-sans text-[13px] font-semibold text-ink focus:outline-none cursor-pointer pr-2"
+          className="appearance-none bg-transparent font-sans text-[13px] font-semibold text-ink focus:outline-none cursor-pointer pe-2"
         >
           {groupOptions.map((option) => (
             <option key={option.value} value={option.value}>

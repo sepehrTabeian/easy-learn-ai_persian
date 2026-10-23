@@ -9,7 +9,7 @@ export default defineConfig({
     },
   },
   html: {
-    title: "Easy AI - code秘密花园",
+    title: "Easy AI - باغ مخفی کد",
     favicon: "./public/imgs/icon.ico",
     tags: [
       {
@@ -30,7 +30,7 @@ export default defineConfig({
         tag: "link",
         attrs: {
           rel: "stylesheet",
-          href: "https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400..800&family=Noto+Sans+SC:wght@400..900&family=Newsreader:ital,opsz,wght@1,6..72,500..700&family=Geist+Mono:wght@400..500&display=swap",
+          href: "https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400..800&family=Vazirmatn:wght@400..900&family=Newsreader:ital,opsz,wght@1,6..72,500..700&family=Geist+Mono:wght@400..500&display=swap",
         },
         head: true,
       },

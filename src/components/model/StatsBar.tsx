@@ -1,10 +1,10 @@
 /**
- * 模型库统计栏 · Mailchimp-Freddie 风（v2）
+ * نوار آمار کتابخانه مدل · سبک Mailchimp-Freddie (v2)
  *
- * v2 改造：接管 Hero 让出的"主数据展示"职责
- *   - 显示多维度数字：N 模型 / M 公司 / X 标签
- *   - 筛选生效时插入 coral 强调的"筛选结果"项
- *   - cream 底 stamp 卡 + 数字 display 大字 + 标签 mono 小字
+ * بازسازی v2: مسئولیت"نمایش داده‌های اصلی"را که Hero واگذار کرده بر عهده می‌گیرد
+ *   - نمایش اعداد چندبعدی: N مدل / M شرکت / X برچسب
+ *   - هنگام اعمال فیلتر، با تأکید coral درج می‌شود"نتیجه فیلتر"مورد
+ *   - کارت stamp با پس‌زمینه cream + عدد درشت display + برچسب کوچک mono
  */
 
 import React from "react";
@@ -16,13 +16,13 @@ interface StatItem {
 }
 
 interface StatsBarProps {
-  /** 总数（兼容旧调用） */
+  /** تعداد کل (سازگار با فراخوانی‌های قدیمی) */
   totalCount: number;
-  /** 筛选后数量 */
+  /** تعداد پس از فیلتر */
   filteredCount: number;
-  /** 是否激活筛选 */
+  /** آیا فیلتر فعال است */
   hasActiveFilters: boolean;
-  /** 额外维度统计（如 公司数 / 标签数），可选 */
+  /** آمار ابعاد اضافی (مثل تعداد شرکت / تعداد برچسب)، اختیاری */
   extras?: StatItem[];
 }
 
@@ -35,15 +35,15 @@ export const StatsBar: React.FC<StatsBarProps> = ({
   return (
     <div className="bg-white border-2 border-ink rounded-2xl shadow-stamp px-6 lg:px-8 py-5">
       <div className="flex flex-wrap items-center gap-x-8 gap-y-4">
-        {/* 核心：总数 */}
+        {/* هسته: تعداد کل */}
         <StatItemView
           icon={<Database className="w-4 h-4" strokeWidth={2.5} />}
-          label="收录模型"
+          label="مدل ثبت‌شده"
           value={totalCount}
           primary
         />
 
-        {/* 额外维度 */}
+        {/* ابعاد اضافی */}
         {extras.map((item) => (
           <React.Fragment key={item.label}>
             <Divider />
@@ -51,26 +51,26 @@ export const StatsBar: React.FC<StatsBarProps> = ({
           </React.Fragment>
         ))}
 
-        {/* 筛选结果（仅激活时显示，coral 强调） */}
+        {/* نتیجه فیلتر (فقط در حالت فعال نمایش داده می‌شود، با تأکید coral) */}
         {hasActiveFilters && (
           <>
             <Divider />
             <StatItemView
               icon={<FilterIcon className="w-4 h-4" strokeWidth={2.5} />}
-              label="筛选结果"
+              label="نتیجه فیلتر"
               value={filteredCount}
               accent
             />
           </>
         )}
 
-        {/* 右侧：更新状态（推到最右） */}
-        <div className="ml-auto inline-flex items-baseline gap-1.5">
+        {/* راست: وضعیت به‌روزرسانی (به منتهی‌الیه راست رانده می‌شود) */}
+        <div className="ms-auto inline-flex items-baseline gap-1.5">
           <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-ink/55">
             Updated
           </span>
           <span className="font-display font-extrabold text-[14px] text-ink">
-            周更
+            به‌روزرسانی هفتگی
           </span>
         </div>
       </div>

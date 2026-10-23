@@ -2,22 +2,22 @@
     {
         "modelName": "Stable Diffusion 3",
         "company": "StabilityAI",
-        "country": "英国",
-        "openSourceStatus": "开源",
+        "country": "انگلیس",
+        "openSourceStatus": "متن‌باز",
         "releaseDate": "2024-02-22",
-        "description": "Stable Diffusion 3 是 Stability AI 推出的新一代文生图模型，采用多模态扩散 Transformer（MMDiT）与 Rectified Flow 训练，结合 CLIP 与 T5 文本编码器，显著提升提示遵循度、排版与文字渲染。支持多主体与多风格生成，适用于商业设计、品牌营销、插画与电商场景。",
+        "description": "Stable Diffusion 3 نسل جدید مدل تولید تصویر از متن Stability AI است که از Transformer انتشاری چندوجهی (MMDiT) و آموزش Rectified Flow استفاده می‌کند و با رمزگذارهای متنی CLIP و T5 پیروی از پرامپت، صفحه‌آرایی و رندر متن را به‌طور محسوسی بهبود داده. از تولید چندسوژه‌ای و چندسبکی پشتیبانی می‌کند و برای طراحی تجاری، بازاریابی برند، تصویرسازی و سناریوهای فروشگاهی مناسب است.",
         "modelTags": [
-            "图片生成",
-            "视觉理解"
+            "تولید تصویر",
+            "درک تصویر"
         ],
         "maxOutputResolution": "1024x1024",
         "relatedLinks": [
             {
-                "title": "Stable Diffusion 3 官方发布（Early Preview）",
+                "title": "انتشار رسمی Stable Diffusion 3 (Early Preview)",
                 "url": "https://stability.ai/news/stable-diffusion-3"
             },
             {
-                "title": "Stable Diffusion 3 研究摘要（Stability AI）",
+                "title": "خلاصه پژوهشی Stable Diffusion 3 (Stability AI)",
                 "url": "https://stability.ai/news/stable-diffusion-3-research-paper"
             },
             {
@@ -29,22 +29,22 @@
     {
         "modelName": "Stable Diffusion 3 Large",
         "company": "StabilityAI",
-        "country": "英国",
-        "openSourceStatus": "开源",
+        "country": "انگلیس",
+        "openSourceStatus": "متن‌باز",
         "releaseDate": "2024-02-22",
-        "description": "Stable Diffusion 3 Large 为 SD3 系列的 8B 参数高阶版本，基于 MMDiT 架构与 Rectified Flow，强化提示理解与拼写准确性，在 1MP 分辨率下提供更高的审美质量与多主体一致性；通过 API 提供生成与编辑能力，面向专业海报、产品图与广告创意。",
+        "description": "Stable Diffusion 3 Large نسخه پیشرفته 8B پارامتری سری SD3 است که بر پایه معماری MMDiT و Rectified Flow ساخته شده، فهم پرامپت و دقت املایی را تقویت کرده و در وضوح 1MP کیفیت زیبایی‌شناختی و یکنواختی چندسوژه‌ای بالاتری ارائه می‌دهد؛ توانایی تولید و ویرایش را از طریق API ارائه می‌دهد و برای پوستر حرفه‌ای، تصاویر محصول و خلاقیت تبلیغاتی طراحی شده است.",
         "modelTags": [
-            "图片生成",
-            "视觉理解"
+            "تولید تصویر",
+            "درک تصویر"
         ],
         "maxOutputResolution": "1024x1024",
         "relatedLinks": [
             {
-                "title": "Stable Diffusion 3 Medium FAQ（含 Large 说明）",
+                "title": "FAQ مدل Stable Diffusion 3 Medium (شامل توضیح Large)",
                 "url": "https://stability.ai/sd3-faq"
             },
             {
-                "title": "Stable Diffusion 3 官方发布（Early Preview）",
+                "title": "انتشار رسمی Stable Diffusion 3 (Early Preview)",
                 "url": "https://stability.ai/news/stable-diffusion-3"
             },
             {
@@ -56,22 +56,22 @@
     {
         "modelName": "Stable Diffusion 3.5 Large",
         "company": "StabilityAI",
-        "country": "英国",
-        "openSourceStatus": "开源",
+        "country": "انگلیس",
+        "openSourceStatus": "متن‌باز",
         "releaseDate": "2024-10-22",
-        "description": "Stable Diffusion 3.5 Large 为 8.1B 参数基座模型，采用多模态扩散 Transformer（MMDiT）与改进训练（含 QK Normalization），在 1MP 分辨率下具备更强的提示遵循、文本渲染与多主体一致性，适合专业设计、品牌视觉与电商素材等场景。",
+        "description": "Stable Diffusion 3.5 Large مدل پایه با 8.1B پارامتر است که از Transformer انتشاری چندوجهی (MMDiT) و آموزش بهبودیافته (شامل QK Normalization) استفاده می‌کند و در وضوح 1MP پیروی از پرامپت، رندر متن و یکنواختی چندسوژه‌ای قوی‌تری دارد؛ مناسب برای طراحی حرفه‌ای، هویت بصری برند و محتوای فروشگاهی.",
         "modelTags": [
-            "图片生成",
-            "视觉理解"
+            "تولید تصویر",
+            "درک تصویر"
         ],
         "maxOutputResolution": "1MP",
         "relatedLinks": [
             {
-                "title": "Stable Diffusion 3.5 官方发布（Stability AI）",
+                "title": "انتشار رسمی Stable Diffusion 3.5 (Stability AI)",
                 "url": "https://stability.ai/news/introducing-stable-diffusion-3-5"
             },
             {
-                "title": "Hugging Face：SD3.5 Large 模型卡",
+                "title": "Hugging Face: کارت مدل SD3.5 Large",
                 "url": "https://huggingface.co/stabilityai/stable-diffusion-3.5-large"
             },
             {
@@ -83,22 +83,22 @@
     {
         "modelName": "Stable Diffusion 3.5 Large Turbo",
         "company": "StabilityAI",
-        "country": "英国",
-        "openSourceStatus": "开源",
+        "country": "انگلیس",
+        "openSourceStatus": "متن‌باز",
         "releaseDate": "2024-10-22",
-        "description": "Stable Diffusion 3.5 Large Turbo 为 Large 的蒸馏版本，采用 Adversarial Diffusion Distillation（ADD），仅 4 步即可生成高质量图像，显著提升推理速度，同时保持较强的提示遵循与文字排版能力，适用于需要快速迭代的创作与产品流程。",
+        "description": "Stable Diffusion 3.5 Large Turbo نسخه تقطیرشده Large است که از Adversarial Diffusion Distillation (ADD) استفاده می‌کند و تنها در ۴ گام تصویر باکیفیت تولید می‌کند و سرعت استنتاج را به‌طور محسوسی بالا می‌برد و هم‌زمان پیروی قوی از پرامپت و صفحه‌آرایی متن را حفظ می‌کند؛ مناسب برای فرایندهای خلق و محصول که تکرار سریع لازم دارند.",
         "modelTags": [
-            "图片生成",
-            "视觉理解"
+            "تولید تصویر",
+            "درک تصویر"
         ],
         "maxOutputResolution": "1MP",
         "relatedLinks": [
             {
-                "title": "Stable Diffusion 3.5 官方发布（Stability AI）",
+                "title": "انتشار رسمی Stable Diffusion 3.5 (Stability AI)",
                 "url": "https://stability.ai/news/introducing-stable-diffusion-3-5"
             },
             {
-                "title": "Hugging Face：SD3.5 Large Turbo 模型卡",
+                "title": "Hugging Face: کارت مدل SD3.5 Large Turbo",
                 "url": "https://huggingface.co/stabilityai/stable-diffusion-3.5-large-turbo"
             },
             {
@@ -110,22 +110,22 @@
     {
         "modelName": "Stable Diffusion 3.5 Medium",
         "company": "StabilityAI",
-        "country": "英国",
-        "openSourceStatus": "开源",
+        "country": "انگلیس",
+        "openSourceStatus": "متن‌باز",
         "releaseDate": "2024-10-29",
-        "description": "Stable Diffusion 3.5 Medium 采用 2.5B 参数与 MMDiT-X 改进架构，针对消费级硬件优化，支持 0.25–2MP 多分辨率生成；强调可定制性与易用性，适合本地部署、工作流集成与轻量化微调，兼顾提示遵循与图像质量。",
+        "description": "Stable Diffusion 3.5 Medium از 2.5B پارامتر و معماری بهبودیافته MMDiT-X استفاده می‌کند، برای سخت‌افزار مصرفی بهینه شده و از تولید چندوضوحی 0.25 تا 2MP پشتیبانی می‌کند؛ بر سفارشی‌سازی و سهولت استفاده تأکید دارد و برای استقرار محلی، یکپارچه‌سازی جریان کار و تنظیم دقیق سبک مناسب است و پیروی از پرامپت و کیفیت تصویر را با هم دارد.",
         "modelTags": [
-            "图片生成",
-            "视觉理解"
+            "تولید تصویر",
+            "درک تصویر"
         ],
         "maxOutputResolution": "2MP",
         "relatedLinks": [
             {
-                "title": "Stable Diffusion 3.5 官方发布（Stability AI）",
+                "title": "انتشار رسمی Stable Diffusion 3.5 (Stability AI)",
                 "url": "https://stability.ai/news/introducing-stable-diffusion-3-5"
             },
             {
-                "title": "Hugging Face：SD3.5 Medium 模型卡",
+                "title": "Hugging Face: کارت مدل SD3.5 Medium",
                 "url": "https://huggingface.co/stabilityai/stable-diffusion-3.5-medium"
             },
             {

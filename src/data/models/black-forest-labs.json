@@ -2,22 +2,22 @@
     {
         "modelName": "FLUX.2 [pro]",
         "company": "Black Forest Labs",
-        "country": "德国",
-        "openSourceStatus": "开源",
+        "country": "آلمان",
+        "openSourceStatus": "متن‌باز",
         "releaseDate": "2025-11-25",
-        "description": "FLUX.2 [pro] 是 Black Forest Labs 面向生产的图像生成与编辑模型，采用 Rectified Flow Transformer 结合 Mistral‑3 24B VLM，支持文本与多参考（最多 10 图）、JSON 结构化控制与强化排版，最高 4MP 输出，适用于品牌素材、产品可视化与电商设计。",
+        "description": "FLUX.2 [pro] مدل تولید و ویرایش تصویر Black Forest Labs برای محیط تولید است که از Rectified Flow Transformer همراه با Mistral‑3 24B VLM استفاده می‌کند، از متن و چند مرجع (حداکثر ۱۰ تصویر)، کنترل ساختاریافته JSON و صفحه‌آرایی تقویت‌شده پشتیبانی می‌کند و حداکثر خروجی 4MP دارد؛ مناسب برای محتوای برند، تجسم محصول و طراحی فروشگاهی.",
         "modelTags": [
-            "图片生成",
-            "视觉理解"
+            "تولید تصویر",
+            "درک تصویر"
         ],
         "maxOutputResolution": "2048x2048",
         "relatedLinks": [
             {
-                "title": "FLUX.2 官方模型页",
+                "title": "صفحه رسمی مدل FLUX.2",
                 "url": "https://bfl.ai/models/flux-2"
             },
             {
-                "title": "FLUX.2 官方博客发布",
+                "title": "انتشار در وبلاگ رسمی FLUX.2",
                 "url": "https://bfl.ai/blog/flux-2"
             },
             {
@@ -29,22 +29,22 @@
     {
         "modelName": "FLUX.2 [flex]",
         "company": "Black Forest Labs",
-        "country": "德国",
-        "openSourceStatus": "开源",
+        "country": "آلمان",
+        "openSourceStatus": "متن‌باز",
         "releaseDate": "2025-11-25",
-        "description": "FLUX.2 [flex] 提供可调步数与指导尺度，基于 Rectified Flow 架构并强化文字可读性与细节控制；支持多参考一致性与 JSON 结构化提示，最高 4MP 输出，适合界面排版、海报设计、电商素材与多主体合成的精细工作流。",
+        "description": "FLUX.2 [flex] تعداد گام و مقیاس راهنما قابل تنظیم ارائه می‌دهد، بر پایه معماری Rectified Flow است و خوانایی متن و کنترل جزئیات را تقویت کرده؛ از یکنواختی چندمرجعی و پرامپت ساختاریافته JSON پشتیبانی می‌کند و حداکثر خروجی 4MP دارد؛ مناسب برای جریان‌های کاری دقیق صفحه‌آرایی رابط کاربری، طراحی پوستر، محتوای فروشگاهی و ترکیب چندسوژه‌ای.",
         "modelTags": [
-            "图片生成",
-            "视觉理解"
+            "تولید تصویر",
+            "درک تصویر"
         ],
         "maxOutputResolution": "2048x2048",
         "relatedLinks": [
             {
-                "title": "FLUX.2 官方模型页",
+                "title": "صفحه رسمی مدل FLUX.2",
                 "url": "https://bfl.ai/models/flux-2"
             },
             {
-                "title": "FLUX.2 官方博客发布",
+                "title": "انتشار در وبلاگ رسمی FLUX.2",
                 "url": "https://bfl.ai/blog/flux-2"
             },
             {

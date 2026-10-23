@@ -1,6 +1,6 @@
 /**
- * AI 知视详情页面组件
- * 使用 iframe 嵌入具体的学习内容页面
+ * کامپوننت صفحه جزئیات دانش بصری AI
+ * صفحه محتوای آموزشی مشخص را با iframe جاسازی می‌کند
  */
 
 import React, { useState } from "react";
@@ -20,7 +20,7 @@ const AITimeline: React.FC = () => {
               <div className="text-center">
                 <div className="inline-block animate-spin rounded-full h-12 w-12 border-4 border-blue-500 border-t-transparent mb-4"></div>
                 <div className="text-lg font-medium text-gray-700">
-                  正在加载内容...
+                  در حال بارگذاری محتوا...
                 </div>
                 <p className="text-sm text-gray-500 mt-2">AI Timeline</p>
               </div>

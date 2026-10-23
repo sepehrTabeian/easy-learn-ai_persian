@@ -54,8 +54,8 @@ const Pagination: React.FC<PaginationProps> = ({
   };
 
   return (
-    <div className="flex items-center justify-center space-x-2 mt-8">
-      {/* 上一页按钮 */}
+    <div className="flex items-center justify-center space-x-2 rtl:space-x-reverse mt-8">
+      {/* دکمه صفحه قبل */}
       <button
         onClick={() => onPageChange(currentPage - 1)}
         disabled={!hasPrevPage}
@@ -66,7 +66,7 @@ const Pagination: React.FC<PaginationProps> = ({
         <ChevronLeft className="w-5 h-5" />
       </button>
 
-      {/* 页码 */}
+      {/* شماره صفحه */}
       {getPageNumbers().map((page, index) => {
         if (page === -1 || page === -2) {
           return (
@@ -91,7 +91,7 @@ const Pagination: React.FC<PaginationProps> = ({
         );
       })}
 
-      {/* 下一页按钮 */}
+      {/* دکمه صفحه بعد */}
       <button
         onClick={() => onPageChange(currentPage + 1)}
         disabled={!hasNextPage}

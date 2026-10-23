@@ -14,7 +14,7 @@ const AINavigation: React.FC = () => {
   const navigate = useNavigate();
   const location = useLocation();
   
-  // 从URL参数中获取初始状态
+  // دریافت وضعیت اولیه از پارامترهای URL
   const getInitialStateFromUrl = () => {
     const params = new URLSearchParams(location.search);
     return {
@@ -28,7 +28,7 @@ const AINavigation: React.FC = () => {
   const { searchQuery, setSearchQuery, searchResults, hasResults } =
     useNavigationSearch(data, initialState.query);
 
-  // 更新URL参数
+  // به‌روزرسانی پارامترهای URL
   useEffect(() => {
     const params = new URLSearchParams();
     if (selectedCategory) {
@@ -41,11 +41,11 @@ const AINavigation: React.FC = () => {
     const newSearch = params.toString();
     const newUrl = newSearch ? `${location.pathname}?${newSearch}` : location.pathname;
     
-    // 使用replace而不是push，避免创建过多历史记录
+    // استفاده از replace به‌جای push، تا رکوردهای تاریخچه زیادی ساخته نشود
     navigate(newUrl, { replace: true });
   }, [selectedCategory, searchQuery, navigate, location.pathname]);
 
-  // 获取当前显示的工具列表
+  // دریافت فهرست ابزارهای در حال نمایش
   const getCurrentTools = () => {
     if (hasResults) {
       return searchResults;
@@ -55,21 +55,21 @@ const AINavigation: React.FC = () => {
       return data[selectedCategory] || [];
     }
 
-    // 返回所有工具
+    // بازگرداندن همه ابزارها
     return Object.values(data).reduce((acc, tools) => acc.concat(tools), []);
   };
 
-  // 获取当前显示的标题
+  // دریافت عنوان در حال نمایش
   const getCurrentTitle = () => {
     if (hasResults) {
-      return `搜索结果 "${searchQuery}"`;
+      return `نتایج جستجو "${searchQuery}"`;
     }
 
     if (selectedCategory) {
       return selectedCategory;
     }
 
-    return "全部 AI 工具";
+    return "همه ابزارهای AI";
   };
 
   if (loading) {
@@ -77,7 +77,7 @@ const AINavigation: React.FC = () => {
       <div className="min-h-screen bg-gradient-to-br from-orange-50 to-red-50 flex items-center justify-center">
         <div className="text-center">
           <Loader2 className="w-12 h-12 text-orange-500 animate-spin mx-auto mb-4" />
-          <p className="text-gray-600 font-medium">正在加载 AI 工具...</p>
+          <p className="text-gray-600 font-medium">در حال بارگذاری ابزارهای AI...</p>
         </div>
       </div>
     );
@@ -90,14 +90,14 @@ const AINavigation: React.FC = () => {
           <div className="w-20 h-20 bg-red-100 rounded-3xl flex items-center justify-center mx-auto mb-6">
             <AlertCircle className="w-10 h-10 text-red-500" />
           </div>
-          <h2 className="text-2xl font-bold text-gray-800 mb-4">加载失败</h2>
+          <h2 className="text-2xl font-bold text-gray-800 mb-4">بارگذاری ناموفق بود</h2>
           <p className="text-gray-600 mb-6">{error}</p>
           <button
             onClick={() => window.location.reload()}
             className="px-6 py-3 bg-gradient-to-r from-orange-500 to-red-500 text-white 
                      rounded-xl hover:shadow-lg transition-all duration-200 font-medium"
           >
-            重新加载
+            بارگذاری مجدد
           </button>
         </div>
       </div>
@@ -111,7 +111,7 @@ const AINavigation: React.FC = () => {
     <div className="min-h-screen bg-gradient-to-br from-orange-50 to-red-50">
       <div className="container mx-auto px-4 py-8">
         <div className="flex flex-col lg:flex-row gap-8">
-          {/* 左侧分类导航 */}
+          {/* ناوبری دسته‌بندی چپ */}
           <div className="lg:w-80 flex-shrink-0">
             <CategoryNav
               data={data}
@@ -120,26 +120,26 @@ const AINavigation: React.FC = () => {
             />
           </div>
 
-          {/* 右侧内容区域 */}
+          {/* ناحیه محتوای راست */}
           <div className="flex-1 space-y-6">
-            {/* 搜索栏 */}
+            {/* نوار جستجو */}
             <SearchBar
               value={searchQuery}
               onChange={setSearchQuery}
-              placeholder="搜索 AI 工具名称或描述..."
+              placeholder="جستجوی نام یا توضیح ابزار AI..."
             />
 
-            {/* 工具列表 */}
+            {/* فهرست ابزارها */}
             <ToolList
               tools={currentTools}
               title={currentTitle}
               showCategory={hasResults}
               emptyMessage={
                 hasResults
-                  ? `没有找到包含 "${searchQuery}" 的工具`
+                  ? `ابزاری شامل "${searchQuery}" پیدا نشد`
                   : selectedCategory
-                  ? `${selectedCategory} 分类下暂无工具`
-                  : "暂无工具数据"
+                  ? `${selectedCategory} در این دسته‌بندی هنوز ابزاری نیست`
+                  : "هنوز داده ابزاری نیست"
               }
             />
           </div>

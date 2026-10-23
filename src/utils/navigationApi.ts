@@ -14,7 +14,7 @@ export const navigationApiUtils = {
       return data;
     } catch (error) {
       console.error("Failed to fetch navigation data:", error);
-      // 返回空数据作为降级处理
+      // بازگرداندن داده خالی به‌عنوان کاهش سطح
       return {};
     }
   },

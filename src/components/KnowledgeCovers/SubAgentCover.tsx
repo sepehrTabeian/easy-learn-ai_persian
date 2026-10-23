@@ -1,24 +1,24 @@
 /**
- * SubAgent 封面
+ * جلد SubAgent
  *
- * 隐喻：主 Agent 把会污染主上下文的子任务外包给一个子 Agent，
- *      子 Agent 在独立空间（虚线框）里干活，只把一行摘要交回主 Agent。
+ * استعاره: Agent اصلی زیرکارهایی را که context اصلی را آلوده می‌کنند به یک Agent فرعی برون‌سپاری می‌کند،
+ *      Agent فرعی در یک فضای مستقل (کادر نقطه‌چین) کار می‌کند و فقط یک خط خلاصه به Agent اصلی برمی‌گرداند.
  *
- * 视觉构图（viewBox 320×200）：
- *   - 左侧：主 Agent 大方块（coral） + 顶上标 MAIN
- *   - 中段：派出小箭头 + "DELEGATE" 标
- *   - 右侧：独立空间（虚线 rounded box），里面 SubAgent 小方块（butter）+ 一束噪声短条
- *   - 下方弧线箭头：从 SubAgent 回到主 Agent，箭头边上挂一张「摘要」小卡片
- *   - 装饰：左上 sparkle、右下小圆点
+ * ترکیب‌بندی بصری (viewBox 320×200):
+ *   - چپ: مربع بزرگ Agent اصلی (coral) + برچسب MAIN در بالا
+ *   - بخش وسط: فلش کوچک اعزام + "DELEGATE" برچسب
+ *   - راست: فضای مستقل (rounded box نقطه‌چین)، داخل آن مربع کوچک SubAgent (butter) + دسته‌ای از نوارهای کوتاه نویز
+ *   - فلش کمانی پایین: از SubAgent به Agent اصلی برمی‌گردد، کنار فلش یک کارت کوچک «خلاصه» آویزان است
+ *   - تزئین: sparkle بالا-چپ، نقطه کوچک پایین-راست
  *
  * hover：
- *   - SubAgent 小方块沿派出箭头方向再外滑一点
- *   - 摘要小卡片沿弧线方向回滑
- *   - 噪声短条幅度加大（被关在子空间里折腾）
- *   - sparkle 转角度
+ *   - مربع کوچک SubAgent در جهت فلش اعزام کمی بیشتر به بیرون می‌لغزد
+ *   - کارت کوچک خلاصه در جهت کمان برمی‌گردد
+ *   - دامنه نوارهای کوتاه نویز بیشتر می‌شود (در فضای فرعی محبوس شده و تقلا می‌کند)
+ *   - sparkle زاویه می‌چرخد
  *
- * 跟相邻 AgentCover (循环+工具触手) / AgentLoopCover (旋转环) /
- * AgentMemoryCover (三层档案柜抽屉) 都不同。
+ * با AgentCover مجاور (چرخه + شاخک‌های ابزار) / AgentLoopCover (حلقه چرخان) /
+ * AgentMemoryCover (کشوهای کمد بایگانی سه‌طبقه) متفاوت است.
  */
 import React from "react";
 import CoverShell from "./CoverShell";
@@ -26,7 +26,7 @@ import CoverShell from "./CoverShell";
 const SubAgentCover: React.FC = () => {
   return (
     <CoverShell bgClassName="bg-cream" dotOpacity={0.08}>
-      {/* 装饰：左上 sparkle */}
+      {/* تزئین: sparkle بالا-چپ */}
       <g transform="translate(34,28)">
         <g className="origin-center transition-transform duration-700 group-hover:rotate-[110deg]">
           <path
@@ -38,7 +38,7 @@ const SubAgentCover: React.FC = () => {
         </g>
       </g>
 
-      {/* 装饰：右下小圆点阵 */}
+      {/* تزئین: ماتریس نقطه کوچک پایین-راست */}
       <g transform="translate(282,168)">
         {Array.from({ length: 6 }).map((_, i) => {
           const col = i % 3;
@@ -56,7 +56,7 @@ const SubAgentCover: React.FC = () => {
         })}
       </g>
 
-      {/* 顶部小标 MAIN CONVERSATION */}
+      {/* برچسب کوچک بالا MAIN CONVERSATION */}
       <g transform="translate(82,30)">
         <rect x="-44" y="-9" width="88" height="18" rx="9" fill="#241C15" />
         <text
@@ -73,9 +73,9 @@ const SubAgentCover: React.FC = () => {
         </text>
       </g>
 
-      {/* ─── 左：主 Agent 大方块 ─── */}
+      {/* ─── چپ: مربع بزرگ Agent اصلی ─── */}
       <g transform="translate(82,108)">
-        {/* 阴影 */}
+        {/* سایه */}
         <rect
           x="-38"
           y="-36"
@@ -86,7 +86,7 @@ const SubAgentCover: React.FC = () => {
           opacity="0.85"
           transform="translate(3,3)"
         />
-        {/* 主体 */}
+        {/* بدنه اصلی */}
         <rect
           x="-38"
           y="-36"
@@ -97,12 +97,12 @@ const SubAgentCover: React.FC = () => {
           stroke="#241C15"
           strokeWidth="2.5"
         />
-        {/* 眼睛 */}
+        {/* چشم‌ها */}
         <circle cx="-12" cy="-12" r="3.6" fill="#FBEFE3" stroke="#241C15" strokeWidth="1.5" />
         <circle cx="-12" cy="-12" r="1.6" fill="#241C15" />
         <circle cx="12" cy="-12" r="3.6" fill="#FBEFE3" stroke="#241C15" strokeWidth="1.5" />
         <circle cx="12" cy="-12" r="1.6" fill="#241C15" />
-        {/* 嘴 */}
+        {/* دهان */}
         <path
           d="M -7 4 Q 0 9 7 4"
           fill="none"
@@ -110,7 +110,7 @@ const SubAgentCover: React.FC = () => {
           strokeWidth="2"
           strokeLinecap="round"
         />
-        {/* 底标 MAIN */}
+        {/* برچسب پایینی MAIN */}
         <text
           x="0"
           y="26"
@@ -125,7 +125,7 @@ const SubAgentCover: React.FC = () => {
         </text>
       </g>
 
-      {/* ─── 派出箭头（左 → 右） ─── */}
+      {/* ─── فلش اعزام (چپ ← راست) ─── */}
       <g>
         <line
           x1="126"
@@ -144,7 +144,7 @@ const SubAgentCover: React.FC = () => {
           strokeLinecap="round"
           strokeLinejoin="round"
         />
-        {/* "DELEGATE" 标 */}
+        {/* "DELEGATE" برچسب */}
         <g transform="translate(152,78)">
           <rect x="-22" y="-7" width="44" height="13" rx="6.5" fill="#FBEFE3" stroke="#241C15" strokeWidth="1.5" />
           <text
@@ -162,7 +162,7 @@ const SubAgentCover: React.FC = () => {
         </g>
       </g>
 
-      {/* ─── 右：独立空间虚线框 ─── */}
+      {/* ─── راست: کادر نقطه‌چین فضای مستقل ─── */}
       <g transform="translate(238,98)">
         <rect
           x="-48"
@@ -176,7 +176,7 @@ const SubAgentCover: React.FC = () => {
           strokeDasharray="5 4"
           opacity="0.55"
         />
-        {/* 标签：独立空间 */}
+        {/* برچسب: فضای مستقل */}
         <g transform="translate(-22,-46)">
           <rect x="-22" y="-7" width="44" height="13" rx="3" fill="#FBEFE3" stroke="#241C15" strokeWidth="1.4" />
           <text
@@ -193,9 +193,9 @@ const SubAgentCover: React.FC = () => {
           </text>
         </g>
 
-        {/* SubAgent 小方块（butter）—— hover 再外滑一点 */}
+        {/* مربع کوچک SubAgent (butter) —— در hover کمی بیشتر به بیرون می‌لغزد */}
         <g className="transition-transform duration-500 ease-spring group-hover:translate-x-[4px] group-hover:-translate-y-[2px]">
-          {/* 阴影 */}
+          {/* سایه */}
           <rect
             x="-26"
             y="-30"
@@ -216,12 +216,12 @@ const SubAgentCover: React.FC = () => {
             stroke="#241C15"
             strokeWidth="2.2"
           />
-          {/* 小眼睛 */}
+          {/* چشم‌های کوچک */}
           <circle cx="-9" cy="-11" r="2.8" fill="#FBEFE3" stroke="#241C15" strokeWidth="1.3" />
           <circle cx="-9" cy="-11" r="1.2" fill="#241C15" />
           <circle cx="9" cy="-11" r="2.8" fill="#FBEFE3" stroke="#241C15" strokeWidth="1.3" />
           <circle cx="9" cy="-11" r="1.2" fill="#241C15" />
-          {/* 小嘴 */}
+          {/* دهان کوچک */}
           <path
             d="M -5 1 Q 0 4 5 1"
             fill="none"
@@ -229,7 +229,7 @@ const SubAgentCover: React.FC = () => {
             strokeWidth="1.6"
             strokeLinecap="round"
           />
-          {/* SUB 标 */}
+          {/* برچسب SUB */}
           <text
             x="0"
             y="13"
@@ -244,7 +244,7 @@ const SubAgentCover: React.FC = () => {
           </text>
         </g>
 
-        {/* 子 Agent 下方的噪声短条 —— hover 时拉长（在独立空间里折腾） */}
+        {/* نوارهای کوتاه نویز زیر Agent فرعی —— در hover کشیده می‌شوند (در فضای مستقل تقلا می‌کند) */}
         <g transform="translate(0,28)">
           {[0, 1, 2, 3].map((i) => (
             <rect
@@ -264,7 +264,7 @@ const SubAgentCover: React.FC = () => {
         </g>
       </g>
 
-      {/* ─── 摘要回流：从子 Agent 弧线回主 Agent ─── */}
+      {/* ─── بازگشت خلاصه: کمان از Agent فرعی به Agent اصلی ─── */}
       <g>
         <path
           d="M 220 150 Q 160 188 100 156"
@@ -273,7 +273,7 @@ const SubAgentCover: React.FC = () => {
           strokeWidth="2.2"
           strokeLinecap="round"
         />
-        {/* 箭头头朝主 Agent */}
+        {/* سر فلش رو به Agent اصلی */}
         <path
           d="M 108 148 L 96 156 L 106 164"
           fill="none"
@@ -283,12 +283,12 @@ const SubAgentCover: React.FC = () => {
           strokeLinejoin="round"
         />
 
-        {/* 摘要小卡片 —— hover 时沿弧线方向回滑（向左） */}
+        {/* کارت کوچک خلاصه —— در hover در جهت کمان برمی‌گردد (به چپ) */}
         <g
           transform="translate(180,178)"
           className="transition-transform duration-500 ease-spring group-hover:-translate-x-[12px]"
         >
-          {/* 阴影 */}
+          {/* سایه */}
           <rect
             x="-26"
             y="-9"
@@ -299,7 +299,7 @@ const SubAgentCover: React.FC = () => {
             opacity="0.85"
             transform="translate(2,2)"
           />
-          {/* 主体 */}
+          {/* بدنه اصلی */}
           <rect
             x="-26"
             y="-9"

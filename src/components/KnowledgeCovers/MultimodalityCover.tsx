@@ -1,22 +1,22 @@
 /**
- * Multimodality 封面
+ * جلد Multimodality
  *
- * 隐喻：一张图被切成 patch 网格 → 流出一行 token 流 → 跟上面的字 / 下面的音波 一起喂进同一个模型框。
+ * استعاره: یک تصویر به شبکه patch بریده می‌شود ← یک ردیف جریان token بیرون می‌آید ← همراه با متن بالا / موج صدای پایین وارد یک قاب مدل می‌شوند.
  *
- * 视觉构图（viewBox 320×200）：
- *   - 左：迷你彩色"图"（蛋糕风 64×64） + 7×7 patch 网格（dashed → 实线 on hover）
- *   - 中：一根 dashed 箭头从图切出来 → 流向 token 串
- *   - 右上：一行 8 个 token 小方块（teal/butter 交替）
- *   - 右下：一行小音波 + 一行 frame 三连帧
- *   - 右上 stamp："224→196"
- *   - 左下 mono："image patch ⊕ text ⊕ audio"
+ * ترکیب‌بندی بصری (viewBox 320×200):
+ *   - چپ: یک"تصویر"رنگی کوچک (به سبک کیک 64×64) + شبکه patch با ابعاد 7×7 (dashed ← خط پیوسته on hover)
+ *   - وسط: یک فلش dashed از تصویر بریده شده بیرون می‌آید ← به سمت رشته token می‌رود
+ *   - بالا-راست: یک ردیف ۸ مربع کوچک token (teal/butter یک‌درمیان)
+ *   - پایین-راست: یک ردیف موج صدای کوچک + یک ردیف سه frame پیاپی
+ *   - stamp بالا-راست:"224→196"
+ *   - mono پایین-چپ:"image patch ⊕ text ⊕ audio"
  *
- * hover：图微微"浮起" + 切割线变实 + token 方块依次 pulse + 音波微动。
+ * hover: تصویر کمی"بالا می‌آید" + خطوط برش پررنگ می‌شوند + مربع‌های token به ترتیب pulse می‌شوند + موج صدا کمی حرکت می‌کند.
  */
 import React from "react";
 import CoverShell from "./CoverShell";
 
-const PATCH_GRID = 7; // 7×7 切分网格
+const PATCH_GRID = 7; // شبکه برش 7×7
 const IMG_X = 24;
 const IMG_Y = 50;
 const IMG_SIZE = 78;
@@ -32,7 +32,7 @@ const TOKEN_COLORS = ["#1B4B5A", "#1B4B5A", "#F4D35E", "#1B4B5A", "#F4D35E", "#1
 const MultimodalityCover: React.FC = () => {
   return (
     <CoverShell bgClassName="bg-coral" dotColor="#FBEFE3" dotOpacity={0.16}>
-      {/* 上方装饰：mono 标签 */}
+      {/* تزئین بالا: برچسب mono */}
       <g
         fontFamily="Geist Mono, monospace"
         fontSize="9"
@@ -42,7 +42,7 @@ const MultimodalityCover: React.FC = () => {
         <text x="24" y="36">image · text · audio → token</text>
       </g>
 
-      {/* 右上 stamp */}
+      {/* stamp بالا-راست */}
       <g
         transform="translate(282,24) rotate(-6)"
         className="origin-center transition-transform duration-500 group-hover:rotate-3 group-hover:scale-110"
@@ -70,24 +70,24 @@ const MultimodalityCover: React.FC = () => {
         </text>
       </g>
 
-      {/* 左：迷你图 + patch 网格 */}
+      {/* چپ: تصویر کوچک + شبکه patch */}
       <g
         className="origin-center transition-transform duration-500 ease-out group-hover:-translate-y-1"
         style={{ transformBox: "fill-box" }}
       >
-        {/* 图底（蛋糕风：butter bg + 红蛋糕） */}
+        {/* زمینه تصویر (سبک کیک: butter bg + کیک قرمز) */}
         <rect x={IMG_X} y={IMG_Y} width={IMG_SIZE} height={IMG_SIZE} rx="3" fill="#FBE891" stroke="#241C15" strokeWidth="1.8" />
-        {/* 蛋糕 */}
+        {/* کیک */}
         <rect x={IMG_X + 14} y={IMG_Y + 46} width={IMG_SIZE - 28} height="22" fill="#E07A5F" stroke="#241C15" strokeWidth="1" />
         <rect x={IMG_X + 18} y={IMG_Y + 36} width={IMG_SIZE - 36} height="10" fill="#FBEFE3" stroke="#241C15" strokeWidth="1" />
         <rect x={IMG_X + 22} y={IMG_Y + 26} width={IMG_SIZE - 44} height="10" fill="#FF4D74" stroke="#241C15" strokeWidth="1" />
-        {/* 蜡烛 */}
+        {/* شمع */}
         <line x1={IMG_X + 30} y1={IMG_Y + 18} x2={IMG_X + 30} y2={IMG_Y + 26} stroke="#241C15" strokeWidth="1.4" />
         <line x1={IMG_X + 48} y1={IMG_Y + 18} x2={IMG_X + 48} y2={IMG_Y + 26} stroke="#241C15" strokeWidth="1.4" />
         <circle cx={IMG_X + 30} cy={IMG_Y + 16} r="1.8" fill="#F4D35E" stroke="#241C15" strokeWidth="0.6" />
         <circle cx={IMG_X + 48} cy={IMG_Y + 16} r="1.8" fill="#F4D35E" stroke="#241C15" strokeWidth="0.6" />
 
-        {/* patch 网格切割线 */}
+        {/* خطوط برش شبکه patch */}
         <g
           stroke="#241C15"
           strokeWidth="0.7"
@@ -114,7 +114,7 @@ const MultimodalityCover: React.FC = () => {
         </g>
       </g>
 
-      {/* 图标签：7×7 = 49 */}
+      {/* برچسب تصویر: 7×7 = 49 */}
       <g
         transform={`translate(${IMG_X + IMG_SIZE / 2}, ${IMG_Y + IMG_SIZE + 14})`}
       >
@@ -141,7 +141,7 @@ const MultimodalityCover: React.FC = () => {
         </text>
       </g>
 
-      {/* 中间：dashed 流向箭头（图 → token 行） */}
+      {/* وسط: فلش جریان dashed (تصویر ← ردیف token) */}
       <g
         fill="none"
         stroke="#FBEFE3"
@@ -153,7 +153,7 @@ const MultimodalityCover: React.FC = () => {
       </g>
       <polygon points={`${TOKEN_X - 4},${TOKEN_Y + TOKEN_H / 2 - 4} ${TOKEN_X + 2},${TOKEN_Y + TOKEN_H / 2} ${TOKEN_X - 4},${TOKEN_Y + TOKEN_H / 2 + 4}`} fill="#FBEFE3" />
 
-      {/* 右上：token 行（8 个方块） */}
+      {/* بالا-راست: ردیف token (۸ مربع) */}
       <g>
         {TOKEN_COLORS.map((c, i) => (
           <rect
@@ -175,7 +175,7 @@ const MultimodalityCover: React.FC = () => {
         ))}
       </g>
 
-      {/* 右上 token 标签 */}
+      {/* برچسب token بالا-راست */}
       <g
         fontFamily="Geist Mono, monospace"
         fontSize="8"
@@ -185,7 +185,7 @@ const MultimodalityCover: React.FC = () => {
         <text x={TOKEN_X} y={TOKEN_Y - 5}>token stream</text>
       </g>
 
-      {/* 右中：音波（5 条竖线高度不一） */}
+      {/* وسط-راست: موج صدا (۵ خط عمودی با ارتفاع‌های مختلف) */}
       <g
         transform={`translate(${TOKEN_X + 4}, ${TOKEN_Y + 50})`}
         className="transition-transform duration-500 group-hover:translate-y-1"
@@ -213,7 +213,7 @@ const MultimodalityCover: React.FC = () => {
         ))}
       </g>
 
-      {/* 右下：3 帧视频 frame */}
+      {/* پایین-راست: ۳ frame ویدئو */}
       <g transform={`translate(${TOKEN_X + 4}, ${TOKEN_Y + 96})`}>
         <g
           fontFamily="Geist Mono, monospace"
@@ -235,7 +235,7 @@ const MultimodalityCover: React.FC = () => {
               stroke="#241C15"
               strokeWidth="1.4"
             />
-            {/* 一个小山头表示画面 */}
+            {/* یک تپه کوچک نماینده تصویر */}
             <polygon
               points="3,17 12,7 18,12 27,17"
               fill="#1B4B5A"
@@ -246,7 +246,7 @@ const MultimodalityCover: React.FC = () => {
         ))}
       </g>
 
-      {/* 左下：mono 三模态标签条 */}
+      {/* پایین-چپ: نوار برچسب mono سه‌حالتی */}
       <g transform="translate(20,180) rotate(-3)" className="origin-left">
         <rect
           x="-2"

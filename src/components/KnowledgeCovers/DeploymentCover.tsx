@@ -1,15 +1,15 @@
 /**
- * Deployment 封面
+ * جلد Deployment
  *
- * 隐喻：一个模型箱子 → 4 个推理引擎招牌图标 → 用户请求气泡
+ * استعاره: یک جعبه مدل ← ۴ آیکون تابلوی موتور استنتاج ← حباب درخواست کاربر
  *
- * 视觉构图（viewBox 320×200）：
- *   - 左：模型权重箱（Llama / Qwen 二选一示意）
- *   - 中：4 个推理引擎方块（vLLM / SGLang / Ollama / llama.cpp）
- *   - 右：用户请求气泡 + tokens/sec 数字
- *   - 顶部：tok/s 流动 marquee 装饰
+ * ترکیب‌بندی بصری (viewBox 320×200):
+ *   - چپ: جعبه وزن‌های مدل (نمایش Llama / Qwen به انتخاب)
+ *   - وسط: ۴ مربع موتور استنتاج (vLLM / SGLang / Ollama / llama.cpp)
+ *   - راست: حباب درخواست کاربر + عدد tokens/sec
+ *   - بالا: تزئین marquee روان tok/s
  *
- * hover：4 个引擎方块向中线靠拢，请求气泡放大。
+ * hover: ۴ مربع موتور به خط وسط نزدیک می‌شوند، حباب درخواست بزرگ می‌شود.
  */
 import React from "react";
 import CoverShell from "./CoverShell";
@@ -24,7 +24,7 @@ const ENGINES = [
 const DeploymentCover: React.FC = () => {
   return (
     <CoverShell bgClassName="bg-butter-tint" dotOpacity={0.07}>
-      {/* 左：模型箱 */}
+      {/* چپ: جعبه مدل */}
       <g
         transform="translate(34, 100)"
         className="origin-center transition-transform duration-500 group-hover:-translate-x-0.5"
@@ -57,7 +57,7 @@ const DeploymentCover: React.FC = () => {
         </text>
       </g>
 
-      {/* 中间：4 个引擎方块 */}
+      {/* وسط: ۴ مربع موتور */}
       <g>
         {ENGINES.map((e, i) => (
           <g
@@ -105,21 +105,21 @@ const DeploymentCover: React.FC = () => {
         ))}
       </g>
 
-      {/* 左 → 中 连线（dashed） */}
+      {/* خط اتصال چپ ← وسط (dashed) */}
       <g stroke="#241C15" strokeWidth="1.2" strokeDasharray="3 3" opacity="0.4" fill="none">
         {ENGINES.map((e, i) => (
           <line key={i} x1="58" y1="100" x2="114" y2={e.y} />
         ))}
       </g>
 
-      {/* 中 → 右 连线 */}
+      {/* خط اتصال وسط ← راست */}
       <g stroke="#241C15" strokeWidth="1.2" strokeDasharray="3 3" opacity="0.4" fill="none">
         {ENGINES.map((e, i) => (
           <line key={i} x1="178" y1={e.y} x2="244" y2="100" />
         ))}
       </g>
 
-      {/* 右：用户气泡 + 数字 */}
+      {/* راست: حباب کاربر + عدد */}
       <g
         transform="translate(272, 100)"
         className="origin-center transition-transform duration-500 group-hover:translate-x-0.5 group-hover:scale-105"
@@ -157,7 +157,7 @@ const DeploymentCover: React.FC = () => {
         </text>
       </g>
 
-      {/* 右上：H100 stamp */}
+      {/* بالا-راست: stamp با H100 */}
       <g
         transform="translate(286, 28) rotate(-7)"
         className="origin-center transition-transform duration-500 group-hover:rotate-2 group-hover:scale-110"
@@ -185,7 +185,7 @@ const DeploymentCover: React.FC = () => {
         </text>
       </g>
 
-      {/* 左下：mono caption */}
+      {/* پایین-چپ: caption با فونت mono */}
       <g transform="translate(28, 178) rotate(-3)" className="origin-left">
         <rect
           x="-3"

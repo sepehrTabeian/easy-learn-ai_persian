@@ -1,14 +1,14 @@
 /**
- * 数据集构建 封面
+ * جلد ساخت مجموعه‌داده
  *
- * 隐喻：文档进 → 一台机器（齿轮）自动加工 → 一张张「Q+A」问答卡吐出来。
- *       讲的是「用工具把文档自动变成训练数据」。
- * 视觉构图（viewBox 320×200）：
- *   - 左侧：一摞文档
- *   - 中间：齿轮机器
- *   - 右侧：吐出的问答卡（Q/A）
- *   - hover：齿轮旋转，问答卡浮动
- * 跟同线区分：这张强调「自动化流水线 / 文档→问答」，主色 butter。
+ * استعاره: سند وارد می‌شود ← یک ماشین (چرخ‌دنده) خودکار پردازش می‌کند ← کارت‌های پرسش و پاسخ «Q+A» یکی‌یکی بیرون می‌آیند.
+ *       موضوع «تبدیل خودکار اسناد به داده آموزشی با ابزار» است.
+ * ترکیب‌بندی بصری (viewBox 320×200):
+ *   - چپ: یک دسته سند
+ *   - وسط: ماشین چرخ‌دنده‌ای
+ *   - راست: کارت‌های پرسش و پاسخ خروجی (Q/A)
+ *   - hover: چرخ‌دنده می‌چرخد، کارت‌های پرسش و پاسخ شناور می‌شوند
+ * متمایز از هم‌خط‌ها: این یکی بر «خط تولید خودکار / سند ← پرسش و پاسخ» تأکید دارد، رنگ اصلی butter.
  */
 import React from "react";
 import CoverShell from "./CoverShell";
@@ -16,7 +16,7 @@ import CoverShell from "./CoverShell";
 const DatasetConstructionCover: React.FC = () => {
   return (
     <CoverShell bgClassName="bg-butter/25" dotOpacity={0.08}>
-      {/* 左侧文档堆 */}
+      {/* دسته سند در چپ */}
       <g transform="translate(22,48)">
         <text x="0" y="-10" fontFamily="Geist Mono, monospace" fontSize="8" fontWeight="800" letterSpacing="1.4" fill="#241C15" opacity="0.6">
           DOCS
@@ -30,7 +30,7 @@ const DatasetConstructionCover: React.FC = () => {
         ))}
       </g>
 
-      {/* 中间齿轮机器 */}
+      {/* ماشین چرخ‌دنده‌ای در وسط */}
       <g transform="translate(160,100)">
         <rect x="-34" y="-34" width="68" height="68" rx="14" fill="#1B4B5A" stroke="#241C15" strokeWidth="2.5" />
         <g className="origin-center transition-transform duration-1000 group-hover:rotate-180">
@@ -38,27 +38,27 @@ const DatasetConstructionCover: React.FC = () => {
         </g>
       </g>
 
-      {/* 左→机 箭头 */}
+      {/* فلش چپ ← ماشین */}
       <g stroke="#241C15" strokeWidth="2" fill="none" strokeLinecap="round" opacity="0.6">
         <path d="M 92 100 L 120 100" strokeDasharray="4 4" />
         <path d="M 114 95 L 122 100 L 114 105" strokeLinejoin="round" />
       </g>
-      {/* 机→右 箭头 */}
+      {/* فلش ماشین ← راست */}
       <g stroke="#241C15" strokeWidth="2" fill="none" strokeLinecap="round" opacity="0.6">
         <path d="M 200 100 L 226 100" strokeDasharray="4 4" />
         <path d="M 220 95 L 228 100 L 220 105" strokeLinejoin="round" />
       </g>
 
-      {/* 右侧问答卡 */}
+      {/* کارت‌های پرسش و پاسخ در راست */}
       <g transform="translate(236,52)">
         <g className="transition-transform duration-500 ease-spring group-hover:-translate-y-0.5">
           <rect x="0" y="0" width="62" height="40" rx="7" fill="#FF4D74" stroke="#241C15" strokeWidth="2" />
-          <text x="9" y="17" fontFamily="Plus Jakarta Sans, Noto Sans SC, sans-serif" fontSize="11" fontWeight="800" fill="#FBEFE3">Q ?</text>
+          <text x="9" y="17" fontFamily="Plus Jakarta Sans, Vazirmatn, sans-serif" fontSize="11" fontWeight="800" fill="#FBEFE3">Q ?</text>
           <rect x="9" y="25" width="44" height="4" rx="2" fill="#FBEFE3" opacity="0.7" />
         </g>
         <g transform="translate(0,52)" className="transition-transform duration-500 ease-spring group-hover:translate-y-0.5">
           <rect x="0" y="0" width="62" height="40" rx="7" fill="#FFFFFF" stroke="#241C15" strokeWidth="2" />
-          <text x="9" y="17" fontFamily="Plus Jakarta Sans, Noto Sans SC, sans-serif" fontSize="11" fontWeight="800" fill="#241C15">A</text>
+          <text x="9" y="17" fontFamily="Plus Jakarta Sans, Vazirmatn, sans-serif" fontSize="11" fontWeight="800" fill="#241C15">A</text>
           <rect x="9" y="25" width="44" height="4" rx="2" fill="#241C15" opacity="0.3" />
         </g>
       </g>

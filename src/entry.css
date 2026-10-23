@@ -2,10 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
-/* ─── Smiley Sans 得意黑 (display 中文专用) ─────────────────────────
-   - 圆润、4° 微斜、字面收缩，国内 Mailchimp 风事实选择
-   - 用 unicode-range 限定只覆盖 CJK 区段，西文继续走 Plus Jakarta Sans
-   - font-weight: 100 900 声明覆盖全 weight 范围，避免浏览器对 Regular 合成加粗
+/* ─── Smiley Sans (فونت نمایشی ویژه حروف چینی) ─────────────────────────
+   - گرد، با شیب ۴ درجه و فشرده؛ انتخاب رایج برای سبک Mailchimp
+   - با unicode-range فقط محدوده CJK را پوشش می‌دهد؛ لاتین با Plus Jakarta Sans و فارسی با Vazirmatn نمایش داده می‌شود
+   - font-weight: 100 900 کل بازه وزن را پوشش می‌دهد تا مرورگر Regular را مصنوعی ضخیم نکند
    ─────────────────────────────────────────────────────────────── */
 @font-face {
   font-family: "Smiley Sans";
@@ -33,10 +33,10 @@
     font-weight: 400;
   }
 
-  /* ── 全局排版默认 ────────────────────────────────
-     • text-wrap: balance —— 让浏览器自动平衡 1-3 行标题的每行字数，避免孤字寡行
-     • word-break: keep-all —— 中文标点跟随、不在词中拆字
-     • overflow-wrap: break-word —— 极端长词兜底
+  /* ── پیش‌فرض‌های تایپوگرافی سراسری ────────────────────────────────
+     • text-wrap: balance —— مرورگر تعداد کلمات هر خط تیترهای ۱ تا ۳ خطی را متعادل می‌کند تا کلمه تنها در خط آخر نماند
+     • word-break: keep-all —— کلمات وسط شکسته نشوند
+     • overflow-wrap: break-word —— پشتیبان برای کلمات خیلی بلند
      ─────────────────────────────────────────── */
   h1,
   h2,
@@ -50,12 +50,44 @@
     text-wrap: pretty;
   }
 
+  /* ── راست‌به‌چپ (RTL) ────────────────────────────────
+     • کد و فرمول‌ها همیشه چپ‌به‌راست می‌مانند
+     • آیکون‌های فلش جهت‌دار در RTL قرینه می‌شوند
+     ─────────────────────────────────────────── */
+  pre,
+  code,
+  kbd,
+  samp {
+    direction: ltr;
+    unicode-bidi: isolate;
+  }
+
+  pre {
+    text-align: left;
+  }
+
+  /* letter-spacing اتصال حروف فارسی را از هم جدا می‌کند */
+  [dir="rtl"] :not(pre, code, kbd, samp, pre *, code *) {
+    letter-spacing: normal !important;
+  }
+
+  [dir="rtl"] .lucide-arrow-right,
+  [dir="rtl"] .lucide-arrow-left,
+  [dir="rtl"] .lucide-chevron-right,
+  [dir="rtl"] .lucide-chevron-left,
+  [dir="rtl"] .lucide-chevrons-right,
+  [dir="rtl"] .lucide-chevrons-left,
+  [dir="rtl"] .lucide-arrow-up-right,
+  [dir="rtl"] .lucide-external-link {
+    scale: -1 1;
+  }
+
   ::selection {
     background-color: #f4d35e;
     color: #241c15;
   }
 
-  /* 链接默认无下划线，hover 时显示 (Mailchimp 比较随意) */
+  /* لینک‌ها به‌طور پیش‌فرض زیرخط ندارند و در hover نمایش داده می‌شود (سبک آزاد Mailchimp) */
   a {
     text-underline-offset: 3px;
     text-decoration-thickness: 2px;
@@ -63,7 +95,7 @@
 }
 
 @layer utilities {
-  /* 隐藏滚动条（横向 chip 导航等场景），保留可滚动 */
+  /* مخفی کردن نوار اسکرول (برای ناوبری افقی chip و مانند آن)، با حفظ قابلیت اسکرول */
   .no-scrollbar {
     -ms-overflow-style: none;
     scrollbar-width: none;
@@ -74,13 +106,13 @@
 }
 
 @layer components {
-  /* eyebrow 小标签 */
+  /* برچسب کوچک eyebrow */
   .eyebrow {
     @apply font-mono text-eyebrow uppercase text-ink-tertiary;
     font-weight: 500;
   }
 
-  /* Mailchimp 招牌 stamp 按钮 —— 黑描边 + 黑 offset 阴影 */
+  /* دکمه stamp شاخص Mailchimp —— حاشیه مشکی + سایه offset مشکی */
   .btn-stamp {
     @apply inline-flex items-center gap-2 px-7 py-3.5 rounded-full font-sans font-semibold text-[15px] border-[2px] border-ink shadow-stamp transition-all duration-250 ease-spring;
   }
@@ -93,7 +125,7 @@
     box-shadow: 0 0 0 0 #241c15;
   }
 
-  /* 容器：黑描边 + offset 阴影卡片 */
+  /* کانتینر: کارت با حاشیه مشکی + سایه offset */
   .card-stamp {
     @apply bg-white border-[2px] border-ink rounded-3xl shadow-stamp-lg transition-all duration-300 ease-spring;
   }

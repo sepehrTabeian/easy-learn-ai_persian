@@ -1,6 +1,6 @@
 /**
- * 基准测试筛选面板 · Mailchimp-Freddie 风
- * 与 model/FilterPanel 同构（只是数据维度不同）
+ * پنل فیلتر بنچمارک · سبک Mailchimp-Freddie
+ * هم‌ساختار با model/FilterPanel (فقط ابعاد داده متفاوت است)
  */
 
 import React, { useState } from "react";
@@ -49,7 +49,7 @@ const FilterSection: React.FC<{
         <span className="font-display font-extrabold text-[14px] text-ink">
           {title}
           {selectedItems.length > 0 && (
-            <span className="ml-2 inline-flex items-center justify-center min-w-[20px] h-5 px-1.5 bg-coral text-white border border-ink rounded-full font-mono text-[10px] font-bold align-middle">
+            <span className="ms-2 inline-flex items-center justify-center min-w-[20px] h-5 px-1.5 bg-coral text-white border border-ink rounded-full font-mono text-[10px] font-bold align-middle">
               {selectedItems.length}
             </span>
           )}
@@ -92,11 +92,11 @@ const FilterSection: React.FC<{
             >
               {showAll ? (
                 <>
-                  收起 <ChevronUp className="w-3 h-3" strokeWidth={2.5} />
+                  بستن <ChevronUp className="w-3 h-3" strokeWidth={2.5} />
                 </>
               ) : (
                 <>
-                  查看更多 ({items.length - defaultLimit})
+                  مشاهده بیشتر ({items.length - defaultLimit})
                   <ChevronDown className="w-3 h-3" strokeWidth={2.5} />
                 </>
               )}
@@ -158,17 +158,17 @@ export const FilterPanel: React.FC<FilterPanelProps> = ({
 
   return (
     <div className="relative">
-      {/* 触发按钮 —— stamp 风 */}
+      {/* دکمه فعال‌ساز —— سبک stamp */}
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className={`inline-flex items-center gap-2 pl-4 pr-3 py-2.5 rounded-full border-2 border-ink shadow-stamp font-sans font-semibold text-[13px] transition-all duration-250 ease-spring hover:-translate-x-[2px] hover:-translate-y-[2px] hover:[box-shadow:6px_6px_0_0_#241C15] ${
+        className={`inline-flex items-center gap-2 ps-4 pe-3 py-2.5 rounded-full border-2 border-ink shadow-stamp font-sans font-semibold text-[13px] transition-all duration-250 ease-spring hover:-translate-x-[2px] hover:-translate-y-[2px] hover:[box-shadow:6px_6px_0_0_#241C15] ${
           hasActiveFilters
             ? "bg-ink text-cream"
             : "bg-white text-ink"
         }`}
       >
         <Filter className="w-4 h-4" strokeWidth={2.5} />
-        <span>筛选</span>
+        <span>فیلتر</span>
         {hasActiveFilters && (
           <span className="inline-flex items-center justify-center min-w-[20px] h-5 px-1.5 bg-butter text-ink rounded-full font-mono text-[10px] font-bold">
             {activeCount}
@@ -181,17 +181,17 @@ export const FilterPanel: React.FC<FilterPanelProps> = ({
         )}
       </button>
 
-      {/* 面板 */}
+      {/* پنل */}
       {isOpen && (
-        <div className="absolute top-full right-0 mt-3 w-[320px] md:w-[620px] bg-white border-2 border-ink rounded-2xl shadow-stamp-xl z-50 max-h-[80vh] overflow-hidden flex flex-col">
-          {/* 头部 */}
+        <div className="absolute top-full end-0 mt-3 w-[320px] md:w-[620px] bg-white border-2 border-ink rounded-2xl shadow-stamp-xl z-50 max-h-[80vh] overflow-hidden flex flex-col">
+          {/* سربرگ */}
           <div className="px-5 py-4 border-b-2 border-ink/10 bg-cream flex items-center justify-between">
             <div>
               <h3 className="font-display font-extrabold text-[16px] text-ink leading-none mb-1">
-                筛选条件
+                شرایط فیلتر
               </h3>
               <p className="font-mono text-[11px] uppercase tracking-[0.18em] text-ink/55">
-                {filteredCount} / {totalCount} 个基准
+                {filteredCount} / {totalCount} بنچمارک
               </p>
             </div>
             {hasActiveFilters && (
@@ -200,15 +200,15 @@ export const FilterPanel: React.FC<FilterPanelProps> = ({
                 className="inline-flex items-center gap-1 font-sans font-semibold text-[12px] text-ink-tertiary hover:text-ink underline underline-offset-2"
               >
                 <X className="w-3 h-3" strokeWidth={2.5} />
-                清除
+                پاک کردن
               </button>
             )}
           </div>
 
-          {/* 筛选内容 */}
+          {/* محتوای فیلتر */}
           <div className="overflow-y-auto flex-1">
             <FilterSection
-              title="类型"
+              title="نوع"
               items={allTypes}
               selectedItems={filters.selectedTypes}
               onToggle={handleTypeToggle}
@@ -216,7 +216,7 @@ export const FilterPanel: React.FC<FilterPanelProps> = ({
               onExpandToggle={() => toggleSection("type")}
             />
             <FilterSection
-              title="年份"
+              title="سال"
               items={allYears}
               selectedItems={filters.selectedYears}
               onToggle={handleYearToggle}
@@ -224,7 +224,7 @@ export const FilterPanel: React.FC<FilterPanelProps> = ({
               onExpandToggle={() => toggleSection("year")}
             />
             <FilterSection
-              title="许可证"
+              title="مجوز"
               items={allLicenses}
               selectedItems={filters.selectedLicenses}
               onToggle={handleLicenseToggle}
@@ -233,19 +233,19 @@ export const FilterPanel: React.FC<FilterPanelProps> = ({
             />
           </div>
 
-          {/* 底部按钮 */}
+          {/* دکمه‌های پایین */}
           <div className="px-5 py-4 border-t-2 border-ink/10 bg-cream">
             <button
               onClick={() => setIsOpen(false)}
               className="w-full py-2.5 bg-ink text-cream rounded-full font-sans font-bold text-[14px] border-2 border-ink shadow-stamp transition-all duration-250 ease-spring hover:-translate-x-[2px] hover:-translate-y-[2px] hover:[box-shadow:6px_6px_0_0_#241C15]"
             >
-              确定
+              تأیید
             </button>
           </div>
         </div>
       )}
 
-      {/* 点击外部关闭 */}
+      {/* کلیک بیرون برای بستن */}
       {isOpen && (
         <div
           className="fixed inset-0 z-40"

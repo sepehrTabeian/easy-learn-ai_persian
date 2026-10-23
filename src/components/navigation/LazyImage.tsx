@@ -49,20 +49,20 @@ const LazyImage: React.FC<LazyImageProps> = ({
   return (
     <div className={`relative ${className}`} ref={imgRef}>
       {!isInView ? (
-        // 占位符
+        // جای‌نگهدار
         <div className={`bg-gray-200 animate-pulse ${className}`} />
       ) : hasError ? (
-        // 错误状态
+        // حالت خطا
         <div className={`bg-gray-100 flex items-center justify-center ${fallbackClassName || className}`}>
           <Globe className="w-6 h-6 text-gray-400" />
         </div>
       ) : (
         <>
-          {/* 加载状态 */}
+          {/* حالت بارگذاری */}
           {!isLoaded && (
             <div className={`absolute inset-0 bg-gray-200 animate-pulse ${className}`} />
           )}
-          {/* 实际图片 */}
+          {/* تصویر واقعی */}
           <img
             src={src}
             alt={alt}

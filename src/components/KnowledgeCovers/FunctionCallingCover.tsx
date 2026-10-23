@@ -1,19 +1,19 @@
 /**
- * Function Calling 封面
+ * جلد Function Calling
  *
- * 隐喻：LLM 吐一段结构化 JSON → 钩子箭头钩到外部工具 → 工具结果回流。
- * 整张图突出「结构化」+「双向」两个核心。
+ * استعاره: LLM یک JSON ساختاریافته بیرون می‌دهد ← فلش قلاب‌دار به ابزار بیرونی وصل می‌شود ← نتیجه ابزار برمی‌گردد.
+ * کل تصویر دو هسته «ساختاریافته» + «دوطرفه» را برجسته می‌کند.
  *
- * 视觉构图（viewBox 320×200）：
- *   - 左侧大方块：LLM「脑」simplified（butter 填充）
- *   - 左→右上：实线箭头 + 中间一个 JSON 卡片（{name, args} 视觉化的小方块）
- *   - 右侧大圆角矩形：外部 tool（齿轮 icon · teal 填充 · 标 API）
- *   - 右→左下：虚线箭头 + 中间一个 result 卡（{status, data} 小方块）
- *   - 角落装饰：右上 sparkle、左下小方块
+ * ترکیب‌بندی بصری (viewBox 320×200):
+ *   - مربع بزرگ چپ: «مغز» ساده‌شده LLM (پر با butter)
+ *   - چپ ← بالا-راست: فلش پیوسته + یک کارت JSON در وسط ({name, args} مربع‌های کوچک تصویری)
+ *   - مستطیل بزرگ گوشه‌گرد راست: tool بیرونی (آیکون چرخ‌دنده · پر با teal · برچسب API)
+ *   - راست ← پایین-چپ: فلش نقطه‌چین + یک کارت result در وسط ({status, data} مربع کوچک)
+ *   - تزئین گوشه‌ها: sparkle بالا-راست، مربع کوچک پایین-چپ
  *
- * hover 行为：
- *   - JSON 卡和 result 卡沿着各自轨道往前推进一点
- *   - 齿轮工具图标转一点角度
+ * رفتار hover:
+ *   - کارت JSON و کارت result هر کدام در مسیر خودشان کمی جلو می‌روند
+ *   - آیکون ابزار چرخ‌دنده کمی می‌چرخد
  */
 import React from "react";
 import CoverShell from "./CoverShell";
@@ -21,7 +21,7 @@ import CoverShell from "./CoverShell";
 const FunctionCallingCover: React.FC = () => {
   return (
     <CoverShell bgClassName="bg-cream" dotOpacity={0.08}>
-      {/* 装饰：右上 sparkle */}
+      {/* تزئین: sparkle بالا-راست */}
       <g
         transform="translate(290,28)"
         className="origin-center transition-transform duration-700 group-hover:rotate-45"
@@ -34,7 +34,7 @@ const FunctionCallingCover: React.FC = () => {
         />
       </g>
 
-      {/* 装饰：左下小方块 */}
+      {/* تزئین: مربع کوچک پایین-چپ */}
       <g transform="translate(28,176) rotate(-8)" className="origin-center">
         <rect
           x="-7"
@@ -48,13 +48,13 @@ const FunctionCallingCover: React.FC = () => {
         />
       </g>
 
-      {/* ─── 左：LLM 块 ─── */}
+      {/* ─── چپ: بلوک LLM ─── */}
       <g transform="translate(54,100)">
         <g
           className="origin-center transition-transform duration-500 ease-out group-hover:-rotate-2"
           style={{ transformBox: "fill-box" }}
         >
-          {/* 阴影底 */}
+          {/* زیرسایه */}
           <rect
             x="-32"
             y="-32"
@@ -65,7 +65,7 @@ const FunctionCallingCover: React.FC = () => {
             transform="translate(3,3)"
             opacity="0.85"
           />
-          {/* 主体 · butter */}
+          {/* بدنه · butter */}
           <rect
             x="-32"
             y="-32"
@@ -76,7 +76,7 @@ const FunctionCallingCover: React.FC = () => {
             stroke="#241C15"
             strokeWidth="2.4"
           />
-          {/* 神经元点阵 4×4 */}
+          {/* ماتریس نقطه‌ای نورون 4×4 */}
           {Array.from({ length: 16 }).map((_, i) => {
             const cx = -22 + (i % 4) * 14;
             const cy = -22 + Math.floor(i / 4) * 14;
@@ -92,7 +92,7 @@ const FunctionCallingCover: React.FC = () => {
               />
             );
           })}
-          {/* 底标 LLM */}
+          {/* برچسب پایینی LLM */}
           <text
             x="0"
             y="44"
@@ -108,13 +108,13 @@ const FunctionCallingCover: React.FC = () => {
         </g>
       </g>
 
-      {/* ─── 右：外部 tool 卡 ─── */}
+      {/* ─── راست: کارت tool بیرونی ─── */}
       <g transform="translate(266,100)">
         <g
           className="origin-center transition-transform duration-500 ease-out group-hover:rotate-3"
           style={{ transformBox: "fill-box" }}
         >
-          {/* 阴影底 */}
+          {/* زیرسایه */}
           <rect
             x="-32"
             y="-32"
@@ -125,7 +125,7 @@ const FunctionCallingCover: React.FC = () => {
             transform="translate(3,3)"
             opacity="0.85"
           />
-          {/* 主体 · teal */}
+          {/* بدنه · teal */}
           <rect
             x="-32"
             y="-32"
@@ -136,7 +136,7 @@ const FunctionCallingCover: React.FC = () => {
             stroke="#241C15"
             strokeWidth="2.4"
           />
-          {/* 齿轮 */}
+          {/* چرخ‌دنده */}
           <g
             className="origin-center transition-transform duration-[1400ms] ease-linear group-hover:rotate-90"
             style={{ transformOrigin: "0 0" }}
@@ -171,7 +171,7 @@ const FunctionCallingCover: React.FC = () => {
             />
             <circle cx="0" cy="0" r="2.4" fill="#241C15" />
           </g>
-          {/* 底标 API */}
+          {/* برچسب پایینی API */}
           <text
             x="0"
             y="44"
@@ -187,7 +187,7 @@ const FunctionCallingCover: React.FC = () => {
         </g>
       </g>
 
-      {/* ─── 上：LLM → tool 实线箭头 + JSON 卡 ─── */}
+      {/* ─── بالا: فلش پیوسته LLM ← tool + کارت JSON ─── */}
       <g>
         <path
           d="M 90 78 C 130 50, 190 50, 230 78"
@@ -196,7 +196,7 @@ const FunctionCallingCover: React.FC = () => {
           strokeWidth="2"
           strokeLinecap="round"
         />
-        {/* 箭头头 · 指向右上 */}
+        {/* سر فلش · رو به بالا-راست */}
         <polygon
           points="-6,-3 0,0 -6,3"
           fill="#241C15"
@@ -204,7 +204,7 @@ const FunctionCallingCover: React.FC = () => {
         />
       </g>
 
-      {/* JSON 卡 · 中央上方 · hover 沿轨道向右推 */}
+      {/* کارت JSON · بالای مرکز · در hover در امتداد مسیر به راست رانده می‌شود */}
       <g
         transform="translate(160,52)"
         className="transition-transform duration-700 ease-out group-hover:translate-x-3"
@@ -219,12 +219,12 @@ const FunctionCallingCover: React.FC = () => {
           stroke="#241C15"
           strokeWidth="1.8"
         />
-        {/* 4 个小方块代表结构化字段 */}
+        {/* ۴ مربع کوچک نماینده فیلدهای ساختاریافته */}
         <rect x="-25" y="-7" width="10" height="14" rx="2" fill="#E07A5F" />
         <rect x="-12" y="-7" width="10" height="14" rx="2" fill="#F4D35E" />
         <rect x="1" y="-7" width="10" height="14" rx="2" fill="#1B4B5A" />
         <rect x="14" y="-7" width="10" height="14" rx="2" fill="#FF4D74" />
-        {/* 标 tool_call */}
+        {/* برچسب tool_call */}
         <g transform="translate(0,-22)">
           <rect
             x="-26"
@@ -251,7 +251,7 @@ const FunctionCallingCover: React.FC = () => {
         </g>
       </g>
 
-      {/* ─── 下：tool → LLM 虚线箭头 + result 卡 ─── */}
+      {/* ─── پایین: فلش نقطه‌چین tool ← LLM + کارت result ─── */}
       <g>
         <path
           d="M 230 122 C 190 150, 130 150, 90 122"
@@ -261,7 +261,7 @@ const FunctionCallingCover: React.FC = () => {
           strokeLinecap="round"
           strokeDasharray="4 4"
         />
-        {/* 箭头头 · 指向左下 */}
+        {/* سر فلش · رو به پایین-چپ */}
         <polygon
           points="-6,-3 0,0 -6,3"
           fill="#241C15"
@@ -269,7 +269,7 @@ const FunctionCallingCover: React.FC = () => {
         />
       </g>
 
-      {/* result 卡 · 中央下方 · hover 沿轨道向左推 */}
+      {/* کارت result · پایین مرکز · در hover در امتداد مسیر به چپ رانده می‌شود */}
       <g
         transform="translate(160,148)"
         className="transition-transform duration-700 ease-out group-hover:-translate-x-3"
@@ -284,7 +284,7 @@ const FunctionCallingCover: React.FC = () => {
           stroke="#241C15"
           strokeWidth="1.8"
         />
-        {/* 数据线条（模拟 result JSON 值） */}
+        {/* خطوط داده (شبیه‌سازی مقادیر JSON نتیجه) */}
         <line
           x1="-23"
           y1="-5"
@@ -312,7 +312,7 @@ const FunctionCallingCover: React.FC = () => {
           strokeWidth="2"
           strokeLinecap="round"
         />
-        {/* 标 result */}
+        {/* برچسب result */}
         <g transform="translate(0,22)">
           <rect
             x="-22"
@@ -339,7 +339,7 @@ const FunctionCallingCover: React.FC = () => {
         </g>
       </g>
 
-      {/* ─── 中心强调：fn 标签 ─── */}
+      {/* ─── تأکید مرکزی: برچسب fn ─── */}
       <g transform="translate(160,100)">
         <rect
           x="-20"

@@ -1,33 +1,33 @@
 /**
- * BERT 封面
+ * جلد BERT
  *
- * 隐喻：一句话中间被盖了一个 [MASK]，左右两边的词向中间挤，BERT 在头顶给出 top-3 候选词。
+ * استعاره: وسط یک جمله یک [MASK] گذاشته شده، کلمات دو طرف به سمت وسط فشار می‌آورند و BERT بالای سر آن top-3 کلمه کاندید را ارائه می‌دهد.
  *
- * 视觉构图（viewBox 320×200）：
- *   ─ 顶部：stamp 印章「MLM · 15%」（pop 色）
- *   ─ 中部 y=70：top-3 候选词条（butter / coral / teal） + 概率柱
- *   ─ 中下 y=130：一行 7 个 token 方块，第 4 个是 [MASK]（ink 黑大方块）
- *   ─ [MASK] 左右各 3 个邻居方块，左/右各画一条向中心汇聚的虚线箭头
- *   ─ 左下：bert-base 110M 小标
- *   ─ 右下：Encoder 堆叠 4 层小图标
+ * ترکیب‌بندی بصری (viewBox 320×200):
+ *   ─ بالا: مهر stamp «MLM · 15%» (رنگ pop)
+ *   ─ وسط y=70: نوارهای top-3 کلمه کاندید (butter / coral / teal) + ستون احتمال
+ *   ─ پایین وسط y=130: یک ردیف ۷ مربع token، چهارمی [MASK] است (مربع بزرگ مشکی ink)
+ *   ─ در هر طرف [MASK] ۳ مربع همسایه، از چپ/راست هر کدام یک فلش نقطه‌چین به سمت مرکز همگرا می‌شود
+ *   ─ پایین-چپ: برچسب کوچک bert-base 110M
+ *   ─ پایین-راست: آیکون کوچک ۴ لایه Encoder روی هم
  *
- * hover：候选词条左右微抖、箭头加速、Encoder 层呼吸。
+ * hover: نوارهای کاندید کمی چپ و راست می‌لرزند، فلش‌ها سریع‌تر می‌شوند، لایه‌های Encoder نفس می‌کشند.
  */
 import React from "react";
 import CoverShell from "./CoverShell";
 
-/* 句子结构：占位词 + [MASK] */
-const LEFT_TOKENS = ["今", "天", "真"];
-const RIGHT_TOKENS = ["，", "去", "！"];
+/* ساختار جمله: کلمات جای‌نگهدار + [MASK] */
+const LEFT_TOKENS = ["امروز", "هوا", "واقعاً"];
+const RIGHT_TOKENS = ["，", "است", "！"];
 
-/* top-3 候选词与概率 */
+/* top-3 کلمه کاندید و احتمال */
 const CANDIDATES: { word: string; prob: number; tone: string; textColor: string }[] = [
-  { word: "热", prob: 0.74, tone: "#F4D35E", textColor: "#241C15" }, // butter
-  { word: "晒", prob: 0.12, tone: "#E07A5F", textColor: "#FBEFE3" }, // coral
-  { word: "好", prob: 0.09, tone: "#1B4B5A", textColor: "#FBEFE3" }, // teal
+  { word: "گرم", prob: 0.74, tone: "#F4D35E", textColor: "#241C15" }, // butter
+  { word: "آفتابی", prob: 0.12, tone: "#E07A5F", textColor: "#FBEFE3" }, // coral
+  { word: "خوب", prob: 0.09, tone: "#1B4B5A", textColor: "#FBEFE3" }, // teal
 ];
 
-/* 单 token 方块尺寸 */
+/* اندازه مربع تک token */
 const TOK_W = 22;
 const TOK_H = 22;
 const TOK_GAP = 4;
@@ -35,14 +35,14 @@ const ROW_Y = 138;
 const ROW_CX = 160;
 const MASK_W = 30;
 
-/* 左右 3 个 token 的 x 坐标（中心对齐 [MASK]） */
+/* مختصات x سه token چپ و راست (هم‌تراز مرکز با [MASK]) */
 const leftX = (i: number) => ROW_CX - MASK_W / 2 - TOK_GAP - (3 - i) * (TOK_W + TOK_GAP) + TOK_W / 2;
 const rightX = (i: number) => ROW_CX + MASK_W / 2 + TOK_GAP + i * (TOK_W + TOK_GAP) + TOK_W / 2;
 
 const BertCover: React.FC = () => {
   return (
     <CoverShell bgClassName="bg-cream" dotOpacity={0.07}>
-      {/* 顶部 stamp：MLM · 15% */}
+      {/* stamp بالا: MLM · 15% */}
       <g
         transform="translate(50,28) rotate(-6)"
         className="origin-center transition-transform duration-500 group-hover:rotate-3"
@@ -71,7 +71,7 @@ const BertCover: React.FC = () => {
         </text>
       </g>
 
-      {/* 右上：Encoder 堆叠 4 层小图标 */}
+      {/* بالا-راست: آیکون کوچک ۴ لایه Encoder روی هم */}
       <g
         transform="translate(285,28)"
         className="origin-center transition-transform duration-500 group-hover:translate-y-[-2px]"
@@ -103,9 +103,9 @@ const BertCover: React.FC = () => {
         </text>
       </g>
 
-      {/* 中部：top-3 候选词条 */}
+      {/* وسط: نوارهای top-3 کلمه کاندید */}
       <g transform="translate(160,72)">
-        {/* 候选词容器小标题 */}
+        {/* عنوان کوچک کانتینر کلمات کاندید */}
         <text
           x="0"
           y="-22"
@@ -119,7 +119,7 @@ const BertCover: React.FC = () => {
         </text>
 
         {CANDIDATES.map((c, i) => {
-          /* 三个候选词左右并排 */
+          /* سه کلمه کاندید کنار هم */
           const x = (i - 1) * 48;
           const barWidth = c.prob * 38;
           return (
@@ -128,7 +128,7 @@ const BertCover: React.FC = () => {
               transform={`translate(${x},0)`}
               className="origin-center transition-transform duration-500"
             >
-              {/* 词方块 */}
+              {/* مربع کلمه */}
               <rect
                 x="-19"
                 y="-12"
@@ -150,7 +150,7 @@ const BertCover: React.FC = () => {
               >
                 {c.word}
               </text>
-              {/* 概率小数字 */}
+              {/* عدد کوچک احتمال */}
               <text
                 x="9"
                 y="3"
@@ -163,7 +163,7 @@ const BertCover: React.FC = () => {
               >
                 {(c.prob * 100).toFixed(0)}
               </text>
-              {/* 概率柱 */}
+              {/* ستون احتمال */}
               <line
                 x1="-19"
                 y1="14"
@@ -187,7 +187,7 @@ const BertCover: React.FC = () => {
         })}
       </g>
 
-      {/* 候选词 → [MASK] 的下行虚线（一条） */}
+      {/* خط نقطه‌چین رو به پایین از کلمه کاندید ← [MASK] (یک خط) */}
       <line
         x1="160"
         y1="88"
@@ -204,8 +204,8 @@ const BertCover: React.FC = () => {
         fill="#241C15"
       />
 
-      {/* 句子行：左 3 + [MASK] + 右 3 */}
-      {/* 左 3 个 token */}
+      {/* ردیف جمله: ۳ چپ + [MASK] + ۳ راست */}
+      {/* ۳ token چپ */}
       {LEFT_TOKENS.map((t, i) => (
         <g
           key={`l-${i}`}
@@ -235,7 +235,7 @@ const BertCover: React.FC = () => {
         </g>
       ))}
 
-      {/* 中间 [MASK] 大方块 */}
+      {/* مربع بزرگ [MASK] در وسط */}
       <g transform={`translate(${ROW_CX}, ${ROW_Y})`}>
         <rect
           x={-MASK_W / 2}
@@ -260,7 +260,7 @@ const BertCover: React.FC = () => {
         </text>
       </g>
 
-      {/* 右 3 个 token */}
+      {/* ۳ token راست */}
       {RIGHT_TOKENS.map((t, i) => (
         <g
           key={`r-${i}`}
@@ -290,7 +290,7 @@ const BertCover: React.FC = () => {
         </g>
       ))}
 
-      {/* 左 → [MASK] 汇聚弧线（attention 涌入） */}
+      {/* کمان همگرای چپ ← [MASK] (هجوم attention) */}
       <path
         d={`M ${leftX(0)} ${ROW_Y + TOK_H / 2 + 4} Q ${(leftX(0) + ROW_CX) / 2} ${ROW_Y + 22} ${ROW_CX - MASK_W / 2 - 2} ${ROW_Y + TOK_H / 2 + 2}`}
         stroke="#E07A5F"
@@ -300,7 +300,7 @@ const BertCover: React.FC = () => {
         strokeDasharray="3 3"
         className="animate-dash-flow"
       />
-      {/* 右 → [MASK] 汇聚弧线 */}
+      {/* کمان همگرای راست ← [MASK] */}
       <path
         d={`M ${rightX(2)} ${ROW_Y + TOK_H / 2 + 4} Q ${(rightX(2) + ROW_CX) / 2} ${ROW_Y + 22} ${ROW_CX + MASK_W / 2 + 2} ${ROW_Y + TOK_H / 2 + 2}`}
         stroke="#1B4B5A"
@@ -310,7 +310,7 @@ const BertCover: React.FC = () => {
         strokeDasharray="3 3"
         className="animate-dash-flow"
       />
-      {/* 中央小箭头会聚点 */}
+      {/* نقطه همگرایی فلش کوچک مرکزی */}
       <circle
         cx={ROW_CX}
         cy={ROW_Y + 28}
@@ -320,7 +320,7 @@ const BertCover: React.FC = () => {
         strokeWidth="1"
       />
 
-      {/* 左下：bert-base 110M 小标 */}
+      {/* پایین-چپ: برچسب کوچک bert-base 110M */}
       <g transform="translate(28,182) rotate(-3)" className="origin-left">
         <rect
           x="-3"
@@ -346,7 +346,7 @@ const BertCover: React.FC = () => {
         </text>
       </g>
 
-      {/* 底部 caption：双向 encoder */}
+      {/* caption پایین: encoder دوطرفه */}
       <text
         x="226"
         y="188"

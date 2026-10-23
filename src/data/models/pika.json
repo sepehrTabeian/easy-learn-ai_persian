@@ -2,22 +2,22 @@
     {
         "modelName": "Pika 2.2",
         "company": "Pika",
-        "country": "美国",
-        "openSourceStatus": "闭源",
+        "country": "آمریکا",
+        "openSourceStatus": "متن‌بسته",
         "releaseDate": "2025-02-27",
-        "description": "Pika 2.2 是 Pika 推出的视频生成模型，基于自研视频扩散与时序建模，新增 Pikaframes 与 Pikascenes，支持文本/图像到视频与首尾帧生成，提升运动连贯与角色控制；输出 720p/1080p、5/10 秒片段，适用于社媒内容、广告创意与轻电影镜头设计（发布时间官方未公开）。",
+        "description": "Pika 2.2 مدل تولید ویدئوی Pika است که بر پایه انتشار ویدئویی و مدل‌سازی زمانی خودساخته ساخته شده، Pikaframes و Pikascenes را اضافه کرده، از تبدیل متن/تصویر به ویدئو و تولید با فریم اول و آخر پشتیبانی می‌کند و پیوستگی حرکت و کنترل شخصیت را بهبود داده؛ خروجی کلیپ‌های 720p/1080p و ۵/۱۰ ثانیه‌ای؛ مناسب برای محتوای شبکه‌های اجتماعی، خلاقیت تبلیغاتی و طراحی نماهای سینمایی سبک (زمان انتشار به‌طور رسمی اعلام نشده).",
         "modelTags": [
-            "视频生成"
+            "تولید ویدئو"
         ],
         "outputImageMaxResolution": "1080P",
         "maxGenerationVideoDuration": "10",
         "relatedLinks": [
             {
-                "title": "Pika 官方 FAQ：模型输出与时长说明（含 2.2）",
+                "title": "FAQ رسمی Pika: توضیح خروجی و مدت مدل (شامل 2.2)",
                 "url": "https://pika.art/faq"
             },
             {
-                "title": "Pika 定价页：2.2/2.5 能力与分辨率/时长/信用点",
+                "title": "صفحه قیمت‌گذاری Pika: توانایی‌ها و وضوح/مدت/اعتبار 2.2/2.5",
                 "url": "https://pika.art/pricing"
             }
         ]
@@ -25,22 +25,22 @@
     {
         "modelName": "Pika 2.5",
         "company": "Pika",
-        "country": "美国",
-        "openSourceStatus": "闭源",
+        "country": "آمریکا",
+        "openSourceStatus": "متن‌بسته",
         "releaseDate": "2025-11-23",
-        "description": "Pika 2.5 是 Pika 最新视频生成模型，强化真实物理与提示遵循，画面细节更稳定；支持文本/图像到视频与多风格编辑（Pikaffects、Pikadditions、Pikaswaps、Pikatwists），提供 480p/720p/1080p、5/10 秒输出，适合广告创作、叙事短片与社媒内容制作（发布时间官方未公开）。",
+        "description": "Pika 2.5 جدیدترین مدل تولید ویدئوی Pika است که فیزیک واقعی و پیروی از پرامپت را تقویت کرده و جزئیات تصویر پایدارتر است؛ از تبدیل متن/تصویر به ویدئو و ویرایش چندسبکی (Pikaffects، Pikadditions، Pikaswaps، Pikatwists) پشتیبانی می‌کند و خروجی 480p/720p/1080p و ۵/۱۰ ثانیه ارائه می‌دهد؛ مناسب برای خلق تبلیغات، فیلم کوتاه روایی و تولید محتوای شبکه‌های اجتماعی (زمان انتشار به‌طور رسمی اعلام نشده).",
         "modelTags": [
-            "视频生成"
+            "تولید ویدئو"
         ],
         "outputImageMaxResolution": "1080P",
         "maxGenerationVideoDuration": "10",
         "relatedLinks": [
             {
-                "title": "Pika 官网首页：Pika 2.5 上线文案",
+                "title": "صفحه اصلی وب‌سایت Pika: متن عرضه Pika 2.5",
                 "url": "https://www.pika.art/"
             },
             {
-                "title": "Pika 定价页：2.5 文生/图生视频分辨率与时长",
+                "title": "صفحه قیمت‌گذاری Pika: وضوح و مدت ویدئوی تولیدی از متن/تصویر در 2.5",
                 "url": "https://pika.art/pricing"
             }
         ]

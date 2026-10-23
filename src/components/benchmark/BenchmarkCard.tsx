@@ -1,11 +1,11 @@
 /**
- * 基准测试卡片 · Mailchimp-Freddie 风
+ * کارت بنچمارک · سبک Mailchimp-Freddie
  *
- * 改造说明：
- * - 删除原 25+ 种类型彩虹渐变映射，缩成 5 色主题循环（按类型哈希取色）
- * - 删除所有 backdrop-blur / glass effect
- * - stamp 风：白底 + ink 2px 边 + offset 阴影
- * - 信息层级：顶 strip → 名称 → 元数据行 → 类型 chips → 描述 → 底部链接
+ * توضیح بازسازی:
+ * - نگاشت گرادیان رنگین‌کمانی ۲۵+ نوع قبلی حذف و به چرخه ۵ رنگ تم تقلیل یافت (رنگ بر اساس هش نوع)
+ * - همه backdrop-blur / glass effect حذف شد
+ * - سبک stamp: پس‌زمینه سفید + حاشیه 2px با ink + سایه offset
+ * - سلسله‌مراتب اطلاعات: strip بالا ← نام ← ردیف metadata ← chipهای نوع ← توضیح ← لینک‌های پایین
  */
 
 import React from "react";
@@ -23,7 +23,7 @@ interface BenchmarkCardProps {
   benchmark: Benchmark;
 }
 
-/** 按类型哈希分配品牌色 strip */
+/** تخصیص strip رنگ برند بر اساس هش نوع */
 const typeAccent = (type: string): string => {
   const palette = [
     "bg-butter",
@@ -68,18 +68,18 @@ export const BenchmarkCard: React.FC<BenchmarkCardProps> = ({ benchmark }) => {
 
   return (
     <article className="group flex flex-col bg-white border-2 border-ink rounded-2xl shadow-stamp transition-all duration-300 ease-spring hover:-translate-x-1 hover:-translate-y-1 hover:[box-shadow:8px_8px_0_0_#241C15] overflow-hidden">
-      {/* 顶 strip —— 主类型色 */}
+      {/* strip بالا —— رنگ نوع اصلی */}
       <div className={`h-2 ${accent} border-b-2 border-ink`} aria-hidden />
 
       <div className="p-5 flex flex-col flex-1">
-        {/* 名称 */}
+        {/* نام */}
         <h3 className="font-display font-extrabold text-[20px] text-ink leading-tight mb-3 line-clamp-1 group-hover:text-ink/85 transition-colors">
           {benchmark.name}
         </h3>
 
-        {/* 元数据行：样本 / 协议 / 年份 */}
+        {/* ردیف metadata: نمونه / مجوز / سال */}
         <div className="flex flex-wrap items-center gap-x-4 gap-y-1.5 mb-4 font-sans text-[12px] text-ink-secondary">
-          <span className="inline-flex items-center gap-1.5" title="样本数量">
+          <span className="inline-flex items-center gap-1.5" title="تعداد نمونه">
             <Hash className="w-3.5 h-3.5 text-ink/55" strokeWidth={2.5} />
             <span className="font-bold text-ink">
               {benchmark.numberOfExamples &&
@@ -87,10 +87,10 @@ export const BenchmarkCard: React.FC<BenchmarkCardProps> = ({ benchmark }) => {
                 ? formatNumber(benchmark.numberOfExamples)
                 : "—"}
             </span>
-            <span className="text-ink-tertiary">样本</span>
+            <span className="text-ink-tertiary">نمونه</span>
           </span>
 
-          <span className="inline-flex items-center gap-1.5" title="许可证">
+          <span className="inline-flex items-center gap-1.5" title="مجوز">
             <Scale className="w-3.5 h-3.5 text-ink/55" strokeWidth={2.5} />
             <span className="font-semibold text-ink max-w-[120px] truncate">
               {benchmark.license && benchmark.license !== "see dataset page"
@@ -102,7 +102,7 @@ export const BenchmarkCard: React.FC<BenchmarkCardProps> = ({ benchmark }) => {
           {benchmark.year && benchmark.year !== "n/a" && (
             <span
               className="inline-flex items-center gap-1.5"
-              title="发布年份"
+              title="سال انتشار"
             >
               <Calendar
                 className="w-3.5 h-3.5 text-ink/55"
@@ -113,7 +113,7 @@ export const BenchmarkCard: React.FC<BenchmarkCardProps> = ({ benchmark }) => {
           )}
         </div>
 
-        {/* 类型 chips —— cream + ink 边 */}
+        {/* chipهای نوع —— cream + حاشیه ink */}
         <div className="flex flex-wrap gap-1.5 mb-4">
           {benchmark.type.slice(0, 4).map((tag, idx) => (
             <span
@@ -130,33 +130,33 @@ export const BenchmarkCard: React.FC<BenchmarkCardProps> = ({ benchmark }) => {
           )}
         </div>
 
-        {/* 描述 */}
+        {/* توضیح */}
         <p className="font-sans text-[13px] text-ink-secondary leading-[1.7] line-clamp-3 flex-1 mb-4">
           {benchmark.description}
         </p>
 
-        {/* 底部链接行 —— 仅在有链接时显示，cream 浅底 ink 顶边 */}
+        {/* ردیف لینک‌های پایین —— فقط وقتی لینک باشد نمایش داده می‌شود، پس‌زمینه کم‌رنگ cream با حاشیه بالای ink */}
         {hasAnyLink && (
           <div className="flex items-center gap-1 -mx-5 -mb-5 px-5 py-3 bg-cream border-t-2 border-ink/15">
             {hasPaper && (
               <LinkBtn
                 href={benchmark.benchmarkPaper}
                 icon={<FileText className="w-3.5 h-3.5" strokeWidth={2.5} />}
-                label="论文"
+                label="مقاله"
               />
             )}
             {hasCode && (
               <LinkBtn
                 href={benchmark.codeRepository}
                 icon={<Github className="w-3.5 h-3.5" strokeWidth={2.5} />}
-                label="代码"
+                label="کد"
               />
             )}
             {hasDataset && (
               <LinkBtn
                 href={benchmark.dataset}
                 icon={<Database className="w-3.5 h-3.5" strokeWidth={2.5} />}
-                label="数据集"
+                label="مجموعه‌داده"
               />
             )}
           </div>
@@ -166,7 +166,7 @@ export const BenchmarkCard: React.FC<BenchmarkCardProps> = ({ benchmark }) => {
   );
 };
 
-/** 底部链接小按钮 */
+/** دکمه کوچک لینک پایین */
 const LinkBtn: React.FC<{
   href: string;
   icon: React.ReactNode;

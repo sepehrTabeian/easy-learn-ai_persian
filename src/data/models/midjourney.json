@@ -2,26 +2,26 @@
     {
         "modelName": "Midjourney 7",
         "company": "Midjourney",
-        "country": "美国",
-        "openSourceStatus": "闭源",
+        "country": "آمریکا",
+        "openSourceStatus": "متن‌بسته",
         "releaseDate": "2025-04-03",
-        "description": "Midjourney Version 7 采用重构系统与改进训练流程，显著提升提示解析与细节一致性；支持 Draft Mode、Omni Reference 与广泛纵横比，图片默认 1024px 并可上采样至 2048px；新增视频生成工具，适用于电商设计、品牌营销、影视分镜和社媒内容创作。",
+        "description": "Midjourney Version 7 از سیستم بازسازی‌شده و فرایند آموزش بهبودیافته استفاده می‌کند و تجزیه پرامپت و یکنواختی جزئیات را به‌طور محسوسی بهبود داده؛ از Draft Mode، Omni Reference و نسبت‌های ابعاد متنوع پشتیبانی می‌کند، تصاویر پیش‌فرض 1024px هستند و تا 2048px قابل افزایش‌اند؛ ابزار تولید ویدئو اضافه شده؛ مناسب برای طراحی فروشگاهی، بازاریابی برند، استوری‌بورد فیلم و خلق محتوای شبکه‌های اجتماعی.",
         "modelTags": [
-            "图片生成",
-            "视频生成"
+            "تولید تصویر",
+            "تولید ویدئو"
         ],
         "maxOutputResolution": "2048x2048",
         "relatedLinks": [
             {
-                "title": "Midjourney 文档：Version（含 V7 发布与特性）",
+                "title": "مستندات Midjourney: Version (شامل انتشار و ویژگی‌های V7)",
                 "url": "https://docs.midjourney.com/hc/en-us/articles/32199405667853-Version"
             },
             {
-                "title": "Midjourney 文档：Upscalers（V7 默认与最大分辨率）",
+                "title": "مستندات Midjourney: Upscalers (وضوح پیش‌فرض و حداکثر V7)",
                 "url": "https://docs.midjourney.com/hc/en-us/articles/32804058614669-Upscalers"
             },
             {
-                "title": "Midjourney 文档：Image Size & Resolution（V7 2048 说明）",
+                "title": "مستندات Midjourney: Image Size & Resolution (توضیح 2048 در V7)",
                 "url": "https://docs.midjourney.com/hc/en-us/articles/33329374594957-Image-Size-Resolution"
             }
         ]

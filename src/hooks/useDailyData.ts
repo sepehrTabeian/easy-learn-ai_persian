@@ -1,6 +1,6 @@
 /**
- * 日报数据管理的自定义 Hook
- * 封装日报列表和详情的数据获取逻辑，处理加载状态和错误处理
+ * Hook سفارشی مدیریت داده گزارش روزانه
+ * منطق دریافت داده فهرست و جزئیات گزارش روزانه را کپسوله می‌کند و وضعیت بارگذاری و خطا را مدیریت می‌کند
  */
 
 import { useState, useEffect } from 'react';
@@ -18,16 +18,16 @@ export const useDailyList = () => {
       try {
         setLoading(true);
         setError(null);
-        console.log('开始获取日报列表...');
+        console.log('شروع دریافت فهرست گزارش روزانه...');
         
         const data = await dailyApiUtils.fetchDailyList();
-        console.log('获取到日报数据:', data);
+        console.log('داده گزارش روزانه دریافت شد:', data);
         
         setDailyList(data);
-        // 移除成功提示弹框
-        // toast.success('日报列表加载成功！');
+        // حذف پنجره اعلان موفقیت
+        // toast.success('فهرست گزارش روزانه با موفقیت بارگذاری شد!');
       } catch (error) {
-        const errorMessage = error instanceof Error ? error.message : '未知错误';
+        const errorMessage = error instanceof Error ? error.message : 'خطای ناشناخته';
         setError(errorMessage);
         toast.error(errorMessage);
         console.error('Failed to load daily list:', error);
@@ -54,15 +54,15 @@ export const useDailyContent = (date: string) => {
       try {
         setLoading(true);
         setError(null);
-        console.log(`开始获取日报内容: ${date}...`);
+        console.log(`شروع دریافت محتوای گزارش روزانه: ${date}...`);
         
         const content = await dailyApiUtils.fetchDailyContent(date);
-        console.log(`获取到日报内容 ${date}:`, content.substring(0, 100) + '...');
+        console.log(`محتوای گزارش روزانه دریافت شد ${date}:`, content.substring(0, 100) + '...');
         
         setContent(content);
-        toast.success('日报内容加载成功！');
+        toast.success('محتوای گزارش روزانه با موفقیت بارگذاری شد!');
       } catch (error) {
-        const errorMessage = error instanceof Error ? error.message : '未知错误';
+        const errorMessage = error instanceof Error ? error.message : 'خطای ناشناخته';
         setError(errorMessage);
         toast.error(errorMessage);
         console.error(`Failed to load daily content for ${date}:`, error);
