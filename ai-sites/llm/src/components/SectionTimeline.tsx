@@ -159,11 +159,11 @@ const SectionTimeline: React.FC = () => {
             {/* 横线 */}
             <div
               aria-hidden
-              className="absolute left-3 right-3 top-1/2 h-[3px] bg-ink/20 -translate-y-1/2"
+              className="absolute start-3 end-3 top-1/2 h-[3px] bg-ink/20 -translate-y-1/2"
             />
             <div
               aria-hidden
-              className="absolute left-3 top-1/2 h-[3px] bg-ink -translate-y-1/2 transition-all duration-400 ease-spring"
+              className="absolute start-3 top-1/2 h-[3px] bg-ink -translate-y-1/2 transition-all duration-400 ease-spring"
               style={{
                 width: `calc((100% - 24px) * ${idx / (BEATS.length - 1)})`,
               }}

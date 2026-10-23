@@ -13,7 +13,7 @@ export const ProgressBar: React.FC<ProgressBarProps> = ({ scenes, currentIndex, 
 
   return (
     <div 
-      className="fixed bottom-0 left-0 right-0 z-50 flex flex-col items-center group"
+      className="fixed bottom-0 start-0 end-0 z-50 flex flex-col items-center group"
       onMouseEnter={() => setIsVisible(true)}
       onMouseLeave={() => setIsVisible(false)}
     >
@@ -45,12 +45,12 @@ export const ProgressBar: React.FC<ProgressBarProps> = ({ scenes, currentIndex, 
                    {scenes.map((scene, idx) => (
                       <div 
                         key={scene.id}
-                        className="h-full border-r border-slate-900 last:border-0 relative group/segment cursor-pointer"
+                        className="h-full border-e border-slate-900 last:border-0 relative group/segment cursor-pointer"
                         style={{ width: `${100 / scenes.length}%` }}
                         onClick={() => onSeek(idx)}
                       >
                          {/* Hover preview text */}
-                         <div className="absolute bottom-full mb-3 left-1/2 -translate-x-1/2 hidden group-hover/segment:block bg-black/90 text-white text-xs px-2 py-1 rounded whitespace-nowrap z-50 border border-white/20">
+                         <div className="absolute bottom-full mb-3 start-1/2 -translate-x-1/2 hidden group-hover/segment:block bg-black/90 text-white text-xs px-2 py-1 rounded whitespace-nowrap z-50 border border-white/20">
                             {scene.title}
                          </div>
                       </div>
@@ -70,7 +70,7 @@ export const ProgressBar: React.FC<ProgressBarProps> = ({ scenes, currentIndex, 
 
               {/* Current Scene Title Display */}
               <div className="mt-4 text-center">
-                 <span className="text-yellow-400 font-bold mr-2">CH.{currentIndex + 1}</span>
+                 <span className="text-yellow-400 font-bold me-2">CH.{currentIndex + 1}</span>
                  <span className="text-white text-lg">{scenes[currentIndex].title}</span>
               </div>
             </div>

@@ -135,7 +135,7 @@ const SectionSchemaEditor: React.FC = () => {
           它是模型决定
           <span className="relative inline-block">
             <span
-              className="absolute left-0 right-0 bottom-1 h-4 lg:h-5 bg-coral/55 -z-0 -rotate-1"
+              className="absolute start-0 end-0 bottom-1 h-4 lg:h-5 bg-coral/55 -z-0 -rotate-1"
               aria-hidden
             />
             <span className="relative z-10">要不要调你</span>
@@ -154,7 +154,7 @@ const SectionSchemaEditor: React.FC = () => {
 
         {/* preset 切换 */}
         <div className="flex flex-wrap gap-2 mb-6">
-          <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-ink/55 self-center mr-2">
+          <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-ink/55 self-center me-2">
             起点 · preset
           </span>
           {PRESETS.map((p) => {
@@ -173,7 +173,7 @@ const SectionSchemaEditor: React.FC = () => {
                 {p.label}
                 <span
                   className={[
-                    "ml-1.5 font-mono text-[9px]",
+                    "ms-1.5 font-mono text-[9px]",
                     on ? "text-butter" : "text-ink/45",
                   ].join(" ")}
                 >

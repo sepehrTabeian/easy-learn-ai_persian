@@ -320,7 +320,7 @@ function Segmented<T extends string>({
               key={c.id}
               onClick={() => onChange(c.id)}
               className={[
-                "text-left px-2.5 py-2 rounded-lg border-2 border-ink transition-all duration-250 ease-spring",
+                "text-start px-2.5 py-2 rounded-lg border-2 border-ink transition-all duration-250 ease-spring",
                 on
                   ? "bg-ink text-cream shadow-[3px_3px_0_0_#E07A5F]"
                   : "bg-white text-ink hover:bg-butter-tint",

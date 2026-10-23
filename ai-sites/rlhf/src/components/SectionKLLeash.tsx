@@ -192,7 +192,7 @@ const SectionKLLeash: React.FC = () => {
           <div className="lg:col-span-7 bg-cream border-2 border-ink rounded-3xl shadow-stamp-lg p-6 lg:p-7">
             {/* prompt 切换 */}
             <div className="flex flex-wrap gap-2 mb-5">
-              <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-ink/55 mr-1 self-center">
+              <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-ink/55 me-1 self-center">
                 prompt
               </span>
               {SAMPLES.map((s, i) => (
@@ -253,7 +253,7 @@ const SectionKLLeash: React.FC = () => {
 
             {/* 当前回答 */}
             <div key={`${sampleIdx}-${stop}`} className="animate-enter-fade">
-              <div className="px-4 py-3 bg-butter/30 border-l-4 border-butter-deep rounded-r-md mb-3">
+              <div className="px-4 py-3 bg-butter/30 border-s-4 border-butter-deep rounded-e-md mb-3">
                 <div className="font-mono text-[10px] uppercase tracking-[0.18em] text-ink/55 mb-0.5">
                   Q
                 </div>

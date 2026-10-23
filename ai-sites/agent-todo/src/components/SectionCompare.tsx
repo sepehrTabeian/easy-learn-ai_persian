@@ -114,10 +114,10 @@ const SectionCompare: React.FC = () => {
         <div className="mt-7 border-2 border-ink rounded-3xl overflow-hidden shadow-stamp-lg bg-cream">
           {/* header */}
           <div className="grid grid-cols-12 bg-ink text-cream font-mono text-[11px] tracking-[0.18em] uppercase">
-            <div className="col-span-3 px-5 py-3.5 border-r-2 border-cream/15">
+            <div className="col-span-3 px-5 py-3.5 border-e-2 border-cream/15">
               维度
             </div>
-            <div className="col-span-4 px-5 py-3.5 border-r-2 border-cream/15 flex items-center gap-2">
+            <div className="col-span-4 px-5 py-3.5 border-e-2 border-cream/15 flex items-center gap-2">
               <BookText className="w-3.5 h-3.5" strokeWidth={2.5} />
               TodoWrite
             </div>
@@ -135,7 +135,7 @@ const SectionCompare: React.FC = () => {
                 i < visible.length - 1 ? "border-b-2 border-ink/10" : ""
               }`}
             >
-              <div className="col-span-3 px-5 py-3.5 border-r-2 border-ink/10 font-display font-bold text-[14px] text-ink flex items-center gap-2">
+              <div className="col-span-3 px-5 py-3.5 border-e-2 border-ink/10 font-display font-bold text-[14px] text-ink flex items-center gap-2">
                 {d.critical && (
                   <span
                     className="w-1.5 h-1.5 rounded-full bg-pop"
@@ -144,7 +144,7 @@ const SectionCompare: React.FC = () => {
                 )}
                 {d.label}
               </div>
-              <div className="col-span-4 px-5 py-3.5 border-r-2 border-ink/10 font-sans text-[13.5px] text-ink/80 leading-snug">
+              <div className="col-span-4 px-5 py-3.5 border-e-2 border-ink/10 font-sans text-[13.5px] text-ink/80 leading-snug">
                 {d.todo}
               </div>
               <div className="col-span-5 px-5 py-3.5 font-sans text-[13.5px] text-ink leading-snug">

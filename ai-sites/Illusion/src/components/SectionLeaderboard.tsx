@@ -166,19 +166,19 @@ const SectionLeaderboard: React.FC = () => {
                   <div className="col-span-7 relative h-7 bg-ink/5 border border-ink/10 rounded overflow-hidden">
                     <div
                       className={[
-                        "absolute inset-y-0 left-0 transition-all duration-700 ease-spring",
+                        "absolute inset-y-0 start-0 transition-all duration-700 ease-spring",
                         isWinner ? "bg-teal" : "bg-ink",
                       ].join(" ")}
                       style={{ width: `${w}%` }}
                     />
                     {isWinner && (
-                      <div className="absolute right-2 top-1/2 -translate-y-1/2 font-mono text-[10px] uppercase tracking-[0.18em] text-cream/85">
+                      <div className="absolute end-2 top-1/2 -translate-y-1/2 font-mono text-[10px] uppercase tracking-[0.18em] text-cream/85">
                         winner
                       </div>
                     )}
                   </div>
 
-                  <div className="col-span-1 text-right font-display font-bold text-[15px] tabular-nums">
+                  <div className="col-span-1 text-end font-display font-bold text-[15px] tabular-nums">
                     {v.toFixed(v < 10 ? 1 : 0)}
                   </div>
                 </div>

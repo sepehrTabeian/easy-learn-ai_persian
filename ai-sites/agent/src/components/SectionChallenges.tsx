@@ -54,7 +54,7 @@ const SectionChallenges: React.FC = () => {
               </span>
             </span>
           </div>
-          <div className="flex flex-wrap gap-2 mt-3 pl-10">
+          <div className="flex flex-wrap gap-2 mt-3 ps-10">
             <a
               href="../agent-sandbox/index.html"
               className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-white border-2 border-ink rounded-full font-mono text-[11px] font-bold text-ink shadow-stamp hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-stamp-lg transition-all duration-250 ease-spring"
@@ -296,7 +296,7 @@ const CompoundingCard: React.FC = () => {
                   style={{ width: `${survival}%` }}
                 />
               </div>
-              <div className="font-display text-[12.5px] font-bold text-ink w-14 text-right">
+              <div className="font-display text-[12.5px] font-bold text-ink w-14 text-end">
                 {survival.toFixed(0)}%
               </div>
             </div>
@@ -452,7 +452,7 @@ const Stat2: React.FC<{ label: string; value: string; accent?: boolean }> = ({
 );
 
 const Fix: React.FC<{ children: React.ReactNode }> = ({ children }) => (
-  <div className="mt-4 px-3 py-2.5 bg-butter/45 border-l-4 border-butter rounded-r-lg">
+  <div className="mt-4 px-3 py-2.5 bg-butter/45 border-s-4 border-butter rounded-e-lg">
     <div className="font-mono text-[9px] uppercase tracking-[0.18em] text-ink/55 mb-0.5 font-bold">
       mitigation
     </div>

@@ -52,7 +52,7 @@ export default function SectionRepetitionTrap() {
             <br />
             考分不降反升。
           </h2>
-          <p className="text-base text-ink-secondary leading-relaxed mb-4 bg-cream border-l-4 border-coral pl-4 py-2">
+          <p className="text-base text-ink-secondary leading-relaxed mb-4 bg-cream border-s-4 border-coral ps-4 py-2">
             先认两个词：<strong className="text-ink">loss</strong> = 模型的考分，越低越好；<strong className="text-ink">epoch</strong> = 同一批数据训到第几遍（epoch=2 就是第二遍）。
           </p>
           <p className="text-lg text-ink-secondary leading-relaxed mb-4">
@@ -200,7 +200,7 @@ export default function SectionRepetitionTrap() {
                 <span className="text-ink-secondary">MGA 重写后训练</span>
               </span>
             </div>
-            <div className="text-right">
+            <div className="text-end">
               <div className="text-xs font-mono text-ink-tertiary">差距</div>
               <div className="font-display text-2xl text-coral font-bold flex items-center gap-1">
                 <RotateCcw className="w-5 h-5" />

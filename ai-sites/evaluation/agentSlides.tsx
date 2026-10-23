@@ -55,11 +55,11 @@ export const AGENT_SLIDES: SlideData[] = [
               {/* Floating Tools */}
               <Wrench
                 size={20}
-                className="absolute top-4 right-6 text-white animate-bounce"
+                className="absolute top-4 end-6 text-white animate-bounce"
               />
               <Database
                 size={20}
-                className="absolute bottom-6 left-6 text-white animate-pulse"
+                className="absolute bottom-6 start-6 text-white animate-pulse"
               />
             </div>
             <h3 className="text-2xl font-bold text-white">Agent</h3>
@@ -67,7 +67,7 @@ export const AGENT_SLIDES: SlideData[] = [
           </div>
         </div>
 
-        <div className="max-w-3xl text-center bg-white/5 p-6 rounded-xl border-l-4 border-blue-500">
+        <div className="max-w-3xl text-center bg-white/5 p-6 rounded-xl border-s-4 border-blue-500">
           <p className="text-lg text-gray-300 leading-relaxed">
             在实际业务场景中，仅靠一个 LLM 是不够的。
             <br />
@@ -121,7 +121,7 @@ export const AGENT_SLIDES: SlideData[] = [
         <div className="flex flex-col md:flex-row gap-8 items-stretch">
           {/* The Setup */}
           <div className="flex-1 bg-slate-900 border border-slate-700 p-6 rounded-xl relative overflow-hidden group hover:border-blue-500 transition-colors">
-            <div className="absolute top-0 right-0 p-3 opacity-20 group-hover:opacity-100 transition-opacity">
+            <div className="absolute top-0 end-0 p-3 opacity-20 group-hover:opacity-100 transition-opacity">
               <Bot size={60} className="text-blue-500" />
             </div>
             <h3 className="text-xl font-bold text-white mb-4">场景设定</h3>
@@ -163,7 +163,7 @@ export const AGENT_SLIDES: SlideData[] = [
                 0 Tolerance
               </h3>
               <p className="text-red-200 mb-4">极其严苛的评分标准</p>
-              <div className="grid grid-cols-2 gap-4 text-sm text-left">
+              <div className="grid grid-cols-2 gap-4 text-sm text-start">
                 <div className="flex items-center gap-2 text-gray-300">
                   <XCircle size={16} className="text-red-500" /> 违背流程
                 </div>
@@ -194,25 +194,25 @@ export const AGENT_SLIDES: SlideData[] = [
     content: (
       <div className="relative w-full max-w-4xl mx-auto bg-slate-900/50 rounded-xl border border-white/5 p-6 h-[500px] overflow-y-auto custom-scrollbar">
         {/* Timeline Line */}
-        <div className="absolute left-8 top-6 bottom-6 w-0.5 bg-gray-700"></div>
+        <div className="absolute start-8 top-6 bottom-6 w-0.5 bg-gray-700"></div>
 
-        <div className="space-y-6 pl-16 relative">
+        <div className="space-y-6 ps-16 relative">
           {/* Step 1: User Complaint */}
           <div className="relative group">
-            <div className="absolute -left-[45px] top-0 w-8 h-8 rounded-full bg-white text-slate-900 flex items-center justify-center font-bold shadow-lg z-10">
+            <div className="absolute -start-[45px] top-0 w-8 h-8 rounded-full bg-white text-slate-900 flex items-center justify-center font-bold shadow-lg z-10">
               U
             </div>
-            <div className="bg-slate-800 p-4 rounded-tl-none rounded-2xl border border-gray-600 inline-block max-w-[80%]">
+            <div className="bg-slate-800 p-4 rounded-ss-none rounded-2xl border border-gray-600 inline-block max-w-[80%]">
               <p className="text-white">我手机怎么没信号了？急死我了！</p>
             </div>
           </div>
 
           {/* Step 2: Agent Tool Check */}
           <div className="relative group">
-            <div className="absolute -left-[45px] top-0 w-8 h-8 rounded-full bg-blue-600 text-white flex items-center justify-center shadow-lg z-10 border border-blue-400">
+            <div className="absolute -start-[45px] top-0 w-8 h-8 rounded-full bg-blue-600 text-white flex items-center justify-center shadow-lg z-10 border border-blue-400">
               A
             </div>
-            <div className="bg-blue-900/30 p-4 rounded-tr-none rounded-2xl border border-blue-500/30 w-full">
+            <div className="bg-blue-900/30 p-4 rounded-se-none rounded-2xl border border-blue-500/30 w-full">
               <div className="flex items-center gap-2 text-blue-300 text-xs font-mono mb-2">
                 <Wrench size={12} /> tool_call: check_network_status(user_id)
               </div>
@@ -224,7 +224,7 @@ export const AGENT_SLIDES: SlideData[] = [
 
           {/* Step 3: Agent Instruction */}
           <div className="relative group">
-            <div className="bg-blue-600/20 p-4 rounded-tr-none rounded-2xl border border-blue-500/50 inline-block w-full text-right self-end">
+            <div className="bg-blue-600/20 p-4 rounded-se-none rounded-2xl border border-blue-500/50 inline-block w-full text-end self-end">
               <p className="text-blue-100">
                 亲，系统显示您开了飞行模式。请您尝试关闭飞行模式看看？
               </p>
@@ -233,7 +233,7 @@ export const AGENT_SLIDES: SlideData[] = [
 
           {/* Step 4: Logic Loop (Simulation) */}
           <div className="relative p-4 border-2 border-dashed border-gray-600 rounded-xl bg-black/20">
-            <div className="absolute -top-3 left-4 bg-slate-900 px-2 text-xs text-gray-500 font-mono">
+            <div className="absolute -top-3 start-4 bg-slate-900 px-2 text-xs text-gray-500 font-mono">
               Policy Logic
             </div>
             <div className="space-y-2 text-sm text-gray-400">
@@ -252,7 +252,7 @@ export const AGENT_SLIDES: SlideData[] = [
 
           {/* Step 5: Final Action */}
           <div className="relative group">
-            <div className="absolute -left-[45px] top-0 w-8 h-8 rounded-full bg-green-600 text-white flex items-center justify-center shadow-lg z-10">
+            <div className="absolute -start-[45px] top-0 w-8 h-8 rounded-full bg-green-600 text-white flex items-center justify-center shadow-lg z-10">
               ✓
             </div>
             <div className="bg-green-900/20 p-4 rounded-2xl border border-green-500/30 w-full">
@@ -327,7 +327,7 @@ export const AGENT_SLIDES: SlideData[] = [
               <div className="text-xs text-gray-500">Tools</div>
             </div>
           </div>
-          <p className="text-gray-400 text-sm leading-relaxed border-l-2 border-gray-600 pl-4">
+          <p className="text-gray-400 text-sm leading-relaxed border-s-2 border-gray-600 ps-4">
             相比 τ²-bench 的专精，MCP-Atlas
             给模型一张巨大的“工具地图”。模型必须自己发现工具、阅读文档、组合调用。
           </p>
@@ -360,7 +360,7 @@ export const AGENT_SLIDES: SlideData[] = [
           ))}
 
           {/* Connection Lines (Simulated with SVG if needed, or just layout) */}
-          <div className="absolute text-xs text-indigo-500/50 font-mono bottom-2 right-4">
+          <div className="absolute text-xs text-indigo-500/50 font-mono bottom-2 end-4">
             Map: Full Environment
           </div>
         </div>

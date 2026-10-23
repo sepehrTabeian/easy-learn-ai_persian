@@ -133,14 +133,14 @@ const SectionAmnesia: React.FC = () => {
               </div>
               <div className="relative h-7 bg-cream border-2 border-ink rounded-full overflow-hidden">
                 <div
-                  className={`absolute inset-y-0 left-0 transition-all duration-400 ease-editorial ${
+                  className={`absolute inset-y-0 start-0 transition-all duration-400 ease-editorial ${
                     isOverflow ? "bg-pop" : isCrowded ? "bg-coral" : "bg-butter"
                   }`}
                   style={{ width: `${pct}%` }}
                 />
                 {/* 75% 警戒线 */}
                 <div className="absolute inset-y-0" style={{ left: "75%" }}>
-                  <div className="w-px h-full bg-ink/40 border-l border-dashed border-ink/40" />
+                  <div className="w-px h-full bg-ink/40 border-s border-dashed border-ink/40" />
                 </div>
               </div>
 
@@ -194,7 +194,7 @@ const SectionAmnesia: React.FC = () => {
                   </p>
                 </div>
               ) : (
-                <div className="space-y-2 max-h-[420px] overflow-y-auto pr-2">
+                <div className="space-y-2 max-h-[420px] overflow-y-auto pe-2">
                   {/* system prompt */}
                   <div className="bg-ink/5 border-2 border-ink/15 rounded-xl px-3.5 py-2 flex items-center justify-between">
                     <span className="font-mono text-[11px] text-ink/65">
@@ -218,7 +218,7 @@ const SectionAmnesia: React.FC = () => {
                       </div>
                       <div className="px-3.5 py-2 bg-white">
                         <div className="font-sans text-[13px] text-ink/80 leading-[1.5]">
-                          <span className="font-mono text-[10.5px] text-coral mr-1.5">USER</span>
+                          <span className="font-mono text-[10.5px] text-coral me-1.5">USER</span>
                           {t.label}
                         </div>
                         <div className="flex items-center gap-3 mt-1.5 font-mono text-[10.5px] text-ink/55">
@@ -246,7 +246,7 @@ const SectionAmnesia: React.FC = () => {
             </div>
             <p className="font-sans text-[14.5px] leading-[1.7] text-cream/85">
               <span className="font-bold text-butter">短期</span>：当前对话内，信息怎么在窗口里高效组织（截断 / 压缩 / 摘要）。
-              <span className="font-bold text-butter ml-2">长期</span>：跨对话，有价值的信息怎么持久保存、下次怎么取回来。
+              <span className="font-bold text-butter ms-2">长期</span>：跨对话，有价值的信息怎么持久保存、下次怎么取回来。
               大多数人说的「AI 记忆」，主要指后者。下面 5 节都围绕长期记忆。
             </p>
           </div>

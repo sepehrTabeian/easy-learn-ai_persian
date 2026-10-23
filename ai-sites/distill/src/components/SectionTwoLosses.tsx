@@ -66,7 +66,7 @@ const SectionTwoLosses: React.FC = () => {
         <h2 className="font-display text-display-lg text-ink mb-5 max-w-3xl">
           学生被{" "}
           <span className="relative inline-block">
-            <span className="absolute left-0 right-0 bottom-1 h-4 lg:h-5 bg-butter -z-0 -rotate-1" aria-hidden />
+            <span className="absolute start-0 end-0 bottom-1 h-4 lg:h-5 bg-butter -z-0 -rotate-1" aria-hidden />
             <span className="relative z-10">两条绳</span>
           </span>{" "}
           同时拉。
@@ -111,7 +111,7 @@ const SectionTwoLosses: React.FC = () => {
                     <span>KL(p_s‖p_t) · T²</span>
                   </span>
                   <br />
-                  <span className="ml-3">+</span>{" "}
+                  <span className="ms-3">+</span>{" "}
                   <span
                     className="inline-flex items-center gap-1 px-1.5 rounded transition-all"
                     style={{
@@ -207,7 +207,7 @@ const SectionTwoLosses: React.FC = () => {
                           style={{ width: `${Math.max(p * 100, 0.3)}%` }}
                         />
                       </div>
-                      <div className="w-12 text-right font-mono text-[10.5px] text-cream/75 tabular-nums">
+                      <div className="w-12 text-end font-mono text-[10.5px] text-cream/75 tabular-nums">
                         {(p * 100).toFixed(1)}%
                       </div>
                     </div>

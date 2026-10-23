@@ -168,7 +168,7 @@ const SectionVendorRound: React.FC = () => {
                   type="button"
                   key={dim.id}
                   onClick={() => toggle(dim.id)}
-                  className={`text-left px-4 py-3 border-2 border-ink rounded-2xl transition-all duration-250 ease-spring flex items-start gap-3 ${
+                  className={`text-start px-4 py-3 border-2 border-ink rounded-2xl transition-all duration-250 ease-spring flex items-start gap-3 ${
                     on
                       ? "bg-ink text-cream shadow-stamp-lg"
                       : "bg-cream text-ink shadow-stamp hover:translate-x-[-1px] hover:translate-y-[-1px]"
@@ -281,7 +281,7 @@ const SectionVendorRound: React.FC = () => {
                   </div>
                 </div>
                 {isTop && (
-                  <div className="absolute -top-3 -right-3 px-3 py-1.5 bg-pop text-white border-2 border-ink rounded-full font-mono text-[10.5px] tracking-[0.18em] uppercase shadow-stamp">
+                  <div className="absolute -top-3 -end-3 px-3 py-1.5 bg-pop text-white border-2 border-ink rounded-full font-mono text-[10.5px] tracking-[0.18em] uppercase shadow-stamp">
                     ★ 推荐
                   </div>
                 )}

@@ -17,7 +17,7 @@ const FEED = [
 const SectionHero: React.FC = () => {
   return (
     <section className="relative px-4 sm:px-6 lg:px-8 pt-20 lg:pt-28 pb-20 lg:pb-24 overflow-hidden">
-      <div className="absolute top-24 right-[8%] hidden md:grid grid-cols-4 gap-2 pointer-events-none opacity-40">
+      <div className="absolute top-24 end-[8%] hidden md:grid grid-cols-4 gap-2 pointer-events-none opacity-40">
         {Array.from({ length: 12 }).map((_, i) => (
           <span key={i} className="w-1.5 h-1.5 rounded-full bg-ink/30" />
         ))}

@@ -117,7 +117,7 @@ const SectionThreeTypes: React.FC = () => {
                 key={k}
                 onClick={() => setActive(k)}
                 className={[
-                  "rounded-2xl border-2 border-ink px-3 py-3 text-left transition-all duration-250 ease-spring",
+                  "rounded-2xl border-2 border-ink px-3 py-3 text-start transition-all duration-250 ease-spring",
                   on ? "shadow-stamp -translate-y-0.5 text-cream" : "bg-cream text-ink/60 hover:text-ink",
                 ].join(" ")}
                 style={on ? { backgroundColor: TYPES[k].color } : undefined}

@@ -117,7 +117,7 @@ const SectionAfter: React.FC = () => {
 
         {/* prompt chip */}
         <div className="flex flex-wrap gap-2 mb-5">
-          <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-ink/50 self-center mr-1">
+          <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-ink/50 self-center me-1">
             ① 挑一个 prompt
           </span>
           {CASES.map((x) => {
@@ -144,7 +144,7 @@ const SectionAfter: React.FC = () => {
 
         {/* 3 stage trace */}
         <div className="flex items-center gap-2 mb-5">
-          <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-ink/50 mr-1">
+          <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-ink/50 me-1">
             ② 推一步看一阶段
           </span>
           {STAGES.map((s, i) => {
@@ -236,7 +236,7 @@ const SectionAfter: React.FC = () => {
               </div>
 
               {stageIdx === STAGES.length - 1 && (
-                <p className="mt-4 text-[13px] text-ink/70 leading-relaxed border-l-2 border-coral pl-3">
+                <p className="mt-4 text-[13px] text-ink/70 leading-relaxed border-s-2 border-coral ps-3">
                   {c.note}
                 </p>
               )}

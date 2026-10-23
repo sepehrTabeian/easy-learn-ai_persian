@@ -86,7 +86,7 @@ const ContextEvolutionChart: React.FC = () => {
               {active.model}
             </div>
           </div>
-          <div className="text-right">
+          <div className="text-end">
             <div className="font-display font-extrabold text-[18px] text-coral leading-none">
               {tokensLabel(active.tokens)}
             </div>
@@ -197,7 +197,7 @@ const SectionWhatYouGetToday: React.FC = () => {
             <span className="relative inline-block">
               <span className="relative z-10">1 个大坑</span>
               <span
-                className="absolute left-0 right-0 bottom-1 h-3.5 lg:h-5 bg-coral/55 -z-0"
+                className="absolute start-0 end-0 bottom-1 h-3.5 lg:h-5 bg-coral/55 -z-0"
                 aria-hidden
               />
             </span>

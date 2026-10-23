@@ -76,7 +76,7 @@ const SectionRules: React.FC = () => {
           <h2 className="font-display text-display-lg text-ink mb-4 leading-tight">
             <span className="relative inline-block">
               <span
-                className="absolute left-0 right-0 bottom-1 h-3 lg:h-4 bg-butter -z-0"
+                className="absolute start-0 end-0 bottom-1 h-3 lg:h-4 bg-butter -z-0"
                 aria-hidden
               />
               <span className="relative z-10">三条默认选择</span>
@@ -101,7 +101,7 @@ const SectionRules: React.FC = () => {
               >
                 <button
                   onClick={() => setOpen(on ? null : r.id)}
-                  className="w-full flex items-start justify-between gap-4 p-5 lg:p-6 text-left"
+                  className="w-full flex items-start justify-between gap-4 p-5 lg:p-6 text-start"
                 >
                   <div className="flex-1">
                     <div className="font-mono text-[10.5px] uppercase tracking-[0.22em] text-ink/55 font-semibold mb-2">

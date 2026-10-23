@@ -153,7 +153,7 @@ const SectionAutoQA: React.FC = () => {
                         </span>
                         <p className="font-display font-bold text-[15.5px] text-ink leading-snug pt-0.5">Q：{qa.q}</p>
                       </div>
-                      <p className="mt-2 ml-8 font-sans text-[14.5px] leading-[1.7] text-ink/80">A：{qa.a}</p>
+                      <p className="mt-2 ms-8 font-sans text-[14.5px] leading-[1.7] text-ink/80">A：{qa.a}</p>
                     </div>
                   ))}
                 </div>

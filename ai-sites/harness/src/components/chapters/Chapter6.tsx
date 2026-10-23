@@ -176,7 +176,7 @@ export default function Chapter6({ step }: { step: number }) {
                       opacity: state.opacity,
                     }}
                     transition={{ duration: 1.2, type: 'spring', bounce: 0.3 }}
-                    className="absolute left-1/2 top-1/2 rounded-full"
+                    className="absolute start-1/2 top-1/2 rounded-full"
                     style={{
                       width: dot.size,
                       height: dot.size,

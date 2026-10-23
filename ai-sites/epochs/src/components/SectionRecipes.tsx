@@ -178,7 +178,7 @@ const SectionRecipes: React.FC = () => {
               >
                 <button
                   onClick={() => setOpenId(open ? null : r.id)}
-                  className="w-full px-4 py-3.5 flex items-center gap-3 text-left hover:bg-cream/60 transition-colors"
+                  className="w-full px-4 py-3.5 flex items-center gap-3 text-start hover:bg-cream/60 transition-colors"
                 >
                   <div className="flex-1 min-w-0">
                     <div className="flex items-baseline gap-2.5 flex-wrap">

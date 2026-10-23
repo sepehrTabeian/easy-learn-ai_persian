@@ -130,7 +130,7 @@ const SectionSemiAuto: React.FC = () => {
               </div>
               <div className="font-display font-extrabold text-[52px] leading-none text-pop">
                 {saved}
-                <span className="font-mono text-[16px] text-ink/45 ml-1">%</span>
+                <span className="font-mono text-[16px] text-ink/45 ms-1">%</span>
               </div>
               <div className="mt-4 h-4 bg-cream border-2 border-ink rounded-full overflow-hidden">
                 <div

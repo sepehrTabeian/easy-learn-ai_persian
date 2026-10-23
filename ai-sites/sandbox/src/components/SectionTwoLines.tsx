@@ -151,7 +151,7 @@ const SectionTwoLines: React.FC = () => {
                         setFs(cell.f);
                         setNet(cell.n);
                       }}
-                      className={`text-left border-2 border-ink rounded-xl p-3 transition-all duration-300 ease-spring ${
+                      className={`text-start border-2 border-ink rounded-xl p-3 transition-all duration-300 ease-spring ${
                         active
                           ? `${cellResult.tone} shadow-stamp-lg translate-x-[-1px] translate-y-[-1px]`
                           : "bg-white shadow-stamp hover:translate-x-[-1px] hover:translate-y-[-1px] hover:shadow-stamp-lg"
@@ -236,7 +236,7 @@ const Toggle: React.FC<{
   <button
     type="button"
     onClick={onChange}
-    className={`w-full text-left border-2 border-ink rounded-2xl p-5 flex items-center justify-between transition-all duration-300 ease-spring ${
+    className={`w-full text-start border-2 border-ink rounded-2xl p-5 flex items-center justify-between transition-all duration-300 ease-spring ${
       on
         ? "bg-ink text-cream shadow-stamp-lg translate-x-[-1px] translate-y-[-1px]"
         : "bg-white text-ink shadow-stamp"

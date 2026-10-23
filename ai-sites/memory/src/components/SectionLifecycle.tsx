@@ -162,7 +162,7 @@ const SectionLifecycle: React.FC = () => {
                     setStageIdx(i);
                     setHoverIdx(null);
                   }}
-                  className={`relative border-2 border-ink rounded-2xl p-4 text-left transition-all duration-300 ease-spring ${
+                  className={`relative border-2 border-ink rounded-2xl p-4 text-start transition-all duration-300 ease-spring ${
                     active
                       ? `${s.tone} shadow-stamp-lg translate-x-[-1px] translate-y-[-1px]`
                       : done
@@ -228,7 +228,7 @@ const SectionLifecycle: React.FC = () => {
               </div>
               <div className="font-display font-extrabold text-[32px] text-ink leading-[1.05] mb-3">
                 {stage.label}
-                <span className="text-ink/40 font-mono text-[18px] ml-2">{stage.en}</span>
+                <span className="text-ink/40 font-mono text-[18px] ms-2">{stage.en}</span>
               </div>
               <p className="font-sans text-[15px] leading-[1.7] text-ink/80">
                 {stage.oneliner}

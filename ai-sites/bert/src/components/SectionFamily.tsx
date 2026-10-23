@@ -187,7 +187,7 @@ const SectionFamily: React.FC = () => {
           {/* 横向 6 个节点 */}
           <div className="relative mb-7">
             {/* 时间轴底线 */}
-            <div className="absolute left-0 right-0 top-1/2 h-[2px] bg-ink/15" />
+            <div className="absolute start-0 end-0 top-1/2 h-[2px] bg-ink/15" />
             <div className="relative grid grid-cols-6 gap-1">
               {FAMILY.map((m, i) => {
                 const isActive = i === activeIdx;

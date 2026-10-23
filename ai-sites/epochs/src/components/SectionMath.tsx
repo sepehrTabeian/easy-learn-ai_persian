@@ -151,7 +151,7 @@ const SectionMath: React.FC = () => {
                   key={p.id}
                   onClick={() => applyPreset(p)}
                   className={[
-                    "text-left p-2.5 rounded-lg border-2 border-ink transition-all duration-250 ease-spring",
+                    "text-start p-2.5 rounded-lg border-2 border-ink transition-all duration-250 ease-spring",
                     on
                       ? "bg-ink text-cream shadow-[3px_3px_0_0_#E07A5F]"
                       : "bg-white text-ink hover:bg-cream",
@@ -279,7 +279,7 @@ const StepperRow: React.FC<{
         >
           <Minus className="w-3.5 h-3.5" strokeWidth={2.6} />
         </button>
-        <div className="font-display text-[18px] font-bold text-ink tabular-nums min-w-[80px] text-right">
+        <div className="font-display text-[18px] font-bold text-ink tabular-nums min-w-[80px] text-end">
           {display}
         </div>
         <button

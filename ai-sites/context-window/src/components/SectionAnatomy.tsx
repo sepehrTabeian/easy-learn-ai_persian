@@ -226,7 +226,7 @@ const SectionAnatomy: React.FC = () => {
                 <div>
                   <div className="font-display font-extrabold text-[20px] text-ink leading-none">
                     {focusTokens.toLocaleString()}
-                    <span className="font-mono text-[12px] font-normal text-ink/55 ml-1">tokens</span>
+                    <span className="font-mono text-[12px] font-normal text-ink/55 ms-1">tokens</span>
                   </div>
                   <div className="font-mono text-[11px] text-ink/55 mt-1">
                     ≈ {Math.round(focusTokens * 4 / 100) / 10}K 字符
@@ -279,7 +279,7 @@ const SectionAnatomy: React.FC = () => {
                       onMouseEnter={() => setHoverKey(seg.key)}
                       onFocus={() => setHoverKey(seg.key)}
                       onMouseLeave={() => setHoverKey(null)}
-                      className={`relative flex flex-col justify-end items-start px-3 py-3 border-r-2 border-ink last:border-r-0 transition-all duration-300 ease-spring cursor-pointer outline-none ${
+                      className={`relative flex flex-col justify-end items-start px-3 py-3 border-e-2 border-ink last:border-e-0 transition-all duration-300 ease-spring cursor-pointer outline-none ${
                         isHover ? "brightness-110" : hoverKey ? "opacity-55" : ""
                       }`}
                       style={{
@@ -298,7 +298,7 @@ const SectionAnatomy: React.FC = () => {
                         {tokens.toLocaleString()}t · {Math.round(pct)}%
                       </span>
                       {isHover && (
-                        <span className="absolute top-2 right-2 w-2 h-2 rounded-full bg-cream border-2 border-ink" />
+                        <span className="absolute top-2 end-2 w-2 h-2 rounded-full bg-cream border-2 border-ink" />
                       )}
                     </button>
                   );

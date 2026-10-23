@@ -53,13 +53,13 @@ const SectionNumberLine: React.FC = () => {
         <h2 className="font-display text-display-lg text-ink mb-5 max-w-3xl">
           量化就是把数轴
           <span className="relative inline-block">
-            <span className="absolute left-0 right-0 bottom-1 h-4 lg:h-5 bg-butter -z-0 -rotate-1" aria-hidden />
+            <span className="absolute start-0 end-0 bottom-1 h-4 lg:h-5 bg-butter -z-0 -rotate-1" aria-hidden />
             <span className="relative z-10">切成若干格</span>
           </span>
           ，
           <br />
           每个数<span className="relative inline-block">
-            <span className="absolute left-0 right-0 bottom-1 h-4 lg:h-5 bg-coral/50 -z-0 rotate-1" aria-hidden />
+            <span className="absolute start-0 end-0 bottom-1 h-4 lg:h-5 bg-coral/50 -z-0 rotate-1" aria-hidden />
             <span className="relative z-10">吸附到最近一格</span>
           </span>。
         </h2>
@@ -78,7 +78,7 @@ const SectionNumberLine: React.FC = () => {
               </div>
               <div className="font-display text-[24px] font-bold text-ink tabular-nums">
                 {bits} <span className="font-mono text-[11px] text-ink/50">bit</span>
-                <span className="ml-3 font-mono text-[11px] text-ink/45">
+                <span className="ms-3 font-mono text-[11px] text-ink/45">
                   · {levels} 个格子
                 </span>
               </div>
@@ -102,7 +102,7 @@ const SectionNumberLine: React.FC = () => {
           <button
             onClick={() => setShowOriginal((v) => !v)}
             className={[
-              "sm:col-span-4 p-4 border-2 border-ink rounded-2xl text-left transition-all duration-250 ease-spring",
+              "sm:col-span-4 p-4 border-2 border-ink rounded-2xl text-start transition-all duration-250 ease-spring",
               showOriginal
                 ? "bg-ink text-cream shadow-stamp"
                 : "bg-white text-ink hover:bg-cream shadow-[2px_2px_0_0_#241C15]",

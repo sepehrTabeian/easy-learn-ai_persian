@@ -14,7 +14,7 @@ export const SceneIntro: React.FC<SceneProps> = ({ step }) => {
         transition={{ duration: 0.8, type: 'spring' }}
         className="relative"
       >
-        <div className="absolute -top-12 -left-12 opacity-30 animate-pulse">
+        <div className="absolute -top-12 -start-12 opacity-30 animate-pulse">
            <Flower size={120} className="text-pink-300" />
         </div>
         
@@ -24,7 +24,7 @@ export const SceneIntro: React.FC<SceneProps> = ({ step }) => {
           </ChalkText>
         </div>
 
-        <div className="absolute -bottom-8 -right-8 opacity-30">
+        <div className="absolute -bottom-8 -end-8 opacity-30">
            <Flower size={80} className="text-purple-300" />
         </div>
       </motion.div>

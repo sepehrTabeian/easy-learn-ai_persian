@@ -47,9 +47,9 @@ const SectionDecompose: React.FC = () => {
         <div className="mb-10 lg:mb-12 max-w-3xl">
           <h2 className="font-display text-display-lg text-ink mb-4 leading-tight">
             LoRA 把一个大矩阵<br className="lg:hidden" />
-            <span className="relative inline-block ml-0 lg:ml-2">
+            <span className="relative inline-block ms-0 lg:ms-2">
               <span
-                className="absolute left-0 right-0 bottom-1 h-3 lg:h-4 bg-butter -z-0"
+                className="absolute start-0 end-0 bottom-1 h-3 lg:h-4 bg-butter -z-0"
                 aria-hidden
               />
               <span className="relative z-10">拆成两个细矩阵的乘积</span>
@@ -64,7 +64,7 @@ const SectionDecompose: React.FC = () => {
           <p className="mt-3 text-[14px] text-ink/55 max-w-2xl leading-relaxed">
             拖右边的 r，实时看两条补丁变粗变细、参数百分比和 7B 模型的总训练参数。α/r（alpha 除以 r）是把补丁的输出放大或缩小多少再加回主路径，也就是「LoRA scale」。
           </p>
-          <p className="mt-4 text-[13.5px] text-ink/65 max-w-2xl leading-relaxed border-l-4 border-ink/20 pl-3.5">
+          <p className="mt-4 text-[13.5px] text-ink/65 max-w-2xl leading-relaxed border-s-4 border-ink/20 ps-3.5">
             这里只给个直觉感受——这是 6 种方法里对 LoRA 的一瞥。LoRA 完整怎么调参、该挂在模型哪几层、训完怎么部署，《LoRA》站有一整页讲透。
           </p>
         </div>
@@ -321,7 +321,7 @@ const MatrixBlock: React.FC<{
           {label}
         </span>
         {isFrozen && (
-          <div className="absolute -top-2 -right-2 px-1.5 py-0.5 bg-cream border-2 border-ink rounded-full font-mono text-[8.5px] font-bold uppercase tracking-wider">
+          <div className="absolute -top-2 -end-2 px-1.5 py-0.5 bg-cream border-2 border-ink rounded-full font-mono text-[8.5px] font-bold uppercase tracking-wider">
             冻
           </div>
         )}

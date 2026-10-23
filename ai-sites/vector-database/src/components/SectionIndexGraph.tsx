@@ -141,7 +141,7 @@ const SectionIndexGraph: React.FC = () => {
                     x={node.x}
                     y={node.y + 38}
                     textAnchor="middle"
-                    fontFamily="Plus Jakarta Sans, Noto Sans SC, sans-serif"
+                    fontFamily="Plus Jakarta Sans, Vazirmatn, sans-serif"
                     fontSize="11"
                     fontWeight="700"
                     fill="#5A5147"

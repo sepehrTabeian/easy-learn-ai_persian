@@ -180,7 +180,7 @@ const SectionYouRank: React.FC = () => {
                   />
                 ))}
               </div>
-              <div className="font-mono text-[11px] text-ink/70 ml-2 tabular-nums">
+              <div className="font-mono text-[11px] text-ink/70 ms-2 tabular-nums">
                 {Math.min(cursor + (done ? 0 : 1), PAIRS.length)} / {PAIRS.length}
               </div>
             </div>
@@ -211,7 +211,7 @@ const SectionYouRank: React.FC = () => {
                     <button
                       key={which}
                       onClick={() => choose(which)}
-                      className="group text-left bg-white border-2 border-ink rounded-2xl p-5 shadow-stamp hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-stamp-hover transition-all duration-300 ease-spring"
+                      className="group text-start bg-white border-2 border-ink rounded-2xl p-5 shadow-stamp hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-stamp-hover transition-all duration-300 ease-spring"
                     >
                       <div className="flex items-center justify-between mb-3">
                         <div className="flex items-center gap-2">

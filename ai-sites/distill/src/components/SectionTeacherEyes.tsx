@@ -91,13 +91,13 @@ const SectionTeacherEyes: React.FC = () => {
         <h2 className="font-display text-display-lg text-ink mb-5 max-w-3xl">
           老师答的是一张{" "}
           <span className="relative inline-block">
-            <span className="absolute left-0 right-0 bottom-1 h-4 lg:h-5 bg-coral/55 -z-0 rotate-1" aria-hidden />
+            <span className="absolute start-0 end-0 bottom-1 h-4 lg:h-5 bg-coral/55 -z-0 rotate-1" aria-hidden />
             <span className="relative z-10">概率地图</span>
           </span>
           ，<br className="hidden lg:block" />
           每个选项{" "}
           <span className="relative inline-block">
-            <span className="absolute left-0 right-0 bottom-1 h-4 lg:h-5 bg-butter -z-0 -rotate-1" aria-hidden />
+            <span className="absolute start-0 end-0 bottom-1 h-4 lg:h-5 bg-butter -z-0 -rotate-1" aria-hidden />
             <span className="relative z-10">都给了几分</span>
           </span>
           。
@@ -121,7 +121,7 @@ const SectionTeacherEyes: React.FC = () => {
                     key={s.id}
                     onClick={() => setActiveId(s.id)}
                     className={[
-                      "group/sample relative aspect-square rounded-2xl border-2 border-ink overflow-hidden text-left transition-all duration-300 ease-spring",
+                      "group/sample relative aspect-square rounded-2xl border-2 border-ink overflow-hidden text-start transition-all duration-300 ease-spring",
                       on
                         ? "bg-ink shadow-stamp-lg"
                         : "bg-cream hover:-translate-y-0.5 hover:shadow-stamp",
@@ -132,7 +132,7 @@ const SectionTeacherEyes: React.FC = () => {
                     </div>
                     <div
                       className={[
-                        "absolute left-2 right-2 bottom-2 px-2 py-1 rounded-md font-mono text-[10px] font-bold",
+                        "absolute start-2 end-2 bottom-2 px-2 py-1 rounded-md font-mono text-[10px] font-bold",
                         on ? "bg-butter text-ink" : "bg-white text-ink border border-ink/30",
                       ].join(" ")}
                     >
@@ -162,7 +162,7 @@ const SectionTeacherEyes: React.FC = () => {
                       onClick={() => setTopK(k as 1 | 3 | 5)}
                       className={[
                         "px-2.5 py-1 font-mono text-[10px] font-bold transition-all duration-250",
-                        i > 0 ? "border-l-2 border-ink" : "",
+                        i > 0 ? "border-s-2 border-ink" : "",
                         topK === k ? "bg-ink text-cream" : "bg-white text-ink/55",
                       ].join(" ")}
                     >
@@ -209,7 +209,7 @@ const SectionTeacherEyes: React.FC = () => {
                           ].join(" ")}
                           style={{ width: `${Math.max(p * 100, 0.3)}%` }}
                         />
-                        <div className="absolute inset-0 flex items-center justify-end pr-2">
+                        <div className="absolute inset-0 flex items-center justify-end pe-2">
                           <span
                             className={[
                               "font-mono text-[11px] font-bold tabular-nums",

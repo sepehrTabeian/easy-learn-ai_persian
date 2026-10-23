@@ -100,7 +100,7 @@ const SectionEffective: React.FC = () => {
           一个 step 真正用了多少样本？
           <br />
           <span className="relative inline-block">
-            <span className="absolute left-0 right-0 bottom-1 h-4 lg:h-5 bg-butter -z-0 -rotate-1" aria-hidden />
+            <span className="absolute start-0 end-0 bottom-1 h-4 lg:h-5 bg-butter -z-0 -rotate-1" aria-hidden />
             <span className="relative z-10">三个数字相乘</span>
           </span>
           就是。
@@ -123,7 +123,7 @@ const SectionEffective: React.FC = () => {
                 key={s.name}
                 onClick={() => pickScenario(s)}
                 className={[
-                  "p-3 rounded-2xl border-2 border-ink text-left transition-all duration-250 ease-spring",
+                  "p-3 rounded-2xl border-2 border-ink text-start transition-all duration-250 ease-spring",
                   on
                     ? "bg-ink text-cream shadow-stamp-lg"
                     : "bg-cream text-ink hover:bg-butter shadow-[2px_2px_0_0_#241C15] hover:shadow-stamp",

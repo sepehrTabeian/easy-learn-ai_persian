@@ -99,7 +99,7 @@ const SectionMetrics: React.FC = () => {
             「我的请求要多久回？」
             <br />
             <span className="relative inline-block">
-              <span className="absolute left-0 right-0 bottom-0.5 h-3 lg:h-4 bg-butter -z-0" aria-hidden />
+              <span className="absolute start-0 end-0 bottom-0.5 h-3 lg:h-4 bg-butter -z-0" aria-hidden />
               <span className="relative z-10">先把这两个数字拆出来。</span>
             </span>
           </h2>
@@ -175,7 +175,7 @@ const SectionMetrics: React.FC = () => {
                 </span>
                 <span className="font-display text-[24px] font-bold text-ink tabular-nums">
                   {promptLen.toLocaleString()}
-                  <span className="font-mono text-[11px] text-ink/55 ml-1">tok</span>
+                  <span className="font-mono text-[11px] text-ink/55 ms-1">tok</span>
                 </span>
               </div>
               <input
@@ -203,7 +203,7 @@ const SectionMetrics: React.FC = () => {
                 </span>
                 <span className="font-display text-[24px] font-bold text-ink tabular-nums">
                   {outputLen.toLocaleString()}
-                  <span className="font-mono text-[11px] text-ink/55 ml-1">tok</span>
+                  <span className="font-mono text-[11px] text-ink/55 ms-1">tok</span>
                 </span>
               </div>
               <input

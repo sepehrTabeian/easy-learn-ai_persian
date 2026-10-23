@@ -69,7 +69,7 @@ export default function Chapter28({ step }: { step: number }) {
                         initial={{ opacity: 0, scale: 0 }}
                         animate={{ opacity: [0, 1, 0], scale: [0.5, 1.2, 0.5], y: -30, x: 30 }}
                         transition={{ duration: 1, repeat: Infinity }}
-                        className="absolute top-0 right-0 text-rose-600 font-black text-2xl"
+                        className="absolute top-0 end-0 text-rose-600 font-black text-2xl"
                       >
                         !?
                       </motion.div>
@@ -111,7 +111,7 @@ export default function Chapter28({ step }: { step: number }) {
               <div className="relative w-32 h-8 flex items-center justify-center">
                 <div className="absolute w-full h-2 bg-gray-200 rounded-full" />
                 <motion.div 
-                  className="absolute left-0 w-8 h-8 bg-indigo-400 rounded-full blur-sm"
+                  className="absolute start-0 w-8 h-8 bg-indigo-400 rounded-full blur-sm"
                   animate={{ x: [0, 128] }}
                   transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
                 />
@@ -165,7 +165,7 @@ export default function Chapter28({ step }: { step: number }) {
                 initial={{ x: -100, opacity: 0 }}
                 animate={{ x: [0, 300], opacity: [0, 1, 1, 0] }}
                 transition={{ duration: 2.5, repeat: Infinity, ease: "easeInOut" }}
-                className="absolute left-[250px] bg-amber-100 px-6 py-3 rounded-full border-2 border-amber-300 flex items-center gap-3 shadow-lg z-20"
+                className="absolute start-[250px] bg-amber-100 px-6 py-3 rounded-full border-2 border-amber-300 flex items-center gap-3 shadow-lg z-20"
               >
                 <Settings className="w-6 h-6 text-amber-600" />
                 <span className="font-bold text-amber-700">附带“怎么修”的建议</span>
@@ -178,7 +178,7 @@ export default function Chapter28({ step }: { step: number }) {
               </div>
 
               {/* Connecting Line */}
-              <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-2 bg-gray-200 rounded-full -z-0" />
+              <div className="absolute start-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-2 bg-gray-200 rounded-full -z-0" />
             </div>
           </motion.div>
         )}
@@ -206,7 +206,7 @@ export default function Chapter28({ step }: { step: number }) {
                     initial={{ width: 0 }}
                     animate={{ width: '110%' }}
                     transition={{ delay: 0.5, duration: 0.3 }}
-                    className="absolute top-1/2 -left-[5%] h-2 bg-red-500 rounded-full"
+                    className="absolute top-1/2 -start-[5%] h-2 bg-red-500 rounded-full"
                   />
                 </motion.div>
 

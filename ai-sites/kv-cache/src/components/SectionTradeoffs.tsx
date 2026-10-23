@@ -80,7 +80,7 @@ const SectionTradeoffs: React.FC = () => {
                 缓存能省计算，也会占显存。服务程序会按机器大小、对话长度和并发人数选择保存方式。
               </p>
               <p className="mt-3">
-                <span className="mr-2 inline-flex rounded-full border-2 border-ink bg-butter px-2 py-0.5 font-mono text-[10px] font-bold text-ink">进阶 · 自部署</span>
+                <span className="me-2 inline-flex rounded-full border-2 border-ink bg-butter px-2 py-0.5 font-mono text-[10px] font-bold text-ink">进阶 · 自部署</span>
                 日常使用商业聊天产品不用配置这些选项。自己运行模型时，再来拼一套方案。
               </p>
             </>
@@ -116,7 +116,7 @@ const SectionTradeoffs: React.FC = () => {
                     <button
                       key={item.id}
                       onClick={() => toggle(item.id)}
-                      className={`flex w-full items-start gap-3 rounded-2xl border-2 border-ink p-4 text-left transition-all duration-250 ${
+                      className={`flex w-full items-start gap-3 rounded-2xl border-2 border-ink p-4 text-start transition-all duration-250 ${
                         active ? "bg-ink text-cream shadow-stamp" : "bg-white"
                       }`}
                     >
@@ -157,7 +157,7 @@ const SectionTradeoffs: React.FC = () => {
 
             <button
               onClick={() => setAdvancedOpen((value) => !value)}
-              className="flex w-full items-center justify-between rounded-2xl border-2 border-ink bg-white px-5 py-4 text-left shadow-stamp"
+              className="flex w-full items-center justify-between rounded-2xl border-2 border-ink bg-white px-5 py-4 text-start shadow-stamp"
               aria-expanded={advancedOpen}
             >
               <span>
@@ -192,7 +192,7 @@ const Choice: React.FC<{
 }> = ({ active, title, desc, onClick }) => (
   <button
     onClick={onClick}
-    className={`rounded-2xl border-2 border-ink p-4 text-left transition-all duration-250 ${
+    className={`rounded-2xl border-2 border-ink p-4 text-start transition-all duration-250 ${
       active ? "bg-ink text-cream shadow-stamp" : "bg-white"
     }`}
   >

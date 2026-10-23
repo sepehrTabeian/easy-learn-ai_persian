@@ -105,14 +105,14 @@ export default function Chapter1({ step }: { step: number }) {
                     <motion.div
                       animate={{ opacity: [0, 1, 0], scale: [0.5, 1.5, 0.5], x: [0, 20], y: [0, -20] }}
                       transition={{ duration: 0.6, repeat: Infinity, repeatDelay: 1.2 }}
-                      className="absolute top-2 right-2 text-rose-500 font-black text-2xl"
+                      className="absolute top-2 end-2 text-rose-500 font-black text-2xl"
                     >
                       !?
                     </motion.div>
                     <motion.div
                       animate={{ opacity: [0, 1, 0], scale: [0.5, 1.2, 0.5], x: [0, -15], y: [0, -15] }}
                       transition={{ duration: 0.5, repeat: Infinity, repeatDelay: 1.8 }}
-                      className="absolute top-4 left-2 text-rose-500 font-black text-xl"
+                      className="absolute top-4 start-2 text-rose-500 font-black text-xl"
                     >
                       ✗
                     </motion.div>
@@ -221,8 +221,8 @@ export default function Chapter1({ step }: { step: number }) {
                   >
                     <Settings className="absolute -top-4 w-8 h-8 text-[#14B8A6] bg-white rounded-full shadow-sm" />
                     <Database className="absolute -bottom-4 w-8 h-8 text-[#14B8A6] bg-white rounded-full shadow-sm" />
-                    <div className="absolute -left-3 w-6 h-6 bg-[#14B8A6] border-2 border-white rounded-full shadow-sm" />
-                    <div className="absolute -right-3 w-6 h-6 bg-[#14B8A6] border-2 border-white rounded-full shadow-sm" />
+                    <div className="absolute -start-3 w-6 h-6 bg-[#14B8A6] border-2 border-white rounded-full shadow-sm" />
+                    <div className="absolute -end-3 w-6 h-6 bg-[#14B8A6] border-2 border-white rounded-full shadow-sm" />
                   </motion.div>
                   
                   {/* Glow */}

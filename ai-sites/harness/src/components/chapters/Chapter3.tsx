@@ -165,7 +165,7 @@ function AgendaCard({ num, icon, text, color, delay }: { num: string, icon: Reac
       className="bg-white p-6 rounded-3xl shadow-xl border border-gray-100 flex items-center gap-8 relative overflow-hidden group"
     >
       {/* Background Number Watermark */}
-      <div className="absolute -left-4 -top-10 text-[180px] font-black text-gray-50 opacity-50 select-none pointer-events-none transition-transform duration-500 group-hover:scale-110 group-hover:text-gray-100">
+      <div className="absolute -start-4 -top-10 text-[180px] font-black text-gray-50 opacity-50 select-none pointer-events-none transition-transform duration-500 group-hover:scale-110 group-hover:text-gray-100">
         {num}
       </div>
       

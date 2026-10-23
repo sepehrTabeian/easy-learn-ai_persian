@@ -174,8 +174,8 @@ export default function Chapter25({ step }: { step: number }) {
               transition={{ type: 'spring', bounce: 0.4 }}
               className="relative max-w-4xl bg-white p-16 rounded-[3rem] shadow-2xl border border-gray-100"
             >
-              <Quote className="absolute top-8 left-8 w-16 h-16 text-emerald-200 rotate-180" />
-              <Quote className="absolute bottom-8 right-8 w-16 h-16 text-emerald-200" />
+              <Quote className="absolute top-8 start-8 w-16 h-16 text-emerald-200 rotate-180" />
+              <Quote className="absolute bottom-8 end-8 w-16 h-16 text-emerald-200" />
               
               <h3 className="text-4xl font-bold text-gray-800 leading-relaxed text-center relative z-10">
                 当 Agent 出问题时，<br/>

@@ -89,7 +89,7 @@ const SectionWhatGoesIn: React.FC = () => {
                 <button
                   key={p.key}
                   onClick={() => toggle(p.key)}
-                  className={`w-full text-left flex items-center gap-3.5 px-4 py-3.5 rounded-2xl border-2 border-ink transition-all duration-250 ease-spring ${
+                  className={`w-full text-start flex items-center gap-3.5 px-4 py-3.5 rounded-2xl border-2 border-ink transition-all duration-250 ease-spring ${
                     active
                       ? "bg-ink text-cream shadow-stamp -translate-x-0.5 -translate-y-0.5"
                       : "bg-white text-ink shadow-stamp hover:-translate-y-0.5"

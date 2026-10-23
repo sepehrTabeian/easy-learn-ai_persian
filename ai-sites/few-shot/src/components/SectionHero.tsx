@@ -23,7 +23,7 @@ const SectionHero: React.FC = () => {
   return (
     <section className="relative px-4 sm:px-6 lg:px-8 pt-20 lg:pt-28 pb-20 lg:pb-24 overflow-hidden">
       {/* 装饰：右上散落的小例子点 */}
-      <div className="absolute top-14 right-[7%] hidden md:flex gap-2 pointer-events-none opacity-60">
+      <div className="absolute top-14 end-[7%] hidden md:flex gap-2 pointer-events-none opacity-60">
         {[0, 1, 2].map((i) => (
           <span
             key={i}

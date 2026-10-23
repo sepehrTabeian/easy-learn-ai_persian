@@ -152,7 +152,7 @@ const SectionTemplate: React.FC = () => {
                 ].join(" ")}
               >
                 {f.label}
-                <span className="ml-1.5 opacity-60 font-normal text-[10px]">
+                <span className="ms-1.5 opacity-60 font-normal text-[10px]">
                   {f.models.split(" · ")[0]}
                 </span>
               </button>

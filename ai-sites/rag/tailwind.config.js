@@ -21,8 +21,8 @@ module.exports = {
         pop: "#FF4D74",
       },
       fontFamily: {
-        sans: ['"Plus Jakarta Sans"', '"Noto Sans SC"', "-apple-system", "BlinkMacSystemFont", '"PingFang SC"', "system-ui", "sans-serif"],
-        display: ['"Smiley Sans"', '"Plus Jakarta Sans"', '"Noto Sans SC"', "-apple-system", "BlinkMacSystemFont", '"PingFang SC"', "system-ui", "sans-serif"],
+        sans: ['"Plus Jakarta Sans"', '"Vazirmatn"', "-apple-system", "BlinkMacSystemFont", '"Tahoma"', "system-ui", "sans-serif"],
+        display: ['"Smiley Sans"', '"Plus Jakarta Sans"', '"Vazirmatn"', "-apple-system", "BlinkMacSystemFont", '"Tahoma"', "system-ui", "sans-serif"],
         serif: ["Newsreader", "Georgia", '"Times New Roman"', "serif"],
         mono: ['"Geist Mono"', '"SF Mono"', "Menlo", "Consolas", "monospace"],
       },

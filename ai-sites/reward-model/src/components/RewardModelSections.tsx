@@ -84,7 +84,7 @@ export const SectionHero: React.FC = () => {
                 <button
                   key={id}
                   onClick={() => setPicked(id)}
-                  className={`text-left p-4 rounded-2xl border-2 border-ink transition-all duration-250 ${on ? "bg-teal text-cream shadow-stamp-lg -translate-y-1" : "bg-cream hover:bg-butter-tint"}`}
+                  className={`text-start p-4 rounded-2xl border-2 border-ink transition-all duration-250 ${on ? "bg-teal text-cream shadow-stamp-lg -translate-y-1" : "bg-cream hover:bg-butter-tint"}`}
                 >
                   <div className="font-mono text-[11px] mb-2">回答 {id.toUpperCase()}</div>
                   <p className="text-[14px] leading-relaxed">{item[id]}</p>
@@ -127,7 +127,7 @@ export const SectionHumanLabels: React.FC = () => {
                       <button
                         key={id}
                         onClick={() => setChoices((old) => ({ ...old, [i]: id }))}
-                        className={`p-3 rounded-xl border-2 border-ink text-left text-[13px] leading-relaxed ${on ? "bg-ink text-cream shadow-stamp" : "bg-white hover:bg-butter-tint"}`}
+                        className={`p-3 rounded-xl border-2 border-ink text-start text-[13px] leading-relaxed ${on ? "bg-ink text-cream shadow-stamp" : "bg-white hover:bg-butter-tint"}`}
                       >
                         <span className="font-mono text-[10px] block mb-1">回答 {id.toUpperCase()}</span>
                         {p[id]}
@@ -327,7 +327,7 @@ export const SectionBiasLab: React.FC = () => {
                 <button
                   key={b.id}
                   onClick={() => setOn((xs) => active ? xs.filter((x) => x !== b.id) : [...xs, b.id])}
-                  className={`text-left p-5 border-2 border-ink rounded-2xl transition-all ${active ? "bg-butter shadow-stamp-lg -translate-y-1" : "bg-cream"}`}
+                  className={`text-start p-5 border-2 border-ink rounded-2xl transition-all ${active ? "bg-butter shadow-stamp-lg -translate-y-1" : "bg-cream"}`}
                 >
                   <div className="flex items-center gap-2 font-display text-[18px] font-bold mb-2">
                     <span className={`w-5 h-5 border-2 border-ink rounded flex items-center justify-center ${active ? "bg-ink text-cream" : "bg-white"}`}>{active && <Check className="w-3 h-3" />}</span>
@@ -373,7 +373,7 @@ export const SectionWhereUsed: React.FC = () => {
         <div className="grid lg:grid-cols-12 gap-6">
           <div className="lg:col-span-4 space-y-2">
             {USES.map((x) => (
-              <button key={x.id} onClick={() => setActive(x.id)} className={`w-full p-4 text-left border-2 border-ink rounded-xl font-display text-[17px] font-bold ${active === x.id ? "bg-ink text-cream shadow-stamp" : "bg-white"}`}>{x.title}</button>
+              <button key={x.id} onClick={() => setActive(x.id)} className={`w-full p-4 text-start border-2 border-ink rounded-xl font-display text-[17px] font-bold ${active === x.id ? "bg-ink text-cream shadow-stamp" : "bg-white"}`}>{x.title}</button>
             ))}
           </div>
           <div key={active} className="lg:col-span-8 bg-teal text-cream border-2 border-ink rounded-3xl shadow-stamp-xl p-7 animate-enter-fade">

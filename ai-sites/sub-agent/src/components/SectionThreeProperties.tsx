@@ -329,7 +329,7 @@ const SectionThreeProperties: React.FC = () => {
                     setPlaying(false);
                     setFrame(f);
                   }}
-                  className={`flex-1 text-left border-2 border-ink rounded-xl px-3 py-2.5 transition-all duration-300 ease-spring ${
+                  className={`flex-1 text-start border-2 border-ink rounded-xl px-3 py-2.5 transition-all duration-300 ease-spring ${
                     isActiveFrame
                       ? "bg-ink text-cream shadow-stamp-lg translate-x-[-1px] translate-y-[-1px]"
                       : isPast
@@ -574,7 +574,7 @@ const SectionThreeProperties: React.FC = () => {
                   key={key}
                   type="button"
                   onClick={() => pickProperty(key)}
-                  className={`text-left border-2 border-ink rounded-2xl px-4 py-3 transition-all duration-300 ease-spring ${
+                  className={`text-start border-2 border-ink rounded-2xl px-4 py-3 transition-all duration-300 ease-spring ${
                     isHi
                       ? `${item.tone} shadow-stamp-lg translate-x-[-1px] translate-y-[-1px]`
                       : "bg-cream text-ink/65 shadow-stamp"

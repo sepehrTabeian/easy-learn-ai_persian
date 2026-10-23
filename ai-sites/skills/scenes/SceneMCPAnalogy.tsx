@@ -75,7 +75,7 @@ export const SceneMCPAnalogy: React.FC<SceneProps> = ({ step }) => {
                     >
                         {/* The Cable Line (Visible when connected) */}
                         {isConnected && (
-                            <svg className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] -z-10 pointer-events-none overflow-visible">
+                            <svg className="absolute top-1/2 start-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] -z-10 pointer-events-none overflow-visible">
                                 <motion.line
                                     x1="50%" y1="50%"
                                     x2={150 - p.x} // Calculate inverse direction towards center roughly
@@ -105,7 +105,7 @@ export const SceneMCPAnalogy: React.FC<SceneProps> = ({ step }) => {
                         {/* Cable Visualization (Simplified) */}
                         {isConnected && (
                              <motion.div 
-                                className={`absolute top-full left-1/2 w-1 h-[60px] bg-${p.color}-500/50 origin-top`}
+                                className={`absolute top-full start-1/2 w-1 h-[60px] bg-${p.color}-500/50 origin-top`}
                                 style={{ 
                                     height: Math.sqrt(p.x*p.x + p.y*p.y) - 40, // Distance to center minus half box size
                                     transform: `rotate(${Math.atan2(-p.y, -p.x) * 180 / Math.PI - 90}deg)`
@@ -128,7 +128,7 @@ export const SceneMCPAnalogy: React.FC<SceneProps> = ({ step }) => {
             >
                 <div className="flex items-center gap-3">
                     <Server size={32} className="text-purple-300" />
-                    <div className="text-left">
+                    <div className="text-start">
                         <div className="text-purple-200 font-bold text-lg">统一规范</div>
                         <div className="text-gray-400 text-sm">Unified Spec</div>
                     </div>
@@ -136,7 +136,7 @@ export const SceneMCPAnalogy: React.FC<SceneProps> = ({ step }) => {
                 <div className="w-px h-10 bg-purple-500/30" />
                 <div className="flex items-center gap-3">
                      <CheckCircle size={32} className="text-green-300" />
-                     <div className="text-left">
+                     <div className="text-start">
                         <div className="text-green-200 font-bold text-lg">标准化交互</div>
                         <div className="text-gray-400 text-sm">Standardized</div>
                     </div>

@@ -126,7 +126,7 @@ export const SceneRuntimeSummary: React.FC<SceneProps> = ({ step }) => {
                 {[...Array(5)].map((_, i) => (
                     <motion.div
                         key={i}
-                        className="absolute top-1/2 left-[30%]"
+                        className="absolute top-1/2 start-[30%]"
                         initial={{ opacity: 0, x: 0, y: (i - 2) * 20 }}
                         animate={{ 
                             opacity: [0, 1, 1, 0],

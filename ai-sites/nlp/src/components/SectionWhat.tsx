@@ -80,7 +80,7 @@ const SectionWhat: React.FC = () => {
       {/* 浮动装饰 */}
       <div
         aria-hidden
-        className="absolute top-24 right-[7%] hidden lg:block animate-float-y"
+        className="absolute top-24 end-[7%] hidden lg:block animate-float-y"
       >
         <div className="w-12 h-12 bg-butter border-2 border-ink rounded-2xl shadow-stamp rotate-6 flex items-center justify-center font-mono text-[10px] font-bold text-ink">
           A→1
@@ -88,7 +88,7 @@ const SectionWhat: React.FC = () => {
       </div>
       <div
         aria-hidden
-        className="absolute bottom-24 left-[6%] hidden lg:block animate-float-y-sm"
+        className="absolute bottom-24 start-[6%] hidden lg:block animate-float-y-sm"
       >
         <div className="w-10 h-10 bg-coral border-2 border-ink rounded-full shadow-stamp -rotate-6" />
       </div>
@@ -113,7 +113,7 @@ const SectionWhat: React.FC = () => {
             <p className="max-w-md font-display text-[20px] lg:text-[22px] font-bold text-ink leading-snug mb-5 animate-enter-up">
               <span className="relative inline-block">
                 <span
-                  className="absolute left-0 right-0 bottom-0.5 h-3 lg:h-4 bg-butter -z-0"
+                  className="absolute start-0 end-0 bottom-0.5 h-3 lg:h-4 bg-butter -z-0"
                   aria-hidden
                 />
                 <span className="relative z-10">

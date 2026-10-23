@@ -54,7 +54,7 @@ export const SceneMCPTransition: React.FC<SceneProps> = ({ step }) => {
 
             {/* Middle: Connection/Similarity */}
             {step >= 2 && (
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center gap-2 z-0 w-full">
+                <div className="absolute top-1/2 start-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center gap-2 z-0 w-full">
                     {/* Connecting Lines */}
                     <motion.div 
                         initial={{ scaleX: 0 }}
@@ -89,7 +89,7 @@ export const SceneMCPTransition: React.FC<SceneProps> = ({ step }) => {
                 <motion.div 
                     initial={{ scale: 0, rotate: -20 }}
                     animate={{ scale: 1, rotate: 0 }}
-                    className="absolute top-0 right-[35%]"
+                    className="absolute top-0 end-[35%]"
                 >
                     <HelpCircle size={48} className="text-gray-500/50" />
                 </motion.div>

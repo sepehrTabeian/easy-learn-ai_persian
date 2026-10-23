@@ -102,7 +102,7 @@ const SectionDistill: React.FC = () => {
               </span>
             </span>
           </div>
-          <div className="flex flex-wrap gap-2 mt-3 pl-10">
+          <div className="flex flex-wrap gap-2 mt-3 ps-10">
             <a
               href="../distill/index.html"
               className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-white border-2 border-ink rounded-full font-mono text-[11px] font-bold text-ink shadow-stamp hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-stamp-lg transition-all duration-250 ease-spring"
@@ -121,7 +121,7 @@ const SectionDistill: React.FC = () => {
                 key={md.id}
                 onClick={() => setMid(md.id)}
                 className={[
-                  "p-3 border-2 border-ink rounded-2xl text-left transition-all duration-250 ease-spring",
+                  "p-3 border-2 border-ink rounded-2xl text-start transition-all duration-250 ease-spring",
                   on
                     ? "bg-ink text-cream shadow-[5px_5px_0_0_#FF4D74] -translate-y-1"
                     : "bg-white text-ink hover:bg-butter shadow-stamp",
@@ -209,7 +209,7 @@ const SectionDistill: React.FC = () => {
                     </button>
                   );
                 })}
-                <span className="ml-auto font-mono text-[10.5px] text-ink/45">
+                <span className="ms-auto font-mono text-[10.5px] text-ink/45">
                   {BENCH_INFO[bench].note}
                 </span>
               </div>
@@ -235,7 +235,7 @@ const SectionDistill: React.FC = () => {
                         />
                         <span
                           className={[
-                            "absolute right-2 top-1/2 -translate-y-1/2 font-mono text-[11px] font-bold tabular-nums",
+                            "absolute end-2 top-1/2 -translate-y-1/2 font-mono text-[11px] font-bold tabular-nums",
                             v / maxVal > 0.5 ? "text-cream" : "text-ink",
                           ].join(" ")}
                         >
@@ -263,7 +263,7 @@ const SectionDistill: React.FC = () => {
                           className="h-full bg-ink/25 transition-all duration-500 ease-editorial"
                           style={{ width: `${(v / maxVal) * 100}%` }}
                         />
-                        <span className="absolute right-2 top-1/2 -translate-y-1/2 font-mono text-[10px] tabular-nums text-ink/65">
+                        <span className="absolute end-2 top-1/2 -translate-y-1/2 font-mono text-[10px] tabular-nums text-ink/65">
                           {v.toFixed(1)}
                         </span>
                       </div>

@@ -153,7 +153,7 @@ const BarRow: React.FC<{
       {blocks.map((b, i) => (
         <div
           key={i}
-          className="relative h-full border-r border-ink/20 last:border-r-0"
+          className="relative h-full border-e border-ink/20 last:border-e-0"
           style={{
             width: `${(b.w / total) * 100}%`,
             backgroundColor: b.fill === "transparent" ? "#FBEFE3" : b.fill,
@@ -214,7 +214,7 @@ const SectionShortStrategies: React.FC = () => {
                 <button
                   type="button"
                   onClick={() => setOpenId(open ? "" : s.id)}
-                  className="w-full flex items-center gap-4 px-5 py-4 text-left"
+                  className="w-full flex items-center gap-4 px-5 py-4 text-start"
                 >
                   <span className="font-mono font-bold text-[11px] tracking-[0.18em] text-ink/55 w-7">
                     {s.num}

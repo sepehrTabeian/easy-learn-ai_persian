@@ -86,7 +86,7 @@ const SectionBench: React.FC = () => {
           想象的{" "}
           <span className="relative inline-block">
             <span
-              className="absolute left-0 right-0 bottom-1 h-4 lg:h-5 bg-butter -z-0 -rotate-1"
+              className="absolute start-0 end-0 bottom-1 h-4 lg:h-5 bg-butter -z-0 -rotate-1"
               aria-hidden
             />
             <span className="relative z-10">难得多</span>
@@ -98,7 +98,7 @@ const SectionBench: React.FC = () => {
           下面两块榜单就是这种考试结果。
         </p>
         <p className="max-w-2xl text-ink/65 text-[16px] mb-2">
-          <span className="inline-flex items-center gap-1 px-1.5 py-0.5 mr-1 bg-ink/8 border border-ink/15 rounded font-mono text-[10px] uppercase tracking-[0.15em] text-ink/55 font-bold">
+          <span className="inline-flex items-center gap-1 px-1.5 py-0.5 me-1 bg-ink/8 border border-ink/15 rounded font-mono text-[10px] uppercase tracking-[0.15em] text-ink/55 font-bold">
             进阶
           </span>
           BFCL v4（Berkeley Function-Calling Leaderboard）专门看「函数选对没 + 参数填对没」。
@@ -120,7 +120,7 @@ const SectionBench: React.FC = () => {
                 key={t.id}
                 onClick={() => setTab(t.id)}
                 className={[
-                  "flex items-center gap-3 px-4 py-3 border-2 border-ink rounded-2xl text-left transition-all duration-200 ease-spring",
+                  "flex items-center gap-3 px-4 py-3 border-2 border-ink rounded-2xl text-start transition-all duration-200 ease-spring",
                   on
                     ? "bg-ink text-cream shadow-stamp-lg"
                     : "bg-white text-ink hover:bg-cream hover:-translate-y-0.5 hover:shadow-[3px_3px_0_0_#241C15]",

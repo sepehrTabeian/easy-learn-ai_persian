@@ -129,7 +129,7 @@ const SectionPitfalls: React.FC = () => {
                   <button
                     type="button"
                     onClick={() => setOpen(isOpen ? null : p.no)}
-                    className="flex-1 flex items-start gap-4 px-5 py-4 text-left hover:bg-butter-tint/40 transition-colors duration-200"
+                    className="flex-1 flex items-start gap-4 px-5 py-4 text-start hover:bg-butter-tint/40 transition-colors duration-200"
                   >
                     <span className="flex-shrink-0 mt-0.5 inline-flex items-center justify-center w-9 h-9 bg-ink text-cream font-mono text-[12px] font-bold tracking-[0.1em] rounded-full">
                       {p.no}
@@ -145,7 +145,7 @@ const SectionPitfalls: React.FC = () => {
                     />
                   </button>
                   {/* 自我标记按钮 */}
-                  <div className="hidden md:flex items-center gap-1 pr-4 pl-2 border-l-2 border-dashed border-ink/15">
+                  <div className="hidden md:flex items-center gap-1 pe-4 ps-2 border-s-2 border-dashed border-ink/15">
                     <StampBtn
                       active={stamp === "stepped"}
                       onClick={() => setStamp(p.no, "stepped")}
@@ -181,7 +181,7 @@ const SectionPitfalls: React.FC = () => {
                 </div>
 
                 {isOpen && (
-                  <div className="px-5 pb-5 pl-[68px] grid grid-cols-1 md:grid-cols-2 gap-4 animate-enter-up">
+                  <div className="px-5 pb-5 ps-[68px] grid grid-cols-1 md:grid-cols-2 gap-4 animate-enter-up">
                     <div className="border-2 border-coral rounded-2xl px-4 py-3.5 bg-coral/10">
                       <div className="flex items-center gap-1.5 font-mono text-[10.5px] tracking-[0.22em] uppercase text-coral mb-1.5">
                         <X className="w-3.5 h-3.5" strokeWidth={2.6} />

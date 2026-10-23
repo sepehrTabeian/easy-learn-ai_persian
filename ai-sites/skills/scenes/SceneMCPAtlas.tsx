@@ -58,7 +58,7 @@ export const SceneMCPAtlas: React.FC<SceneProps> = ({ step }) => {
                         
                         {/* Confusion Marks */}
                         <motion.div 
-                            className="absolute -top-10 -right-10 text-red-400 font-bold text-6xl font-serif"
+                            className="absolute -top-10 -end-10 text-red-400 font-bold text-6xl font-serif"
                             animate={{ opacity: [0, 1, 0], y: -20 }}
                             transition={{ duration: 1.5, repeat: Infinity }}
                         >

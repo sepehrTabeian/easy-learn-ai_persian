@@ -176,7 +176,7 @@ const SectionPipelineDiff: React.FC = () => {
           <div className="relative">
             {/* 横线 */}
             <div
-              className="absolute left-6 right-6 top-[28px] h-[2px] bg-ink/30"
+              className="absolute start-6 end-6 top-[28px] h-[2px] bg-ink/30"
               aria-hidden
             />
             <div

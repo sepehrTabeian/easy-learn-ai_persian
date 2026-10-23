@@ -63,7 +63,7 @@ export const SceneSkillUseCases: React.FC<SceneProps> = ({ step }) => {
                  animate={{ opacity: 1 }}
                  className="relative mt-8 bg-gray-800/30 rounded-3xl p-8 border border-white/10"
               >
-                  <div className="absolute -top-4 left-8 bg-white text-black px-3 py-1 text-xs font-bold rounded uppercase">
+                  <div className="absolute -top-4 start-8 bg-white text-black px-3 py-1 text-xs font-bold rounded uppercase">
                       Evolution
                   </div>
 
@@ -99,8 +99,8 @@ export const SceneSkillUseCases: React.FC<SceneProps> = ({ step }) => {
                               <Box size={48} className="text-yellow-400" />
                               
                               {/* Particles inside */}
-                              <div className="absolute top-2 left-2 text-yellow-500/50"><Archive size={16}/></div>
-                              <div className="absolute bottom-2 right-2 text-yellow-500/50"><ImageIcon size={16}/></div>
+                              <div className="absolute top-2 start-2 text-yellow-500/50"><Archive size={16}/></div>
+                              <div className="absolute bottom-2 end-2 text-yellow-500/50"><ImageIcon size={16}/></div>
                               
                               <div className="absolute -bottom-3 bg-yellow-500 text-black px-3 py-1 rounded-full text-xs font-bold shadow-lg">
                                   All-in-One Skill

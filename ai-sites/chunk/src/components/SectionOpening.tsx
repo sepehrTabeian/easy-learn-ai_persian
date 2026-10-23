@@ -5,8 +5,8 @@ import { StampLink } from "./common";
 const SectionOpening: React.FC = () => {
   return (
     <section className="relative overflow-hidden px-5 pb-20 pt-20 md:px-8 lg:pb-28 lg:pt-28">
-      <div className="absolute right-[7%] top-20 hidden h-12 w-12 rotate-12 rounded-2xl border-2 border-ink bg-coral shadow-stamp lg:block" />
-      <div className="absolute bottom-24 left-[5%] hidden h-10 w-10 -rotate-6 rounded-full border-2 border-ink bg-teal shadow-stamp lg:block" />
+      <div className="absolute end-[7%] top-20 hidden h-12 w-12 rotate-12 rounded-2xl border-2 border-ink bg-coral shadow-stamp lg:block" />
+      <div className="absolute bottom-24 start-[5%] hidden h-10 w-10 -rotate-6 rounded-full border-2 border-ink bg-teal shadow-stamp lg:block" />
 
       <div className="mx-auto grid max-w-6xl gap-10 lg:grid-cols-12 lg:items-center">
         <div className="lg:col-span-7">
@@ -15,7 +15,7 @@ const SectionOpening: React.FC = () => {
 
           <p className="mt-6 max-w-2xl font-display text-[23px] font-bold leading-snug text-ink lg:text-[28px]">
             <span className="relative inline-block">
-              <span className="absolute bottom-1 left-0 right-0 h-4 bg-butter" />
+              <span className="absolute bottom-1 start-0 end-0 h-4 bg-butter" />
               <span className="relative">Chunk = 把长资料切成能单独保存、搜索和引用的小片段。</span>
             </span>
           </p>

@@ -112,7 +112,7 @@ const SectionTwoKinds: React.FC = () => {
                 key={k}
                 onClick={() => setActive(k)}
                 className={[
-                  "text-left border-2 border-ink rounded-2xl p-5 transition-all duration-300 ease-spring",
+                  "text-start border-2 border-ink rounded-2xl p-5 transition-all duration-300 ease-spring",
                   on
                     ? "bg-ink text-cream shadow-stamp-lg -translate-x-0.5 -translate-y-0.5"
                     : "bg-white text-ink shadow-stamp hover:bg-butter-tint",

@@ -70,7 +70,7 @@ export default function Chapter26({ step }: { step: number }) {
                 <div className="text-2xl font-black text-red-600 relative z-10">AGENTS.md</div>
                 
                 {/* Messy content lines */}
-                <div className="absolute top-0 left-0 w-full h-full p-6 flex flex-col gap-2 opacity-30 pointer-events-none">
+                <div className="absolute top-0 start-0 w-full h-full p-6 flex flex-col gap-2 opacity-30 pointer-events-none">
                   {[...Array(15)].map((_, i) => (
                     <div key={i} className="h-3 bg-red-800 rounded-full w-full" style={{ width: `${Math.random() * 60 + 40}%` }} />
                   ))}
@@ -78,7 +78,7 @@ export default function Chapter26({ step }: { step: number }) {
               </motion.div>
 
               <div className="flex flex-col gap-6 max-w-md">
-                <div className="bg-white p-6 rounded-2xl shadow-md border-l-4 border-red-400 text-xl font-bold text-gray-700">
+                <div className="bg-white p-6 rounded-2xl shadow-md border-s-4 border-red-400 text-xl font-bold text-gray-700">
                   把所有规范、架构、约定<br/><span className="text-red-500 text-2xl">全部塞进去</span>
                 </div>
                 <motion.div 
@@ -118,7 +118,7 @@ export default function Chapter26({ step }: { step: number }) {
                 transition={{ type: 'spring', bounce: 0.5 }}
                 className="bg-white p-10 rounded-3xl shadow-xl border-4 border-blue-200 flex flex-col items-center w-80 relative"
               >
-                <Minimize2 className="absolute -top-6 -right-6 w-12 h-12 text-blue-400 bg-white rounded-full p-2 shadow-md" />
+                <Minimize2 className="absolute -top-6 -end-6 w-12 h-12 text-blue-400 bg-white rounded-full p-2 shadow-md" />
                 <ListTree className="w-20 h-20 text-blue-500 mb-6" />
                 <h4 className="text-3xl font-black text-gray-800 mb-2">AGENTS.md</h4>
                 <p className="text-blue-600 font-bold text-xl">只保留最核心的索引</p>

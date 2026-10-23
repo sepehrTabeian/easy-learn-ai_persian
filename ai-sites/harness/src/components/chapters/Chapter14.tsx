@@ -188,7 +188,7 @@ export default function Chapter14({ step }: { step: number }) {
               所以这三者不是替代关系，而是<span className="text-[#3B82F6] mx-2 text-5xl font-black">包含关系</span>
             </motion.h2>
 
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex items-center justify-center w-full max-w-6xl mt-10">
+            <div className="absolute top-1/2 start-1/2 -translate-x-1/2 -translate-y-1/2 flex items-center justify-center w-full max-w-6xl mt-10">
               
               {/* Concentric Circles */}
               <div className="relative w-[500px] h-[500px] flex items-center justify-center shrink-0">
@@ -230,19 +230,19 @@ export default function Chapter14({ step }: { step: number }) {
                     initial={{ opacity: 0, x: 50 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.6 }}
-                    className="ml-16 flex flex-col gap-8"
+                    className="ms-16 flex flex-col gap-8"
                   >
-                    <div className="bg-white p-6 rounded-2xl shadow-lg border-l-8 border-purple-500">
+                    <div className="bg-white p-6 rounded-2xl shadow-lg border-s-8 border-purple-500">
                       <h3 className="text-2xl font-bold text-gray-800 mb-2">Prompt</h3>
                       <p className="text-xl text-gray-600">是对<span className="text-purple-600 font-bold mx-1">“指令”</span>的工程化</p>
                     </div>
 
-                    <div className="bg-white p-6 rounded-2xl shadow-lg border-l-8 border-green-500">
+                    <div className="bg-white p-6 rounded-2xl shadow-lg border-s-8 border-green-500">
                       <h3 className="text-2xl font-bold text-gray-800 mb-2">Context</h3>
                       <p className="text-xl text-gray-600">是对<span className="text-green-600 font-bold mx-1">“输入环境”</span>的工程化</p>
                     </div>
 
-                    <div className="bg-white p-6 rounded-2xl shadow-lg border-l-8 border-blue-500">
+                    <div className="bg-white p-6 rounded-2xl shadow-lg border-s-8 border-blue-500">
                       <h3 className="text-2xl font-bold text-gray-800 mb-2">Harness</h3>
                       <p className="text-xl text-gray-600">是对<span className="text-blue-600 font-bold mx-1">“整个运行控制系统”</span>的工程化</p>
                     </div>

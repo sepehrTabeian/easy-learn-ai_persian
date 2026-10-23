@@ -21,7 +21,7 @@ export const SceneSkillDiscovery: React.FC<SceneProps> = ({ step }) => {
             <motion.div 
                 initial={{ scale: 0, rotate: -20 }}
                 animate={{ scale: 1, rotate: -10 }}
-                className="absolute top-20 right-20 z-50 bg-gradient-to-r from-yellow-400 to-orange-500 p-6 rounded-full shadow-[0_0_50px_rgba(251,191,36,0.5)] border-4 border-white transform"
+                className="absolute top-20 end-20 z-50 bg-gradient-to-r from-yellow-400 to-orange-500 p-6 rounded-full shadow-[0_0_50px_rgba(251,191,36,0.5)] border-4 border-white transform"
             >
                 <div className="text-center font-bold text-black leading-tight">
                     <div className="text-xl">Zero</div>
@@ -61,13 +61,13 @@ export const SceneSkillDiscovery: React.FC<SceneProps> = ({ step }) => {
                     <div className="flex items-center gap-2">
                         <span>▾</span> .claude
                     </div>
-                    <div className="pl-4 flex items-center gap-2 mt-1">
+                    <div className="ps-4 flex items-center gap-2 mt-1">
                         <span>▾</span> <span className="font-bold">skills</span>
                     </div>
-                    <div className="pl-8 flex items-center gap-2 mt-1 text-green-300">
+                    <div className="ps-8 flex items-center gap-2 mt-1 text-green-300">
                          <FolderOpen size={14} /> data-analysis
                     </div>
-                    <div className="pl-8 flex items-center gap-2 mt-1 text-blue-300">
+                    <div className="ps-8 flex items-center gap-2 mt-1 text-blue-300">
                          <FolderOpen size={14} /> git-helper
                     </div>
                 </motion.div>
@@ -82,7 +82,7 @@ export const SceneSkillDiscovery: React.FC<SceneProps> = ({ step }) => {
                 <motion.div 
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
-                    className="absolute bottom-4 left-4 right-4 text-center bg-black/50 p-2 rounded backdrop-blur-sm"
+                    className="absolute bottom-4 start-4 end-4 text-center bg-black/50 p-2 rounded backdrop-blur-sm"
                 >
                     <ChalkText size="base">只要把文件夹放在这里...</ChalkText>
                 </motion.div>
@@ -107,7 +107,7 @@ export const SceneSkillDiscovery: React.FC<SceneProps> = ({ step }) => {
                  <div className="flex-1 p-4 space-y-4 bg-gray-50 overflow-y-auto">
                      <div className="flex gap-3">
                          <div className="w-8 h-8 rounded-full bg-purple-600 shrink-0 mt-1" />
-                         <div className="bg-white p-3 rounded-lg rounded-tl-none shadow-sm border border-gray-200 text-sm max-w-[80%]">
+                         <div className="bg-white p-3 rounded-lg rounded-ss-none shadow-sm border border-gray-200 text-sm max-w-[80%]">
                              Hello! I'm ready to help you with your project.
                          </div>
                      </div>
@@ -120,7 +120,7 @@ export const SceneSkillDiscovery: React.FC<SceneProps> = ({ step }) => {
                             className="flex gap-3 flex-row-reverse"
                          >
                             <div className="w-8 h-8 rounded-full bg-gray-400 shrink-0 mt-1" />
-                            <div className="bg-blue-600 text-white p-3 rounded-lg rounded-tr-none shadow-sm text-sm max-w-[80%]">
+                            <div className="bg-blue-600 text-white p-3 rounded-lg rounded-se-none shadow-sm text-sm max-w-[80%]">
                                 帮我分析一下这个项目的 Git 提交记录
                             </div>
                          </motion.div>
@@ -134,7 +134,7 @@ export const SceneSkillDiscovery: React.FC<SceneProps> = ({ step }) => {
                             className="flex gap-3"
                          >
                              <div className="w-8 h-8 rounded-full bg-purple-600 shrink-0 mt-1" />
-                             <div className="bg-white p-3 rounded-lg rounded-tl-none shadow-sm border border-gray-200 text-sm max-w-[90%]">
+                             <div className="bg-white p-3 rounded-lg rounded-ss-none shadow-sm border border-gray-200 text-sm max-w-[90%]">
                                  <div className="flex items-center gap-2 text-gray-500 mb-2">
                                      <Search size={14} className="animate-spin" />
                                      <span>Scanning local skills...</span>
@@ -152,7 +152,7 @@ export const SceneSkillDiscovery: React.FC<SceneProps> = ({ step }) => {
                                             <div className="font-bold text-xs uppercase">Auto-Matched</div>
                                             <div className="font-mono font-bold">git-helper</div>
                                          </div>
-                                         <CheckCircle2 size={18} className="ml-auto text-green-500" />
+                                         <CheckCircle2 size={18} className="ms-auto text-green-500" />
                                      </motion.div>
                                  )}
                              </div>
@@ -165,7 +165,7 @@ export const SceneSkillDiscovery: React.FC<SceneProps> = ({ step }) => {
           {/* Connection / Scanning Beam */}
           {step === 4 && (
              <motion.div 
-                className="absolute top-1/2 left-[30%] right-[30%] h-1 bg-gradient-to-r from-yellow-400 to-transparent z-10"
+                className="absolute top-1/2 start-[30%] end-[30%] h-1 bg-gradient-to-r from-yellow-400 to-transparent z-10"
                 initial={{ opacity: 0, scaleX: 0 }}
                 animate={{ opacity: [0, 1, 0], scaleX: [0, 1, 0], left: ['40%', '10%', '40%'] }}
                 transition={{ duration: 1.5, repeat: Infinity }}

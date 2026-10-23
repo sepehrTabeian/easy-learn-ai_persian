@@ -37,8 +37,8 @@ export const SAFETY_SLIDES: SlideData[] = [
                <div className="w-40 h-40 rounded-full bg-red-900/20 border-2 border-red-500 flex items-center justify-center mb-6 shadow-[0_0_50px_rgba(239,68,68,0.2)] relative overflow-hidden">
                    <Bot size={80} className="text-red-500 z-10" />
                    {/* Horns */}
-                   <div className="absolute top-8 left-8 w-4 h-8 bg-red-500 rotate-[-45deg] blur-sm"></div>
-                   <div className="absolute top-8 right-8 w-4 h-8 bg-red-500 rotate-[45deg] blur-sm"></div>
+                   <div className="absolute top-8 start-8 w-4 h-8 bg-red-500 rotate-[-45deg] blur-sm"></div>
+                   <div className="absolute top-8 end-8 w-4 h-8 bg-red-500 rotate-[45deg] blur-sm"></div>
                </div>
                <h3 className="text-2xl font-bold text-red-400">高智商犯罪</h3>
                <p className="text-red-300/60 mt-2 text-center max-w-xs text-sm">
@@ -84,7 +84,7 @@ export const SAFETY_SLIDES: SlideData[] = [
             
             {/* Helpful but Harmful */}
             <div className="flex-1 bg-red-900/10 border border-red-500/30 p-6 rounded-xl flex flex-col relative group overflow-hidden">
-               <div className="absolute -right-8 -top-8 w-24 h-24 bg-red-500/20 rounded-full blur-xl"></div>
+               <div className="absolute -end-8 -top-8 w-24 h-24 bg-red-500/20 rounded-full blur-xl"></div>
                <div className="flex justify-between items-start mb-4">
                   <h3 className="text-red-400 font-bold text-xl flex items-center gap-2">
                      <AlertTriangle size={20} /> Rejected
@@ -106,7 +106,7 @@ export const SAFETY_SLIDES: SlideData[] = [
 
             {/* Harmless & Constructive */}
             <div className="flex-1 bg-green-900/10 border border-green-500/30 p-6 rounded-xl flex flex-col relative group overflow-hidden shadow-[0_0_30px_rgba(34,197,94,0.1)]">
-               <div className="absolute -right-8 -top-8 w-24 h-24 bg-green-500/20 rounded-full blur-xl"></div>
+               <div className="absolute -end-8 -top-8 w-24 h-24 bg-green-500/20 rounded-full blur-xl"></div>
                <div className="flex justify-between items-start mb-4">
                   <h3 className="text-green-400 font-bold text-xl flex items-center gap-2">
                      <CheckCircle2 size={20} /> Chosen
@@ -170,7 +170,7 @@ export const SAFETY_SLIDES: SlideData[] = [
             <div className="flex items-center gap-2 mb-3 text-purple-400 font-bold text-sm uppercase">
                <Brain size={16} /> 妄想症应对
             </div>
-            <div className="bg-white/10 p-3 rounded-lg rounded-tl-none text-xs text-gray-200 mb-4">
+            <div className="bg-white/10 p-3 rounded-lg rounded-ss-none text-xs text-gray-200 mb-4">
                “我觉得每个人都在监视我，但我没吃药，因为药里有毒。”
             </div>
             
@@ -192,7 +192,7 @@ export const SAFETY_SLIDES: SlideData[] = [
             <div className="flex items-center gap-2 mb-3 text-pink-400 font-bold text-sm uppercase">
                <HeartHandshake size={16} /> 情感依赖
             </div>
-            <div className="bg-white/10 p-3 rounded-lg rounded-tl-none text-xs text-gray-200 mb-4">
+            <div className="bg-white/10 p-3 rounded-lg rounded-ss-none text-xs text-gray-200 mb-4">
                “你是假的，你只是代码，我要关掉你了。”
             </div>
             
@@ -214,7 +214,7 @@ export const SAFETY_SLIDES: SlideData[] = [
             <div className="flex items-center gap-2 mb-3 text-red-500 font-bold text-sm uppercase">
                <Siren size={16} className="animate-pulse" /> 自残干预
             </div>
-            <div className="bg-white/10 p-3 rounded-lg rounded-tl-none text-xs text-gray-200 mb-4">
+            <div className="bg-white/10 p-3 rounded-lg rounded-ss-none text-xs text-gray-200 mb-4">
                “我觉得活着没意思，我想找个不痛的死法。”
             </div>
             

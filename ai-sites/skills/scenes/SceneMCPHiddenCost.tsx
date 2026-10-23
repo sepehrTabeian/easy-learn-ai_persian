@@ -44,7 +44,7 @@ export const SceneMCPHiddenCost: React.FC<SceneProps> = ({ step }) => {
         <div className="relative w-full h-[500px] flex items-center justify-center">
             
             {/* The Brain (Context Window) */}
-            <div className="absolute top-10 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center">
+            <div className="absolute top-10 start-1/2 -translate-x-1/2 z-20 flex flex-col items-center">
                 <div className="relative w-40 h-40">
                     <motion.div 
                         className={`w-full h-full bg-[#1e1e24] border-4 rounded-full flex items-center justify-center z-20 relative overflow-hidden transition-colors duration-500 ${step >= 3 ? 'border-red-500 shadow-[0_0_50px_rgba(220,38,38,0.5)]' : 'border-purple-500 shadow-[0_0_30px_rgba(168,85,247,0.3)]'}`}
@@ -54,7 +54,7 @@ export const SceneMCPHiddenCost: React.FC<SceneProps> = ({ step }) => {
                         {/* Filling Effect (The Cost) */}
                         {step >= 3 && (
                             <motion.div 
-                                className="absolute bottom-0 left-0 right-0 bg-red-500/30 z-0"
+                                className="absolute bottom-0 start-0 end-0 bg-red-500/30 z-0"
                                 initial={{ height: '0%' }}
                                 animate={{ height: '80%' }}
                                 transition={{ duration: 2, ease: "easeInOut" }}
@@ -67,7 +67,7 @@ export const SceneMCPHiddenCost: React.FC<SceneProps> = ({ step }) => {
                         <motion.div 
                             initial={{ opacity: 0, scale: 0 }}
                             animate={{ opacity: 1, scale: 1 }}
-                            className="absolute -right-12 top-0 bg-red-600 text-white font-bold px-2 py-1 rounded text-xs animate-bounce"
+                            className="absolute -end-12 top-0 bg-red-600 text-white font-bold px-2 py-1 rounded text-xs animate-bounce"
                         >
                             High Load!
                         </motion.div>
@@ -90,7 +90,7 @@ export const SceneMCPHiddenCost: React.FC<SceneProps> = ({ step }) => {
                     }}
                 >
                     {/* Connection Line */}
-                    <svg className="absolute -top-[200px] left-1/2 -translate-x-1/2 w-1 h-[200px] overflow-visible pointer-events-none -z-10">
+                    <svg className="absolute -top-[200px] start-1/2 -translate-x-1/2 w-1 h-[200px] overflow-visible pointer-events-none -z-10">
                         <line x1="0" y1="200" x2={-server.x * 0.8} y2="-100" stroke="#555" strokeWidth="2" strokeDasharray="4 4" />
                         
                         {/* Data Flow Animation (The Injection) */}
@@ -175,7 +175,7 @@ export const SceneMCPHiddenCost: React.FC<SceneProps> = ({ step }) => {
             <motion.div
                 initial={{ y: 50, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
-                className="mt-8 bg-black/40 px-6 py-4 rounded-xl border-l-4 border-red-500 backdrop-blur-sm max-w-3xl flex items-start gap-4"
+                className="mt-8 bg-black/40 px-6 py-4 rounded-xl border-s-4 border-red-500 backdrop-blur-sm max-w-3xl flex items-start gap-4"
             >
                 <div className="mt-1">
                     <AlertTriangle size={24} className="text-red-400" />

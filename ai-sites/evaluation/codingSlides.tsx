@@ -37,7 +37,7 @@ export const CODING_SLIDES: SlideData[] = [
             <div className="w-3 h-3 rounded-full bg-red-500"></div>
             <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
             <div className="w-3 h-3 rounded-full bg-green-500"></div>
-            <div className="ml-4 text-xs text-slate-400 font-mono">
+            <div className="ms-4 text-xs text-slate-400 font-mono">
               ai_benchmark.py
             </div>
           </div>
@@ -49,23 +49,23 @@ export const CODING_SLIDES: SlideData[] = [
               def <span className="text-blue-400">assess_coding_skill</span>
               (model):
             </p>
-            <p className="text-slate-300 ml-4">
+            <p className="text-slate-300 ms-4">
               level = <span className="text-green-400">"Junior"</span>
             </p>
-            <p className="text-slate-300 ml-4">
+            <p className="text-slate-300 ms-4">
               if model.can_fix_repo_issues():
             </p>
-            <p className="text-slate-300 ml-8">
+            <p className="text-slate-300 ms-8">
               level = <span className="text-yellow-400">"Senior Engineer"</span>
             </p>
-            <p className="text-slate-300 ml-4">return level</p>
+            <p className="text-slate-300 ms-4">return level</p>
 
             <div className="mt-6 text-slate-500">
               # Output: GPT-5.2 -{">"} Senior Engineer
             </div>
 
             {/* Cursor Animation */}
-            <div className="w-2 h-5 bg-blue-400 absolute bottom-6 left-6 animate-pulse"></div>
+            <div className="w-2 h-5 bg-blue-400 absolute bottom-6 start-6 animate-pulse"></div>
           </div>
         </div>
 
@@ -99,11 +99,11 @@ export const CODING_SLIDES: SlideData[] = [
               <span className="text-purple-400">def</span>{" "}
               <span className="text-blue-400">fibonacci</span>(n):
             </p>
-            <p className="text-gray-500 ml-4">"""</p>
-            <p className="text-gray-500 ml-4">Return the n-th number</p>
-            <p className="text-gray-500 ml-4">in the fibonacci sequence.</p>
-            <p className="text-gray-500 ml-4">"""</p>
-            <div className="bg-blue-900/20 border border-blue-500/30 p-2 ml-4 rounded mt-2 animate-pulse">
+            <p className="text-gray-500 ms-4">"""</p>
+            <p className="text-gray-500 ms-4">Return the n-th number</p>
+            <p className="text-gray-500 ms-4">in the fibonacci sequence.</p>
+            <p className="text-gray-500 ms-4">"""</p>
+            <div className="bg-blue-900/20 border border-blue-500/30 p-2 ms-4 rounded mt-2 animate-pulse">
               <span className="text-blue-300"># AI completes code here...</span>
             </div>
           </div>

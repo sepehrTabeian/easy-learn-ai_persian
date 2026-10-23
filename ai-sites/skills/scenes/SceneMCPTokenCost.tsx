@@ -17,7 +17,7 @@ export const SceneMCPTokenCost: React.FC<SceneProps> = ({ step }) => {
       {/* Step 3: Background Flame Effect for burning money */}
       {step >= 3 && (
         <div className="absolute inset-0 pointer-events-none opacity-20 z-0">
-             <div className="absolute bottom-0 left-0 right-0 h-3/4 bg-gradient-to-t from-orange-900/50 via-red-900/10 to-transparent" />
+             <div className="absolute bottom-0 start-0 end-0 h-3/4 bg-gradient-to-t from-orange-900/50 via-red-900/10 to-transparent" />
         </div>
       )}
 
@@ -48,7 +48,7 @@ export const SceneMCPTokenCost: React.FC<SceneProps> = ({ step }) => {
                         </div>
                         
                         {/* Badge */}
-                        <div className="absolute -top-4 -right-4 bg-purple-600 text-white font-bold px-3 py-1 rounded-full border-2 border-[#1e1e24] shadow-lg z-20">
+                        <div className="absolute -top-4 -end-4 bg-purple-600 text-white font-bold px-3 py-1 rounded-full border-2 border-[#1e1e24] shadow-lg z-20">
                             Github MCP
                         </div>
 
@@ -58,7 +58,7 @@ export const SceneMCPTokenCost: React.FC<SceneProps> = ({ step }) => {
                                 {[...Array(12)].map((_, i) => (
                                     <motion.div
                                         key={i}
-                                        className="absolute top-1/2 left-1/2 w-8 h-8 bg-gray-700 border border-gray-500 rounded flex items-center justify-center"
+                                        className="absolute top-1/2 start-1/2 w-8 h-8 bg-gray-700 border border-gray-500 rounded flex items-center justify-center"
                                         initial={{ opacity: 0, scale: 0, x: -16, y: -16 }}
                                         animate={{ 
                                             opacity: [0, 1, 0], 
@@ -102,10 +102,10 @@ export const SceneMCPTokenCost: React.FC<SceneProps> = ({ step }) => {
                             <span className="text-sm">tokens</span>
                         </div>
                         <div className="h-px bg-white/20 w-full" />
-                        <div className="text-right text-4xl md:text-5xl font-mono font-bold text-red-400">
+                        <div className="text-end text-4xl md:text-5xl font-mono font-bold text-red-400">
                             = 15,000
                         </div>
-                        <div className="text-right text-xs text-red-300/70 uppercase tracking-widest">
+                        <div className="text-end text-xs text-red-300/70 uppercase tracking-widest">
                             Context Load (Single Server)
                         </div>
                     </motion.div>
@@ -151,7 +151,7 @@ export const SceneMCPTokenCost: React.FC<SceneProps> = ({ step }) => {
           >
               <div className="flex flex-col gap-2">
                    <div className="text-gray-400 text-sm font-bold uppercase">User Input</div>
-                   <div className="bg-blue-600 text-white px-4 py-2 rounded-lg rounded-tl-none inline-flex items-center gap-2 w-fit">
+                   <div className="bg-blue-600 text-white px-4 py-2 rounded-lg rounded-ss-none inline-flex items-center gap-2 w-fit">
                        <MessageSquare size={16} />
                        "Hi"
                    </div>
@@ -159,10 +159,10 @@ export const SceneMCPTokenCost: React.FC<SceneProps> = ({ step }) => {
               </div>
 
               <div className="flex-1 flex flex-col gap-2">
-                   <div className="text-gray-400 text-sm font-bold uppercase text-right">System Overhead</div>
+                   <div className="text-gray-400 text-sm font-bold uppercase text-end">System Overhead</div>
                    <div className="w-full h-8 bg-gray-800 rounded-full overflow-hidden relative border border-gray-600">
                        <motion.div 
-                          className="absolute inset-y-0 left-0 bg-gradient-to-r from-red-500 to-orange-500"
+                          className="absolute inset-y-0 start-0 bg-gradient-to-r from-red-500 to-orange-500"
                           initial={{ width: "0%" }}
                           animate={{ width: "98%" }}
                           transition={{ duration: 1.5, ease: "easeOut" }}
@@ -171,7 +171,7 @@ export const SceneMCPTokenCost: React.FC<SceneProps> = ({ step }) => {
                            50,000+ Tokens
                        </div>
                    </div>
-                   <div className="text-xs text-red-400 font-mono text-right flex items-center justify-end gap-1">
+                   <div className="text-xs text-red-400 font-mono text-end flex items-center justify-end gap-1">
                        <Flame size={12} />
                        <span>Burning Cash...</span>
                    </div>

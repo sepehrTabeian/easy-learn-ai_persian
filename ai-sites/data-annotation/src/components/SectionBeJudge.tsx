@@ -105,7 +105,7 @@ const SectionBeJudge: React.FC = () => {
                   ].join(" ")}
                 />
               ))}
-              <span className="ml-auto font-mono text-[11px] tracking-[0.16em] uppercase text-ink/50">
+              <span className="ms-auto font-mono text-[11px] tracking-[0.16em] uppercase text-ink/50">
                 第 {idx + 1} / {TASKS.length} 题
               </span>
             </div>
@@ -127,7 +127,7 @@ const SectionBeJudge: React.FC = () => {
                       onClick={() => pick(opt)}
                       disabled={picked !== null}
                       className={[
-                        "text-left rounded-2xl border-2 border-ink p-5 transition-all duration-250 ease-spring",
+                        "text-start rounded-2xl border-2 border-ink p-5 transition-all duration-250 ease-spring",
                         reveal && isBetter
                           ? "bg-teal/15 border-teal"
                           : reveal && isPicked && !isBetter
@@ -181,7 +181,7 @@ const SectionBeJudge: React.FC = () => {
             </div>
             <div className="font-display font-extrabold text-[40px] text-ink leading-none">
               {score} / {TASKS.length}
-              <span className="font-mono text-[15px] text-ink/45 ml-2">标对</span>
+              <span className="font-mono text-[15px] text-ink/45 ms-2">标对</span>
             </div>
             <p className="mt-4 font-sans text-[16.5px] leading-[1.75] text-ink/85 max-w-[680px]">
               {summary}

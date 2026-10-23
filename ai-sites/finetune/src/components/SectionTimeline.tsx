@@ -120,7 +120,7 @@ const SectionTimeline: React.FC = () => {
             从 2019 一路<br className="lg:hidden" />
             <span className="relative inline-block">
               <span
-                className="absolute left-0 right-0 bottom-1 h-3 lg:h-4 bg-butter -z-0"
+                className="absolute start-0 end-0 bottom-1 h-3 lg:h-4 bg-butter -z-0"
                 aria-hidden
               />
               <span className="relative z-10">走到 2026</span>
@@ -135,9 +135,9 @@ const SectionTimeline: React.FC = () => {
         <div className="bg-white border-2 border-ink rounded-3xl shadow-stamp-lg p-6 lg:p-8 mb-6">
           <div className="relative">
             {/* 横线 */}
-            <div className="absolute left-3 right-3 top-[18px] h-0.5 bg-ink/20" />
+            <div className="absolute start-3 end-3 top-[18px] h-0.5 bg-ink/20" />
             <div
-              className="absolute left-3 top-[18px] h-0.5 bg-ink transition-all duration-500 ease-spring"
+              className="absolute start-3 top-[18px] h-0.5 bg-ink transition-all duration-500 ease-spring"
               style={{ width: `calc(${(cursor / (STEPS.length - 1)) * 100}% - 6px)` }}
             />
 

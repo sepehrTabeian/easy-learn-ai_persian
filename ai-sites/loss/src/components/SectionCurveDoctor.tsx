@@ -210,7 +210,7 @@ const SectionCurveDoctor: React.FC = () => {
         <h2 className="font-display text-display-lg text-ink mb-5 max-w-3xl">
           loss 一直在降，
           <span className="relative inline-block">
-            <span className="absolute left-0 right-0 bottom-1 h-4 lg:h-5 bg-coral/55 -z-0 rotate-1" aria-hidden />
+            <span className="absolute start-0 end-0 bottom-1 h-4 lg:h-5 bg-coral/55 -z-0 rotate-1" aria-hidden />
             <span className="relative z-10">benchmark 一动不动</span>
           </span>
           ——
@@ -241,7 +241,7 @@ const SectionCurveDoctor: React.FC = () => {
               {" "}
               《学习率》那站专门讲：训练第一步 loss 为什么约等于 ln(N)、学习率调太大 loss 飞了怎么拉回来。
             </span>
-            <span className="inline-flex items-center gap-1 ml-1 font-mono text-[11px] font-bold text-ink">
+            <span className="inline-flex items-center gap-1 ms-1 font-mono text-[11px] font-bold text-ink">
               学习率站 <ArrowUpRight className="w-3 h-3" strokeWidth={2.6} />
             </span>
           </span>
@@ -256,7 +256,7 @@ const SectionCurveDoctor: React.FC = () => {
                 key={s.id}
                 onClick={() => setPicked(s.id)}
                 className={[
-                  "p-3 rounded-2xl border-2 border-ink text-left transition-all duration-250 ease-spring",
+                  "p-3 rounded-2xl border-2 border-ink text-start transition-all duration-250 ease-spring",
                   on
                     ? "bg-ink text-cream shadow-stamp-lg"
                     : "bg-cream text-ink hover:bg-butter shadow-[2px_2px_0_0_#241C15] hover:shadow-stamp",

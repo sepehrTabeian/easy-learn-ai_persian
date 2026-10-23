@@ -174,7 +174,7 @@ const SectionForget: React.FC = () => {
                 >
                   <button
                     onClick={() => setOpenId(open ? "" : c.id)}
-                    className="w-full px-5 py-4 flex items-start justify-between gap-4 text-left"
+                    className="w-full px-5 py-4 flex items-start justify-between gap-4 text-start"
                   >
                     <div className="flex-1 min-w-0">
                       <div className="font-display font-bold text-[15.5px] text-ink leading-snug mb-1">

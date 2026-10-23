@@ -127,13 +127,13 @@ const SectionHero: React.FC = () => {
       {/* 浮动装饰 */}
       <div
         aria-hidden
-        className="absolute top-24 right-[6%] hidden lg:block animate-float-y"
+        className="absolute top-24 end-[6%] hidden lg:block animate-float-y"
       >
         <div className="w-10 h-10 bg-teal border-2 border-ink rounded-2xl shadow-stamp -rotate-12" />
       </div>
       <div
         aria-hidden
-        className="absolute bottom-28 left-[5%] hidden lg:block animate-float-y-sm"
+        className="absolute bottom-28 start-[5%] hidden lg:block animate-float-y-sm"
       >
         <div className="w-9 h-9 bg-coral border-2 border-ink rounded-full shadow-stamp rotate-6" />
       </div>
@@ -158,7 +158,7 @@ const SectionHero: React.FC = () => {
             <p className="max-w-md font-display text-[20px] lg:text-[22px] font-bold text-ink leading-snug mb-5 animate-enter-up">
               <span className="relative inline-block">
                 <span
-                  className="absolute left-0 right-0 bottom-0.5 h-3 lg:h-4 bg-butter -z-0"
+                  className="absolute start-0 end-0 bottom-0.5 h-3 lg:h-4 bg-butter -z-0"
                   aria-hidden
                 />
                 <span className="relative z-10">
@@ -282,7 +282,7 @@ const SectionHero: React.FC = () => {
                     <Bubble key={i} step={step} index={i} isLatest={i === cursor} />
                   ))}
                   {cursor < STEPS.length - 1 && (
-                    <div className="flex items-center gap-2 pl-4 mt-2 animate-enter-fade">
+                    <div className="flex items-center gap-2 ps-4 mt-2 animate-enter-fade">
                       <span className="w-1.5 h-1.5 rounded-full bg-ink/30 animate-pulse-dot" />
                       <span className="font-mono text-[10.5px] uppercase tracking-[0.2em] text-ink/40">
                         下一步 · 按 ▶ 或 next

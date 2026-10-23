@@ -133,7 +133,7 @@ const SectionParadigms: React.FC = () => {
         <div className="relative mb-10">
           {/* 横线 */}
           <div
-            className="absolute left-0 right-0 top-[26px] h-[3px] bg-ink hidden md:block"
+            className="absolute start-0 end-0 top-[26px] h-[3px] bg-ink hidden md:block"
             aria-hidden
           />
           <div className="grid grid-cols-2 md:grid-cols-5 gap-4 md:gap-2 relative">

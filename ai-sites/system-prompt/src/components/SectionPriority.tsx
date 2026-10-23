@@ -145,7 +145,7 @@ const SectionPriority: React.FC = () => {
                   >
                     <button
                       onClick={() => setOpen(isOpen ? null : i)}
-                      className="w-full flex items-center justify-between gap-3 px-4 py-3.5 text-left"
+                      className="w-full flex items-center justify-between gap-3 px-4 py-3.5 text-start"
                     >
                       <span className="font-display font-bold text-[15px] text-ink leading-snug">
                         {item.q}

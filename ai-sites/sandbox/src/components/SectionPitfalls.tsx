@@ -126,7 +126,7 @@ const SectionPitfalls: React.FC = () => {
                 <button
                   type="button"
                   onClick={() => setOpenId(open ? null : p.id)}
-                  className="w-full text-left px-5 py-4 flex items-center gap-4"
+                  className="w-full text-start px-5 py-4 flex items-center gap-4"
                 >
                   <span className="w-10 h-10 rounded-full bg-cream border-2 border-ink flex items-center justify-center flex-shrink-0">
                     <span className="font-mono text-[13px] font-extrabold text-ink">

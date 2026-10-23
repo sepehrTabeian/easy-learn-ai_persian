@@ -74,7 +74,7 @@ export default function SectionWhereToHang() {
               <button
                 key={id}
                 onClick={() => setP(id)}
-                className={`w-full text-left px-4 py-4 rounded-2xl border-2 transition-all duration-250 ease-spring ${
+                className={`w-full text-start px-4 py-4 rounded-2xl border-2 transition-all duration-250 ease-spring ${
                   a ? "bg-ink text-cream border-ink shadow-stamp" : "bg-white border-ink/30 hover:border-ink text-ink"
                 }`}
               >

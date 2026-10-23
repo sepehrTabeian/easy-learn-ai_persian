@@ -127,7 +127,7 @@ const SectionEmbedding: React.FC = () => {
                     key={a.label}
                     onClick={() => setActiveIdx(i)}
                     className={[
-                      "w-full text-left p-4 rounded-2xl border-2 border-ink transition-all duration-250 ease-spring",
+                      "w-full text-start p-4 rounded-2xl border-2 border-ink transition-all duration-250 ease-spring",
                       on
                         ? "bg-ink text-cream shadow-stamp-lg -translate-x-0.5 -translate-y-0.5"
                         : "bg-cream text-ink hover:bg-butter shadow-stamp",
@@ -376,13 +376,13 @@ const SectionEmbedding: React.FC = () => {
                   <div className="hidden sm:block relative h-7 bg-white border-2 border-ink rounded-md overflow-hidden">
                     <div
                       className={[
-                        "h-full border-r-2 border-ink transition-all duration-500 ease-spring origin-left",
+                        "h-full border-e-2 border-ink transition-all duration-500 ease-spring origin-left",
                         m.tone,
                       ].join(" ")}
                       style={{ width: `${Math.max(6, pct)}%` }}
                     />
                   </div>
-                  <div className="text-right font-display font-extrabold text-[16px] text-ink tabular-nums">
+                  <div className="text-end font-display font-extrabold text-[16px] text-ink tabular-nums">
                     {m.score.toFixed(2)}
                   </div>
                 </div>

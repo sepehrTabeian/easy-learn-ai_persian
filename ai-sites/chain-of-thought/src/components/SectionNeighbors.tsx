@@ -114,7 +114,7 @@ const SectionNeighbors: React.FC = () => {
               </p>
             </div>
           </div>
-          <div className="flex flex-wrap gap-2.5 mt-4 pl-10">
+          <div className="flex flex-wrap gap-2.5 mt-4 ps-10">
             {HUB_LINKS.map((l) => (
               <a
                 key={l.href}

@@ -146,7 +146,7 @@ const SectionRecipes: React.FC = () => {
         <h2 className="font-display text-display-lg text-ink mb-5 max-w-3xl">
           训得起的 batch，
           <span className="relative inline-block">
-            <span className="absolute left-0 right-0 bottom-1 h-4 lg:h-5 bg-butter -z-0 rotate-1" aria-hidden />
+            <span className="absolute start-0 end-0 bottom-1 h-4 lg:h-5 bg-butter -z-0 rotate-1" aria-hidden />
             <span className="relative z-10">跨了 6 个数量级</span>
           </span>
           ：
@@ -245,13 +245,13 @@ const SectionRecipes: React.FC = () => {
                   <div className="col-span-5 sm:col-span-6 relative h-6">
                     <div className="absolute inset-0 bg-ink/8 rounded-full border border-ink/15" />
                     <div
-                      className={[tone, "absolute inset-y-0 left-0 rounded-full transition-all duration-500 ease-spring"].join(" ")}
+                      className={[tone, "absolute inset-y-0 start-0 rounded-full transition-all duration-500 ease-spring"].join(" ")}
                       style={{ width: `${pct}%` }}
                     />
                   </div>
 
                   {/* 数值 */}
-                  <div className="col-span-3 text-right">
+                  <div className="col-span-3 text-end">
                     <div className="font-display text-[16px] font-bold text-ink tabular-nums leading-tight">
                       {formatRecipe(tab, r.tokens)}
                     </div>

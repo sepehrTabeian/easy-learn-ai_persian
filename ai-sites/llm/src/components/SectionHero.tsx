@@ -245,13 +245,13 @@ const SectionHero: React.FC = () => {
       {/* 浮动装饰 */}
       <div
         aria-hidden
-        className="absolute top-24 right-[6%] hidden lg:block animate-float-y"
+        className="absolute top-24 end-[6%] hidden lg:block animate-float-y"
       >
         <div className="w-10 h-10 bg-butter border-2 border-ink rounded-2xl shadow-stamp -rotate-12" />
       </div>
       <div
         aria-hidden
-        className="absolute bottom-28 left-[5%] hidden lg:block animate-float-y-sm"
+        className="absolute bottom-28 start-[5%] hidden lg:block animate-float-y-sm"
       >
         <div className="w-9 h-9 bg-coral border-2 border-ink rounded-full shadow-stamp rotate-6" />
       </div>
@@ -274,7 +274,7 @@ const SectionHero: React.FC = () => {
             <p className="max-w-md font-display text-[20px] lg:text-[22px] font-bold text-ink leading-snug mb-5 animate-enter-up">
               <span className="relative inline-block">
                 <span
-                  className="absolute left-0 right-0 bottom-0.5 h-3 lg:h-4 bg-butter -z-0"
+                  className="absolute start-0 end-0 bottom-0.5 h-3 lg:h-4 bg-butter -z-0"
                   aria-hidden
                 />
                 <span className="relative z-10">
@@ -347,7 +347,7 @@ const SectionHero: React.FC = () => {
 
               {/* 开头选择 */}
               <div className="flex flex-wrap items-center gap-2 px-5 lg:px-6 pt-4 pb-3 border-b border-ink/10">
-                <span className="font-mono text-[10px] uppercase tracking-[0.18em] text-ink/45 mr-1">
+                <span className="font-mono text-[10px] uppercase tracking-[0.18em] text-ink/45 me-1">
                   开头
                 </span>
                 {STORIES.map((s) => {
@@ -379,12 +379,12 @@ const SectionHero: React.FC = () => {
                     {completedText}
                     {!finished && (
                       <span
-                        className="inline-block w-2 h-6 align-middle bg-coral ml-0.5 animate-pulse-dot"
+                        className="inline-block w-2 h-6 align-middle bg-coral ms-0.5 animate-pulse-dot"
                         aria-hidden
                       />
                     )}
                     {finished && (
-                      <span className="ml-2 inline-flex items-center gap-1 px-2 py-0.5 bg-butter border-2 border-ink rounded-md font-mono text-[10px] uppercase tracking-wide">
+                      <span className="ms-2 inline-flex items-center gap-1 px-2 py-0.5 bg-butter border-2 border-ink rounded-md font-mono text-[10px] uppercase tracking-wide">
                         ✓ 接完
                       </span>
                     )}
@@ -438,14 +438,14 @@ const SectionHero: React.FC = () => {
                         </div>
                         <span
                           className={[
-                            "font-mono tabular-nums text-[12px] font-bold w-14 text-right",
+                            "font-mono tabular-nums text-[12px] font-bold w-14 text-end",
                             isPick ? "text-ink" : "text-ink/45",
                           ].join(" ")}
                         >
                           {Math.round(c.p * 100)}%
                         </span>
                         {isPick && !finished && (
-                          <span className="absolute -right-2 -top-2 inline-flex items-center gap-0.5 px-1.5 py-0.5 bg-coral text-white border-2 border-ink rounded-md font-mono text-[9px] font-bold uppercase tracking-wide">
+                          <span className="absolute -end-2 -top-2 inline-flex items-center gap-0.5 px-1.5 py-0.5 bg-coral text-white border-2 border-ink rounded-md font-mono text-[9px] font-bold uppercase tracking-wide">
                             选它
                             <ChevronRight className="w-2.5 h-2.5" strokeWidth={3} />
                           </span>

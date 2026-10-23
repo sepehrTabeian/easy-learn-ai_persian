@@ -227,7 +227,7 @@ const SectionWhereStored: React.FC = () => {
                 </div>
 
                 {layer.id !== "token" && (
-                  <div className="absolute top-5 right-5 text-ink/30">
+                  <div className="absolute top-5 end-5 text-ink/30">
                     <Lock className="w-4 h-4" strokeWidth={2.2} />
                   </div>
                 )}
@@ -262,7 +262,7 @@ const SectionWhereStored: React.FC = () => {
                   <button
                     type="button"
                     onClick={() => setOpenToken(open ? "" : d.id)}
-                    className="w-full px-5 py-4 flex items-center justify-between gap-4 text-left"
+                    className="w-full px-5 py-4 flex items-center justify-between gap-4 text-start"
                   >
                     <div className="flex items-center gap-4">
                       <span className="font-mono text-[11px] font-bold text-ink/45 tracking-[0.16em]">
@@ -350,7 +350,7 @@ const Choice: React.FC<{
             type="button"
             key={opt.id}
             onClick={() => onSelect(opt.id)}
-            className={`w-full text-left px-4 py-3 border-2 border-ink rounded-2xl transition-all duration-250 ease-spring flex items-center gap-3 ${
+            className={`w-full text-start px-4 py-3 border-2 border-ink rounded-2xl transition-all duration-250 ease-spring flex items-center gap-3 ${
               selected
                 ? "bg-ink text-cream shadow-stamp-lg"
                 : "bg-cream text-ink shadow-stamp hover:translate-x-[-1px] hover:translate-y-[-1px]"

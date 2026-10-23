@@ -44,7 +44,7 @@ const SectionOpening: React.FC = () => {
         </div>
 
         <div className="relative">
-          <div className="absolute -right-8 -top-8 hidden h-32 w-32 rotate-6 border-2 border-ink bg-coral shadow-stamp md:block" />
+          <div className="absolute -end-8 -top-8 hidden h-32 w-32 rotate-6 border-2 border-ink bg-coral shadow-stamp md:block" />
           <div className="relative border-2 border-ink bg-white p-5 shadow-stamp-xl">
             <div className="mb-4 flex items-center justify-between">
               <MiniBadge dark>query</MiniBadge>

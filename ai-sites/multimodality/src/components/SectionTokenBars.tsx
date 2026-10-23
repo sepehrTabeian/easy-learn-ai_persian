@@ -157,8 +157,8 @@ const SectionTokenBars: React.FC = () => {
               一张照片，
               <br />
               就是
-              <span className="relative inline-block ml-1">
-                <span className="absolute left-0 right-0 bottom-1 h-3 lg:h-4 bg-butter -z-0" aria-hidden />
+              <span className="relative inline-block ms-1">
+                <span className="absolute start-0 end-0 bottom-1 h-3 lg:h-4 bg-butter -z-0" aria-hidden />
                 <span className="relative z-10">196 个数字</span>
               </span>
               。
@@ -228,8 +228,8 @@ const SectionTokenBars: React.FC = () => {
           <div className="grid grid-cols-12 px-6 py-3 bg-cream border-b-2 border-ink font-mono text-[10px] uppercase tracking-[0.18em] text-ink/55">
             <div className="col-span-3">模态</div>
             <div className="col-span-4">输入大小</div>
-            <div className="col-span-2 text-right">token 数</div>
-            <div className="col-span-3 pl-3">相对 50 字消息 (ANCHOR)</div>
+            <div className="col-span-2 text-end">token 数</div>
+            <div className="col-span-3 ps-3">相对 50 字消息 (ANCHOR)</div>
           </div>
           {MODALITIES.map((m, i) => {
             const v = values[m.id];
@@ -265,7 +265,7 @@ const SectionTokenBars: React.FC = () => {
                     <span className="font-mono text-[10px] text-ink/50">{m.min}</span>
                     <span className="font-display text-[18px] font-bold text-ink tabular-nums">
                       {v}
-                      <span className="font-mono text-[10px] text-ink/55 ml-1">{m.unit}</span>
+                      <span className="font-mono text-[10px] text-ink/55 ms-1">{m.unit}</span>
                     </span>
                     <span className="font-mono text-[10px] text-ink/50">{m.max}</span>
                   </div>
@@ -283,7 +283,7 @@ const SectionTokenBars: React.FC = () => {
                 </div>
 
                 {/* token 数 */}
-                <div className="col-span-2 text-right">
+                <div className="col-span-2 text-end">
                   <span
                     key={tokens}
                     className="font-display text-[22px] font-bold text-ink tabular-nums animate-enter-pop inline-block"
@@ -293,7 +293,7 @@ const SectionTokenBars: React.FC = () => {
                 </div>
 
                 {/* 相对锚条 */}
-                <div className="col-span-3 pl-3">
+                <div className="col-span-3 ps-3">
                   <div className="relative h-4 bg-cream rounded-full border-2 border-ink overflow-hidden">
                     <div
                       className="h-full transition-all duration-400 ease-spring"

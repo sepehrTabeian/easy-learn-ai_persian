@@ -78,7 +78,7 @@ const SectionUseCases: React.FC = () => {
                   key={item.id}
                   onClick={() => setActive(item.id)}
                   className={[
-                    "flex items-center gap-3 rounded-2xl border-2 border-ink p-4 text-left transition-all duration-250 ease-spring",
+                    "flex items-center gap-3 rounded-2xl border-2 border-ink p-4 text-start transition-all duration-250 ease-spring",
                     active === item.id ? "bg-butter shadow-stamp" : "bg-cream hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-stamp",
                   ].join(" ")}
                 >

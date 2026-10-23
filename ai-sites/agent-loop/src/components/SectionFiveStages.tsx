@@ -177,7 +177,7 @@ const SectionFiveStages: React.FC = () => {
             如果你看过 Agent 那一站，那里讲的是
             <strong className="text-ink"> Think → Act → Observe </strong>三步。
             这里拆成五步是为了看清「谁在干活」（框架 vs LLM vs 工具）：
-            <span className="font-mono text-[12.5px] text-ink/85 ml-1">
+            <span className="font-mono text-[12.5px] text-ink/85 ms-1">
               感知 + 推理 + 规划 ≈ Think，行动 = Act，观察 = Observe。
             </span>
           </p>
@@ -302,7 +302,7 @@ const SectionFiveStages: React.FC = () => {
                     x={cx}
                     y={140}
                     textAnchor="middle"
-                    fontFamily='"Plus Jakarta Sans", "Noto Sans SC", sans-serif'
+                    fontFamily='"Plus Jakarta Sans", "Vazirmatn", sans-serif'
                     fontSize="14"
                     fontWeight={isActive ? "800" : "600"}
                     fill="#241C15"

@@ -236,9 +236,9 @@ const SectionAnatomy: React.FC = () => {
                     setSelectedKey(KV_BY_CAT[c.id][0].key);
                   }}
                   className={[
-                    "flex-1 min-w-[140px] px-4 py-4 text-left transition-colors duration-200",
+                    "flex-1 min-w-[140px] px-4 py-4 text-start transition-colors duration-200",
                     on ? "bg-ink text-cream" : "bg-white text-ink hover:bg-cream",
-                    "border-r-2 border-ink last:border-r-0",
+                    "border-e-2 border-ink last:border-e-0",
                   ].join(" ")}
                 >
                   <div className="flex items-baseline justify-between mb-0.5">
@@ -270,7 +270,7 @@ const SectionAnatomy: React.FC = () => {
           {/* 主体：左 KV 列表 + 右 detail */}
           <div className="grid lg:grid-cols-12">
             {/* 列表 */}
-            <div className="lg:col-span-7 border-r-0 lg:border-r-2 border-ink divide-y-2 divide-ink">
+            <div className="lg:col-span-7 border-e-0 lg:border-e-2 border-ink divide-y-2 divide-ink">
               {rows.map((r) => {
                 const on = r.key === selectedKey;
                 return (
@@ -278,7 +278,7 @@ const SectionAnatomy: React.FC = () => {
                     key={r.key}
                     onClick={() => setSelectedKey(r.key)}
                     className={[
-                      "w-full px-5 py-4 text-left transition-colors duration-200",
+                      "w-full px-5 py-4 text-start transition-colors duration-200",
                       on ? "bg-butter-tint" : "bg-white hover:bg-cream",
                     ].join(" ")}
                   >

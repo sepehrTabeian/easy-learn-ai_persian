@@ -172,7 +172,7 @@ const SectionLiveIn2026: React.FC = () => {
                 key={c.id}
                 onClick={() => toggle(c.id)}
                 className={[
-                  "relative text-left p-5 border-2 border-ink rounded-2xl transition-all duration-400 ease-spring min-h-[260px] flex flex-col",
+                  "relative text-start p-5 border-2 border-ink rounded-2xl transition-all duration-400 ease-spring min-h-[260px] flex flex-col",
                   isFlipped
                     ? "bg-ink text-cream shadow-stamp-lg"
                     : `${TONE_FRONT[c.tone]} shadow-stamp hover:-translate-y-[2px] hover:shadow-stamp-hover`,

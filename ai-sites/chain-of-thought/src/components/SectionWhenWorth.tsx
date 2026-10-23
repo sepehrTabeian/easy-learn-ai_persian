@@ -86,7 +86,7 @@ const SectionWhenWorth: React.FC = () => {
                     key={q.id}
                     type="button"
                     onClick={() => toggle(q.id)}
-                    className={`w-full flex items-center gap-3 text-left px-4 py-3.5 rounded-2xl border-2 border-ink transition-all duration-250 ease-spring ${
+                    className={`w-full flex items-center gap-3 text-start px-4 py-3.5 rounded-2xl border-2 border-ink transition-all duration-250 ease-spring ${
                       on
                         ? "bg-white shadow-stamp-lg -translate-x-0.5 -translate-y-0.5"
                         : "bg-white/40 shadow-stamp hover:bg-white"
@@ -101,7 +101,7 @@ const SectionWhenWorth: React.FC = () => {
                     </span>
                     <span className="font-sans text-[14.5px] text-ink/85 leading-[1.5]">{q.label}</span>
                     <span
-                      className={`ml-auto font-mono text-[9.5px] tracking-[0.15em] px-2 py-0.5 rounded-full border-2 ${
+                      className={`ms-auto font-mono text-[9.5px] tracking-[0.15em] px-2 py-0.5 rounded-full border-2 ${
                         q.kind === "pro"
                           ? "border-[#7A28CB]/40 text-[#7A28CB]"
                           : "border-pop/40 text-pop"
@@ -174,7 +174,7 @@ const SectionWhenWorth: React.FC = () => {
               </div>
               <a
                 href="../token/index.html"
-                className="inline-flex items-center gap-1.5 mt-3 ml-10 px-3 py-1.5 bg-cream border-2 border-ink rounded-full font-mono text-[11px] font-bold text-ink shadow-stamp hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-stamp-lg transition-all duration-250 ease-spring"
+                className="inline-flex items-center gap-1.5 mt-3 ms-10 px-3 py-1.5 bg-cream border-2 border-ink rounded-full font-mono text-[11px] font-bold text-ink shadow-stamp hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-stamp-lg transition-all duration-250 ease-spring"
               >
                 计量单位 · Token <ArrowUpRight className="w-3 h-3" strokeWidth={2.6} />
               </a>

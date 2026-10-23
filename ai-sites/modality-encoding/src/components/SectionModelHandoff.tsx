@@ -29,7 +29,7 @@ const SectionModelHandoff: React.FC = () => {
                 {PARTS.map((part) => {
                   const on = selected.includes(part.id);
                   return (
-                    <button key={part.id} onClick={() => setSelected(on ? selected.filter((x) => x !== part.id) : [...selected, part.id])} className={`flex w-full items-start gap-3 rounded-2xl border-2 border-ink p-4 text-left transition-all ${on ? "bg-butter shadow-stamp" : "bg-white"}`}>
+                    <button key={part.id} onClick={() => setSelected(on ? selected.filter((x) => x !== part.id) : [...selected, part.id])} className={`flex w-full items-start gap-3 rounded-2xl border-2 border-ink p-4 text-start transition-all ${on ? "bg-butter shadow-stamp" : "bg-white"}`}>
                       <span className={`mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center rounded-lg border-2 border-ink ${on ? "bg-ink text-cream" : "bg-white"}`}>{on && <Check className="h-4 w-4" />}</span>
                       <span><span className="block font-bold">{part.label}</span><span className="mt-1 block text-[12.5px] leading-relaxed text-ink/60">{part.why}</span></span>
                     </button>

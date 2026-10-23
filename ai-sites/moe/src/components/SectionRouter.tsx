@@ -96,12 +96,12 @@ const SectionRouter: React.FC = () => {
           <br />
           就是一个{" "}
           <span className="relative inline-block">
-            <span className="absolute left-0 right-0 bottom-1 h-4 lg:h-5 bg-butter -z-0 -rotate-1" aria-hidden />
+            <span className="absolute start-0 end-0 bottom-1 h-4 lg:h-5 bg-butter -z-0 -rotate-1" aria-hidden />
             <span className="relative z-10">小打分网络</span>
           </span>
           ，告诉你这个词
           <span className="relative inline-block">
-            <span className="absolute left-0 right-0 bottom-1 h-4 lg:h-5 bg-coral/55 -z-0 rotate-1" aria-hidden />
+            <span className="absolute start-0 end-0 bottom-1 h-4 lg:h-5 bg-coral/55 -z-0 rotate-1" aria-hidden />
             <span className="relative z-10">更像哪几个专家</span>
           </span>
           。
@@ -318,14 +318,14 @@ const SectionRouter: React.FC = () => {
                       </div>
                       <div
                         className={[
-                          "w-12 text-right shrink-0 font-mono text-[10px] tabular-nums",
+                          "w-12 text-end shrink-0 font-mono text-[10px] tabular-nums",
                           isTop ? "text-ink font-bold" : "text-ink/40",
                         ].join(" ")}
                       >
                         {pct.toFixed(1)}%
                       </div>
                       {isTop && (
-                        <div className="w-12 text-right shrink-0 font-mono text-[10px] text-coral font-bold tabular-nums">
+                        <div className="w-12 text-end shrink-0 font-mono text-[10px] text-coral font-bold tabular-nums">
                           →{wt.toFixed(0)}%
                         </div>
                       )}

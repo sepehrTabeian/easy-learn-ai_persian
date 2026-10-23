@@ -194,7 +194,7 @@ export default function SectionTaskCurves() {
               <button
                 key={t.id}
                 onClick={() => toggle(t.id)}
-                className={`w-full text-left card-stamp p-4 transition-all duration-250 ease-spring ${
+                className={`w-full text-start card-stamp p-4 transition-all duration-250 ease-spring ${
                   on ? "bg-white" : "bg-cream opacity-50"
                 }`}
               >

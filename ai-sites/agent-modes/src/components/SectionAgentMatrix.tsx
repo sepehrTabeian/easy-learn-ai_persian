@@ -108,7 +108,7 @@ const SectionAgentMatrix: React.FC = () => {
                   (h, i) => (
                     <th
                       key={i}
-                      className="text-left px-5 py-3 font-mono text-[10.5px] tracking-[0.2em] uppercase text-ink/70 font-bold"
+                      className="text-start px-5 py-3 font-mono text-[10.5px] tracking-[0.2em] uppercase text-ink/70 font-bold"
                     >
                       {h}
                     </th>

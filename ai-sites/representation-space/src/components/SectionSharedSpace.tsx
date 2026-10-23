@@ -33,9 +33,9 @@ const SectionSharedSpace: React.FC = () => {
                 {PAIRS.map((p, i) => <button key={i} onClick={() => setPair(i)} className={`rounded-full border-2 border-ink px-3 py-2 text-[12px] font-bold ${pair === i ? "bg-ink text-cream" : "bg-cream"}`}>组合 {i + 1}</button>)}
               </div>
               <div className="relative h-64 min-w-0 overflow-hidden rounded-2xl border-2 border-ink bg-butter-soft">
-                <div className="absolute left-8 top-1/2 -translate-y-1/2 rounded-2xl border-2 border-ink bg-coral p-4 font-bold shadow-stamp">{item.image}</div>
+                <div className="absolute start-8 top-1/2 -translate-y-1/2 rounded-2xl border-2 border-ink bg-coral p-4 font-bold shadow-stamp">{item.image}</div>
                 <div className="absolute top-1/2 -translate-y-1/2 rounded-2xl border-2 border-ink bg-teal p-4 font-bold text-cream shadow-stamp transition-all duration-250" style={{ left: `${Math.min(73, 18 + distance / 3.4)}%` }}>{item.text}</div>
-                <div className="absolute left-1/2 top-5 -translate-x-1/2 rounded-full border-2 border-ink bg-white px-3 py-1 font-mono text-[10px] font-bold"><Link2 className="mr-1 inline h-3 w-3" />距离 {Math.round(distance)}</div>
+                <div className="absolute start-1/2 top-5 -translate-x-1/2 rounded-full border-2 border-ink bg-white px-3 py-1 font-mono text-[10px] font-bold"><Link2 className="me-1 inline h-3 w-3" />距离 {Math.round(distance)}</div>
               </div>
               <label className="mt-5 block rounded-2xl border-2 border-ink bg-cream p-4">
                 <span className="mb-2 flex justify-between text-[12px] font-bold"><span>训练推动程度</span><span className="font-mono">{training}%</span></span>

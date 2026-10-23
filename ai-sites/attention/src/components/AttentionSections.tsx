@@ -47,13 +47,13 @@ export const SectionAttentionHero: React.FC = () => {
               {Array.from(active.text).map((char, index) => (
                 <span key={`${char}-${index}`} className={`relative rounded-lg border-2 border-ink px-2.5 py-2 font-display text-lg font-bold ${tone(active.weights[index])}`}>
                   {char}
-                  <span className="absolute -top-2 left-1/2 -translate-x-1/2 rounded-full border border-ink bg-white px-1 font-mono text-[8px]">{active.weights[index]}</span>
+                  <span className="absolute -top-2 start-1/2 -translate-x-1/2 rounded-full border border-ink bg-white px-1 font-mono text-[8px]">{active.weights[index]}</span>
                 </span>
               ))}
             </div>
             <div className="mt-6 grid gap-2 sm:grid-cols-3">
               {EXAMPLES.map((item, index) => (
-                <button key={item.text} onClick={() => setExample(index)} className={`rounded-xl border-2 border-ink px-3 py-2 text-left text-xs font-bold transition-all ${example === index ? "bg-ink text-cream shadow-stamp" : "bg-white"}`}>
+                <button key={item.text} onClick={() => setExample(index)} className={`rounded-xl border-2 border-ink px-3 py-2 text-start text-xs font-bold transition-all ${example === index ? "bg-ink text-cream shadow-stamp" : "bg-white"}`}>
                   例子 {index + 1}
                 </button>
               ))}
@@ -129,7 +129,7 @@ export const SectionQkvNames: React.FC = () => {
         <div className="grid gap-6 lg:grid-cols-12">
           <div className="space-y-3 lg:col-span-4">
             {QKV.map((item, index) => (
-              <button key={item.id} onClick={() => setStep(index)} className={`w-full rounded-2xl border-2 border-ink p-4 text-left transition-all ${step === index ? `${item.color} shadow-stamp` : "bg-cream"}`}>
+              <button key={item.id} onClick={() => setStep(index)} className={`w-full rounded-2xl border-2 border-ink p-4 text-start transition-all ${step === index ? `${item.color} shadow-stamp` : "bg-cream"}`}>
                 <span className="font-mono text-xs font-bold">{item.id}</span>
                 <span className="mt-1 block font-display text-lg font-bold">{item.name}</span>
                 <span className={`mt-1 block text-sm ${step === index && item.id !== "V" ? "text-cream/75" : "text-ink/65"}`}>{item.plain}</span>

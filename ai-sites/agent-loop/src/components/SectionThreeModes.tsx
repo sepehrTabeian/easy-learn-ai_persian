@@ -339,7 +339,7 @@ const PlanTrace: React.FC = () => {
             <span className="font-mono text-[12.5px] text-cream/90">
               {step}
             </span>
-            <span className="ml-auto flex-shrink-0 inline-flex items-center text-teal">
+            <span className="ms-auto flex-shrink-0 inline-flex items-center text-teal">
               <CheckCircle2 className="w-3.5 h-3.5" strokeWidth={2.5} />
             </span>
           </div>

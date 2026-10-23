@@ -246,8 +246,8 @@ const SectionWhyMake: React.FC = () => {
             <h2 className="font-display text-display-lg text-ink leading-tight">
               它答错的时候，<br />
               通常正是它最
-              <span className="relative inline-block ml-2">
-                <span className="absolute left-0 right-0 bottom-1 h-3 lg:h-4 bg-pop/70 -z-0" aria-hidden />
+              <span className="relative inline-block ms-2">
+                <span className="absolute start-0 end-0 bottom-1 h-3 lg:h-4 bg-pop/70 -z-0" aria-hidden />
                 <span className="relative z-10">自信</span>
               </span>
               的时候。
@@ -312,7 +312,7 @@ const SectionWhyMake: React.FC = () => {
               >
                 <button
                   onClick={() => setOpen(isOpen ? "" : c.id)}
-                  className="w-full flex items-center gap-4 px-5 py-4 text-left hover:bg-butter-tint transition-colors"
+                  className="w-full flex items-center gap-4 px-5 py-4 text-start hover:bg-butter-tint transition-colors"
                 >
                   <span className="shrink-0 w-9 h-9 flex items-center justify-center bg-butter border-2 border-ink rounded-full font-mono text-[11px] font-bold">
                     0{i + 1}

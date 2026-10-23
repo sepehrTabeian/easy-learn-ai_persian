@@ -29,7 +29,7 @@
   /* ─── fonts ─── */
   --font-display-cn: "Noto Serif SC", "Source Han Serif SC", serif;
   --font-display-en: "Instrument Serif", "GT Sectra", "Playfair Display", Georgia, serif;
-  --font-body:       "Manrope", "Inter", "Noto Sans SC", -apple-system, sans-serif;
+  --font-body:       "Manrope", "Inter", "Vazirmatn", -apple-system, sans-serif;
   --font-mono:       "JetBrains Mono", "SF Mono", ui-monospace, monospace;
   --font-features:   "ss01", "cv11", "tnum";
 

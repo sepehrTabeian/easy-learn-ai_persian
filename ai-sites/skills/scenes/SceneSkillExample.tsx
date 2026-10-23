@@ -69,7 +69,7 @@ export const SceneSkillExample: React.FC<SceneProps> = ({ step }) => {
                         <motion.div 
                             initial={{ opacity: 0, x: 20 }}
                             animate={{ opacity: 1, x: 0 }}
-                            className="absolute top-0 right-0 translate-x-[110%] md:translate-x-[120%] w-48 bg-blue-900/80 p-3 rounded border border-blue-500/50 backdrop-blur-sm"
+                            className="absolute top-0 end-0 translate-x-[110%] md:translate-x-[120%] w-48 bg-blue-900/80 p-3 rounded border border-blue-500/50 backdrop-blur-sm"
                         >
                             <div className="flex items-center gap-2 text-blue-300 font-bold mb-1">
                                 <Fingerprint size={20} />
@@ -86,7 +86,7 @@ export const SceneSkillExample: React.FC<SceneProps> = ({ step }) => {
                         <motion.div 
                             initial={{ opacity: 0, y: 10 }}
                             animate={{ opacity: 1, y: 0 }}
-                            className="absolute -bottom-4 right-10 translate-y-full bg-gray-800 p-3 rounded border border-gray-600 z-20 shadow-xl"
+                            className="absolute -bottom-4 end-10 translate-y-full bg-gray-800 p-3 rounded border border-gray-600 z-20 shadow-xl"
                         >
                             <div className="flex flex-col gap-2 text-xs">
                                 <div className="flex items-center gap-2">
@@ -113,9 +113,9 @@ export const SceneSkillExample: React.FC<SceneProps> = ({ step }) => {
                     <div className="flex items-center gap-2 font-bold text-purple-400 text-lg">
                         <span>##</span> 目标
                     </div>
-                    <div className="mt-1 pl-4 border-l-2 border-gray-700">
+                    <div className="mt-1 ps-4 border-s-2 border-gray-700">
                         把用户给的一段话，改写成：
-                        <ul className="list-disc pl-4 mt-1 space-y-1 text-gray-400">
+                        <ul className="list-disc ps-4 mt-1 space-y-1 text-gray-400">
                             <li>语气更礼貌</li>
                             <li>表达更通顺</li>
                             <li>保留原本意思不变</li>
@@ -123,7 +123,7 @@ export const SceneSkillExample: React.FC<SceneProps> = ({ step }) => {
                     </div>
 
                     {step === 3 && (
-                        <div className="absolute top-2 right-4 text-red-400 opacity-50">
+                        <div className="absolute top-2 end-4 text-red-400 opacity-50">
                             <Target size={24} />
                         </div>
                     )}
@@ -138,17 +138,17 @@ export const SceneSkillExample: React.FC<SceneProps> = ({ step }) => {
                     <div className="flex items-center gap-2 font-bold text-purple-400 text-lg">
                         <span>##</span> 使用步骤
                     </div>
-                    <div className="mt-1 pl-4 text-gray-400 space-y-2">
+                    <div className="mt-1 ps-4 text-gray-400 space-y-2">
                         <div>1. 先确定用户的目标 (更礼貌? 更口语?)</div>
                         <div>2. 仔细阅读原文</div>
                         <div>3. 进行改写
-                           <span className="text-gray-500 text-xs ml-2">// 调整语序、替换生硬表达</span>
+                           <span className="text-gray-500 text-xs ms-2">// 调整语序、替换生硬表达</span>
                         </div>
                         <div>4. 输出格式 (固定格式，方便阅读)</div>
                     </div>
 
                     {step === 3 && (
-                         <div className="absolute top-2 right-4 text-yellow-400 opacity-50">
+                         <div className="absolute top-2 end-4 text-yellow-400 opacity-50">
                             <ListChecks size={24} />
                         </div>
                     )}
@@ -163,7 +163,7 @@ export const SceneSkillExample: React.FC<SceneProps> = ({ step }) => {
                      <div className="flex items-center gap-2 font-bold text-purple-400 text-lg">
                         <span>##</span> 注意事项
                     </div>
-                    <div className="mt-1 pl-4 text-gray-500 text-sm">
+                    <div className="mt-1 ps-4 text-gray-500 text-sm">
                         - 不改变用户的真实立场和结论<br/>
                         - 避免替用户做实质性决定
                     </div>
@@ -177,7 +177,7 @@ export const SceneSkillExample: React.FC<SceneProps> = ({ step }) => {
             <motion.div 
                 initial={{ opacity: 0, x: 20 }}
                 animate={{ opacity: 1, x: 0 }}
-                className="absolute top-1/3 -right-4 translate-x-full hidden md:block"
+                className="absolute top-1/3 -end-4 translate-x-full hidden md:block"
             >
                 <div className="flex flex-col gap-8">
                      <div className="flex items-center gap-3">

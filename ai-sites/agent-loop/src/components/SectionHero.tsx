@@ -16,14 +16,14 @@ const SectionHero: React.FC = () => {
   return (
     <section className="relative bg-butter border-b-2 border-ink overflow-hidden">
       {/* 装饰：右上慢速旋转的虚线圆环（视觉锚 = 循环本身） */}
-      <div className="absolute top-10 right-[6%] hidden md:block pointer-events-none">
+      <div className="absolute top-10 end-[6%] hidden md:block pointer-events-none">
         <RotateCw
           className="w-24 h-24 text-ink/15 animate-spin-slow"
           strokeWidth={1.5}
         />
       </div>
       {/* 装饰：左下小圆点阵 */}
-      <div className="absolute bottom-10 left-[6%] hidden md:grid grid-cols-5 gap-2 pointer-events-none">
+      <div className="absolute bottom-10 start-[6%] hidden md:grid grid-cols-5 gap-2 pointer-events-none">
         {Array.from({ length: 15 }).map((_, i) => (
           <span
             key={i}

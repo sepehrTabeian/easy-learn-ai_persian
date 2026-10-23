@@ -27,7 +27,7 @@ const SectionHero: React.FC = () => {
   return (
     <section className="relative px-4 sm:px-6 lg:px-8 pt-20 lg:pt-28 pb-20 lg:pb-24 overflow-hidden">
       {/* 装饰：左上散落小方块（呼应「围栏」语义） */}
-      <div className="absolute top-16 left-[6%] hidden md:grid grid-cols-3 gap-2 pointer-events-none opacity-55">
+      <div className="absolute top-16 start-[6%] hidden md:grid grid-cols-3 gap-2 pointer-events-none opacity-55">
         {Array.from({ length: 9 }).map((_, i) => (
           <span
             key={i}
@@ -302,7 +302,7 @@ const SectionHero: React.FC = () => {
             </svg>
 
             {/* 底部图例 */}
-            <div className="absolute bottom-[-8px] left-1/2 -translate-x-1/2 inline-flex items-center gap-3 px-4 py-2 bg-ink text-cream border-2 border-ink rounded-full shadow-stamp">
+            <div className="absolute bottom-[-8px] start-1/2 -translate-x-1/2 inline-flex items-center gap-3 px-4 py-2 bg-ink text-cream border-2 border-ink rounded-full shadow-stamp">
               <ShieldAlert className="w-4 h-4 text-butter" strokeWidth={2.4} />
               <span className="font-mono text-[10.5px] tracking-[0.2em] uppercase">
                 越界请求 · 一律弹回

@@ -110,7 +110,7 @@ export default function SectionRecipes() {
               <button
                 key={rec.id}
                 onClick={() => setPick(rec.id)}
-                className={`w-full text-left px-4 py-3 rounded-2xl border-2 transition-all duration-250 ease-spring ${
+                className={`w-full text-start px-4 py-3 rounded-2xl border-2 transition-all duration-250 ease-spring ${
                   a ? "bg-ink text-cream border-ink shadow-stamp" : "bg-white border-ink/30 hover:border-ink text-ink"
                 }`}
               >
@@ -135,7 +135,7 @@ export default function SectionRecipes() {
                 <div className="font-mono text-xs text-ink-tertiary">{r.who}</div>
                 <h3 className="font-display text-2xl text-ink leading-tight">{r.name}</h3>
               </div>
-              <div className="text-right">
+              <div className="text-end">
                 <div className="eyebrow text-ink-tertiary">α / r</div>
                 <div className="font-display text-3xl font-bold text-coral">
                   {r.alpha}/{r.r}
@@ -166,7 +166,7 @@ export default function SectionRecipes() {
       </div>
 
       <div className="mt-8 p-5 card-stamp bg-butter/40 text-sm text-ink leading-relaxed">
-        <span className="font-mono text-xs text-ink-tertiary mr-2 uppercase tracking-widest">观察</span>
+        <span className="font-mono text-xs text-ink-tertiary me-2 uppercase tracking-widest">观察</span>
         公开配方里 r 多在 8-64，2026 工具默认常从 16 起试，最多翻到 64，再大几乎不涨 —— 跟上一节那张方向谱对得上。
       </div>
     </SectionFrame>

@@ -31,10 +31,10 @@ const SectionHero: React.FC = () => {
 
   return (
     <section className="relative px-4 sm:px-6 lg:px-8 pt-20 lg:pt-28 pb-20 lg:pb-24 overflow-hidden">
-      <div aria-hidden className="absolute top-24 right-[8%] hidden lg:block animate-float-y">
+      <div aria-hidden className="absolute top-24 end-[8%] hidden lg:block animate-float-y">
         <div className="w-10 h-10 bg-coral border-2 border-ink rounded-2xl shadow-stamp rotate-12" />
       </div>
-      <div aria-hidden className="absolute bottom-24 left-[6%] hidden lg:block animate-float-y-sm">
+      <div aria-hidden className="absolute bottom-24 start-[6%] hidden lg:block animate-float-y-sm">
         <div className="w-8 h-8 bg-butter-deep border-2 border-ink rounded-full shadow-stamp -rotate-6" />
       </div>
 
@@ -57,7 +57,7 @@ const SectionHero: React.FC = () => {
 
             <p className="max-w-md font-display text-[20px] lg:text-[22px] font-bold text-ink leading-snug mb-5 animate-enter-up">
               <span className="relative inline-block">
-                <span className="absolute left-0 right-0 bottom-0.5 h-3 lg:h-4 bg-butter -z-0" aria-hidden />
+                <span className="absolute start-0 end-0 bottom-0.5 h-3 lg:h-4 bg-butter -z-0" aria-hidden />
                 <span className="relative z-10">
                   精度格式说的是：模型里每个数字用多少个二进制位来存，以及这些位怎么切分。
                 </span>
@@ -121,7 +121,7 @@ const SectionHero: React.FC = () => {
                   ② 一共 {f.bits} 个位，这么切
                 </div>
                 <span className="font-display text-[28px] font-bold text-ink leading-none tabular-nums">
-                  {f.bits}<span className="font-mono text-[12px] text-ink/50 ml-1">位</span>
+                  {f.bits}<span className="font-mono text-[12px] text-ink/50 ms-1">位</span>
                 </span>
               </div>
               <BitStrip key={fid} f={f} />

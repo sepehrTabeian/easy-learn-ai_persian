@@ -179,7 +179,7 @@ const SectionFit: React.FC = () => {
           点一个
           <span className="relative inline-block">
             <span
-              className="absolute left-0 right-0 bottom-1 h-4 lg:h-5 bg-butter -z-0 -rotate-1"
+              className="absolute start-0 end-0 bottom-1 h-4 lg:h-5 bg-butter -z-0 -rotate-1"
               aria-hidden
             />
             <span className="relative z-10">格子</span>
@@ -198,7 +198,7 @@ const SectionFit: React.FC = () => {
           <table className="w-full border-collapse">
             <thead>
               <tr>
-                <th className="text-left p-2 align-bottom">
+                <th className="text-start p-2 align-bottom">
                   <div className="font-mono text-[10px] uppercase tracking-[0.18em] text-ink/55">
                     模型 \ 集群
                   </div>

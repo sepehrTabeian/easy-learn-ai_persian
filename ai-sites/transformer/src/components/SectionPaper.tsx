@@ -183,7 +183,7 @@ const SectionPaper: React.FC = () => {
                   key={a.id}
                   onClick={() => setActiveId(a.id)}
                   className={[
-                    "px-3 py-2.5 rounded-xl border-2 border-ink font-display text-[13px] font-bold text-left transition-all duration-250 ease-spring",
+                    "px-3 py-2.5 rounded-xl border-2 border-ink font-display text-[13px] font-bold text-start transition-all duration-250 ease-spring",
                     on
                       ? `${TONE_BG[a.tone]} shadow-[3px_3px_0_0_#241C15]`
                       : "bg-white text-ink/75 hover:bg-cream hover:-translate-y-[1px] hover:shadow-[2px_2px_0_0_#241C15]",

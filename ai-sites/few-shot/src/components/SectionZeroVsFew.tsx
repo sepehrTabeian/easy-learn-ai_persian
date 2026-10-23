@@ -137,7 +137,7 @@ const SectionZeroVsFew: React.FC = () => {
           <div className="lg:col-span-7">
             <div className="relative border-[3px] border-ink rounded-2xl bg-white shadow-stamp-lg p-5">
               {/* 示意 badge */}
-              <span className="absolute -top-3 right-5 inline-flex items-center gap-1 px-2.5 py-1 bg-butter border-2 border-ink rounded-full font-mono text-[10px] font-bold tracking-[0.14em] uppercase text-ink shadow-stamp">
+              <span className="absolute -top-3 end-5 inline-flex items-center gap-1 px-2.5 py-1 bg-butter border-2 border-ink rounded-full font-mono text-[10px] font-bold tracking-[0.14em] uppercase text-ink shadow-stamp">
                 <Sparkles className="w-3 h-3" strokeWidth={2.4} />
                 示意
               </span>

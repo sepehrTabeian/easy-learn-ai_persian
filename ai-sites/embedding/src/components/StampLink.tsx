@@ -24,7 +24,7 @@ const StampLink: React.FC<StampLinkProps> = ({ href, title, desc, compact }) => 
         <span className="font-bold text-ink">{title}</span>
         <span> {desc}</span>
       </span>
-      {compact && <ArrowUpRight className="ml-auto h-4 w-4 shrink-0 text-ink" strokeWidth={2.3} />}
+      {compact && <ArrowUpRight className="ms-auto h-4 w-4 shrink-0 text-ink" strokeWidth={2.3} />}
     </a>
   );
 };

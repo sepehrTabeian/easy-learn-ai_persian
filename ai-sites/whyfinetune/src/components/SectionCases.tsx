@@ -253,7 +253,7 @@ const SectionCases: React.FC = () => {
             <div className="flex-1 min-w-0">
               <div className="font-display font-bold text-[14px] text-ink leading-snug">
                 {feedback.correct ? "对了" : "差一点"}
-                <span className="font-normal text-ink/60 ml-2">
+                <span className="font-normal text-ink/60 ms-2">
                   正解 ·{" "}
                   <span className="font-bold">
                     {FORK_META[feedback.truth].name}
@@ -287,7 +287,7 @@ const SectionCases: React.FC = () => {
                       setSelectedId(on ? null : c.id)
                     }
                     className={[
-                      "px-3 py-2 rounded-xl border-2 border-ink text-left transition-all duration-200 ease-spring",
+                      "px-3 py-2 rounded-xl border-2 border-ink text-start transition-all duration-200 ease-spring",
                       on
                         ? "bg-ink text-cream shadow-stamp -translate-y-0.5"
                         : "bg-cream/60 text-ink hover:bg-butter-tint",
@@ -315,7 +315,7 @@ const SectionCases: React.FC = () => {
                 onClick={() => handleDrop(k)}
                 disabled={!selectedId}
                 className={[
-                  "card-stamp p-4 text-left min-h-[180px] flex flex-col transition-all duration-300",
+                  "card-stamp p-4 text-start min-h-[180px] flex flex-col transition-all duration-300",
                   hot
                     ? "ring-4 ring-offset-2 ring-offset-cream cursor-pointer hover:-translate-y-1 " +
                       meta.ringClass

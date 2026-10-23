@@ -126,7 +126,7 @@ const SectionCalc: React.FC = () => {
             选完方法，<br className="lg:hidden" />
             <span className="relative inline-block">
               <span
-                className="absolute left-0 right-0 bottom-1 h-3 lg:h-4 bg-butter -z-0"
+                className="absolute start-0 end-0 bottom-1 h-3 lg:h-4 bg-butter -z-0"
                 aria-hidden
               />
               <span className="relative z-10">这张 GPU 跑不跑得动？</span>
@@ -294,7 +294,7 @@ const ChipGroup: React.FC<{
               key={it.key}
               onClick={() => onPick(it.key)}
               className={[
-                "px-3.5 py-2 rounded-md border-2 border-ink text-left transition-all duration-250 ease-spring",
+                "px-3.5 py-2 rounded-md border-2 border-ink text-start transition-all duration-250 ease-spring",
                 on
                   ? "bg-ink text-cream shadow-[3px_3px_0_0_#E07A5F]"
                   : "bg-white text-ink hover:bg-cream",

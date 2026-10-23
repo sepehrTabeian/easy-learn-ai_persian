@@ -85,7 +85,7 @@ const SectionBenchmark: React.FC = () => {
             <h2 className="font-display text-display-lg text-ink mb-5">
               真的
               <span className="relative inline-block mx-1">
-                <span className="absolute left-0 right-0 bottom-1 h-3 lg:h-4 bg-butter -z-0" aria-hidden />
+                <span className="absolute start-0 end-0 bottom-1 h-3 lg:h-4 bg-butter -z-0" aria-hidden />
                 <span className="relative z-10">看懂</span>
               </span>
               了吗？
@@ -124,7 +124,7 @@ const SectionBenchmark: React.FC = () => {
                 <button
                   onClick={() => setScoring("avg")}
                   className={[
-                    "px-4 py-3 rounded-xl border-2 border-cream transition-all duration-250 ease-spring text-left",
+                    "px-4 py-3 rounded-xl border-2 border-cream transition-all duration-250 ease-spring text-start",
                     scoring === "avg" ? "bg-butter text-ink shadow-[3px_3px_0_0_#FBEFE3]" : "bg-transparent text-cream hover:bg-cream/10",
                   ].join(" ")}
                 >
@@ -134,7 +134,7 @@ const SectionBenchmark: React.FC = () => {
                 <button
                   onClick={() => setScoring("nonlin")}
                   className={[
-                    "px-4 py-3 rounded-xl border-2 border-cream transition-all duration-250 ease-spring text-left",
+                    "px-4 py-3 rounded-xl border-2 border-cream transition-all duration-250 ease-spring text-start",
                     scoring === "nonlin" ? "bg-coral text-cream shadow-[3px_3px_0_0_#FBEFE3]" : "bg-transparent text-cream hover:bg-cream/10",
                   ].join(" ")}
                 >
@@ -177,7 +177,7 @@ const SectionBenchmark: React.FC = () => {
                           )}
                         </div>
                       </div>
-                      <div className="col-span-2 text-right">
+                      <div className="col-span-2 text-end">
                         <span
                           key={`${r.name}-${scoring}-num`}
                           className={[
@@ -187,7 +187,7 @@ const SectionBenchmark: React.FC = () => {
                         >
                           {score.toFixed(1)}
                         </span>
-                        <span className="font-mono text-[9px] text-cream/50 ml-0.5">%</span>
+                        <span className="font-mono text-[9px] text-cream/50 ms-0.5">%</span>
                       </div>
                     </div>
                   );
@@ -215,7 +215,7 @@ const SectionBenchmark: React.FC = () => {
                 key={s.id}
                 onClick={() => setOpenStat(open ? null : s.id)}
                 className={[
-                  "card-stamp p-5 text-left transition-all duration-300",
+                  "card-stamp p-5 text-start transition-all duration-300",
                   open ? "lg:col-span-3" : "",
                 ].join(" ")}
               >

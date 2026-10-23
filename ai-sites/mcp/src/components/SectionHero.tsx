@@ -32,13 +32,13 @@ const SectionHero: React.FC = () => {
       {/* 浮动小装饰 */}
       <div
         aria-hidden
-        className="absolute top-24 right-[8%] hidden lg:block animate-float-y"
+        className="absolute top-24 end-[8%] hidden lg:block animate-float-y"
       >
         <div className="w-10 h-10 bg-coral border-2 border-ink rounded-2xl shadow-stamp rotate-12" />
       </div>
       <div
         aria-hidden
-        className="absolute bottom-24 left-[6%] hidden lg:block animate-float-y-sm"
+        className="absolute bottom-24 start-[6%] hidden lg:block animate-float-y-sm"
       >
         <div className="w-8 h-8 bg-teal border-2 border-ink rounded-full shadow-stamp -rotate-6" />
       </div>
@@ -63,7 +63,7 @@ const SectionHero: React.FC = () => {
             <p className="max-w-md font-display text-[20px] lg:text-[22px] font-bold text-ink leading-snug mb-5 animate-enter-up">
               <span className="relative inline-block">
                 <span
-                  className="absolute left-0 right-0 bottom-0.5 h-3 lg:h-4 bg-butter -z-0"
+                  className="absolute start-0 end-0 bottom-0.5 h-3 lg:h-4 bg-butter -z-0"
                   aria-hidden
                 />
                 <span className="relative z-10">

@@ -412,7 +412,7 @@ const StepRow: React.FC<{ step: AgentStep; index: number }> = ({
   if (step.type === "tool_result") {
     return (
       <div
-        className="flex items-start gap-3 pl-10 pr-3 py-2 animate-enter-fade"
+        className="flex items-start gap-3 ps-10 pe-3 py-2 animate-enter-fade"
         style={{ animationDelay: `${index * 60}ms` }}
       >
         <div className="font-mono text-[10px] text-teal shrink-0 mt-0.5 tracking-wider">

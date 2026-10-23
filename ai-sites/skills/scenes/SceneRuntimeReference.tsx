@@ -50,9 +50,9 @@ export const SceneRuntimeReference: React.FC<SceneProps> = ({ step }) => {
                 initial={{ x: -50, opacity: 0 }}
                 animate={step >= 1 ? { x: 0, opacity: 1 } : { opacity: 0.3, filter: 'blur(5px)' }}
             >
-                <div className="bg-blue-600 text-white p-6 rounded-2xl rounded-tr-none shadow-lg border-2 border-blue-400 mb-4 relative">
+                <div className="bg-blue-600 text-white p-6 rounded-2xl rounded-se-none shadow-lg border-2 border-blue-400 mb-4 relative">
                     <ChalkText size="lg" className="font-bold">"分析 Excel"</ChalkText>
-                    <div className="absolute -bottom-3 -left-3 bg-blue-800 text-xs px-2 py-1 rounded border border-blue-500">
+                    <div className="absolute -bottom-3 -start-3 bg-blue-800 text-xs px-2 py-1 rounded border border-blue-500">
                         User Intent
                     </div>
                 </div>
@@ -84,7 +84,7 @@ export const SceneRuntimeReference: React.FC<SceneProps> = ({ step }) => {
             <div className="w-1/3 flex flex-col gap-8 relative z-20">
                 
                 {/* SVG Connections (Drawn dynamically) */}
-                <svg className="absolute top-0 -left-full w-full h-full pointer-events-none overflow-visible">
+                <svg className="absolute top-0 -start-full w-full h-full pointer-events-none overflow-visible">
                     {/* Top Path (Correct) */}
                     <motion.path 
                         d="M 100% 50% C 150% 50%, 150% 20%, 200% 20%" 
@@ -121,7 +121,7 @@ export const SceneRuntimeReference: React.FC<SceneProps> = ({ step }) => {
                             <div className={`font-mono font-bold ${step >= 3 ? "text-yellow-200" : "text-gray-400"}`}>analyze.md</div>
                             <div className="text-xs text-gray-500">Reference Doc</div>
                         </div>
-                        {step >= 3 && <CheckCircle2 size={24} className="ml-auto text-green-400" />}
+                        {step >= 3 && <CheckCircle2 size={24} className="ms-auto text-green-400" />}
                     </div>
                 </motion.div>
 
@@ -137,7 +137,7 @@ export const SceneRuntimeReference: React.FC<SceneProps> = ({ step }) => {
                             <div className="font-mono font-bold text-gray-500">create.md</div>
                             <div className="text-xs text-gray-600">Reference Doc</div>
                         </div>
-                        {step >= 3 && <XCircle size={24} className="ml-auto text-gray-600" />}
+                        {step >= 3 && <XCircle size={24} className="ms-auto text-gray-600" />}
                     </div>
                 </motion.div>
 
@@ -150,7 +150,7 @@ export const SceneRuntimeReference: React.FC<SceneProps> = ({ step }) => {
             <motion.div
                 initial={{ y: 20, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
-                className="mt-8 bg-black/40 px-8 py-4 rounded-lg border-l-4 border-yellow-500 backdrop-blur-sm max-w-2xl"
+                className="mt-8 bg-black/40 px-8 py-4 rounded-lg border-s-4 border-yellow-500 backdrop-blur-sm max-w-2xl"
             >
                  <ChalkText size="lg" className="text-gray-300">
                     Claude 识别意图后，<span className="text-yellow-300 font-bold mx-1">只会查阅</span> 

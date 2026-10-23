@@ -40,7 +40,7 @@ const SectionParallel: React.FC = () => {
           比你想的{" "}
           <span className="relative inline-block">
             <span
-              className="absolute left-0 right-0 bottom-1 h-4 lg:h-5 bg-coral/55 -z-0 -rotate-1"
+              className="absolute start-0 end-0 bottom-1 h-4 lg:h-5 bg-coral/55 -z-0 -rotate-1"
               aria-hidden
             />
             <span className="relative z-10">坑得多</span>
@@ -511,7 +511,7 @@ const ScenarioBtn: React.FC<{
   <button
     onClick={onClick}
     className={[
-      "px-3 py-2.5 rounded-lg border-2 border-ink text-left transition-all duration-200 ease-spring",
+      "px-3 py-2.5 rounded-lg border-2 border-ink text-start transition-all duration-200 ease-spring",
       on
         ? "bg-ink text-cream shadow-stamp"
         : "bg-white text-ink hover:-translate-y-0.5 hover:shadow-[3px_3px_0_0_#241C15]",
@@ -539,7 +539,7 @@ const ParallelBtn: React.FC<{
   <button
     onClick={onClick}
     className={[
-      "px-3 py-2.5 rounded-lg border-2 border-ink text-left transition-all duration-200 ease-spring flex items-center gap-2",
+      "px-3 py-2.5 rounded-lg border-2 border-ink text-start transition-all duration-200 ease-spring flex items-center gap-2",
       on
         ? "bg-ink text-cream shadow-stamp"
         : "bg-white text-ink hover:-translate-y-0.5 hover:shadow-[3px_3px_0_0_#241C15]",

@@ -72,7 +72,7 @@ const SectionCrossEntropy: React.FC = () => {
           <br />
           因为模型越
           <span className="relative inline-block">
-            <span className="absolute left-0 right-0 bottom-1 h-4 lg:h-5 bg-coral/55 -z-0 rotate-1" aria-hidden />
+            <span className="absolute start-0 end-0 bottom-1 h-4 lg:h-5 bg-coral/55 -z-0 rotate-1" aria-hidden />
             <span className="relative z-10">自信地猜错</span>
           </span>
           ，罚得越狠。
@@ -163,7 +163,7 @@ const SectionCrossEntropy: React.FC = () => {
                   setP(s.p);
                 }}
                 className={[
-                  "px-2.5 py-2 rounded-xl border-2 border-ink text-left transition-all duration-250 ease-spring",
+                  "px-2.5 py-2 rounded-xl border-2 border-ink text-start transition-all duration-250 ease-spring",
                   on ? `${accent} shadow-stamp` : "bg-white text-ink hover:bg-cream shadow-[2px_2px_0_0_#241C15]",
                 ].join(" ")}
               >
@@ -381,7 +381,7 @@ const SectionCrossEntropy: React.FC = () => {
                   {" "}
                   《预训练》那站把它当主线讲：模型怎么靠猜下一个 token 把整本互联网读进去。
                 </span>
-                <span className="inline-flex items-center gap-1 ml-1 font-mono text-[11px] font-bold text-ink">
+                <span className="inline-flex items-center gap-1 ms-1 font-mono text-[11px] font-bold text-ink">
                   预训练站 <ArrowUpRight className="w-3 h-3" strokeWidth={2.6} />
                 </span>
               </span>

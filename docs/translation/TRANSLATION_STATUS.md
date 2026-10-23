@@ -1,0 +1,149 @@
+# وضعیت ترجمه فارسی پروژه Easy AI (Chinese → Persian, RTL)
+
+> **قانون مهم برای هر agent یا انسانی که روی این کار ادامه می‌دهد:**
+> در پایان **هر تسک** (هر بخش یا هر چند batch) این فایل را به‌روز کنید: بخش «وضعیت فعلی»، جدول «بخش‌ها»، «لاگ تغییرات» و هر نکته یا دام جدیدی که پیدا کردید. فایل‌های `glossary/` و `work/` را هم به‌روز نگه دارید.
+
+## هدف
+
+- فورک: `sepehrTabeian/easy-learn-ai_persian` (نسخه اصلی: ConardLi/easy-learn-ai).
+- همه متن‌های چینی (رابط کاربری، کامنت‌ها، داده‌ها) به فارسی ترجمه شوند و فارسی **راست‌به‌چپ (RTL)** نمایش داده شود.
+- کار فقط روی برنچ `persian` انجام می‌شود. **PR زده نمی‌شود.**
+- محدودیت: کاربر گفته `npm install` / `pnpm install` بدون اجازه اجرا نشود، پس build یا اجرای سایت فعلاً ممکن نیست.
+
+## وضعیت فعلی (2026-10-23)
+
+| بخش | وضعیت | توضیح |
+|---|---|---|
+| سایت اصلی `src/`، `tailwind.config.js`، `rsbuild.config.ts` | ✅ انجام شد | commit `f222c72` |
+| `data/nav/sites.json`، `data/timeline/index.json` | ✅ انجام شد | commit `f222c72` |
+| `readme.md` | ✅ انجام شد | دستی بازنویسی شد، داخل `<div dir="rtl">` |
+| `ai-sites/*`: راه‌اندازی RTL (۷۸ زیرسایت) | ✅ انجام شد، commit نهایی این سند | تزریق `dir=rtl`، فونت Vazirmatn، کلاس‌های منطقی Tailwind |
+| `ai-sites/*`: ترجمه متن | 🟡 در جریان | ۷۰۰ قطعه از ۲۱٬۸۸۴ ترجمه شده (فقط در `work/`، **هنوز اعمال نشده**) |
+| `public/*/static/js` (خروجی build زیرسایت‌ها) | ⛔ مانده | پس از ترجمه `ai-sites` باید rebuild شود (نیاز به نصب وابستگی + اجازه کاربر) |
+| `data/daily/` (حدود ۲۶۸ هزار کاراکتر چینی) | ⛔ مانده | |
+| `public/awesome-prompt/` (حدود ۲۵۷ هزار) | ⛔ مانده | فایل‌های «ترجمه» پرامپت‌ها هنوز چینی‌اند |
+| `public/article/` (حدود ۱۱۳ هزار) | ⛔ مانده | HTML تک‌فایلی |
+| `ai-app/*` | ⛔ مانده | |
+
+## ساختار پوشه `docs/translation/`
+
+```
+docs/translation/
+├── TRANSLATION_STATUS.md      ← همین فایل
+├── tools/                     ← اسکریپت‌ها (Python 3، بدون وابستگی)
+│   ├── extract.py             استخراج قطعه‌های چینی ← JSON
+│   ├── show.py                چاپ قطعه‌ها از i تا j برای ترجمه
+│   ├── apply2.py              اعمال ترجمه‌ها (چند جدول با هم، طولانی‌ترین اول)
+│   ├── fixurl.py              بازگرداندن فیلدهای url/icon/ref در JSON از نسخه HEAD
+│   ├── rtl.py                 تبدیل کلاس‌های جهت‌دار Tailwind به منطقی
+│   ├── inject_rtl.py          تزریق dir=rtl + فونت + CSS در entry زیرسایت‌ها (انجام شده)
+│   ├── files.py               شمارش کاراکتر چینی در فایل‌ها
+│   └── count.py               شمارش کاراکتر چینی کل مخزن به تفکیک پوشه
+├── glossary/                  ← جدول‌های ترجمه انجام‌شده (منبع یکنواختی واژگان)
+│   ├── seg_code.json + tr_code_*.tsv    (کد سایت اصلی)
+│   ├── seg_data.json + tr_data_*.tsv    (داده‌های src)
+│   └── seg_misc.json + tr_misc_*.tsv    (nav و timeline)
+└── work/                      ← کار در جریان
+    ├── seg_sites.json                   ۲۱٬۸۸۴ قطعه جدید ai-sites
+    └── tr_sites_000.tsv, tr_sites_001.tsv  (قطعه‌های 0 تا 699)
+```
+
+## روش کار (pipeline)
+
+همه دستورها از ریشه مخزن اجرا می‌شوند. `T=docs/translation`.
+
+1. **فهرست فایل‌ها**
+   ```bash
+   git ls-files ai-sites | grep -vE 'lock|\.(png|jpg|jpeg|gif|webp|mp3|mp4|svg|ico|woff2?)$' > /tmp/files.txt
+   python3 -I $T/tools/files.py $(cat /tmp/files.txt) | awk '{print $3}' > /tmp/zh_files.txt
+   ```
+2. **استخراج قطعه‌ها** (هر رشته پیوسته‌ای که بین `" ' \` < > { }` یا خط جدید است و حرف چینی دارد؛ کامنت `//` جدا می‌شود):
+   ```bash
+   python3 -I $T/tools/extract.py /tmp/seg_all.json $(cat /tmp/zh_files.txt)
+   ```
+   سپس قطعه‌هایی را که در `glossary/seg_*.json` هستند حذف کنید (ترجمه‌شان موجود است) → `work/seg_<section>.json`.
+3. **ترجمه**: با `show.py` دسته‌های حدود ۳۵۰ تایی را ببینید:
+   ```bash
+   python3 -I $T/tools/show.py $T/work/seg_sites.json 700 1050
+   ```
+   ترجمه را در `work/tr_sites_NNN.tsv` بنویسید، **هر خط: `index<TAB>ترجمه`**.
+   - مقدار `=` یعنی «دست نزن» (برای URL و موارد خاص).
+   - مقدار خالی مجاز است (وقتی ترتیب کلمات فارسی قطعه را بی‌نیاز می‌کند).
+   - فایل‌هایی که بعداً در ترتیب الفبایی می‌آیند ترجمه‌های قبلی را **override** می‌کنند (برای اصلاح).
+4. **اعمال** (همه جدول‌ها با هم تا اصطلاحات یکسان بمانند):
+   ```bash
+   python3 -I $T/tools/apply2.py "$T/work/seg_sites.json:$T/work/tr_sites_*.tsv" \
+     "$T/glossary/seg_misc.json:$T/glossary/tr_misc_*.tsv" \
+     "$T/glossary/seg_data.json:$T/glossary/tr_data_*.tsv" \
+     "$T/glossary/seg_code.json:$T/glossary/tr_code_*.tsv" -- $(cat /tmp/zh_files.txt)
+   ```
+   `apply2.py` اگر قطعه‌ای ترجمه نداشته باشد خطای `MISSING` می‌دهد و چیزی اعمال نمی‌کند؛ اگر تعداد `" ' \` { } < > \` بین اصل و ترجمه فرق کند `QUOTE?` چاپ می‌کند (باید صفر باشد مگر عمدی).
+   > برای اعمال بخشی از کار پیش از تمام شدن همه ترجمه‌ها، یا همه قطعه‌ها را ترجمه کنید، یا `seg_*.json` را به محدوده ترجمه‌شده کوتاه کنید.
+5. **ترمیم URLها در JSON**: `python3 -I $T/tools/fixurl.py <json files>`.
+6. **بررسی‌ها**
+   - چینی باقی‌مانده: `python3 -I $T/tools/files.py <files>` (فقط باید در URLها بماند).
+   - JSON معتبر: `node -e "JSON.parse(require('fs').readFileSync('f','utf8'))"`.
+   - نحو `.ts`: `node --experimental-strip-types --check file.ts`.
+   - مقایسه تعداد `{ } < > " ' \` ;` هر فایل با `git show HEAD:file` (فقط پرانتزها مجاز به تغییرند، چون پرانتز تمام‌عرض چینی `（）` به ASCII تبدیل می‌شود).
+7. **commit** روی برنچ `persian` با پیام روشن، و به‌روز کردن همین فایل. فایل‌های `tr_*.tsv` تمام‌شده را به `glossary/` منتقل کنید.
+
+## قواعد RTL پیاده‌شده
+
+- سایت اصلی: `src/entry.tsx` مقدار `lang="fa"` و `dir="rtl"` را روی `<html>` می‌گذارد؛ `src/entry.css` قواعد زیر را دارد.
+- زیرسایت‌ها: `tools/inject_rtl.py` همین کار را در entry هر زیرسایت انجام داده (لینک فونت Vazirmatn از Google Fonts + یک `<style>` درون‌خطی).
+- قواعد CSS:
+  - `pre, code, kbd, samp` → `direction: ltr`.
+  - `[dir=rtl] :not(pre, code, …) { letter-spacing: normal !important }`؛ letter-spacing اتصال حروف فارسی را می‌شکند.
+  - آیکون‌های فلش lucide (`arrow-right/left`، `chevron-*`، `arrow-up-right`، `external-link`) با `scale: -1 1` قرینه می‌شوند.
+- فونت: `Noto Sans SC` → `Vazirmatn`، `PingFang SC` → `Tahoma` (در tailwind config و CSS).
+- Tailwind: `ml/mr → ms/me`، `pl/pr → ps/pe`، `left/right → start/end`، `text-left/right → text-start/end`، `border-l/r → border-s/e`، `rounded-l/r → rounded-s/e`، `space-x-*` ← اضافه شدن `rtl:space-x-reverse` (اسکریپت `rtl.py`). `translate-x` و `origin-left` عمداً دست نخورده‌اند.
+
+## نکات و دام‌ها (حتماً رعایت شود)
+
+1. **URLها**: URLهایی که حروف چینی دارند نباید ترجمه شوند (قطعه‌های کوتاه داخل آن‌ها جایگزین می‌شوند). در TSV مقدار `=` بگذارید و پس از اعمال `fixurl.py` را اجرا کنید.
+2. **رشته‌های حاوی `//`** (مثل `"... // ... existing code ..."`) توسط extract در `//` شکسته می‌شوند؛ پس از اعمال، اگر چینی باقی ماند دستی اصلاح کنید.
+3. **کلیدهای شیء بدون گیومه** (`模型基础: "..."`): اگر ترجمه فاصله دارد، ترجمه را به شکل `"مبانی مدل":` بنویسید. کلیدهای تک‌کلمه‌ای فارسی (مثل `آمریکا:`) شناسه معتبر JS هستند.
+4. **یکنواختی داده و کد**: کد با مقدارهای داده مقایسه می‌کند (کشور، وضعیت متن‌باز، دسته‌ها). ترجمه یک قطعه باید در همه فایل‌ها یکسان باشد؛ برای همین همه جدول‌ها با هم اعمال می‌شوند.
+5. **regex و قالب تاریخ**: کدهایی که متن چینی را parse می‌کنند (مثلاً `年/月` در `src/pages/AIDaily.tsx` و `src/components/daily/DailyList.tsx`) دستی بازنویسی شدند. پیش از ترجمه دنبال regexهای حاوی حروف چینی بگردید: `grep -nP '/[^/]*[\x{4e00}-\x{9fff}][^/]*/' -r <dir>`.
+6. **قطعه‌های تک‌حرفی** (token‌های نمایشی مثل `猫`, `坐`) سراسری جایگزین می‌شوند؛ ترجمه‌ای انتخاب کنید که در جاهای دیگر هم معنا بدهد.
+7. **`\n` لیترال** داخل رشته‌ها باید در ترجمه هم دقیقاً `\n` بماند (validator تعداد `\` را چک می‌کند).
+8. **داخل JSON از گیومه `"` استفاده نکنید**؛ از «» استفاده کنید.
+9. **prompt-cache**: فایل `ai-sites/prompt-cache/audio-segments.json` متن صوت‌های چینی است؛ ترجمه آن زیرنویس فارسی می‌سازد ولی صدا چینی می‌ماند.
+10. **نام محصولات چینی** با آوانویسی لاتین (pinyin) یا نام انگلیسی رسمی نوشته شوند (مثل iFlytek Huiwen، Doubao، Hunyuan). نام شرکت‌ها انگلیسی: Alibaba, Baidu, ByteDance, Tencent, Kuaishou, Moonshot AI, Zhipu AI.
+11. **ماه‌ها**: «مارس 2017»، «ژوئن 2017» (ارقام لاتین).
+
+## واژه‌نامه کلیدی (برای یکنواختی)
+
+| چینی | فارسی |
+|---|---|
+| 轻松理解 | درک آسان |
+| 知视 / AI 知视 | دانش بصری / دانش بصری AI |
+| 开源 / 闭源 | متن‌باز / متن‌بسته |
+| 提示词 | پرامپت (جمع: پرامپت‌ها) |
+| 微调 | تنظیم دقیق |
+| 预训练 | پیش‌آموزش |
+| 推理 | استدلال (برای reasoning) / استنتاج (برای inference) |
+| 上下文 | context |
+| 智能体 | عامل هوشمند (Agent را خود Agent بنویسید) |
+| 大模型 | مدل بزرگ |
+| 多模态 | چندوجهی |
+| 幻觉 | توهم |
+| 日报 | گزارش روزانه |
+| 知识星球 | سیاره دانش |
+| 花园老师 | معلم «باغ» |
+| code秘密花园 | code باغ مخفی |
+| 中国 / 美国 / 英国 / 德国 | چین / آمریکا / انگلیس / آلمان |
+
+جدول کامل همان `glossary/tr_*.tsv` است.
+
+## مرحله بعد
+
+1. ادامه ترجمه `work/seg_sites.json` از قطعه **700** (فایل بعدی: `tr_sites_002.tsv`).
+2. پس از اتمام: اعمال، بررسی‌ها، commit.
+3. اجازه گرفتن از کاربر برای نصب وابستگی‌ها و rebuild خروجی هر زیرسایت (`cd ai-sites/<name> && pnpm install && pnpm build` که خروجی را در `public/<name>` می‌ریزد؛ ۴ زیرسایت با vite هستند: evaluation, harness, prompt-cache, skills).
+4. بخش‌های بعدی: `data/daily`، `public/awesome-prompt`، `public/article`، `ai-app`.
+
+## لاگ تغییرات
+
+- **2026-10-23** — فاز ۱: سایت اصلی، nav، timeline و README ترجمه شد + RTL (commit `f222c72`).
+- **2026-10-23** — فاز ۲ شروع: RTL برای ۷۸ زیرسایت ai-sites (entry + فونت + کلاس‌ها)؛ ۷۰۰ قطعه ترجمه در `work/`؛ ابزارها و این سند به مخزن اضافه شد.

@@ -82,7 +82,7 @@ export const SceneLibraryAnalogy: React.FC<SceneProps> = ({ step }) => {
                         className={`flex-1 bg-[#1e1e24] border-2 ${isCurrent ? `border-${s.color}-400 shadow-[0_0_20px_rgba(255,255,255,0.1)]` : 'border-gray-700'} rounded-xl p-6 flex flex-col items-center text-center relative overflow-hidden`}
                     >
                         {/* Background Number */}
-                        <div className="absolute -right-4 -bottom-8 text-9xl font-bold text-white/5 select-none font-sans">
+                        <div className="absolute -end-4 -bottom-8 text-9xl font-bold text-white/5 select-none font-sans">
                             {s.id}
                         </div>
 

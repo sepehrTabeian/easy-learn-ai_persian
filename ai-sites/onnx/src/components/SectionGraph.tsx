@@ -121,7 +121,7 @@ const SectionGraph: React.FC = () => {
             >
               <RotateCcw className="w-4 h-4" strokeWidth={2.5} />
             </button>
-            <span className="font-mono text-[11px] text-ink/45 ml-1">
+            <span className="font-mono text-[11px] text-ink/45 ms-1">
               {step + 1} / {NODES.length}
             </span>
           </div>

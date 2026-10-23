@@ -53,7 +53,7 @@ const SectionQuality: React.FC = () => {
                 </span>
                 <span className="font-display font-extrabold text-[28px] text-coral leading-none">
                   {dirty}
-                  <span className="font-mono text-[13px] text-ink/55 ml-0.5">%</span>
+                  <span className="font-mono text-[13px] text-ink/55 ms-0.5">%</span>
                 </span>
               </div>
               <input
@@ -112,7 +112,7 @@ const SectionQuality: React.FC = () => {
               </div>
               <div className="font-display font-extrabold text-[56px] leading-none text-ink">
                 {score}
-                <span className="font-mono text-[18px] text-ink/45 ml-1">分</span>
+                <span className="font-mono text-[18px] text-ink/45 ms-1">分</span>
               </div>
             </div>
             <div className={["rounded-2xl border-2 px-6 py-5 flex-1 flex items-center", zone.tone].join(" ")}>

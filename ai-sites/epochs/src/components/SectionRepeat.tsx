@@ -114,7 +114,7 @@ const SectionRepeat: React.FC = () => {
                   {epoch}
                 </span>
                 <span className="font-mono text-[12px] text-ink/55">epoch</span>
-                <span className="font-mono text-[10.5px] text-ink/45 ml-auto">
+                <span className="font-mono text-[10.5px] text-ink/45 ms-auto">
                   R = {r}
                 </span>
               </div>

@@ -25,7 +25,7 @@ const SectionHero: React.FC = () => {
   return (
     <section className="relative px-4 sm:px-6 lg:px-8 pt-20 lg:pt-28 pb-20 lg:pb-24 overflow-hidden">
       {/* 装饰：左上一枚图钉小符号 */}
-      <div className="absolute top-16 left-[6%] hidden md:block pointer-events-none opacity-30">
+      <div className="absolute top-16 start-[6%] hidden md:block pointer-events-none opacity-30">
         <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
           <circle cx="20" cy="14" r="9" fill="none" stroke="#241C15" strokeWidth="2" />
           <line x1="20" y1="23" x2="20" y2="38" stroke="#241C15" strokeWidth="2" strokeLinecap="round" />
@@ -108,10 +108,10 @@ const SectionHero: React.FC = () => {
               {/* 钉在最顶上的规则卡（system，coral，你看不到） */}
               <div className="relative bg-coral border-2 border-ink rounded-xl px-3.5 pt-3 pb-3 shadow-stamp transition-transform duration-400 ease-spring group-hover:-translate-y-0.5">
                 {/* 图钉 */}
-                <span className="absolute -top-3 left-4 w-7 h-7 rounded-full bg-cream border-2 border-ink flex items-center justify-center shadow-stamp">
+                <span className="absolute -top-3 start-4 w-7 h-7 rounded-full bg-cream border-2 border-ink flex items-center justify-center shadow-stamp">
                   <Pin className="w-3.5 h-3.5 text-ink" strokeWidth={2.4} />
                 </span>
-                <div className="flex items-center justify-between mb-2 pl-8">
+                <div className="flex items-center justify-between mb-2 ps-8">
                   <span className="font-mono text-[10px] font-extrabold tracking-[0.15em] text-cream">
                     SYSTEM
                   </span>
@@ -140,7 +140,7 @@ const SectionHero: React.FC = () => {
 
               {/* 用户气泡（user，你打的） */}
               <div className="flex justify-end">
-                <div className="max-w-[78%] bg-white border-2 border-ink rounded-xl rounded-tr-sm px-3 py-2 shadow-stamp">
+                <div className="max-w-[78%] bg-white border-2 border-ink rounded-xl rounded-se-sm px-3 py-2 shadow-stamp">
                   <span className="font-mono text-[9px] tracking-[0.12em] uppercase text-ink/45 block mb-0.5">
                     USER · 你打的
                   </span>
@@ -152,7 +152,7 @@ const SectionHero: React.FC = () => {
 
               {/* 模型回复气泡 */}
               <div className="flex justify-start">
-                <div className="max-w-[82%] bg-butter-tint border-2 border-ink rounded-xl rounded-tl-sm px-3 py-2 shadow-stamp">
+                <div className="max-w-[82%] bg-butter-tint border-2 border-ink rounded-xl rounded-ss-sm px-3 py-2 shadow-stamp">
                   <span className="font-mono text-[9px] tracking-[0.12em] uppercase text-ink/45 block mb-0.5">
                     模型回复
                   </span>
@@ -169,7 +169,7 @@ const SectionHero: React.FC = () => {
             </div>
 
             {/* 提示箭头：指向规则卡 */}
-            <div className="hidden lg:block absolute -left-6 top-[18%]">
+            <div className="hidden lg:block absolute -start-6 top-[18%]">
               <svg width="60" height="64" viewBox="0 0 60 64" fill="none">
                 <path
                   d="M 6 56 Q 2 20 44 12"

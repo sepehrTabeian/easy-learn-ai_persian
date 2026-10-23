@@ -119,7 +119,7 @@ const SectionMinimal: React.FC = () => {
                   type="button"
                   key={s.num}
                   onClick={() => setStepIdx(i)}
-                  className={`text-left border-2 border-ink rounded-2xl p-4 transition-all duration-300 ease-spring ${
+                  className={`text-start border-2 border-ink rounded-2xl p-4 transition-all duration-300 ease-spring ${
                     active
                       ? "bg-ink text-cream shadow-stamp-lg translate-x-[-1px] translate-y-[-1px]"
                       : "bg-white text-ink shadow-stamp"

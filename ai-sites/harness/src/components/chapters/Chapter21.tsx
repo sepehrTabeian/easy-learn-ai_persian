@@ -131,7 +131,7 @@ export default function Chapter21({ step }: { step: number }) {
               <motion.div 
                 animate={{ opacity: [0, 1, 0], scale: [0.5, 1.2, 0.5] }}
                 transition={{ duration: 3, repeat: Infinity, ease: "linear", times: [0, 0.85, 1] }}
-                className="absolute top-1/2 -translate-y-1/2 right-[15%] text-red-500"
+                className="absolute top-1/2 -translate-y-1/2 end-[15%] text-red-500"
               >
                 <XCircle className="w-10 h-10 bg-white rounded-full" />
               </motion.div>

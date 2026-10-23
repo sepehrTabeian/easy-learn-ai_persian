@@ -175,7 +175,7 @@ const SectionLanguages: React.FC = () => {
                       <div className="absolute inset-0 rounded-lg border-2 border-ink/15 bg-cream overflow-hidden">
                         <div
                           className={[
-                            "h-full transition-all duration-500 ease-spring border-r-2 border-ink",
+                            "h-full transition-all duration-500 ease-spring border-e-2 border-ink",
                             tone.bar,
                             isHover ? "brightness-110" : "",
                           ].join(" ")}
@@ -186,7 +186,7 @@ const SectionLanguages: React.FC = () => {
                         className={[
                           "absolute top-0 bottom-0 flex items-center font-mono text-[11.5px] font-bold transition-colors px-2.5 leading-none",
                           tone.text,
-                          widthPct < 40 ? "left-[calc(100%+8px)] text-ink" : "left-0",
+                          widthPct < 40 ? "start-[calc(100%+8px)] text-ink" : "start-0",
                         ].join(" ")}
                         style={
                           widthPct >= 40
@@ -198,7 +198,7 @@ const SectionLanguages: React.FC = () => {
                       </div>
                     </div>
                     {/* ratio */}
-                    <div className="col-span-2 text-right">
+                    <div className="col-span-2 text-end">
                       <span
                         className={[
                           "font-display text-[15px] font-bold tabular-nums",

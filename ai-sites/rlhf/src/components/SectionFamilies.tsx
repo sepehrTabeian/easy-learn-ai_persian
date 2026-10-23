@@ -282,7 +282,7 @@ const SectionFamilies: React.FC = () => {
 
         {/* 筛选 chip */}
         <div className="flex flex-wrap items-center gap-2 mb-6">
-          <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-ink/55 mr-1">
+          <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-ink/55 me-1">
             筛
           </span>
           {[
@@ -307,7 +307,7 @@ const SectionFamilies: React.FC = () => {
               </button>
             );
           })}
-          <span className="ml-auto font-mono text-[10.5px] text-ink/45 tabular-nums">
+          <span className="ms-auto font-mono text-[10.5px] text-ink/45 tabular-nums">
             {filtered.length} / {FAMILIES.length} 家
           </span>
         </div>
@@ -321,7 +321,7 @@ const SectionFamilies: React.FC = () => {
                 key={f.id}
                 onClick={() => setActiveId(f.id)}
                 className={[
-                  "text-left border-2 border-ink rounded-2xl p-5 transition-all duration-300 ease-spring",
+                  "text-start border-2 border-ink rounded-2xl p-5 transition-all duration-300 ease-spring",
                   on
                     ? "bg-ink text-cream shadow-[8px_8px_0_0_#FF4D74] -translate-x-1 -translate-y-1"
                     : "bg-white text-ink shadow-stamp hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-stamp-hover",
@@ -431,7 +431,7 @@ const SectionFamilies: React.FC = () => {
                     <span className="font-sans text-[13px] text-ink/85 leading-snug">
                       {n.label}
                     </span>
-                    <span className="font-mono text-[10.5px] text-ink/55 shrink-0 text-right">
+                    <span className="font-mono text-[10.5px] text-ink/55 shrink-0 text-end">
                       {n.value}
                     </span>
                   </li>

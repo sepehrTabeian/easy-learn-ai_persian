@@ -65,7 +65,7 @@ const SectionSameModel: React.FC = () => {
                 key={k}
                 onClick={() => setDiet(k)}
                 className={[
-                  "px-5 py-2.5 rounded-full border-2 border-ink font-semibold text-[15px] transition-all duration-250 ease-spring text-left",
+                  "px-5 py-2.5 rounded-full border-2 border-ink font-semibold text-[15px] transition-all duration-250 ease-spring text-start",
                   on
                     ? "bg-ink text-cream shadow-stamp -translate-y-0.5"
                     : "bg-cream text-ink/60 hover:text-ink",

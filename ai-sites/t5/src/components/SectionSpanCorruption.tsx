@@ -212,7 +212,7 @@ const SectionSpanCorruption: React.FC = () => {
                 </div>
                 <div className="font-display text-[28px] font-bold text-ink tabular-nums leading-none">
                   {noise}
-                  <span className="font-mono text-[12px] text-ink/55 ml-0.5">%</span>
+                  <span className="font-mono text-[12px] text-ink/55 ms-0.5">%</span>
                 </div>
               </div>
               <input

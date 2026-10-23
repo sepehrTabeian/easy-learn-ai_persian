@@ -69,7 +69,7 @@ const SectionRunAnywhere: React.FC = () => {
                 key={b}
                 onClick={() => setBackend(b)}
                 className={[
-                  "flex items-center gap-2.5 px-4 py-3 border-2 border-ink rounded-2xl text-left transition-all duration-250 ease-spring",
+                  "flex items-center gap-2.5 px-4 py-3 border-2 border-ink rounded-2xl text-start transition-all duration-250 ease-spring",
                   on ? "bg-ink text-cream shadow-stamp-lg" : "bg-cream text-ink hover:bg-butter-tint",
                 ].join(" ")}
               >

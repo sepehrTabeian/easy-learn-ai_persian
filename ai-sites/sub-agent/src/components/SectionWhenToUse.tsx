@@ -105,7 +105,7 @@ const SectionWhenToUse: React.FC = () => {
                 type="button"
                 key={r.key}
                 onClick={() => toggle(r.key)}
-                className={`text-left border-2 rounded-2xl p-4 transition-all duration-250 ease-spring ${
+                className={`text-start border-2 rounded-2xl p-4 transition-all duration-250 ease-spring ${
                   on
                     ? isUse
                       ? "bg-butter text-ink border-butter shadow-stamp-lg"

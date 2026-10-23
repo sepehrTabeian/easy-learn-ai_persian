@@ -236,7 +236,7 @@ const SectionRoundTrip: React.FC = () => {
           一次完整往返 ——{" "}
           <span className="relative inline-block">
             <span
-              className="absolute left-0 right-0 bottom-1 h-4 lg:h-5 bg-butter -z-0 -rotate-1"
+              className="absolute start-0 end-0 bottom-1 h-4 lg:h-5 bg-butter -z-0 -rotate-1"
               aria-hidden
             />
             <span className="relative z-10">messages 数组</span>
@@ -245,7 +245,7 @@ const SectionRoundTrip: React.FC = () => {
           一条一条
           <span className="relative inline-block">
             <span
-              className="absolute left-0 right-0 bottom-1 h-4 lg:h-5 bg-coral/55 -z-0 rotate-1"
+              className="absolute start-0 end-0 bottom-1 h-4 lg:h-5 bg-coral/55 -z-0 rotate-1"
               aria-hidden
             />
             <span className="relative z-10">堆出来</span>
@@ -276,7 +276,7 @@ const SectionRoundTrip: React.FC = () => {
                         setCursor(0);
                       }}
                       className={[
-                        "w-full text-left px-3 py-2.5 rounded-lg border-2 border-ink transition-all duration-200",
+                        "w-full text-start px-3 py-2.5 rounded-lg border-2 border-ink transition-all duration-200",
                         on
                           ? "bg-ink text-cream shadow-stamp"
                           : "bg-white text-ink hover:-translate-y-0.5 hover:shadow-[3px_3px_0_0_#241C15]",
@@ -432,7 +432,7 @@ const SectionRoundTrip: React.FC = () => {
               </span>
             </span>
           </div>
-          <div className="flex flex-wrap gap-2 mt-3 pl-10">
+          <div className="flex flex-wrap gap-2 mt-3 ps-10">
             <a
               href="../agent-loop/index.html"
               className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-white border-2 border-ink rounded-full font-mono text-[11px] font-bold text-ink shadow-stamp hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-stamp-lg transition-all duration-250 ease-spring"

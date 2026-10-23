@@ -256,7 +256,7 @@ const SectionLevels: React.FC = () => {
                       x={cx}
                       y={barY + barH / 2 + 4}
                       textAnchor="middle"
-                      fontFamily='"Plus Jakarta Sans", "Noto Sans SC", sans-serif'
+                      fontFamily='"Plus Jakarta Sans", "Vazirmatn", sans-serif'
                       fontSize="13"
                       fontWeight="800"
                       fill={lv.textOn}
@@ -270,7 +270,7 @@ const SectionLevels: React.FC = () => {
                     x={cx}
                     y="244"
                     textAnchor="middle"
-                    fontFamily='"Plus Jakarta Sans", "Noto Sans SC", sans-serif'
+                    fontFamily='"Plus Jakarta Sans", "Vazirmatn", sans-serif'
                     fontSize="12"
                     fontWeight="800"
                     fill="#241C15"

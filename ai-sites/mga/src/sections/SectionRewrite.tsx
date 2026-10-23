@@ -92,7 +92,7 @@ export default function SectionRewrite() {
                 <button
                   key={o.key}
                   onClick={() => setOid(o.key)}
-                  className={`w-full text-left px-4 py-3 rounded-2xl border-2 transition-all duration-250 ease-spring ${
+                  className={`w-full text-start px-4 py-3 rounded-2xl border-2 transition-all duration-250 ease-spring ${
                     oid === o.key
                       ? "bg-ink text-cream border-ink shadow-stamp"
                       : "bg-white border-ink/30 hover:border-ink text-ink"
@@ -153,7 +153,7 @@ export default function SectionRewrite() {
             <span className="px-2 py-1 rounded bg-butter border border-ink">{genreInfo.label}</span>
             <span className="text-ink">·</span>
             <span className="text-ink-secondary">{genreInfo.hint}</span>
-            <span className="ml-auto px-2 py-1 rounded bg-coral text-white border border-ink">
+            <span className="ms-auto px-2 py-1 rounded bg-coral text-white border border-ink">
               {audienceInfo.label}
             </span>
             <span className="text-ink">·</span>

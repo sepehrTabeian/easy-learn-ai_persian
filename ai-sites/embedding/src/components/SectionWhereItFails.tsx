@@ -75,7 +75,7 @@ const SectionWhereItFails: React.FC = () => {
                     勾得越多，越需要补救手段。
                   </p>
                 </div>
-                <div className="text-right">
+                <div className="text-end">
                   <div className="font-mono text-[28px] font-bold text-ink">{health}</div>
                   <div className="font-mono text-[10px] uppercase tracking-[0.18em] text-ink/45">示意分</div>
                 </div>

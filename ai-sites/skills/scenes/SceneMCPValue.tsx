@@ -45,7 +45,7 @@ export const SceneMCPValue: React.FC<SceneProps> = ({ step }) => {
                         <div className="text-gray-500 text-xs text-center p-2">
                             System Prompt:<br/>...tools definition...
                         </div>
-                        <div className="absolute -top-3 -right-3 bg-[#1e1e24] rounded-full">
+                        <div className="absolute -top-3 -end-3 bg-[#1e1e24] rounded-full">
                             <XCircle size={24} className="text-gray-500" />
                         </div>
                     </div>
@@ -65,7 +65,7 @@ export const SceneMCPValue: React.FC<SceneProps> = ({ step }) => {
                         <div className="bg-green-900/50 px-2 py-1 rounded text-xs text-green-300 font-mono border border-green-500/30">
                             Protocol Spec
                         </div>
-                        <div className="absolute -top-3 -right-3 bg-[#1e1e24] rounded-full">
+                        <div className="absolute -top-3 -end-3 bg-[#1e1e24] rounded-full">
                             <CheckCircle2 size={32} className="text-green-500" />
                         </div>
                     </div>
@@ -84,7 +84,7 @@ export const SceneMCPValue: React.FC<SceneProps> = ({ step }) => {
                 animate={{ opacity: 1, y: 0 }}
                 className="w-full max-w-4xl bg-[#1e1e24]/80 border border-gray-700 p-8 rounded-3xl relative mt-8"
             >
-                <div className="absolute -top-6 left-1/2 -translate-x-1/2 bg-blue-600 text-white px-6 py-2 rounded-full font-bold shadow-lg flex items-center gap-2">
+                <div className="absolute -top-6 start-1/2 -translate-x-1/2 bg-blue-600 text-white px-6 py-2 rounded-full font-bold shadow-lg flex items-center gap-2">
                     <Globe size={18} />
                     统一 AI 连接世界的方式
                 </div>

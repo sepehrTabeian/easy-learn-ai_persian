@@ -50,7 +50,7 @@ export default function Chapter23({ step }: { step: number }) {
             <div className="flex items-center gap-16">
               {/* Context Window Visual */}
               <div className="relative w-64 h-80 border-4 border-gray-300 rounded-3xl p-4 flex flex-col justify-end overflow-hidden bg-gray-50">
-                <div className="absolute top-2 left-0 w-full text-center text-gray-400 font-bold text-sm">上下文窗口</div>
+                <div className="absolute top-2 start-0 w-full text-center text-gray-400 font-bold text-sm">上下文窗口</div>
                 
                 {/* Filling blocks */}
                 <motion.div 
@@ -73,7 +73,7 @@ export default function Chapter23({ step }: { step: number }) {
                   initial={{ opacity: 0, x: 20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 0.5 }}
-                  className="bg-white p-4 rounded-2xl shadow-md border-l-4 border-rose-400 text-xl font-bold text-gray-700 flex items-center gap-3"
+                  className="bg-white p-4 rounded-2xl shadow-md border-s-4 border-rose-400 text-xl font-bold text-gray-700 flex items-center gap-3"
                 >
                   <AlertTriangle className="text-rose-500 w-6 h-6" /> 丢细节、丢重点
                 </motion.div>
@@ -81,7 +81,7 @@ export default function Chapter23({ step }: { step: number }) {
                   initial={{ opacity: 0, x: 20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 1.5 }}
-                  className="bg-white p-4 rounded-2xl shadow-md border-l-4 border-rose-500 text-xl font-bold text-gray-700 flex items-center gap-3"
+                  className="bg-white p-4 rounded-2xl shadow-md border-s-4 border-rose-500 text-xl font-bold text-gray-700 flex items-center gap-3"
                 >
                   <AlertTriangle className="text-rose-600 w-6 h-6" /> 感觉装不下，着急收尾
                 </motion.div>
@@ -119,7 +119,7 @@ export default function Chapter23({ step }: { step: number }) {
                 <motion.div
                   animate={{ x: [-1, 1, -1] }}
                   transition={{ duration: 0.2, repeat: Infinity }}
-                  className="absolute bottom-4 left-4 right-4 h-[40%] bg-rose-900/20 rounded-xl pointer-events-none"
+                  className="absolute bottom-4 start-4 end-4 h-[40%] bg-rose-900/20 rounded-xl pointer-events-none"
                 />
               </div>
 
@@ -268,7 +268,7 @@ export default function Chapter23({ step }: { step: number }) {
               transition={{ type: 'spring', bounce: 0.5 }}
               className="bg-white p-12 rounded-[3rem] shadow-2xl border-4 border-indigo-100 flex flex-col items-center text-center max-w-4xl relative overflow-hidden"
             >
-              <div className="absolute -right-10 -top-10 opacity-5">
+              <div className="absolute -end-10 -top-10 opacity-5">
                 <Zap className="w-64 h-64 text-indigo-500" />
               </div>
               <h2 className="text-5xl font-bold text-gray-800 leading-relaxed relative z-10">

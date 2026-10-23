@@ -130,7 +130,7 @@ const SectionDebug: React.FC = () => {
                         key={p.name}
                         onClick={() => setVocabInput(String(p.v))}
                         className={[
-                          "px-2 py-1.5 border-2 border-ink rounded-md font-mono text-[10.5px] font-bold transition-all duration-250 ease-spring text-left",
+                          "px-2 py-1.5 border-2 border-ink rounded-md font-mono text-[10.5px] font-bold transition-all duration-250 ease-spring text-start",
                           on
                             ? "bg-ink text-cream shadow-[2px_2px_0_0_#E07A5F]"
                             : "bg-white text-ink/70 hover:bg-cream",
@@ -182,7 +182,7 @@ const SectionDebug: React.FC = () => {
                       <button
                         onClick={() => setOpenId(open ? null : s.id)}
                         className={[
-                          "w-full text-left px-4 py-3 transition-all duration-250 ease-spring flex items-baseline justify-between gap-3",
+                          "w-full text-start px-4 py-3 transition-all duration-250 ease-spring flex items-baseline justify-between gap-3",
                           open ? "bg-ink text-cream" : "bg-white text-ink hover:bg-cream",
                         ].join(" ")}
                       >

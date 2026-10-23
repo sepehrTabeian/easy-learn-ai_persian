@@ -131,7 +131,7 @@ const SectionMitigate: React.FC = () => {
               <div key={d}>
                 <div className="flex items-baseline justify-between mb-1.5">
                   <div>
-                    <span className="font-display font-bold text-[15px] text-ink mr-2">
+                    <span className="font-display font-bold text-[15px] text-ink me-2">
                       {DIM_LABEL[d].name}
                     </span>
                     <span className="font-mono text-[11px] text-ink/55">
@@ -166,7 +166,7 @@ const SectionMitigate: React.FC = () => {
 
         {/* 矩阵 */}
         <div className="overflow-x-auto bg-white border-2 border-ink rounded-3xl shadow-stamp-lg">
-          <table className="w-full text-left min-w-[640px]">
+          <table className="w-full text-start min-w-[640px]">
             <thead>
               <tr className="border-b-2 border-ink bg-cream">
                 <th className="px-5 py-3 font-mono text-[10.5px] uppercase tracking-[0.18em] text-ink/55 w-2/5">
@@ -180,7 +180,7 @@ const SectionMitigate: React.FC = () => {
                     {DIM_LABEL[d].name}
                   </th>
                 ))}
-                <th className="px-4 py-3 font-mono text-[10.5px] uppercase tracking-[0.18em] text-ink/55 text-right">
+                <th className="px-4 py-3 font-mono text-[10.5px] uppercase tracking-[0.18em] text-ink/55 text-end">
                   总分
                 </th>
               </tr>
@@ -240,7 +240,7 @@ const SectionMitigate: React.FC = () => {
                         </td>
                       );
                     })}
-                    <td className="px-4 py-3.5 text-right">
+                    <td className="px-4 py-3.5 text-end">
                       <span
                         className={[
                           "font-display font-bold tabular-nums",

@@ -179,7 +179,7 @@ const SectionConflict: React.FC = () => {
           <div className="mt-8">
             <div className="relative">
               {/* 档位标记点 */}
-              <div className="absolute -top-7 left-0 right-0 flex justify-between font-mono text-[10px] tracking-[0.18em] uppercase text-ink/55 pointer-events-none">
+              <div className="absolute -top-7 start-0 end-0 flex justify-between font-mono text-[10px] tracking-[0.18em] uppercase text-ink/55 pointer-events-none">
                 <span>0 · 全审批</span>
                 <span>25 · Plan</span>
                 <span>50 · Default</span>

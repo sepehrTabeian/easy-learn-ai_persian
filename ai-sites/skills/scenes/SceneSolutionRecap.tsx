@@ -176,7 +176,7 @@ export const SceneSolutionRecap: React.FC<SceneProps> = ({ step }) => {
                             {[...Array(6)].map((_, i) => (
                                 <motion.div
                                     key={i}
-                                    className="absolute left-1/2 w-1 h-1 bg-white rounded-full"
+                                    className="absolute start-1/2 w-1 h-1 bg-white rounded-full"
                                     initial={{ y: 0, x: (Math.random() - 0.5) * 160, opacity: 0 }}
                                     animate={{ 
                                         y: 300, 

@@ -144,7 +144,7 @@ const SectionFilesystem: React.FC = () => {
                       type="button"
                       key={p.id}
                       onClick={() => pick(p.id)}
-                      className={`w-full text-left border-2 border-ink rounded-xl px-4 py-3 transition-all duration-250 ease-spring ${
+                      className={`w-full text-start border-2 border-ink rounded-xl px-4 py-3 transition-all duration-250 ease-spring ${
                         active
                           ? "bg-ink text-cream shadow-stamp-lg translate-x-[-1px] translate-y-[-1px]"
                           : "bg-white text-ink shadow-stamp hover:translate-x-[-1px] hover:translate-y-[-1px] hover:shadow-stamp-lg"
@@ -286,7 +286,7 @@ const SectionFilesystem: React.FC = () => {
             <p className="font-sans text-[14.5px] leading-[1.7] text-cream/85">
               Claude Code 自己拦不住写入 —— 它得告诉操作系统哪些路径不能写；
               Mac（Seatbelt）/ Linux（bwrap）在内核层挡，
-              <span className="font-bold text-butter ml-1">
+              <span className="font-bold text-butter ms-1">
                 Agent 绕过程序直接调命令也写不进去。
               </span>
             </p>

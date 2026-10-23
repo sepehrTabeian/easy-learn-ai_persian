@@ -131,7 +131,7 @@ const Stage: React.FC<{ x: number; y: number; width: number; label: string; fill
 }) => (
   <g transform={`translate(${x} ${y})`} className="transition-transform duration-250 ease-spring hover:-translate-y-1">
     <rect width={width} height="84" rx="16" fill={fill} stroke="#241C15" strokeWidth="3" />
-    <text x={width / 2} y="37" textAnchor="middle" fontFamily="Plus Jakarta Sans, Noto Sans SC, sans-serif" fontSize="18" fontWeight="900" fill={light ? "#FBEFE3" : "#241C15"}>
+    <text x={width / 2} y="37" textAnchor="middle" fontFamily="Plus Jakarta Sans, Vazirmatn, sans-serif" fontSize="18" fontWeight="900" fill={light ? "#FBEFE3" : "#241C15"}>
       {label}
     </text>
     <text x={width / 2} y="60" textAnchor="middle" fontFamily="Geist Mono, monospace" fontSize="12" fontWeight="800" fill={light ? "#FBEFE3" : "#241C15"} opacity="0.72">

@@ -64,7 +64,7 @@ export default function SectionFourMeters() {
             </div>
           </div>
 
-          <div className="text-right">
+          <div className="text-end">
             <div className="eyebrow text-ink-tertiary mb-1">当前 r =</div>
             <div className="font-display text-5xl font-bold text-ink leading-none">{r}</div>
           </div>
@@ -125,7 +125,7 @@ export default function SectionFourMeters() {
         </div>
 
         <div className="mt-6 p-4 bg-cream border-2 border-ink rounded-2xl text-sm text-ink leading-relaxed">
-          <span className="font-mono text-xs text-ink-tertiary mr-2 uppercase tracking-widest">解读</span>
+          <span className="font-mono text-xs text-ink-tertiary me-2 uppercase tracking-widest">解读</span>
           {readVerdict(r, ratio, vramGB)}
         </div>
       </div>

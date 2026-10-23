@@ -163,7 +163,7 @@ const SectionChinchilla: React.FC = () => {
                         style={{ width: `${((nIdx + 1) / N_LEVELS.length) * 100}%` }}
                       />
                     </div>
-                    <span className="ml-3 font-mono text-[11px] text-ink/55 tabular-nums">
+                    <span className="ms-3 font-mono text-[11px] text-ink/55 tabular-nums">
                       {nIdx + 1}/{N_LEVELS.length}
                     </span>
                   </div>
@@ -214,7 +214,7 @@ const SectionChinchilla: React.FC = () => {
                         style={{ width: `${((dIdx + 1) / D_LEVELS.length) * 100}%` }}
                       />
                     </div>
-                    <span className="ml-3 font-mono text-[11px] text-ink/55 tabular-nums">
+                    <span className="ms-3 font-mono text-[11px] text-ink/55 tabular-nums">
                       {dIdx + 1}/{D_LEVELS.length}
                     </span>
                   </div>
@@ -260,7 +260,7 @@ const SectionChinchilla: React.FC = () => {
                     <span className="font-display text-[14px] font-bold text-ink tabular-nums leading-none">
                       ^{logC.toFixed(1)}
                     </span>
-                    <span className="font-mono text-[10px] text-ink/55 ml-1">FLOPs</span>
+                    <span className="font-mono text-[10px] text-ink/55 ms-1">FLOPs</span>
                   </div>
                 </div>
                 <div className="flex items-baseline justify-between">

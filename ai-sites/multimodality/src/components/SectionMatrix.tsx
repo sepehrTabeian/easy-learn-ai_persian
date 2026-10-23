@@ -201,7 +201,7 @@ const SectionMatrix: React.FC = () => {
                 <table className="w-full min-w-[640px]">
                   <thead>
                     <tr className="bg-cream border-b-2 border-ink">
-                      <th className="text-left px-4 py-3 font-mono text-[10px] uppercase tracking-[0.18em] text-ink/55 font-semibold">
+                      <th className="text-start px-4 py-3 font-mono text-[10px] uppercase tracking-[0.18em] text-ink/55 font-semibold">
                         模型
                       </th>
                       {COLS.map((c) => (

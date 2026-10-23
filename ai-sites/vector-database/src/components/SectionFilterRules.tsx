@@ -77,7 +77,7 @@ const SectionFilterRules: React.FC = () => {
                   <button
                     key={item.id}
                     onClick={() => item.set(!item.checked)}
-                    className={`flex w-full items-center justify-between rounded-2xl border-2 border-ink p-4 text-left transition-all duration-250 ease-spring ${
+                    className={`flex w-full items-center justify-between rounded-2xl border-2 border-ink p-4 text-start transition-all duration-250 ease-spring ${
                       item.checked ? "bg-ink text-cream shadow-stamp" : "bg-white text-ink"
                     }`}
                   >

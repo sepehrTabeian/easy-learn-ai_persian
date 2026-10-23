@@ -120,13 +120,13 @@ const SectionVsFc: React.FC = () => {
       {/* 浮动小装饰 */}
       <div
         aria-hidden
-        className="absolute top-16 right-[8%] hidden lg:block animate-float-y"
+        className="absolute top-16 end-[8%] hidden lg:block animate-float-y"
       >
         <div className="w-12 h-12 bg-butter border-2 border-cream rounded-2xl shadow-stamp -rotate-6" />
       </div>
       <div
         aria-hidden
-        className="absolute bottom-28 left-[6%] hidden lg:block animate-float-y-sm"
+        className="absolute bottom-28 start-[6%] hidden lg:block animate-float-y-sm"
       >
         <div className="w-10 h-10 bg-coral border-2 border-cream rounded-full shadow-stamp" />
       </div>
@@ -145,7 +145,7 @@ const SectionVsFc: React.FC = () => {
             <h2 className="font-display text-display-lg leading-tight mb-6 max-w-3xl">
               <span className="relative inline-block">
                 <span
-                  className="absolute left-0 right-0 bottom-1 h-5 lg:h-7 bg-butter -z-0 -rotate-1"
+                  className="absolute start-0 end-0 bottom-1 h-5 lg:h-7 bg-butter -z-0 -rotate-1"
                   aria-hidden
                 />
                 <span className="relative z-10 text-ink">「MCP vs FC」</span>
@@ -203,7 +203,7 @@ const SectionVsFc: React.FC = () => {
                     </div>
                     <h3 className="font-display text-[20px] font-bold text-ink leading-tight">
                       {l.label}
-                      <span className="font-mono text-[12px] font-normal text-ink/55 ml-2">
+                      <span className="font-mono text-[12px] font-normal text-ink/55 ms-2">
                         · {l.sub}
                       </span>
                     </h3>
@@ -360,7 +360,7 @@ const StackLayer: React.FC<{
     <button
       onClick={() => onPick(id)}
       className={[
-        "w-full text-left rounded-2xl border-2 border-ink p-4 transition-all duration-300 ease-spring",
+        "w-full text-start rounded-2xl border-2 border-ink p-4 transition-all duration-300 ease-spring",
         baseBg,
         baseText,
         active

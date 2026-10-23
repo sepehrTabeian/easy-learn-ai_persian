@@ -152,7 +152,7 @@ const SectionMixedUse: React.FC = () => {
                   }`}
                 >
                   {/* 层标 */}
-                  <div className="col-span-12 md:col-span-3 p-4 bg-cream border-r-2 border-ink/15">
+                  <div className="col-span-12 md:col-span-3 p-4 bg-cream border-e-2 border-ink/15">
                     <div className="font-mono text-[10.5px] tracking-[0.22em] uppercase text-ink/55 mb-1">
                       {l.num}
                     </div>
@@ -165,7 +165,7 @@ const SectionMixedUse: React.FC = () => {
                   </div>
 
                   {/* 举例 */}
-                  <div className="col-span-12 md:col-span-4 p-4 md:border-r-2 border-ink/15">
+                  <div className="col-span-12 md:col-span-4 p-4 md:border-e-2 border-ink/15">
                     <div className="font-mono text-[10.5px] tracking-[0.2em] uppercase text-ink/55 mb-1">
                       举例
                     </div>
@@ -175,7 +175,7 @@ const SectionMixedUse: React.FC = () => {
                   </div>
 
                   {/* 工具选择 */}
-                  <div className="col-span-8 md:col-span-3 p-4 md:border-r-2 border-ink/15 flex items-center gap-2">
+                  <div className="col-span-8 md:col-span-3 p-4 md:border-e-2 border-ink/15 flex items-center gap-2">
                     <ToolPill
                       tool="task"
                       label="Task"
@@ -219,7 +219,7 @@ const SectionMixedUse: React.FC = () => {
             <div className="font-mono text-[11px] tracking-[0.18em] uppercase text-ink/55">
               当前选错：
               <span
-                className={`font-bold ml-1 ${
+                className={`font-bold ms-1 ${
                   wrongCount === 0 ? "text-teal" : "text-coral"
                 }`}
               >

@@ -18,7 +18,7 @@ const SLOTS = [
 const SectionHero: React.FC = () => {
   return (
     <section className="relative px-4 sm:px-6 lg:px-8 pt-20 lg:pt-28 pb-20 lg:pb-24 overflow-hidden">
-      <div className="absolute top-20 left-[6%] hidden md:grid grid-cols-3 gap-2 pointer-events-none opacity-50">
+      <div className="absolute top-20 start-[6%] hidden md:grid grid-cols-3 gap-2 pointer-events-none opacity-50">
         {Array.from({ length: 9 }).map((_, i) => (
           <span key={i} className="w-1.5 h-1.5 rounded-full bg-ink/30" />
         ))}
@@ -118,7 +118,7 @@ const SectionHero: React.FC = () => {
                     >
                       {s.label}
                     </span>
-                    <span className="ml-auto font-mono text-[10px] tracking-[0.18em] uppercase opacity-70">
+                    <span className="ms-auto font-mono text-[10px] tracking-[0.18em] uppercase opacity-70">
                       {s.kind === "out" ? "没放进来" : "放进来"}
                     </span>
                   </div>

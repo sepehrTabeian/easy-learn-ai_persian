@@ -102,7 +102,7 @@ export const SectionThreeWords: React.FC = () => {
         <div className="grid lg:grid-cols-12 gap-5">
           <div className="lg:col-span-4 space-y-2">
             {TERMS.map((x) => (
-              <button key={x.id} onClick={() => setActive(x.id)} className={`w-full p-4 text-left border-2 border-ink rounded-xl font-display text-[19px] font-bold ${active === x.id ? "bg-ink text-cream shadow-stamp" : "bg-cream"}`}>{x.name}</button>
+              <button key={x.id} onClick={() => setActive(x.id)} className={`w-full p-4 text-start border-2 border-ink rounded-xl font-display text-[19px] font-bold ${active === x.id ? "bg-ink text-cream shadow-stamp" : "bg-cream"}`}>{x.name}</button>
             ))}
           </div>
           <div key={active} className="lg:col-span-8 bg-butter border-2 border-ink rounded-3xl shadow-stamp-xl p-7 animate-enter-fade">
@@ -305,7 +305,7 @@ export const SectionPitfalls: React.FC = () => {
         <p className="max-w-2xl text-[15.5px] text-ink/70 mb-8">点开四个常见问题。DPO 省的是训练流程，不会自动修好偏好数据。</p>
         <div className="space-y-3">
           {PITFALLS.map((x, i) => (
-            <button key={x.title} onClick={() => setOpen(i)} className={`w-full text-left border-2 border-ink rounded-2xl p-5 transition-all ${open === i ? "bg-coral text-cream shadow-stamp-lg" : "bg-white"}`}>
+            <button key={x.title} onClick={() => setOpen(i)} className={`w-full text-start border-2 border-ink rounded-2xl p-5 transition-all ${open === i ? "bg-coral text-cream shadow-stamp-lg" : "bg-white"}`}>
               <div className="flex justify-between items-center gap-4">
                 <span className="font-display text-[20px] font-bold">{x.title}</span>
                 <ChevronDown className={`w-5 h-5 transition-transform ${open === i ? "rotate-180" : ""}`} />
@@ -340,7 +340,7 @@ export const SectionChooseMethod: React.FC = () => {
             ].map(([id, label]) => {
               const active = facts[id as keyof typeof facts];
               return (
-                <button key={id} onClick={() => setFacts((old) => ({ ...old, [id]: !active }))} className={`p-5 text-left border-2 border-ink rounded-2xl ${active ? "bg-butter shadow-stamp-lg" : "bg-cream"}`}>
+                <button key={id} onClick={() => setFacts((old) => ({ ...old, [id]: !active }))} className={`p-5 text-start border-2 border-ink rounded-2xl ${active ? "bg-butter shadow-stamp-lg" : "bg-cream"}`}>
                   <span className={`w-6 h-6 mb-3 border-2 border-ink rounded flex items-center justify-center ${active ? "bg-ink text-cream" : "bg-white"}`}>{active && <Check className="w-4 h-4" />}</span>
                   <div className="font-display text-[18px] font-bold">{label}</div>
                 </button>

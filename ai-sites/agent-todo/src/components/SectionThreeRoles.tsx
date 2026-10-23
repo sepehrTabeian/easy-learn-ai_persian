@@ -283,7 +283,7 @@ const SectionThreeRoles: React.FC = () => {
               return (
                 <div
                   key={key}
-                  className={`p-5 ${idx > 0 ? "md:border-l-2 border-ink" : ""} ${idx > 0 ? "border-t-2 md:border-t-0 border-ink" : ""}`}
+                  className={`p-5 ${idx > 0 ? "md:border-s-2 border-ink" : ""} ${idx > 0 ? "border-t-2 md:border-t-0 border-ink" : ""}`}
                 >
                   <div
                     className={`inline-flex items-center gap-1.5 px-2.5 py-1 ${item.tone} border-2 border-ink rounded-full font-mono text-[10.5px] tracking-[0.18em] uppercase mb-3`}

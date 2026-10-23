@@ -112,7 +112,7 @@ const SectionPlanMode: React.FC = () => {
                     <button
                       type="button"
                       onClick={() => setCursor(i)}
-                      className={`w-full text-left flex items-start gap-4 p-4 rounded-2xl border-2 transition-all duration-250 ease-spring ${
+                      className={`w-full text-start flex items-start gap-4 p-4 rounded-2xl border-2 transition-all duration-250 ease-spring ${
                         active
                           ? "bg-ink text-cream border-ink shadow-stamp-lg translate-x-[-1px] translate-y-[-1px]"
                           : passed
@@ -162,7 +162,7 @@ const SectionPlanMode: React.FC = () => {
                   <span className="w-2.5 h-2.5 rounded-full bg-pop border border-ink" />
                   <span className="w-2.5 h-2.5 rounded-full bg-butter border border-ink" />
                   <span className="w-2.5 h-2.5 rounded-full bg-teal border border-ink" />
-                  <span className="font-mono text-[10.5px] tracking-[0.2em] uppercase text-ink/55 ml-2">
+                  <span className="font-mono text-[10.5px] tracking-[0.2em] uppercase text-ink/55 ms-2">
                     plan-mode · agent log
                   </span>
                 </div>
@@ -184,7 +184,7 @@ const SectionPlanMode: React.FC = () => {
                   </div>
                 ))}
                 <div className="text-ink/0 mt-2 inline-block">
-                  <span className="text-cream inline-block w-2 h-4 bg-butter animate-pulse-dot align-middle ml-0" />
+                  <span className="text-cream inline-block w-2 h-4 bg-butter animate-pulse-dot align-middle ms-0" />
                 </div>
               </div>
 
@@ -215,7 +215,7 @@ const SectionPlanMode: React.FC = () => {
                 <button
                   type="button"
                   onClick={() => setCursor(0)}
-                  className="ml-auto inline-flex items-center gap-1.5 font-mono text-[11px] tracking-[0.18em] uppercase text-ink/55 hover:text-ink"
+                  className="ms-auto inline-flex items-center gap-1.5 font-mono text-[11px] tracking-[0.18em] uppercase text-ink/55 hover:text-ink"
                   aria-label="重置"
                 >
                   <RotateCcw className="w-3.5 h-3.5" strokeWidth={2.4} />

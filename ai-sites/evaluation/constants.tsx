@@ -390,7 +390,7 @@ const BASE_SLIDES: SlideData[] = [
            {['历史常识', '物理定律', '基础逻辑'].map((item, idx) => (
               <div key={idx} className="group relative bg-white/5 border border-white/10 p-6 rounded-xl flex items-center justify-center overflow-hidden cursor-pointer hover:border-blue-400 transition-colors">
                  <div className="absolute inset-0 bg-gradient-to-tr from-blue-500/20 to-purple-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                 <Library className="w-8 h-8 text-gray-400 mr-3 group-hover:text-white transition-colors" />
+                 <Library className="w-8 h-8 text-gray-400 me-3 group-hover:text-white transition-colors" />
                  <span className="text-xl font-bold text-gray-300 group-hover:text-white z-10">{item}</span>
               </div>
            ))}
@@ -432,12 +432,12 @@ const BASE_SLIDES: SlideData[] = [
          </div>
          
          <div className="flex-1 bg-slate-900 border border-white/10 rounded-xl p-6 relative overflow-hidden group hover:border-blue-500/30 transition-all hover:shadow-[0_0_30px_rgba(59,130,246,0.15)]">
-            <div className="absolute top-0 right-0 p-3 bg-white/10 rounded-bl-xl text-xs font-mono text-gray-400">EXAM-101</div>
+            <div className="absolute top-0 end-0 p-3 bg-white/10 rounded-es-xl text-xs font-mono text-gray-400">EXAM-101</div>
             <h3 className="text-xl font-bold mb-4 text-center text-blue-300">Question Example</h3>
             <div className="space-y-3 font-mono text-sm">
                <div className="p-3 bg-white/5 rounded border border-white/5">
                   <p className="text-gray-300 mb-2">Q: 《红楼梦》的作者是谁？</p>
-                  <div className="space-y-1 pl-2 text-gray-500">
+                  <div className="space-y-1 ps-2 text-gray-500">
                      <p>A. 李白</p>
                      <p className="text-green-400 font-bold">B. 曹雪芹 <Check size={14} className="inline"/></p>
                      <p>C. 鲁迅</p>
@@ -516,10 +516,10 @@ const BASE_SLIDES: SlideData[] = [
             <Globe size={120} className="text-blue-400 relative z-10 group-hover:scale-110 transition-transform duration-700 group-hover:rotate-180" />
             
             {/* Orbiting Languages */}
-            <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-full text-white font-bold animate-bounce">中文</div>
-            <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-full text-white font-bold animate-bounce delay-75">Français</div>
-            <div className="absolute left-0 top-1/2 -translate-x-full -translate-y-1/2 text-white font-bold animate-pulse">العربية</div>
-            <div className="absolute right-0 top-1/2 translate-x-full -translate-y-1/2 text-white font-bold animate-pulse delay-100">Español</div>
+            <div className="absolute top-0 start-1/2 -translate-x-1/2 -translate-y-full text-white font-bold animate-bounce">中文</div>
+            <div className="absolute bottom-0 start-1/2 -translate-x-1/2 translate-y-full text-white font-bold animate-bounce delay-75">Français</div>
+            <div className="absolute start-0 top-1/2 -translate-x-full -translate-y-1/2 text-white font-bold animate-pulse">العربية</div>
+            <div className="absolute end-0 top-1/2 translate-x-full -translate-y-1/2 text-white font-bold animate-pulse delay-100">Español</div>
          </div>
          
          <h3 className="text-2xl font-bold text-center mb-6">MMLU 的“国际版” (Multilingual)</h3>
@@ -622,7 +622,7 @@ const BASE_SLIDES: SlideData[] = [
                <p className="text-gray-300 mb-4">
                   给模型描述一个生活场景，让它从 4 个选项中选出<span className="text-white font-bold">符合常识</span>的结局。
                </p>
-               <div className="bg-black/30 p-4 rounded text-sm font-mono text-gray-400 border-l-4 border-orange-500">
+               <div className="bg-black/30 p-4 rounded text-sm font-mono text-gray-400 border-s-4 border-orange-500">
                   <p className="mb-2 italic">Scenario: A woman is sitting in a car...</p>
                   <p>Option A: ...she flies into space. (Absurd)</p>
                   <p className="text-green-400">Option B: ...she starts the engine. (Correct)</p>
@@ -667,7 +667,7 @@ const BASE_SLIDES: SlideData[] = [
                <h4 className="font-bold text-lg text-white mb-1">当前战况</h4>
                <p className="text-sm text-gray-400">Gemini 3.0 & GPT 5.2</p>
             </div>
-            <div className="text-right">
+            <div className="text-end">
                <span className="text-4xl font-bold text-green-400"> 90分</span>
                <p className="text-xs text-gray-500">已超过普通人类专家水平</p>
             </div>
@@ -763,7 +763,7 @@ const BASE_SLIDES: SlideData[] = [
       <div className="flex flex-col gap-6">
          <div className="flex flex-col md:flex-row gap-6">
             <div className="flex-1 bg-slate-900 border border-cyan-500/30 p-6 rounded-xl relative overflow-hidden group">
-               <div className="absolute top-0 right-0 p-2 bg-cyan-900/50 rounded-bl-lg text-xs font-mono text-cyan-300">Format</div>
+               <div className="absolute top-0 end-0 p-2 bg-cyan-900/50 rounded-es-lg text-xs font-mono text-cyan-300">Format</div>
                <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
                   <LayoutGrid className="text-cyan-400" /> 形式：色彩网格
                </h3>
@@ -775,7 +775,7 @@ const BASE_SLIDES: SlideData[] = [
             </div>
             
             <div className="flex-1 bg-slate-900 border border-purple-500/30 p-6 rounded-xl relative overflow-hidden group">
-               <div className="absolute top-0 right-0 p-2 bg-purple-900/50 rounded-bl-lg text-xs font-mono text-purple-300">Goal</div>
+               <div className="absolute top-0 end-0 p-2 bg-purple-900/50 rounded-es-lg text-xs font-mono text-purple-300">Goal</div>
                <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
                   <Sparkles className="text-purple-400" /> 核心：规则迁移
                </h3>
@@ -828,7 +828,7 @@ const BASE_SLIDES: SlideData[] = [
                       })}
                    </div>
                    {/* Annotation */}
-                   <div className="absolute -right-4 -top-4 bg-white text-black text-xs font-bold px-2 py-1 rounded shadow-lg transform rotate-12">
+                   <div className="absolute -end-4 -top-4 bg-white text-black text-xs font-bold px-2 py-1 rounded shadow-lg transform rotate-12">
                       “缺了一角！”
                    </div>
                </div>
@@ -879,11 +879,11 @@ const BASE_SLIDES: SlideData[] = [
                <div className="text-xs text-gray-400 uppercase tracking-widest font-mono">Input</div>
                <div className="w-32 h-40 border-2 border-gray-600 bg-gray-900 relative rounded p-2">
                   {/* Floating Red Blocks */}
-                  <div className="absolute top-2 right-2 w-6 h-6 bg-red-500 rounded-sm"></div>
-                  <div className="absolute top-8 right-8 w-6 h-6 bg-red-500 rounded-sm"></div>
+                  <div className="absolute top-2 end-2 w-6 h-6 bg-red-500 rounded-sm"></div>
+                  <div className="absolute top-8 end-8 w-6 h-6 bg-red-500 rounded-sm"></div>
                   {/* Floating Blue Blocks */}
-                  <div className="absolute top-4 left-2 w-6 h-6 bg-blue-500 rounded-sm"></div>
-                  <div className="absolute top-12 left-4 w-6 h-6 bg-blue-500 rounded-sm"></div>
+                  <div className="absolute top-4 start-2 w-6 h-6 bg-blue-500 rounded-sm"></div>
+                  <div className="absolute top-12 start-4 w-6 h-6 bg-blue-500 rounded-sm"></div>
                </div>
             </div>
 
@@ -898,11 +898,11 @@ const BASE_SLIDES: SlideData[] = [
                <div className="text-xs text-green-400 uppercase tracking-widest font-mono">Output</div>
                <div className="w-32 h-40 border-2 border-green-500/50 bg-gray-900 relative rounded p-2 shadow-[0_0_20px_rgba(34,197,94,0.2)]">
                   {/* Stacked Blocks */}
-                  <div className="absolute bottom-2 right-2 w-6 h-6 bg-red-500 rounded-sm"></div>
-                  <div className="absolute bottom-8 right-2 w-6 h-6 bg-red-500 rounded-sm"></div>
+                  <div className="absolute bottom-2 end-2 w-6 h-6 bg-red-500 rounded-sm"></div>
+                  <div className="absolute bottom-8 end-2 w-6 h-6 bg-red-500 rounded-sm"></div>
                   
-                  <div className="absolute bottom-2 left-2 w-6 h-6 bg-blue-500 rounded-sm"></div>
-                  <div className="absolute bottom-8 left-2 w-6 h-6 bg-blue-500 rounded-sm"></div>
+                  <div className="absolute bottom-2 start-2 w-6 h-6 bg-blue-500 rounded-sm"></div>
+                  <div className="absolute bottom-8 start-2 w-6 h-6 bg-blue-500 rounded-sm"></div>
                </div>
             </div>
          </div>

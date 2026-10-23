@@ -66,7 +66,7 @@ export default function Chapter24({ step }: { step: number }) {
                   initial={{ opacity: 0, y: 20, rotate: -10 }}
                   animate={{ opacity: 1, y: -20, rotate: 10 }}
                   transition={{ delay: 0.5, type: 'spring' }}
-                  className="absolute -right-8 -top-8 bg-yellow-100 p-4 rounded-xl border-2 border-yellow-300 shadow-lg transform rotate-12"
+                  className="absolute -end-8 -top-8 bg-yellow-100 p-4 rounded-xl border-2 border-yellow-300 shadow-lg transform rotate-12"
                 >
                   <span className="text-4xl font-black text-rose-500">A+</span>
                   <div className="text-xs text-yellow-700 font-bold mt-1">Perfect!</div>
@@ -74,10 +74,10 @@ export default function Chapter24({ step }: { step: number }) {
               </motion.div>
 
               <div className="flex flex-col gap-6 max-w-md">
-                <div className="bg-white p-6 rounded-2xl shadow-md border-l-4 border-rose-400 text-xl font-bold text-gray-700">
+                <div className="bg-white p-6 rounded-2xl shadow-md border-s-4 border-rose-400 text-xl font-bold text-gray-700">
                   模型自己给自己打分，往往会<span className="text-rose-500">偏乐观</span>。
                 </div>
-                <div className="bg-white p-6 rounded-2xl shadow-md border-l-4 border-orange-400 text-lg font-medium text-gray-600">
+                <div className="bg-white p-6 rounded-2xl shadow-md border-s-4 border-orange-400 text-lg font-medium text-gray-600">
                   尤其是设计、体验、产品完整度这类<span className="text-orange-600 font-bold">没有标准答案</span>的问题，偏差更明显。
                 </div>
               </div>
@@ -283,19 +283,19 @@ export default function Chapter24({ step }: { step: number }) {
                 className="absolute w-[400px] h-[400px] border-4 border-dashed border-teal-300 rounded-full"
               />
               
-              <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white px-6 py-3 rounded-2xl shadow-lg border-2 border-teal-200 font-black text-2xl text-teal-700">
+              <div className="absolute top-0 start-1/2 -translate-x-1/2 -translate-y-1/2 bg-white px-6 py-3 rounded-2xl shadow-lg border-2 border-teal-200 font-black text-2xl text-teal-700">
                 生成
               </div>
               
-              <div className="absolute top-1/2 right-0 translate-x-1/2 -translate-y-1/2 bg-white px-6 py-3 rounded-2xl shadow-lg border-2 border-teal-200 font-black text-2xl text-teal-700">
+              <div className="absolute top-1/2 end-0 translate-x-1/2 -translate-y-1/2 bg-white px-6 py-3 rounded-2xl shadow-lg border-2 border-teal-200 font-black text-2xl text-teal-700">
                 检查
               </div>
               
-              <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 bg-white px-6 py-3 rounded-2xl shadow-lg border-2 border-teal-200 font-black text-2xl text-teal-700">
+              <div className="absolute bottom-0 start-1/2 -translate-x-1/2 translate-y-1/2 bg-white px-6 py-3 rounded-2xl shadow-lg border-2 border-teal-200 font-black text-2xl text-teal-700">
                 修复
               </div>
               
-              <div className="absolute top-1/2 left-0 -translate-x-1/2 -translate-y-1/2 bg-white px-6 py-3 rounded-2xl shadow-lg border-2 border-teal-200 font-black text-2xl text-teal-700">
+              <div className="absolute top-1/2 start-0 -translate-x-1/2 -translate-y-1/2 bg-white px-6 py-3 rounded-2xl shadow-lg border-2 border-teal-200 font-black text-2xl text-teal-700">
                 再检查
               </div>
 

@@ -282,7 +282,7 @@ const SectionAfterR1: React.FC = () => {
                       key={t.date}
                       onClick={() => setIdx(i)}
                       className={[
-                        "w-full flex items-center gap-3 p-2.5 border-2 border-ink rounded-xl text-left transition-all duration-200",
+                        "w-full flex items-center gap-3 p-2.5 border-2 border-ink rounded-xl text-start transition-all duration-200",
                         on
                           ? "bg-ink text-cream shadow-[3px_3px_0_0_#FF4D74]"
                           : "bg-white text-ink hover:bg-cream",
@@ -324,7 +324,7 @@ const SectionAfterR1: React.FC = () => {
                 <div key={r.id} className="border-2 border-ink rounded-2xl bg-white overflow-hidden shadow-stamp">
                   <button
                     onClick={() => setOpenRepro(on ? null : r.id)}
-                    className="w-full flex items-center justify-between gap-3 px-4 py-3.5 text-left hover:bg-cream transition-colors duration-200"
+                    className="w-full flex items-center justify-between gap-3 px-4 py-3.5 text-start hover:bg-cream transition-colors duration-200"
                   >
                     <div className="flex items-baseline gap-3 flex-wrap">
                       <span className="font-display text-[18px] font-bold text-ink">

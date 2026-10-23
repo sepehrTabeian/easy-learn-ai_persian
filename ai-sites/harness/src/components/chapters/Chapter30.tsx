@@ -90,7 +90,7 @@ export default function Chapter30({ step }: { step: number }) {
                         <motion.div
                           animate={{ scale: [1, 1.2, 1], opacity: [0.5, 1, 0.5] }}
                           transition={{ duration: 2, repeat: Infinity }}
-                          className="absolute -top-2 -right-2"
+                          className="absolute -top-2 -end-2"
                         >
                           <Sparkles className="w-8 h-8 text-pink-400" />
                         </motion.div>
@@ -167,8 +167,8 @@ export default function Chapter30({ step }: { step: number }) {
               className="bg-white p-16 rounded-[4rem] shadow-2xl border-2 border-gray-100 flex flex-col items-center text-center max-w-5xl relative overflow-hidden"
             >
               {/* Decorative background elements */}
-              <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-blue-400 via-emerald-400 to-amber-400" />
-              <Compass className="absolute -bottom-10 -right-10 w-64 h-64 text-gray-50 opacity-50 rotate-12" />
+              <div className="absolute top-0 start-0 w-full h-2 bg-gradient-to-r from-blue-400 via-emerald-400 to-amber-400" />
+              <Compass className="absolute -bottom-10 -end-10 w-64 h-64 text-gray-50 opacity-50 rotate-12" />
               
               <div className="w-24 h-24 bg-indigo-50 rounded-full flex items-center justify-center mb-8 relative z-10">
                 <Rocket className="w-12 h-12 text-indigo-500" />

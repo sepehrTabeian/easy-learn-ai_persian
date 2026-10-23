@@ -149,7 +149,7 @@ const SectionAutoMode: React.FC = () => {
                       type="button"
                       key={o.id}
                       onClick={() => toggle(o.id)}
-                      className={`text-left flex items-start gap-3 p-3.5 rounded-2xl border-2 border-ink transition-all duration-200 ease-spring ${
+                      className={`text-start flex items-start gap-3 p-3.5 rounded-2xl border-2 border-ink transition-all duration-200 ease-spring ${
                         on
                           ? "bg-ink text-cream shadow-stamp-lg translate-x-[-1px] translate-y-[-1px]"
                           : "bg-cream text-ink shadow-stamp hover:translate-x-[-1px] hover:translate-y-[-1px] hover:shadow-stamp-lg"

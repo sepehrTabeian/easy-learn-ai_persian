@@ -17,13 +17,13 @@ const SectionHero: React.FC = () => {
       {/* 背景装饰 */}
       <div
         aria-hidden
-        className="absolute top-24 right-[10%] hidden lg:block animate-float-y"
+        className="absolute top-24 end-[10%] hidden lg:block animate-float-y"
       >
         <div className="w-10 h-10 bg-coral border-2 border-ink rounded-2xl shadow-stamp rotate-12" />
       </div>
       <div
         aria-hidden
-        className="absolute bottom-24 left-[8%] hidden lg:block animate-float-y-sm"
+        className="absolute bottom-24 start-[8%] hidden lg:block animate-float-y-sm"
       >
         <div className="w-8 h-8 bg-teal border-2 border-ink rounded-full shadow-stamp -rotate-6" />
       </div>
@@ -46,7 +46,7 @@ const SectionHero: React.FC = () => {
             <p className="max-w-2xl font-display text-[22px] lg:text-[26px] font-bold text-ink leading-snug mb-6 animate-enter-up">
               <span className="relative inline-block">
                 <span
-                  className="absolute left-0 right-0 bottom-0.5 h-3.5 lg:h-5 bg-butter -z-0"
+                  className="absolute start-0 end-0 bottom-0.5 h-3.5 lg:h-5 bg-butter -z-0"
                   aria-hidden
                 />
                 <span className="relative z-10">
@@ -301,13 +301,13 @@ const GearStickIllustration: React.FC = () => {
         {/* 标签贴 */}
         <div
           aria-hidden
-          className="absolute top-3 left-3 px-2 py-0.5 bg-ink text-cream rounded-md font-mono text-[9px] uppercase tracking-[0.2em] z-20"
+          className="absolute top-3 start-3 px-2 py-0.5 bg-ink text-cream rounded-md font-mono text-[9px] uppercase tracking-[0.2em] z-20"
         >
           fig · 01
         </div>
         <div
           aria-hidden
-          className="absolute bottom-3 right-3 flex items-center gap-1.5 z-20"
+          className="absolute bottom-3 end-3 flex items-center gap-1.5 z-20"
         >
           <span className="w-1.5 h-1.5 rounded-full bg-coral animate-pulse-dot" />
           <span className="font-mono text-[9px] uppercase tracking-[0.2em] text-ink/55">

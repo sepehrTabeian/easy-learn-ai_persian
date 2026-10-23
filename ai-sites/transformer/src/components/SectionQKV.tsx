@@ -368,7 +368,7 @@ const SectionQKV: React.FC = () => {
           <div className="mt-6 px-4 py-3 bg-ink text-cream rounded-xl border-2 border-ink font-mono text-[12px] leading-relaxed">
             <span className="text-butter">attention(q, K, V) =</span>{" "}
             softmax( q · K<sup>T</sup> / √d_k ) · V
-            <span className="ml-3 text-cream/55">
+            <span className="ms-3 text-cream/55">
               · arXiv:1706.03762 § 3.2.1 「Scaled Dot-Product Attention」
             </span>
           </div>

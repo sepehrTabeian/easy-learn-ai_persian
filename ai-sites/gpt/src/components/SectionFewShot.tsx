@@ -165,7 +165,7 @@ const SectionFewShot: React.FC = () => {
         <div className="bg-white border-2 border-ink rounded-3xl shadow-stamp-lg p-6 lg:p-8">
           {/* task pill */}
           <div className="flex flex-wrap items-center gap-2 mb-6">
-            <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-ink/55 mr-2">
+            <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-ink/55 me-2">
               换任务
             </div>
             {TASKS.map((t) => {
@@ -206,7 +206,7 @@ const SectionFewShot: React.FC = () => {
                     className="mb-2 p-2 bg-butter/40 border-[1.5px] border-ink/85 rounded font-mono text-[11.5px] text-ink leading-relaxed whitespace-pre-line animate-enter-fade"
                     style={{ animationDelay: `${i * 60}ms` }}
                   >
-                    <span className="text-ink/45 text-[9.5px] mr-1">[ex {i + 1}]</span>{" "}
+                    <span className="text-ink/45 text-[9.5px] me-1">[ex {i + 1}]</span>{" "}
                     {task.exampleQ.split("\n")[0]}{" "}
                     <span className="text-coral font-bold">{task.exampleA}</span>
                   </div>
@@ -219,7 +219,7 @@ const SectionFewShot: React.FC = () => {
 
                 {/* 真正要问的 query */}
                 <div className="mt-3 p-2 bg-white border-2 border-ink rounded font-mono text-[11.5px] text-ink leading-relaxed">
-                  <span className="text-ink/45 text-[9.5px] mr-1">[query]</span>{" "}
+                  <span className="text-ink/45 text-[9.5px] me-1">[query]</span>{" "}
                   <span className="font-bold">→</span>{" "}
                   <span className="text-teal italic">GPT-3 这里填答案</span>
                 </div>
@@ -248,7 +248,7 @@ const SectionFewShot: React.FC = () => {
                     <span className="font-mono text-[12px] text-ink/55">shot</span>
                   </div>
                 </div>
-                <div className="text-right">
+                <div className="text-end">
                   <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-ink/55 mb-1">
                     {task.metric}
                   </div>
@@ -308,7 +308,7 @@ const SectionFewShot: React.FC = () => {
                         backgroundColor: task.tone,
                       }}
                     />
-                    <span className="absolute inset-0 flex items-center justify-end pr-3 font-mono text-[11px] font-bold text-ink tabular-nums">
+                    <span className="absolute inset-0 flex items-center justify-end pe-3 font-mono text-[11px] font-bold text-ink tabular-nums">
                       {score.toFixed(1)}
                     </span>
                   </div>
@@ -324,7 +324,7 @@ const SectionFewShot: React.FC = () => {
                       className="h-full bg-ink/30"
                       style={{ width: `${(task.baseline.v / max) * 100}%` }}
                     />
-                    <span className="absolute inset-0 flex items-center justify-end pr-3 font-mono text-[11px] text-ink/65 tabular-nums">
+                    <span className="absolute inset-0 flex items-center justify-end pe-3 font-mono text-[11px] text-ink/65 tabular-nums">
                       {task.baseline.v.toFixed(1)}
                     </span>
                   </div>

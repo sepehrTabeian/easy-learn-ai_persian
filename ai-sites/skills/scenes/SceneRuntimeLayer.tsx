@@ -47,7 +47,7 @@ export const SceneRuntimeLayer: React.FC<SceneProps> = ({ step }) => {
                     animate={step >= 1 ? { opacity: 1, x: 0 } : { opacity: 0.1, x: -50 }}
                     className="flex-1 bg-[#1e1e24] p-6 rounded-2xl border border-blue-500/30 flex flex-col justify-center items-center text-center relative overflow-hidden"
                 >
-                    <div className="absolute top-0 right-0 p-4 opacity-10">
+                    <div className="absolute top-0 end-0 p-4 opacity-10">
                         <Cpu size={100} />
                     </div>
                     <div className="p-4 bg-blue-500/20 rounded-full text-blue-300 mb-4 animate-pulse">
@@ -104,7 +104,7 @@ export const SceneRuntimeLayer: React.FC<SceneProps> = ({ step }) => {
                          </svg>
 
                          {/* Targets */}
-                         <div className="flex flex-col gap-6 z-10 pl-8">
+                         <div className="flex flex-col gap-6 z-10 ps-8">
                              <motion.div 
                                 initial={{ scale: 0.9, opacity: 0.5 }}
                                 animate={step >= 2 ? { scale: 1.1, opacity: 1, borderColor: '#facc15' } : {}}
@@ -154,7 +154,7 @@ export const SceneRuntimeLayer: React.FC<SceneProps> = ({ step }) => {
                     <div className="flex flex-col items-center gap-2">
                         <div className="relative">
                             <FileCode size={64} className="text-gray-500" />
-                            <div className="absolute -bottom-2 -right-2 bg-gray-700 text-white text-[10px] px-1 rounded border border-gray-500">
+                            <div className="absolute -bottom-2 -end-2 bg-gray-700 text-white text-[10px] px-1 rounded border border-gray-500">
                                 2MB
                             </div>
                         </div>
@@ -168,7 +168,7 @@ export const SceneRuntimeLayer: React.FC<SceneProps> = ({ step }) => {
                     <div className="flex flex-col items-center justify-center relative w-32">
                         {/* Allowed Path (Execution) */}
                         <motion.div 
-                            className="absolute top-1/2 left-0 w-full h-1 bg-green-500/50"
+                            className="absolute top-1/2 start-0 w-full h-1 bg-green-500/50"
                             initial={{ scaleX: 0 }}
                             animate={{ scaleX: 1 }}
                             transition={{ delay: 0.5, duration: 0.5 }}

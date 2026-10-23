@@ -127,8 +127,8 @@ const SectionHero: React.FC = () => {
   return (
     <section className="relative px-4 sm:px-6 lg:px-8 pt-16 pb-20 lg:pt-20 lg:pb-24 overflow-hidden">
       {/* 背景装饰：右上一个旋转 stamp + 左下大色块 */}
-      <div className="absolute top-12 right-10 w-32 h-32 bg-pop/8 rounded-full blur-2xl pointer-events-none" />
-      <div className="absolute bottom-0 left-0 w-64 h-64 bg-butter/20 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute top-12 end-10 w-32 h-32 bg-pop/8 rounded-full blur-2xl pointer-events-none" />
+      <div className="absolute bottom-0 start-0 w-64 h-64 bg-butter/20 rounded-full blur-3xl pointer-events-none" />
 
       <div className="relative max-w-6xl mx-auto">
         {/* eyebrow */}
@@ -182,7 +182,7 @@ const SectionHero: React.FC = () => {
                   </span>
                 </span>
               </div>
-              <div className="flex flex-wrap gap-2 mt-3 pl-10">
+              <div className="flex flex-wrap gap-2 mt-3 ps-10">
                 <a
                   href="../llm/index.html"
                   className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-white border-2 border-ink rounded-full font-mono text-[11px] font-bold text-ink shadow-stamp hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-stamp-lg transition-all duration-250 ease-spring"
@@ -254,7 +254,7 @@ const SectionHero: React.FC = () => {
                     {playing ? (
                       <Pause className="w-4 h-4" strokeWidth={2.5} />
                     ) : (
-                      <Play className="w-4 h-4 ml-0.5" strokeWidth={2.5} />
+                      <Play className="w-4 h-4 ms-0.5" strokeWidth={2.5} />
                     )}
                   </button>
                   <button
@@ -282,7 +282,7 @@ const SectionHero: React.FC = () => {
                 <div className="font-mono text-[12.5px] leading-[1.7] whitespace-pre-wrap text-cream/80">
                   {renderColored()}
                   {playing && cursor < total && (
-                    <span className="inline-block w-2 h-4 bg-butter ml-0.5 align-middle animate-pulse-dot" />
+                    <span className="inline-block w-2 h-4 bg-butter ms-0.5 align-middle animate-pulse-dot" />
                   )}
                 </div>
               </div>
@@ -301,7 +301,7 @@ const SectionHero: React.FC = () => {
                   className="flex-1 accent-coral"
                   aria-label="scrub"
                 />
-                <div className="font-mono text-[10.5px] text-ink/55 tabular-nums w-16 text-right">
+                <div className="font-mono text-[10.5px] text-ink/55 tabular-nums w-16 text-end">
                   {Math.round(progress)}% · {cursor}/{total}
                 </div>
               </div>

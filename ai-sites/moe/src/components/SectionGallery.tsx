@@ -171,7 +171,7 @@ const SectionGallery: React.FC = () => {
         <h2 className="font-display text-display-lg text-ink mb-5 max-w-3xl">
           2026 年七个
           <span className="relative inline-block">
-            <span className="absolute left-0 right-0 bottom-1 h-4 lg:h-5 bg-butter -z-0 -rotate-1" aria-hidden />
+            <span className="absolute start-0 end-0 bottom-1 h-4 lg:h-5 bg-butter -z-0 -rotate-1" aria-hidden />
             <span className="relative z-10">开源 MoE 模型</span>
           </span>
           。
@@ -202,7 +202,7 @@ const SectionGallery: React.FC = () => {
 
         {/* sort chips */}
         <div className="flex flex-wrap gap-2 mb-6">
-          <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-ink/55 self-center mr-2">
+          <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-ink/55 self-center me-2">
             sort by ·
           </span>
           {SORTS.map((s) => {
@@ -261,7 +261,7 @@ const ModelCard: React.FC<{
     <button
       onClick={onSelect}
       className={[
-        "text-left p-3.5 rounded-2xl border-2 border-ink transition-all duration-250 ease-spring",
+        "text-start p-3.5 rounded-2xl border-2 border-ink transition-all duration-250 ease-spring",
         selected
           ? "bg-ink text-cream shadow-stamp-lg"
           : "bg-white text-ink hover:-translate-y-0.5 hover:shadow-[3px_3px_0_0_#241C15]",
@@ -417,11 +417,11 @@ const DetailCard: React.FC<{ model: Model }> = ({ model }) => {
         </div>
         <div className="h-3 bg-ink/8 rounded-full overflow-hidden border border-ink/15 relative">
           <div
-            className="absolute inset-y-0 left-0 bg-coral rounded-full"
+            className="absolute inset-y-0 start-0 bg-coral rounded-full"
             style={{ width: `${Math.max(2, ratio)}%` }}
           />
           <div
-            className="absolute inset-y-0 right-0 font-mono text-[8.5px] flex items-center pr-2 text-ink/55"
+            className="absolute inset-y-0 end-0 font-mono text-[8.5px] flex items-center pe-2 text-ink/55"
             style={{ left: `${Math.max(2, ratio)}%` }}
           >
             ← 这部分原地待命

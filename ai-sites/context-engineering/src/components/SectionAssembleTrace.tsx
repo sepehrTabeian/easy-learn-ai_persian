@@ -101,7 +101,7 @@ const SectionAssembleTrace: React.FC = () => {
                     </span>
                     <span
                       className={[
-                        "ml-auto font-mono text-[11px]",
+                        "ms-auto font-mono text-[11px]",
                         b.color === "#F4D35E" ? "text-ink/70" : "text-cream/80",
                       ].join(" ")}
                     >
@@ -153,7 +153,7 @@ const SectionAssembleTrace: React.FC = () => {
                 下一块
                 <ChevronRight className="w-4 h-4" strokeWidth={2.5} />
               </button>
-              <button onClick={() => setI(0)} className="btn-stamp bg-cream ml-auto">
+              <button onClick={() => setI(0)} className="btn-stamp bg-cream ms-auto">
                 <RotateCcw className="w-4 h-4" strokeWidth={2.5} />
                 重来
               </button>

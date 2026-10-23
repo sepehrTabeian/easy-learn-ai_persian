@@ -204,11 +204,11 @@ const SectionRealConfigs: React.FC = () => {
                   <div className="col-span-12 lg:col-span-5">
                     <div className="relative h-7 bg-ink/8 border-2 border-ink rounded-md overflow-hidden">
                       <div
-                        className="absolute inset-y-0 left-0 bg-ink transition-all duration-400 ease-spring"
+                        className="absolute inset-y-0 start-0 bg-ink transition-all duration-400 ease-spring"
                         style={{ width: `${widthPct}%` }}
                       />
                       <div
-                        className="absolute inset-y-0 left-2 right-2 flex items-center justify-between font-mono text-[11px] tabular-nums"
+                        className="absolute inset-y-0 start-2 end-2 flex items-center justify-between font-mono text-[11px] tabular-nums"
                         aria-hidden
                       >
                         <span className="text-cream font-bold">
@@ -267,7 +267,7 @@ const SectionRealConfigs: React.FC = () => {
                       {m.highlight && (
                         <span className="text-[12.5px] text-butter">{m.highlight}</span>
                       )}
-                      <span className="font-mono text-[10px] text-cream/55 sm:ml-auto">
+                      <span className="font-mono text-[10px] text-cream/55 sm:ms-auto">
                         {m.src}
                       </span>
                     </div>

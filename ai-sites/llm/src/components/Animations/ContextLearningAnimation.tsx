@@ -204,7 +204,7 @@ const ContextLearningAnimation: React.FC = () => {
                   : "bg-white text-ink hover:bg-butter hover:-translate-y-[1px]"
               }`}
             >
-              <span className="mr-1">{t.emoji}</span>
+              <span className="me-1">{t.emoji}</span>
               {t.name}
             </button>
           );

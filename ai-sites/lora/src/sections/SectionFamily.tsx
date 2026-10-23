@@ -108,7 +108,7 @@ export default function SectionFamily() {
             }`}
           >
             <span className="font-display font-bold">{f.name}</span>
-            <span className={`ml-2 font-mono text-xs ${id === f.id ? "text-butter/70" : "text-ink-tertiary"}`}>· {f.year}</span>
+            <span className={`ms-2 font-mono text-xs ${id === f.id ? "text-butter/70" : "text-ink-tertiary"}`}>· {f.year}</span>
           </button>
         ))}
       </div>

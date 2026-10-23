@@ -63,10 +63,10 @@ const SectionHero: React.FC = () => {
   return (
     <section className="relative px-4 sm:px-6 lg:px-8 pt-20 lg:pt-28 pb-20 lg:pb-24 overflow-hidden">
       {/* 浮动装饰 */}
-      <div aria-hidden className="absolute top-24 right-[8%] hidden lg:block animate-float-y">
+      <div aria-hidden className="absolute top-24 end-[8%] hidden lg:block animate-float-y">
         <div className="w-10 h-10 bg-pop border-2 border-ink rounded-2xl shadow-stamp rotate-12" />
       </div>
-      <div aria-hidden className="absolute bottom-24 left-[6%] hidden lg:block animate-float-y-sm">
+      <div aria-hidden className="absolute bottom-24 start-[6%] hidden lg:block animate-float-y-sm">
         <div className="w-8 h-8 bg-teal border-2 border-ink rounded-full shadow-stamp -rotate-6" />
       </div>
 
@@ -90,7 +90,7 @@ const SectionHero: React.FC = () => {
             <p className="max-w-md font-display text-[20px] lg:text-[22px] font-bold text-ink leading-snug mb-5 animate-enter-up">
               <span className="relative inline-block">
                 <span
-                  className="absolute left-0 right-0 bottom-0.5 h-3 lg:h-4 bg-butter -z-0"
+                  className="absolute start-0 end-0 bottom-0.5 h-3 lg:h-4 bg-butter -z-0"
                   aria-hidden
                 />
                 <span className="relative z-10">
@@ -191,7 +191,7 @@ const SectionHero: React.FC = () => {
                         {/* 序号 */}
                         <div
                           className={[
-                            "shrink-0 w-9 flex flex-col items-center justify-center border-r-2 border-ink font-mono font-bold",
+                            "shrink-0 w-9 flex flex-col items-center justify-center border-e-2 border-ink font-mono font-bold",
                             revealed
                               ? isReal
                                 ? "bg-teal text-cream"
@@ -227,7 +227,7 @@ const SectionHero: React.FC = () => {
                         </div>
 
                         {/* 按钮 */}
-                        <div className="shrink-0 flex flex-col gap-1.5 p-2 border-l-2 border-ink/10">
+                        <div className="shrink-0 flex flex-col gap-1.5 p-2 border-s-2 border-ink/10">
                           <button
                             onClick={() => setPicked((p) => ({ ...p, [s.id]: "real" }))}
                             className={[

@@ -198,7 +198,7 @@ const SectionFillEffects: React.FC = () => {
                 </div>
                 <div className="relative h-5 bg-cream border-2 border-ink rounded-full overflow-hidden">
                   <div
-                    className={`absolute inset-y-0 left-0 transition-all duration-400 ease-editorial ${
+                    className={`absolute inset-y-0 start-0 transition-all duration-400 ease-editorial ${
                       recall >= 60 ? "bg-butter" : recall >= 30 ? "bg-coral" : "bg-pop"
                     }`}
                     style={{ width: `${recall}%` }}

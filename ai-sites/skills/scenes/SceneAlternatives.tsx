@@ -89,7 +89,7 @@ export const SceneAlternatives: React.FC<SceneProps> = ({ step }) => {
                 animate={step >= 2 ? { height: 180, opacity: 1, width: 600 } : { height: 0, opacity: 0 }}
                 className="bg-gray-800/80 border-2 border-dashed border-gray-500 rounded-2xl flex flex-col items-center justify-center relative overflow-hidden"
             >
-                <div className="absolute top-2 left-4 text-xs font-mono text-gray-500 uppercase">Current Context Window</div>
+                <div className="absolute top-2 start-4 text-xs font-mono text-gray-500 uppercase">Current Context Window</div>
                 
                 {/* The Stacked Content inside */}
                 {step >= 2 && (

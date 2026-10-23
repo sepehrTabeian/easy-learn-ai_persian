@@ -129,7 +129,7 @@ const SectionBeforeMcp: React.FC = () => {
               function calling 已经
               <span className="relative inline-block">
                 <span
-                  className="absolute left-0 right-0 bottom-0 h-3 lg:h-4 bg-butter -z-0"
+                  className="absolute start-0 end-0 bottom-0 h-3 lg:h-4 bg-butter -z-0"
                   aria-hidden
                 />
                 <span className="relative z-10">跑了两年</span>
@@ -155,9 +155,9 @@ const SectionBeforeMcp: React.FC = () => {
               {/* 时间线节点条 */}
               <div className="relative mb-6 pt-2">
                 {/* 底线 */}
-                <div className="absolute left-3 right-3 top-[28px] h-[2px] bg-ink/15" />
+                <div className="absolute start-3 end-3 top-[28px] h-[2px] bg-ink/15" />
                 <div
-                  className="absolute left-3 top-[28px] h-[2px] bg-ink transition-all duration-400 ease-spring"
+                  className="absolute start-3 top-[28px] h-[2px] bg-ink transition-all duration-400 ease-spring"
                   style={{
                     width: `calc((100% - 1.5rem) * ${cursor / (STEPS.length - 1)})`,
                   }}
@@ -221,8 +221,8 @@ const SectionBeforeMcp: React.FC = () => {
                     {step.body}
                   </p>
                   {step.advanced && (
-                    <div className="mt-3 px-3 py-2 bg-ink/5 border-l-[3px] border-ink/30 rounded-r">
-                      <span className="inline-block px-1.5 py-0.5 mr-1.5 bg-ink/10 border border-ink/15 rounded font-mono text-[9.5px] uppercase tracking-[0.15em] text-ink/55 font-bold align-middle">
+                    <div className="mt-3 px-3 py-2 bg-ink/5 border-s-[3px] border-ink/30 rounded-e">
+                      <span className="inline-block px-1.5 py-0.5 me-1.5 bg-ink/10 border border-ink/15 rounded font-mono text-[9.5px] uppercase tracking-[0.15em] text-ink/55 font-bold align-middle">
                         进阶
                       </span>
                       <span className="text-[12.5px] text-ink/65 leading-relaxed">

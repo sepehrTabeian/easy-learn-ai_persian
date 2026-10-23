@@ -5,10 +5,10 @@ import StampLink from "./StampLink";
 const SectionOpening: React.FC = () => {
   return (
     <section className="relative overflow-hidden px-4 pb-20 pt-20 sm:px-6 lg:px-8 lg:pb-28 lg:pt-32">
-      <div aria-hidden className="absolute right-[9%] top-28 hidden lg:block animate-float-y">
+      <div aria-hidden className="absolute end-[9%] top-28 hidden lg:block animate-float-y">
         <div className="h-12 w-12 rotate-12 rounded-2xl border-2 border-ink bg-teal shadow-stamp" />
       </div>
-      <div aria-hidden className="absolute bottom-32 left-[5%] hidden lg:block animate-float-y-sm">
+      <div aria-hidden className="absolute bottom-32 start-[5%] hidden lg:block animate-float-y-sm">
         <div className="h-10 w-10 -rotate-6 rounded-full border-2 border-ink bg-coral shadow-stamp" />
       </div>
 
@@ -28,7 +28,7 @@ const SectionOpening: React.FC = () => {
 
             <p className="mb-6 max-w-2xl font-display text-[22px] font-bold leading-snug text-ink lg:text-[26px] animate-enter-up">
               <span className="relative inline-block">
-                <span className="absolute bottom-0.5 left-0 right-0 h-3.5 bg-butter lg:h-5" aria-hidden />
+                <span className="absolute bottom-0.5 start-0 end-0 h-3.5 bg-butter lg:h-5" aria-hidden />
                 <span className="relative z-10">
                   Embedding 是把内容变成一串数字，让机器能比较意思像不像。
                 </span>
@@ -99,20 +99,20 @@ const HeroVectorBoard: React.FC = () => {
           <path d="M44 68 C88 128 126 146 176 162" fill="none" stroke="#E07A5F" strokeWidth="2" strokeDasharray="4 7" opacity="0.7" />
         </svg>
 
-        <div className="absolute left-8 top-8 flex h-16 w-16 -rotate-6 items-center justify-center rounded-2xl border-2 border-ink bg-cream shadow-stamp animate-float-y">
+        <div className="absolute start-8 top-8 flex h-16 w-16 -rotate-6 items-center justify-center rounded-2xl border-2 border-ink bg-cream shadow-stamp animate-float-y">
           <FileText className="h-7 w-7 text-ink" strokeWidth={2.4} />
         </div>
-        <div className="absolute right-10 top-12 flex h-14 w-14 rotate-6 items-center justify-center rounded-full border-2 border-ink bg-coral text-cream shadow-stamp animate-float-y-sm">
+        <div className="absolute end-10 top-12 flex h-14 w-14 rotate-6 items-center justify-center rounded-full border-2 border-ink bg-coral text-cream shadow-stamp animate-float-y-sm">
           <Hash className="h-7 w-7" strokeWidth={2.6} />
         </div>
-        <div className="absolute bottom-16 left-14 flex h-14 w-14 rotate-3 items-center justify-center rounded-xl border-2 border-ink bg-teal text-cream shadow-stamp">
+        <div className="absolute bottom-16 start-14 flex h-14 w-14 rotate-3 items-center justify-center rounded-xl border-2 border-ink bg-teal text-cream shadow-stamp">
           <Boxes className="h-7 w-7" strokeWidth={2.4} />
         </div>
-        <div className="absolute bottom-10 right-12 flex h-16 w-16 -rotate-3 items-center justify-center rounded-2xl border-2 border-ink bg-butter shadow-stamp-lg animate-wiggle">
+        <div className="absolute bottom-10 end-12 flex h-16 w-16 -rotate-3 items-center justify-center rounded-2xl border-2 border-ink bg-butter shadow-stamp-lg animate-wiggle">
           <LocateFixed className="h-8 w-8 text-ink" strokeWidth={2.5} />
         </div>
 
-        <div className="absolute left-8 right-8 top-[92px] rounded-2xl border-2 border-ink bg-white px-4 py-3 shadow-stamp">
+        <div className="absolute start-8 end-8 top-[92px] rounded-2xl border-2 border-ink bg-white px-4 py-3 shadow-stamp">
           <div className="mb-2 font-mono text-[10px] font-semibold uppercase tracking-[0.18em] text-ink/50">
             text → numbers
           </div>

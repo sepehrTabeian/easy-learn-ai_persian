@@ -265,15 +265,15 @@ const EmergentAbilitiesAnimation: React.FC = () => {
         </div>
 
         {/* Y 轴标签 */}
-        <div className="absolute -left-1 top-4 font-mono text-[9px] uppercase tracking-wide text-ink/55">
+        <div className="absolute -start-1 top-4 font-mono text-[9px] uppercase tracking-wide text-ink/55">
           100%
         </div>
-        <div className="absolute -left-1 bottom-12 font-mono text-[9px] uppercase tracking-wide text-ink/55">
+        <div className="absolute -start-1 bottom-12 font-mono text-[9px] uppercase tracking-wide text-ink/55">
           0%
         </div>
 
         {/* 锚点模型 chip */}
-        <div className="absolute top-3 left-3 flex flex-col gap-1.5">
+        <div className="absolute top-3 start-3 flex flex-col gap-1.5">
           {ANCHORS.map((a) => (
             <div
               key={a.name}

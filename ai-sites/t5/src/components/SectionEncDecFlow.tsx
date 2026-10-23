@@ -236,7 +236,7 @@ const SectionEncDecFlow: React.FC = () => {
                   </button>
                 );
               })}
-              <span className="self-center px-2 py-1 ml-1 font-mono text-[10.5px] text-ink/45 italic">
+              <span className="self-center px-2 py-1 ms-1 font-mono text-[10.5px] text-ink/45 italic">
                 … 一个个吐 · &lt;/s&gt; 收尾
               </span>
             </div>

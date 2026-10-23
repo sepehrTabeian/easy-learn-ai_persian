@@ -71,7 +71,7 @@ const SectionPlaybook: React.FC = () => {
                   key={item.id}
                   onClick={() => setScenarioId(item.id)}
                   className={cx(
-                    "rounded-2xl border-2 border-ink p-4 text-left transition-all duration-250 ease-spring",
+                    "rounded-2xl border-2 border-ink p-4 text-start transition-all duration-250 ease-spring",
                     item.id === scenarioId ? "bg-ink text-cream shadow-stamp-lg" : "bg-white text-ink shadow-stamp hover:-translate-y-0.5",
                   )}
                 >

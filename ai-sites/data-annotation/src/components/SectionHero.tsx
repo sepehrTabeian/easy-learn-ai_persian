@@ -10,7 +10,7 @@ import { ArrowDown, Tag } from "lucide-react";
 const SectionHero: React.FC = () => {
   return (
     <section className="relative px-4 sm:px-6 lg:px-8 pt-20 lg:pt-28 pb-20 lg:pb-24 overflow-hidden">
-      <div className="absolute top-28 left-[7%] hidden md:block pointer-events-none opacity-40">
+      <div className="absolute top-28 start-[7%] hidden md:block pointer-events-none opacity-40">
         <Tag className="w-16 h-16 text-ink/20 -rotate-12" strokeWidth={1.5} />
       </div>
 

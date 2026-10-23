@@ -71,7 +71,7 @@ export default function Chapter11({ step }: { step: number }) {
               </AnimatePresence>
             </motion.div>
 
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 mt-10">
+            <div className="absolute top-1/2 start-1/2 -translate-x-1/2 -translate-y-1/2 mt-10">
               {/* Brain */}
               <motion.div 
                 animate={step === 2 ? { 
@@ -172,7 +172,7 @@ export default function Chapter11({ step }: { step: number }) {
               )}
             </motion.h2>
 
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 mt-10 w-full max-w-5xl flex items-center justify-between px-10">
+            <div className="absolute top-1/2 start-1/2 -translate-x-1/2 -translate-y-1/2 mt-10 w-full max-w-5xl flex items-center justify-between px-10">
               
               {/* Skills List (Meta Info) */}
               <div className="flex flex-col gap-6">
@@ -203,7 +203,7 @@ export default function Chapter11({ step }: { step: number }) {
                       <motion.div 
                         initial={{ scaleX: 0 }}
                         animate={{ scaleX: 1 }}
-                        className="absolute top-1/2 -translate-y-1/2 left-0 right-0 h-2 bg-blue-100 origin-left rounded-full"
+                        className="absolute top-1/2 -translate-y-1/2 start-0 end-0 h-2 bg-blue-100 origin-left rounded-full"
                       />
                       
                       {/* Flowing Data Packets */}
@@ -217,7 +217,7 @@ export default function Chapter11({ step }: { step: number }) {
                           initial={{ x: 0, opacity: 0, scale: 0.5 }}
                           animate={{ x: '100%', opacity: [0, 1, 1, 0], scale: 1 }}
                           transition={{ duration: 2, delay: packet.delay, repeat: Infinity, ease: "linear" }}
-                          className="absolute top-1/2 -translate-y-1/2 left-0 bg-blue-500 text-white px-4 py-1 rounded-full font-bold text-sm shadow-lg whitespace-nowrap z-10"
+                          className="absolute top-1/2 -translate-y-1/2 start-0 bg-blue-500 text-white px-4 py-1 rounded-full font-bold text-sm shadow-lg whitespace-nowrap z-10"
                         >
                           {packet.text}
                         </motion.div>
@@ -239,7 +239,7 @@ export default function Chapter11({ step }: { step: number }) {
                     <motion.div
                       initial={{ opacity: 0, scale: 0 }}
                       animate={{ opacity: 1, scale: 1 }}
-                      className="absolute -top-4 -right-4 w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center shadow-lg border-4 border-white"
+                      className="absolute -top-4 -end-4 w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center shadow-lg border-4 border-white"
                     >
                       <Zap className="w-6 h-6 text-white" />
                     </motion.div>

@@ -131,7 +131,7 @@ const SectionThreeRoundDemo: React.FC = () => {
         {/* ─── 时间线 ─── */}
         <div className="mt-10 relative">
           {/* 中央竖线 */}
-          <div className="absolute left-[26px] top-2 bottom-2 w-[2px] bg-ink/20 hidden lg:block" />
+          <div className="absolute start-[26px] top-2 bottom-2 w-[2px] bg-ink/20 hidden lg:block" />
 
           {/* 用户提问 */}
           <TimelineNode
@@ -216,12 +216,12 @@ const TimelineNode: React.FC<{
 
   return (
     <div
-      className={`relative pl-0 lg:pl-[68px] py-3 transition-all duration-500 ease-spring ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-3 pointer-events-none h-0 py-0"}`}
+      className={`relative ps-0 lg:ps-[68px] py-3 transition-all duration-500 ease-spring ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-3 pointer-events-none h-0 py-0"}`}
       style={{ overflow: visible ? "visible" : "hidden" }}
     >
       {/* 节点圆 */}
       <span
-        className={`hidden lg:flex absolute left-0 top-4 w-[54px] h-[54px] items-center justify-center rounded-2xl border-2 border-ink shadow-stamp ${toneMap[tone]}`}
+        className={`hidden lg:flex absolute start-0 top-4 w-[54px] h-[54px] items-center justify-center rounded-2xl border-2 border-ink shadow-stamp ${toneMap[tone]}`}
       >
         <Icon className="w-5 h-5" strokeWidth={2.2} />
       </span>
@@ -242,10 +242,10 @@ const RoundCard: React.FC<{
 }> = ({ round, visible }) => {
   return (
     <div
-      className={`relative pl-0 lg:pl-[68px] py-3 transition-all duration-500 ease-spring ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-3 pointer-events-none h-0 py-0"}`}
+      className={`relative ps-0 lg:ps-[68px] py-3 transition-all duration-500 ease-spring ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-3 pointer-events-none h-0 py-0"}`}
       style={{ overflow: visible ? "visible" : "hidden" }}
     >
-      <span className="hidden lg:flex absolute left-0 top-4 w-[54px] h-[54px] items-center justify-center rounded-2xl border-2 border-ink shadow-stamp bg-coral text-white">
+      <span className="hidden lg:flex absolute start-0 top-4 w-[54px] h-[54px] items-center justify-center rounded-2xl border-2 border-ink shadow-stamp bg-coral text-white">
         <span className="font-display font-extrabold text-[20px] leading-none">
           {round.n}
         </span>

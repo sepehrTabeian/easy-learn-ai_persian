@@ -89,7 +89,7 @@ const SectionZeRO: React.FC = () => {
           越往后每张卡占的
           <span className="relative inline-block">
             <span
-              className="absolute left-0 right-0 bottom-1 h-4 lg:h-5 bg-butter -z-0 -rotate-1"
+              className="absolute start-0 end-0 bottom-1 h-4 lg:h-5 bg-butter -z-0 -rotate-1"
               aria-hidden
             />
             <span className="relative z-10">显存越少</span>
@@ -104,7 +104,7 @@ const SectionZeRO: React.FC = () => {
 
         {/* stage chip */}
         <div className="flex flex-wrap gap-2 mb-5">
-          <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-ink/55 self-center mr-2">
+          <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-ink/55 self-center me-2">
             stage
           </span>
           {STAGES.map((s) => {
@@ -124,7 +124,7 @@ const SectionZeRO: React.FC = () => {
               </button>
             );
           })}
-          <div className="ml-auto flex items-center gap-1.5">
+          <div className="ms-auto flex items-center gap-1.5">
             <button
               onClick={() => setCursor((c) => (Math.max(0, c - 1) as Stage))}
               disabled={cursor === 0}
@@ -205,7 +205,7 @@ const SectionZeRO: React.FC = () => {
             </div>
 
             <div className="mt-3 px-3 py-2 bg-cream/10 border border-cream/15 rounded-lg">
-              <span className="inline-block px-1.5 py-0.5 bg-butter/80 text-ink rounded font-mono text-[8.5px] font-bold tracking-wide mr-1.5 align-middle">
+              <span className="inline-block px-1.5 py-0.5 bg-butter/80 text-ink rounded font-mono text-[8.5px] font-bold tracking-wide me-1.5 align-middle">
                 进阶
               </span>
               <span className="text-[11.5px] text-cream/70 leading-snug">
@@ -290,7 +290,7 @@ const ZeROGrid: React.FC<{
                     <div
                       key={j}
                       className={[
-                        "flex-1 border-r border-ink/15 last:border-r-0",
+                        "flex-1 border-e border-ink/15 last:border-e-0",
                         j === i ? row.color : "bg-cream",
                       ].join(" ")}
                     />

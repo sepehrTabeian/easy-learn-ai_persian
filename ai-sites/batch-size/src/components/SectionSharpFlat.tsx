@@ -85,7 +85,7 @@ const SectionSharpFlat: React.FC = () => {
           batch 从 64 拉到 8192，loss 一样降到 0 ——
           <br />
           <span className="relative inline-block">
-            <span className="absolute left-0 right-0 bottom-1 h-4 lg:h-5 bg-coral/55 -z-0 rotate-1" aria-hidden />
+            <span className="absolute start-0 end-0 bottom-1 h-4 lg:h-5 bg-coral/55 -z-0 rotate-1" aria-hidden />
             <span className="relative z-10">测试集准确率却掉 5%</span>
           </span>
           。
@@ -158,7 +158,7 @@ const SectionSharpFlat: React.FC = () => {
           <button
             onClick={() => setWarmup((v) => !v)}
             className={[
-              "lg:col-span-3 p-4 border-2 border-ink rounded-2xl text-left transition-all duration-250 ease-spring",
+              "lg:col-span-3 p-4 border-2 border-ink rounded-2xl text-start transition-all duration-250 ease-spring",
               warmup
                 ? "bg-ink text-cream shadow-stamp"
                 : "bg-white text-ink hover:bg-cream shadow-[2px_2px_0_0_#241C15]",

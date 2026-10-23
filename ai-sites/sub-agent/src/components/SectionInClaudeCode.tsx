@@ -260,7 +260,7 @@ const SectionInClaudeCode: React.FC = () => {
                                 : "bg-cream text-ink/70 hover:text-ink"
                             }`}
                           >
-                            {on && <Check className="inline-block w-3 h-3 mr-1 -mt-px" strokeWidth={3} />}
+                            {on && <Check className="inline-block w-3 h-3 me-1 -mt-px" strokeWidth={3} />}
                             {t}
                           </button>
                         );

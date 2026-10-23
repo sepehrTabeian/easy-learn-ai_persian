@@ -81,7 +81,7 @@ const SectionTraps: React.FC = () => {
           蒸馏不是免费午餐。<br className="hidden lg:block" />
           这{" "}
           <span className="relative inline-block">
-            <span className="absolute left-0 right-0 bottom-1 h-4 lg:h-5 bg-coral/55 -z-0 -rotate-1" aria-hidden />
+            <span className="absolute start-0 end-0 bottom-1 h-4 lg:h-5 bg-coral/55 -z-0 -rotate-1" aria-hidden />
             <span className="relative z-10">三个坑</span>
           </span>
           ，多数人栽过。
@@ -98,7 +98,7 @@ const SectionTraps: React.FC = () => {
               <button
                 key={t.id}
                 onClick={() => setFlipped((s) => ({ ...s, [t.id]: !s[t.id] }))}
-                className="relative w-full text-left aspect-[4/5]"
+                className="relative w-full text-start aspect-[4/5]"
                 style={{ perspective: "1200px" }}
                 aria-pressed={isFlipped}
               >
@@ -204,7 +204,7 @@ const SectionTraps: React.FC = () => {
               {" "}
               量化 = 同一个模型，把权重里的数字位数变短（比如压到 4-bit），模型结构不变。
               蒸馏（本站）= 换一个更小的模型，让大模型当老师，把本事训进去。
-              <span className="inline-flex items-center gap-1 ml-1 font-mono text-[11px] font-bold text-ink">
+              <span className="inline-flex items-center gap-1 ms-1 font-mono text-[11px] font-bold text-ink">
                 量化站 <ArrowUpRight className="w-3 h-3" strokeWidth={2.6} />
               </span>
             </span>

@@ -105,7 +105,7 @@ const SectionEcosystem: React.FC = () => {
           2026 真实生态：
           <br />
           <span className="relative inline-block">
-            <span className="absolute left-0 right-0 bottom-1 h-4 lg:h-5 bg-butter -z-0 -rotate-1" aria-hidden />
+            <span className="absolute start-0 end-0 bottom-1 h-4 lg:h-5 bg-butter -z-0 -rotate-1" aria-hidden />
             <span className="relative z-10">从云到桌面</span>
           </span>
           ，量化在哪里发生？
@@ -125,7 +125,7 @@ const SectionEcosystem: React.FC = () => {
                 key={t.id}
                 onClick={() => setTab(t.id)}
                 className={[
-                  "flex items-center gap-3 px-4 py-3 border-2 border-ink rounded-2xl text-left transition-all duration-250 ease-spring",
+                  "flex items-center gap-3 px-4 py-3 border-2 border-ink rounded-2xl text-start transition-all duration-250 ease-spring",
                   on
                     ? "bg-ink text-cream shadow-stamp-lg"
                     : "bg-white text-ink hover:bg-cream hover:-translate-y-0.5 hover:shadow-[3px_3px_0_0_#241C15]",
@@ -334,7 +334,7 @@ const BenchmarkRow: React.FC<{
       <div className="font-mono text-[10px] text-ink/55 px-1.5 py-0.5 bg-cream rounded shrink-0">
         {bits}
       </div>
-      <div className="text-[12.5px] text-ink/60 truncate flex-1 text-right">{meta}</div>
+      <div className="text-[12.5px] text-ink/60 truncate flex-1 text-end">{meta}</div>
     </div>
   );
 };

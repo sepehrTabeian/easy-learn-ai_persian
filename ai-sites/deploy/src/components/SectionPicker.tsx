@@ -219,7 +219,7 @@ const SectionPicker: React.FC = () => {
             把你的情况答一遍。
             <br />
             <span className="relative inline-block">
-              <span className="absolute left-0 right-0 bottom-0.5 h-3 lg:h-4 bg-butter -z-0" aria-hidden />
+              <span className="absolute start-0 end-0 bottom-0.5 h-3 lg:h-4 bg-butter -z-0" aria-hidden />
               <span className="relative z-10">推荐工具 + 一行命令 · 给到你手里。</span>
             </span>
           </h2>
@@ -266,7 +266,7 @@ const SectionPicker: React.FC = () => {
               {done && (
                 <button
                   onClick={reset}
-                  className="ml-3 inline-flex items-center gap-1.5 px-3 py-1.5 bg-white border-2 border-ink rounded-full font-mono text-[10.5px] font-bold uppercase tracking-wider hover:bg-cream"
+                  className="ms-3 inline-flex items-center gap-1.5 px-3 py-1.5 bg-white border-2 border-ink rounded-full font-mono text-[10.5px] font-bold uppercase tracking-wider hover:bg-cream"
                 >
                   <RotateCcw className="w-3 h-3" strokeWidth={2.4} />
                   重答
@@ -290,7 +290,7 @@ const SectionPicker: React.FC = () => {
                       key={c.id}
                       onClick={() => choose(c.id)}
                       className={[
-                        "p-4 text-left border-2 border-ink rounded-2xl transition-all duration-250 ease-spring",
+                        "p-4 text-start border-2 border-ink rounded-2xl transition-all duration-250 ease-spring",
                         on
                           ? "bg-ink text-cream shadow-[6px_6px_0_0_#FF4D74]"
                           : "bg-white hover:bg-butter-tint hover:translate-x-[-2px] hover:translate-y-[-2px] hover:shadow-stamp",
@@ -361,8 +361,8 @@ const SectionPicker: React.FC = () => {
 
                   <ul className="space-y-2 mb-5">
                     {pick.reasons.map((r, i) => (
-                      <li key={i} className="text-[13.5px] text-cream/85 leading-relaxed pl-4 relative">
-                        <span className="absolute left-0 top-1.5 w-2 h-2 bg-butter rounded-full" />
+                      <li key={i} className="text-[13.5px] text-cream/85 leading-relaxed ps-4 relative">
+                        <span className="absolute start-0 top-1.5 w-2 h-2 bg-butter rounded-full" />
                         {r}
                       </li>
                     ))}

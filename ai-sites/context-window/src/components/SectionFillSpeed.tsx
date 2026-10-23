@@ -240,7 +240,7 @@ const SectionFillSpeed: React.FC = () => {
                     >
                       {(isFiftyEdge || isSeventyFiveEdge) && (
                         <span
-                          className="absolute right-[-2px] top-[-3px] bottom-[-3px] w-[2px] pointer-events-none"
+                          className="absolute end-[-2px] top-[-3px] bottom-[-3px] w-[2px] pointer-events-none"
                           style={{
                             backgroundColor: "#241C15",
                             opacity: 0.5,
@@ -257,7 +257,7 @@ const SectionFillSpeed: React.FC = () => {
                 <span>0</span>
                 <span className="text-center">50K · 半</span>
                 <span className="text-center">100K · 50%</span>
-                <span className="text-right">200K · 满</span>
+                <span className="text-end">200K · 满</span>
               </div>
 
               {/* 关键观察卡片 */}

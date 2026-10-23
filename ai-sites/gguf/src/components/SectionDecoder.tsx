@@ -385,7 +385,7 @@ const SectionDecoder: React.FC = () => {
                       {matchPreset.tag}
                     </span>
                     {matchPreset.pplDelta !== null && matchPreset.pplDelta !== 0 && (
-                      <span className="ml-2 font-mono text-[11px] text-coral">
+                      <span className="ms-2 font-mono text-[11px] text-coral">
                         PPL +{matchPreset.pplDelta}%
                       </span>
                     )}

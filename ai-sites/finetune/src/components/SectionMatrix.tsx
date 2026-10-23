@@ -170,7 +170,7 @@ const SectionMatrix: React.FC = () => {
             6 方法 × 8 维度，<br className="lg:hidden" />
             <span className="relative inline-block">
               <span
-                className="absolute left-0 right-0 bottom-1 h-3 lg:h-4 bg-butter -z-0"
+                className="absolute start-0 end-0 bottom-1 h-3 lg:h-4 bg-butter -z-0"
                 aria-hidden
               />
               <span className="relative z-10">摆在一张表上同看</span>
@@ -187,7 +187,7 @@ const SectionMatrix: React.FC = () => {
             <table className="w-full min-w-[760px]">
               <thead>
                 <tr className="border-b-2 border-ink">
-                  <th className="text-left p-3 lg:p-4 bg-ink/5 sticky left-0 z-10">
+                  <th className="text-start p-3 lg:p-4 bg-ink/5 sticky start-0 z-10">
                     <div className="font-mono text-[10px] uppercase tracking-[0.18em] text-ink/55">
                       方法
                     </div>
@@ -199,7 +199,7 @@ const SectionMatrix: React.FC = () => {
                         key={c.key}
                         onClick={() => setActiveCol(on ? null : i)}
                         className={[
-                          "text-left p-3 lg:p-4 cursor-pointer transition-all duration-250 select-none",
+                          "text-start p-3 lg:p-4 cursor-pointer transition-all duration-250 select-none",
                           on
                             ? "bg-ink text-cream"
                             : "bg-ink/5 hover:bg-cream",
@@ -228,7 +228,7 @@ const SectionMatrix: React.FC = () => {
                         rowOn ? "bg-butter/20" : "hover:bg-cream/40",
                       ].join(" ")}
                     >
-                      <td className="p-3 lg:p-4 sticky left-0 bg-inherit z-[5]">
+                      <td className="p-3 lg:p-4 sticky start-0 bg-inherit z-[5]">
                         <div className="font-display text-[15px] font-bold text-ink leading-tight">
                           {r.name}
                         </div>

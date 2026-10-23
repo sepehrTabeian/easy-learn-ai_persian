@@ -66,15 +66,15 @@ export const SceneAgentMetaphor: React.FC<SceneProps> = ({ step }) => {
               </div>
 
               {/* Floating Tools particles */}
-              <div className="absolute -top-4 -right-4 text-blue-300 animate-bounce delay-100">
+              <div className="absolute -top-4 -end-4 text-blue-300 animate-bounce delay-100">
                 <Zap size={24} />
               </div>
-              <div className="absolute -bottom-4 -left-4 text-green-300 animate-bounce delay-300">
+              <div className="absolute -bottom-4 -start-4 text-green-300 animate-bounce delay-300">
                 <Check size={24} />
               </div>
 
               {/* Label */}
-              <div className="absolute -bottom-16 text-center w-64 left-1/2 -translate-x-1/2">
+              <div className="absolute -bottom-16 text-center w-64 start-1/2 -translate-x-1/2">
                 <ChalkText size="xl" className="font-bold text-yellow-200">
                   Agent Skills
                 </ChalkText>
@@ -89,7 +89,7 @@ export const SceneAgentMetaphor: React.FC<SceneProps> = ({ step }) => {
                   initial={{ y: 20, opacity: 0, scale: 0.5 }}
                   animate={{ y: -60, opacity: 1, scale: 1 }}
                   transition={{ type: "spring" }}
-                  className="absolute top-0 right-0 bg-white text-black p-4 rounded-lg shadow-2xl rotate-12 border-2 border-gray-300 origin-bottom-left w-48"
+                  className="absolute top-0 end-0 bg-white text-black p-4 rounded-lg shadow-2xl rotate-12 border-2 border-gray-300 origin-bottom-left w-48"
                 >
                   <div className="flex items-center gap-2 border-b-2 border-gray-200 pb-2 mb-2">
                     <BookOpen size={20} className="text-blue-600" />
@@ -119,7 +119,7 @@ export const SceneAgentMetaphor: React.FC<SceneProps> = ({ step }) => {
           animate={{ opacity: 1, y: 0 }}
           className="mt-24 max-w-4xl bg-gradient-to-r from-green-900/30 to-blue-900/30 p-6 rounded-2xl border border-white/10 backdrop-blur-sm"
         >
-          <div className="flex flex-col md:flex-row items-center gap-6 text-center md:text-left">
+          <div className="flex flex-col md:flex-row items-center gap-6 text-center md:text-start">
             <div className="bg-green-500/20 p-4 rounded-full">
               <Check size={32} className="text-green-300" />
             </div>

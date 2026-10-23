@@ -210,7 +210,7 @@ const SectionPatterns: React.FC = () => {
               </span>
             </span>
           </div>
-          <div className="flex flex-wrap gap-2 mt-3 pl-10">
+          <div className="flex flex-wrap gap-2 mt-3 ps-10">
             <a
               href="../sub-agent/index.html"
               className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-white border-2 border-ink rounded-full font-mono text-[11px] font-bold text-ink shadow-stamp hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-stamp-lg transition-all duration-250 ease-spring"

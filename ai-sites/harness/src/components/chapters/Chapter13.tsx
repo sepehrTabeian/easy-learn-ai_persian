@@ -66,7 +66,7 @@ export default function Chapter13({ step }: { step: number }) {
                 <motion.div
                   initial={{ opacity: 0, scale: 0.5 }}
                   animate={{ opacity: 1, scale: 1 }}
-                  className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 mt-10 w-[400px] h-[400px] flex items-center justify-center"
+                  className="absolute top-1/2 start-1/2 -translate-x-1/2 -translate-y-1/2 mt-10 w-[400px] h-[400px] flex items-center justify-center"
                 >
                   {/* Center System */}
                   <div className="w-24 h-24 bg-gray-800 rounded-full z-10 flex items-center justify-center shadow-2xl border-4 border-gray-700">
@@ -80,9 +80,9 @@ export default function Chapter13({ step }: { step: number }) {
                     className="absolute inset-0"
                   >
                     {/* Tether */}
-                    <div className="absolute top-1/2 left-1/2 w-1/2 h-2 bg-gradient-to-r from-gray-800 to-[#8B5CF6] origin-left -translate-y-1/2" />
+                    <div className="absolute top-1/2 start-1/2 w-1/2 h-2 bg-gradient-to-r from-gray-800 to-[#8B5CF6] origin-left -translate-y-1/2" />
                     {/* Agent */}
-                    <div className="absolute top-1/2 right-0 w-20 h-20 bg-[#8B5CF6] rounded-full -translate-y-1/2 flex items-center justify-center shadow-[0_0_40px_rgba(139,92,246,0.6)] border-4 border-white">
+                    <div className="absolute top-1/2 end-0 w-20 h-20 bg-[#8B5CF6] rounded-full -translate-y-1/2 flex items-center justify-center shadow-[0_0_40px_rgba(139,92,246,0.6)] border-4 border-white">
                       <Bot className="text-white w-10 h-10" />
                     </div>
                   </motion.div>

@@ -255,7 +255,7 @@ const SectionToday: React.FC = () => {
                       key={f.id}
                       onClick={() => toggle(f.id)}
                       className={[
-                        "w-full text-left flex items-start gap-3 px-3.5 py-3 rounded-xl border-2 border-ink transition-all duration-250 ease-spring",
+                        "w-full text-start flex items-start gap-3 px-3.5 py-3 rounded-xl border-2 border-ink transition-all duration-250 ease-spring",
                         on
                           ? "bg-ink text-cream shadow-[3px_3px_0_0_#E07A5F]"
                           : "bg-white text-ink/75 hover:bg-cream hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-stamp",

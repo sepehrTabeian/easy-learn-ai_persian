@@ -285,7 +285,7 @@ const SectionPredict: React.FC = () => {
                       key={i}
                       onClick={() => setStage(i)}
                       className={[
-                        "px-3 py-2 rounded-xl border-2 border-ink text-left transition-all duration-250 ease-spring",
+                        "px-3 py-2 rounded-xl border-2 border-ink text-start transition-all duration-250 ease-spring",
                         on
                           ? "bg-ink text-cream shadow-[3px_3px_0_0_#F4D35E]"
                           : "bg-white text-ink/75 hover:bg-cream",
@@ -337,7 +337,7 @@ const SectionPredict: React.FC = () => {
                             style={{ width: `${c.p * 100}%` }}
                           />
                         </div>
-                        <span className="font-mono text-[11px] tabular-nums text-ink/70 w-12 text-right">
+                        <span className="font-mono text-[11px] tabular-nums text-ink/70 w-12 text-end">
                           {(c.p * 100).toFixed(1)}%
                         </span>
                       </div>

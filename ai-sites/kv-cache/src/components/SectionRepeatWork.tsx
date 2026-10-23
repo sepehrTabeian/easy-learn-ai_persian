@@ -80,7 +80,7 @@ const SectionRepeatWork: React.FC = () => {
                     }`}
                   >
                     {token}
-                    <span className="absolute -right-1.5 -top-1.5 flex h-4 w-4 items-center justify-center rounded-full border border-ink bg-white">
+                    <span className="absolute -end-1.5 -top-1.5 flex h-4 w-4 items-center justify-center rounded-full border border-ink bg-white">
                       {fresh ? <X className="h-2.5 w-2.5" /> : <Check className="h-2.5 w-2.5 text-teal" />}
                     </span>
                   </span>

@@ -443,7 +443,7 @@ const SectionFusion: React.FC = () => {
                       setStep(0);
                     }}
                     className={[
-                      "px-3 py-2.5 rounded-xl border-2 border-ink text-left transition-all duration-250 ease-spring",
+                      "px-3 py-2.5 rounded-xl border-2 border-ink text-start transition-all duration-250 ease-spring",
                       on ? "bg-ink text-cream shadow-stamp" : "bg-white text-ink hover:bg-butter-tint",
                     ].join(" ")}
                   >
@@ -482,7 +482,7 @@ const SectionFusion: React.FC = () => {
                       key={i}
                       onClick={() => setStep(i)}
                       className={[
-                        "px-3 py-2 rounded-lg border-2 border-ink text-left transition-all duration-250 ease-spring",
+                        "px-3 py-2 rounded-lg border-2 border-ink text-start transition-all duration-250 ease-spring",
                         on ? "bg-coral text-cream shadow-[3px_3px_0_0_#241C15]" : "bg-cream text-ink hover:bg-butter-tint",
                       ].join(" ")}
                     >

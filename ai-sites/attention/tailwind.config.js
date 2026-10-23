@@ -12,8 +12,8 @@ module.exports = {
         pop: "#FF4D74",
       },
       fontFamily: {
-        sans: ['"Plus Jakarta Sans"', '"Noto Sans SC"', "system-ui", "sans-serif"],
-        display: ['"Smiley Sans"', '"Plus Jakarta Sans"', '"Noto Sans SC"', "system-ui", "sans-serif"],
+        sans: ['"Plus Jakarta Sans"', '"Vazirmatn"', "system-ui", "sans-serif"],
+        display: ['"Smiley Sans"', '"Plus Jakarta Sans"', '"Vazirmatn"', "system-ui", "sans-serif"],
         mono: ['"Geist Mono"', '"SF Mono"', "Menlo", "monospace"],
       },
       fontSize: {

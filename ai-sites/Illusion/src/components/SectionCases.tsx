@@ -121,7 +121,7 @@ const SectionCases: React.FC = () => {
               <button
                 key={c.id}
                 onClick={() => toggle(c.id)}
-                className="text-left bg-white border-2 border-ink rounded-3xl shadow-stamp hover:shadow-stamp-hover hover:-translate-x-0.5 hover:-translate-y-0.5 transition-all duration-300 ease-spring overflow-hidden flex flex-col min-h-[280px]"
+                className="text-start bg-white border-2 border-ink rounded-3xl shadow-stamp hover:shadow-stamp-hover hover:-translate-x-0.5 hover:-translate-y-0.5 transition-all duration-300 ease-spring overflow-hidden flex flex-col min-h-[280px]"
               >
                 {/* 头部 badge */}
                 <div className={["px-4 py-2.5 border-b-2 border-ink flex items-center justify-between", toneBg[c.tone]].join(" ")}>

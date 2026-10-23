@@ -105,7 +105,7 @@ const SectionOffload: React.FC = () => {
           把状态搬到
           <span className="relative inline-block">
             <span
-              className="absolute left-0 right-0 bottom-1 h-4 lg:h-5 bg-coral/55 -z-0 -rotate-1"
+              className="absolute start-0 end-0 bottom-1 h-4 lg:h-5 bg-coral/55 -z-0 -rotate-1"
               aria-hidden
             />
             <span className="relative z-10">CPU 或硬盘</span>
@@ -127,7 +127,7 @@ const SectionOffload: React.FC = () => {
                 key={m.id}
                 onClick={() => setMode(m.id)}
                 className={[
-                  "flex items-center gap-3 px-4 py-3 border-2 border-ink rounded-2xl text-left transition-all duration-250 ease-spring",
+                  "flex items-center gap-3 px-4 py-3 border-2 border-ink rounded-2xl text-start transition-all duration-250 ease-spring",
                   on
                     ? "bg-ink text-cream shadow-stamp-lg"
                     : "bg-white text-ink hover:bg-cream hover:-translate-y-0.5 hover:shadow-[3px_3px_0_0_#241C15]",
@@ -220,7 +220,7 @@ const SectionOffload: React.FC = () => {
                   {(d.speedFactor * 100).toFixed(0)}
                 </span>
                 <span className="font-mono text-[14px] text-cream/55">%</span>
-                <span className="ml-auto font-mono text-[11px] text-coral">
+                <span className="ms-auto font-mono text-[11px] text-coral">
                   {d.speedFactor === 1 ? "基准" : `↓ ${Math.round((1 - d.speedFactor) * 100)}%`}
                 </span>
               </div>

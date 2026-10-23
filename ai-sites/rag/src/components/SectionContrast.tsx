@@ -88,7 +88,7 @@ const SectionContrast: React.FC = () => {
           <br />
           答案可以{" "}
           <span className="relative inline-block">
-            <span className="absolute left-0 right-0 bottom-1 h-4 lg:h-5 bg-coral/50 -z-0 rotate-1" aria-hidden />
+            <span className="absolute start-0 end-0 bottom-1 h-4 lg:h-5 bg-coral/50 -z-0 rotate-1" aria-hidden />
             <span className="relative z-10">差很多</span>
           </span>
           。

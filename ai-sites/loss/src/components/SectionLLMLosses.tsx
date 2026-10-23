@@ -146,7 +146,7 @@ const SectionLLMLosses: React.FC = () => {
           一个 LLM 从 pretrain 走到 alignment，
           <br />
           <span className="relative inline-block">
-            <span className="absolute left-0 right-0 bottom-1 h-4 lg:h-5 bg-butter -z-0 -rotate-1" aria-hidden />
+            <span className="absolute start-0 end-0 bottom-1 h-4 lg:h-5 bg-butter -z-0 -rotate-1" aria-hidden />
             <span className="relative z-10">至少要换 3 个 loss</span>
           </span>
           。
@@ -167,7 +167,7 @@ const SectionLLMLosses: React.FC = () => {
                   key={L.key}
                   onClick={() => setPicked(L.key)}
                   className={[
-                    "p-3 rounded-2xl border-2 border-ink text-left transition-all duration-250 ease-spring",
+                    "p-3 rounded-2xl border-2 border-ink text-start transition-all duration-250 ease-spring",
                     on
                       ? "bg-ink text-cream shadow-stamp-lg"
                       : "bg-white text-ink hover:bg-cream shadow-[2px_2px_0_0_#241C15]",
@@ -262,7 +262,7 @@ const SectionLLMLosses: React.FC = () => {
                       <span className="font-mono text-[12px] text-ink/65">
                         {c.label}
                       </span>
-                      <span className="font-mono text-[12.5px] font-bold text-ink text-right">
+                      <span className="font-mono text-[12.5px] font-bold text-ink text-end">
                         {c.value}
                       </span>
                     </div>
@@ -306,7 +306,7 @@ const SectionLLMLosses: React.FC = () => {
                     {" "}
                     《SFT》那站专门讲：哪些 token 算 loss、哪些被遮掉不罚。
                   </span>
-                  <span className="inline-flex items-center gap-1 ml-1 font-mono text-[11px] font-bold text-ink">
+                  <span className="inline-flex items-center gap-1 ms-1 font-mono text-[11px] font-bold text-ink">
                     SFT 站 <ArrowUpRight className="w-3 h-3" strokeWidth={2.6} />
                   </span>
                 </span>

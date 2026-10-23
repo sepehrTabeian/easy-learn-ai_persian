@@ -129,7 +129,7 @@ const SectionTriangle: React.FC = () => {
               MCP 把世界切成
               <span className="relative inline-block">
                 <span
-                  className="absolute left-0 right-0 bottom-0 h-3 lg:h-4 bg-butter -z-0"
+                  className="absolute start-0 end-0 bottom-0 h-3 lg:h-4 bg-butter -z-0"
                   aria-hidden
                 />
                 <span className="relative z-10">三个角色</span>
@@ -151,7 +151,7 @@ const SectionTriangle: React.FC = () => {
             <div className="bg-cream border-2 border-ink rounded-2xl p-4">
               <div className="font-mono text-[10px] uppercase tracking-[0.18em] text-ink/55 mb-2">
                 连线方式 · server 怎么跟 client 通话
-                <span className="ml-1 normal-case text-ink/40">（规范里叫 transport）</span>
+                <span className="ms-1 normal-case text-ink/40">（规范里叫 transport）</span>
               </div>
               <div className="grid grid-cols-2 gap-2 mb-3">
                 {(Object.keys(TRANSPORTS) as Transport[]).map((id) => {
@@ -233,7 +233,7 @@ const SectionTriangle: React.FC = () => {
                     </div>
                     <h3 className="font-display text-[22px] font-bold text-ink leading-tight">
                       {r.label}
-                      <span className="font-sans text-[14px] font-normal text-ink/55 ml-2">
+                      <span className="font-sans text-[14px] font-normal text-ink/55 ms-2">
                         · {r.cn}
                       </span>
                     </h3>
@@ -243,7 +243,7 @@ const SectionTriangle: React.FC = () => {
                   {r.one}
                 </p>
                 {r.intro && (
-                  <p className="text-[12.5px] text-ink/65 leading-relaxed mb-3 px-3 py-2 bg-butter/30 border-l-[3px] border-butter rounded-r">
+                  <p className="text-[12.5px] text-ink/65 leading-relaxed mb-3 px-3 py-2 bg-butter/30 border-s-[3px] border-butter rounded-e">
                     {r.intro}
                   </p>
                 )}

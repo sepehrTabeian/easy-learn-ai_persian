@@ -39,7 +39,7 @@ export const SceneRuntimeScript: React.FC<SceneProps> = ({ step }) => {
         </motion.div>
 
         {/* The Wall Divider */}
-        <div className="absolute top-20 bottom-20 left-1/2 w-px bg-dashed border-r-2 border-gray-600/50 -translate-x-1/2 hidden md:block" />
+        <div className="absolute top-20 bottom-20 start-1/2 w-px bg-dashed border-e-2 border-gray-600/50 -translate-x-1/2 hidden md:block" />
 
         <div className="flex w-full items-center justify-center gap-8 md:gap-32 relative">
 
@@ -53,7 +53,7 @@ export const SceneRuntimeScript: React.FC<SceneProps> = ({ step }) => {
                      <div className="w-32 h-32 rounded-full bg-blue-900/20 border-4 border-blue-400 flex items-center justify-center shadow-[0_0_40px_rgba(59,130,246,0.3)]">
                          <Brain size={64} className="text-blue-300" />
                      </div>
-                     <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-blue-600 text-white text-xs px-2 py-1 rounded">
+                     <div className="absolute -top-4 start-1/2 -translate-x-1/2 bg-blue-600 text-white text-xs px-2 py-1 rounded">
                          Claude Context
                      </div>
                 </div>
@@ -63,7 +63,7 @@ export const SceneRuntimeScript: React.FC<SceneProps> = ({ step }) => {
                     <motion.div 
                         initial={{ scale: 0, y: 20 }}
                         animate={{ scale: 1, y: 0 }}
-                        className="mt-6 bg-green-500 text-black p-4 rounded-xl rounded-tl-none shadow-lg font-bold"
+                        className="mt-6 bg-green-500 text-black p-4 rounded-xl rounded-ss-none shadow-lg font-bold"
                     >
                         "Result: Success!"
                     </motion.div>
@@ -93,7 +93,7 @@ export const SceneRuntimeScript: React.FC<SceneProps> = ({ step }) => {
                          </div>
 
                          {/* Token Cost Label */}
-                         <div className="absolute -right-4 -bottom-4 bg-red-900 border border-red-500 text-red-200 text-xs px-2 py-1 rounded shadow-lg transform rotate-6">
+                         <div className="absolute -end-4 -bottom-4 bg-red-900 border border-red-500 text-red-200 text-xs px-2 py-1 rounded shadow-lg transform rotate-6">
                              Cost: 0 Tokens
                          </div>
 
@@ -113,7 +113,7 @@ export const SceneRuntimeScript: React.FC<SceneProps> = ({ step }) => {
                      </div>
 
                      {/* The "Wall" visualization for this side */}
-                     <div className="absolute -left-12 top-0 bottom-0 flex items-center">
+                     <div className="absolute -start-12 top-0 bottom-0 flex items-center">
                           <div className="bg-[#1e1e24] p-2 border border-gray-600 rounded-full z-20">
                               <Lock size={20} className="text-gray-400" />
                           </div>
@@ -126,7 +126,7 @@ export const SceneRuntimeScript: React.FC<SceneProps> = ({ step }) => {
             {/* 1. Command: Brain -> Script */}
             {step >= 2 && step < 4 && (
                 <motion.div 
-                    className="absolute top-[40%] left-[30%] z-30 flex items-center gap-2 text-yellow-300 font-mono text-xs bg-black/50 px-2 rounded"
+                    className="absolute top-[40%] start-[30%] z-30 flex items-center gap-2 text-yellow-300 font-mono text-xs bg-black/50 px-2 rounded"
                     initial={{ left: '30%', opacity: 0 }}
                     animate={{ left: '60%', opacity: [0, 1, 1, 0] }}
                     transition={{ duration: 1.5, ease: "easeInOut" }}
@@ -139,7 +139,7 @@ export const SceneRuntimeScript: React.FC<SceneProps> = ({ step }) => {
             {/* 2. Result: Script -> Brain */}
             {step >= 4 && (
                 <motion.div 
-                    className="absolute top-[50%] left-[60%] z-30 flex items-center gap-2 text-green-300 font-mono text-xs bg-black/50 px-2 rounded"
+                    className="absolute top-[50%] start-[60%] z-30 flex items-center gap-2 text-green-300 font-mono text-xs bg-black/50 px-2 rounded"
                     initial={{ left: '60%', opacity: 0 }}
                     animate={{ left: '30%', opacity: 1 }}
                     transition={{ duration: 0.8, ease: "backOut" }}

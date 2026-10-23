@@ -189,7 +189,7 @@ const SectionRecipes: React.FC = () => {
                       key={r.id}
                       onClick={() => setActiveId(r.id)}
                       className={[
-                        "w-full text-left px-3 py-2.5 border-2 border-ink rounded-xl transition-all duration-250 ease-spring",
+                        "w-full text-start px-3 py-2.5 border-2 border-ink rounded-xl transition-all duration-250 ease-spring",
                         on
                           ? "bg-ink text-cream shadow-[3px_3px_0_0_#E07A5F]"
                           : "bg-cream text-ink hover:bg-white",
@@ -305,7 +305,7 @@ const SectionRecipes: React.FC = () => {
                           style={{ width: `${pct}%` }}
                         />
                       </div>
-                      <div className={`col-span-2 text-right font-mono text-[11px] tabular-nums ${isActive ? "text-coral font-bold" : "text-ink/85"}`}>
+                      <div className={`col-span-2 text-end font-mono text-[11px] tabular-nums ${isActive ? "text-coral font-bold" : "text-ink/85"}`}>
                         {metric === "peak" ? formatLR(d.v) : (d.v >= 1000 ? (d.v / 1000).toFixed(1) + "k" : d.v)}
                       </div>
                     </div>

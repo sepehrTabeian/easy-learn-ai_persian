@@ -203,7 +203,7 @@ const SectionWire: React.FC = () => {
             是
             <span className="relative inline-block">
               <span
-                className="absolute left-0 right-0 bottom-0 h-3 lg:h-4 bg-butter -z-0"
+                className="absolute start-0 end-0 bottom-0 h-3 lg:h-4 bg-butter -z-0"
                 aria-hidden
               />
               <span className="relative z-10">7 条 JSON-RPC 消息</span>
@@ -234,7 +234,7 @@ const SectionWire: React.FC = () => {
                 {s.label}
                 <span
                   className={[
-                    "ml-2 font-normal text-[10.5px]",
+                    "ms-2 font-normal text-[10.5px]",
                     on ? "text-cream/60" : "text-ink/40",
                   ].join(" ")}
                 >
@@ -257,7 +257,7 @@ const SectionWire: React.FC = () => {
           <div className="relative">
             {/* 中间虚线时间轴 */}
             <div
-              className="absolute left-1/2 top-0 bottom-0 w-px -ml-px bg-ink/15"
+              className="absolute start-1/2 top-0 bottom-0 w-px -ms-px bg-ink/15"
               aria-hidden
             />
             <div className="space-y-3">

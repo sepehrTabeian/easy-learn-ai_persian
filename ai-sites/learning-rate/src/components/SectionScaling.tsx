@@ -174,7 +174,7 @@ const SectionScaling: React.FC = () => {
                       key={r.id}
                       onClick={() => setRuleId(r.id)}
                       className={[
-                        "w-full text-left px-3 py-2 border-2 border-ink rounded-xl transition-all duration-250 ease-spring",
+                        "w-full text-start px-3 py-2 border-2 border-ink rounded-xl transition-all duration-250 ease-spring",
                         on
                           ? "bg-ink text-cream shadow-[3px_3px_0_0_#E07A5F]"
                           : "bg-cream text-ink hover:bg-white",
@@ -222,9 +222,9 @@ const SectionScaling: React.FC = () => {
 
               {/* 对比条 */}
               <div className="mt-6 grid grid-cols-[80px_1fr] items-center gap-3">
-                <div className="font-mono text-[10px] text-ink/55 text-right">base</div>
+                <div className="font-mono text-[10px] text-ink/55 text-end">base</div>
                 <BarRow value={baseLR} max={Math.max(baseLR, newLR)} color="ink" />
-                <div className="font-mono text-[10px] text-coral text-right font-bold">new</div>
+                <div className="font-mono text-[10px] text-coral text-end font-bold">new</div>
                 <BarRow value={newLR} max={Math.max(baseLR, newLR)} color="coral" />
               </div>
             </div>

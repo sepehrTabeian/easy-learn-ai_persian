@@ -164,7 +164,7 @@ const SectionEdges: React.FC = () => {
         <h2 className="font-display text-display-lg text-ink mb-4 max-w-3xl">
           <span className="relative inline-block">
             <span
-              className="absolute left-0 right-0 bottom-1 h-3 lg:h-4 bg-butter -z-0"
+              className="absolute start-0 end-0 bottom-1 h-3 lg:h-4 bg-butter -z-0"
               aria-hidden
             />
             <span className="relative z-10">为什么模型数不出 strawberry 里有几个 r？</span>
@@ -183,7 +183,7 @@ const SectionEdges: React.FC = () => {
               <button
                 key={c.key}
                 onClick={() => toggle(c.key)}
-                className="text-left bg-white border-2 border-ink rounded-3xl shadow-stamp hover:shadow-stamp-lg hover:-translate-x-0.5 hover:-translate-y-0.5 transition-all duration-300 ease-spring p-5 min-h-[230px] flex flex-col"
+                className="text-start bg-white border-2 border-ink rounded-3xl shadow-stamp hover:shadow-stamp-lg hover:-translate-x-0.5 hover:-translate-y-0.5 transition-all duration-300 ease-spring p-5 min-h-[230px] flex flex-col"
               >
                 {/* 顶部：标题 + 翻面提示 */}
                 <div className="flex items-start justify-between mb-3">
@@ -290,7 +290,7 @@ const SectionEdges: React.FC = () => {
                     {t.text}
                   </span>
                 ))}
-                <span className="ml-2 font-mono text-[11px] text-ink/55 tabular-nums">
+                <span className="ms-2 font-mono text-[11px] text-ink/55 tabular-nums">
                   → {customTokens.length} tokens
                 </span>
               </>

@@ -75,7 +75,7 @@ const SectionOneUpdate: React.FC = () => {
         <h2 className="font-display text-display-lg text-ink mb-5 max-w-3xl">
           点一次「更新」按钮，模型里
           <span className="relative inline-block">
-            <span className="absolute left-0 right-0 bottom-1 h-4 lg:h-5 bg-butter -z-0 -rotate-1" aria-hidden />
+            <span className="absolute start-0 end-0 bottom-1 h-4 lg:h-5 bg-butter -z-0 -rotate-1" aria-hidden />
             <span className="relative z-10">真正发生了</span>
           </span>
           这五件事。
@@ -154,7 +154,7 @@ const SectionOneUpdate: React.FC = () => {
             </div>
             <div className="mt-3 grid grid-cols-2 gap-2 font-mono text-[10px]">
               <div className="text-ink/55">每 epoch · {Math.round(stepsPerEpoch)} 步</div>
-              <div className="text-ink/55 text-right">≈ {totalSec.toFixed(0)} 秒</div>
+              <div className="text-ink/55 text-end">≈ {totalSec.toFixed(0)} 秒</div>
             </div>
           </div>
         </div>

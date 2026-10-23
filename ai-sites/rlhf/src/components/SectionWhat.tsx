@@ -39,10 +39,10 @@ const SectionWhat: React.FC = () => {
 
   return (
     <section className="relative px-4 sm:px-6 lg:px-8 pt-20 lg:pt-28 pb-20 lg:pb-24 overflow-hidden">
-      <div aria-hidden className="absolute top-24 right-[7%] hidden lg:block animate-float-y">
+      <div aria-hidden className="absolute top-24 end-[7%] hidden lg:block animate-float-y">
         <div className="w-10 h-10 bg-coral border-2 border-ink rounded-full shadow-stamp rotate-6" />
       </div>
-      <div aria-hidden className="absolute bottom-32 left-[5%] hidden lg:block animate-float-y-sm">
+      <div aria-hidden className="absolute bottom-32 start-[5%] hidden lg:block animate-float-y-sm">
         <div className="w-8 h-8 bg-teal border-2 border-ink rounded-md shadow-stamp -rotate-12" />
       </div>
 
@@ -66,7 +66,7 @@ const SectionWhat: React.FC = () => {
             <p className="max-w-md font-display text-[20px] lg:text-[22px] font-bold text-ink leading-snug mb-5 animate-enter-up">
               <span className="relative inline-block">
                 <span
-                  className="absolute left-0 right-0 bottom-0.5 h-3 lg:h-4 bg-butter -z-0"
+                  className="absolute start-0 end-0 bottom-0.5 h-3 lg:h-4 bg-butter -z-0"
                   aria-hidden
                 />
                 <span className="relative z-10">
@@ -104,7 +104,7 @@ const SectionWhat: React.FC = () => {
                   </span>
                 </span>
               </div>
-              <div className="flex flex-wrap gap-2 mt-3 pl-10">
+              <div className="flex flex-wrap gap-2 mt-3 ps-10">
                 <a
                   href="../sft/index.html"
                   className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-white border-2 border-ink rounded-full font-mono text-[11px] font-bold text-ink shadow-stamp hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-stamp-lg transition-all duration-250 ease-spring"
@@ -163,7 +163,7 @@ const SectionWhat: React.FC = () => {
           <div className="lg:col-span-7">
             <div className="relative bg-white border-2 border-ink rounded-3xl shadow-stamp-xl p-6 lg:p-7">
               <div className="flex flex-wrap items-center gap-2 mb-5">
-                <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-ink/55 mr-1">
+                <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-ink/55 me-1">
                   ① prompt
                 </div>
                 {SAMPLE.map((s, i) => {
@@ -185,7 +185,7 @@ const SectionWhat: React.FC = () => {
                 })}
               </div>
 
-              <div className="px-4 py-3 bg-butter/30 border-l-4 border-butter-deep mb-5 rounded-r-md">
+              <div className="px-4 py-3 bg-butter/30 border-s-4 border-butter-deep mb-5 rounded-e-md">
                 <div className="font-mono text-[10px] uppercase tracking-[0.18em] text-ink/55 mb-0.5">
                   用户问
                 </div>

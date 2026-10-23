@@ -34,7 +34,7 @@ const SectionEcosystem: React.FC = () => {
           <br />
           2026 年用{" "}
           <span className="relative inline-block">
-            <span className="absolute left-0 right-0 bottom-1 h-4 lg:h-5 bg-butter -z-0 -rotate-1" aria-hidden />
+            <span className="absolute start-0 end-0 bottom-1 h-4 lg:h-5 bg-butter -z-0 -rotate-1" aria-hidden />
             <span className="relative z-10">这些工具</span>
           </span>
           。
@@ -447,7 +447,7 @@ const TrackHeader: React.FC<{
 );
 
 const Th: React.FC<{ children: React.ReactNode; className?: string }> = ({ children, className = "" }) => (
-  <th className={`px-3 py-2.5 text-left font-mono text-[10px] uppercase tracking-[0.16em] font-semibold ${className}`}>
+  <th className={`px-3 py-2.5 text-start font-mono text-[10px] uppercase tracking-[0.16em] font-semibold ${className}`}>
     {children}
   </th>
 );

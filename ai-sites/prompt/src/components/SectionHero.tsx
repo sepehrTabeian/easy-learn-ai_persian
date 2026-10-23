@@ -16,7 +16,7 @@ const SectionHero: React.FC = () => {
   return (
     <section className="relative px-4 sm:px-6 lg:px-8 pt-20 lg:pt-28 pb-20 lg:pb-24 overflow-hidden">
       {/* 装饰：右上散落小方块（像打字光标） */}
-      <div className="absolute top-16 right-[7%] hidden md:flex gap-1.5 pointer-events-none opacity-60">
+      <div className="absolute top-16 end-[7%] hidden md:flex gap-1.5 pointer-events-none opacity-60">
         {[0, 1, 2].map((i) => (
           <span
             key={i}
@@ -94,7 +94,7 @@ const SectionHero: React.FC = () => {
                 </span>
               </span>
             </div>
-            <div className="flex flex-wrap gap-2 mt-3 pl-10">
+            <div className="flex flex-wrap gap-2 mt-3 ps-10">
               <a
                 href="../llm/index.html"
                 className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-white border-2 border-ink rounded-full font-mono text-[11px] font-bold text-ink shadow-stamp hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-stamp-lg transition-all duration-250 ease-spring"
@@ -134,13 +134,13 @@ const SectionHero: React.FC = () => {
             <div className="relative border-[3px] border-ink rounded-2xl bg-white shadow-stamp-lg p-4 space-y-4">
               {/* 1 · 你打的那段话（prompt） */}
               <div className="relative">
-                <span className="absolute -top-2 left-3 px-1.5 bg-white font-mono text-[9px] tracking-[0.18em] uppercase text-teal font-bold">
+                <span className="absolute -top-2 start-3 px-1.5 bg-white font-mono text-[9px] tracking-[0.18em] uppercase text-teal font-bold">
                   你打的话 · PROMPT
                 </span>
                 <div className="border-2 border-ink rounded-xl bg-cream px-3.5 py-3 mt-1">
                   <p className="font-sans text-[14px] leading-relaxed text-ink">
                     帮我写一封请假邮件
-                    <span className="inline-block w-[2px] h-[15px] bg-ink ml-0.5 align-middle animate-pulse-dot" />
+                    <span className="inline-block w-[2px] h-[15px] bg-ink ms-0.5 align-middle animate-pulse-dot" />
                   </p>
                 </div>
               </div>
@@ -173,7 +173,7 @@ const SectionHero: React.FC = () => {
 
               {/* 3 · 回答 */}
               <div className="relative">
-                <span className="absolute -top-2 left-3 px-1.5 bg-white font-mono text-[9px] tracking-[0.18em] uppercase text-coral font-bold">
+                <span className="absolute -top-2 start-3 px-1.5 bg-white font-mono text-[9px] tracking-[0.18em] uppercase text-coral font-bold">
                   它回的话 · 示意
                 </span>
                 <div className="border-2 border-ink rounded-xl bg-butter-tint px-3.5 py-3 mt-1">

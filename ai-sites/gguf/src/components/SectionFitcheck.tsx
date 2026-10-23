@@ -130,7 +130,7 @@ const SectionFitcheck: React.FC = () => {
                   key={h.id}
                   onClick={() => setHwId(h.id)}
                   className={[
-                    "px-3 py-2 rounded-lg border-2 border-ink font-mono text-[11px] font-semibold transition-all duration-200 text-left",
+                    "px-3 py-2 rounded-lg border-2 border-ink font-mono text-[11px] font-semibold transition-all duration-200 text-start",
                     on
                       ? "bg-ink text-cream shadow-[3px_3px_0_0_#E07A5F]"
                       : "bg-white text-ink/70 hover:bg-butter-tint",
@@ -174,7 +174,7 @@ const SectionFitcheck: React.FC = () => {
                 </button>
               );
             })}
-            <span className="ml-2 self-center font-mono text-[10.5px] text-ink/50">
+            <span className="ms-2 self-center font-mono text-[10.5px] text-ink/50">
               KV cache · {kvGB.toFixed(1)} GB
             </span>
           </div>
@@ -195,7 +195,7 @@ const SectionFitcheck: React.FC = () => {
                 {hw.sub}
               </div>
             </div>
-            <div className="ml-auto text-right">
+            <div className="ms-auto text-end">
               <div className="font-mono text-[10px] uppercase tracking-[0.22em] text-ink/45">
                 能跑的最大 quant
               </div>
@@ -280,15 +280,15 @@ const SectionFitcheck: React.FC = () => {
                   </div>
 
                   {/* 数字 */}
-                  <div className="w-44 flex-shrink-0 text-right font-mono text-[11.5px] text-ink/70 tabular-nums">
+                  <div className="w-44 flex-shrink-0 text-end font-mono text-[11.5px] text-ink/70 tabular-nums">
                     {r.eval.needGB.toFixed(1)} / {hw.vram} GB
-                    <span className="ml-2 text-ink/45">
+                    <span className="ms-2 text-ink/45">
                       ({utilization.toFixed(0)}%)
                     </span>
                   </div>
 
                   {/* status label */}
-                  <div className="w-20 flex-shrink-0 text-right">
+                  <div className="w-20 flex-shrink-0 text-end">
                     <span
                       className={[
                         "inline-block px-2 py-0.5 rounded-md font-mono text-[10px] uppercase tracking-[0.18em] font-bold",

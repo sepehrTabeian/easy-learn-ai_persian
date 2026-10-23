@@ -35,7 +35,7 @@ export const SceneMetadataLayer: React.FC<SceneProps> = ({ step }) => {
                 className="bg-[#1e1e24] p-6 rounded-2xl border border-gray-700 shadow-xl flex flex-col gap-6 relative overflow-hidden"
             >
                 {/* Background Decor */}
-                <FileJson className="absolute -right-4 -bottom-4 text-white/5 w-32 h-32 rotate-12" />
+                <FileJson className="absolute -end-4 -bottom-4 text-white/5 w-32 h-32 rotate-12" />
 
                 {/* When */}
                 <div>
@@ -45,7 +45,7 @@ export const SceneMetadataLayer: React.FC<SceneProps> = ({ step }) => {
                         </div>
                         <ChalkText size="xl" className="font-bold text-blue-200">什么时候加载？</ChalkText>
                     </div>
-                    <ChalkText size="lg" className="text-gray-300 pl-11">
+                    <ChalkText size="lg" className="text-gray-300 ps-11">
                         系统刚启动的时候
                     </ChalkText>
                 </div>
@@ -83,7 +83,7 @@ export const SceneMetadataLayer: React.FC<SceneProps> = ({ step }) => {
                         </div>
                         <ChalkText size="xl" className="font-bold text-green-200">有什么用？</ChalkText>
                     </div>
-                    <div className="pl-11 mb-4">
+                    <div className="ps-11 mb-4">
                         <div className="flex items-baseline gap-2">
                             <span className="text-4xl font-bold text-green-400">~200</span>
                             <span className="text-gray-400 text-lg">Tokens</span>
@@ -92,8 +92,8 @@ export const SceneMetadataLayer: React.FC<SceneProps> = ({ step }) => {
                     </div>
 
                     {/* Dialogue Bubble */}
-                    <div className="bg-blue-900/20 border border-blue-500/30 p-4 rounded-xl relative ml-4">
-                        <div className="absolute -left-2 top-4 w-4 h-4 bg-[#1e1e24] border-l border-b border-blue-500/30 rotate-45 transform" />
+                    <div className="bg-blue-900/20 border border-blue-500/30 p-4 rounded-xl relative ms-4">
+                        <div className="absolute -start-2 top-4 w-4 h-4 bg-[#1e1e24] border-s border-b border-blue-500/30 rotate-45 transform" />
                         <div className="flex gap-3">
                             <MessageSquare size={20} className="text-blue-400 shrink-0 mt-1" />
                             <ChalkText size="base" className="text-blue-100 italic">
@@ -119,7 +119,7 @@ export const SceneMetadataLayer: React.FC<SceneProps> = ({ step }) => {
                         <motion.div 
                             initial={{ scale: 0 }}
                             animate={{ scale: 1 }}
-                            className="absolute -top-1 -right-1 bg-green-500 rounded-full p-1"
+                            className="absolute -top-1 -end-1 bg-green-500 rounded-full p-1"
                         >
                             <CheckCircle2 size={16} className="text-black" />
                         </motion.div>
@@ -137,7 +137,7 @@ export const SceneMetadataLayer: React.FC<SceneProps> = ({ step }) => {
 
                 <div className="h-12 w-px bg-white/10 hidden md:block" />
 
-                <div className="text-right opacity-60">
+                <div className="text-end opacity-60">
                     <div className="text-sm text-gray-400">Current Context Load</div>
                     <div className="text-2xl font-mono text-green-400">Low</div>
                 </div>

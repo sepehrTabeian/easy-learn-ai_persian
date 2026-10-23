@@ -354,7 +354,7 @@ const LoopStep: React.FC<{
     <li className="relative">
       <button
         onClick={() => setOpen((o) => !o)}
-        className="w-full text-left flex items-start gap-3 p-3 rounded-xl border-2 border-ink bg-cream/40 hover:bg-cream transition-colors group/step"
+        className="w-full text-start flex items-start gap-3 p-3 rounded-xl border-2 border-ink bg-cream/40 hover:bg-cream transition-colors group/step"
       >
         <span className="flex-shrink-0 w-9 h-9 flex items-center justify-center rounded-lg bg-white border-2 border-ink">
           <Icon className="w-4 h-4 text-ink" strokeWidth={2.2} />
@@ -383,7 +383,7 @@ const LoopStep: React.FC<{
         </span>
       </button>
       {!isLast && (
-        <div className="ml-[26px] h-2 border-l-2 border-dashed border-ink/30" />
+        <div className="ms-[26px] h-2 border-s-2 border-dashed border-ink/30" />
       )}
     </li>
   );

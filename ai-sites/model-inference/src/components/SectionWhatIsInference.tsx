@@ -22,7 +22,7 @@ const SectionWhatIsInference: React.FC = () => (
       </div>
 
       <div className="relative">
-        <div className="absolute -top-7 -right-5 w-32 h-32 rounded-full bg-butter border-2 border-ink" />
+        <div className="absolute -top-7 -end-5 w-32 h-32 rounded-full bg-butter border-2 border-ink" />
         <div className="relative bg-cream border-2 border-ink rounded-[2rem] shadow-stamp-xl p-5 sm:p-7 grid-paper">
           <div className="flex items-center justify-between border-b-2 border-ink/15 pb-4">
             <div className="flex gap-2">
@@ -37,15 +37,15 @@ const SectionWhatIsInference: React.FC = () => (
               <span className="w-11 h-11 rounded-xl bg-white border-2 border-ink flex items-center justify-center">
                 <MessageSquare className="w-5 h-5" />
               </span>
-              <div className="bg-white border-2 border-ink rounded-2xl rounded-bl-sm px-4 py-3 font-bold">帮我写一句请假消息</div>
+              <div className="bg-white border-2 border-ink rounded-2xl rounded-es-sm px-4 py-3 font-bold">帮我写一句请假消息</div>
             </div>
             <div className="flex justify-center">
               <span className="w-12 h-12 rounded-full bg-ink text-cream flex items-center justify-center animate-pulse-dot">
-                <Play className="w-5 h-5 ml-0.5" fill="currentColor" />
+                <Play className="w-5 h-5 ms-0.5" fill="currentColor" />
               </span>
             </div>
             <div className="flex items-center justify-end gap-3">
-              <div className="bg-butter border-2 border-ink rounded-2xl rounded-br-sm px-4 py-3 font-bold max-w-[290px]">
+              <div className="bg-butter border-2 border-ink rounded-2xl rounded-ee-sm px-4 py-3 font-bold max-w-[290px]">
                 今天身体不太舒服，想请假休息一天。
               </div>
               <span className="w-11 h-11 rounded-xl bg-teal text-white border-2 border-ink flex items-center justify-center">

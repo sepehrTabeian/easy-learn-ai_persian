@@ -110,7 +110,7 @@ const SectionLostInTheMiddle: React.FC = () => {
                     <span className="font-mono text-[12px] text-ink/55">%</span>
                   </div>
                 </div>
-                <div className="text-right">
+                <div className="text-end">
                   <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-ink/50">
                     needle 位置
                   </div>
@@ -218,7 +218,7 @@ const SectionLostInTheMiddle: React.FC = () => {
               </div>
 
               {/* 一句结论 */}
-              <div className="mt-5 px-3.5 py-2.5 bg-cream border-l-4 border-coral rounded-r-md text-[13px] text-ink/85 leading-snug">
+              <div className="mt-5 px-3.5 py-2.5 bg-cream border-s-4 border-coral rounded-e-md text-[13px] text-ink/85 leading-snug">
                 {length === "8K" && diff === "single" && "8K 单点：模型读啥都答得出来，没问题。"}
                 {length === "8K" && diff === "multi" && "8K 多点：中段稍降，但仍 > 85%。"}
                 {length === "32K" && diff === "single" && "32K 单点：中段开始掉到 80% 出头。"}
@@ -245,7 +245,7 @@ const SectionLostInTheMiddle: React.FC = () => {
                       key={l.id}
                       onClick={() => setLength(l.id)}
                       className={[
-                        "text-left px-3 py-2.5 rounded-xl border-2 border-ink transition-all duration-250 ease-spring",
+                        "text-start px-3 py-2.5 rounded-xl border-2 border-ink transition-all duration-250 ease-spring",
                         on
                           ? "bg-ink text-cream shadow-stamp -translate-y-0.5"
                           : "bg-white text-ink hover:bg-butter-tint",
@@ -278,7 +278,7 @@ const SectionLostInTheMiddle: React.FC = () => {
                       key={d.id}
                       onClick={() => setDiff(d.id)}
                       className={[
-                        "w-full text-left px-3.5 py-2.5 rounded-xl border-2 border-ink transition-all duration-250 ease-spring",
+                        "w-full text-start px-3.5 py-2.5 rounded-xl border-2 border-ink transition-all duration-250 ease-spring",
                         on
                           ? "bg-coral text-white shadow-stamp -translate-y-0.5"
                           : "bg-white text-ink hover:bg-butter-tint",

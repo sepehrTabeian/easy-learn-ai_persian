@@ -22,7 +22,7 @@ const SectionHero: React.FC = () => {
   return (
     <section className="relative px-4 sm:px-6 lg:px-8 pt-20 lg:pt-28 pb-20 lg:pb-24 overflow-hidden">
       {/* 装饰：右上散落几个小圆点 */}
-      <div className="absolute top-16 right-[8%] hidden md:grid grid-cols-4 gap-2.5 pointer-events-none opacity-60">
+      <div className="absolute top-16 end-[8%] hidden md:grid grid-cols-4 gap-2.5 pointer-events-none opacity-60">
         {Array.from({ length: 12 }).map((_, i) => (
           <span key={i} className="w-1.5 h-1.5 rounded-full bg-ink/30" />
         ))}
@@ -107,17 +107,17 @@ const SectionHero: React.FC = () => {
         <div className="lg:col-span-5">
           <div className="relative h-[440px] flex items-center justify-center">
             {/* 底层「context window」标签 */}
-            <div className="absolute top-0 left-1/2 -translate-x-1/2 px-3 py-1 bg-ink text-cream font-mono text-[10px] tracking-[0.22em] uppercase rounded-full">
+            <div className="absolute top-0 start-1/2 -translate-x-1/2 px-3 py-1 bg-ink text-cream font-mono text-[10px] tracking-[0.22em] uppercase rounded-full">
               CONTEXT WINDOW
             </div>
-            <div className="absolute top-7 left-1/2 -translate-x-1/2 w-[88%] h-[120px] border-2 border-dashed border-ink/40 rounded-2xl flex items-center justify-center">
+            <div className="absolute top-7 start-1/2 -translate-x-1/2 w-[88%] h-[120px] border-2 border-dashed border-ink/40 rounded-2xl flex items-center justify-center">
               <span className="font-mono text-[11px] text-ink/45 tracking-[0.16em] uppercase">
                 临时 · 会话清空就没
               </span>
             </div>
 
             {/* 一叠 3 张索引卡（错落） */}
-            <div className="absolute top-[170px] left-1/2 -translate-x-1/2 w-[78%]">
+            <div className="absolute top-[170px] start-1/2 -translate-x-1/2 w-[78%]">
               {CARDS.map((card, i) => (
                 <div
                   key={card.key}
@@ -140,7 +140,7 @@ const SectionHero: React.FC = () => {
             </div>
 
             {/* 底部抽屉 */}
-            <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[92%]">
+            <div className="absolute bottom-0 start-1/2 -translate-x-1/2 w-[92%]">
               <div className="bg-cream border-2 border-ink rounded-2xl shadow-stamp-lg px-5 py-3.5 flex items-center gap-3">
                 <FolderOpen className="w-5 h-5 text-ink" strokeWidth={2.2} />
                 <div className="flex-1">
@@ -157,7 +157,7 @@ const SectionHero: React.FC = () => {
 
             {/* 上下连接虚线 + 箭头 */}
             <svg
-              className="absolute left-1/2 -translate-x-1/2 top-[140px] w-6 h-7 pointer-events-none"
+              className="absolute start-1/2 -translate-x-1/2 top-[140px] w-6 h-7 pointer-events-none"
               viewBox="0 0 20 28"
               fill="none"
             >

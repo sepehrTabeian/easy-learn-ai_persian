@@ -47,7 +47,7 @@ const SectionLowQuality: React.FC = () => {
                 </span>
                 <span className="font-display font-extrabold text-[28px] text-teal leading-none">
                   {minLen}
-                  <span className="font-mono text-[13px] text-ink/55 ml-0.5">字</span>
+                  <span className="font-mono text-[13px] text-ink/55 ms-0.5">字</span>
                 </span>
               </div>
               <input
@@ -66,7 +66,7 @@ const SectionLowQuality: React.FC = () => {
                 </div>
                 <div className="font-display font-extrabold text-[44px] leading-none text-ink">
                   {rate}
-                  <span className="font-mono text-[15px] text-ink/45 ml-1">%</span>
+                  <span className="font-mono text-[15px] text-ink/45 ms-1">%</span>
                 </div>
               </div>
               <p className="mt-auto pt-5 font-sans text-[14px] leading-[1.65] text-ink/70">
@@ -102,7 +102,7 @@ const SectionLowQuality: React.FC = () => {
                       <span className={["font-sans text-[14.5px] leading-[1.5]", keep ? "text-ink" : "text-ink/55 line-through"].join(" ")}>
                         {s.t}
                       </span>
-                      <span className="ml-auto shrink-0 font-mono text-[11px] text-ink/40">{s.len}字</span>
+                      <span className="ms-auto shrink-0 font-mono text-[11px] text-ink/40">{s.len}字</span>
                     </div>
                   );
                 })}

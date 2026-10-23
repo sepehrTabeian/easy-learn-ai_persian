@@ -220,7 +220,7 @@ const SectionModesCompare: React.FC = () => {
             {ROWS.map((r) => (
               <div
                 key={r.id}
-                className="p-4 border-l-2 border-ink bg-ink/95"
+                className="p-4 border-s-2 border-ink bg-ink/95"
               >
                 <div className="font-display font-extrabold text-cream text-[15px] leading-tight">
                   {r.name}
@@ -251,7 +251,7 @@ const SectionModesCompare: React.FC = () => {
                 key={d.id}
                 className={`grid grid-cols-[140px_repeat(3,1fr)] border-t-2 border-ink/12 transition-colors duration-250 ${isSelected ? "bg-butter/25" : "bg-white opacity-60"}`}
               >
-                <div className="p-4 border-r-2 border-ink/12 flex items-center gap-2">
+                <div className="p-4 border-e-2 border-ink/12 flex items-center gap-2">
                   <d.icon className="w-3.5 h-3.5 text-ink/65" strokeWidth={2.2} />
                   <div>
                     <div className="font-sans font-bold text-[13px] text-ink">
@@ -268,7 +268,7 @@ const SectionModesCompare: React.FC = () => {
                   return (
                     <div
                       key={r.id}
-                      className={`p-4 border-l-2 border-ink/12 transition-all ${isWinner ? "bg-coral/15" : ""}`}
+                      className={`p-4 border-s-2 border-ink/12 transition-all ${isWinner ? "bg-coral/15" : ""}`}
                     >
                       <div className="flex items-center gap-2 mb-1.5">
                         <ScorePips score={score} />
@@ -345,7 +345,7 @@ const ScorePips: React.FC<{ score: Score }> = ({ score }) => (
         className={`w-2.5 h-2.5 rounded-sm border border-ink ${i <= score ? "bg-ink" : "bg-cream"}`}
       />
     ))}
-    <span className="ml-1.5 font-mono text-[10px] text-ink/55">
+    <span className="ms-1.5 font-mono text-[10px] text-ink/55">
       {score}/3
     </span>
   </div>
@@ -356,13 +356,13 @@ const DescriptionRow: React.FC<{ label: string; values: string[] }> = ({
   values,
 }) => (
   <div className="grid grid-cols-[140px_repeat(3,1fr)] border-t-2 border-ink/12">
-    <div className="p-4 border-r-2 border-ink/12 bg-cream/30">
+    <div className="p-4 border-e-2 border-ink/12 bg-cream/30">
       <div className="font-sans font-bold text-[13px] text-ink">{label}</div>
     </div>
     {values.map((v, i) => (
       <div
         key={i}
-        className="p-4 border-l-2 border-ink/12 font-sans text-[13px] text-ink/85"
+        className="p-4 border-s-2 border-ink/12 font-sans text-[13px] text-ink/85"
       >
         {v}
       </div>

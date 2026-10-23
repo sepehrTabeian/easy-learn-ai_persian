@@ -75,7 +75,7 @@ export default function Chapter27({ step }: { step: number }) {
               <div className="flex flex-col items-center">
                 <div className="h-2 w-24 bg-gray-300 rounded-full relative overflow-hidden">
                   <motion.div 
-                    className="absolute top-0 left-0 h-full bg-rose-400"
+                    className="absolute top-0 start-0 h-full bg-rose-400"
                     animate={{ width: ["0%", "100%"] }}
                     transition={{ duration: 1, repeat: Infinity }}
                   />
@@ -121,7 +121,7 @@ export default function Chapter27({ step }: { step: number }) {
                     className="flex-1 bg-white p-8 rounded-3xl shadow-xl border-t-8 border-blue-400 flex flex-col items-center text-center"
                   >
                     <div className="w-24 h-24 bg-blue-50 rounded-2xl flex flex-col items-center justify-center mb-6 relative overflow-hidden shadow-inner border-2 border-blue-100">
-                      <div className="absolute top-0 left-0 w-full h-5 bg-blue-200 flex items-center px-2 gap-1.5">
+                      <div className="absolute top-0 start-0 w-full h-5 bg-blue-200 flex items-center px-2 gap-1.5">
                         <div className="w-2 h-2 rounded-full bg-rose-400" />
                         <div className="w-2 h-2 rounded-full bg-amber-400" />
                         <div className="w-2 h-2 rounded-full bg-emerald-400" />
@@ -135,7 +135,7 @@ export default function Chapter27({ step }: { step: number }) {
                         <motion.div
                           animate={{ x: [15, 0, 15], y: [15, 0, 15] }}
                           transition={{ duration: 2, repeat: Infinity, times: [0, 0.2, 1] }}
-                          className="absolute z-10 text-gray-700 right-0 bottom-0"
+                          className="absolute z-10 text-gray-700 end-0 bottom-0"
                         >
                           <MousePointer2 className="w-5 h-5 fill-white" />
                         </motion.div>
@@ -171,8 +171,8 @@ export default function Chapter27({ step }: { step: number }) {
                           </div>
                         ))}
                       </motion.div>
-                      <div className="absolute top-0 left-0 w-full h-10 bg-gradient-to-b from-gray-900 to-transparent" />
-                      <div className="absolute bottom-2 right-2">
+                      <div className="absolute top-0 start-0 w-full h-10 bg-gradient-to-b from-gray-900 to-transparent" />
+                      <div className="absolute bottom-2 end-2">
                         <motion.div animate={{ opacity: [0.5, 1, 0.5] }} transition={{ duration: 1.5, repeat: Infinity }}>
                           <Activity className="w-6 h-6 text-purple-400" />
                         </motion.div>
@@ -211,12 +211,12 @@ export default function Chapter27({ step }: { step: number }) {
                       <motion.div
                         animate={{ y: [-5, 5, -5], x: [-5, 5, -5], opacity: [0.5, 1, 0.5] }}
                         transition={{ duration: 3, repeat: Infinity }}
-                        className="absolute top-4 left-4 w-2 h-2 bg-amber-300 rounded-full"
+                        className="absolute top-4 start-4 w-2 h-2 bg-amber-300 rounded-full"
                       />
                       <motion.div
                         animate={{ y: [5, -5, 5], x: [5, -5, 5], opacity: [0.5, 1, 0.5] }}
                         transition={{ duration: 2.5, repeat: Infinity }}
-                        className="absolute bottom-4 right-4 w-1.5 h-1.5 bg-amber-500 rounded-full"
+                        className="absolute bottom-4 end-4 w-1.5 h-1.5 bg-amber-500 rounded-full"
                       />
                     </div>
                     <h3 className="text-2xl font-black text-gray-800 mb-4">隔离环境</h3>
@@ -272,7 +272,7 @@ export default function Chapter27({ step }: { step: number }) {
                 <span className="font-bold text-gray-700">再验证</span>
                 
                 {/* Loop back arrow */}
-                <svg className="absolute -bottom-12 left-1/2 w-96 h-12 -translate-x-1/2" style={{ overflow: 'visible' }}>
+                <svg className="absolute -bottom-12 start-1/2 w-96 h-12 -translate-x-1/2" style={{ overflow: 'visible' }}>
                   <motion.path 
                     d="M 0 0 Q -150 50 -350 0" 
                     fill="transparent" 
@@ -308,7 +308,7 @@ export default function Chapter27({ step }: { step: number }) {
                 initial={{ scale: 0.8, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
                 transition={{ delay: 0.1, type: 'spring' }}
-                className="bg-white p-6 rounded-2xl shadow-lg border-l-8 border-blue-500 flex items-center gap-4"
+                className="bg-white p-6 rounded-2xl shadow-lg border-s-8 border-blue-500 flex items-center gap-4"
               >
                 <ToolIcon className="w-10 h-10 text-blue-500" />
                 <span className="text-2xl font-black text-gray-800">工具系统</span>
@@ -318,7 +318,7 @@ export default function Chapter27({ step }: { step: number }) {
                 initial={{ scale: 0.8, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
                 transition={{ delay: 0.2, type: 'spring' }}
-                className="bg-white p-6 rounded-2xl shadow-lg border-l-8 border-purple-500 flex items-center gap-4"
+                className="bg-white p-6 rounded-2xl shadow-lg border-s-8 border-purple-500 flex items-center gap-4"
               >
                 <GitMerge className="w-10 h-10 text-purple-500" />
                 <span className="text-2xl font-black text-gray-800">执行编排</span>
@@ -328,7 +328,7 @@ export default function Chapter27({ step }: { step: number }) {
                 initial={{ scale: 0.8, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
                 transition={{ delay: 0.3, type: 'spring' }}
-                className="bg-white p-6 rounded-2xl shadow-lg border-l-8 border-emerald-500 flex items-center gap-4"
+                className="bg-white p-6 rounded-2xl shadow-lg border-s-8 border-emerald-500 flex items-center gap-4"
               >
                 <Eye className="w-10 h-10 text-emerald-500" />
                 <span className="text-2xl font-black text-gray-800">评估与观测</span>
@@ -338,7 +338,7 @@ export default function Chapter27({ step }: { step: number }) {
                 initial={{ scale: 0.8, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
                 transition={{ delay: 0.4, type: 'spring' }}
-                className="bg-white p-6 rounded-2xl shadow-lg border-l-8 border-rose-500 flex items-center gap-4"
+                className="bg-white p-6 rounded-2xl shadow-lg border-s-8 border-rose-500 flex items-center gap-4"
               >
                 <ShieldAlert className="w-10 h-10 text-rose-500" />
                 <span className="text-2xl font-black text-gray-800">约束与恢复</span>

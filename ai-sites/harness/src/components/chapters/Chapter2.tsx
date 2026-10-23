@@ -108,7 +108,7 @@ export default function Chapter2({ step }: { step: number }) {
               className="bg-[#EF4444]/10 border-4 border-[#EF4444] rounded-[3rem] p-16 flex items-center gap-8 shadow-2xl shadow-[#EF4444]/20"
             >
               <TrendingDown className="w-24 h-24 text-[#EF4444]" />
-              <div className="text-left">
+              <div className="text-start">
                 <div className="text-3xl text-[#EF4444] font-bold mb-2">任务成功率</div>
                 <div className="text-8xl font-black text-[#EF4444] tracking-tighter">&lt; 70%</div>
               </div>

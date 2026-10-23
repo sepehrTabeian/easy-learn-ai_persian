@@ -120,7 +120,7 @@ const SectionMethods: React.FC = () => {
           <br />
           加一种
           <span className="relative inline-block">
-            <span className="absolute left-0 right-0 bottom-1 h-4 lg:h-5 bg-butter -z-0 -rotate-1" aria-hidden />
+            <span className="absolute start-0 end-0 bottom-1 h-4 lg:h-5 bg-butter -z-0 -rotate-1" aria-hidden />
             <span className="relative z-10">打包格式</span>
           </span>
           。
@@ -138,7 +138,7 @@ const SectionMethods: React.FC = () => {
 
         {/* 排序 chip */}
         <div className="flex flex-wrap gap-2 mb-5">
-          <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-ink/55 self-center mr-2">
+          <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-ink/55 self-center me-2">
             按 · sort by
           </span>
           {SORTS.map((s) => {
@@ -203,7 +203,7 @@ const MethodRow: React.FC<{
       ].join(" ")}
     >
       {/* header · 永远显示 */}
-      <button onClick={onToggle} className="w-full text-left px-5 py-4 flex items-center gap-4">
+      <button onClick={onToggle} className="w-full text-start px-5 py-4 flex items-center gap-4">
         <div className={`w-10 h-10 ${c.bg} border-2 border-ink rounded-xl flex items-center justify-center shrink-0`}>
           <span className="font-display text-[18px] font-bold text-ink leading-none">
             {rankInSort ?? method.year.toString().slice(-2)}
@@ -223,7 +223,7 @@ const MethodRow: React.FC<{
         </div>
 
         {/* 三维 mini-bar */}
-        <div className="hidden sm:flex items-end gap-1 mr-2">
+        <div className="hidden sm:flex items-end gap-1 me-2">
           <MetricBar value={method.metrics.speed} hint="速度" />
           <MetricBar value={method.metrics.quality} hint="质量" />
           <MetricBar value={method.metrics.ease} hint="易用" />

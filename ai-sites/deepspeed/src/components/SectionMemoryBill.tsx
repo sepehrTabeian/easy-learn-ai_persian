@@ -80,7 +80,7 @@ const SectionMemoryBill: React.FC = () => {
           单张显卡要扛{" "}
           <span className="relative inline-block">
             <span
-              className="absolute left-0 right-0 bottom-1 h-4 lg:h-5 bg-coral/55 -z-0 -rotate-1"
+              className="absolute start-0 end-0 bottom-1 h-4 lg:h-5 bg-coral/55 -z-0 -rotate-1"
               aria-hidden
             />
             <span className="relative z-10">980 GB</span>
@@ -185,7 +185,7 @@ const SectionMemoryBill: React.FC = () => {
               return (
                 <div
                   key={h.label}
-                  className="absolute top-0 bottom-0 border-r-2 border-dashed border-ink/40 pointer-events-none"
+                  className="absolute top-0 bottom-0 border-e-2 border-dashed border-ink/40 pointer-events-none"
                   style={{ left: `${x}%` }}
                 >
                   <div className="absolute -top-5 -translate-x-1/2 font-mono text-[9px] text-ink/55 whitespace-nowrap">
@@ -322,7 +322,7 @@ const BillCell: React.FC<{
     <div className="flex items-center gap-1.5 mb-1">
       <span className={`w-2.5 h-2.5 ${color} border border-ink rounded-sm`} />
       <span className="font-display text-[14px] font-bold text-ink">{name}</span>
-      <span className="font-mono text-[9px] text-ink/45 ml-auto">{bytes}</span>
+      <span className="font-mono text-[9px] text-ink/45 ms-auto">{bytes}</span>
     </div>
     <div className="flex items-baseline gap-1 mb-0.5">
       <span className="font-display text-[22px] font-bold text-ink tabular-nums">

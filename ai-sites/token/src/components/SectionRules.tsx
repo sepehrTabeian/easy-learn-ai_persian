@@ -95,7 +95,7 @@ const SectionRules: React.FC = () => {
           每条都是真账单或真事故里来的。点开看具体做法。
         </p>
         <p className="font-sans text-[13.5px] text-ink/55 max-w-2xl mb-10">
-          <span className="font-mono text-[10px] uppercase tracking-[0.18em] bg-cream border-2 border-ink rounded px-2 py-0.5 text-ink mr-2">进阶</span>
+          <span className="font-mono text-[10px] uppercase tracking-[0.18em] bg-cream border-2 border-ink rounded px-2 py-0.5 text-ink me-2">进阶</span>
           这一节面向打算用 API 做产品的人。只用 ChatGPT 网页版的话，看个大概就行。
         </p>
 
@@ -115,7 +115,7 @@ const SectionRules: React.FC = () => {
               >
                 <button
                   onClick={() => setOpen(isOpen ? null : r.key)}
-                  className="w-full text-left p-5 lg:p-6 flex items-start gap-4"
+                  className="w-full text-start p-5 lg:p-6 flex items-start gap-4"
                 >
                   <span
                     className={[
@@ -145,7 +145,7 @@ const SectionRules: React.FC = () => {
                 </button>
 
                 {isOpen && (
-                  <div className="px-5 lg:px-6 pb-6 pl-[68px] lg:pl-[76px]">
+                  <div className="px-5 lg:px-6 pb-6 ps-[68px] lg:ps-[76px]">
                     <p className="font-sans text-[14.5px] text-ink/80 leading-relaxed mb-4">
                       {r.detail}
                     </p>

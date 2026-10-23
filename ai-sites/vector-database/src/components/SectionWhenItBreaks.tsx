@@ -71,7 +71,7 @@ const SectionWhenItBreaks: React.FC = () => {
                 <button
                   key={item.id}
                   onClick={() => setActive(item.id)}
-                  className={`flex w-full items-center gap-3 rounded-2xl border-2 border-ink p-4 text-left transition-all duration-250 ease-spring ${
+                  className={`flex w-full items-center gap-3 rounded-2xl border-2 border-ink p-4 text-start transition-all duration-250 ease-spring ${
                     selected ? "bg-ink text-cream shadow-stamp" : "bg-white text-ink"
                   }`}
                 >

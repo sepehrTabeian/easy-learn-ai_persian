@@ -159,7 +159,7 @@ const SectionOneIdea: React.FC = () => {
         <div className="bg-white border-2 border-ink rounded-3xl shadow-stamp-lg p-6 lg:p-8">
           {/* pill 切代 */}
           <div className="flex flex-wrap items-center gap-2 mb-7">
-            <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-ink/55 mr-2">
+            <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-ink/55 me-2">
               切代
             </div>
             {GENS.map((x) => {

@@ -100,7 +100,7 @@ const SectionStep: React.FC = () => {
                         setStep(0);
                       }}
                       className={[
-                        "w-full text-left px-4 py-3 border-2 border-ink rounded-xl transition-all duration-250 ease-spring",
+                        "w-full text-start px-4 py-3 border-2 border-ink rounded-xl transition-all duration-250 ease-spring",
                         on
                           ? "bg-ink text-cream shadow-[3px_3px_0_0_#E07A5F]"
                           : "bg-cream text-ink hover:translate-x-[-2px] hover:translate-y-[-2px]",

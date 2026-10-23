@@ -192,7 +192,7 @@ const SectionBothEyes: React.FC = () => {
                       <button
                         onClick={() => setActiveRow(row)}
                         className={[
-                          "font-mono text-[10.5px] font-semibold text-right pr-1.5 transition-colors",
+                          "font-mono text-[10.5px] font-semibold text-end pe-1.5 transition-colors",
                           row === activeRow ? "text-coral" : "text-ink/55 hover:text-ink",
                         ].join(" ")}
                       >

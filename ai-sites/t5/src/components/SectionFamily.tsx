@@ -165,19 +165,19 @@ const SectionFamily: React.FC = () => {
         {/* 时间轴 accordion */}
         <div className="relative">
           {/* 左侧竖线 */}
-          <div className="absolute left-[15px] lg:left-[19px] top-3 bottom-3 w-[2px] bg-ink/15" />
+          <div className="absolute start-[15px] lg:start-[19px] top-3 bottom-3 w-[2px] bg-ink/15" />
 
           <div className="space-y-3">
             {VERSIONS.map((v, idx) => {
               const open = v.id === openId;
               return (
-                <div key={v.id} className="relative pl-10 lg:pl-12">
+                <div key={v.id} className="relative ps-10 lg:ps-12">
                   {/* 圆点 */}
                   <button
                     onClick={() => setOpenId(open ? "" : v.id)}
                     aria-label={v.name}
                     className={[
-                      "absolute left-0 top-3 w-8 h-8 lg:w-10 lg:h-10 rounded-full border-2 border-ink font-mono text-[10.5px] font-extrabold flex items-center justify-center transition-all duration-300 ease-spring",
+                      "absolute start-0 top-3 w-8 h-8 lg:w-10 lg:h-10 rounded-full border-2 border-ink font-mono text-[10.5px] font-extrabold flex items-center justify-center transition-all duration-300 ease-spring",
                       open
                         ? "bg-ink text-cream shadow-[3px_3px_0_0_#E07A5F] scale-110"
                         : "bg-butter text-ink hover:bg-coral hover:text-cream hover:scale-105",
@@ -190,7 +190,7 @@ const SectionFamily: React.FC = () => {
                   <button
                     onClick={() => setOpenId(open ? "" : v.id)}
                     className={[
-                      "w-full text-left bg-white border-2 border-ink rounded-2xl transition-all duration-300 ease-spring",
+                      "w-full text-start bg-white border-2 border-ink rounded-2xl transition-all duration-300 ease-spring",
                       open
                         ? "shadow-stamp-lg"
                         : "shadow-stamp hover:shadow-stamp-lg hover:-translate-x-0.5 hover:-translate-y-0.5",

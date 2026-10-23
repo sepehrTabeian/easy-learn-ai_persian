@@ -99,7 +99,7 @@ const SectionThreeParts: React.FC = () => {
                     key={x.id}
                     onClick={() => setPid(x.id)}
                     className={[
-                      "w-full flex items-center gap-3 px-4 py-3.5 rounded-2xl border-2 border-ink text-left transition-all duration-250 ease-spring",
+                      "w-full flex items-center gap-3 px-4 py-3.5 rounded-2xl border-2 border-ink text-start transition-all duration-250 ease-spring",
                       on
                         ? "bg-cream shadow-stamp -translate-x-0.5 -translate-y-0.5"
                         : "bg-white hover:bg-cream",
@@ -107,7 +107,7 @@ const SectionThreeParts: React.FC = () => {
                   >
                     <span className={[x.color, "w-7 h-7 rounded-lg border-2 border-ink shrink-0"].join(" ")} />
                     <span className="flex-1">
-                      <span className="font-display text-[16px] font-bold text-ink mr-2">{x.name}</span>
+                      <span className="font-display text-[16px] font-bold text-ink me-2">{x.name}</span>
                       <span className="font-mono text-[12px] text-ink/55">{x.manages}</span>
                     </span>
                     {on && <span className="w-2.5 h-2.5 rounded-full bg-coral animate-pulse-dot" />}

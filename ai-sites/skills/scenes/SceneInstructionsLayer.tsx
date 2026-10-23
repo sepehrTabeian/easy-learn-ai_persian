@@ -43,7 +43,7 @@ export const SceneInstructionsLayer: React.FC<SceneProps> = ({ step }) => {
                 </div>
 
                 <div className="bg-[#1e1e24] p-6 rounded-2xl border border-blue-500/30 shadow-[0_0_30px_rgba(59,130,246,0.1)] flex-1 flex flex-col justify-center relative overflow-hidden">
-                     <div className="absolute top-0 left-0 w-1 h-full bg-blue-500" />
+                     <div className="absolute top-0 start-0 w-1 h-full bg-blue-500" />
                      <ChalkText size="base" className="text-gray-400 mb-4">当用户发出具体指令时...</ChalkText>
                      
                      {/* Chat Bubble */}
@@ -51,7 +51,7 @@ export const SceneInstructionsLayer: React.FC<SceneProps> = ({ step }) => {
                         initial={{ scale: 0.8, opacity: 0 }}
                         animate={step >= 1 ? { scale: 1, opacity: 1 } : {}}
                         transition={{ delay: 0.2, type: 'spring' }}
-                        className="bg-blue-600 text-white p-4 rounded-2xl rounded-tl-sm shadow-lg max-w-[90%]"
+                        className="bg-blue-600 text-white p-4 rounded-2xl rounded-ss-sm shadow-lg max-w-[90%]"
                      >
                         <ChalkText size="lg" className="font-sans">
                             "帮我把这个 <span className="font-bold text-yellow-300 border-b-2 border-yellow-300/50">Excel</span> 处理一下"
@@ -67,7 +67,7 @@ export const SceneInstructionsLayer: React.FC<SceneProps> = ({ step }) => {
                 className="flex flex-col gap-6 relative"
             >   
                 {/* Arrow connecting cols */}
-                <div className="absolute top-1/2 -left-6 hidden md:block text-gray-600">
+                <div className="absolute top-1/2 -start-6 hidden md:block text-gray-600">
                     <ArrowRight size={24} />
                 </div>
 
@@ -101,7 +101,7 @@ export const SceneInstructionsLayer: React.FC<SceneProps> = ({ step }) => {
                             className="relative z-10"
                          >
                             <FileText size={64} className="text-gray-300" />
-                            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-xs font-bold text-black bg-white/80 px-1 rounded">
+                            <div className="absolute top-1/2 start-1/2 -translate-x-1/2 -translate-y-1/2 text-xs font-bold text-black bg-white/80 px-1 rounded">
                                 SKILL.md
                             </div>
                          </motion.div>
@@ -128,7 +128,7 @@ export const SceneInstructionsLayer: React.FC<SceneProps> = ({ step }) => {
                 className="flex flex-col gap-6 relative"
             >
                 {/* Arrow connecting cols */}
-                <div className="absolute top-1/2 -left-6 hidden md:block text-gray-600">
+                <div className="absolute top-1/2 -start-6 hidden md:block text-gray-600">
                     <ArrowRight size={24} />
                 </div>
 
@@ -143,7 +143,7 @@ export const SceneInstructionsLayer: React.FC<SceneProps> = ({ step }) => {
                      
                      {/* Stream Effect */}
                      {step >= 3 && (
-                        <div className="absolute top-0 left-0 w-full h-1 bg-green-500 shadow-[0_0_20px_#22c55e]" />
+                        <div className="absolute top-0 start-0 w-full h-1 bg-green-500 shadow-[0_0_20px_#22c55e]" />
                      )}
 
                      <div className="flex items-center justify-between mb-4">

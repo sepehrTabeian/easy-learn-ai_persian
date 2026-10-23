@@ -206,7 +206,7 @@ const SectionThreeModes: React.FC = () => {
               <table className="w-full border-collapse">
                 <thead>
                   <tr>
-                    <th className="text-left font-mono text-[11px] tracking-[0.18em] uppercase text-ink/55 pb-3 pr-3 align-bottom">
+                    <th className="text-start font-mono text-[11px] tracking-[0.18em] uppercase text-ink/55 pb-3 pe-3 align-bottom">
                       操作类别
                     </th>
                     {MODES.map((m) => {
@@ -233,7 +233,7 @@ const SectionThreeModes: React.FC = () => {
                 <tbody>
                   {ROWS.map((r) => (
                     <tr key={r.label} className="border-t-2 border-ink/15">
-                      <td className="py-3 pr-3 font-sans text-[14px] font-semibold text-ink w-[44%]">
+                      <td className="py-3 pe-3 font-sans text-[14px] font-semibold text-ink w-[44%]">
                         {r.label}
                       </td>
                       {(["plan", "def", "auto"] as const).map((col, i) => {

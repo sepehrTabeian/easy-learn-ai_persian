@@ -19,7 +19,7 @@ const SectionHero: React.FC = () => {
             <h1 className="mb-6 font-display text-display-xl">模态编码是什么？</h1>
             <p className="mb-5 max-w-xl font-display text-[21px] font-bold leading-snug lg:text-[24px]">
               <span className="relative inline-block">
-                <span className="absolute bottom-0.5 left-0 right-0 h-4 bg-butter" />
+                <span className="absolute bottom-0.5 start-0 end-0 h-4 bg-butter" />
                 <span className="relative">模态编码把图片和声音变成模型能计算的一串数字。</span>
               </span>
             </p>

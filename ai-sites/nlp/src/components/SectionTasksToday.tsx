@@ -208,7 +208,7 @@ const SectionTasksToday: React.FC = () => {
               >
                 <button
                   onClick={() => setOpenId(open ? null : t.id)}
-                  className="w-full px-5 py-4 flex flex-col sm:grid sm:grid-cols-[1fr_140px_140px_28px] gap-3 sm:gap-4 sm:items-center text-left hover:bg-cream transition-colors duration-200"
+                  className="w-full px-5 py-4 flex flex-col sm:grid sm:grid-cols-[1fr_140px_140px_28px] gap-3 sm:gap-4 sm:items-center text-start hover:bg-cream transition-colors duration-200"
                 >
                   <div>
                     <div className="font-display font-extrabold text-[17px] text-ink leading-tight">
@@ -310,7 +310,7 @@ const Bar: React.FC<{ label: string; value: number; tone: string }> = ({
       </div>
       <div className="h-3 bg-cream border border-ink/30 rounded-full overflow-hidden">
         <div
-          className={["h-full border-r border-ink/40 transition-all duration-500 ease-spring", tone].join(" ")}
+          className={["h-full border-e border-ink/40 transition-all duration-500 ease-spring", tone].join(" ")}
           style={{ width: `${value}%` }}
         />
       </div>

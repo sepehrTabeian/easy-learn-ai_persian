@@ -156,7 +156,7 @@ const SectionAhaCases: React.FC = () => {
                     : "bg-white text-ink/70 hover:bg-butter shadow-stamp",
                 ].join(" ")}
               >
-                <span className="font-bold mr-1.5">[{DOMAIN_LABEL[cs.domain]}]</span>
+                <span className="font-bold me-1.5">[{DOMAIN_LABEL[cs.domain]}]</span>
                 {cs.title}
               </button>
             );

@@ -82,7 +82,7 @@ export default function Chapter22({ step }: { step: number }) {
                     animate={{ opacity: 1, y: 0 }}
                     className="flex-1 bg-white p-8 rounded-3xl shadow-xl border-t-8 border-blue-500 flex flex-col relative overflow-hidden"
                   >
-                    <div className="absolute -right-10 -top-10 opacity-5">
+                    <div className="absolute -end-10 -top-10 opacity-5">
                       <TrendingUp className="w-64 h-64" />
                     </div>
                     <div className="flex items-center gap-4 mb-6">
@@ -125,7 +125,7 @@ export default function Chapter22({ step }: { step: number }) {
                     animate={{ opacity: 1, y: 0 }}
                     className="flex-1 bg-white p-8 rounded-3xl shadow-xl border-t-8 border-emerald-500 flex flex-col relative overflow-hidden"
                   >
-                    <div className="absolute -right-10 -top-10 opacity-5">
+                    <div className="absolute -end-10 -top-10 opacity-5">
                       <Bot className="w-64 h-64" />
                     </div>
                     <div className="flex items-center gap-4 mb-6">
@@ -169,7 +169,7 @@ export default function Chapter22({ step }: { step: number }) {
                     animate={{ opacity: 1, y: 0 }}
                     className="flex-1 bg-white p-8 rounded-3xl shadow-xl border-t-8 border-purple-500 flex flex-col relative overflow-hidden"
                   >
-                    <div className="absolute -right-10 -top-10 opacity-5">
+                    <div className="absolute -end-10 -top-10 opacity-5">
                       <Sparkles className="w-64 h-64" />
                     </div>
                     <div className="flex items-center gap-4 mb-6">

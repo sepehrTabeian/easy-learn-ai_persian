@@ -149,7 +149,7 @@ const SectionRewardHack: React.FC = () => {
 
         {/* 筛选 chip 阵列 */}
         <div className="flex flex-wrap items-center gap-2 mb-6">
-          <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-ink/55 mr-1">
+          <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-ink/55 me-1">
             筛类型
           </span>
           {TAGS.map((t) => {
@@ -172,7 +172,7 @@ const SectionRewardHack: React.FC = () => {
               </button>
             );
           })}
-          <span className="ml-auto font-mono text-[10.5px] text-ink/45 tabular-nums">
+          <span className="ms-auto font-mono text-[10.5px] text-ink/45 tabular-nums">
             {filtered.length} / {CASES.length} 案
           </span>
         </div>
@@ -188,7 +188,7 @@ const SectionRewardHack: React.FC = () => {
               >
                 <button
                   onClick={() => setOpenId(open ? null : c.id)}
-                  className="w-full text-left px-5 py-4 flex items-center gap-4 hover:bg-cream transition-colors"
+                  className="w-full text-start px-5 py-4 flex items-center gap-4 hover:bg-cream transition-colors"
                 >
                   <div className="font-display text-[20px] lg:text-[22px] font-bold text-ink/40 tabular-nums w-14 shrink-0">
                     {c.year}
@@ -206,7 +206,7 @@ const SectionRewardHack: React.FC = () => {
                       {c.oneLine}
                     </div>
                   </div>
-                  <div className="hidden sm:block px-2 py-1 rounded-md bg-pop/15 border border-ink/20 font-mono text-[10px] text-ink/70 shrink-0 max-w-[160px] text-right">
+                  <div className="hidden sm:block px-2 py-1 rounded-md bg-pop/15 border border-ink/20 font-mono text-[10px] text-ink/70 shrink-0 max-w-[160px] text-end">
                     {c.number}
                   </div>
                   <ChevronDown

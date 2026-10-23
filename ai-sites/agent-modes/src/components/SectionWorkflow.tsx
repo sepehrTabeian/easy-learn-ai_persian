@@ -272,7 +272,7 @@ const SectionWorkflow: React.FC = () => {
                           <span>{meta.label}</span>
                         </div>
                         {isRec && (
-                          <span className="absolute -top-2 -right-2 px-1.5 py-0.5 rounded-full bg-ink text-cream font-mono text-[8.5px] tracking-[0.12em] border-2 border-cream">
+                          <span className="absolute -top-2 -end-2 px-1.5 py-0.5 rounded-full bg-ink text-cream font-mono text-[8.5px] tracking-[0.12em] border-2 border-cream">
                             荐
                           </span>
                         )}
@@ -301,7 +301,7 @@ const SectionWorkflow: React.FC = () => {
             <div className="font-mono text-[10.5px] tracking-[0.22em] uppercase text-ink/55 mb-3">
               五条实用建议
             </div>
-            <ol className="space-y-2.5 font-sans text-[14.5px] leading-[1.6] text-ink/85 list-decimal pl-5">
+            <ol className="space-y-2.5 font-sans text-[14.5px] leading-[1.6] text-ink/85 list-decimal ps-5">
               <li>新手起步先 Default，感受 Agent 的行为习惯再放权。</li>
               <li>对生产代码做大改前，让 Agent 先出 Plan。</li>
               <li>长任务用 Auto，但放在沙箱 / Docker / 实验分支里跑。</li>

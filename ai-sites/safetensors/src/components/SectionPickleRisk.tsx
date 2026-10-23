@@ -31,8 +31,8 @@ const SectionPickleRisk: React.FC = () => {
 
         <h2 className="font-display text-display-lg text-ink mb-5 max-w-3xl">
           老格式有个雷：
-          <span className="relative inline-block ml-1">
-            <span className="absolute left-0 right-0 bottom-1 h-4 lg:h-5 bg-coral/40 -z-0 -rotate-1" aria-hidden />
+          <span className="relative inline-block ms-1">
+            <span className="absolute start-0 end-0 bottom-1 h-4 lg:h-5 bg-coral/40 -z-0 -rotate-1" aria-hidden />
             <span className="relative z-10">打开文件，等于运行代码</span>
           </span>
         </h2>
@@ -55,7 +55,7 @@ const SectionPickleRisk: React.FC = () => {
             <button
               onClick={() => switchMode("pickle")}
               className={[
-                "flex items-center gap-2.5 px-4 py-3 border-2 border-ink rounded-2xl text-left transition-all duration-250 ease-spring",
+                "flex items-center gap-2.5 px-4 py-3 border-2 border-ink rounded-2xl text-start transition-all duration-250 ease-spring",
                 mode === "pickle" ? "bg-ink text-cream shadow-stamp-lg" : "bg-white text-ink hover:bg-butter-tint",
               ].join(" ")}
             >
@@ -70,7 +70,7 @@ const SectionPickleRisk: React.FC = () => {
             <button
               onClick={() => switchMode("safe")}
               className={[
-                "flex items-center gap-2.5 px-4 py-3 border-2 border-ink rounded-2xl text-left transition-all duration-250 ease-spring",
+                "flex items-center gap-2.5 px-4 py-3 border-2 border-ink rounded-2xl text-start transition-all duration-250 ease-spring",
                 mode === "safe" ? "bg-ink text-cream shadow-stamp-lg" : "bg-white text-ink hover:bg-butter-tint",
               ].join(" ")}
             >
@@ -108,8 +108,8 @@ const SectionPickleRisk: React.FC = () => {
                   <div className="text-cream/70">→ 读取张量 embed.weight ... ok</div>
                   <div className="text-cream/70">→ 读取张量 layer0.attn.q ... ok</div>
                   <div className="text-pop font-bold">→ ⚠ 文件里夹带的指令开始执行：</div>
-                  <div className="text-pop pl-4">os.system("上传你的 ~/.ssh 私钥到陌生服务器")</div>
-                  <div className="text-pop pl-4">你根本没察觉，模型确实也加载好了。</div>
+                  <div className="text-pop ps-4">os.system("上传你的 ~/.ssh 私钥到陌生服务器")</div>
+                  <div className="text-pop ps-4">你根本没察觉，模型确实也加载好了。</div>
                 </div>
               ) : (
                 <div className="mt-3 space-y-1.5 animate-enter-fade">

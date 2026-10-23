@@ -41,7 +41,7 @@ export const SceneProgrammingAnalogy: React.FC<SceneProps> = ({ step }) => {
                     <div className="w-3 h-3 rounded-full bg-red-500"/>
                     <div className="w-3 h-3 rounded-full bg-yellow-500"/>
                     <div className="w-3 h-3 rounded-full bg-green-500"/>
-                    <span className="ml-2 text-xs text-gray-400 font-mono">index.ts</span>
+                    <span className="ms-2 text-xs text-gray-400 font-mono">index.ts</span>
                 </div>
 
                 {/* Editor Body */}
@@ -52,7 +52,7 @@ export const SceneProgrammingAnalogy: React.FC<SceneProps> = ({ step }) => {
                         <motion.div 
                             initial={{ opacity: 0, height: 0 }}
                             animate={{ opacity: 1, height: 'auto' }}
-                            className="text-purple-400 mb-6 bg-purple-500/10 -mx-6 px-6 py-2 border-l-4 border-purple-500"
+                            className="text-purple-400 mb-6 bg-purple-500/10 -mx-6 px-6 py-2 border-s-4 border-purple-500"
                         >
                             import <span className="text-yellow-300">{`{ WeatherSkill }`}</span> from <span className="text-green-300">'node_modules'</span>;
                         </motion.div>
@@ -112,7 +112,7 @@ export const SceneProgrammingAnalogy: React.FC<SceneProps> = ({ step }) => {
                     animate={{ scale: 1, opacity: 1 }}
                     className="relative bg-[#252526] p-6 rounded-xl border border-yellow-500/30 shadow-[0_0_30px_rgba(234,179,8,0.1)]"
                  >
-                    <div className="absolute -top-4 -left-4 bg-yellow-600 text-white px-3 py-1 rounded text-sm font-bold flex items-center gap-2">
+                    <div className="absolute -top-4 -start-4 bg-yellow-600 text-white px-3 py-1 rounded text-sm font-bold flex items-center gap-2">
                         <Folder size={16} />
                         node_modules
                     </div>
@@ -155,7 +155,7 @@ export const SceneProgrammingAnalogy: React.FC<SceneProps> = ({ step }) => {
                     className="mt-8 flex items-center gap-4 text-green-300 bg-green-900/20 p-4 rounded-lg border border-green-500/30"
                  >
                     <div className="p-2 bg-green-500/20 rounded-full">
-                        <Play size={24} className="ml-1" />
+                        <Play size={24} className="ms-1" />
                     </div>
                     <div>
                         <ChalkText size="lg" className="font-bold">按需调用</ChalkText>

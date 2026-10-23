@@ -145,7 +145,7 @@ const SectionSchedule: React.FC = () => {
                       key={s.id}
                       onClick={() => setSchedId(s.id)}
                       className={[
-                        "w-full text-left px-3 py-2.5 border-2 border-ink rounded-xl transition-all duration-250 ease-spring font-display font-bold",
+                        "w-full text-start px-3 py-2.5 border-2 border-ink rounded-xl transition-all duration-250 ease-spring font-display font-bold",
                         on
                           ? "bg-ink text-cream shadow-[3px_3px_0_0_#E07A5F]"
                           : "bg-cream text-ink hover:bg-white",
@@ -227,7 +227,7 @@ const SectionSchedule: React.FC = () => {
                     {sched.name}
                   </div>
                 </div>
-                <div className="text-right">
+                <div className="text-end">
                   <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-ink/55">
                     peak / min
                   </div>

@@ -135,7 +135,7 @@ export default function Hero() {
 
             <div
               key={active}
-              className="text-base text-ink leading-relaxed bg-butter/20 border-l-4 border-coral pl-4 py-3 animate-enter-fade min-h-[120px]"
+              className="text-base text-ink leading-relaxed bg-butter/20 border-s-4 border-coral ps-4 py-3 animate-enter-fade min-h-[120px]"
             >
               {current.snippet}
             </div>
@@ -146,7 +146,7 @@ export default function Hero() {
             </div>
           </div>
 
-          <div className="absolute -top-3 -right-3 px-3 py-1.5 bg-pop text-white text-xs font-mono rounded-full border-2 border-ink shadow-stamp rotate-3">
+          <div className="absolute -top-3 -end-3 px-3 py-1.5 bg-pop text-white text-xs font-mono rounded-full border-2 border-ink shadow-stamp rotate-3">
             v0{active + 1} / 05
           </div>
         </div>

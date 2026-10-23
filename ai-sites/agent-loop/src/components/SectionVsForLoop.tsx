@@ -93,12 +93,12 @@ while not done:
             <div className="p-4 bg-ink text-cream font-mono text-[10.5px] uppercase tracking-[0.22em]">
               对比项
             </div>
-            <div className="p-4 border-l-2 border-ink bg-teal text-white">
+            <div className="p-4 border-s-2 border-ink bg-teal text-white">
               <div className="font-display font-bold text-[14px] leading-tight">
                 传统 for 循环
               </div>
             </div>
-            <div className="p-4 border-l-2 border-ink bg-coral text-white">
+            <div className="p-4 border-s-2 border-ink bg-coral text-white">
               <div className="font-display font-bold text-[14px] leading-tight">
                 Agent Loop
               </div>
@@ -297,13 +297,13 @@ const DiffRow: React.FC<{
   right: string;
 }> = ({ label, left, right }) => (
   <div className="grid grid-cols-3 border-t-2 border-ink/12 group/row hover:bg-cream/40 transition-colors">
-    <div className="p-4 font-sans font-bold text-[13px] text-ink/85 border-r-2 border-ink/12">
+    <div className="p-4 font-sans font-bold text-[13px] text-ink/85 border-e-2 border-ink/12">
       {label}
     </div>
-    <div className="p-4 border-l-2 border-ink/12 font-sans text-[13.5px] text-ink leading-relaxed">
+    <div className="p-4 border-s-2 border-ink/12 font-sans text-[13.5px] text-ink leading-relaxed">
       {left}
     </div>
-    <div className="p-4 border-l-2 border-ink/12 font-sans text-[13.5px] text-ink leading-relaxed">
+    <div className="p-4 border-s-2 border-ink/12 font-sans text-[13.5px] text-ink leading-relaxed">
       {right}
     </div>
   </div>

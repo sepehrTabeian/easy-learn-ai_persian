@@ -24,7 +24,7 @@ const SectionHero: React.FC = () => {
   return (
     <section className="relative px-4 sm:px-6 lg:px-8 pt-20 lg:pt-28 pb-20 lg:pb-24 overflow-hidden">
       {/* 装饰：右上散落 token 小圆 */}
-      <div className="absolute top-16 right-[8%] hidden md:flex flex-col gap-2 pointer-events-none opacity-65">
+      <div className="absolute top-16 end-[8%] hidden md:flex flex-col gap-2 pointer-events-none opacity-65">
         {[0, 1, 2, 3].map((i) => (
           <span
             key={i}
@@ -99,7 +99,7 @@ const SectionHero: React.FC = () => {
                 </span>
               </span>
             </div>
-            <div className="flex flex-wrap gap-2 mt-3 pl-10">
+            <div className="flex flex-wrap gap-2 mt-3 ps-10">
               <a
                 href="../llm/index.html"
                 className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-white border-2 border-ink rounded-full font-mono text-[11px] font-bold text-ink shadow-stamp hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-stamp-lg transition-all duration-250 ease-spring"
@@ -145,7 +145,7 @@ const SectionHero: React.FC = () => {
                 {SEGMENTS.map((seg) => (
                   <div
                     key={seg.key}
-                    className="relative flex flex-col justify-center items-start px-2.5 border-r-2 border-ink last:border-r-0 transition-transform duration-400 ease-spring hover:translate-y-[-2px]"
+                    className="relative flex flex-col justify-center items-start px-2.5 border-e-2 border-ink last:border-e-0 transition-transform duration-400 ease-spring hover:translate-y-[-2px]"
                     style={{ width: `${seg.w}%`, backgroundColor: seg.fill, color: seg.text }}
                   >
                     <span
@@ -209,7 +209,7 @@ const SectionHero: React.FC = () => {
             </div>
 
             {/* 提示箭头：指向第一段 */}
-            <div className="hidden lg:block absolute -bottom-8 left-[6%]">
+            <div className="hidden lg:block absolute -bottom-8 start-[6%]">
               <svg width="120" height="50" viewBox="0 0 120 50" fill="none">
                 <path
                   d="M 8 8 Q 28 38 90 38"

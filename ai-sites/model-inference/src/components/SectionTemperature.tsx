@@ -60,7 +60,7 @@ const SectionTemperature: React.FC = () => {
                 </div>
                 <div className="mt-2 h-9 border border-white/30 rounded-lg overflow-hidden">
                   <div
-                    className={`h-full transition-all duration-250 ${index === 0 ? "bg-butter" : index === 1 ? "bg-coral" : "bg-teal border-r border-white/20"}`}
+                    className={`h-full transition-all duration-250 ${index === 0 ? "bg-butter" : index === 1 ? "bg-coral" : "bg-teal border-e border-white/20"}`}
                     style={{ width: `${item.value}%` }}
                   />
                 </div>

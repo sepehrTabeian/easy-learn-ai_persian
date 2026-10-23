@@ -66,7 +66,7 @@ const SectionPitfalls: React.FC = () => {
               >
                 <button
                   onClick={() => setOpen(isOpen ? -1 : i)}
-                  className="w-full flex items-center gap-3 px-5 py-4 text-left"
+                  className="w-full flex items-center gap-3 px-5 py-4 text-start"
                 >
                   <span
                     className="flex-shrink-0 w-9 h-9 rounded-xl border-2 border-cream/40 grid place-items-center"
@@ -92,7 +92,7 @@ const SectionPitfalls: React.FC = () => {
 
                 {isOpen && (
                   <div className="px-5 pb-5 pt-1 animate-enter-fade">
-                    <div className="pl-12 space-y-3">
+                    <div className="ps-12 space-y-3">
                       <div>
                         <span className="font-mono text-[10.5px] tracking-[0.14em] uppercase text-coral">
                           现场

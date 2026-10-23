@@ -53,7 +53,7 @@ export default function Chapter5({ step }: { step: number }) {
               animate={{ opacity: 1, scale: 1, rotate: 0 }}
               exit={{ opacity: 0, scale: 0 }}
               transition={{ duration: 0.6, type: 'spring', bounce: 0.5 }}
-              className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-20 bg-white p-4 rounded-full shadow-2xl border-4 border-[#FDFBF7]"
+              className="absolute start-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-20 bg-white p-4 rounded-full shadow-2xl border-4 border-[#FDFBF7]"
             >
               <div className="w-16 h-16 bg-gradient-to-br from-[#8B5CF6] to-[#14B8A6] rounded-full flex items-center justify-center text-white font-black text-2xl shadow-inner">
                 VS
@@ -71,8 +71,8 @@ export default function Chapter5({ step }: { step: number }) {
               className="flex-1 flex flex-col gap-8"
             >
               {/* User Input */}
-              <div className="bg-white p-8 rounded-[2rem] rounded-tl-none shadow-lg border border-gray-100 relative">
-                <div className="absolute -top-6 -left-6 bg-gray-200 p-3 rounded-full border-4 border-[#FDFBF7]">
+              <div className="bg-white p-8 rounded-[2rem] rounded-ss-none shadow-lg border border-gray-100 relative">
+                <div className="absolute -top-6 -start-6 bg-gray-200 p-3 rounded-full border-4 border-[#FDFBF7]">
                   <User className="w-6 h-6 text-gray-500" />
                 </div>
                 <p className="text-3xl text-gray-600 font-medium leading-relaxed">
@@ -86,9 +86,9 @@ export default function Chapter5({ step }: { step: number }) {
                   <motion.div 
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
-                    className="bg-gray-100/50 p-8 rounded-[2rem] rounded-tr-none border border-gray-200 relative ml-12"
+                    className="bg-gray-100/50 p-8 rounded-[2rem] rounded-se-none border border-gray-200 relative ms-12"
                   >
-                    <div className="absolute -top-6 -right-6 bg-gray-300 p-3 rounded-full border-4 border-[#FDFBF7]">
+                    <div className="absolute -top-6 -end-6 bg-gray-300 p-3 rounded-full border-4 border-[#FDFBF7]">
                       <Bot className="w-6 h-6 text-gray-600" />
                     </div>
                     <div className="flex items-center gap-4 text-gray-400">
@@ -116,8 +116,8 @@ export default function Chapter5({ step }: { step: number }) {
               className="flex-1 flex flex-col gap-8"
             >
               {/* User Input */}
-              <div className="bg-[#8B5CF6]/10 p-8 rounded-[2rem] rounded-tr-none shadow-xl border border-[#8B5CF6]/20 relative">
-                <div className="absolute -top-6 -right-6 bg-[#8B5CF6] p-3 rounded-full border-4 border-[#FDFBF7] shadow-lg">
+              <div className="bg-[#8B5CF6]/10 p-8 rounded-[2rem] rounded-se-none shadow-xl border border-[#8B5CF6]/20 relative">
+                <div className="absolute -top-6 -end-6 bg-[#8B5CF6] p-3 rounded-full border-4 border-[#FDFBF7] shadow-lg">
                   <User className="w-6 h-6 text-white" />
                 </div>
                 <p className="text-2xl text-[#8B5CF6] font-bold leading-relaxed">
@@ -131,9 +131,9 @@ export default function Chapter5({ step }: { step: number }) {
                   <motion.div 
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
-                    className="bg-gradient-to-br from-[#14B8A6]/10 to-[#14B8A6]/5 p-8 rounded-[2rem] rounded-tl-none border border-[#14B8A6]/30 relative mr-12 shadow-lg"
+                    className="bg-gradient-to-br from-[#14B8A6]/10 to-[#14B8A6]/5 p-8 rounded-[2rem] rounded-ss-none border border-[#14B8A6]/30 relative me-12 shadow-lg"
                   >
-                    <div className="absolute -top-6 -left-6 bg-[#14B8A6] p-3 rounded-full border-4 border-[#FDFBF7] shadow-lg">
+                    <div className="absolute -top-6 -start-6 bg-[#14B8A6] p-3 rounded-full border-4 border-[#FDFBF7] shadow-lg">
                       <Sparkles className="w-6 h-6 text-white" />
                     </div>
                     <div className="flex items-center gap-4 text-[#14B8A6] mb-6">
@@ -144,17 +144,17 @@ export default function Chapter5({ step }: { step: number }) {
                       <div className="bg-white/60 p-4 rounded-xl border border-[#14B8A6]/20 flex items-center gap-3">
                         <div className="w-2 h-2 rounded-full bg-[#14B8A6]"></div>
                         <span className="text-lg font-bold text-[#43302B]">核心观点</span>
-                        <div className="h-2 bg-[#14B8A6]/20 rounded w-1/2 ml-auto"></div>
+                        <div className="h-2 bg-[#14B8A6]/20 rounded w-1/2 ms-auto"></div>
                       </div>
                       <div className="bg-white/60 p-4 rounded-xl border border-[#14B8A6]/20 flex items-center gap-3">
                         <div className="w-2 h-2 rounded-full bg-[#14B8A6]"></div>
                         <span className="text-lg font-bold text-[#43302B]">论证方式</span>
-                        <div className="h-2 bg-[#14B8A6]/20 rounded w-1/3 ml-auto"></div>
+                        <div className="h-2 bg-[#14B8A6]/20 rounded w-1/3 ms-auto"></div>
                       </div>
                       <div className="bg-white/60 p-4 rounded-xl border border-[#14B8A6]/20 flex items-center gap-3">
                         <div className="w-2 h-2 rounded-full bg-[#14B8A6]"></div>
                         <span className="text-lg font-bold text-[#43302B]">局限性</span>
-                        <div className="h-2 bg-[#14B8A6]/20 rounded w-2/3 ml-auto"></div>
+                        <div className="h-2 bg-[#14B8A6]/20 rounded w-2/3 ms-auto"></div>
                       </div>
                     </div>
                   </motion.div>

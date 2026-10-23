@@ -42,7 +42,7 @@ const SectionHero: React.FC = () => {
             <h1 className="mb-6 font-display text-display-xl">表示空间是什么？</h1>
             <p className="mb-5 max-w-xl font-display text-[21px] font-bold leading-snug lg:text-[24px]">
               <span className="relative inline-block">
-                <span className="absolute bottom-0.5 left-0 right-0 h-4 bg-coral/55" />
+                <span className="absolute bottom-0.5 start-0 end-0 h-4 bg-coral/55" />
                 <span className="relative">表示空间是所有数字位置组成的地图，模型把内容放在其中。</span>
               </span>
             </p>

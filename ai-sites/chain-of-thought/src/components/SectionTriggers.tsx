@@ -108,7 +108,7 @@ const SectionTriggers: React.FC = () => {
                     key={t.id}
                     type="button"
                     onClick={() => setActiveId(t.id)}
-                    className={`text-left px-4 py-3.5 rounded-2xl border-2 border-ink transition-all duration-250 ease-spring ${
+                    className={`text-start px-4 py-3.5 rounded-2xl border-2 border-ink transition-all duration-250 ease-spring ${
                       on
                         ? "bg-ink text-cream shadow-stamp-lg -translate-x-0.5 -translate-y-0.5"
                         : "bg-white text-ink shadow-stamp hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-stamp-lg"

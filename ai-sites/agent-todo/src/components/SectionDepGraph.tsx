@@ -206,7 +206,7 @@ const SectionDepGraph: React.FC = () => {
                           >
                             {t.desc}
                             {t.deps.length > 0 && (
-                              <span className="ml-2 font-mono text-[11px] opacity-70">
+                              <span className="ms-2 font-mono text-[11px] opacity-70">
                                 · deps: {t.deps.join(",")}
                               </span>
                             )}

@@ -202,7 +202,7 @@ const SectionPrimitives: React.FC = () => {
           <h2 className="font-display text-display-lg text-ink mb-5 leading-tight">
             一个 server 能暴露 <span className="relative inline-block">
               <span
-                className="absolute left-0 right-0 bottom-0 h-3 lg:h-4 bg-butter -z-0"
+                className="absolute start-0 end-0 bottom-0 h-3 lg:h-4 bg-butter -z-0"
                 aria-hidden
               />
               <span className="relative z-10">三种东西</span>
@@ -225,7 +225,7 @@ const SectionPrimitives: React.FC = () => {
                 key={id}
                 onClick={() => setPid(id)}
                 className={[
-                  "px-4 py-3 rounded-2xl border-2 border-ink transition-all duration-250 ease-spring text-left flex items-center gap-3",
+                  "px-4 py-3 rounded-2xl border-2 border-ink transition-all duration-250 ease-spring text-start flex items-center gap-3",
                   on
                     ? "bg-ink text-cream shadow-stamp-lg -translate-y-0.5"
                     : "bg-white text-ink hover:bg-butter-tint shadow-stamp",

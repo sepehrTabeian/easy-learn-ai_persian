@@ -17,7 +17,7 @@ export const HelpTip: React.FC = () => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      className="fixed bottom-12 right-12 z-40 text-white/30 flex items-center gap-2 pointer-events-none select-none"
+      className="fixed bottom-12 end-12 z-40 text-white/30 flex items-center gap-2 pointer-events-none select-none"
     >
       <span className="text-lg">Click or Space to continue</span>
       <MousePointerClick size={20} />

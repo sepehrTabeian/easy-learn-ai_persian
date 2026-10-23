@@ -157,7 +157,7 @@ const SectionCalc: React.FC = () => {
                 <span className="font-semibold text-[13px]">{c.label}</span>
                 <span
                   className={[
-                    "ml-2 font-mono text-[10px]",
+                    "ms-2 font-mono text-[10px]",
                     on ? "text-ink/55" : "text-ink/40",
                   ].join(" ")}
                 >
@@ -351,7 +351,7 @@ function CostCard({ tone, name, sub, dollars, winner, breakdown }: CostCardProps
       </div>
       <div className="font-display text-[24px] font-bold text-ink leading-none tabular-nums mb-1.5">
         {fmtUSD(dollars)}
-        <span className="font-mono text-[11px] text-ink/45 font-normal ml-1">/ mo</span>
+        <span className="font-mono text-[11px] text-ink/45 font-normal ms-1">/ mo</span>
       </div>
       <p className="text-[11.5px] text-ink/60 leading-snug">{breakdown}</p>
     </div>

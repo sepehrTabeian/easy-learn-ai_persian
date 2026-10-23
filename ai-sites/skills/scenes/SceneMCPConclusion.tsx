@@ -15,10 +15,10 @@ export const SceneMCPConclusion: React.FC<SceneProps> = ({ step }) => {
       
       {/* Background Ambience */}
       <div className="absolute inset-0 pointer-events-none opacity-5">
-         <div className="absolute top-1/4 left-1/4 animate-pulse">
+         <div className="absolute top-1/4 start-1/4 animate-pulse">
              <HelpCircle size={100} />
          </div>
-         <div className="absolute bottom-1/4 right-1/4 animate-pulse" style={{ animationDelay: '1s' }}>
+         <div className="absolute bottom-1/4 end-1/4 animate-pulse" style={{ animationDelay: '1s' }}>
              <HelpCircle size={150} />
          </div>
       </div>
@@ -49,7 +49,7 @@ export const SceneMCPConclusion: React.FC<SceneProps> = ({ step }) => {
 
       {/* Step 1 & 2: The Conclusion */}
       {(step >= 1) && (
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full flex flex-col items-center z-20 mt-12">
+          <div className="absolute top-1/2 start-1/2 -translate-x-1/2 -translate-y-1/2 w-full flex flex-col items-center z-20 mt-12">
               
               {/* Part 1: Won't be eliminated */}
               <motion.div
@@ -77,7 +77,7 @@ export const SceneMCPConclusion: React.FC<SceneProps> = ({ step }) => {
                   >
                       <div className="bg-red-900/30 border border-red-500/50 p-6 rounded-2xl backdrop-blur-md flex items-center justify-between gap-6">
                           
-                          <div className="flex-1 text-left">
+                          <div className="flex-1 text-start">
                               <ChalkText size="xl" className="font-bold text-white mb-1">
                                   但对它的需求会
                               </ChalkText>

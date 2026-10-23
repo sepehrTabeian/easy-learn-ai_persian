@@ -80,7 +80,7 @@ const SectionPagedAttention: React.FC = () => {
             vLLM 快在哪？
             <br />
             <span className="relative inline-block">
-              <span className="absolute left-0 right-0 bottom-0.5 h-3 lg:h-4 bg-butter -z-0" aria-hidden />
+              <span className="absolute start-0 end-0 bottom-0.5 h-3 lg:h-4 bg-butter -z-0" aria-hidden />
               <span className="relative z-10">KV 显存按小块分配，少浪费。</span>
             </span>
           </h2>

@@ -82,7 +82,7 @@ const HeroMachine: React.FC = () => {
           <rect width="118" height="158" rx="18" fill="#1B4B5A" stroke="#241C15" strokeWidth="3" />
           <circle cx="59" cy="51" r="28" fill="#FBEFE3" stroke="#241C15" strokeWidth="3" />
           <Search x={45} y={37} className="h-7 w-7 text-ink" strokeWidth={2.8} />
-          <text x="59" y="105" textAnchor="middle" fontFamily="Plus Jakarta Sans, Noto Sans SC, sans-serif" fontSize="18" fontWeight="800" fill="#FBEFE3">
+          <text x="59" y="105" textAnchor="middle" fontFamily="Plus Jakarta Sans, Vazirmatn, sans-serif" fontSize="18" fontWeight="800" fill="#FBEFE3">
             召回
           </text>
           <text x="59" y="127" textAnchor="middle" fontFamily="Geist Mono, monospace" fontSize="10" fontWeight="700" fill="#FBEFE3" opacity="0.72">
@@ -102,7 +102,7 @@ const HeroMachine: React.FC = () => {
               <line x1="43" y1="32" x2="56" y2="32" stroke={i === 1 ? "#FBEFE3" : "#241C15"} strokeWidth="2" strokeLinecap="round" opacity="0.55" />
             </g>
           ))}
-          <text x="38" y="246" textAnchor="middle" fontFamily="Plus Jakarta Sans, Noto Sans SC, sans-serif" fontSize="18" fontWeight="800" fill="#241C15">
+          <text x="38" y="246" textAnchor="middle" fontFamily="Plus Jakarta Sans, Vazirmatn, sans-serif" fontSize="18" fontWeight="800" fill="#241C15">
             重排
           </text>
         </g>

@@ -112,7 +112,7 @@ export const VerificationGame = () => {
         {options.map((o,i) => <button key={o.text} onClick={() => setChoice(i)} className={`rounded-full border-2 border-ink px-4 py-2 font-bold ${choice===i ? "bg-ink text-white shadow-stamp" : "bg-white"}`}>例子 {i+1}</button>)}
       </div>
       <div className="mt-6 rounded-[2rem] border-2 border-ink bg-white p-6 shadow-stamp-lg">
-        <div className="flex flex-wrap gap-2">{tokens.map((t,i) => <span key={i} className={`rounded-xl border-2 border-ink px-3 py-2 font-bold ${i < row.accepted ? "bg-butter" : "bg-coral"}`}>{t}{i < row.accepted ? <Check className="ml-1 inline h-4 w-4" /> : <X className="ml-1 inline h-4 w-4" />}</span>)}</div>
+        <div className="flex flex-wrap gap-2">{tokens.map((t,i) => <span key={i} className={`rounded-xl border-2 border-ink px-3 py-2 font-bold ${i < row.accepted ? "bg-butter" : "bg-coral"}`}>{t}{i < row.accepted ? <Check className="ms-1 inline h-4 w-4" /> : <X className="ms-1 inline h-4 w-4" />}</span>)}</div>
         <p className="mt-5 text-sm text-ink/65">这个例子里，连续通过 {Math.min(row.accepted,tokens.length)} 块。红色部分要丢掉并重新生成。</p>
         <DemoNote />
       </div>

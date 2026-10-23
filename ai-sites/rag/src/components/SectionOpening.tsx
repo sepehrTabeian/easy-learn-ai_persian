@@ -22,13 +22,13 @@ const SectionOpening: React.FC = () => {
   return (
     <section className="relative px-4 sm:px-6 lg:px-8 pt-20 lg:pt-32 pb-20 lg:pb-32 overflow-hidden">
       {/* 浮动小色块装饰 */}
-      <div aria-hidden className="absolute top-32 right-[8%] hidden lg:block animate-float-y">
+      <div aria-hidden className="absolute top-32 end-[8%] hidden lg:block animate-float-y">
         <div className="w-12 h-12 bg-coral border-2 border-ink rounded-2xl shadow-stamp rotate-12" />
       </div>
-      <div aria-hidden className="absolute bottom-32 left-[6%] hidden lg:block animate-float-y-sm">
+      <div aria-hidden className="absolute bottom-32 start-[6%] hidden lg:block animate-float-y-sm">
         <div className="w-10 h-10 bg-teal border-2 border-ink rounded-full shadow-stamp -rotate-6" />
       </div>
-      <div aria-hidden className="absolute top-1/2 left-[42%] hidden xl:block animate-wiggle">
+      <div aria-hidden className="absolute top-1/2 start-[42%] hidden xl:block animate-wiggle">
         <div className="w-8 h-8 bg-butter border-2 border-ink rounded-md shadow-[2px_2px_0_0_#241C15]" />
       </div>
 
@@ -50,7 +50,7 @@ const SectionOpening: React.FC = () => {
             <p className="max-w-2xl font-display text-[22px] lg:text-[26px] font-bold text-ink leading-snug mb-6 animate-enter-up">
               <span className="relative inline-block">
                 <span
-                  className="absolute left-0 right-0 bottom-0.5 h-3.5 lg:h-5 bg-butter -z-0"
+                  className="absolute start-0 end-0 bottom-0.5 h-3.5 lg:h-5 bg-butter -z-0"
                   aria-hidden
                 />
                 <span className="relative z-10">

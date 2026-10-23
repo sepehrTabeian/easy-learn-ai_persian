@@ -87,7 +87,7 @@ const SectionLlama4: React.FC = () => {
           Llama 4 把
           <span className="relative inline-block">
             <span
-              className="absolute left-0 right-0 bottom-1 h-4 lg:h-5 bg-pop/40 -z-0 -rotate-1"
+              className="absolute start-0 end-0 bottom-1 h-4 lg:h-5 bg-pop/40 -z-0 -rotate-1"
               aria-hidden
             />
             <span className="relative z-10">dense 砍了</span>
@@ -251,7 +251,7 @@ const SectionLlama4: React.FC = () => {
         {/* Behemoth · 至今未发卡 */}
         <div className="bg-ink text-cream border-2 border-ink rounded-3xl shadow-stamp-lg p-6 lg:p-8 relative overflow-hidden">
           <div
-            className="absolute top-4 right-5 font-mono text-[10px] uppercase tracking-[0.2em] text-coral font-bold"
+            className="absolute top-4 end-5 font-mono text-[10px] uppercase tracking-[0.2em] text-coral font-bold"
           >
             still in training · 384 days +
           </div>

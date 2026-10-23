@@ -55,7 +55,7 @@ export default function Chapter29({ step }: { step: number }) {
                   <motion.div 
                     initial={{ x: -100, opacity: 0 }}
                     animate={{ x: 0, opacity: 1 }}
-                    className="bg-blue-50 border-l-8 border-blue-500 p-8 rounded-2xl shadow-lg flex items-center gap-8"
+                    className="bg-blue-50 border-s-8 border-blue-500 p-8 rounded-2xl shadow-lg flex items-center gap-8"
                   >
                     <div className="bg-blue-100 p-4 rounded-xl">
                       <MessageSquare className="w-10 h-10 text-blue-600" />
@@ -74,7 +74,7 @@ export default function Chapter29({ step }: { step: number }) {
                   <motion.div 
                     initial={{ x: 100, opacity: 0 }}
                     animate={{ x: 0, opacity: 1 }}
-                    className="bg-purple-50 border-l-8 border-purple-500 p-8 rounded-2xl shadow-lg flex items-center gap-8"
+                    className="bg-purple-50 border-s-8 border-purple-500 p-8 rounded-2xl shadow-lg flex items-center gap-8"
                   >
                     <div className="bg-purple-100 p-4 rounded-xl">
                       <Database className="w-10 h-10 text-purple-600" />
@@ -93,9 +93,9 @@ export default function Chapter29({ step }: { step: number }) {
                   <motion.div 
                     initial={{ y: 50, opacity: 0 }}
                     animate={{ y: 0, opacity: 1 }}
-                    className="bg-emerald-50 border-l-8 border-emerald-500 p-8 rounded-2xl shadow-2xl flex items-center gap-8 relative overflow-hidden"
+                    className="bg-emerald-50 border-s-8 border-emerald-500 p-8 rounded-2xl shadow-2xl flex items-center gap-8 relative overflow-hidden"
                   >
-                    <div className="absolute right-0 top-0 w-64 h-64 bg-emerald-200 rounded-full blur-3xl opacity-30 -translate-y-1/2 translate-x-1/4" />
+                    <div className="absolute end-0 top-0 w-64 h-64 bg-emerald-200 rounded-full blur-3xl opacity-30 -translate-y-1/2 translate-x-1/4" />
                     <div className="bg-emerald-100 p-4 rounded-xl relative z-10">
                       <ShieldCheck className="w-12 h-12 text-emerald-600" />
                     </div>
@@ -180,7 +180,7 @@ export default function Chapter29({ step }: { step: number }) {
                 transition={{ delay: 0.1 }}
                 className="flex items-center gap-8"
               >
-                <div className="w-1/2 text-right">
+                <div className="w-1/2 text-end">
                   <h4 className="text-3xl font-bold text-gray-700">当任务还只是<span className="text-blue-600 font-black mx-2">单轮生成</span>时</h4>
                 </div>
                 <div className="w-16 h-16 rounded-full bg-blue-100 flex items-center justify-center border-4 border-blue-300 z-10">
@@ -201,9 +201,9 @@ export default function Chapter29({ step }: { step: number }) {
                 className="flex items-center gap-8 relative"
               >
                 {/* Connecting Line */}
-                <div className="absolute left-1/2 top-[-60px] bottom-[60px] w-1 bg-gray-200 -translate-x-1/2 -z-10" />
+                <div className="absolute start-1/2 top-[-60px] bottom-[60px] w-1 bg-gray-200 -translate-x-1/2 -z-10" />
                 
-                <div className="w-1/2 text-right">
+                <div className="w-1/2 text-end">
                   <h4 className="text-3xl font-bold text-gray-700">当任务开始依赖<span className="text-purple-600 font-black mx-2">外部知识和运行时信息</span>时</h4>
                 </div>
                 <div className="w-16 h-16 rounded-full bg-purple-100 flex items-center justify-center border-4 border-purple-300 z-10">
@@ -224,9 +224,9 @@ export default function Chapter29({ step }: { step: number }) {
                 className="flex items-center gap-8 relative"
               >
                 {/* Connecting Line */}
-                <div className="absolute left-1/2 top-[-60px] bottom-[30px] w-1 bg-gray-200 -translate-x-1/2 -z-10" />
+                <div className="absolute start-1/2 top-[-60px] bottom-[30px] w-1 bg-gray-200 -translate-x-1/2 -z-10" />
 
-                <div className="w-1/2 text-right">
+                <div className="w-1/2 text-end">
                   <h4 className="text-3xl font-bold text-gray-700">但当模型真的进入<span className="text-emerald-600 font-black mx-2">长链路、可执行、低容错</span>的真实场景时</h4>
                 </div>
                 <div className="w-20 h-20 rounded-full bg-emerald-100 flex items-center justify-center border-4 border-emerald-400 z-10 shadow-lg">

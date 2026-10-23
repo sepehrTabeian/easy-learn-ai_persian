@@ -75,7 +75,7 @@ const SectionChatGPTMoment: React.FC = () => {
             <span className="relative inline-block">
               <span className="relative z-10">听得懂你的要求</span>
               <span
-                className="absolute left-0 right-0 bottom-1 h-3.5 lg:h-5 bg-butter -z-0"
+                className="absolute start-0 end-0 bottom-1 h-3.5 lg:h-5 bg-butter -z-0"
                 aria-hidden
               />
             </span>
@@ -96,7 +96,7 @@ const SectionChatGPTMoment: React.FC = () => {
 
         {/* 任务切换 */}
         <div className="flex flex-wrap items-center gap-2 mb-6">
-          <span className="font-mono text-[10px] uppercase tracking-[0.18em] text-ink/45 mr-1">
+          <span className="font-mono text-[10px] uppercase tracking-[0.18em] text-ink/45 me-1">
             换一道题
           </span>
           {TASKS.map((t) => {

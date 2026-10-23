@@ -90,7 +90,7 @@ export default function Chapter17({ step }: { step: number }) {
               一旦接上工具，模型才真正开始<span className="text-teal-500 mx-2">“做事”</span>
             </motion.h3>
 
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 mt-10">
+            <div className="absolute top-1/2 start-1/2 -translate-x-1/2 -translate-y-1/2 mt-10">
               {/* Central Brain */}
               <motion.div 
                 initial={{ scale: 0.8 }}
@@ -119,7 +119,7 @@ export default function Chapter17({ step }: { step: number }) {
                     style={{ marginLeft: -40, marginTop: -40 }}
                   >
                     {/* Connection Line */}
-                    <svg className="absolute top-1/2 left-1/2 -z-10 overflow-visible" style={{ width: 0, height: 0 }}>
+                    <svg className="absolute top-1/2 start-1/2 -z-10 overflow-visible" style={{ width: 0, height: 0 }}>
                       <line x1="0" y1="0" x2={-x} y2={-y} stroke="#99F6E4" strokeWidth="2" strokeDasharray="4 4" />
                     </svg>
 

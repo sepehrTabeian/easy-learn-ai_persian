@@ -4,7 +4,7 @@ import { DemoBadge, SectionShell, StampLink } from "./common";
 
 export const SectionJailbreakHero: React.FC = () => (
   <section className="relative overflow-hidden bg-ink px-5 pb-16 pt-16 text-cream md:px-8 md:pb-24 md:pt-24">
-    <div className="pointer-events-none absolute -left-20 bottom-12 h-44 w-44 rounded-full border-2 border-dashed border-butter/20" />
+    <div className="pointer-events-none absolute -start-20 bottom-12 h-44 w-44 rounded-full border-2 border-dashed border-butter/20" />
     <div className="relative mx-auto grid max-w-6xl gap-12 lg:grid-cols-[minmax(0,1fr)_minmax(400px,.88fr)] lg:items-center">
       <div className="min-w-0">
         <div className="inline-flex items-center gap-2 rounded-full border-2 border-cream bg-coral px-3 py-1.5 font-mono text-[11px] font-bold uppercase tracking-[.18em] shadow-[4px_4px_0_0_#FBEFE3]"><VenetianMask className="h-4 w-4" /> Jailbreaking · 模型越狱</div>
@@ -26,19 +26,19 @@ export const SectionJailbreakHero: React.FC = () => (
 
       <div className="relative mx-auto h-[420px] w-full max-w-[470px]">
         <div className="absolute inset-x-3 inset-y-5 rounded-[2.5rem] border-[3px] border-dashed border-butter bg-teal shadow-[10px_10px_0_0_#E07A5F]">
-          <div className="absolute left-6 top-6 font-mono text-[10px] font-bold uppercase tracking-[.18em] text-cream/55">模型的安全边界</div>
-          <div className="absolute left-1/2 top-1/2 flex h-32 w-32 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border-2 border-cream bg-ink shadow-[5px_5px_0_0_#E07A5F]">
+          <div className="absolute start-6 top-6 font-mono text-[10px] font-bold uppercase tracking-[.18em] text-cream/55">模型的安全边界</div>
+          <div className="absolute start-1/2 top-1/2 flex h-32 w-32 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border-2 border-cream bg-ink shadow-[5px_5px_0_0_#E07A5F]">
             <LockKeyhole className="h-14 w-14 text-butter" />
           </div>
-          <div className="absolute bottom-6 left-1/2 -translate-x-1/2 rounded-full border-2 border-cream bg-ink px-4 py-2 font-mono text-[10px] font-bold uppercase tracking-[.14em] text-cream">
+          <div className="absolute bottom-6 start-1/2 -translate-x-1/2 rounded-full border-2 border-cream bg-ink px-4 py-2 font-mono text-[10px] font-bold uppercase tracking-[.14em] text-cream">
             原本会拒绝
           </div>
         </div>
         {[
-          ["角色包装", "left-0 top-[24%] -rotate-3"],
-          ["改写说法", "right-0 top-[35%] rotate-3"],
-          ["多轮铺垫", "left-1 bottom-[25%] rotate-2"],
-          ["大量示例", "right-1 bottom-[13%] -rotate-2"],
+          ["角色包装", "start-0 top-[24%] -rotate-3"],
+          ["改写说法", "end-0 top-[35%] rotate-3"],
+          ["多轮铺垫", "start-1 bottom-[25%] rotate-2"],
+          ["大量示例", "end-1 bottom-[13%] -rotate-2"],
         ].map(([label, position]) => (
           <span key={label} className={`absolute ${position} rounded-full border-2 border-cream bg-coral px-4 py-2.5 font-mono text-[11px] font-bold shadow-[3px_3px_0_0_#FBEFE3]`}>
             {label}
@@ -106,7 +106,7 @@ export const SectionShapeShift: React.FC = () => {
       <h2 className="font-display text-display-lg">文字变了，真实目的没变</h2>
       <p className="mt-4 max-w-3xl leading-8 text-cream/75">切换包装，再改一改真实意图。安全判断需要穿过表面说法，看到最后想让模型做什么。</p>
       <div className="mt-9 grid gap-7 lg:grid-cols-[310px_1fr]">
-        <div className="space-y-3">{frames.map(([_, label], i) => <button key={label} onClick={() => setActive(i)} className={`w-full rounded-2xl border-2 border-ink p-4 text-left font-bold shadow-stamp ${active === i ? "bg-butter text-ink" : "bg-cream text-ink"}`}>{label}</button>)}</div>
+        <div className="space-y-3">{frames.map(([_, label], i) => <button key={label} onClick={() => setActive(i)} className={`w-full rounded-2xl border-2 border-ink p-4 text-start font-bold shadow-stamp ${active === i ? "bg-butter text-ink" : "bg-cream text-ink"}`}>{label}</button>)}</div>
         <div className="rounded-3xl border-2 border-ink bg-cream p-6 text-ink shadow-stamp-xl">
           <label className="font-mono text-xs font-bold uppercase tracking-[.16em]">真实意图<input value={intent} onChange={(e) => setIntent(e.target.value)} className="mt-2 w-full rounded-xl border-2 border-ink bg-white p-3 font-sans text-sm" /></label>
           <div key={active} className="mt-5 rounded-2xl border-2 border-ink bg-butter-tint p-5 animate-enter-pop">
@@ -187,8 +187,8 @@ export const SectionRedTeam: React.FC = () => {
       <h2 className="font-display text-display-lg">攻击写法一直在变化，需要持续测试</h2>
       <p className="mt-4 max-w-3xl leading-8 text-ink/70">固定黑名单很快会漏掉新写法。越狱测试专门收集“同一危险意图的不同表达”，反复检查模型是否会漏判。</p>
       <div className="mt-9 grid gap-7 lg:grid-cols-2">
-        <div className="space-y-3">{tasks.map((x, i) => { const on = checked.includes(i); return <button key={x} onClick={() => setChecked(on ? checked.filter((n) => n !== i) : [...checked, i])} className={`flex w-full items-center gap-3 rounded-2xl border-2 border-ink p-4 text-left shadow-stamp ${on ? "bg-teal text-cream" : "bg-white"}`}><span className={`flex h-7 w-7 items-center justify-center rounded-md border-2 border-ink ${on ? "bg-butter text-ink" : "bg-cream"}`}>{on && <Check className="h-4 w-4" />}</span><b>{x}</b></button>; })}<p className="pt-2 font-mono text-xs text-ink/55">已完成 {checked.length} / {tasks.length} 项测试</p></div>
-        <div className="space-y-3">{notes.map(([q, a], i) => <div key={q} className="overflow-hidden rounded-2xl border-2 border-ink bg-white shadow-stamp"><button onClick={() => setOpen(open === i ? -1 : i)} className="flex w-full items-center justify-between p-5 text-left font-bold">{q}<ChevronDown className={`h-5 w-5 transition ${open === i ? "rotate-180" : ""}`} /></button>{open === i && <p className="px-5 pb-5 leading-7 text-ink/70">{a}</p>}</div>)}</div>
+        <div className="space-y-3">{tasks.map((x, i) => { const on = checked.includes(i); return <button key={x} onClick={() => setChecked(on ? checked.filter((n) => n !== i) : [...checked, i])} className={`flex w-full items-center gap-3 rounded-2xl border-2 border-ink p-4 text-start shadow-stamp ${on ? "bg-teal text-cream" : "bg-white"}`}><span className={`flex h-7 w-7 items-center justify-center rounded-md border-2 border-ink ${on ? "bg-butter text-ink" : "bg-cream"}`}>{on && <Check className="h-4 w-4" />}</span><b>{x}</b></button>; })}<p className="pt-2 font-mono text-xs text-ink/55">已完成 {checked.length} / {tasks.length} 项测试</p></div>
+        <div className="space-y-3">{notes.map(([q, a], i) => <div key={q} className="overflow-hidden rounded-2xl border-2 border-ink bg-white shadow-stamp"><button onClick={() => setOpen(open === i ? -1 : i)} className="flex w-full items-center justify-between p-5 text-start font-bold">{q}<ChevronDown className={`h-5 w-5 transition ${open === i ? "rotate-180" : ""}`} /></button>{open === i && <p className="px-5 pb-5 leading-7 text-ink/70">{a}</p>}</div>)}</div>
       </div>
       <div className="mt-11 grid gap-5 md:grid-cols-3">
         <StampLink href="../prompt-injection/index.html" title="Prompt Injection" desc="看任务怎样被用户或外部资料偷换。" />

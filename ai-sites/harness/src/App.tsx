@@ -126,7 +126,7 @@ export default function App() {
       </div>
 
       {/* Invisible Progress Bar */}
-      <div className="absolute bottom-0 left-0 w-full h-12 opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end pb-2 px-8 z-50">
+      <div className="absolute bottom-0 start-0 w-full h-12 opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end pb-2 px-8 z-50">
         <div className="w-full flex gap-2 h-2">
           {CHAPTERS.map((chap, idx) => (
             <div
@@ -141,14 +141,14 @@ export default function App() {
             >
               {idx === currentChapter && (
                 <motion.div
-                  className="absolute top-0 left-0 h-full bg-[#14B8A6]"
+                  className="absolute top-0 start-0 h-full bg-[#14B8A6]"
                   initial={{ width: 0 }}
                   animate={{ width: `${((currentStep + 1) / chap.steps) * 100}%` }}
                   transition={{ duration: 0.3 }}
                 />
               )}
               {idx < currentChapter && (
-                <div className="absolute top-0 left-0 h-full w-full bg-[#14B8A6]" />
+                <div className="absolute top-0 start-0 h-full w-full bg-[#14B8A6]" />
               )}
             </div>
           ))}

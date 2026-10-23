@@ -170,7 +170,7 @@ const SectionInside: React.FC = () => {
             <div className="grid grid-cols-[40px_1fr] gap-2 items-center">
               {Array.from({ length: 8 }).map((_, pos) => (
                 <React.Fragment key={`pos-${pos}`}>
-                  <div className="font-mono text-[11px] font-bold text-ink/65 text-right">
+                  <div className="font-mono text-[11px] font-bold text-ink/65 text-end">
                     pos {pos}
                   </div>
                   <div className="flex gap-1">

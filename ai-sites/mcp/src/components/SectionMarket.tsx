@@ -230,7 +230,7 @@ const SectionMarket: React.FC = () => {
               到 2026 年，
               <span className="relative inline-block">
                 <span
-                  className="absolute left-0 right-0 bottom-0 h-3 lg:h-4 bg-butter -z-0"
+                  className="absolute start-0 end-0 bottom-0 h-3 lg:h-4 bg-butter -z-0"
                   aria-hidden
                 />
                 <span className="relative z-10">9,400+ 个</span>
@@ -287,7 +287,7 @@ const SectionMarket: React.FC = () => {
                 {c.label}
                 <span
                   className={[
-                    "ml-2 font-sans normal-case tracking-normal text-[11px]",
+                    "ms-2 font-sans normal-case tracking-normal text-[11px]",
                     on ? "text-cream/70" : "text-ink/55",
                   ].join(" ")}
                 >
@@ -296,7 +296,7 @@ const SectionMarket: React.FC = () => {
               </button>
             );
           })}
-          <div className="ml-auto self-center font-mono text-[10px] text-ink/45 uppercase tracking-[0.18em]">
+          <div className="ms-auto self-center font-mono text-[10px] text-ink/45 uppercase tracking-[0.18em]">
             显示 {list.length} / {SERVERS.length}
           </div>
         </div>
@@ -310,7 +310,7 @@ const SectionMarket: React.FC = () => {
                 key={s.id}
                 onClick={() => setOpenId(open ? null : s.id)}
                 className={[
-                  "text-left rounded-2xl border-2 border-ink p-4 transition-all duration-300 ease-spring",
+                  "text-start rounded-2xl border-2 border-ink p-4 transition-all duration-300 ease-spring",
                   open
                     ? "bg-cream shadow-stamp-xl -translate-x-1 -translate-y-1"
                     : "bg-white shadow-stamp hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-stamp-lg",

@@ -17,7 +17,7 @@ const SectionHero: React.FC = () => {
   return (
     <section className="relative px-4 sm:px-6 lg:px-8 pt-20 lg:pt-28 pb-20 lg:pb-24 overflow-hidden">
       {/* 装饰：左下散落小圆点 */}
-      <div className="absolute bottom-10 left-[6%] hidden md:grid grid-cols-5 gap-2 pointer-events-none opacity-60">
+      <div className="absolute bottom-10 start-[6%] hidden md:grid grid-cols-5 gap-2 pointer-events-none opacity-60">
         {Array.from({ length: 15 }).map((_, i) => (
           <span key={i} className="w-1.5 h-1.5 rounded-full bg-ink/30" />
         ))}
@@ -120,12 +120,12 @@ const SectionHero: React.FC = () => {
         <div className="lg:col-span-5">
           <div className="relative h-[460px] flex items-center justify-center">
             {/* 顶部场景标 */}
-            <div className="absolute top-0 left-1/2 -translate-x-1/2 px-3 py-1 bg-ink text-cream font-mono text-[10px] tracking-[0.22em] uppercase rounded-full">
+            <div className="absolute top-0 start-1/2 -translate-x-1/2 px-3 py-1 bg-ink text-cream font-mono text-[10px] tracking-[0.22em] uppercase rounded-full">
               MAIN CONVERSATION
             </div>
 
             {/* 主 Agent 大方块（左上） */}
-            <div className="absolute top-[40px] left-[6%] w-[180px] bg-coral border-2 border-ink rounded-3xl shadow-stamp-lg px-5 py-4">
+            <div className="absolute top-[40px] start-[6%] w-[180px] bg-coral border-2 border-ink rounded-3xl shadow-stamp-lg px-5 py-4">
               <div className="font-mono text-[10px] tracking-[0.22em] uppercase text-cream/85 mb-1.5">
                 MAIN AGENT
               </div>
@@ -138,7 +138,7 @@ const SectionHero: React.FC = () => {
             </div>
 
             {/* 派出动作：箭头 + 标签 */}
-            <div className="absolute top-[140px] left-[40%] flex items-center gap-1.5">
+            <div className="absolute top-[140px] start-[40%] flex items-center gap-1.5">
               <Send className="w-4 h-4 text-ink" strokeWidth={2.4} />
               <span className="font-mono text-[10.5px] font-bold tracking-[0.18em] uppercase text-ink/75">
                 外包
@@ -146,7 +146,7 @@ const SectionHero: React.FC = () => {
             </div>
 
             {/* SubAgent 小方块（右） */}
-            <div className="absolute top-[110px] right-[8%] w-[150px] bg-butter border-2 border-ink rounded-2xl shadow-stamp px-4 py-3">
+            <div className="absolute top-[110px] end-[8%] w-[150px] bg-butter border-2 border-ink rounded-2xl shadow-stamp px-4 py-3">
               <div className="font-mono text-[10px] tracking-[0.22em] uppercase text-ink/70 mb-1">
                 SUB AGENT
               </div>
@@ -159,13 +159,13 @@ const SectionHero: React.FC = () => {
             </div>
 
             {/* 独立空间标签 */}
-            <div className="absolute top-[88px] right-[6%] w-[160px] h-[160px] border-2 border-dashed border-ink/35 rounded-3xl pointer-events-none" />
-            <div className="absolute top-[78px] right-[18%] px-2 py-0.5 bg-cream border border-ink/50 font-mono text-[9px] tracking-[0.18em] uppercase text-ink/60 rounded">
+            <div className="absolute top-[88px] end-[6%] w-[160px] h-[160px] border-2 border-dashed border-ink/35 rounded-3xl pointer-events-none" />
+            <div className="absolute top-[78px] end-[18%] px-2 py-0.5 bg-cream border border-ink/50 font-mono text-[9px] tracking-[0.18em] uppercase text-ink/60 rounded">
               独立空间
             </div>
 
             {/* 子 Agent 内部噪音（堆叠的小条） */}
-            <div className="absolute top-[200px] right-[10%] w-[150px] space-y-1 opacity-60">
+            <div className="absolute top-[200px] end-[10%] w-[150px] space-y-1 opacity-60">
               {Array.from({ length: 4 }).map((_, i) => (
                 <div
                   key={i}
@@ -180,7 +180,7 @@ const SectionHero: React.FC = () => {
 
             {/* 摘要回流箭头（从子 Agent 回主 Agent） */}
             <svg
-              className="absolute top-[250px] left-[18%] w-[60%] h-[60px] pointer-events-none"
+              className="absolute top-[250px] start-[18%] w-[60%] h-[60px] pointer-events-none"
               viewBox="0 0 220 60"
               fill="none"
             >
@@ -202,7 +202,7 @@ const SectionHero: React.FC = () => {
             </svg>
 
             {/* 摘要小卡片（最下方） */}
-            <div className="absolute bottom-[6px] left-1/2 -translate-x-1/2 w-[78%]">
+            <div className="absolute bottom-[6px] start-1/2 -translate-x-1/2 w-[78%]">
               <div className="bg-cream border-2 border-ink rounded-2xl shadow-stamp px-5 py-3.5">
                 <div className="font-mono text-[10px] tracking-[0.22em] uppercase text-ink/55 mb-1">
                   RETURN · 摘要

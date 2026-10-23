@@ -22,7 +22,7 @@ const STICKY_ITEMS: { text: string; done: boolean; tone: "ink" | "muted" }[] = [
 const SectionHero: React.FC = () => {
   return (
     <section className="relative px-4 sm:px-6 lg:px-8 pt-20 lg:pt-28 pb-20 lg:pb-24 overflow-hidden">
-      <div className="absolute top-14 right-[6%] hidden md:grid grid-cols-5 gap-2 pointer-events-none opacity-55">
+      <div className="absolute top-14 end-[6%] hidden md:grid grid-cols-5 gap-2 pointer-events-none opacity-55">
         {Array.from({ length: 15 }).map((_, i) => (
           <span key={i} className="w-1.5 h-1.5 rounded-full bg-ink/30" />
         ))}
@@ -121,9 +121,9 @@ const SectionHero: React.FC = () => {
             <div className="absolute inset-x-4 top-6 bottom-6 bg-ink/[0.04] rounded-3xl border border-dashed border-ink/15" />
 
             {/* 折角便利贴 主图 */}
-            <div className="absolute top-[40px] left-1/2 -translate-x-1/2 w-[78%] max-w-[340px]">
+            <div className="absolute top-[40px] start-1/2 -translate-x-1/2 w-[78%] max-w-[340px]">
               {/* 顶部图钉 */}
-              <div className="absolute -top-3 left-1/2 -translate-x-1/2 z-20">
+              <div className="absolute -top-3 start-1/2 -translate-x-1/2 z-20">
                 <div className="w-6 h-6 rounded-full bg-pop border-2 border-ink shadow-stamp flex items-center justify-center">
                   <div className="w-1.5 h-1.5 rounded-full bg-ink" />
                 </div>
@@ -133,7 +133,7 @@ const SectionHero: React.FC = () => {
               <div className="relative bg-butter border-2 border-ink rounded-2xl shadow-stamp-xl px-6 pt-7 pb-5 rotate-[-2deg]">
                 {/* 折角 */}
                 <div
-                  className="absolute bottom-0 right-0 w-10 h-10 bg-cream border-l-2 border-t-2 border-ink rounded-br-2xl"
+                  className="absolute bottom-0 end-0 w-10 h-10 bg-cream border-s-2 border-t-2 border-ink rounded-ee-2xl"
                   style={{
                     clipPath: "polygon(100% 0, 100% 100%, 0 100%)",
                   }}
@@ -185,7 +185,7 @@ const SectionHero: React.FC = () => {
             </div>
 
             {/* 旁边的小贴 · X */}
-            <div className="absolute bottom-[40px] right-[6%] rotate-[6deg]">
+            <div className="absolute bottom-[40px] end-[6%] rotate-[6deg]">
               <div className="bg-coral text-white border-2 border-ink rounded-xl shadow-stamp-lg px-3.5 py-2.5">
                 <div className="flex items-center gap-1.5">
                   <X className="w-3.5 h-3.5" strokeWidth={3} />
@@ -197,7 +197,7 @@ const SectionHero: React.FC = () => {
             </div>
 
             {/* 旁边小贴 · ✓ */}
-            <div className="absolute top-[80px] left-[4%] rotate-[-8deg]">
+            <div className="absolute top-[80px] start-[4%] rotate-[-8deg]">
               <div className="bg-teal text-white border-2 border-ink rounded-xl shadow-stamp px-3 py-2">
                 <div className="flex items-center gap-1.5">
                   <Check className="w-3.5 h-3.5" strokeWidth={3} />

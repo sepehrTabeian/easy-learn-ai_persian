@@ -65,7 +65,7 @@ export default function Chapter20({ step }: { step: number }) {
                 <motion.div 
                   animate={{ y: [0, -10, 0] }}
                   transition={{ duration: 2, repeat: Infinity }}
-                  className="absolute -right-6 -top-6 bg-emerald-100 p-3 rounded-full border-2 border-emerald-300 shadow-lg"
+                  className="absolute -end-6 -top-6 bg-emerald-100 p-3 rounded-full border-2 border-emerald-300 shadow-lg"
                 >
                   <ThumbsUp className="w-8 h-8 text-emerald-500" />
                 </motion.div>

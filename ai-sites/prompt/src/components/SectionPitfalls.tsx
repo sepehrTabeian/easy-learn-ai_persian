@@ -158,7 +158,7 @@ const SectionPitfalls: React.FC = () => {
               <div key={pf.id} className="border-2 border-ink rounded-2xl bg-white shadow-stamp overflow-hidden">
                 <button
                   onClick={() => setOpen(isOpen ? null : pf.id)}
-                  className="w-full flex items-center justify-between gap-3 px-5 py-4 text-left"
+                  className="w-full flex items-center justify-between gap-3 px-5 py-4 text-start"
                 >
                   <span className="flex items-center gap-3">
                     <span className="font-mono text-[11px] font-bold text-coral">坑</span>

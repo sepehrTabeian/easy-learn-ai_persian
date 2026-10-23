@@ -24,7 +24,7 @@ const SectionGenerationLoop: React.FC = () => {
             {answer.slice(0, count).map((token, index) => (
               <span key={`${token}-${index}`} className="inline-block bg-butter border border-ink rounded-md px-1.5 py-0.5 mx-0.5 animate-enter-pop">{token}</span>
             ))}
-            {!done && <span className="inline-block w-2 h-6 bg-coral align-middle ml-1 animate-pulse-dot" />}
+            {!done && <span className="inline-block w-2 h-6 bg-coral align-middle ms-1 animate-pulse-dot" />}
           </div>
           <div className="mt-5 flex flex-wrap gap-3">
             <button className="btn-stamp bg-ink text-white" onClick={() => setCount(Math.min(answer.length, count + 1))} disabled={done}>

@@ -36,7 +36,7 @@ const SectionChallenges: React.FC = () => {
           <br />
           但每个零件都有{" "}
           <span className="relative inline-block">
-            <span className="absolute left-0 right-0 bottom-1 h-4 lg:h-5 bg-coral/55 -z-0 -rotate-1" aria-hidden />
+            <span className="absolute start-0 end-0 bottom-1 h-4 lg:h-5 bg-coral/55 -z-0 -rotate-1" aria-hidden />
             <span className="relative z-10">能翻车的地方</span>
           </span>
           。
@@ -94,7 +94,7 @@ const SectionChallenges: React.FC = () => {
 
         <a
           href="../graphrag/index.html"
-          className="group -mt-12 mb-20 ml-auto flex max-w-2xl items-start gap-3 rounded-2xl border-2 border-ink bg-butter p-5 text-ink shadow-stamp transition-all duration-250 ease-spring hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-stamp-lg"
+          className="group -mt-12 mb-20 ms-auto flex max-w-2xl items-start gap-3 rounded-2xl border-2 border-ink bg-butter p-5 text-ink shadow-stamp transition-all duration-250 ease-spring hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-stamp-lg"
         >
           <span className="mt-0.5 inline-flex h-7 w-7 shrink-0 items-center justify-center rounded-full border-2 border-ink bg-white">
             <ExternalLink className="h-4 w-4 text-ink" strokeWidth={2.4} />
@@ -117,7 +117,7 @@ const SectionChallenges: React.FC = () => {
             <br />
             它已经藏进了你天天用的{" "}
             <span className="relative inline-block">
-              <span className="absolute left-0 right-0 bottom-1 h-4 lg:h-6 bg-butter -z-0 rotate-1" aria-hidden />
+              <span className="absolute start-0 end-0 bottom-1 h-4 lg:h-6 bg-butter -z-0 rotate-1" aria-hidden />
               <span className="relative z-10">默认功能</span>
             </span>
             里。
@@ -274,10 +274,10 @@ const RagVsLongContext: React.FC = () => {
             <div className="col-span-4 px-4 py-3 font-mono text-[10px] uppercase tracking-[0.18em] font-semibold">
               维度
             </div>
-            <div className="col-span-4 px-4 py-3 font-mono text-[10px] uppercase tracking-[0.18em] font-semibold border-l border-cream/15">
+            <div className="col-span-4 px-4 py-3 font-mono text-[10px] uppercase tracking-[0.18em] font-semibold border-s border-cream/15">
               RAG
             </div>
-            <div className="col-span-4 px-4 py-3 font-mono text-[10px] uppercase tracking-[0.18em] font-semibold border-l border-cream/15">
+            <div className="col-span-4 px-4 py-3 font-mono text-[10px] uppercase tracking-[0.18em] font-semibold border-s border-cream/15">
               Long Context
             </div>
           </div>
@@ -297,7 +297,7 @@ const RagVsLongContext: React.FC = () => {
               </div>
               <div
                 className={[
-                  "col-span-4 px-4 py-3.5 border-l border-ink/12 text-[12.5px] flex items-center gap-2",
+                  "col-span-4 px-4 py-3.5 border-s border-ink/12 text-[12.5px] flex items-center gap-2",
                   d.winner === "rag" ? "bg-teal/12" : "",
                 ].join(" ")}
               >
@@ -308,7 +308,7 @@ const RagVsLongContext: React.FC = () => {
               </div>
               <div
                 className={[
-                  "col-span-4 px-4 py-3.5 border-l border-ink/12 text-[12.5px] flex items-center gap-2",
+                  "col-span-4 px-4 py-3.5 border-s border-ink/12 text-[12.5px] flex items-center gap-2",
                   d.winner === "lc" ? "bg-teal/12" : "",
                 ].join(" ")}
               >

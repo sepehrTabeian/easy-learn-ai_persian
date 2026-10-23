@@ -68,7 +68,7 @@ export default function SectionCorpus() {
                 <button
                   key={i}
                   onClick={() => setPicked(active ? null : i)}
-                  className={`text-left px-3 py-2.5 rounded-xl border-2 transition-all duration-250 ease-spring ${
+                  className={`text-start px-3 py-2.5 rounded-xl border-2 transition-all duration-250 ease-spring ${
                     active
                       ? "bg-ink text-cream border-ink shadow-stamp -translate-y-[1px]"
                       : "bg-butter/10 border-ink/20 hover:border-ink text-ink"

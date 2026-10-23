@@ -45,7 +45,7 @@ const SectionWhyNeed: React.FC = () => {
             <span
               className={[
                 "absolute top-1/2 -translate-y-1/2 h-7 w-7 rounded-full border-2 border-ink bg-white transition-all duration-300 ease-spring",
-                labeled ? "left-[52px]" : "left-1",
+                labeled ? "start-[52px]" : "start-1",
               ].join(" ")}
             />
           </button>

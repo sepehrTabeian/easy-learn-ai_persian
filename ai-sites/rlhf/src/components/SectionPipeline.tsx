@@ -189,7 +189,7 @@ const SectionPipeline: React.FC = () => {
                   <button
                     onClick={() => setCursor(i)}
                     className={[
-                      "flex-1 px-3 py-3.5 border-2 border-ink rounded-2xl text-left transition-all duration-300 ease-spring",
+                      "flex-1 px-3 py-3.5 border-2 border-ink rounded-2xl text-start transition-all duration-300 ease-spring",
                       active
                         ? "bg-ink text-cream shadow-[6px_6px_0_0_#E07A5F] -translate-y-1"
                         : reached

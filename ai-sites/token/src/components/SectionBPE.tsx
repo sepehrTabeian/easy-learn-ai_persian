@@ -293,7 +293,7 @@ const SectionBPE: React.FC = () => {
                           <div className="font-mono text-[12px] font-bold text-ink tabular-nums">
                             {pf.freq}
                             {isWinner && (
-                              <span className="ml-1.5 font-mono text-[9px] uppercase tracking-wider text-ink/55">
+                              <span className="ms-1.5 font-mono text-[9px] uppercase tracking-wider text-ink/55">
                                 ← 合
                               </span>
                             )}

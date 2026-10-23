@@ -230,7 +230,7 @@ function Row({ label, value, color }: { label: string; value: number; color: str
         style={{ background: color }}
       />
       <span className="font-mono text-xs text-ink-tertiary w-12">{label}</span>
-      <span className="font-mono text-ink font-semibold flex-1 text-right">
+      <span className="font-mono text-ink font-semibold flex-1 text-end">
         {value.toFixed(1)}
       </span>
       <div className="w-20 h-2 bg-white border border-ink/30 overflow-hidden">

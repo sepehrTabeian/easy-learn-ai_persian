@@ -47,7 +47,7 @@ const SectionDedup: React.FC = () => {
             <span
               className={[
                 "absolute top-1/2 -translate-y-1/2 h-7 w-7 rounded-full border-2 border-ink bg-white transition-all duration-300 ease-spring",
-                dedup ? "left-[52px]" : "left-1",
+                dedup ? "start-[52px]" : "start-1",
               ].join(" ")}
             />
           </button>
@@ -79,7 +79,7 @@ const SectionDedup: React.FC = () => {
                     >
                       {r.t}
                       {!dedup && r.dup && (
-                        <span className="ml-2 font-bold text-[11px] text-coral">← 重复</span>
+                        <span className="ms-2 font-bold text-[11px] text-coral">← 重复</span>
                       )}
                     </div>
                   );

@@ -72,7 +72,7 @@ export default function Chapter10({ step }: { step: number }) {
                   <motion.div 
                     animate={{ x: [0, 200], opacity: [1, 0], scale: [1, 0.5] }}
                     transition={{ duration: 1.5, repeat: Infinity, ease: "easeIn" }}
-                    className="absolute right-0 top-1/2 -translate-y-1/2 w-6 h-6 bg-blue-400 rounded-full shadow-[0_0_20px_rgba(96,165,250,1)]"
+                    className="absolute end-0 top-1/2 -translate-y-1/2 w-6 h-6 bg-blue-400 rounded-full shadow-[0_0_20px_rgba(96,165,250,1)]"
                   />
                 </div>
                 <span className="text-xl font-bold text-blue-600">外部知识库</span>
@@ -90,7 +90,7 @@ export default function Chapter10({ step }: { step: number }) {
                   <motion.div 
                     animate={{ opacity: [0.3, 1, 0.3] }}
                     transition={{ duration: 2, repeat: Infinity }}
-                    className="absolute top-4 right-4 w-8 h-8 border-4 border-dashed border-purple-400 rounded-lg flex items-center justify-center"
+                    className="absolute top-4 end-4 w-8 h-8 border-4 border-dashed border-purple-400 rounded-lg flex items-center justify-center"
                   >
                     <span className="text-purple-400 font-bold">?</span>
                   </motion.div>
@@ -184,7 +184,7 @@ export default function Chapter10({ step }: { step: number }) {
                     animate={{ opacity: 1, y: 0 }}
                     className="text-3xl text-[#14B8A6] font-bold mt-6"
                   >
-                    它关心的是<span className="text-5xl ml-2 bg-[#14B8A6]/10 px-6 py-2 rounded-xl border border-[#14B8A6]/30">整条链路</span>
+                    它关心的是<span className="text-5xl ms-2 bg-[#14B8A6]/10 px-6 py-2 rounded-xl border border-[#14B8A6]/30">整条链路</span>
                   </motion.p>
                 )}
               </AnimatePresence>
@@ -204,7 +204,7 @@ export default function Chapter10({ step }: { step: number }) {
                     initial={{ width: '0%' }}
                     animate={{ width: step === 4 ? '33%' : step === 5 ? '66%' : '100%' }}
                     transition={{ duration: 0.8, ease: "easeInOut" }}
-                    className="absolute left-0 top-0 h-full bg-gradient-to-r from-[#3B82F6] via-[#14B8A6] to-[#8B5CF6] rounded-full shadow-[0_0_20px_rgba(20,184,166,0.5)]"
+                    className="absolute start-0 top-0 h-full bg-gradient-to-r from-[#3B82F6] via-[#14B8A6] to-[#8B5CF6] rounded-full shadow-[0_0_20px_rgba(20,184,166,0.5)]"
                   />
 
                   {/* Pipeline Nodes */}
@@ -251,7 +251,7 @@ export default function Chapter10({ step }: { step: number }) {
                         initial={{ opacity: 0, x: -20 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ delay: 0.8 }}
-                        className="absolute -right-16 top-1/2 -translate-y-1/2 flex flex-col items-center gap-2"
+                        className="absolute -end-16 top-1/2 -translate-y-1/2 flex flex-col items-center gap-2"
                       >
                         <Sparkles className="w-10 h-10 text-[#8B5CF6] animate-pulse" />
                         <span className="text-sm font-bold text-[#8B5CF6] whitespace-nowrap">高质量 Context</span>

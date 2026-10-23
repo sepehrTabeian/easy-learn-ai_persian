@@ -54,7 +54,7 @@ export const SectionGraphHero: React.FC = () => (
         </div>
       </div>
       <div className="relative mx-auto w-full max-w-lg">
-        <div className="absolute -left-4 -top-4 h-full w-full rounded-[32px] border-2 border-ink bg-coral" />
+        <div className="absolute -start-4 -top-4 h-full w-full rounded-[32px] border-2 border-ink bg-coral" />
         <div className="relative rounded-[32px] border-2 border-ink bg-white p-5 shadow-stamp-xl">
           <GraphSvg active={["林然", "星河科技", "北斗项目", "上海"]} edges={baseEdges} />
           <p className="mt-3 text-center font-mono text-xs font-bold uppercase tracking-[0.16em] text-ink/45">
@@ -110,7 +110,7 @@ export const SectionBuildFacts: React.FC = () => {
                   }`}
                 >
                   {part.text}
-                  <span className="ml-2 font-mono text-[10px] opacity-55">{selected ? part.kind : "点我"}</span>
+                  <span className="ms-2 font-mono text-[10px] opacity-55">{selected ? part.kind : "点我"}</span>
                 </button>
               );
             })}
@@ -266,7 +266,7 @@ export const SectionEntityCleanup: React.FC = () => {
                     old.includes(person.id) ? old.filter((id) => id !== person.id) : [...old, person.id],
                   )
                 }
-                className={`w-full rounded-2xl border-2 border-ink p-4 text-left shadow-stamp transition-all ${
+                className={`w-full rounded-2xl border-2 border-ink p-4 text-start shadow-stamp transition-all ${
                   active ? "bg-ink text-cream" : "bg-cream text-ink"
                 }`}
               >
@@ -305,7 +305,7 @@ export const SectionKnowledgeChanges: React.FC = () => {
           </button>
           {showForm && (
             <button
-              className="mt-4 flex w-full items-center justify-between rounded-2xl border-2 border-ink bg-white p-4 text-left shadow-stamp"
+              className="mt-4 flex w-full items-center justify-between rounded-2xl border-2 border-ink bg-white p-4 text-start shadow-stamp"
               onClick={() => {
                 setFacts((old) => [...old, { id: nextId, from: "林然", to: "上海", relation: "常驻" }]);
                 setShowForm(false);
@@ -355,7 +355,7 @@ export const SectionGraphUses: React.FC = () => {
               <button
                 key={item.title}
                 onClick={() => setActive(index)}
-                className={`w-full rounded-xl border-2 border-ink p-4 text-left font-bold ${
+                className={`w-full rounded-xl border-2 border-ink p-4 text-start font-bold ${
                   active === index ? "bg-ink text-cream shadow-stamp" : "bg-white"
                 }`}
               >
@@ -415,7 +415,7 @@ const GraphSvg: React.FC<{
         return (
           <g key={id} opacity={visible ? 1 : 0.13}>
             <circle cx={x} cy={y} r="28" fill={index % 2 ? "#E07A5F" : "#F4D35E"} stroke="#241C15" strokeWidth="2.5" />
-            <text x={x} y={y + 4} textAnchor="middle" fontFamily="Plus Jakarta Sans, Noto Sans SC, sans-serif" fontSize="11" fontWeight="800" fill={index % 2 ? "#FBEFE3" : "#241C15"}>{id}</text>
+            <text x={x} y={y + 4} textAnchor="middle" fontFamily="Plus Jakarta Sans, Vazirmatn, sans-serif" fontSize="11" fontWeight="800" fill={index % 2 ? "#FBEFE3" : "#241C15"}>{id}</text>
           </g>
         );
       })}

@@ -34,7 +34,7 @@ export const HUMAN_SLIDES: SlideData[] = [
             {/* Exam Master */}
             <div className="flex flex-col items-center group">
                <div className="w-40 h-40 rounded-full bg-slate-800 border-2 border-green-500 flex items-center justify-center mb-6 relative grayscale opacity-70">
-                   <div className="absolute top-0 right-0 bg-green-500 text-black font-bold px-3 py-1 rounded-full text-lg">A+</div>
+                   <div className="absolute top-0 end-0 bg-green-500 text-black font-bold px-3 py-1 rounded-full text-lg">A+</div>
                    <MessageSquare size={60} className="text-gray-400" />
                </div>
                <h3 className="text-2xl font-bold text-gray-400">“做题家”模型</h3>
@@ -74,8 +74,8 @@ export const HUMAN_SLIDES: SlideData[] = [
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom,_var(--tw-gradient-stops))] from-orange-900/40 via-transparent to-transparent"></div>
                 
                 {/* Spotlights */}
-                <div className="absolute -top-20 left-1/4 w-20 h-96 bg-white/5 rotate-[15deg] blur-xl"></div>
-                <div className="absolute -top-20 right-1/4 w-20 h-96 bg-white/5 rotate-[-15deg] blur-xl"></div>
+                <div className="absolute -top-20 start-1/4 w-20 h-96 bg-white/5 rotate-[15deg] blur-xl"></div>
+                <div className="absolute -top-20 end-1/4 w-20 h-96 bg-white/5 rotate-[-15deg] blur-xl"></div>
 
                 <div className="z-10 flex gap-20 mb-10 items-end">
                    <div className="text-center animate-bounce duration-[2000ms]">
@@ -120,7 +120,7 @@ export const HUMAN_SLIDES: SlideData[] = [
     content: (
       <div className="flex flex-col gap-4 h-full max-w-5xl mx-auto">
          {/* User Prompt */}
-         <div className="bg-slate-800 p-3 rounded-lg rounded-tl-none border border-slate-600 self-start max-w-[80%] flex items-center gap-3">
+         <div className="bg-slate-800 p-3 rounded-lg rounded-ss-none border border-slate-600 self-start max-w-[80%] flex items-center gap-3">
             <div className="w-8 h-8 bg-gray-600 rounded-full flex items-center justify-center shrink-0">
                <Gamepad2 size={16} />
             </div>
@@ -131,7 +131,7 @@ export const HUMAN_SLIDES: SlideData[] = [
          <div className="flex flex-1 gap-4 min-h-0">
             {/* Model A */}
             <div className="flex-1 bg-slate-900 border border-blue-500/30 rounded-xl p-4 flex flex-col relative overflow-hidden group">
-               <div className="absolute top-0 left-0 w-full h-1 bg-blue-500"></div>
+               <div className="absolute top-0 start-0 w-full h-1 bg-blue-500"></div>
                <h4 className="text-blue-400 font-bold mb-2 flex justify-between">
                   Model A 
                   <span className="bg-blue-900/50 text-xs px-2 py-0.5 rounded border border-blue-500/30 hidden group-hover:block animate-fade-in">deepseek-v3.2</span>
@@ -150,7 +150,7 @@ export const HUMAN_SLIDES: SlideData[] = [
 
             {/* Model B */}
             <div className="flex-1 bg-slate-900 border border-red-500/30 rounded-xl p-4 flex flex-col relative overflow-hidden group">
-               <div className="absolute top-0 left-0 w-full h-1 bg-red-500"></div>
+               <div className="absolute top-0 start-0 w-full h-1 bg-red-500"></div>
                <h4 className="text-red-400 font-bold mb-2 flex justify-between">
                   Model B
                   <span className="bg-red-900/50 text-xs px-2 py-0.5 rounded border border-red-500/30 hidden group-hover:block animate-fade-in">ghostfalcon-2025</span>
@@ -202,7 +202,7 @@ export const HUMAN_SLIDES: SlideData[] = [
       <div className="flex flex-col gap-8 items-center justify-center h-full">
          <div className="flex items-end gap-2 h-64 w-full max-w-3xl border-b-2 border-gray-600 px-4 pb-2 relative">
             {/* Y Axis Label */}
-            <div className="absolute -left-12 top-0 bottom-0 flex items-center -rotate-90 text-gray-500 text-sm">Elo Score</div>
+            <div className="absolute -start-12 top-0 bottom-0 flex items-center -rotate-90 text-gray-500 text-sm">Elo Score</div>
 
             {/* Bars */}
             <div className="flex-1 bg-slate-800 rounded-t-lg mx-2 h-[40%] flex items-end justify-center pb-2 text-gray-400 group relative hover:bg-slate-700 transition-all">
@@ -287,7 +287,7 @@ export const HUMAN_SLIDES: SlideData[] = [
             <div className="bg-slate-800 p-4 grid grid-cols-12 gap-4 font-bold text-gray-400 text-sm uppercase tracking-wider border-b border-slate-700">
                <div className="col-span-2 text-center">Rank</div>
                <div className="col-span-6">Model</div>
-               <div className="col-span-4 text-right">Arena Elo</div>
+               <div className="col-span-4 text-end">Arena Elo</div>
             </div>
 
             {/* Row 1: Coding King */}
@@ -299,7 +299,7 @@ export const HUMAN_SLIDES: SlideData[] = [
                   <div className="font-bold text-white text-lg group-hover:text-purple-300 transition-colors">Claude Opus 4.5</div>
                   <span className="bg-purple-900 text-purple-200 text-xs px-2 py-0.5 rounded border border-purple-500/50">Coding #1</span>
                </div>
-               <div className="col-span-4 text-right font-mono text-xl text-yellow-400 font-bold">1325</div>
+               <div className="col-span-4 text-end font-mono text-xl text-yellow-400 font-bold">1325</div>
             </div>
 
             {/* Row 2: Text King */}
@@ -309,21 +309,21 @@ export const HUMAN_SLIDES: SlideData[] = [
                   <div className="font-bold text-white text-lg group-hover:text-blue-300 transition-colors">Gemini 3.0</div>
                   <span className="bg-blue-900 text-blue-200 text-xs px-2 py-0.5 rounded border border-blue-500/50">Overall #1</span>
                </div>
-               <div className="col-span-4 text-right font-mono text-xl text-gray-300">1310</div>
+               <div className="col-span-4 text-end font-mono text-xl text-gray-300">1310</div>
             </div>
 
             {/* Row 3 */}
             <div className="p-4 grid grid-cols-12 gap-4 items-center hover:bg-slate-800/50 transition-colors">
                <div className="col-span-2 text-center font-bold text-gray-500">3</div>
                <div className="col-span-6 font-bold text-gray-300">GPT 5.2</div>
-               <div className="col-span-4 text-right font-mono text-xl text-gray-500">1302</div>
+               <div className="col-span-4 text-end font-mono text-xl text-gray-500">1302</div>
             </div>
             
              {/* Row 4 */}
              <div className="p-4 grid grid-cols-12 gap-4 items-center hover:bg-slate-800/50 transition-colors">
                <div className="col-span-2 text-center font-bold text-gray-600">4</div>
                <div className="col-span-6 font-bold text-gray-400">DeepSeek-v3.2</div>
-               <div className="col-span-4 text-right font-mono text-xl text-gray-600">1295</div>
+               <div className="col-span-4 text-end font-mono text-xl text-gray-600">1295</div>
             </div>
          </div>
          

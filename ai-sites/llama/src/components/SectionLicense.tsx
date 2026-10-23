@@ -182,7 +182,7 @@ const SectionLicense: React.FC = () => {
           但有
           <span className="relative inline-block">
             <span
-              className="absolute left-0 right-0 bottom-1 h-4 lg:h-5 bg-coral/55 -z-0 -rotate-1"
+              className="absolute start-0 end-0 bottom-1 h-4 lg:h-5 bg-coral/55 -z-0 -rotate-1"
               aria-hidden
             />
             <span className="relative z-10">6 条红线</span>
@@ -209,7 +209,7 @@ const SectionLicense: React.FC = () => {
                       key={s.id}
                       onClick={() => setScn((p) => ({ ...p, size: s.id }))}
                       className={[
-                        "w-full text-left px-3 py-2.5 rounded-xl border-2 border-ink transition-all duration-200 ease-spring",
+                        "w-full text-start px-3 py-2.5 rounded-xl border-2 border-ink transition-all duration-200 ease-spring",
                         on
                           ? "bg-ink text-cream shadow-[3px_3px_0_0_#E07A5F]"
                           : "bg-white text-ink hover:bg-butter/30",
@@ -247,7 +247,7 @@ const SectionLicense: React.FC = () => {
                         }))
                       }
                       className={[
-                        "text-left px-3 py-2.5 rounded-xl border-2 border-ink transition-all duration-200 ease-spring",
+                        "text-start px-3 py-2.5 rounded-xl border-2 border-ink transition-all duration-200 ease-spring",
                         on
                           ? "bg-ink text-cream shadow-[3px_3px_0_0_#E07A5F]"
                           : "bg-white text-ink hover:bg-butter/30",

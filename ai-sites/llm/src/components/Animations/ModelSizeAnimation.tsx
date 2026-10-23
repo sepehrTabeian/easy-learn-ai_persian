@@ -148,7 +148,7 @@ const ModelSizeAnimation: React.FC = () => {
             7 款代表模型 · 脑子有多大
           </h3>
         </div>
-        <div className="text-right">
+        <div className="text-end">
           <div className="font-mono text-[10px] uppercase tracking-[0.15em] text-ink/45">
             {String(index + 1).padStart(2, "0")} / {MODELS.length}
           </div>
@@ -192,7 +192,7 @@ const ModelSizeAnimation: React.FC = () => {
         </div>
 
         {/* 模型名标签 */}
-        <div className="absolute top-3 left-3 inline-flex items-center gap-1.5 px-2.5 py-1 bg-white border-2 border-ink rounded-lg shadow-[2px_2px_0_0_#241C15]">
+        <div className="absolute top-3 start-3 inline-flex items-center gap-1.5 px-2.5 py-1 bg-white border-2 border-ink rounded-lg shadow-[2px_2px_0_0_#241C15]">
           <span className="w-1.5 h-1.5 rounded-full bg-coral animate-pulse-dot" />
           <span className="font-display font-extrabold text-[13px] text-ink">
             {current.name}
@@ -200,7 +200,7 @@ const ModelSizeAnimation: React.FC = () => {
         </div>
 
         {/* era 角标 */}
-        <div className="absolute bottom-3 right-3 px-2 py-1 bg-ink text-cream rounded-md font-mono text-[10px] uppercase tracking-[0.15em]">
+        <div className="absolute bottom-3 end-3 px-2 py-1 bg-ink text-cream rounded-md font-mono text-[10px] uppercase tracking-[0.15em]">
           {current.era}
         </div>
       </div>

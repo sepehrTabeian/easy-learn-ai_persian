@@ -148,7 +148,7 @@ const SectionVsTeams: React.FC = () => {
 
         {/* preset 按钮 */}
         <div className="mt-10 flex flex-wrap items-center gap-2">
-          <span className="font-mono text-[10.5px] tracking-[0.22em] uppercase text-ink/55 mr-1">
+          <span className="font-mono text-[10.5px] tracking-[0.22em] uppercase text-ink/55 me-1">
             一键切典型形态：
           </span>
           {[
@@ -198,7 +198,7 @@ const SectionVsTeams: React.FC = () => {
                   </div>
                   <div className="font-display font-extrabold text-[24px] text-ink leading-none">
                     {count}
-                    <span className="font-mono text-[12px] text-ink/55 ml-1">个</span>
+                    <span className="font-mono text-[12px] text-ink/55 ms-1">个</span>
                   </div>
                 </div>
                 <input
@@ -566,7 +566,7 @@ const KnobBtn: React.FC<{
   <button
     type="button"
     onClick={onClick}
-    className={`text-left px-3.5 py-2.5 rounded-2xl border-2 border-ink transition-all duration-250 ease-spring ${
+    className={`text-start px-3.5 py-2.5 rounded-2xl border-2 border-ink transition-all duration-250 ease-spring ${
       active
         ? "bg-ink text-cream shadow-stamp-lg translate-x-[-1px] translate-y-[-1px]"
         : "bg-cream text-ink shadow-stamp hover:translate-x-[-1px] hover:translate-y-[-1px] hover:shadow-stamp-lg"

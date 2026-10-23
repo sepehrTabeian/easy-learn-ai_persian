@@ -52,10 +52,10 @@ const SectionDarkKnowledge: React.FC = () => {
   return (
     <section className="relative px-4 sm:px-6 lg:px-8 pt-20 lg:pt-28 pb-20 lg:pb-24 overflow-hidden">
       {/* 浮动装饰 */}
-      <div aria-hidden className="absolute top-24 right-[8%] hidden lg:block animate-float-y">
+      <div aria-hidden className="absolute top-24 end-[8%] hidden lg:block animate-float-y">
         <div className="w-10 h-10 bg-coral border-2 border-ink rounded-full shadow-stamp" />
       </div>
-      <div aria-hidden className="absolute bottom-24 left-[6%] hidden lg:block animate-float-y-sm">
+      <div aria-hidden className="absolute bottom-24 start-[6%] hidden lg:block animate-float-y-sm">
         <div className="w-9 h-9 bg-teal border-2 border-ink rounded-2xl shadow-stamp -rotate-6" />
       </div>
 
@@ -79,7 +79,7 @@ const SectionDarkKnowledge: React.FC = () => {
             <p className="max-w-md font-display text-[20px] lg:text-[22px] font-bold text-ink leading-snug mb-5 animate-enter-up">
               <span className="relative inline-block">
                 <span
-                  className="absolute left-0 right-0 bottom-0.5 h-3 lg:h-4 bg-butter -z-0"
+                  className="absolute start-0 end-0 bottom-0.5 h-3 lg:h-4 bg-butter -z-0"
                   aria-hidden
                 />
                 <span className="relative z-10">用一个大模型（teacher 老师）教一个小模型（student 学生）。</span>
@@ -136,7 +136,7 @@ const SectionDarkKnowledge: React.FC = () => {
                   <button
                     onClick={() => setView("soft")}
                     className={[
-                      "px-3 py-1 font-mono text-[11px] font-bold transition-all duration-250 border-l-2 border-ink",
+                      "px-3 py-1 font-mono text-[11px] font-bold transition-all duration-250 border-s-2 border-ink",
                       view === "soft" ? "bg-ink text-cream" : "bg-white text-ink/55",
                     ].join(" ")}
                   >
@@ -225,7 +225,7 @@ const SectionDarkKnowledge: React.FC = () => {
                       {ent.toFixed(2)}
                     </span>
                     <span className="font-mono text-[11px] text-ink/50">bits</span>
-                    <span className="font-mono text-[10px] text-ink/40 ml-1">
+                    <span className="font-mono text-[10px] text-ink/40 ms-1">
                       / max {maxBits.toFixed(2)}
                     </span>
                   </div>

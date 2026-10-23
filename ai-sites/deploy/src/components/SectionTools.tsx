@@ -160,7 +160,7 @@ const SectionTools: React.FC = () => {
             五个工具，五种取舍。
             <br />
             <span className="relative inline-block">
-              <span className="absolute left-0 right-0 bottom-0.5 h-3 lg:h-4 bg-butter -z-0" aria-hidden />
+              <span className="absolute start-0 end-0 bottom-0.5 h-3 lg:h-4 bg-butter -z-0" aria-hidden />
               <span className="relative z-10">各有长短，看你的场景挑。</span>
             </span>
           </h2>
@@ -186,7 +186,7 @@ const SectionTools: React.FC = () => {
                 {/* header */}
                 <button
                   onClick={() => setOpenId(open ? null : t.id)}
-                  className="w-full flex items-center justify-between gap-4 p-5 text-left"
+                  className="w-full flex items-center justify-between gap-4 p-5 text-start"
                 >
                   <div className="flex items-center gap-4 min-w-0">
                     <div
@@ -237,9 +237,9 @@ const SectionTools: React.FC = () => {
                             {t.pros.map((p, i) => (
                               <li
                                 key={i}
-                                className="text-[12.5px] text-ink/80 leading-relaxed pl-3 relative"
+                                className="text-[12.5px] text-ink/80 leading-relaxed ps-3 relative"
                               >
-                                <span className="absolute left-0 top-1.5 w-1.5 h-1.5 bg-teal rounded-full" />
+                                <span className="absolute start-0 top-1.5 w-1.5 h-1.5 bg-teal rounded-full" />
                                 {p}
                               </li>
                             ))}
@@ -253,9 +253,9 @@ const SectionTools: React.FC = () => {
                             {t.cons.map((c, i) => (
                               <li
                                 key={i}
-                                className="text-[12.5px] text-ink/80 leading-relaxed pl-3 relative"
+                                className="text-[12.5px] text-ink/80 leading-relaxed ps-3 relative"
                               >
-                                <span className="absolute left-0 top-1.5 w-1.5 h-1.5 bg-coral rounded-full" />
+                                <span className="absolute start-0 top-1.5 w-1.5 h-1.5 bg-coral rounded-full" />
                                 {c}
                               </li>
                             ))}

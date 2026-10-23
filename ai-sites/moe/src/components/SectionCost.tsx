@@ -81,10 +81,10 @@ const SectionCost: React.FC = () => {
   return (
     <section className="relative bg-ink text-cream px-4 sm:px-6 lg:px-8 py-20 lg:py-28 overflow-hidden">
       {/* 装饰 */}
-      <div aria-hidden className="absolute top-16 right-[7%] hidden lg:block animate-float-y">
+      <div aria-hidden className="absolute top-16 end-[7%] hidden lg:block animate-float-y">
         <div className="w-12 h-12 bg-coral border-2 border-cream rounded-2xl shadow-stamp -rotate-6" />
       </div>
-      <div aria-hidden className="absolute bottom-32 left-[6%] hidden lg:block animate-float-y-sm">
+      <div aria-hidden className="absolute bottom-32 start-[6%] hidden lg:block animate-float-y-sm">
         <div className="w-10 h-10 bg-butter border-2 border-cream rounded-full shadow-stamp" />
       </div>
 
@@ -97,14 +97,14 @@ const SectionCost: React.FC = () => {
         <h2 className="font-display text-display-lg leading-tight mb-6 max-w-3xl">
           MoE 把
           <span className="relative inline-block">
-            <span className="absolute left-0 right-0 bottom-1 h-5 lg:h-7 bg-coral -z-0 -rotate-1" aria-hidden />
+            <span className="absolute start-0 end-0 bottom-1 h-5 lg:h-7 bg-coral -z-0 -rotate-1" aria-hidden />
             <span className="relative z-10 text-cream">算力账</span>
           </span>
           压下去了。
           <br />
           钱{" "}
           <span className="relative inline-block">
-            <span className="absolute left-0 right-0 bottom-1 h-5 lg:h-7 bg-butter -z-0 rotate-1" aria-hidden />
+            <span className="absolute start-0 end-0 bottom-1 h-5 lg:h-7 bg-butter -z-0 rotate-1" aria-hidden />
             <span className="relative z-10 text-ink">没消失</span>
           </span>
           ，只是换了科目。
@@ -161,7 +161,7 @@ const SectionCost: React.FC = () => {
                     key={h.id}
                     onClick={() => setHwId(h.id)}
                     className={[
-                      "px-3 py-2 rounded-xl border-2 border-ink text-left transition-all duration-250 ease-spring",
+                      "px-3 py-2 rounded-xl border-2 border-ink text-start transition-all duration-250 ease-spring",
                       on
                         ? "bg-ink text-cream shadow-stamp"
                         : "bg-white text-ink hover:-translate-y-0.5 hover:shadow-[2px_2px_0_0_#241C15]",
@@ -184,7 +184,7 @@ const SectionCost: React.FC = () => {
 
           {/* precision pills */}
           <div className="flex items-baseline gap-2 mb-5 flex-wrap">
-            <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-ink/55 mr-1">
+            <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-ink/55 me-1">
               ② 精度
             </span>
             {(Object.keys(PRECISION) as Precision[]).map((p) => {
@@ -206,7 +206,7 @@ const SectionCost: React.FC = () => {
                 </button>
               );
             })}
-            <span className="font-mono text-[10px] text-ink/45 ml-1">
+            <span className="font-mono text-[10px] text-ink/45 ms-1">
               · {PRECISION[precision].bytesPerParam} byte / 参数 · {PRECISION[precision].sub}
             </span>
           </div>
@@ -291,19 +291,19 @@ const ModelRow: React.FC<{
           <span className={run.fits ? "text-teal font-bold" : "text-coral font-bold"}>
             {run.fits ? "✓ 能跑" : "✗ 装不下"}
           </span>
-          <span className="ml-2 text-ink/55">{run.totalGB.toFixed(0)} GB</span>
+          <span className="ms-2 text-ink/55">{run.totalGB.toFixed(0)} GB</span>
         </span>
       </div>
       {/* 双段条：active 实色 + total - active 半透明 + VRAM 线 */}
       <div className="relative h-2.5 bg-ink/8 rounded-full overflow-hidden border border-ink/10">
         {/* total */}
         <div
-          className="absolute inset-y-0 left-0 bg-ink/25"
+          className="absolute inset-y-0 start-0 bg-ink/25"
           style={{ width: `${totalPct}%` }}
         />
         {/* active (亮) */}
         <div
-          className="absolute inset-y-0 left-0 bg-coral"
+          className="absolute inset-y-0 start-0 bg-coral"
           style={{ width: `${activePct}%` }}
         />
         {/* VRAM cutoff line */}

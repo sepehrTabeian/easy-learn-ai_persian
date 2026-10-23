@@ -134,7 +134,7 @@ const SectionFlowTrace: React.FC = () => {
           </button>
           <button
             onClick={() => setI(0)}
-            className="btn-stamp bg-cream ml-auto"
+            className="btn-stamp bg-cream ms-auto"
             aria-label="重置"
           >
             <RotateCcw className="w-4 h-4" strokeWidth={2.5} />

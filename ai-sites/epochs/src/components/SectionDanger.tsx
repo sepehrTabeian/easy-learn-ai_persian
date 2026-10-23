@@ -142,7 +142,7 @@ const SectionDanger: React.FC = () => {
                       key={t.id}
                       onClick={() => setTaskId(t.id)}
                       className={[
-                        "text-left p-2 rounded-md border-2 border-ink transition-all duration-250 ease-spring",
+                        "text-start p-2 rounded-md border-2 border-ink transition-all duration-250 ease-spring",
                         on
                           ? "bg-ink text-cream shadow-[3px_3px_0_0_#E07A5F]"
                           : "bg-white text-ink hover:bg-cream",
@@ -303,7 +303,7 @@ const SectionDanger: React.FC = () => {
                           style={{ height: `${(m / 100) * 100}%` }}
                         />
                       </div>
-                      <div className="absolute top-1 left-0 right-0 text-center font-mono text-[9px] text-ink/65 font-bold">
+                      <div className="absolute top-1 start-0 end-0 text-center font-mono text-[9px] text-ink/65 font-bold">
                         e{e}
                       </div>
                     </button>
@@ -360,7 +360,7 @@ const BarRow: React.FC<{
       <div className="flex items-baseline justify-between mb-1.5">
         <div>
           <span className="font-display text-[15px] font-bold text-ink">{label}</span>
-          <span className="font-mono text-[10px] text-ink/55 ml-2">{sub}</span>
+          <span className="font-mono text-[10px] text-ink/55 ms-2">{sub}</span>
         </div>
         <div className="flex items-baseline gap-2">
           <span className="font-display text-[24px] font-bold text-ink leading-none tabular-nums">
@@ -386,7 +386,7 @@ const BarRow: React.FC<{
         />
         {/* 50% / 65% 基线参考线 */}
         <div
-          className="absolute top-0 bottom-0 border-l-2 border-dashed border-ink/40"
+          className="absolute top-0 bottom-0 border-s-2 border-dashed border-ink/40"
           style={{ left: "65%" }}
         />
       </div>

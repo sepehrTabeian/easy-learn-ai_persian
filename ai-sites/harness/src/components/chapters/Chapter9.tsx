@@ -63,7 +63,7 @@ export default function Chapter9({ step }: { step: number }) {
 
             <AnimatePresence>
               {step === 1 && (
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full flex items-center justify-center mt-10">
+                <div className="absolute top-1/2 start-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full flex items-center justify-center mt-10">
                   {/* Central Weak Prompt */}
                   <motion.div
                     initial={{ scale: 0 }}
@@ -148,7 +148,7 @@ export default function Chapter9({ step }: { step: number }) {
 
             <AnimatePresence>
               {step === 4 && (
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full flex items-center justify-center mt-16">
+                <div className="absolute top-1/2 start-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full flex items-center justify-center mt-16">
                   {/* Central Context Core */}
                   <motion.div
                     initial={{ scale: 0, opacity: 0 }}
@@ -283,7 +283,7 @@ export default function Chapter9({ step }: { step: number }) {
                   <motion.div 
                     animate={{ y: [-40, 80] }}
                     transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
-                    className="absolute top-0 left-0 w-full h-10 bg-[#14B8A6] rounded-full blur-sm"
+                    className="absolute top-0 start-0 w-full h-10 bg-[#14B8A6] rounded-full blur-sm"
                   />
                 </div>
                 <div className="bg-[#14B8A6]/10 border border-[#14B8A6]/30 px-8 py-4 rounded-xl font-bold text-[#14B8A6] text-2xl shadow-lg">
@@ -298,7 +298,7 @@ export default function Chapter9({ step }: { step: number }) {
               transition={{ delay: 0.5, type: 'spring' }}
               className="mt-20 text-5xl font-black text-[#43302B] bg-white/60 backdrop-blur-md px-12 py-6 rounded-full shadow-2xl border-2 border-[#14B8A6]"
             >
-              差别往往不在模型，而在<span className="text-[#14B8A6] ml-4">上下文供给机制</span>
+              差别往往不在模型，而在<span className="text-[#14B8A6] ms-4">上下文供给机制</span>
             </motion.div>
           </motion.div>
         )}

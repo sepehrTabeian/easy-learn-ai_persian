@@ -436,7 +436,7 @@ const SectionHeads: React.FC = () => {
                   <span>0</span>
                   <span className="text-center">25</span>
                   <span className="text-center">50</span>
-                  <span className="text-right">100</span>
+                  <span className="text-end">100</span>
                 </div>
                 <p className="mt-3 font-mono text-[10px] text-ink/40">
                   来源：{task.score.source}

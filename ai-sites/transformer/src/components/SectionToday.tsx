@@ -151,7 +151,7 @@ const SectionToday: React.FC = () => {
                 >
                   <button
                     onClick={() => toggle(p.id)}
-                    className="w-full flex items-center justify-between gap-4 px-4 lg:px-5 py-4 text-left hover:bg-cream transition-colors duration-200"
+                    className="w-full flex items-center justify-between gap-4 px-4 lg:px-5 py-4 text-start hover:bg-cream transition-colors duration-200"
                   >
                     <div className="flex items-center gap-4 min-w-0">
                       <div
@@ -172,7 +172,7 @@ const SectionToday: React.FC = () => {
                       </div>
                     </div>
                     <div className="flex items-center gap-3 shrink-0">
-                      <div className="hidden sm:block text-right">
+                      <div className="hidden sm:block text-end">
                         <div className="font-mono text-[8.5px] uppercase tracking-[0.16em] text-ink/45">
                           {p.stat.label}
                         </div>

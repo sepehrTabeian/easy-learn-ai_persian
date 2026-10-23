@@ -86,7 +86,7 @@ const FEATURES: Feature[] = [
     example: (
       <div className="font-mono text-[12px] text-ink/80 leading-[1.7]">
         <div>TaskUpdate(<span className="text-pop">{`"build-frontend"`}</span>, {`{`}</div>
-        <div className="pl-4">addBlockedBy: [<span className="text-pop">{`"design-schema"`}</span>],</div>
+        <div className="ps-4">addBlockedBy: [<span className="text-pop">{`"design-schema"`}</span>],</div>
         <div>{`}`})</div>
         <div className="mt-2 pt-2 border-t-2 border-dashed border-ink/25 text-cream/70">
           design-schema 完成 → build-frontend 自动 unblock
@@ -127,12 +127,12 @@ const FEATURES: Feature[] = [
     example: (
       <div className="font-mono text-[12px] text-cream leading-[1.7]">
         <div>auth-system <span className="text-cream/55">(epic)</span></div>
-        <div className="pl-4">├── design-schema</div>
-        <div className="pl-4">├── api-endpoint</div>
-        <div className="pl-8 text-cream/65">│   ├── POST /login</div>
-        <div className="pl-8 text-cream/65">│   └── POST /logout</div>
-        <div className="pl-4">└── frontend</div>
-        <div className="pl-8 text-cream/65">    └── LoginForm</div>
+        <div className="ps-4">├── design-schema</div>
+        <div className="ps-4">├── api-endpoint</div>
+        <div className="ps-8 text-cream/65">│   ├── POST /login</div>
+        <div className="ps-8 text-cream/65">│   └── POST /logout</div>
+        <div className="ps-4">└── frontend</div>
+        <div className="ps-8 text-cream/65">    └── LoginForm</div>
       </div>
     ),
   },
@@ -209,7 +209,7 @@ const SectionTask: React.FC = () => {
                   <button
                     type="button"
                     onClick={() => setOpen(isOpen ? open : f.id)}
-                    className={`w-full flex items-center justify-between gap-4 px-5 py-4 text-left transition-colors duration-200 ${
+                    className={`w-full flex items-center justify-between gap-4 px-5 py-4 text-start transition-colors duration-200 ${
                       isOpen ? `${f.tone}` : "bg-cream hover:bg-butter/15"
                     }`}
                   >

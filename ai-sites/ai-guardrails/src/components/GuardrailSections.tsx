@@ -4,8 +4,8 @@ import { DemoBadge, SectionShell, StampLink } from "./common";
 
 export const SectionGuardrailHero: React.FC = () => (
   <section className="relative overflow-hidden bg-butter-tint px-5 pb-16 pt-16 md:px-8 md:pb-24 md:pt-24">
-    <div className="pointer-events-none absolute -left-16 top-32 h-40 w-40 rotate-12 rounded-[2.5rem] border-2 border-ink/10 bg-butter/35" />
-    <div className="pointer-events-none absolute -right-12 bottom-16 h-32 w-32 -rotate-12 rounded-full border-2 border-dashed border-ink/15" />
+    <div className="pointer-events-none absolute -start-16 top-32 h-40 w-40 rotate-12 rounded-[2.5rem] border-2 border-ink/10 bg-butter/35" />
+    <div className="pointer-events-none absolute -end-12 bottom-16 h-32 w-32 -rotate-12 rounded-full border-2 border-dashed border-ink/15" />
     <div className="relative mx-auto grid max-w-6xl gap-12 lg:grid-cols-[minmax(0,1fr)_minmax(420px,.9fr)] lg:items-center">
       <div className="min-w-0">
         <div className="inline-flex items-center gap-2 rounded-full border-2 border-ink bg-white px-3 py-1.5 font-mono text-[11px] font-bold uppercase tracking-[.18em] shadow-stamp"><ShieldCheck className="h-4 w-4 text-teal" /> AI Guardrails · AI 防护栏</div>
@@ -42,7 +42,7 @@ export const SectionGuardrailHero: React.FC = () => (
               <p className="mt-1 text-sm font-bold">“帮我把这笔订单退款”</p>
             </div>
 
-            <div className="col-span-2 ml-5 h-3 border-l-2 border-dashed border-ink/35" />
+            <div className="col-span-2 ms-5 h-3 border-s-2 border-dashed border-ink/35" />
 
             <span className="flex h-10 w-10 items-center justify-center rounded-xl border-2 border-ink bg-butter"><ScanSearch className="h-5 w-5" /></span>
             <div className="rounded-xl border-2 border-ink bg-butter px-4 py-3 shadow-[3px_3px_0_0_#241C15]">
@@ -50,7 +50,7 @@ export const SectionGuardrailHero: React.FC = () => (
               <p className="mt-1 text-sm font-bold">有没有危险要求或隐私信息？</p>
             </div>
 
-            <div className="col-span-2 ml-5 h-3 border-l-2 border-dashed border-ink/35" />
+            <div className="col-span-2 ms-5 h-3 border-s-2 border-dashed border-ink/35" />
 
             <span className="flex h-10 w-10 items-center justify-center rounded-xl border-2 border-ink bg-teal text-cream"><LockKeyhole className="h-5 w-5" /></span>
             <div className="rounded-xl border-2 border-ink bg-teal px-4 py-3 text-cream shadow-[3px_3px_0_0_#241C15]">
@@ -58,7 +58,7 @@ export const SectionGuardrailHero: React.FC = () => (
               <p className="mt-1 text-sm font-bold">AI 有退款权限吗？需要人点头吗？</p>
             </div>
 
-            <div className="col-span-2 ml-5 h-3 border-l-2 border-dashed border-ink/35" />
+            <div className="col-span-2 ms-5 h-3 border-s-2 border-dashed border-ink/35" />
 
             <span className="flex h-10 w-10 items-center justify-center rounded-xl border-2 border-ink bg-coral text-cream"><FileCheck2 className="h-5 w-5" /></span>
             <div className="rounded-xl border-2 border-ink bg-coral px-4 py-3 text-cream shadow-[3px_3px_0_0_#241C15]">
@@ -85,7 +85,7 @@ export const SectionFourStops: React.FC = () => {
       <h2 className="font-display text-display-lg">输入、AI 执行操作和输出都需要检查</h2>
       <p className="mt-4 max-w-3xl leading-8 text-ink/70">点每个位置，看看它负责什么。只在聊天入口做过滤，拦不住后面的误操作和数据泄露。</p>
       <div className="mt-10 grid gap-6 lg:grid-cols-[1fr_340px]">
-        <div className="grid gap-4 sm:grid-cols-2">{steps.map(([title, desc, icon], i) => <button key={String(title)} onClick={() => setActive(i)} className={`rounded-2xl border-2 border-ink p-5 text-left shadow-stamp transition-all ${active === i ? "bg-butter -translate-y-1" : "bg-cream"}`}><div className="flex items-center justify-between">{icon}<span className="font-mono text-xs font-bold">0{i + 1}</span></div><b className="mt-5 block text-lg">{title}</b><p className="mt-2 text-sm leading-7 text-ink/65">{desc}</p></button>)}</div>
+        <div className="grid gap-4 sm:grid-cols-2">{steps.map(([title, desc, icon], i) => <button key={String(title)} onClick={() => setActive(i)} className={`rounded-2xl border-2 border-ink p-5 text-start shadow-stamp transition-all ${active === i ? "bg-butter -translate-y-1" : "bg-cream"}`}><div className="flex items-center justify-between">{icon}<span className="font-mono text-xs font-bold">0{i + 1}</span></div><b className="mt-5 block text-lg">{title}</b><p className="mt-2 text-sm leading-7 text-ink/65">{desc}</p></button>)}</div>
         <div key={active} className="rounded-3xl border-2 border-ink bg-ink p-6 text-cream shadow-stamp-xl animate-enter-pop">
           <span className="font-mono text-xs uppercase tracking-[.16em] text-cream/50">当前检查点</span><p className="mt-4 font-display text-3xl font-bold text-butter">{steps[active][0]}</p><p className="mt-4 leading-8 text-cream/75">{steps[active][1]}</p>
           <div className="mt-7 flex items-center gap-3">{steps.map((_, i) => <span key={i} className={`h-3 flex-1 rounded-full border border-cream ${i <= active ? "bg-coral" : "bg-cream/15"}`} />)}</div>
@@ -112,7 +112,7 @@ export const SectionGuardrailBuilder: React.FC = () => {
       <h2 className="font-display text-display-lg">给客服 AI 配一套检查</h2>
       <p className="mt-4 max-w-3xl leading-8 text-ink/70">开关不同措施。保护越多，用户等待和人工确认也可能增加。数字只表达方向。</p>
       <div className="mt-10 grid gap-7 lg:grid-cols-[1fr_360px]">
-        <div className="grid gap-3 sm:grid-cols-2">{rails.map(([id, label]) => { const active = on.includes(id); return <button key={id} onClick={() => setOn(active ? on.filter((x) => x !== id) : [...on, id])} className={`flex items-center justify-between rounded-2xl border-2 border-ink p-4 text-left shadow-stamp ${active ? "bg-teal text-cream" : "bg-white"}`}><b>{label}</b><span className={`flex h-7 w-12 rounded-full border-2 border-ink p-0.5 ${active ? "bg-butter" : "bg-cream"}`}><span className={`h-5 w-5 rounded-full border-2 border-ink bg-white transition-transform ${active ? "translate-x-5" : ""}`} /></span></button>; })}</div>
+        <div className="grid gap-3 sm:grid-cols-2">{rails.map(([id, label]) => { const active = on.includes(id); return <button key={id} onClick={() => setOn(active ? on.filter((x) => x !== id) : [...on, id])} className={`flex items-center justify-between rounded-2xl border-2 border-ink p-4 text-start shadow-stamp ${active ? "bg-teal text-cream" : "bg-white"}`}><b>{label}</b><span className={`flex h-7 w-12 rounded-full border-2 border-ink p-0.5 ${active ? "bg-butter" : "bg-cream"}`}><span className={`h-5 w-5 rounded-full border-2 border-ink bg-white transition-transform ${active ? "translate-x-5" : ""}`} /></span></button>; })}</div>
         <div className="rounded-3xl border-2 border-ink bg-white p-6 shadow-stamp-xl">
           <div className="flex items-center justify-between"><b>组合结果</b><DemoBadge /></div>
           {[["保护强度", protection, "bg-teal"], ["操作阻力", friction, "bg-coral"]].map(([label, value, color]) => <div key={String(label)} className="mt-6"><div className="flex justify-between text-sm"><span>{label}</span><b>{value}/10</b></div><div className="mt-2 h-5 overflow-hidden rounded-full border-2 border-ink bg-cream"><div className={`h-full ${color} transition-all`} style={{ width: `${Number(value) * 10}%` }} /></div></div>)}
@@ -178,8 +178,8 @@ export const SectionRequestRun: React.FC = () => {
               <div key={x} className={`flex items-center gap-3 rounded-2xl border-2 border-ink p-4 shadow-stamp animate-enter-up ${isStop ? "bg-coral text-cream" : isTransform ? "bg-butter text-ink" : "bg-cream"}`}>
                 <span className="flex h-8 w-8 items-center justify-center rounded-full border-2 border-ink bg-white text-ink">{isStop ? <X className="h-4 w-4" /> : <Check className="h-4 w-4" />}</span>
                 <b>{x}</b>
-                {isStop && <span className="ml-auto font-mono text-xs">在这里停下</span>}
-                {isTransform && <span className="ml-auto font-mono text-xs">身份证号已遮盖，继续</span>}
+                {isStop && <span className="ms-auto font-mono text-xs">在这里停下</span>}
+                {isTransform && <span className="ms-auto font-mono text-xs">身份证号已遮盖，继续</span>}
               </div>
             );
           })}</div>
@@ -187,7 +187,7 @@ export const SectionRequestRun: React.FC = () => {
         <div className="rounded-3xl border-2 border-ink bg-ink p-6 text-cream shadow-stamp-xl">
           <span className="font-mono text-xs uppercase tracking-[.16em] text-cream/50">流程状态</span><p className="mt-4 font-display text-3xl font-bold text-butter">{stopped ? "已拦截或转人工" : cursor === 4 ? "安全返回结果" : "等待下一层"}</p>
           <button disabled={stopped || cursor === 4} onClick={() => setCursor(Math.min(4, cursor + 1))} className="btn-stamp mt-7 bg-butter text-ink disabled:opacity-40">下一层 <ArrowRight className="h-4 w-4" /></button>
-          <button onClick={() => setCursor(0)} className="ml-3 mt-4 text-cream/55"><RotateCcw className="inline h-4 w-4" /></button>
+          <button onClick={() => setCursor(0)} className="ms-3 mt-4 text-cream/55"><RotateCcw className="inline h-4 w-4" /></button>
         </div>
       </div>
     </SectionShell>
@@ -231,7 +231,7 @@ export const SectionMeasure: React.FC = () => {
         <div className="space-y-4">{tests.map((x, i) => <label key={x} className="block rounded-2xl border-2 border-ink bg-white p-4 shadow-stamp"><span className="flex justify-between text-sm font-bold"><span>{x}</span><span>{scores[i]}</span></span><input type="range" min="0" max="100" value={scores[i]} onChange={(e) => { const n = [...scores]; n[i] = Number(e.target.value); setScores(n); }} className="mt-3 w-full accent-coral" /></label>)}</div>
         <div>
           <div className="rounded-3xl border-2 border-ink bg-teal p-6 text-cream shadow-stamp-xl"><div className="flex justify-between"><b>当前综合分</b><DemoBadge /></div><p className="mt-4 font-display text-6xl font-bold text-butter">{average}</p><p className="mt-3 text-sm leading-7 text-cream/70">示意分数只帮助理解“多指标一起看”。真实评估需要测试集、日志和人工复核。</p></div>
-          <div className="mt-5 space-y-3">{notes.map(([q, a], i) => <div key={q} className="overflow-hidden rounded-2xl border-2 border-ink bg-white shadow-stamp"><button onClick={() => setOpen(open === i ? -1 : i)} className="flex w-full items-center justify-between p-4 text-left font-bold">{q}<ChevronDown className={`h-5 w-5 transition ${open === i ? "rotate-180" : ""}`} /></button>{open === i && <p className="px-4 pb-4 text-sm leading-7 text-ink/70">{a}</p>}</div>)}</div>
+          <div className="mt-5 space-y-3">{notes.map(([q, a], i) => <div key={q} className="overflow-hidden rounded-2xl border-2 border-ink bg-white shadow-stamp"><button onClick={() => setOpen(open === i ? -1 : i)} className="flex w-full items-center justify-between p-4 text-start font-bold">{q}<ChevronDown className={`h-5 w-5 transition ${open === i ? "rotate-180" : ""}`} /></button>{open === i && <p className="px-4 pb-4 text-sm leading-7 text-ink/70">{a}</p>}</div>)}</div>
         </div>
       </div>
       <div className="mt-11 grid gap-5 md:grid-cols-4">

@@ -86,9 +86,9 @@ const App: React.FC = () => {
     <div className="relative w-screen h-screen bg-slate-950 text-slate-100 overflow-hidden font-sans selection:bg-blue-500 selection:text-white">
       {/* Background Ambience */}
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-[-20%] left-[-10%] w-[50%] h-[50%] bg-blue-900/20 rounded-full blur-[120px]" />
-        <div className="absolute bottom-[-20%] right-[-10%] w-[50%] h-[50%] bg-purple-900/20 rounded-full blur-[120px]" />
-        <div className="absolute top-[30%] left-[30%] w-[40%] h-[40%] bg-indigo-900/10 rounded-full blur-[100px]" />
+        <div className="absolute top-[-20%] start-[-10%] w-[50%] h-[50%] bg-blue-900/20 rounded-full blur-[120px]" />
+        <div className="absolute bottom-[-20%] end-[-10%] w-[50%] h-[50%] bg-purple-900/20 rounded-full blur-[120px]" />
+        <div className="absolute top-[30%] start-[30%] w-[40%] h-[40%] bg-indigo-900/10 rounded-full blur-[100px]" />
       </div>
 
       {/* Grid Pattern Overlay */}
@@ -102,7 +102,7 @@ const App: React.FC = () => {
       </main>
 
       {/* Controls UI */}
-      <div className="absolute bottom-0 left-0 w-full p-6 z-50">
+      <div className="absolute bottom-0 start-0 w-full p-6 z-50">
         <div className="flex items-center justify-between max-w-7xl mx-auto">
           
           {/* Progress Indicator (Draggable) */}

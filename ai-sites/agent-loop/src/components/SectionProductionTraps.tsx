@@ -113,7 +113,7 @@ function SectionProductionTraps() {
 
   return (
     <section className="relative bg-ink text-cream border-b-2 border-ink overflow-hidden">
-      <div className="absolute top-0 right-0 w-[40%] h-[60%] bg-coral/8 blur-[80px] pointer-events-none" />
+      <div className="absolute top-0 end-0 w-[40%] h-[60%] bg-coral/8 blur-[80px] pointer-events-none" />
 
       <div className="relative max-w-[1180px] mx-auto px-6 lg:px-10 py-20 lg:py-24">
         <div className="section-anchor">
@@ -362,13 +362,13 @@ function ToggleRow(props) {
   return (
     <button
       onClick={onToggle}
-      className={`group w-full flex items-center gap-3 px-3.5 py-3 rounded-xl border-2 border-ink text-left transition-all duration-250 ease-spring ${on ? "bg-butter shadow-stamp" : "bg-white hover:bg-cream"}`}
+      className={`group w-full flex items-center gap-3 px-3.5 py-3 rounded-xl border-2 border-ink text-start transition-all duration-250 ease-spring ${on ? "bg-butter shadow-stamp" : "bg-white hover:bg-cream"}`}
     >
       <span
         className={`flex-shrink-0 w-11 h-6 rounded-full border-2 border-ink relative transition-colors duration-200 ${on ? "bg-coral" : "bg-ink/10"}`}
       >
         <span
-          className={`absolute top-[1px] w-[18px] h-[18px] rounded-full bg-white border-2 border-ink transition-all duration-300 ease-spring ${on ? "left-[20px]" : "left-[1px]"}`}
+          className={`absolute top-[1px] w-[18px] h-[18px] rounded-full bg-white border-2 border-ink transition-all duration-300 ease-spring ${on ? "start-[20px]" : "start-[1px]"}`}
         />
       </span>
       <div className="flex-1 min-w-0">

@@ -110,7 +110,7 @@ export default function Chapter19({ step }: { step: number }) {
                       <ListTodo className="w-8 h-8 text-blue-500" />
                     </div>
                     <h3 className="text-2xl font-black text-gray-800 mb-4">当前任务状态</h3>
-                    <div className="flex flex-col gap-2 w-full text-left mt-4">
+                    <div className="flex flex-col gap-2 w-full text-start mt-4">
                       <div className="flex items-center gap-2 text-gray-500 bg-gray-50 p-2 rounded-lg"><CheckCircle2 className="w-4 h-4 text-green-500"/> 步骤 1 完成</div>
                       <div className="flex items-center gap-2 text-gray-800 bg-blue-50 p-2 rounded-lg font-bold"><AlertCircle className="w-4 h-4 text-blue-500"/> 步骤 2 进行中</div>
                     </div>
@@ -130,7 +130,7 @@ export default function Chapter19({ step }: { step: number }) {
                       <MessageSquareText className="w-8 h-8 text-amber-500" />
                     </div>
                     <h3 className="text-2xl font-black text-gray-800 mb-4">会话中间结果</h3>
-                    <div className="flex flex-col gap-2 w-full text-left mt-4">
+                    <div className="flex flex-col gap-2 w-full text-start mt-4">
                       <div className="text-sm text-gray-600 bg-amber-50 p-3 rounded-lg border border-amber-100">
                         "刚才查到的 API 文档地址是 https://..."
                       </div>
@@ -151,7 +151,7 @@ export default function Chapter19({ step }: { step: number }) {
                       <HardDrive className="w-8 h-8 text-rose-500" />
                     </div>
                     <h3 className="text-2xl font-black text-gray-800 mb-4">长期记忆与偏好</h3>
-                    <div className="flex flex-col gap-2 w-full text-left mt-4">
+                    <div className="flex flex-col gap-2 w-full text-start mt-4">
                       <div className="text-sm text-gray-600 bg-rose-50 p-3 rounded-lg border border-rose-100">
                         "用户喜欢用 Python 写脚本"
                         <br/>"代码风格要求带类型提示"

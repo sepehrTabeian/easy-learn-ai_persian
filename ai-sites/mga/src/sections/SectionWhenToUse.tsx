@@ -95,7 +95,7 @@ export default function SectionWhenToUse() {
                       : [...pick, q.id],
                   )
                 }
-                className={`w-full text-left card-stamp p-5 transition-all duration-250 ease-spring ${
+                className={`w-full text-start card-stamp p-5 transition-all duration-250 ease-spring ${
                   checked
                     ? "bg-butter/40"
                     : "bg-white hover:bg-butter/10"

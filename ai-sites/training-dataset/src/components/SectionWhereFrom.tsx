@@ -111,7 +111,7 @@ const SectionWhereFrom: React.FC = () => {
                   key={k}
                   onClick={() => toggle(k)}
                   className={[
-                    "w-full flex items-start gap-4 border-2 border-ink rounded-2xl px-5 py-4 text-left transition-all duration-250 ease-spring",
+                    "w-full flex items-start gap-4 border-2 border-ink rounded-2xl px-5 py-4 text-start transition-all duration-250 ease-spring",
                     active ? "bg-white shadow-stamp -translate-y-0.5" : "bg-cream/60 hover:bg-cream",
                   ].join(" ")}
                 >

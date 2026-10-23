@@ -93,7 +93,7 @@ const SectionArchitectures: React.FC = () => {
                 ].join(" ")}
               >
                 {a.name}
-                <span className="ml-2 font-mono text-[11px] opacity-70">{a.en}</span>
+                <span className="ms-2 font-mono text-[11px] opacity-70">{a.en}</span>
               </button>
             );
           })}
@@ -118,7 +118,7 @@ const SectionArchitectures: React.FC = () => {
             <div className="bg-teal text-cream border-2 border-ink rounded-2xl shadow-stamp p-6">
               <div className="font-display font-extrabold text-[24px] leading-none">
                 {arch.name}
-                <span className="ml-2 font-mono text-[13px] opacity-70">{arch.en}</span>
+                <span className="ms-2 font-mono text-[13px] opacity-70">{arch.en}</span>
               </div>
               <p className="mt-4 font-sans text-[16px] leading-[1.7] text-cream/90">
                 {arch.oneLine}
@@ -170,7 +170,7 @@ const Node: React.FC<{
       x="0"
       y="4"
       textAnchor="middle"
-      fontFamily="Plus Jakarta Sans, Noto Sans SC, sans-serif"
+      fontFamily="Plus Jakarta Sans, Vazirmatn, sans-serif"
       fontSize="11"
       fontWeight="700"
       fill="#241C15"

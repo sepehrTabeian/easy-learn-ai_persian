@@ -113,12 +113,12 @@ const SectionAsRouter: React.FC = () => {
           <br />
           手动把任务{" "}
           <span className="relative inline-block">
-            <span className="absolute left-0 right-0 bottom-1 h-4 lg:h-5 bg-coral/55 -z-0 -rotate-1" aria-hidden />
+            <span className="absolute start-0 end-0 bottom-1 h-4 lg:h-5 bg-coral/55 -z-0 -rotate-1" aria-hidden />
             <span className="relative z-10">全塞给一个专家</span>
           </span>
           ，看负载会不会{" "}
           <span className="relative inline-block">
-            <span className="absolute left-0 right-0 bottom-1 h-4 lg:h-5 bg-butter -z-0 rotate-1" aria-hidden />
+            <span className="absolute start-0 end-0 bottom-1 h-4 lg:h-5 bg-butter -z-0 rotate-1" aria-hidden />
             <span className="relative z-10">塌缩</span>
           </span>
           。
@@ -131,7 +131,7 @@ const SectionAsRouter: React.FC = () => {
 
         {/* 场景切换 */}
         <div className="flex flex-wrap gap-2 mb-5 items-center">
-          <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-ink/55 mr-1">scene ·</span>
+          <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-ink/55 me-1">scene ·</span>
           {SCENES.map((s, i) => {
             const on = i === sceneIdx;
             return (
@@ -149,7 +149,7 @@ const SectionAsRouter: React.FC = () => {
               </button>
             );
           })}
-          <div className="ml-2 font-mono text-[11px] text-ink/55">
+          <div className="ms-2 font-mono text-[11px] text-ink/55">
             {scene.hint}
           </div>
         </div>
@@ -291,7 +291,7 @@ const SectionAsRouter: React.FC = () => {
                         />
                       </div>
                       <div className={[
-                        "w-9 text-right font-mono text-[11px] tabular-nums shrink-0",
+                        "w-9 text-end font-mono text-[11px] tabular-nums shrink-0",
                         isDead ? "text-coral" : isMax ? "text-butter font-bold" : "text-cream/65",
                       ].join(" ")}>
                         {u}

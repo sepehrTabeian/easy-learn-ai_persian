@@ -164,7 +164,7 @@ const SectionThreeWorlds: React.FC = () => {
             一台 Mac mini 跑 70B，跟 64 张 H200 跑同一个 671B，
             <br />
             <span className="relative inline-block">
-              <span className="absolute left-0 right-0 bottom-0.5 h-3 lg:h-4 bg-butter -z-0" aria-hidden />
+              <span className="absolute start-0 end-0 bottom-0.5 h-3 lg:h-4 bg-butter -z-0" aria-hidden />
               <span className="relative z-10">是同一件事的两头。</span>
             </span>
           </h2>

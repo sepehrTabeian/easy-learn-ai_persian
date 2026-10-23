@@ -68,7 +68,7 @@ export default function Chapter7({ step }: { step: number }) {
             {/* The Heavy Blocks Falling */}
             <AnimatePresence>
               {step >= 2 && (
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex gap-6 mt-10">
+                <div className="absolute top-1/2 start-1/2 -translate-x-1/2 -translate-y-1/2 flex gap-6 mt-10">
                   {HEAVY_BLOCKS.map((block, i) => (
                     <motion.div
                       key={block.id}

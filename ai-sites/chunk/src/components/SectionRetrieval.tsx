@@ -48,7 +48,7 @@ const SectionRetrieval: React.FC = () => {
                   key={item.id}
                   onClick={() => setQuestionId(item.id)}
                   className={cx(
-                    "rounded-xl border-2 border-ink px-4 py-3 text-left text-sm font-bold transition-all duration-250 ease-spring",
+                    "rounded-xl border-2 border-ink px-4 py-3 text-start text-sm font-bold transition-all duration-250 ease-spring",
                     item.id === questionId ? "bg-ink text-cream shadow-stamp" : "bg-white text-ink hover:bg-butter-tint",
                   )}
                 >

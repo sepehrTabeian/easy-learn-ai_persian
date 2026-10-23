@@ -117,7 +117,7 @@ const SectionBalance: React.FC = () => {
           MoE 训练最贵的一节课：
           <br />
           <span className="relative inline-block">
-            <span className="absolute left-0 right-0 bottom-1 h-4 lg:h-5 bg-cream -z-0 -rotate-1" aria-hidden />
+            <span className="absolute start-0 end-0 bottom-1 h-4 lg:h-5 bg-cream -z-0 -rotate-1" aria-hidden />
             <span className="relative z-10">怎么让 router 不偏心</span>
           </span>
           。
@@ -144,7 +144,7 @@ const SectionBalance: React.FC = () => {
                       key={s.id}
                       onClick={() => setStrategy(s.id)}
                       className={[
-                        "p-3 rounded-xl border-2 border-ink text-left transition-all duration-250 ease-spring",
+                        "p-3 rounded-xl border-2 border-ink text-start transition-all duration-250 ease-spring",
                         on
                           ? "bg-ink text-cream shadow-stamp-lg"
                           : "bg-cream hover:-translate-y-0.5 hover:shadow-[3px_3px_0_0_#241C15]",
@@ -171,7 +171,7 @@ const SectionBalance: React.FC = () => {
                 </div>
                 <div className="font-display text-[22px] font-bold text-ink tabular-nums leading-none">
                   {(step / 1000).toFixed(1)}
-                  <span className="font-mono text-[11px] text-ink/55 ml-1">k step</span>
+                  <span className="font-mono text-[11px] text-ink/55 ms-1">k step</span>
                 </div>
               </div>
               <input
@@ -220,7 +220,7 @@ const SectionBalance: React.FC = () => {
                         />
                       </div>
                       <div className={[
-                        "w-14 text-right shrink-0 font-mono text-[11px] tabular-nums",
+                        "w-14 text-end shrink-0 font-mono text-[11px] tabular-nums",
                         overload ? "text-coral font-bold" : dead ? "text-ink/35" : "text-ink",
                       ].join(" ")}>
                         {pct.toFixed(1)}%

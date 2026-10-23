@@ -36,7 +36,7 @@ const SectionAfterLlama: React.FC = () => {
           <br />开源主线
           <span className="relative inline-block">
             <span
-              className="absolute left-0 right-0 bottom-1 h-4 lg:h-5 bg-pop/40 -z-0 -rotate-1"
+              className="absolute start-0 end-0 bottom-1 h-4 lg:h-5 bg-pop/40 -z-0 -rotate-1"
               aria-hidden
             />
             <span className="relative z-10">换了人</span>

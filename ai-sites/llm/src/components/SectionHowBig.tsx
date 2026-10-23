@@ -29,7 +29,7 @@ const SectionHowBig: React.FC = () => {
               <span className="relative inline-block">
                 <span className="relative z-10">越来越聪明</span>
                 <span
-                  className="absolute left-0 right-0 bottom-1 h-3.5 lg:h-5 bg-butter -z-0"
+                  className="absolute start-0 end-0 bottom-1 h-3.5 lg:h-5 bg-butter -z-0"
                   aria-hidden
                 />
               </span>
@@ -45,7 +45,7 @@ const SectionHowBig: React.FC = () => {
                 它能把话接得越来越像样，靠的是下面这三样一起往上加：
               </p>
 
-              <ul className="space-y-2.5 pl-1">
+              <ul className="space-y-2.5 ps-1">
                 <li className="flex items-start gap-2.5">
                   <span className="flex-shrink-0 mt-1.5 w-1.5 h-1.5 rounded-full bg-butter border border-ink" />
                   <span>

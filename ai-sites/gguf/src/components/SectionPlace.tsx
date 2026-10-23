@@ -184,7 +184,7 @@ const SectionPlace: React.FC = () => {
                       key={r.id}
                       onClick={() => toggle(r.id)}
                       className={[
-                        "w-full flex items-start gap-3 px-3.5 py-3 border-2 border-ink rounded-xl text-left transition-all duration-200",
+                        "w-full flex items-start gap-3 px-3.5 py-3 border-2 border-ink rounded-xl text-start transition-all duration-200",
                         on
                           ? "bg-butter-tint shadow-[3px_3px_0_0_#241C15]"
                           : "bg-white hover:bg-cream",
@@ -239,7 +239,7 @@ const SectionPlace: React.FC = () => {
                     ].join(" ")}
                   >
                     {isWinner && (
-                      <span className="absolute -top-2.5 -right-2 px-2.5 py-1 bg-coral text-cream font-mono text-[10px] uppercase tracking-[0.18em] font-bold rounded-md border-2 border-ink shadow-stamp">
+                      <span className="absolute -top-2.5 -end-2 px-2.5 py-1 bg-coral text-cream font-mono text-[10px] uppercase tracking-[0.18em] font-bold rounded-md border-2 border-ink shadow-stamp">
                         推荐
                       </span>
                     )}

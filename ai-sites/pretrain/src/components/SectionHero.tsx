@@ -119,13 +119,13 @@ const SectionHero: React.FC = () => {
     <section className="relative px-4 sm:px-6 lg:px-8 pt-20 lg:pt-28 pb-20 lg:pb-24 overflow-hidden">
       <div
         aria-hidden
-        className="absolute top-24 right-[8%] hidden lg:block animate-float-y"
+        className="absolute top-24 end-[8%] hidden lg:block animate-float-y"
       >
         <div className="w-10 h-10 bg-coral border-2 border-ink rounded-2xl shadow-stamp rotate-12" />
       </div>
       <div
         aria-hidden
-        className="absolute bottom-28 left-[6%] hidden lg:block animate-float-y-sm"
+        className="absolute bottom-28 start-[6%] hidden lg:block animate-float-y-sm"
       >
         <div className="w-8 h-8 bg-teal border-2 border-ink rounded-full shadow-stamp -rotate-6" />
       </div>
@@ -150,7 +150,7 @@ const SectionHero: React.FC = () => {
             <p className="max-w-md font-display text-[20px] lg:text-[22px] font-bold text-ink leading-snug mb-5 animate-enter-up">
               <span className="relative inline-block">
                 <span
-                  className="absolute left-0 right-0 bottom-0.5 h-3 lg:h-4 bg-butter -z-0"
+                  className="absolute start-0 end-0 bottom-0.5 h-3 lg:h-4 bg-butter -z-0"
                   aria-hidden
                 />
                 <span className="relative z-10">
@@ -211,7 +211,7 @@ const SectionHero: React.FC = () => {
                       key={r.id}
                       onClick={() => setActiveId(r.id)}
                       className={[
-                        "px-3 py-2.5 rounded-xl border-2 border-ink text-left transition-all duration-250 ease-spring",
+                        "px-3 py-2.5 rounded-xl border-2 border-ink text-start transition-all duration-250 ease-spring",
                         on
                           ? "bg-ink text-cream shadow-[3px_3px_0_0_#E07A5F] -translate-y-0.5"
                           : "bg-white text-ink/80 hover:bg-cream",
@@ -301,7 +301,7 @@ const SectionHero: React.FC = () => {
                       ${estCost.toFixed(estCost < 10 ? 2 : 1)}M
                     </div>
                   </div>
-                  <div className="text-right max-w-[55%]">
+                  <div className="text-end max-w-[55%]">
                     <div className="font-sans text-[12.5px] text-ink leading-snug font-medium">
                       {active.highlight}
                     </div>

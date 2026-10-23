@@ -116,8 +116,8 @@ export default function Chapter15({ step }: { step: number }) {
             
             <div className="bg-white p-12 rounded-[3rem] shadow-2xl border border-gray-100 max-w-5xl flex flex-col items-center text-center relative overflow-hidden">
               {/* Background decorative elements */}
-              <div className="absolute -top-20 -right-20 w-64 h-64 bg-green-50 rounded-full blur-3xl opacity-50" />
-              <div className="absolute -bottom-20 -left-20 w-64 h-64 bg-blue-50 rounded-full blur-3xl opacity-50" />
+              <div className="absolute -top-20 -end-20 w-64 h-64 bg-green-50 rounded-full blur-3xl opacity-50" />
+              <div className="absolute -bottom-20 -start-20 w-64 h-64 bg-blue-50 rounded-full blur-3xl opacity-50" />
               
               <p className="text-4xl font-bold text-[#43302B] leading-relaxed relative z-10">
                 在一个 Agent 系统里，<br/>
@@ -147,7 +147,7 @@ export default function Chapter15({ step }: { step: number }) {
               我自己会把一个成熟的 Harness 分成<span className="text-[#8B5CF6] text-6xl font-black mx-2">六层</span>
             </motion.h2>
 
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 mt-16 flex flex-col items-center justify-end h-[400px]">
+            <div className="absolute top-1/2 start-1/2 -translate-x-1/2 -translate-y-1/2 mt-16 flex flex-col items-center justify-end h-[400px]">
               {[
                 { id: 6, name: '约束与恢复' },
                 { id: 5, name: '评估与观测' },

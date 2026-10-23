@@ -182,7 +182,7 @@ const SectionDataMix: React.FC = () => {
                   key={m.id}
                   onClick={() => setActiveModel(m.id)}
                   className={[
-                    "w-full text-left bg-white border-2 border-ink rounded-2xl p-4 transition-all duration-300 ease-spring",
+                    "w-full text-start bg-white border-2 border-ink rounded-2xl p-4 transition-all duration-300 ease-spring",
                     isActive
                       ? "shadow-stamp-lg -translate-y-0.5"
                       : "shadow-stamp hover:-translate-y-0.5 hover:shadow-stamp-lg",
@@ -281,7 +281,7 @@ const SectionDataMix: React.FC = () => {
                       <span className="font-mono text-[13px] tabular-nums font-bold">
                         {pct}%
                       </span>
-                      <span className="font-mono text-[10px] text-cream/45 w-16 text-right">
+                      <span className="font-mono text-[10px] text-cream/45 w-16 text-end">
                         ≈ {((active.totalT * pct) / 100).toFixed(2)}T
                       </span>
                     </div>

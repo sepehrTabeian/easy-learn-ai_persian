@@ -28,13 +28,13 @@ const SectionMCP: React.FC = () => {
       {/* 浮动装饰 */}
       <div
         aria-hidden
-        className="absolute top-16 right-[8%] hidden lg:block animate-float-y"
+        className="absolute top-16 end-[8%] hidden lg:block animate-float-y"
       >
         <div className="w-12 h-12 bg-butter border-2 border-cream rounded-2xl shadow-stamp -rotate-6" />
       </div>
       <div
         aria-hidden
-        className="absolute bottom-28 left-[6%] hidden lg:block animate-float-y-sm"
+        className="absolute bottom-28 start-[6%] hidden lg:block animate-float-y-sm"
       >
         <div className="w-10 h-10 bg-coral border-2 border-cream rounded-full shadow-stamp" />
       </div>
@@ -53,7 +53,7 @@ const SectionMCP: React.FC = () => {
           不用重写一遍 ——{" "}
           <span className="relative inline-block">
             <span
-              className="absolute left-0 right-0 bottom-1 h-5 lg:h-7 bg-butter -z-0 -rotate-1"
+              className="absolute start-0 end-0 bottom-1 h-5 lg:h-7 bg-butter -z-0 -rotate-1"
               aria-hidden
             />
             <span className="relative z-10 text-ink">靠 MCP</span>
@@ -435,7 +435,7 @@ const ModeBtn: React.FC<{
   <button
     onClick={onClick}
     className={[
-      "flex-1 px-4 py-3 text-left transition-colors duration-200 border-r-2 border-ink last:border-r-0 flex items-start gap-3",
+      "flex-1 px-4 py-3 text-start transition-colors duration-200 border-e-2 border-ink last:border-e-0 flex items-start gap-3",
       on ? "bg-ink text-cream" : "bg-cream text-ink hover:bg-butter/30",
     ].join(" ")}
   >

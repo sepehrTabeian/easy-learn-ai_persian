@@ -82,7 +82,7 @@ export default function SectionAlpha() {
               <button
                 key={x.id}
                 onClick={() => setPick(x.id)}
-                className={`w-full text-left px-4 py-4 rounded-2xl border-2 transition-all duration-250 ease-spring ${
+                className={`w-full text-start px-4 py-4 rounded-2xl border-2 transition-all duration-250 ease-spring ${
                   a ? "bg-coral text-white border-ink shadow-stamp" : "bg-white border-ink/30 hover:border-ink text-ink"
                 }`}
               >

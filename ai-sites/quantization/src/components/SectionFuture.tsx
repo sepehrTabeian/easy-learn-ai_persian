@@ -58,10 +58,10 @@ const SectionFuture: React.FC = () => {
   return (
     <section className="relative bg-ink text-cream px-4 sm:px-6 lg:px-8 py-20 lg:py-28 overflow-hidden">
       {/* 浮动装饰 */}
-      <div aria-hidden className="absolute top-16 right-[8%] hidden lg:block animate-float-y">
+      <div aria-hidden className="absolute top-16 end-[8%] hidden lg:block animate-float-y">
         <div className="w-12 h-12 bg-coral border-2 border-cream rounded-2xl shadow-stamp -rotate-6" />
       </div>
-      <div aria-hidden className="absolute bottom-32 left-[6%] hidden lg:block animate-float-y-sm">
+      <div aria-hidden className="absolute bottom-32 start-[6%] hidden lg:block animate-float-y-sm">
         <div className="w-10 h-10 bg-butter border-2 border-cream rounded-full shadow-stamp" />
       </div>
 
@@ -75,7 +75,7 @@ const SectionFuture: React.FC = () => {
           下一个问题：
           <br />
           能不能<span className="relative inline-block">
-            <span className="absolute left-0 right-0 bottom-1 h-5 lg:h-7 bg-butter -z-0 -rotate-1" aria-hidden />
+            <span className="absolute start-0 end-0 bottom-1 h-5 lg:h-7 bg-butter -z-0 -rotate-1" aria-hidden />
             <span className="relative z-10 text-ink">1 个 bit？</span>
           </span>
         </h2>
@@ -99,7 +99,7 @@ const SectionFuture: React.FC = () => {
             </div>
             <div className="font-display text-[28px] font-bold text-ink tabular-nums">
               {params}
-              <span className="font-mono text-[12px] text-ink/55 ml-1">B 参数</span>
+              <span className="font-mono text-[12px] text-ink/55 ms-1">B 参数</span>
             </div>
           </div>
           <input
@@ -218,13 +218,13 @@ const SectionFuture: React.FC = () => {
           </p>
 
           <div className="overflow-x-auto -mx-2">
-            <table className="w-full text-left">
+            <table className="w-full text-start">
               <thead>
                 <tr className="text-cream/45 border-b border-cream/15">
                   <th className="font-mono text-[10px] uppercase tracking-[0.16em] font-normal py-2 px-2">benchmark</th>
-                  <th className="font-mono text-[10px] uppercase tracking-[0.16em] font-normal py-2 px-2 text-right">Llama 3.2 1B</th>
-                  <th className="font-mono text-[10px] uppercase tracking-[0.16em] font-normal py-2 px-2 text-right">Qwen2.5 1.5B</th>
-                  <th className="font-mono text-[10px] uppercase tracking-[0.16em] font-normal py-2 px-2 text-right text-butter">BitNet 1.58 · 2B</th>
+                  <th className="font-mono text-[10px] uppercase tracking-[0.16em] font-normal py-2 px-2 text-end">Llama 3.2 1B</th>
+                  <th className="font-mono text-[10px] uppercase tracking-[0.16em] font-normal py-2 px-2 text-end">Qwen2.5 1.5B</th>
+                  <th className="font-mono text-[10px] uppercase tracking-[0.16em] font-normal py-2 px-2 text-end text-butter">BitNet 1.58 · 2B</th>
                 </tr>
               </thead>
               <tbody className="font-mono text-[13px]">
@@ -237,13 +237,13 @@ const SectionFuture: React.FC = () => {
                 ].map((r) => (
                   <tr key={r.name} className="border-b border-cream/8">
                     <td className={["py-2 px-2 text-cream/80", r.bold ? "font-display font-bold text-cream" : ""].join(" ")}>{r.name}</td>
-                    <td className={`py-2 px-2 text-right tabular-nums ${r.best === "a" ? "text-butter font-bold" : "text-cream/70"}`}>
+                    <td className={`py-2 px-2 text-end tabular-nums ${r.best === "a" ? "text-butter font-bold" : "text-cream/70"}`}>
                       {r.a.toFixed(2)}
                     </td>
-                    <td className={`py-2 px-2 text-right tabular-nums ${r.best === "b" ? "text-butter font-bold" : "text-cream/70"}`}>
+                    <td className={`py-2 px-2 text-end tabular-nums ${r.best === "b" ? "text-butter font-bold" : "text-cream/70"}`}>
                       {r.b.toFixed(2)}
                     </td>
-                    <td className={`py-2 px-2 text-right tabular-nums ${r.best === "c" ? "text-butter font-bold" : "text-cream/85"}`}>
+                    <td className={`py-2 px-2 text-end tabular-nums ${r.best === "c" ? "text-butter font-bold" : "text-cream/85"}`}>
                       {r.c.toFixed(2)}
                     </td>
                   </tr>

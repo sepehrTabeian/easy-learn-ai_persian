@@ -40,7 +40,7 @@ const SectionSystemChoices: React.FC = () => {
                 <button
                   key={option.id}
                   onClick={() => toggle(option.id)}
-                  className={`w-full flex items-center gap-3 text-left rounded-xl border-2 px-4 py-3 transition-all duration-250 ${active ? "bg-butter text-ink border-ink shadow-stamp" : "bg-white/5 text-white border-white/30"}`}
+                  className={`w-full flex items-center gap-3 text-start rounded-xl border-2 px-4 py-3 transition-all duration-250 ${active ? "bg-butter text-ink border-ink shadow-stamp" : "bg-white/5 text-white border-white/30"}`}
                 >
                   <span className={`w-6 h-6 rounded-md border-2 flex items-center justify-center ${active ? "bg-ink border-ink text-white" : "border-white/45"}`}>
                     {active && <Check className="w-4 h-4" strokeWidth={3} />}

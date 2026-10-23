@@ -79,7 +79,7 @@ export const SceneProgressiveDisclosure: React.FC<SceneProps> = ({ step }) => {
                 initial={{ scale: 0, rotate: 10 }}
                 animate={{ scale: 1, rotate: 0 }}
                 transition={{ type: "spring", bounce: 0.5 }}
-                className="absolute -top-10 -right-4 md:right-20 bg-gradient-to-br from-purple-500 to-pink-600 p-1 rounded-full shadow-2xl z-30"
+                className="absolute -top-10 -end-4 md:end-20 bg-gradient-to-br from-purple-500 to-pink-600 p-1 rounded-full shadow-2xl z-30"
              >
                  <div className="bg-[#1e1e24] p-6 rounded-full flex flex-col items-center justify-center border-4 border-transparent w-40 h-40">
                      <Lightbulb size={40} className="text-yellow-400 mb-2 animate-pulse" />

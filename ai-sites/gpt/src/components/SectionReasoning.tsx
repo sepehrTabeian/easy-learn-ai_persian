@@ -252,7 +252,7 @@ const SectionReasoning: React.FC = () => {
                     className="h-full transition-all duration-500 ease-spring"
                     style={{ width: `${m.v}%`, backgroundColor: m.tone }}
                   />
-                  <span className="absolute inset-0 flex items-center justify-end pr-3 font-mono text-[11px] font-bold text-ink tabular-nums">
+                  <span className="absolute inset-0 flex items-center justify-end pe-3 font-mono text-[11px] font-bold text-ink tabular-nums">
                     {m.v.toFixed(1)}%
                   </span>
                 </div>

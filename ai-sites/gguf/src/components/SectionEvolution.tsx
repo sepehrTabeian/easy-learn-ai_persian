@@ -130,10 +130,10 @@ const SectionEvolution: React.FC = () => {
           {/* horizontal timeline */}
           <div className="relative mb-7">
             {/* 主线 */}
-            <div className="absolute left-5 right-5 top-5 h-0.5 bg-ink/20" aria-hidden />
+            <div className="absolute start-5 end-5 top-5 h-0.5 bg-ink/20" aria-hidden />
             {/* 已 progress 线 */}
             <div
-              className="absolute left-5 top-5 h-0.5 bg-coral transition-all duration-500 ease-editorial"
+              className="absolute start-5 top-5 h-0.5 bg-coral transition-all duration-500 ease-editorial"
               style={{ width: `calc((100% - 40px) * ${idx / (STAGES.length - 1)})` }}
               aria-hidden
             />
@@ -220,7 +220,7 @@ const SectionEvolution: React.FC = () => {
                 <div className="font-mono text-[10px] uppercase tracking-[0.22em] text-coral mb-2">
                   留给下一代的痛
                 </div>
-                <p className="text-[13.5px] text-ink/75 leading-relaxed pl-3 border-l-2 border-coral/40">
+                <p className="text-[13.5px] text-ink/75 leading-relaxed ps-3 border-s-2 border-coral/40">
                   {stage.pain}
                 </p>
               </div>
@@ -290,7 +290,7 @@ const SectionEvolution: React.FC = () => {
             </button>
             <button
               onClick={() => setIdx(0)}
-              className="ml-auto inline-flex items-center gap-1.5 px-2.5 py-2 text-ink/50 font-mono text-[11px] hover:text-ink transition-colors"
+              className="ms-auto inline-flex items-center gap-1.5 px-2.5 py-2 text-ink/50 font-mono text-[11px] hover:text-ink transition-colors"
             >
               <RotateCcw className="w-3 h-3" strokeWidth={2.5} />
               <span>reset</span>

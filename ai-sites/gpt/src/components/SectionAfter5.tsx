@@ -142,7 +142,7 @@ const SectionAfter5: React.FC = () => {
               >
                 <button
                   onClick={() => setOpenId(open ? "" : it.id)}
-                  className="w-full px-5 lg:px-6 py-5 text-left flex items-start gap-4 hover:bg-cream/40 transition-colors"
+                  className="w-full px-5 lg:px-6 py-5 text-start flex items-start gap-4 hover:bg-cream/40 transition-colors"
                 >
                   <span className="inline-flex items-center justify-center font-mono text-[10px] font-bold uppercase tracking-[0.15em] text-ink bg-butter border-2 border-ink rounded-full px-2.5 py-1 shrink-0 mt-0.5">
                     {it.badge}
@@ -162,18 +162,18 @@ const SectionAfter5: React.FC = () => {
 
                 {open && (
                   <div className="px-5 lg:px-6 pb-5 lg:pb-6 animate-enter-fade">
-                    <ul className="space-y-2 mb-3 pl-2 border-l-[3px] border-ink/15">
+                    <ul className="space-y-2 mb-3 ps-2 border-s-[3px] border-ink/15">
                       {it.facts.map((f, i) => (
                         <li
                           key={i}
-                          className="flex gap-2.5 text-[14px] text-ink/85 leading-relaxed pl-3"
+                          className="flex gap-2.5 text-[14px] text-ink/85 leading-relaxed ps-3"
                         >
                           <span className="inline-block mt-2 w-1.5 h-1.5 bg-coral rounded-full shrink-0" />
                           <span>{f}</span>
                         </li>
                       ))}
                     </ul>
-                    <div className="font-mono text-[10.5px] text-ink/55 pl-3">
+                    <div className="font-mono text-[10.5px] text-ink/55 ps-3">
                       来源：{it.ref}
                     </div>
                   </div>

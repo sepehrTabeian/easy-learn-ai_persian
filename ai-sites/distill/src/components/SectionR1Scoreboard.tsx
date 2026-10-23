@@ -72,7 +72,7 @@ const SectionR1Scoreboard: React.FC = () => {
 
         <h2 className="font-display text-display-lg text-ink mb-5 max-w-3xl">
           <span className="relative inline-block">
-            <span className="absolute left-0 right-0 bottom-1 h-4 lg:h-5 bg-coral/55 -z-0 -rotate-1" aria-hidden />
+            <span className="absolute start-0 end-0 bottom-1 h-4 lg:h-5 bg-coral/55 -z-0 -rotate-1" aria-hidden />
             <span className="relative z-10">7B 蒸馏模型</span>
           </span>
           ，
@@ -118,7 +118,7 @@ const SectionR1Scoreboard: React.FC = () => {
                 onClick={() => setBench(b.id)}
                 className={[
                   "px-3.5 py-2 font-mono text-[11px] font-bold transition-all duration-250",
-                  i > 0 ? "border-l-2 border-ink" : "",
+                  i > 0 ? "border-s-2 border-ink" : "",
                   bench === b.id
                     ? "bg-ink text-cream"
                     : "bg-cream text-ink/70 hover:bg-butter-tint",
@@ -140,7 +140,7 @@ const SectionR1Scoreboard: React.FC = () => {
             {onlyDistill ? "✓ 只看蒸馏 6 件套" : "只看蒸馏 6 件套"}
           </button>
 
-          <div className="ml-auto font-mono text-[10px] text-ink/45">
+          <div className="ms-auto font-mono text-[10px] text-ink/45">
             ↑ 按 {benchInfo.label} 自动排名
           </div>
         </div>
@@ -150,7 +150,7 @@ const SectionR1Scoreboard: React.FC = () => {
           <span className="font-display text-[14px] font-bold text-ink">{benchInfo.label}</span>
           <span className="font-mono text-[10px] text-ink/45">·</span>
           <span className="text-[13px] text-ink/65">{benchInfo.desc}</span>
-          <span className="font-mono text-[10px] text-ink/40 ml-auto">unit: {benchInfo.unit} · 参考分数（官方公布）</span>
+          <span className="font-mono text-[10px] text-ink/40 ms-auto">unit: {benchInfo.unit} · 参考分数（官方公布）</span>
         </div>
 
         {/* bar list */}
@@ -167,7 +167,7 @@ const SectionR1Scoreboard: React.FC = () => {
                   style={{ animationDelay: `${idx * 35}ms`, animationDuration: "0.5s" }}
                 >
                   {/* rank */}
-                  <div className="w-7 shrink-0 font-mono text-[11px] text-ink/40 text-right tabular-nums">
+                  <div className="w-7 shrink-0 font-mono text-[11px] text-ink/40 text-end tabular-nums">
                     {idx + 1}
                   </div>
                   {/* name + base */}
@@ -201,13 +201,13 @@ const SectionR1Scoreboard: React.FC = () => {
                     {/* 置顶虚线 = 当前最高 */}
                     {idx === 0 && (
                       <div
-                        className="absolute top-0 bottom-0 border-l-2 border-dashed border-ink/30"
+                        className="absolute top-0 bottom-0 border-s-2 border-dashed border-ink/30"
                         style={{ left: `${(topScore / 100) * 100}%` }}
                       />
                     )}
                   </div>
                   {/* score */}
-                  <div className="w-14 shrink-0 text-right">
+                  <div className="w-14 shrink-0 text-end">
                     <span className="font-display text-[17px] font-bold text-ink tabular-nums">
                       {score.toFixed(1)}
                     </span>

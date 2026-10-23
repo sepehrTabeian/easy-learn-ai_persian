@@ -131,7 +131,7 @@ const SectionTax: React.FC = () => {
                   key={c.id}
                   onClick={() => setActive(c.id)}
                   className={[
-                    "w-full flex items-center gap-2.5 px-3.5 py-2.5 rounded-xl border-2 border-ink text-left transition-all duration-250",
+                    "w-full flex items-center gap-2.5 px-3.5 py-2.5 rounded-xl border-2 border-ink text-start transition-all duration-250",
                     on
                       ? "bg-ink text-cream shadow-stamp"
                       : "bg-white text-ink hover:bg-cream",

@@ -27,12 +27,12 @@ export const Hero = () => (
         <div className="mt-8 flex items-center gap-2 font-mono text-xs font-bold"><ArrowDown className="h-4 w-4" />继续往下看</div>
       </div>
       <div className="relative rounded-[2.5rem] border-2 border-ink bg-cream p-6 text-ink shadow-stamp-xl">
-        <div className="absolute -right-4 -top-4 rounded-full border-2 border-ink bg-coral px-4 py-2 font-mono text-xs font-bold -rotate-3">符合规则</div>
+        <div className="absolute -end-4 -top-4 rounded-full border-2 border-ink bg-coral px-4 py-2 font-mono text-xs font-bold -rotate-3">符合规则</div>
         <div className="font-mono text-[13px] leading-8">
           <p>{"{"}</p>
-          <p className="pl-5"><span className="text-pop">"name"</span>: <span className="text-teal">"帆布包"</span>,</p>
-          <p className="pl-5"><span className="text-pop">"price"</span>: <span className="text-teal">129</span>,</p>
-          <p className="pl-5"><span className="text-pop">"in_stock"</span>: <span className="text-teal">true</span></p>
+          <p className="ps-5"><span className="text-pop">"name"</span>: <span className="text-teal">"帆布包"</span>,</p>
+          <p className="ps-5"><span className="text-pop">"price"</span>: <span className="text-teal">129</span>,</p>
+          <p className="ps-5"><span className="text-pop">"in_stock"</span>: <span className="text-teal">true</span></p>
           <p>{"}"}</p>
         </div>
         <div className="mt-6 grid grid-cols-3 gap-2 text-center text-xs font-bold">
@@ -55,7 +55,7 @@ export const PromptOnlyFailure = () => {
   return (
     <Section number="02" label="提示词约束的漏洞" title="写一句“请返回 JSON”，模型仍可能漏字段或写错类型" intro={<p>提示词只能告诉模型你的偏好。它没有强制检查每一步，所以长回答、复杂字段或少见情况仍可能偏离要求。</p>} tone="white">
       <div className="grid gap-6 lg:grid-cols-[.75fr_1.25fr]">
-        <div className="space-y-3">{cases.map((c,i) => <button key={c.label} onClick={() => setActive(i)} className={`w-full rounded-2xl border-2 border-ink p-4 text-left font-bold shadow-stamp transition-all ${active===i?"bg-coral -translate-y-1":"bg-white"}`}>{c.label}</button>)}</div>
+        <div className="space-y-3">{cases.map((c,i) => <button key={c.label} onClick={() => setActive(i)} className={`w-full rounded-2xl border-2 border-ink p-4 text-start font-bold shadow-stamp transition-all ${active===i?"bg-coral -translate-y-1":"bg-white"}`}>{c.label}</button>)}</div>
         <div className="rounded-[2rem] border-2 border-ink bg-ink p-6 text-white shadow-stamp-lg">
           <pre className="min-h-32 whitespace-pre-wrap font-mono text-sm leading-7 text-cream">{cases[active].text}</pre>
           <div className="mt-5 flex gap-3 rounded-2xl border-2 border-coral bg-coral/15 p-4"><X className="h-5 w-5 flex-none text-coral" /><p className="text-sm text-white/78">{cases[active].issue}</p></div>
@@ -78,7 +78,7 @@ export const SchemaPrimer = () => {
       <div className="grid gap-6 lg:grid-cols-[1.1fr_.9fr]">
         <div className="rounded-[2rem] border-2 border-ink bg-white p-6 shadow-stamp-lg">
           <div className="grid gap-3 sm:grid-cols-2">
-            {explanations.map(([title],i) => <button key={title} onClick={() => setField(i)} className={`rounded-2xl border-2 border-ink p-4 text-left ${field===i?"bg-ink text-white":"bg-cream"}`}><span className="font-display text-xl font-bold">{title}</span></button>)}
+            {explanations.map(([title],i) => <button key={title} onClick={() => setField(i)} className={`rounded-2xl border-2 border-ink p-4 text-start ${field===i?"bg-ink text-white":"bg-cream"}`}><span className="font-display text-xl font-bold">{title}</span></button>)}
           </div>
         </div>
         <div key={field} className="rounded-[2rem] border-2 border-ink bg-coral p-6 shadow-stamp-lg animate-enter-up">
@@ -157,7 +157,7 @@ export const ThreeChoices = () => {
   const row = modes.find(m => m.id===active)!;
   return (
     <Section number="06" label="三种约束强度" title="选哪一种，取决于后面的程序有多依赖格式" intro={<p>JSON Mode 主要保证“是一段合法 JSON”。按 Schema 生成还会约束字段、类型和必填项。</p>} tone="butter">
-      <div className="grid gap-3 sm:grid-cols-3">{modes.map(m => <button key={m.id} onClick={() => setActive(m.id)} className={`rounded-2xl border-2 border-ink p-4 text-left shadow-stamp ${active===m.id?"bg-ink text-white -translate-y-1":"bg-white"}`}><strong className="font-display text-xl">{m.title}</strong></button>)}</div>
+      <div className="grid gap-3 sm:grid-cols-3">{modes.map(m => <button key={m.id} onClick={() => setActive(m.id)} className={`rounded-2xl border-2 border-ink p-4 text-start shadow-stamp ${active===m.id?"bg-ink text-white -translate-y-1":"bg-white"}`}><strong className="font-display text-xl">{m.title}</strong></button>)}</div>
       <div key={active} className="mt-6 grid gap-4 rounded-[2rem] border-2 border-ink bg-white p-6 shadow-stamp-lg animate-enter-up md:grid-cols-3">
         <Info label="适合" text={row.fit} /><Info label="能保证什么" text={row.promise} /><Info label="还要防什么" text={row.risk} />
       </div>
@@ -172,8 +172,8 @@ export const CorrectShapeWrongFact = () => {
     <Section number="07" label="格式正确不等于内容正确" title="Schema 能检查回答的形状，不能替你核实事实" intro={<p>价格字段是数字，只说明 129 的写法合规。它不能证明真实价格确实是 129。</p>}>
       <div className="grid gap-6 lg:grid-cols-[.8fr_1.2fr]">
         <div className="card-stamp p-6">
-          <button onClick={() => setView("shape")} className={`mb-3 w-full rounded-xl border-2 border-ink p-4 text-left font-bold ${view==="shape"?"bg-butter":"bg-white"}`}>检查结构</button>
-          <button onClick={() => setView("fact")} className={`w-full rounded-xl border-2 border-ink p-4 text-left font-bold ${view==="fact"?"bg-coral":"bg-white"}`}>检查事实</button>
+          <button onClick={() => setView("shape")} className={`mb-3 w-full rounded-xl border-2 border-ink p-4 text-start font-bold ${view==="shape"?"bg-butter":"bg-white"}`}>检查结构</button>
+          <button onClick={() => setView("fact")} className={`w-full rounded-xl border-2 border-ink p-4 text-start font-bold ${view==="fact"?"bg-coral":"bg-white"}`}>检查事实</button>
         </div>
         <div className={`rounded-[2rem] border-2 border-ink p-6 shadow-stamp-lg ${view==="shape"?"bg-butter-tint":"bg-coral"}`}>
           {view==="shape" ? <><Check className="h-9 w-9 text-teal" /><h3 className="mt-5 font-display text-3xl font-bold">结构通过</h3><p className="mt-3">name 是文字，price 是数字，必填字段都出现了。</p></> : <><ShieldAlert className="h-9 w-9" /><h3 className="mt-5 font-display text-3xl font-bold">事实仍需核对</h3><p className="mt-3">商品数据库里没有这件商品。格式很整齐，内容仍可能是编出来的。</p></>}

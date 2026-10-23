@@ -90,10 +90,10 @@ export const SectionRagBlindSpot: React.FC = () => {
             先选问题，再切换检索方式。这里的结果是教学示意，用来观察两类问题的差别。
           </p>
           <div className="mt-6 space-y-3">
-            <button onClick={() => setQuestion("point")} className={`w-full rounded-2xl border-2 border-ink p-4 text-left ${point ? "bg-ink text-cream shadow-stamp" : "bg-white"}`}>
+            <button onClick={() => setQuestion("point")} className={`w-full rounded-2xl border-2 border-ink p-4 text-start ${point ? "bg-ink text-cream shadow-stamp" : "bg-white"}`}>
               <strong>单点问题</strong><span className="mt-1 block text-sm opacity-70">北斗项目何时发布移动端？</span>
             </button>
-            <button onClick={() => setQuestion("whole")} className={`w-full rounded-2xl border-2 border-ink p-4 text-left ${!point ? "bg-ink text-cream shadow-stamp" : "bg-white"}`}>
+            <button onClick={() => setQuestion("whole")} className={`w-full rounded-2xl border-2 border-ink p-4 text-start ${!point ? "bg-ink text-cream shadow-stamp" : "bg-white"}`}>
               <strong>整体问题</strong><span className="mt-1 block text-sm opacity-70">这些材料反映了哪些主要风险？</span>
             </button>
           </div>
@@ -162,7 +162,7 @@ export const SectionBuildIndex: React.FC = () => {
         <div className="grid gap-5 md:grid-cols-[0.8fr_1.2fr]">
           <div className="space-y-3">
             {indexSteps.map((item, index) => (
-              <button key={item.title} onClick={() => setStep(index)} className={`w-full rounded-xl border-2 border-ink p-4 text-left font-bold ${step === index ? "bg-ink text-cream shadow-stamp" : "bg-white"}`}>
+              <button key={item.title} onClick={() => setStep(index)} className={`w-full rounded-xl border-2 border-ink p-4 text-start font-bold ${step === index ? "bg-ink text-cream shadow-stamp" : "bg-white"}`}>
                 {index + 1}. {item.title}
               </button>
             ))}
@@ -330,7 +330,7 @@ export const SectionTradeoffs: React.FC = () => {
           </p>
           <div className="mt-6 space-y-3">
             {tradeoffs.map((item, index) => (
-              <button key={item.title} onClick={() => setActive(index)} className={`w-full rounded-xl border-2 border-ink p-4 text-left font-bold ${active === index ? "bg-ink text-cream shadow-stamp" : "bg-white"}`}>{item.title}</button>
+              <button key={item.title} onClick={() => setActive(index)} className={`w-full rounded-xl border-2 border-ink p-4 text-start font-bold ${active === index ? "bg-ink text-cream shadow-stamp" : "bg-white"}`}>{item.title}</button>
             ))}
           </div>
         </div>
@@ -378,7 +378,7 @@ const GraphPicture: React.FC<{ active: string[] }> = ({ active }) => (
       return (
         <g key={node.id} opacity={visible ? 1 : 0.12}>
           <circle cx={node.x} cy={node.y} r="25" fill={node.tone} stroke="#241C15" strokeWidth="2.5" />
-          <text x={node.x} y={node.y + 4} textAnchor="middle" fontFamily="Plus Jakarta Sans, Noto Sans SC, sans-serif" fontSize="10" fontWeight="800">{node.id}</text>
+          <text x={node.x} y={node.y + 4} textAnchor="middle" fontFamily="Plus Jakarta Sans, Vazirmatn, sans-serif" fontSize="10" fontWeight="800">{node.id}</text>
         </g>
       );
     })}

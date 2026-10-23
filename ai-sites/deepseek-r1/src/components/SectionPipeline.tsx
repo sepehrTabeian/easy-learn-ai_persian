@@ -163,7 +163,7 @@ const SectionPipeline: React.FC = () => {
                   key={stage.num}
                   onClick={() => setCursor(i)}
                   className={[
-                    "p-3 border-2 border-ink rounded-2xl text-left transition-all duration-300 ease-spring",
+                    "p-3 border-2 border-ink rounded-2xl text-start transition-all duration-300 ease-spring",
                     active
                       ? `${TONE_BG[stage.tone]} ${TONE_SHADOW[stage.tone]} -translate-y-1`
                       : reached
@@ -182,7 +182,7 @@ const SectionPipeline: React.FC = () => {
             })}
           </div>
           {/* 连线 */}
-          <div className="hidden sm:flex absolute top-1/2 left-0 right-0 -z-10 px-[12.5%] -translate-y-1/2">
+          <div className="hidden sm:flex absolute top-1/2 start-0 end-0 -z-10 px-[12.5%] -translate-y-1/2">
             <div className="flex-1 border-t-2 border-dashed border-ink/30" />
           </div>
         </div>

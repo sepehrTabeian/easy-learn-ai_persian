@@ -120,7 +120,7 @@ const SectionAnatomy: React.FC = () => {
                 <span className="w-2.5 h-2.5 rounded-full bg-coral" />
                 <span className="w-2.5 h-2.5 rounded-full bg-butter" />
                 <span className="w-2.5 h-2.5 rounded-full bg-teal" />
-                <span className="ml-2 font-mono text-[11px] tracking-[0.14em] uppercase text-cream/70">
+                <span className="ms-2 font-mono text-[11px] tracking-[0.14em] uppercase text-cream/70">
                   真正发给模型的 prompt
                 </span>
               </div>
@@ -138,7 +138,7 @@ const SectionAnatomy: React.FC = () => {
                     pairs
                       .filter((p) => p.in || p.out)
                       .map((p, i) => (
-                        <div key={i} className="pl-2">
+                        <div key={i} className="ps-2">
                           <span className="text-cream/80">{p.in || "…"}</span>
                           <span className="text-cream/40"> → </span>
                           <span className="text-butter font-bold">{p.out || "…"}</span>
@@ -149,7 +149,7 @@ const SectionAnatomy: React.FC = () => {
 
                 <div className="pt-1 border-t border-cream/15">
                   <span className="text-cream/45">现在轮到你：</span>
-                  <div className="pl-2">
+                  <div className="ps-2">
                     <span className="text-cream/90">{query || "…"}</span>
                     <span className="text-cream/40"> → </span>
                     <span className="text-coral font-bold">?</span>

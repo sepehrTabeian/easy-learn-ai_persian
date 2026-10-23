@@ -157,7 +157,7 @@ const SelfCheckVis: React.FC = () => {
         <p className="mt-3 font-mono text-[10.5px] text-ink/60 leading-relaxed">
           → 答案 #3 / #5 跟其他答案严重冲突 ⇒ 标记为幻觉嫌疑。
           {hover && (
-            <span className="ml-2 text-ink">
+            <span className="ms-2 text-ink">
               · 选中 ({hover.i + 1}, {hover.j + 1}) → 一致度 {CONSISTENCY[hover.i][hover.j]}/5
             </span>
           )}
@@ -361,7 +361,7 @@ const SectionDetect: React.FC = () => {
                   key={k}
                   onClick={() => setMethod(k)}
                   className={[
-                    "w-full text-left border-2 border-ink rounded-2xl p-4 transition-all duration-300 ease-spring",
+                    "w-full text-start border-2 border-ink rounded-2xl p-4 transition-all duration-300 ease-spring",
                     on
                       ? "bg-ink text-cream shadow-stamp-lg -translate-x-0.5 -translate-y-0.5"
                       : "bg-white shadow-stamp hover:shadow-stamp-hover hover:bg-butter-tint",

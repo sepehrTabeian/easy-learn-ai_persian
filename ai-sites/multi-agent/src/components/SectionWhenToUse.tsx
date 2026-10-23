@@ -102,7 +102,7 @@ const SectionWhenToUse: React.FC = () => {
                 >
                   <button
                     onClick={() => setOpen(on ? null : i)}
-                    className="w-full flex items-center justify-between px-5 py-4 text-left"
+                    className="w-full flex items-center justify-between px-5 py-4 text-start"
                   >
                     <span className="font-display font-bold text-[17px] text-ink">{c.q}</span>
                     <ChevronDown

@@ -149,7 +149,7 @@ const SectionThreeForks: React.FC = () => {
                   key={t.id}
                   onClick={() => setTaskId(t.id)}
                   className={[
-                    "px-4 py-2.5 rounded-xl border-2 border-ink text-left transition-all duration-250 ease-spring",
+                    "px-4 py-2.5 rounded-xl border-2 border-ink text-start transition-all duration-250 ease-spring",
                     on
                       ? "bg-ink text-cream shadow-stamp -translate-y-0.5"
                       : "bg-white text-ink hover:bg-butter-tint",
@@ -225,7 +225,7 @@ const SectionThreeForks: React.FC = () => {
                 </div>
 
                 {/* 任务评语 */}
-                <div className="mb-4 px-3 py-2.5 border-l-4 border-ink bg-butter-tint/40 rounded-r-md">
+                <div className="mb-4 px-3 py-2.5 border-s-4 border-ink bg-butter-tint/40 rounded-e-md">
                   <div className="text-[12.5px] text-ink/85 leading-snug">
                     {verdict.line}
                   </div>
@@ -275,7 +275,7 @@ const SectionThreeForks: React.FC = () => {
                   <span className="font-semibold text-[13px]">{d.label}</span>
                   <span
                     className={[
-                      "ml-2 font-mono text-[10px]",
+                      "ms-2 font-mono text-[10px]",
                       on ? "text-white/70" : "text-ink/40",
                     ].join(" ")}
                   >

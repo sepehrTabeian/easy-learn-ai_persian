@@ -14,7 +14,7 @@ export const SceneTimeline: React.FC<SceneProps> = ({ step }) => {
   return (
     <div className="w-full h-full flex flex-col justify-center max-w-6xl px-4">
         {/* Header - Always Visible */}
-        <div className="absolute top-12 left-12">
+        <div className="absolute top-12 start-12">
              <div className="flex items-center gap-4">
                 <Flame size={40} className="text-orange-400 animate-pulse" />
                 <ChalkText size="2xl">Agent Skills 的崛起</ChalkText>
@@ -36,7 +36,7 @@ export const SceneTimeline: React.FC<SceneProps> = ({ step }) => {
         <div className="relative flex justify-between items-start mt-8">
             {/* Connecting Line */}
             <motion.div 
-                className="absolute top-8 left-0 h-1 bg-white/20 rounded-full"
+                className="absolute top-8 start-0 h-1 bg-white/20 rounded-full"
                 initial={{ width: 0 }}
                 animate={{ width: step >= 4 ? '100%' : step >= 3 ? '75%' : step >= 2 ? '50%' : step >= 1 ? '25%' : '0%' }}
                 transition={{ duration: 1, ease: "easeInOut" }}

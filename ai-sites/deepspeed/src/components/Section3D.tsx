@@ -72,7 +72,7 @@ const Section3D: React.FC = () => {
           <br />
           <span className="relative inline-block">
             <span
-              className="absolute left-0 right-0 bottom-1 h-4 lg:h-5 bg-butter -z-0 -rotate-1"
+              className="absolute start-0 end-0 bottom-1 h-4 lg:h-5 bg-butter -z-0 -rotate-1"
               aria-hidden
             />
             <span className="relative z-10">三维切，每维管不同事</span>
@@ -180,7 +180,7 @@ const Section3D: React.FC = () => {
                       key={p.label}
                       onClick={() => setCombo(p.combo)}
                       className={[
-                        "w-full text-left px-3 py-2 rounded-lg border-2 transition-all duration-200",
+                        "w-full text-start px-3 py-2 rounded-lg border-2 transition-all duration-200",
                         on
                           ? "border-ink bg-ink text-cream shadow-stamp"
                           : "border-ink/20 bg-white text-ink hover:border-ink hover:-translate-y-0.5",

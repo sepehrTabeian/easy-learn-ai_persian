@@ -60,7 +60,7 @@ const SectionRerankDesk: React.FC = () => {
                   key={item.title}
                   onClick={() => setStep(index)}
                   className={cx(
-                    "block w-full rounded-2xl border-2 border-ink p-4 text-left transition-all duration-250 ease-spring",
+                    "block w-full rounded-2xl border-2 border-ink p-4 text-start transition-all duration-250 ease-spring",
                     step === index ? "bg-butter shadow-stamp" : "bg-white hover:bg-cream",
                   )}
                 >

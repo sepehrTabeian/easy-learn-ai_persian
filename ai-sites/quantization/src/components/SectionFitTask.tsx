@@ -116,7 +116,7 @@ const SectionFitTask: React.FC = () => {
           <br />
           能塞下{" "}
           <span className="relative inline-block">
-            <span className="absolute left-0 right-0 bottom-1 h-4 lg:h-5 bg-coral/55 -z-0 -rotate-1" aria-hidden />
+            <span className="absolute start-0 end-0 bottom-1 h-4 lg:h-5 bg-coral/55 -z-0 -rotate-1" aria-hidden />
             <span className="relative z-10">什么模型</span>
           </span>
           ？
@@ -184,7 +184,7 @@ const ChipPickerColumn: React.FC<{
             key={c.id}
             onClick={() => onSelect(c.id)}
             className={[
-              "text-left px-3 py-2.5 rounded-lg border-2 border-ink transition-all duration-250 ease-spring",
+              "text-start px-3 py-2.5 rounded-lg border-2 border-ink transition-all duration-250 ease-spring",
               on
                 ? "bg-ink text-cream shadow-stamp"
                 : "bg-cream text-ink hover:-translate-y-0.5 hover:shadow-[3px_3px_0_0_#241C15]",
@@ -271,7 +271,7 @@ const RecommendCard: React.FC<{
 
       <div className="font-display text-[34px] lg:text-[40px] font-bold leading-none mb-2">
         <span className="text-butter">{scheme.label}</span>
-        <span className="ml-3 font-mono text-[14px] text-cream/55 align-middle">
+        <span className="ms-3 font-mono text-[14px] text-cream/55 align-middle">
           {scheme.bits}-bit
         </span>
       </div>

@@ -50,7 +50,7 @@ export const SceneFutureLandscape: React.FC<SceneProps> = ({ step }) => {
                 initial={{ y: 100, opacity: 0 }}
                 animate={step >= 1 ? { y: 0, opacity: 1 } : {}}
             >
-                <div className="flex flex-col items-center gap-2 border-r border-gray-700 pr-8">
+                <div className="flex flex-col items-center gap-2 border-e border-gray-700 pe-8">
                     <Cpu size={48} className="text-blue-400" />
                     <ChalkText size="lg" className="font-bold text-blue-300">Agent Core</ChalkText>
                 </div>
@@ -63,7 +63,7 @@ export const SceneFutureLandscape: React.FC<SceneProps> = ({ step }) => {
                 </div>
 
                 {/* Annotation */}
-                <div className="absolute -bottom-8 left-0 right-0 text-center text-gray-500 text-sm">
+                <div className="absolute -bottom-8 start-0 end-0 text-center text-gray-500 text-sm">
                     内置核心能力 (Native Capabilities)
                 </div>
             </motion.div>

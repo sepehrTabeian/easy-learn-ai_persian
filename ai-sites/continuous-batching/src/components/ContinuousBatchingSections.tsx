@@ -172,7 +172,7 @@ export const Tradeoffs = () => {
     <Section number="06" label="它也有边界" title="调度器还要照顾显存、长请求和公平性" intro={<p>每个请求都要保存已经生成过的内容。并发增加，显存占用也会上涨。调度器有时会暂停请求，先给更合适的请求腾位置。</p>} tone="dark">
       <div className="grid gap-6 lg:grid-cols-3">
         {[["first","先来先服务",Clock3],["short","短请求优先",Gauge],["fair","限制单人占用",Users]].map(([id,label,Icon]) => (
-          <button key={id as string} onClick={() => setPriority(id as typeof priority)} className={`rounded-3xl border-2 border-ink p-5 text-left text-ink shadow-stamp transition-all ${priority === id ? "bg-butter -translate-y-1" : "bg-white"}`}>
+          <button key={id as string} onClick={() => setPriority(id as typeof priority)} className={`rounded-3xl border-2 border-ink p-5 text-start text-ink shadow-stamp transition-all ${priority === id ? "bg-butter -translate-y-1" : "bg-white"}`}>
             <Icon className="h-7 w-7" /><strong className="mt-4 block font-display text-xl">{label as string}</strong>
           </button>
         ))}

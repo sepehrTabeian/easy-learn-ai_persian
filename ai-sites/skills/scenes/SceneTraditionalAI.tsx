@@ -70,16 +70,16 @@ export const SceneTraditionalAI: React.FC<SceneProps> = ({ step }) => {
             exit={{ scale: 0.8, opacity: 0 }}
             className="relative bg-red-500/10 p-8 rounded-3xl border-2 border-dashed border-red-400/40 max-w-2xl"
           >
-             <div className="absolute -top-6 left-1/2 -translate-x-1/2 bg-[#1e1e24] px-4">
+             <div className="absolute -top-6 start-1/2 -translate-x-1/2 bg-[#1e1e24] px-4">
                 <ChalkText size="lg" color="red">痛点</ChalkText>
              </div>
              
              <div className="flex items-center gap-6">
                 <div className="relative">
                     <User size={80} className="text-gray-300" />
-                    <HelpCircle size={32} className="absolute -top-1 -right-1 text-red-400 animate-bounce" />
+                    <HelpCircle size={32} className="absolute -top-1 -end-1 text-red-400 animate-bounce" />
                 </div>
-                <div className="text-left">
+                <div className="text-start">
                     <ChalkText size="xl" className="font-bold mb-2">就像个懂一点的实习生</ChalkText>
                     <ChalkText size="lg" className="text-gray-300">每次干活都得<span className="text-red-300 underline decoration-wavy">重新教一遍</span></ChalkText>
                 </div>
@@ -96,7 +96,7 @@ export const SceneTraditionalAI: React.FC<SceneProps> = ({ step }) => {
           >
              <div className="flex items-center gap-6 justify-center">
                  <Puzzle size={64} className="text-yellow-300 animate-pulse" />
-                 <div className="text-left">
+                 <div className="text-start">
                      <ChalkText size="lg" className="text-yellow-200 mb-1">Agent Skills 带来全新玩法</ChalkText>
                      <ChalkText size="2xl" color="white" className="font-bold">模块化的能力插件</ChalkText>
                  </div>

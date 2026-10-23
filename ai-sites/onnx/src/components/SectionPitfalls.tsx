@@ -57,7 +57,7 @@ const SectionPitfalls: React.FC = () => {
               <div key={i} className="bg-white border-2 border-ink rounded-2xl shadow-stamp overflow-hidden">
                 <button
                   onClick={() => setOpen(isOpen ? null : i)}
-                  className="w-full flex items-center gap-3 px-5 py-4 text-left"
+                  className="w-full flex items-center gap-3 px-5 py-4 text-start"
                 >
                   <div className="flex items-center justify-center w-9 h-9 bg-coral border-2 border-ink rounded-xl shrink-0">
                     <AlertTriangle className="w-4 h-4 text-cream" strokeWidth={2.4} />

@@ -64,7 +64,7 @@ const SectionWhyHot: React.FC = () => {
           </p>
           <p className="mt-5 font-sans text-[15px] text-cream/70">
             把这件事做好，普通模型也能稳定干成事。
-            <a href="#top" className="ml-1 underline decoration-coral/60 hover:decoration-coral">
+            <a href="#top" className="ms-1 underline decoration-coral/60 hover:decoration-coral">
               回到开头再看一遍定义
             </a>
             。

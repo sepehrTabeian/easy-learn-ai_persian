@@ -31,12 +31,12 @@ export const SUMMARY_SLIDES: SlideData[] = [
     content: (
       <div className="flex flex-col items-center justify-center h-full gap-8">
          <div className="p-8 bg-white/5 border border-white/10 rounded-xl max-w-4xl relative">
-            <Quote className="absolute -top-6 -left-6 text-blue-500/20 w-16 h-16 transform rotate-180" />
+            <Quote className="absolute -top-6 -start-6 text-blue-500/20 w-16 h-16 transform rotate-180" />
             <p className="text-2xl text-gray-300 leading-relaxed text-center font-light italic">
                “当我们看完这琳琅满目的榜单、复杂的缩写和不断飙升的分数，你可能会有一种感觉：<br/>
                <span className="text-white font-bold not-italic mt-2 block">这不就是 AI 届的军备竞赛吗？</span>”
             </p>
-            <Quote className="absolute -bottom-6 -right-6 text-blue-500/20 w-16 h-16" />
+            <Quote className="absolute -bottom-6 -end-6 text-blue-500/20 w-16 h-16" />
          </div>
          <p className="text-lg text-gray-400 text-center max-w-3xl border-t border-gray-700 pt-6">
             没错，但这不仅是分数的竞赛，更是人类认知边界的竞赛。<br/>
@@ -63,7 +63,7 @@ export const SUMMARY_SLIDES: SlideData[] = [
                <Target size={140} className="text-gray-600 relative z-10 opacity-50" />
                
                {/* The Arrow (Metric) missing the point but hitting the score */}
-               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20">
+               <div className="absolute top-1/2 start-1/2 -translate-x-1/2 -translate-y-1/2 z-20">
                   <TrendingUp size={80} className="text-red-500 drop-shadow-[0_0_15px_rgba(239,68,68,0.5)] transform -rotate-12" />
                </div>
                
@@ -71,7 +71,7 @@ export const SUMMARY_SLIDES: SlideData[] = [
             </div>
 
             <div className="max-w-xl space-y-6">
-               <div className="bg-slate-900/50 p-6 rounded-xl border-l-4 border-red-500 shadow-lg backdrop-blur-sm">
+               <div className="bg-slate-900/50 p-6 rounded-xl border-s-4 border-red-500 shadow-lg backdrop-blur-sm">
                   <h3 className="text-xl font-bold text-white mb-2 flex items-center gap-2">
                      <AlertTriangle size={20} className="text-red-400" /> 指标异化
                   </h3>
@@ -80,7 +80,7 @@ export const SUMMARY_SLIDES: SlideData[] = [
                   </p>
                </div>
 
-               <div className="bg-slate-900/50 p-6 rounded-xl border-l-4 border-green-500 shadow-lg backdrop-blur-sm">
+               <div className="bg-slate-900/50 p-6 rounded-xl border-s-4 border-green-500 shadow-lg backdrop-blur-sm">
                   <h3 className="text-xl font-bold text-white mb-2 flex items-center gap-2">
                      <CheckCircle2 size={20} className="text-green-400" /> 对分数“祛魅”
                   </h3>

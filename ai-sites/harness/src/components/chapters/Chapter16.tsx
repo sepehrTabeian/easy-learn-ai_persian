@@ -72,7 +72,7 @@ export default function Chapter16({ step }: { step: number }) {
                 <motion.div 
                   animate={{ scale: [1, 1.2, 1], opacity: [0.5, 1, 0.5] }}
                   transition={{ duration: 2, repeat: Infinity }}
-                  className="absolute -right-4 -top-4"
+                  className="absolute -end-4 -top-4"
                 >
                   <Focus className="w-10 h-10 text-purple-600" />
                 </motion.div>

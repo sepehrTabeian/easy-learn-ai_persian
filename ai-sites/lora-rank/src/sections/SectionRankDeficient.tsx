@@ -42,7 +42,7 @@ export default function SectionRankDeficient() {
           <div className="flex items-baseline justify-between mb-2">
             <span className="font-mono text-xs text-ink-tertiary">
               把 ΔW 拆成方向，看每个多重要
-              <span className="ml-1.5 px-1 py-0.5 bg-ink/8 border border-ink/20 rounded text-ink/55">进阶 · SVD</span>
+              <span className="ms-1.5 px-1 py-0.5 bg-ink/8 border border-ink/20 rounded text-ink/55">进阶 · SVD</span>
             </span>
             <span className="font-mono text-xs text-ink">纵轴 log · 越靠右越没用</span>
           </div>

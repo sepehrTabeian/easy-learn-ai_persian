@@ -17,7 +17,7 @@ const SectionTwoPhases: React.FC = () => {
       <div className="grid md:grid-cols-2 gap-5">
         <button
           onClick={() => setPhase("prefill")}
-          className={`text-left border-2 border-ink rounded-3xl p-6 transition-all duration-250 ease-spring ${isPrefill ? "bg-butter shadow-stamp-lg -translate-x-0.5 -translate-y-0.5" : "bg-white"}`}
+          className={`text-start border-2 border-ink rounded-3xl p-6 transition-all duration-250 ease-spring ${isPrefill ? "bg-butter shadow-stamp-lg -translate-x-0.5 -translate-y-0.5" : "bg-white"}`}
         >
           <BookOpenCheck className="w-8 h-8" />
           <span className="block mt-4 font-mono text-[11px] tracking-widest">PREFILL · 先读完</span>
@@ -26,7 +26,7 @@ const SectionTwoPhases: React.FC = () => {
         </button>
         <button
           onClick={() => setPhase("decode")}
-          className={`text-left border-2 border-ink rounded-3xl p-6 transition-all duration-250 ease-spring ${!isPrefill ? "bg-coral shadow-stamp-lg -translate-x-0.5 -translate-y-0.5" : "bg-white"}`}
+          className={`text-start border-2 border-ink rounded-3xl p-6 transition-all duration-250 ease-spring ${!isPrefill ? "bg-coral shadow-stamp-lg -translate-x-0.5 -translate-y-0.5" : "bg-white"}`}
         >
           <PenLine className="w-8 h-8" />
           <span className="block mt-4 font-mono text-[11px] tracking-widest">DECODE · 接着写</span>

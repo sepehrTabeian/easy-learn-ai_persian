@@ -133,7 +133,7 @@ const SectionTechniques: React.FC = () => {
                   key={t.name}
                   onClick={() => setSel(t.i)}
                   className={[
-                    "text-left border-2 border-ink rounded-2xl px-4 py-4 transition-all duration-250 ease-spring",
+                    "text-start border-2 border-ink rounded-2xl px-4 py-4 transition-all duration-250 ease-spring",
                     on
                       ? "bg-white shadow-stamp-lg -translate-y-0.5"
                       : "bg-cream hover:-translate-y-0.5 hover:shadow-stamp",

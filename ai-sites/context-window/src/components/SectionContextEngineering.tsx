@@ -69,7 +69,7 @@ const SectionContextEngineering: React.FC = () => {
         </h2>
         <p className="font-display font-bold text-[clamp(1.1rem,1.8vw,1.4rem)] leading-[1.55] mt-7 max-w-[800px] text-ink">
           一句话：
-          <span className="relative inline-block ml-1">
+          <span className="relative inline-block ms-1">
             <span className="absolute inset-x-0 bottom-1 h-2.5 bg-butter -z-0" />
             <span className="relative z-10">每次喂给模型的 context，是工程师设计出来的，不是顺手攒出来的。</span>
           </span>
@@ -140,7 +140,7 @@ const SectionContextEngineering: React.FC = () => {
               </div>
               <h3 className="font-display font-extrabold text-[20px] text-ink leading-tight">
                 跨会话保留信息 —— 那是
-                <span className="relative inline-block ml-1.5">
+                <span className="relative inline-block ms-1.5">
                   <span className="absolute inset-x-0 bottom-1 h-2 bg-butter -z-0" />
                   <span className="relative z-10">长期记忆系统</span>
                 </span>

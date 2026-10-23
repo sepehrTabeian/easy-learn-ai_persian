@@ -97,7 +97,7 @@ const SectionForgetCase: React.FC = () => {
             </div>
             <div className="font-display font-extrabold text-[36px] text-ink leading-none">
               {steps}
-              <span className="font-mono text-[14px] text-ink/55 ml-1">步</span>
+              <span className="font-mono text-[14px] text-ink/55 ms-1">步</span>
             </div>
           </div>
 
@@ -257,7 +257,7 @@ const Metric: React.FC<{
     </div>
     <div className="font-display font-extrabold text-[40px] leading-none mb-1">
       {value}
-      <span className="font-mono text-[14px] opacity-65 ml-1">{unit}</span>
+      <span className="font-mono text-[14px] opacity-65 ms-1">{unit}</span>
     </div>
     <div className="font-sans text-[12.5px] opacity-85 mt-2 leading-snug">
       {hint}

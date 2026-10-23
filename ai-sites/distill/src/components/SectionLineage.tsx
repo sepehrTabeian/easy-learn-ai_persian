@@ -132,7 +132,7 @@ const SectionLineage: React.FC = () => {
 
         <h2 className="font-display text-display-lg text-ink mb-5 max-w-3xl">
           <span className="relative inline-block">
-            <span className="absolute left-0 right-0 bottom-1 h-4 lg:h-5 bg-butter -z-0 -rotate-1" aria-hidden />
+            <span className="absolute start-0 end-0 bottom-1 h-4 lg:h-5 bg-butter -z-0 -rotate-1" aria-hidden />
             <span className="relative z-10">11 年</span>
           </span>{" "}
           里，蒸馏从图像分类扩到了大模型和扩散模型。
@@ -147,9 +147,9 @@ const SectionLineage: React.FC = () => {
           {/* timeline track */}
           <div className="relative pt-3 pb-12">
             {/* horizontal line */}
-            <div className="absolute left-2 right-2 top-9 h-[3px] bg-ink/15 rounded-full" />
+            <div className="absolute start-2 end-2 top-9 h-[3px] bg-ink/15 rounded-full" />
             <div
-              className="absolute left-2 top-9 h-[3px] bg-coral rounded-full transition-all duration-300 ease-spring"
+              className="absolute start-2 top-9 h-[3px] bg-coral rounded-full transition-all duration-300 ease-spring"
               style={{ width: `calc(${slider}% - 6px)` }}
             />
 
@@ -176,7 +176,7 @@ const SectionLineage: React.FC = () => {
                   />
                   <div
                     className={[
-                      "absolute left-1/2 -translate-x-1/2 mt-2 whitespace-nowrap font-mono font-bold transition-all duration-300",
+                      "absolute start-1/2 -translate-x-1/2 mt-2 whitespace-nowrap font-mono font-bold transition-all duration-300",
                       isActive ? "text-[12px] text-ink" : "text-[10px] text-ink/55",
                     ].join(" ")}
                   >
@@ -184,7 +184,7 @@ const SectionLineage: React.FC = () => {
                   </div>
                   <div
                     className={[
-                      "absolute left-1/2 -translate-x-1/2 mt-7 whitespace-nowrap font-display font-bold transition-opacity duration-300",
+                      "absolute start-1/2 -translate-x-1/2 mt-7 whitespace-nowrap font-display font-bold transition-opacity duration-300",
                       isActive ? "opacity-100 text-[12px] text-ink" : "opacity-0 group-hover/dot:opacity-65 text-[11px] text-ink/65",
                     ].join(" ")}
                   >
@@ -210,7 +210,7 @@ const SectionLineage: React.FC = () => {
                 onChange={(e) => setSlider(Number(e.target.value))}
                 className="flex-1 accent-coral cursor-pointer"
               />
-              <span className="font-display text-[20px] font-bold text-ink tabular-nums shrink-0 w-16 text-right">
+              <span className="font-display text-[20px] font-bold text-ink tabular-nums shrink-0 w-16 text-end">
                 {currentYear.toFixed(1).replace(".0", "")}
               </span>
             </div>

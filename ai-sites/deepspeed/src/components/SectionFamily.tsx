@@ -201,7 +201,7 @@ const SectionFamily: React.FC = () => {
           <br />
           <span className="relative inline-block">
             <span
-              className="absolute left-0 right-0 bottom-1 h-4 lg:h-5 bg-butter -z-0 -rotate-1"
+              className="absolute start-0 end-0 bottom-1 h-4 lg:h-5 bg-butter -z-0 -rotate-1"
               aria-hidden
             />
             <span className="relative z-10">不只有 ZeRO</span>
@@ -238,7 +238,7 @@ const SectionFamily: React.FC = () => {
                 key={id}
                 onClick={() => setTab(id)}
                 className={[
-                  "px-4 py-3 border-2 border-ink rounded-2xl text-left transition-all duration-250 ease-spring",
+                  "px-4 py-3 border-2 border-ink rounded-2xl text-start transition-all duration-250 ease-spring",
                   on
                     ? "bg-ink text-cream shadow-stamp-lg"
                     : "bg-white text-ink hover:bg-cream hover:-translate-y-0.5 hover:shadow-[3px_3px_0_0_#241C15]",
@@ -322,7 +322,7 @@ const FamilyCard: React.FC<{ f: Family }> = ({ f }) => {
         <span className="font-display text-[17px] font-bold text-ink leading-tight">
           {f.name}
         </span>
-        <span className={`ml-auto font-mono text-[9px] px-1.5 py-0.5 rounded ${colorMap.tag}`}>
+        <span className={`ms-auto font-mono text-[9px] px-1.5 py-0.5 rounded ${colorMap.tag}`}>
           {f.year}
         </span>
       </div>

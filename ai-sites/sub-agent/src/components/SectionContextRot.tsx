@@ -107,7 +107,7 @@ const SectionContextRot: React.FC = () => {
                 {rounds} 轮翻箱倒柜
               </div>
             </div>
-            <div className="text-right">
+            <div className="text-end">
               <div className="font-mono text-[10.5px] tracking-[0.22em] uppercase text-ink/55">
                 噪声占比
               </div>
@@ -158,7 +158,7 @@ const SectionContextRot: React.FC = () => {
                 <span className="font-bold text-ink">灰色 TOOL 行</span>{" "}
                 ＝ AI 没打字给你看，而是在后台读文件 / 跑命令。这些行最容易把主对话塞满。
               </p>
-              <div className="space-y-2.5 max-h-[360px] overflow-y-auto pr-1">
+              <div className="space-y-2.5 max-h-[360px] overflow-y-auto pe-1">
                 {baseDialog.map((b, i) => (
                   <BubbleRow key={`base-${i}`} bubble={b} dim={false} />
                 ))}

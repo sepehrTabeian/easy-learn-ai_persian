@@ -112,7 +112,7 @@ const SectionPrice: React.FC = () => {
                 <div className="flex items-center gap-2 font-mono text-[10px] text-ink/55">
                   <span className="inline-block w-3 h-2 bg-ink/45 rounded-sm" />
                   input
-                  <span className="inline-block w-3 h-2 bg-coral rounded-sm ml-1" />
+                  <span className="inline-block w-3 h-2 bg-coral rounded-sm ms-1" />
                   output
                 </div>
               </div>
@@ -138,7 +138,7 @@ const SectionPrice: React.FC = () => {
                       key={x.id}
                       onClick={() => setGid(x.id)}
                       className={[
-                        "w-full text-left flex items-center gap-2 px-2 py-1.5 rounded-lg transition-all duration-200",
+                        "w-full text-start flex items-center gap-2 px-2 py-1.5 rounded-lg transition-all duration-200",
                         on ? "bg-cream border-2 border-ink shadow-[3px_3px_0_0_#241C15]" : "hover:bg-cream/60 border-2 border-transparent",
                       ].join(" ")}
                     >
@@ -155,19 +155,19 @@ const SectionPrice: React.FC = () => {
                       <div className="flex-1 relative h-6 bg-cream/50 border border-ink/25 rounded">
                         {/* input bar */}
                         <div
-                          className="absolute top-0 left-0 h-3 bg-ink/45 rounded-tl rounded-bl transition-all duration-300"
+                          className="absolute top-0 start-0 h-3 bg-ink/45 rounded-ss rounded-es transition-all duration-300"
                           style={{ width: `${logScale(x.input) * 100}%` }}
                           title={`input $${x.input}`}
                         />
                         {/* output bar */}
                         <div
-                          className="absolute bottom-0 left-0 h-3 rounded-bl rounded-tl transition-all duration-300"
+                          className="absolute bottom-0 start-0 h-3 rounded-es rounded-ss transition-all duration-300"
                           style={{ width: `${logScale(x.output) * 100}%`, backgroundColor: x.tone }}
                           title={`output $${x.output}`}
                         />
                       </div>
 
-                      <div className="w-20 shrink-0 text-right font-mono text-[11px] tabular-nums">
+                      <div className="w-20 shrink-0 text-end font-mono text-[11px] tabular-nums">
                         <div className="text-ink/65">${x.input}</div>
                         <div className="font-bold" style={{ color: x.tone }}>
                           ${x.output}

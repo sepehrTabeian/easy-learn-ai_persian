@@ -40,7 +40,7 @@ const SectionSurprisePowers: React.FC = () => {
             <span className="relative inline-block">
               <span className="relative z-10">这 4 个怪本事</span>
               <span
-                className="absolute left-0 right-0 bottom-1 h-3.5 lg:h-5 bg-butter -z-0"
+                className="absolute start-0 end-0 bottom-1 h-3.5 lg:h-5 bg-butter -z-0"
                 aria-hidden
               />
             </span>
@@ -301,7 +301,7 @@ const MultiStepDemo: React.FC = () => {
           );
         })}
         {!finished && (
-          <div className="flex items-center gap-2 pl-10 mt-2">
+          <div className="flex items-center gap-2 ps-10 mt-2">
             <span className="w-1.5 h-1.5 rounded-full bg-ink/30 animate-pulse-dot" />
             <span className="font-mono text-[10.5px] uppercase tracking-[0.2em] text-ink/40">
               下一步 · 按 next

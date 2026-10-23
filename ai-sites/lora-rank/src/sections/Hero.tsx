@@ -72,10 +72,10 @@ export default function Hero() {
                 <span className="px-3 py-2 rounded-lg bg-ink text-butter">W</span>
                 <span className="text-ink-tertiary">·x +</span>
                 <span className="flex items-center">
-                  <span className="px-2.5 py-2 rounded-l-lg bg-coral text-white border-2 border-r-0 border-ink">
+                  <span className="px-2.5 py-2 rounded-s-lg bg-coral text-white border-2 border-e-0 border-ink">
                     B
                   </span>
-                  <span className="px-2.5 py-2 rounded-r-lg bg-teal text-white border-2 border-l-0 border-ink">
+                  <span className="px-2.5 py-2 rounded-e-lg bg-teal text-white border-2 border-s-0 border-ink">
                     A
                   </span>
                 </span>
@@ -106,7 +106,7 @@ function Line({ label, v }: { label: string; v: string }) {
   return (
     <div className="flex items-baseline justify-between gap-3 py-1 border-b border-ink/10 last:border-0">
       <span className="font-mono text-xs text-ink-tertiary">{label}</span>
-      <span className="text-ink text-sm font-semibold text-right">{v}</span>
+      <span className="text-ink text-sm font-semibold text-end">{v}</span>
     </div>
   );
 }

@@ -102,7 +102,7 @@ const SectionPickRules: React.FC = () => {
         <h2 className="font-display text-display-lg text-ink mb-5 max-w-3xl">
           3 个场景，
           <span className="relative inline-block">
-            <span className="absolute left-0 right-0 bottom-1 h-4 lg:h-5 bg-coral/55 -z-0 rotate-1" aria-hidden />
+            <span className="absolute start-0 end-0 bottom-1 h-4 lg:h-5 bg-coral/55 -z-0 rotate-1" aria-hidden />
             <span className="relative z-10">你来挑 loss</span>
           </span>
           。
@@ -129,17 +129,17 @@ const SectionPickRules: React.FC = () => {
                     {q.scene}
                   </div>
                 </div>
-                <div className="ml-10 font-mono text-[11px] text-ink/55 mb-4">
+                <div className="ms-10 font-mono text-[11px] text-ink/55 mb-4">
                   {q.hint}
                 </div>
 
-                <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 mb-3 ml-10">
+                <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 mb-3 ms-10">
                   {q.options.map((o) => {
                     const isPicked = picked === o.id;
                     const isCorrect = o.id === q.correct;
                     const showAns = !!picked;
                     let cls =
-                      "p-3 rounded-xl border-2 border-ink text-left font-display text-[13px] font-bold transition-all duration-250 ease-spring shadow-[2px_2px_0_0_#241C15] hover:shadow-stamp";
+                      "p-3 rounded-xl border-2 border-ink text-start font-display text-[13px] font-bold transition-all duration-250 ease-spring shadow-[2px_2px_0_0_#241C15] hover:shadow-stamp";
                     if (!showAns) {
                       cls += " bg-white text-ink hover:bg-butter";
                     } else if (isCorrect) {
@@ -171,7 +171,7 @@ const SectionPickRules: React.FC = () => {
                 </div>
 
                 {picked && (
-                  <div className="ml-10 p-4 bg-white border-2 border-ink rounded-xl animate-enter-fade">
+                  <div className="ms-10 p-4 bg-white border-2 border-ink rounded-xl animate-enter-fade">
                     <div className="flex items-center gap-2 mb-1.5">
                       <span
                         className={[

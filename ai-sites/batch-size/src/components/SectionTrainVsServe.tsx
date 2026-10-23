@@ -96,7 +96,7 @@ const SectionTrainVsServe: React.FC = () => {
         <h2 className="font-display text-display-lg text-ink mb-5 max-w-3xl">
           推理时也说 batch，但它指
           <span className="relative inline-block">
-            <span className="absolute left-0 right-0 bottom-1 h-4 lg:h-5 bg-coral/55 -z-0 rotate-1" aria-hidden />
+            <span className="absolute start-0 end-0 bottom-1 h-4 lg:h-5 bg-coral/55 -z-0 rotate-1" aria-hidden />
             <span className="relative z-10">同时在跑的请求数</span>
           </span>
           —— 跟训练里凑一批样本再更新，是两回事。
@@ -183,7 +183,7 @@ const SectionTrainVsServe: React.FC = () => {
           <div className="space-y-1.5" key={`${mode}-${slots}-${cursor}`}>
             {cells.map((row, ri) => (
               <div key={ri} className="flex items-center gap-1.5">
-                <div className="w-12 font-mono text-[10px] text-ink/55 text-right shrink-0">
+                <div className="w-12 font-mono text-[10px] text-ink/55 text-end shrink-0">
                   GPU {ri}
                 </div>
                 <div className="flex-1 grid grid-cols-24 gap-[2px]" style={{ gridTemplateColumns: `repeat(${ITER_COUNT}, minmax(0,1fr))` }}>
@@ -206,7 +206,7 @@ const SectionTrainVsServe: React.FC = () => {
                         className={[
                           "h-5 rounded-sm border border-ink/20 transition-all duration-300 ease-spring",
                           visible ? colorCls : "bg-ink/5",
-                          boundary && visible ? "ml-[1px] border-l-2 border-l-ink/60" : "",
+                          boundary && visible ? "ms-[1px] border-s-2 border-l-ink/60" : "",
                         ].join(" ")}
                         title={`iter ${ci} · req #${cell.reqId}`}
                       />

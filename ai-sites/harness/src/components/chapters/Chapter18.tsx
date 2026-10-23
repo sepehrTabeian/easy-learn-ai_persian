@@ -55,7 +55,7 @@ export default function Chapter18({ step }: { step: number }) {
               <motion.div 
                 animate={{ x: [0, 50, -20, 0], y: [0, -30, 40, 0] }}
                 transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-                className="absolute top-10 left-10 bg-white p-4 rounded-2xl shadow-lg border-2 border-gray-200 flex items-center gap-3"
+                className="absolute top-10 start-10 bg-white p-4 rounded-2xl shadow-lg border-2 border-gray-200 flex items-center gap-3"
               >
                 <Search className="text-blue-500" /> <span className="font-bold text-gray-600">搜索</span>
               </motion.div>
@@ -63,7 +63,7 @@ export default function Chapter18({ step }: { step: number }) {
               <motion.div 
                 animate={{ x: [0, -40, 30, 0], y: [0, 50, -20, 0] }}
                 transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
-                className="absolute top-20 right-20 bg-white p-4 rounded-2xl shadow-lg border-2 border-gray-200 flex items-center gap-3"
+                className="absolute top-20 end-20 bg-white p-4 rounded-2xl shadow-lg border-2 border-gray-200 flex items-center gap-3"
               >
                 <FileText className="text-amber-500" /> <span className="font-bold text-gray-600">总结</span>
               </motion.div>
@@ -71,7 +71,7 @@ export default function Chapter18({ step }: { step: number }) {
               <motion.div 
                 animate={{ x: [0, 30, -50, 0], y: [0, 20, -40, 0] }}
                 transition={{ duration: 4.5, repeat: Infinity, ease: "easeInOut" }}
-                className="absolute bottom-10 left-1/2 bg-white p-4 rounded-2xl shadow-lg border-2 border-gray-200 flex items-center gap-3"
+                className="absolute bottom-10 start-1/2 bg-white p-4 rounded-2xl shadow-lg border-2 border-gray-200 flex items-center gap-3"
               >
                 <Code className="text-teal-500" /> <span className="font-bold text-gray-600">写代码</span>
               </motion.div>

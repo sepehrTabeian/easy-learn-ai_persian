@@ -354,7 +354,7 @@ const SectionPriceCalc: React.FC = () => {
                           />
                         </div>
                       </div>
-                      <div className="col-span-3 text-right">
+                      <div className="col-span-3 text-end">
                         <span
                           className={[
                             "font-mono text-[11px] font-bold tabular-nums",

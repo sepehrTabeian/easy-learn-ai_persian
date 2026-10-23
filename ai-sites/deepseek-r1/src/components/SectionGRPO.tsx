@@ -159,7 +159,7 @@ const SectionGRPO: React.FC = () => {
               })}
             </div>
 
-            <div className="flex items-center gap-2 lg:ml-auto">
+            <div className="flex items-center gap-2 lg:ms-auto">
               <span className="font-mono text-[10px] uppercase tracking-[0.18em] text-ink/55">
                 group size G
               </span>
@@ -185,7 +185,7 @@ const SectionGRPO: React.FC = () => {
                   if (revealed) reset();
                   else setRevealed(true);
                 }}
-                className="ml-2 inline-flex items-center gap-2 px-4 h-9 rounded-full border-2 border-ink bg-butter font-mono text-[10.5px] uppercase tracking-[0.15em] font-bold shadow-stamp hover:-translate-x-0.5 hover:-translate-y-0.5 transition-all duration-250 ease-spring"
+                className="ms-2 inline-flex items-center gap-2 px-4 h-9 rounded-full border-2 border-ink bg-butter font-mono text-[10.5px] uppercase tracking-[0.15em] font-bold shadow-stamp hover:-translate-x-0.5 hover:-translate-y-0.5 transition-all duration-250 ease-spring"
               >
                 <Sigma className="w-3.5 h-3.5" strokeWidth={2.5} />
                 {revealed ? "重置" : "看谁该多学 / 谁该少学"}

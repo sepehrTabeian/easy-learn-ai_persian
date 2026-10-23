@@ -144,7 +144,7 @@ const SectionSizes: React.FC = () => {
                   <div className="col-span-12 sm:col-span-9 relative">
                     <div className="relative h-10 bg-ink/5 border-2 border-ink rounded-xl overflow-hidden">
                       <div
-                        className="absolute inset-y-0 left-0 flex items-center px-3 transition-all duration-500 ease-editorial"
+                        className="absolute inset-y-0 start-0 flex items-center px-3 transition-all duration-500 ease-editorial"
                         style={{ width: `${width}%`, backgroundColor: m.color, color: m.text }}
                       >
                         <span className="font-mono text-[11px] font-bold tracking-[0.12em] truncate">
@@ -152,7 +152,7 @@ const SectionSizes: React.FC = () => {
                         </span>
                       </div>
                     </div>
-                    <p className="font-serif italic text-[12.5px] text-ink/65 leading-tight mt-1.5 pl-1">
+                    <p className="font-serif italic text-[12.5px] text-ink/65 leading-tight mt-1.5 ps-1">
                       {m.note}
                     </p>
                   </div>
@@ -199,7 +199,7 @@ const SectionSizes: React.FC = () => {
                 <button
                   type="button"
                   onClick={() => setText("")}
-                  className="ml-auto px-2.5 py-1 border-2 border-ink rounded-full hover:bg-ink hover:text-cream transition-colors duration-200"
+                  className="ms-auto px-2.5 py-1 border-2 border-ink rounded-full hover:bg-ink hover:text-cream transition-colors duration-200"
                 >
                   清空
                 </button>
@@ -239,7 +239,7 @@ const SectionSizes: React.FC = () => {
                           {(m.tokens / 1000).toLocaleString()}K
                         </div>
                       </div>
-                      <div className="text-right">
+                      <div className="text-end">
                         <div className="font-display font-extrabold text-[28px] leading-none">
                           ×{display}
                         </div>

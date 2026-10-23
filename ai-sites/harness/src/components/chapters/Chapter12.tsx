@@ -116,22 +116,22 @@ export default function Chapter12({ step }: { step: number }) {
               </svg>
 
               {/* Waypoints & Errors */}
-              <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.5 }} className="absolute left-[180px] top-[160px] flex flex-col items-center">
+              <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.5 }} className="absolute start-[180px] top-[160px] flex flex-col items-center">
                 <div className="w-4 h-4 bg-red-500 rounded-full mb-2" />
                 <span className="bg-white/90 px-3 py-1 rounded-lg text-sm font-bold text-red-600 shadow-sm border border-red-100 whitespace-nowrap">计划挺好，执行跑偏</span>
               </motion.div>
 
-              <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 1.5 }} className="absolute left-[330px] top-[40px] flex flex-col items-center">
+              <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 1.5 }} className="absolute start-[330px] top-[40px] flex flex-col items-center">
                 <div className="w-4 h-4 bg-red-500 rounded-full mb-2" />
                 <span className="bg-white/90 px-3 py-1 rounded-lg text-sm font-bold text-red-600 shadow-sm border border-red-100 whitespace-nowrap">理解错工具返回</span>
               </motion.div>
 
-              <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 2.5 }} className="absolute left-[480px] top-[0px] flex flex-col items-center">
+              <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 2.5 }} className="absolute start-[480px] top-[0px] flex flex-col items-center">
                 <div className="w-4 h-4 bg-red-500 rounded-full mb-2" />
                 <span className="bg-white/90 px-3 py-1 rounded-lg text-sm font-bold text-red-600 shadow-sm border border-red-100 whitespace-nowrap">一步错，一路错</span>
               </motion.div>
 
-              <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 3.5 }} className="absolute left-[700px] top-[260px] flex flex-col items-center">
+              <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 3.5 }} className="absolute start-[700px] top-[260px] flex flex-col items-center">
                 <div className="w-6 h-6 bg-red-600 rounded-full mb-2 animate-ping absolute" />
                 <div className="w-6 h-6 bg-red-600 rounded-full mb-2 relative z-10" />
                 <div className="bg-white/90 px-4 py-2 rounded-xl text-sm font-bold text-red-600 shadow-lg border border-red-200 text-center whitespace-nowrap">
@@ -158,7 +158,7 @@ export default function Chapter12({ step }: { step: number }) {
             <div className="flex items-stretch gap-12 w-full max-w-5xl">
               {/* Input Side */}
               <div className="flex-1 bg-blue-50/50 rounded-3xl p-8 border-2 border-blue-100 flex flex-col gap-6 relative">
-                <div className="absolute -top-4 left-8 bg-blue-500 text-white px-4 py-1 rounded-full font-bold text-sm">输入侧 (Input)</div>
+                <div className="absolute -top-4 start-8 bg-blue-500 text-white px-4 py-1 rounded-full font-bold text-sm">输入侧 (Input)</div>
                 
                 <div className="bg-white p-6 rounded-2xl shadow-sm border border-blue-100 flex items-center gap-4">
                   <div className="p-3 bg-blue-100 rounded-xl"><FileText className="w-6 h-6 text-blue-600" /></div>
@@ -186,7 +186,7 @@ export default function Chapter12({ step }: { step: number }) {
 
               {/* Execution Side */}
               <div className="flex-1 bg-red-50/50 rounded-3xl p-8 border-2 border-red-100 flex flex-col items-center justify-center relative">
-                <div className="absolute -top-4 left-8 bg-red-500 text-white px-4 py-1 rounded-full font-bold text-sm">执行侧 (Execution)</div>
+                <div className="absolute -top-4 start-8 bg-red-500 text-white px-4 py-1 rounded-full font-bold text-sm">执行侧 (Execution)</div>
                 
                 <Activity className="w-16 h-16 text-red-400 mb-4" />
                 <div className="text-2xl font-bold text-red-600 text-center">

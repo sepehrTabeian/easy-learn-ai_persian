@@ -148,7 +148,7 @@ const SectionEmerge: React.FC = () => {
                   <span className="font-display text-[20px] lg:text-[24px] font-bold text-ink leading-none tabular-nums">
                     ^{logF.toFixed(1)}
                   </span>
-                  <span className="font-mono text-[11px] text-ink/55 ml-1">FLOPs</span>
+                  <span className="font-mono text-[11px] text-ink/55 ms-1">FLOPs</span>
                 </div>
               </div>
 

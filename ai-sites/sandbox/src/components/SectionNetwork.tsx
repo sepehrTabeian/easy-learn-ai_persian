@@ -112,7 +112,7 @@ const SectionNetwork: React.FC = () => {
                 type="button"
                 key={t.id}
                 onClick={() => fire(t)}
-                className="w-full text-left card-stamp px-5 py-4 flex items-center gap-4 hover:translate-x-[-2px] hover:translate-y-[-2px] hover:shadow-stamp-xl transition-all duration-250 ease-spring"
+                className="w-full text-start card-stamp px-5 py-4 flex items-center gap-4 hover:translate-x-[-2px] hover:translate-y-[-2px] hover:shadow-stamp-xl transition-all duration-250 ease-spring"
               >
                 <div className="w-11 h-11 rounded-2xl bg-cream border-2 border-ink flex items-center justify-center flex-shrink-0">
                   <Send className="w-5 h-5 text-ink" strokeWidth={2.2} />
@@ -180,7 +180,7 @@ const SectionNetwork: React.FC = () => {
                     <Stat n={asked} label="弹窗" tone="text-coral" />
                     <Stat n={blocked} label="拒绝" tone="text-pop" />
                   </div>
-                  <div className="space-y-1.5 max-h-[260px] overflow-y-auto pr-1">
+                  <div className="space-y-1.5 max-h-[260px] overflow-y-auto pe-1">
                     {log.map((entry, i) => (
                       <div
                         key={entry.at + "-" + i}
@@ -213,7 +213,7 @@ const SectionNetwork: React.FC = () => {
         <p className="font-serif italic text-[14.5px] text-ink/65 mt-8 max-w-[780px]">
           不是一刀切断网 —— npm、GitHub 这些该通的通，陌生域名直接拒。
           再加一句：
-          <span className="font-bold text-ink ml-1">
+          <span className="font-bold text-ink ms-1">
             Agent 起的所有子进程都被强制走代理，没有第二条出口。
           </span>
         </p>

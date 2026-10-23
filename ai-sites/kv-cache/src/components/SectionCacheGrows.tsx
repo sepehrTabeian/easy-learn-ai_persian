@@ -58,7 +58,7 @@ const SectionCacheGrows: React.FC = () => {
               <p className="mt-2 min-h-[52px] font-display text-xl font-bold">
                 {ANSWER.slice(0, generated).join("") || "点一下，写出第一个 token"}
                 {generated > 0 && generated < ANSWER.length && (
-                  <span className="ml-1 inline-block h-5 w-1 animate-pulse-dot bg-butter" />
+                  <span className="ms-1 inline-block h-5 w-1 animate-pulse-dot bg-butter" />
                 )}
               </p>
             </div>

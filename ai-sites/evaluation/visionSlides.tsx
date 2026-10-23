@@ -45,21 +45,21 @@ export const VISION_SLIDES: SlideData[] = [
             </div>
 
             {/* Orbiting Modalities */}
-            <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-full text-indigo-300 font-bold animate-bounce flex flex-col items-center">
+            <div className="absolute top-0 start-1/2 -translate-x-1/2 -translate-y-full text-indigo-300 font-bold animate-bounce flex flex-col items-center">
                <Image size={24} className="mb-1"/> Image
             </div>
-            <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-full text-purple-300 font-bold animate-bounce delay-75 flex flex-col items-center">
+            <div className="absolute bottom-0 start-1/2 -translate-x-1/2 translate-y-full text-purple-300 font-bold animate-bounce delay-75 flex flex-col items-center">
                <Video size={24} className="mb-1"/> Video
             </div>
-            <div className="absolute left-0 top-1/2 -translate-x-full -translate-y-1/2 text-pink-300 font-bold animate-pulse flex flex-col items-center pr-4">
+            <div className="absolute start-0 top-1/2 -translate-x-full -translate-y-1/2 text-pink-300 font-bold animate-pulse flex flex-col items-center pe-4">
                <LineChart size={24} className="mb-1"/> Charts
             </div>
-            <div className="absolute right-0 top-1/2 translate-x-full -translate-y-1/2 text-cyan-300 font-bold animate-pulse delay-100 flex flex-col items-center pl-4">
+            <div className="absolute end-0 top-1/2 translate-x-full -translate-y-1/2 text-cyan-300 font-bold animate-pulse delay-100 flex flex-col items-center ps-4">
                <BookOpen size={24} className="mb-1"/> Knowledge
             </div>
          </div>
 
-         <div className="text-center max-w-2xl bg-white/5 p-6 rounded-xl border-l-4 border-indigo-500">
+         <div className="text-center max-w-2xl bg-white/5 p-6 rounded-xl border-s-4 border-indigo-500">
              <p className="text-gray-300 text-lg">
                 我们已经测试了记忆力、逻辑、代码。现在轮到<span className="text-white font-bold">视觉</span>了。
                 <br/>
@@ -111,12 +111,12 @@ export const VISION_SLIDES: SlideData[] = [
          <div className="flex flex-col md:flex-row gap-8 items-center">
             {/* The Chart Visual */}
             <div className="flex-1 w-full bg-slate-900 border border-slate-700 p-6 rounded-xl relative overflow-hidden group">
-               <div className="absolute top-2 right-2 flex items-center gap-2 text-xs text-gray-400">
+               <div className="absolute top-2 end-2 flex items-center gap-2 text-xs text-gray-400">
                    <Activity size={14} /> Training Log
                </div>
                
                {/* Mock Loss Curve */}
-               <div className="h-48 w-full border-l border-b border-gray-600 relative mt-4">
+               <div className="h-48 w-full border-s border-b border-gray-600 relative mt-4">
                   {/* Grid Lines */}
                   <div className="absolute top-1/4 w-full h-px bg-gray-800"></div>
                   <div className="absolute top-2/4 w-full h-px bg-gray-800"></div>
@@ -132,7 +132,7 @@ export const VISION_SLIDES: SlideData[] = [
                      <path d="M0,30 Q50,140 150,140 T250,100" fill="none" stroke="#ef4444" strokeWidth="3" strokeDasharray="5,5" />
                   </svg>
 
-                  <div className="absolute bottom-2 right-2 text-red-400 text-xs font-bold animate-pulse">Overfitting?</div>
+                  <div className="absolute bottom-2 end-2 text-red-400 text-xs font-bold animate-pulse">Overfitting?</div>
                </div>
                
                <div className="flex justify-between text-xs text-gray-500 mt-2 font-mono">
@@ -143,7 +143,7 @@ export const VISION_SLIDES: SlideData[] = [
 
             {/* The Question */}
             <div className="flex-1 space-y-6">
-               <div className="bg-white/5 p-4 rounded-lg border-l-4 border-indigo-500">
+               <div className="bg-white/5 p-4 rounded-lg border-s-4 border-indigo-500">
                   <h4 className="text-indigo-300 font-bold mb-2 flex items-center gap-2">
                      <ScanEye size={18} /> Question:
                   </h4>

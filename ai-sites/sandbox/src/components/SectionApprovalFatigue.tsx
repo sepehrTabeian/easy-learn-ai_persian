@@ -182,7 +182,7 @@ const SectionApprovalFatigue: React.FC = () => {
                   </div>
                 </div>
               ) : (
-                <div className="space-y-2 max-h-[440px] overflow-y-auto pr-2">
+                <div className="space-y-2 max-h-[440px] overflow-y-auto pe-2">
                   {visibleCmds.map((cmd, i) => {
                     // 前 3 条展开，3-8 半坍缩，8 后只看到命令名头一截 + YES
                     const expanded = i < 3;
@@ -221,7 +221,7 @@ const SectionApprovalFatigue: React.FC = () => {
                             <span className="font-mono text-[12px] text-ink/75 truncate">
                               $ {cmd}
                             </span>
-                            <span className="inline-flex items-center gap-1 px-2 py-0.5 bg-pop text-white font-mono text-[9.5px] tracking-[0.18em] uppercase rounded-full ml-2 flex-shrink-0">
+                            <span className="inline-flex items-center gap-1 px-2 py-0.5 bg-pop text-white font-mono text-[9.5px] tracking-[0.18em] uppercase rounded-full ms-2 flex-shrink-0">
                               YES
                             </span>
                           </>

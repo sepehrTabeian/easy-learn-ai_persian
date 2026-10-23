@@ -29,7 +29,7 @@ export const SceneConceptComparison: React.FC<SceneProps> = ({ step }) => {
       
       {/* LEFT SIDE: Traditional AI */}
       <motion.div 
-        className={`flex-1 flex flex-col items-center p-6 border-r-2 border-dashed border-white/10 ${step >= 3 ? 'opacity-50 grayscale' : 'opacity-100'}`}
+        className={`flex-1 flex flex-col items-center p-6 border-e-2 border-dashed border-white/10 ${step >= 3 ? 'opacity-50 grayscale' : 'opacity-100'}`}
         initial={{ opacity: 0 }}
         animate={{ opacity: step >= 3 ? 0.4 : 1, transition: { duration: 0.5 } }}
       >
@@ -116,7 +116,7 @@ export const SceneConceptComparison: React.FC<SceneProps> = ({ step }) => {
                  <motion.div 
                    initial={{ scale: 0 }} 
                    animate={{ scale: 1 }}
-                   className="absolute left-0 flex flex-col items-center z-10"
+                   className="absolute start-0 flex flex-col items-center z-10"
                  >
                     <div className="w-24 h-24 rounded-full bg-white/10 flex items-center justify-center border-2 border-white/50">
                         <img src="https://api.iconify.design/logos:claude-icon.svg" alt="Claude" className="w-14 h-14 opacity-90 invert" />
@@ -138,7 +138,7 @@ export const SceneConceptComparison: React.FC<SceneProps> = ({ step }) => {
                    initial={{ scale: 0, x: 20 }} 
                    animate={{ scale: 1, x: 0 }}
                    transition={{ delay: 0.5 }}
-                   className="absolute right-0 flex flex-col items-center"
+                   className="absolute end-0 flex flex-col items-center"
                  >
                     <div className="w-24 h-24 rounded-xl bg-yellow-500/20 flex items-center justify-center border-2 border-yellow-400/50">
                         <Box size={48} className="text-yellow-300" />
@@ -154,7 +154,7 @@ export const SceneConceptComparison: React.FC<SceneProps> = ({ step }) => {
                   initial={{ opacity: 0, width: 0 }}
                   animate={{ opacity: 1, width: '100%' }}
                   transition={{ delay: 0.2, duration: 0.8 }}
-                  className="absolute top-1/2 left-0 w-full h-px bg-dashed border-t-2 border-dashed border-white/20 -z-10"
+                  className="absolute top-1/2 start-0 w-full h-px bg-dashed border-t-2 border-dashed border-white/20 -z-10"
                 />
              )}
           </div>
@@ -168,7 +168,7 @@ export const SceneConceptComparison: React.FC<SceneProps> = ({ step }) => {
               className="mt-4 flex items-start gap-4 bg-green-900/20 p-4 rounded-xl border border-green-500/30"
             >
               <BookOpen size={32} className="text-green-300 shrink-0 mt-1" />
-              <div className="text-left">
+              <div className="text-start">
                 <ChalkText size="lg" color="green" className="font-bold mb-1">自带“官方说明书”</ChalkText>
                 <ChalkText size="base">
                   大脑无需死记硬背，用的时候查阅<br/>

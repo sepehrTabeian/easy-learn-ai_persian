@@ -20,7 +20,7 @@ const SectionHero: React.FC = () => {
   return (
     <section className="relative px-4 sm:px-6 lg:px-8 pt-20 lg:pt-28 pb-20 lg:pb-24 overflow-hidden">
       {/* 装饰：右上散落小点 */}
-      <div className="absolute top-16 right-[7%] hidden md:grid grid-cols-4 gap-2 pointer-events-none opacity-50">
+      <div className="absolute top-16 end-[7%] hidden md:grid grid-cols-4 gap-2 pointer-events-none opacity-50">
         {Array.from({ length: 12 }).map((_, i) => (
           <span key={i} className="w-1.5 h-1.5 rounded-full bg-ink/30" />
         ))}
@@ -92,7 +92,7 @@ const SectionHero: React.FC = () => {
         <div className="lg:col-span-5">
           <div className="relative h-[460px]">
             {/* 顶部：总任务 */}
-            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[210px]">
+            <div className="absolute top-0 start-1/2 -translate-x-1/2 w-[210px]">
               <div className="bg-ink text-cream rounded-2xl shadow-stamp-lg px-5 py-3.5 text-center">
                 <div className="font-mono text-[10px] tracking-[0.22em] uppercase text-cream/70 mb-1">
                   一个大任务
@@ -104,7 +104,7 @@ const SectionHero: React.FC = () => {
             </div>
 
             {/* 分发线 */}
-            <svg className="absolute top-[64px] left-0 w-full h-[80px] pointer-events-none" viewBox="0 0 360 80" fill="none">
+            <svg className="absolute top-[64px] start-0 w-full h-[80px] pointer-events-none" viewBox="0 0 360 80" fill="none">
               {[70, 160, 250, 320].map((x) => (
                 <path
                   key={x}
@@ -119,7 +119,7 @@ const SectionHero: React.FC = () => {
             </svg>
 
             {/* 四个分工角色 */}
-            <div className="absolute top-[150px] left-0 w-full grid grid-cols-2 gap-3 px-1">
+            <div className="absolute top-[150px] start-0 w-full grid grid-cols-2 gap-3 px-1">
               {ROLES.map((r, i) => (
                 <div
                   key={r.tag}
@@ -138,7 +138,7 @@ const SectionHero: React.FC = () => {
             </div>
 
             {/* 底部：拼回结果 */}
-            <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[78%]">
+            <div className="absolute bottom-0 start-1/2 -translate-x-1/2 w-[78%]">
               <div className="bg-cream border-2 border-ink rounded-2xl shadow-stamp px-5 py-3 text-center">
                 <div className="font-mono text-[10px] tracking-[0.22em] uppercase text-ink/55 mb-0.5">
                   拼起来 · 交付

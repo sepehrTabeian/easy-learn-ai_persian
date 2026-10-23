@@ -157,7 +157,7 @@ const SectionRecipes: React.FC = () => {
 
         {/* sort 切换 */}
         <div className="flex flex-wrap items-center gap-2 mb-5">
-          <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-ink/55 mr-1">
+          <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-ink/55 me-1">
             排序
           </span>
           {[
@@ -205,7 +205,7 @@ const SectionRecipes: React.FC = () => {
               >
                 <button
                   onClick={() => setOpen(isOpen ? null : r.id)}
-                  className="w-full flex items-center gap-3 px-4 lg:px-5 py-4 text-left"
+                  className="w-full flex items-center gap-3 px-4 lg:px-5 py-4 text-start"
                 >
                   <div
                     className={[

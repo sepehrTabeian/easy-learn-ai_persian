@@ -226,7 +226,7 @@ const SectionContext: React.FC = () => {
                 <button
                   key={w.size}
                   onClick={() => setActiveSize(w.size)}
-                  className="w-full text-left grid grid-cols-12 gap-3 items-center group"
+                  className="w-full text-start grid grid-cols-12 gap-3 items-center group"
                 >
                   {/* label */}
                   <div className="col-span-2 sm:col-span-1">
@@ -244,7 +244,7 @@ const SectionContext: React.FC = () => {
                     <div className="absolute inset-0 rounded-md border-2 border-ink/15 bg-cream overflow-hidden">
                       <div
                         className={[
-                          "h-full border-r-2 transition-all duration-500 ease-spring",
+                          "h-full border-e-2 transition-all duration-500 ease-spring",
                           w.tone,
                           isActive ? "border-ink" : "border-ink/40",
                           isActive ? "" : "opacity-80 group-hover:opacity-100",
@@ -254,7 +254,7 @@ const SectionContext: React.FC = () => {
                     </div>
                   </div>
                   {/* unit count */}
-                  <div className="col-span-3 sm:col-span-3 text-right">
+                  <div className="col-span-3 sm:col-span-3 text-end">
                     <span
                       className={[
                         "font-display font-bold tabular-nums leading-none",
@@ -265,7 +265,7 @@ const SectionContext: React.FC = () => {
                         ? `${units >= 100 ? Math.round(units) : units.toFixed(units >= 10 ? 0 : 1)}`
                         : `~${(units * 100).toFixed(0)}%`}
                     </span>
-                    <span className="ml-1 font-mono text-[10px] text-ink/50">
+                    <span className="ms-1 font-mono text-[10px] text-ink/50">
                       {units >= 1 ? mode.unitLabel.split(" ")[0] : "条"}
                     </span>
                   </div>

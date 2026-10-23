@@ -52,7 +52,7 @@ export const SceneContextExplosion: React.FC<SceneProps> = ({ step }) => {
 
       {/* Header */}
       <motion.div 
-        className="absolute top-8 md:top-12 left-0 right-0 text-center z-10"
+        className="absolute top-8 md:top-12 start-0 end-0 text-center z-10"
         initial={{ y: -20, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
       >
@@ -71,7 +71,7 @@ export const SceneContextExplosion: React.FC<SceneProps> = ({ step }) => {
           >
              <div className="w-24 h-24 md:w-32 md:h-32 bg-[#1e1e24] border-2 border-gray-500 rounded-xl flex items-center justify-center relative shadow-xl">
                  <FileStack size={48} className="text-gray-400" />
-                 <div className="absolute -top-3 -left-3 bg-yellow-500 text-black font-bold px-3 py-1 rounded-full text-sm shadow-lg">
+                 <div className="absolute -top-3 -start-3 bg-yellow-500 text-black font-bold px-3 py-1 rounded-full text-sm shadow-lg">
                      x 50
                  </div>
              </div>
@@ -89,7 +89,7 @@ export const SceneContextExplosion: React.FC<SceneProps> = ({ step }) => {
                       {[...Array(12)].map((_, i) => (
                           <motion.div
                             key={i}
-                            className="absolute top-1/2 left-0 flex items-center gap-2 bg-white/10 px-2 py-1 rounded border border-white/10"
+                            className="absolute top-1/2 start-0 flex items-center gap-2 bg-white/10 px-2 py-1 rounded border border-white/10"
                             initial={{ x: -50, opacity: 0, scale: 0.8, y: (i % 3 - 1) * 20 }}
                             animate={{ x: '120%', opacity: [0, 1, 1, 0] }}
                             transition={{ 
@@ -145,7 +145,7 @@ export const SceneContextExplosion: React.FC<SceneProps> = ({ step }) => {
                 animate={{ y: 0, opacity: 1 }}
                 className="bg-red-950/80 border border-red-500/50 p-6 rounded-2xl backdrop-blur-md flex items-center gap-8 shadow-[0_0_40px_rgba(220,38,38,0.4)]"
              >
-                <div className="flex flex-col items-center border-r border-red-500/30 pr-8">
+                <div className="flex flex-col items-center border-e border-red-500/30 pe-8">
                     <div className="text-red-300 text-sm font-bold tracking-wider mb-1">TOKENS</div>
                     <div className="text-4xl md:text-5xl font-mono font-bold text-white tabular-nums">
                         <TokenCounter value={roundedCount} />

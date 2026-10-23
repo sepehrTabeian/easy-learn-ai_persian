@@ -104,7 +104,7 @@ export default function SectionAlternatives() {
               className={`relative card-stamp p-6 border-2 ${m.color} transition-all duration-400 ease-editorial`}
               style={{ order: idx }}
             >
-              <div className="absolute -top-3 -left-3 px-3 py-1 bg-ink text-butter font-mono text-xs rounded-full border-2 border-ink shadow-stamp">
+              <div className="absolute -top-3 -start-3 px-3 py-1 bg-ink text-butter font-mono text-xs rounded-full border-2 border-ink shadow-stamp">
                 #{idx + 1}
               </div>
 

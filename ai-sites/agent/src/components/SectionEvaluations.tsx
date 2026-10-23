@@ -104,7 +104,7 @@ const SectionEvaluations: React.FC = () => {
             <button
               key={b.id}
               onClick={() => setBid(b.id)}
-              className={`text-left p-4 rounded-2xl border-2 transition-all duration-250 ease-spring ${
+              className={`text-start p-4 rounded-2xl border-2 transition-all duration-250 ease-spring ${
                 bid === b.id
                   ? "bg-ink text-cream border-ink shadow-stamp"
                   : "bg-white text-ink border-ink/15 hover:border-ink shadow-[2px_2px_0_0_#241C15]"
@@ -312,7 +312,7 @@ const BenchBar: React.FC<{
       <div className="h-6 bg-ink/[0.05] rounded-md overflow-hidden border border-ink/10">
         <div
           className={`h-full rounded-md transition-all duration-600 ease-editorial flex items-center px-2 ${
-            isBaseline ? "border-r-2 border-dashed border-ink/40" : ""
+            isBaseline ? "border-e-2 border-dashed border-ink/40" : ""
           }`}
           style={{
             width: `${relative}%`,
@@ -356,7 +356,7 @@ const ProductColumn: React.FC<{
               <div className="font-display text-[14.5px] font-bold text-ink">
                 {p.name}
               </div>
-              <div className="font-mono text-[10px] text-ink/45 text-right shrink-0">
+              <div className="font-mono text-[10px] text-ink/45 text-end shrink-0">
                 {p.meta}
               </div>
             </div>

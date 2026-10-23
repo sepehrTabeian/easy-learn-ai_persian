@@ -137,7 +137,7 @@ const SectionLeak: React.FC = () => {
           Llama 1 先出论文，权重随后被
           <span className="relative inline-block">
             <span
-              className="absolute left-0 right-0 bottom-1 h-4 lg:h-5 bg-coral/55 -z-0 -rotate-1"
+              className="absolute start-0 end-0 bottom-1 h-4 lg:h-5 bg-coral/55 -z-0 -rotate-1"
               aria-hidden
             />
             <span className="relative z-10">泄露</span>
@@ -183,7 +183,7 @@ const SectionLeak: React.FC = () => {
                     key={e.id}
                     onClick={() => setActiveId(e.id)}
                     className={[
-                      "px-2.5 py-2.5 rounded-xl border-2 border-ink text-left transition-all duration-200 ease-spring",
+                      "px-2.5 py-2.5 rounded-xl border-2 border-ink text-start transition-all duration-200 ease-spring",
                       on
                         ? "bg-ink text-cream shadow-[3px_3px_0_0_#E07A5F]"
                         : "bg-white text-ink hover:bg-butter/30",

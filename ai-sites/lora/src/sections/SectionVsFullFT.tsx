@@ -104,7 +104,7 @@ export default function SectionVsFullFT() {
               <button
                 key={task.id}
                 onClick={() => setPick(task.id)}
-                className={`w-full text-left card-stamp p-5 transition-all duration-250 ease-spring ${
+                className={`w-full text-start card-stamp p-5 transition-all duration-250 ease-spring ${
                   active ? "bg-butter/60" : "bg-white hover:bg-butter/10"
                 }`}
               >
@@ -165,7 +165,7 @@ function Bar({ label, pct, value, color }: { label: string; pct: number; value: 
       <div className="flex-1 h-3 bg-cream border border-ink/30 rounded overflow-hidden">
         <div className={`h-full ${color} transition-all duration-600`} style={{ width: `${pct}%` }} />
       </div>
-      <span className="text-ink font-semibold w-10 text-right">{value}</span>
+      <span className="text-ink font-semibold w-10 text-end">{value}</span>
     </div>
   );
 }

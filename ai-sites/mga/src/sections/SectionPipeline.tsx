@@ -77,9 +77,9 @@ export default function SectionPipeline() {
       </p>
 
       <div className="relative mb-8">
-        <div className="absolute top-7 left-0 right-0 h-0.5 bg-ink/15" />
+        <div className="absolute top-7 start-0 end-0 h-0.5 bg-ink/15" />
         <div
-          className="absolute top-7 left-0 h-0.5 bg-ink transition-all duration-400 ease-editorial"
+          className="absolute top-7 start-0 h-0.5 bg-ink transition-all duration-400 ease-editorial"
           style={{ width: `${((step + 1) / STEPS.length) * 100}%` }}
         />
         <div className="relative grid grid-cols-3 gap-4">

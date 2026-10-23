@@ -214,14 +214,14 @@ export default function Chapter8({ step }: { step: number }) {
                   
                   <div className="flex items-center justify-between w-full relative">
                     {/* Connecting Background Line */}
-                    <div className="absolute left-10 right-10 h-2 bg-gray-200 top-1/2 -translate-y-1/2 rounded-full -z-10" />
+                    <div className="absolute start-10 end-10 h-2 bg-gray-200 top-1/2 -translate-y-1/2 rounded-full -z-10" />
                     
                     {/* Animated Progress Line */}
                     <motion.div 
                       initial={{ width: 0 }}
                       animate={{ width: '100%' }}
                       transition={{ duration: 2, ease: "easeInOut" }}
-                      className="absolute left-10 h-2 bg-gradient-to-r from-[#3B82F6] via-[#EF4444] to-[#10B981] top-1/2 -translate-y-1/2 rounded-full -z-10"
+                      className="absolute start-10 h-2 bg-gradient-to-r from-[#3B82F6] via-[#EF4444] to-[#10B981] top-1/2 -translate-y-1/2 rounded-full -z-10"
                     />
 
                     {COMPLEX_PIPELINE.map((node, i) => (
