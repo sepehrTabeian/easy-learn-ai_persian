@@ -64,7 +64,7 @@ export const aiPromptIndex: AIPromptIndexItem[] = [
     versionDate: "2025-08-19",
     originalPath: "/awesome-prompt/Claude Code/Prompt.txt",
     translationPath: "/awesome-prompt/Claude Code/Prompt.zh.md",
-    learningPath: "/awesome-prompt/Claude Code/Prompt.learning.md",
+    learningPath: "/awesome-prompt/Claude Code/Prompt.fa.learning.md",
     tags: [
       "تولید کد",
       "CLI Agent",
@@ -120,7 +120,7 @@ export const aiPromptIndex: AIPromptIndexItem[] = [
     versionDate: "2025-12-29",
     originalPath: "/awesome-prompt/Claude/Prompt.txt",
     translationPath: "/awesome-prompt/Claude/Prompt.zh.md",
-    learningPath: "/awesome-prompt/Claude/Prompt.learning.md",
+    learningPath: "/awesome-prompt/Claude/Prompt.fa.learning.md",
     tags: [
       "خودکارسازی مرورگر",
       "Prompt Injection",
@@ -175,7 +175,7 @@ export const aiPromptIndex: AIPromptIndexItem[] = [
     versionDate: null,
     originalPath: "/awesome-prompt/Cline/Prompt.txt",
     translationPath: "/awesome-prompt/Cline/Prompt.zh.md",
-    learningPath: "/awesome-prompt/Cline/Prompt.learning.md",
+    learningPath: "/awesome-prompt/Cline/Prompt.fa.learning.md",
     tags: [
       "IDE Agent",
       "فراخوانی ابزار",
@@ -231,7 +231,7 @@ export const aiPromptIndex: AIPromptIndexItem[] = [
     versionDate: null,
     originalPath: "/awesome-prompt/Codex CLI/Prompt.txt",
     translationPath: "/awesome-prompt/Codex CLI/Prompt.zh.md",
-    learningPath: "/awesome-prompt/Codex CLI/Prompt.learning.md",
+    learningPath: "/awesome-prompt/Codex CLI/Prompt.fa.learning.md",
     tags: [
       "Agent ترمینال",
       "تولید کد",
@@ -286,7 +286,7 @@ export const aiPromptIndex: AIPromptIndexItem[] = [
     versionDate: "2025-08-07",
     originalPath: "/awesome-prompt/Cursor/Agent CLI Prompt 2025-08-07.txt",
     translationPath: "/awesome-prompt/Cursor/Agent CLI Prompt 2025-08-07.zh.md",
-    learningPath: "/awesome-prompt/Cursor/Agent CLI Prompt 2025-08-07.learning.md",
+    learningPath: "/awesome-prompt/Cursor/Agent CLI Prompt 2025-08-07.fa.learning.md",
     tags: [
       "دستیار کد",
       "CLI Agent",
@@ -339,7 +339,7 @@ export const aiPromptIndex: AIPromptIndexItem[] = [
     versionDate: null,
     originalPath: "/awesome-prompt/v0/Prompt.txt",
     translationPath: "/awesome-prompt/v0/Prompt.zh.md",
-    learningPath: "/awesome-prompt/v0/Prompt.learning.md",
+    learningPath: "/awesome-prompt/v0/Prompt.fa.learning.md",
     tags: [
       "تولید UI",
       "Next.js",
@@ -395,7 +395,7 @@ export const aiPromptIndex: AIPromptIndexItem[] = [
     versionDate: null,
     originalPath: "/awesome-prompt/Bolt/Prompt.txt",
     translationPath: "/awesome-prompt/Bolt/Prompt.zh.md",
-    learningPath: "/awesome-prompt/Bolt/Prompt.learning.md",
+    learningPath: "/awesome-prompt/Bolt/Prompt.fa.learning.md",
     tags: [
       "تولید کد",
       "WebContainer",
@@ -447,7 +447,7 @@ export const aiPromptIndex: AIPromptIndexItem[] = [
     versionDate: null,
     originalPath: "/awesome-prompt/Devin AI/Prompt.txt",
     translationPath: "/awesome-prompt/Devin AI/Prompt.zh.md",
-    learningPath: "/awesome-prompt/Devin AI/Prompt.learning.md",
+    learningPath: "/awesome-prompt/Devin AI/Prompt.fa.learning.md",
     tags: [
       "Agent کدنویسی",
       "مهندسی خودمختار",
@@ -500,7 +500,7 @@ export const aiPromptIndex: AIPromptIndexItem[] = [
     versionDate: null,
     originalPath: "/awesome-prompt/Lovable/Agent Prompt.txt",
     translationPath: "/awesome-prompt/Lovable/Agent Prompt.zh.md",
-    learningPath: "/awesome-prompt/Lovable/Agent Prompt.learning.md",
+    learningPath: "/awesome-prompt/Lovable/Agent Prompt.fa.learning.md",
     tags: [
       "تولید برنامه وب",
       "React",
@@ -554,7 +554,7 @@ export const aiPromptIndex: AIPromptIndexItem[] = [
     versionDate: null,
     originalPath: "/awesome-prompt/Manus/Prompt.txt",
     translationPath: "/awesome-prompt/Manus/Prompt.zh.md",
-    learningPath: "/awesome-prompt/Manus/Prompt.learning.md",
+    learningPath: "/awesome-prompt/Manus/Prompt.fa.learning.md",
     tags: [
       "Agent عمومی",
       "اعلام توانایی",
@@ -603,7 +603,7 @@ export const aiPromptIndex: AIPromptIndexItem[] = [
     versionDate: null,
     originalPath: "/awesome-prompt/Replit/Prompt.txt",
     translationPath: "/awesome-prompt/Replit/Prompt.zh.md",
-    learningPath: "/awesome-prompt/Replit/Prompt.learning.md",
+    learningPath: "/awesome-prompt/Replit/Prompt.fa.learning.md",
     tags: [
       "دستیار IDE",
       "دستیار کد",
@@ -654,7 +654,7 @@ export const aiPromptIndex: AIPromptIndexItem[] = [
     versionDate: null,
     originalPath: "/awesome-prompt/Windsurf/Prompt Wave 11.txt",
     translationPath: "/awesome-prompt/Windsurf/Prompt Wave 11.zh.md",
-    learningPath: "/awesome-prompt/Windsurf/Prompt Wave 11.learning.md",
+    learningPath: "/awesome-prompt/Windsurf/Prompt Wave 11.fa.learning.md",
     tags: [
       "Cascade",
       "AI Flow",
@@ -708,7 +708,7 @@ export const aiPromptIndex: AIPromptIndexItem[] = [
     versionDate: null,
     originalPath: "/awesome-prompt/Antigravity/Fast Prompt.txt",
     translationPath: "/awesome-prompt/Antigravity/Fast Prompt.zh.md",
-    learningPath: "/awesome-prompt/Antigravity/Fast Prompt.learning.md",
+    learningPath: "/awesome-prompt/Antigravity/Fast Prompt.fa.learning.md",
     tags: [
       "Agent برنامه‌نویسی",
       "حافظه ماندگار",
@@ -761,7 +761,7 @@ export const aiPromptIndex: AIPromptIndexItem[] = [
     versionDate: null,
     originalPath: "/awesome-prompt/CodeBuddy/Prompt.txt",
     translationPath: "/awesome-prompt/CodeBuddy/Prompt.zh.md",
-    learningPath: "/awesome-prompt/CodeBuddy/Prompt.learning.md",
+    learningPath: "/awesome-prompt/CodeBuddy/Prompt.fa.learning.md",
     tags: [
       "دستیار کد",
       "پروتکل ابزار XML",
@@ -813,7 +813,7 @@ export const aiPromptIndex: AIPromptIndexItem[] = [
     versionDate: null,
     originalPath: "/awesome-prompt/Comet/Prompt.txt",
     translationPath: "/awesome-prompt/Comet/Prompt.zh.md",
-    learningPath: "/awesome-prompt/Comet/Prompt.learning.md",
+    learningPath: "/awesome-prompt/Comet/Prompt.fa.learning.md",
     tags: [
       "خودکارسازی مرورگر",
       "دفاع در برابر تزریق Prompt",
@@ -865,7 +865,7 @@ export const aiPromptIndex: AIPromptIndexItem[] = [
     versionDate: null,
     originalPath: "/awesome-prompt/Gemini CLI/Prompt.txt",
     translationPath: "/awesome-prompt/Gemini CLI/Prompt.zh.md",
-    learningPath: "/awesome-prompt/Gemini CLI/Prompt.learning.md",
+    learningPath: "/awesome-prompt/Gemini CLI/Prompt.fa.learning.md",
     tags: [
       "Agent ترمینال",
       "مهندسی نرم‌افزار",
@@ -918,7 +918,7 @@ export const aiPromptIndex: AIPromptIndexItem[] = [
     versionDate: null,
     originalPath: "/awesome-prompt/Kiro/Spec_Prompt.txt",
     translationPath: "/awesome-prompt/Kiro/Spec_Prompt.zh.md",
-    learningPath: "/awesome-prompt/Kiro/Spec_Prompt.learning.md",
+    learningPath: "/awesome-prompt/Kiro/Spec_Prompt.fa.learning.md",
     tags: [
       "توسعه مبتنی بر spec",
       "جریان کار با دروازه مرحله‌ای",
@@ -972,7 +972,7 @@ export const aiPromptIndex: AIPromptIndexItem[] = [
     versionDate: null,
     originalPath: "/awesome-prompt/NotionAi/Prompt.txt",
     translationPath: "/awesome-prompt/NotionAi/Prompt.zh.md",
-    learningPath: "/awesome-prompt/NotionAi/Prompt.learning.md",
+    learningPath: "/awesome-prompt/NotionAi/Prompt.fa.learning.md",
     tags: [
       "دستیار بهره‌وری",
       "مدیریت دانش",
@@ -1026,7 +1026,7 @@ export const aiPromptIndex: AIPromptIndexItem[] = [
     versionDate: null,
     originalPath: "/awesome-prompt/Qoder/prompt.txt",
     translationPath: "/awesome-prompt/Qoder/prompt.zh.md",
-    learningPath: "/awesome-prompt/Qoder/prompt.learning.md",
+    learningPath: "/awesome-prompt/Qoder/prompt.fa.learning.md",
     tags: [
       "دستیار کدنویسی",
       "agentic IDE",
@@ -1078,7 +1078,7 @@ export const aiPromptIndex: AIPromptIndexItem[] = [
     versionDate: null,
     originalPath: "/awesome-prompt/RooCode/Prompt.txt",
     translationPath: "/awesome-prompt/RooCode/Prompt.zh.md",
-    learningPath: "/awesome-prompt/RooCode/Prompt.learning.md",
+    learningPath: "/awesome-prompt/RooCode/Prompt.fa.learning.md",
     tags: [
       "Agent برنامه‌نویسی",
       "پروتکل ابزار XML",
@@ -1133,7 +1133,7 @@ export const aiPromptIndex: AIPromptIndexItem[] = [
     versionDate: null,
     originalPath: "/awesome-prompt/Same.dev/Prompt.txt",
     translationPath: "/awesome-prompt/Same.dev/Prompt.zh.md",
-    learningPath: "/awesome-prompt/Same.dev/Prompt.learning.md",
+    learningPath: "/awesome-prompt/Same.dev/Prompt.fa.learning.md",
     tags: [
       "IDE ابری",
       "Agent توسعه وب",
@@ -1187,7 +1187,7 @@ export const aiPromptIndex: AIPromptIndexItem[] = [
     versionDate: null,
     originalPath: "/awesome-prompt/VSCode Agent/Prompt.txt",
     translationPath: "/awesome-prompt/VSCode Agent/Prompt.zh.md",
-    learningPath: "/awesome-prompt/VSCode Agent/Prompt.learning.md",
+    learningPath: "/awesome-prompt/VSCode Agent/Prompt.fa.learning.md",
     tags: [
       "Agent کدنویسی",
       "دستیار IDE",
@@ -1241,7 +1241,7 @@ export const aiPromptIndex: AIPromptIndexItem[] = [
     versionDate: null,
     originalPath: "/awesome-prompt/Xcode/System.txt",
     translationPath: "/awesome-prompt/Xcode/System.zh.md",
-    learningPath: "/awesome-prompt/Xcode/System.learning.md",
+    learningPath: "/awesome-prompt/Xcode/System.fa.learning.md",
     tags: [
       "دستیار IDE",
       "Xcode",
@@ -1294,7 +1294,7 @@ export const aiPromptIndex: AIPromptIndexItem[] = [
     versionDate: null,
     originalPath: "/awesome-prompt/Xcode/PreviewAction.txt",
     translationPath: "/awesome-prompt/Xcode/PreviewAction.zh.md",
-    learningPath: "/awesome-prompt/Xcode/PreviewAction.learning.md",
+    learningPath: "/awesome-prompt/Xcode/PreviewAction.fa.learning.md",
     tags: [
       "پرامپت ابزارمحور",
       "Xcode",
@@ -1344,7 +1344,7 @@ export const aiPromptIndex: AIPromptIndexItem[] = [
     versionDate: null,
     originalPath: "/awesome-prompt/Gemini/AI Studio vibe-coder.txt",
     translationPath: "/awesome-prompt/Gemini/AI Studio vibe-coder.zh.md",
-    learningPath: "/awesome-prompt/Gemini/AI Studio vibe-coder.learning.md",
+    learningPath: "/awesome-prompt/Gemini/AI Studio vibe-coder.fa.learning.md",
     tags: [
       "Agent کدنویسی",
       "Gemini",
@@ -1398,7 +1398,7 @@ export const aiPromptIndex: AIPromptIndexItem[] = [
     versionDate: null,
     originalPath: "/awesome-prompt/Antigravity/planning-mode.txt",
     translationPath: "/awesome-prompt/Antigravity/planning-mode.zh.md",
-    learningPath: "/awesome-prompt/Antigravity/planning-mode.learning.md",
+    learningPath: "/awesome-prompt/Antigravity/planning-mode.fa.learning.md",
     tags: [
       "Agent کدنویسی",
       "Antigravity",
@@ -1452,7 +1452,7 @@ export const aiPromptIndex: AIPromptIndexItem[] = [
     versionDate: null,
     originalPath: "/awesome-prompt/Warp.dev/Prompt.txt",
     translationPath: "/awesome-prompt/Warp.dev/Prompt.zh.md",
-    learningPath: "/awesome-prompt/Warp.dev/Prompt.learning.md",
+    learningPath: "/awesome-prompt/Warp.dev/Prompt.fa.learning.md",
     tags: [
       "Agent کدنویسی",
       "Agent ترمینال",
@@ -1505,7 +1505,7 @@ export const aiPromptIndex: AIPromptIndexItem[] = [
     versionDate: null,
     originalPath: "/awesome-prompt/Windsurf/Tools Wave 11.txt",
     translationPath: "/awesome-prompt/Windsurf/Tools Wave 11.zh.md",
-    learningPath: "/awesome-prompt/Windsurf/Tools Wave 11.learning.md",
+    learningPath: "/awesome-prompt/Windsurf/Tools Wave 11.fa.learning.md",
     tags: [
       "پرامپت ابزارمحور",
       "Windsurf",
@@ -1558,7 +1558,7 @@ export const aiPromptIndex: AIPromptIndexItem[] = [
     versionDate: null,
     originalPath: "/awesome-prompt/Trae/Builder Prompt.txt",
     translationPath: "/awesome-prompt/Trae/Builder Prompt.zh.md",
-    learningPath: "/awesome-prompt/Trae/Builder Prompt.learning.md",
+    learningPath: "/awesome-prompt/Trae/Builder Prompt.fa.learning.md",
     tags: [
       "دستیار IDE",
       "Trae",
@@ -1612,7 +1612,7 @@ export const aiPromptIndex: AIPromptIndexItem[] = [
     versionDate: null,
     originalPath: "/awesome-prompt/Trae/Chat Prompt.txt",
     translationPath: "/awesome-prompt/Trae/Chat Prompt.zh.md",
-    learningPath: "/awesome-prompt/Trae/Chat Prompt.learning.md",
+    learningPath: "/awesome-prompt/Trae/Chat Prompt.fa.learning.md",
     tags: [
       "دستیار IDE",
       "Trae",
@@ -1665,7 +1665,7 @@ export const aiPromptIndex: AIPromptIndexItem[] = [
     versionDate: null,
     originalPath: "/awesome-prompt/Traycer AI/phase_mode_prompts.txt",
     translationPath: "/awesome-prompt/Traycer AI/phase_mode_prompts.zh.md",
-    learningPath: "/awesome-prompt/Traycer AI/phase_mode_prompts.learning.md",
+    learningPath: "/awesome-prompt/Traycer AI/phase_mode_prompts.fa.learning.md",
     tags: [
       "Agent برنامه‌ریزی",
       "Traycer",
@@ -1718,7 +1718,7 @@ export const aiPromptIndex: AIPromptIndexItem[] = [
     versionDate: null,
     originalPath: "/awesome-prompt/Qoder/Quest Action.txt",
     translationPath: "/awesome-prompt/Qoder/Quest Action.zh.md",
-    learningPath: "/awesome-prompt/Qoder/Quest Action.learning.md",
+    learningPath: "/awesome-prompt/Qoder/Quest Action.fa.learning.md",
     tags: [
       "Qoder",
       "دستیار IDE",
@@ -1771,7 +1771,7 @@ export const aiPromptIndex: AIPromptIndexItem[] = [
     versionDate: null,
     originalPath: "/awesome-prompt/Qoder/Quest Design.txt",
     translationPath: "/awesome-prompt/Qoder/Quest Design.zh.md",
-    learningPath: "/awesome-prompt/Qoder/Quest Design.learning.md",
+    learningPath: "/awesome-prompt/Qoder/Quest Design.fa.learning.md",
     tags: [
       "سند طراحی",
       "مستندات فنی",
@@ -1823,7 +1823,7 @@ export const aiPromptIndex: AIPromptIndexItem[] = [
     versionDate: "2025-08-20",
     originalPath: "/awesome-prompt/Codex CLI/Prompt 2025-08-20.txt",
     translationPath: "/awesome-prompt/Codex CLI/Prompt 2025-08-20.zh.md",
-    learningPath: "/awesome-prompt/Codex CLI/Prompt 2025-08-20.learning.md",
+    learningPath: "/awesome-prompt/Codex CLI/Prompt 2025-08-20.fa.learning.md",
     tags: [
       "Agent ترمینال",
       "دستیار کد",
@@ -1878,7 +1878,7 @@ export const aiPromptIndex: AIPromptIndexItem[] = [
     versionDate: null,
     originalPath: "/awesome-prompt/Manus/Agent loop.txt",
     translationPath: "/awesome-prompt/Manus/Agent loop.zh.md",
-    learningPath: "/awesome-prompt/Manus/Agent loop.learning.md",
+    learningPath: "/awesome-prompt/Manus/Agent loop.fa.learning.md",
     tags: [
       "Manus",
       "Agent Loop",
@@ -1929,7 +1929,7 @@ export const aiPromptIndex: AIPromptIndexItem[] = [
     versionDate: null,
     originalPath: "/awesome-prompt/Manus/Modules.txt",
     translationPath: "/awesome-prompt/Manus/Modules.zh.md",
-    learningPath: "/awesome-prompt/Manus/Modules.learning.md",
+    learningPath: "/awesome-prompt/Manus/Modules.fa.learning.md",
     tags: [
       "Manus",
       "Agent عمومی",
@@ -1989,7 +1989,7 @@ export const aiPromptIndex: AIPromptIndexItem[] = [
     versionDate: null,
     originalPath: "/awesome-prompt/Kiro/Vibe_Prompt.txt",
     translationPath: "/awesome-prompt/Kiro/Vibe_Prompt.zh.md",
-    learningPath: "/awesome-prompt/Kiro/Vibe_Prompt.learning.md",
+    learningPath: "/awesome-prompt/Kiro/Vibe_Prompt.fa.learning.md",
     tags: [
       "کدنویسی آزاد Vibe",
       "صدا و لحن",
@@ -2044,7 +2044,7 @@ export const aiPromptIndex: AIPromptIndexItem[] = [
     versionDate: null,
     originalPath: "/awesome-prompt/Devin AI/DeepWiki Prompt.txt",
     translationPath: "/awesome-prompt/Devin AI/DeepWiki Prompt.zh.md",
-    learningPath: "/awesome-prompt/Devin AI/DeepWiki Prompt.learning.md",
+    learningPath: "/awesome-prompt/Devin AI/DeepWiki Prompt.fa.learning.md",
     tags: [
       "پرسش و پاسخ پایگاه کد",
       "ضد توهم",
@@ -2094,7 +2094,7 @@ export const aiPromptIndex: AIPromptIndexItem[] = [
     versionDate: null,
     originalPath: "/awesome-prompt/Cursor/Agent Prompt 2.0.txt",
     translationPath: "/awesome-prompt/Cursor/Agent Prompt 2.0.zh.md",
-    learningPath: "/awesome-prompt/Cursor/Agent Prompt 2.0.learning.md",
+    learningPath: "/awesome-prompt/Cursor/Agent Prompt 2.0.fa.learning.md",
     tags: [
       "Cursor",
       "Agent کدنویسی",
@@ -2153,7 +2153,7 @@ export const aiPromptIndex: AIPromptIndexItem[] = [
     versionDate: null,
     originalPath: "/awesome-prompt/Claude Design/Peompt.txt",
     translationPath: "/awesome-prompt/Claude Design/Peompt.zh.md",
-    learningPath: "/awesome-prompt/Claude Design/Peompt.learning.md",
+    learningPath: "/awesome-prompt/Claude Design/Peompt.fa.learning.md",
     tags: [
       "Agent طراحی",
       "Claude",
