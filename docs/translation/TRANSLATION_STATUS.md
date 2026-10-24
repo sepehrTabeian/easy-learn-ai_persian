@@ -19,9 +19,9 @@
 - قالب: Markdown ساده بدون frontmatter؛ عنوان H1 با واژهٔ فارسی شروع شود؛ بلوک‌های `<example>` به بلوک کد `text` تبدیل شوند (رندرکنندهٔ Markdown تگ HTML ناشناخته را پنهان می‌کند)؛ فهرست شماره‌دار با `1.` لاتین (با `۱.` فهرست Markdown ساخته نمی‌شود؛ اپ می‌تواند `list-style: persian` بگذارد)؛ بخش «对这个项目的展示建议» (پیشنهاد نمایش در سایت Easy AI) حذف می‌شود.
 - بررسی: `fa_lint.py --check` و پیش‌نمایش `persian_cleanup.py --edit` (تغییر شمارهٔ فهرست‌ها و نسخه‌هایی مثل Sonnet 4 را نپذیرید).
 - انجام‌شده (۳۱ پوشه در `kodche/`، هر کدام `lesson.md` + `prompt.md`؛ methodology فقط lesson): claude-code, methodology (از article.md), xcode-system, xcode-preview-action, manus-agent-loop, manus-modules, manus-prompt, traycer-phase-mode, devin-deepwiki, devin-prompt, replit, codex-cli, codex-cli-2025-08-20, warp, trae-builder, trae-chat, cursor-agent-2-0, cursor-agent-cli, windsurf-prompt, windsurf-tools, qoder-prompt, qoder-quest-action, qoder-quest-design, gemini-cli, vscode-agent, lovable, bolt, kiro-vibe, kiro-spec, notion-ai, same-dev.
-- **انجام‌شدهٔ تازه:** antigravity-planning-mode, antigravity-fast-prompt, codebuddy (کامل). `kodche/claude-browser/prompt.md` نوشته شده (پرامپت Claude برای مرورگر/افزونهٔ Chrome) ولی `lesson.md` آن هنوز مانده (از `public/awesome-prompt/Claude/Prompt.learning.md`؛ ساختار: دفاع تزریق، سه‌گانهٔ ممنوع/نیازمند اجازه/عادی، حریم خصوصی، حق نشر، ابزار و تب).
-- **مانده (۷ پرامپت):** lesson.md برای claude-browser، سپس RooCode، v0، Cline، Comet، Gemini (`AI Studio vibe-coder`)، Claude Design (`Peompt`). منبع هر کدام: `public/awesome-prompt/<ابزار>/*.learning.md` (درسنامه، از چینی) و `*.txt` (پرامپت، از انگلیسی). نام پوشه‌ها در `kodche/` به‌صورت slug انگلیسی با خط تیره.
-- بعد از تمام شدن همه: یک `kodche/README.md` فهرست درسنامه‌ها (ترتیب پیشنهادی: methodology اول) بسازید.
+- **انجام‌شدهٔ تازه:** antigravity-planning-mode, antigravity-fast-prompt, codebuddy, claude-browser, roocode, v0, cline, comet, gemini-ai-studio-vibe-coder, claude-design (همه کامل، هر کدام `lesson.md` + `prompt.md`). مجموع: ۴۱ پوشه در `kodche/` (۴۰ پرامپت + methodology).
+- **مانده:** هیچ پرامپتی از فهرست کدچه نمانده. `kodche/README.md` فهرست و ترتیب پیشنهادی مطالعه را دارد (methodology اول).
+- `kodche/README.md` ساخته شد (فهرست گروه‌بندی‌شده، قالب فایل‌ها و ترتیب پیشنهادی).
 - روند هر پوشه: ترجمه ← `fa_lint.py --check` (خطوط شروع‌شونده با واژهٔ لاتین را با یک واژهٔ فارسی شروع کنید؛ ارقام لاتین در نسخه/کد/IP مجازند) ← commit جدا.
 - نکته‌های قالب: پرامپت‌هایی که بلوک کد تودرتو دارند، نمونه‌ها را داخل حصار `~~~` می‌گذارند؛ تعریف ابزارهای TypeScript به نثر + امضای نوع با کامنت ترجمه‌شده درمی‌آیند؛ متن خراب یا ناقص منبع با یادداشت مشخص می‌شود و چیزی به آن اضافه نمی‌شود.
 
@@ -166,7 +166,7 @@ docs/translation/
 
 ## مرحله بعد
 
-0. (اولویت) درسنامه‌های کدچه؛ بخش «هدف تازه» را ببینید. موارد زیر فعلاً متوقف‌اند.
+0. درسنامه‌های کدچه تمام شد (بخش «هدف تازه»). موارد زیر فعلاً متوقف‌اند.
 
 1. ادامه ترجمه `work/seg_sites.json` از قطعه **4550** (فایل بعدی: `tr_sites_013.tsv`).
 2. پس از اتمام: اعمال، بررسی‌ها، commit.
@@ -192,3 +192,4 @@ docs/translation/
 - **2026-10-24** — قاعده الزامی استفاده از مهارت `persian-writing` برای همه ترجمه‌ها اضافه شد؛ ترجمه‌های قبلی نیاز به بازبینی با این مهارت دارند.
 - **2026-10-24** — هدف به درسنامه‌های Markdown برای اپ کدچه تغییر کرد؛ ترجمهٔ ai-sites متوقف شد. نمونهٔ `kodche/claude-code/` (درسنامه از learning.md، پرامپت از متن انگلیسی) طبق مهارت persian-writing ساخته شد.
 - **2026-10-24** — ۳۰ درسنامهٔ کدچه (از ۴۱ پرامپت + روش‌شناسی) ترجمه و commit شد؛ ۱۲ مورد مانده در بخش «هدف تازه» ثبت شد. گراف Graphify به‌روز شد.
+- **2026-10-24** — درسنامهٔ کدچه تمام شد: claude-browser (lesson)، roocode، v0، cline، comet، gemini-ai-studio-vibe-coder و claude-design (هر کدام lesson + prompt از متن انگلیسی) و `kodche/README.md` اضافه شد؛ مجموع ۴۱ پوشه (۴۰ پرامپت + methodology). نکتهٔ روند: خطوط شروع‌شونده با واژهٔ لاتین با یک واژهٔ فارسی شروع شدند و ایرادهای منبع (کد/تگ خراب، بخش تکراری، قالب ناقص) در یادداشت بالای هر `prompt.md` ثبت شد.
