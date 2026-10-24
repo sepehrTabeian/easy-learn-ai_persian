@@ -18,7 +18,9 @@
   - `*.txt` (متن اصلی انگلیسی) ← `kodche/<slug>/prompt.md`. **از انگلیسی ترجمه شود، نه از `.zh.md`.**
 - قالب: Markdown ساده بدون frontmatter؛ عنوان H1 با واژهٔ فارسی شروع شود؛ بلوک‌های `<example>` به بلوک کد `text` تبدیل شوند (رندرکنندهٔ Markdown تگ HTML ناشناخته را پنهان می‌کند)؛ فهرست شماره‌دار با `1.` لاتین (با `۱.` فهرست Markdown ساخته نمی‌شود؛ اپ می‌تواند `list-style: persian` بگذارد)؛ بخش «对这个项目的展示建议» (پیشنهاد نمایش در سایت Easy AI) حذف می‌شود.
 - بررسی: `fa_lint.py --check` و پیش‌نمایش `persian_cleanup.py --edit` (تغییر شمارهٔ فهرست‌ها و نسخه‌هایی مثل Sonnet 4 را نپذیرید).
-- انجام‌شده: `claude-code` (نمونه، منتظر تأیید کاربر). بعدی: `public/awesome-prompt/article.md` (روش‌شناسی ۱۲ قاعده) و بقیهٔ ۳۹ ابزار.
+- انجام‌شده (کاربر نمونه را تأیید کرد): claude-code, methodology (از article.md), xcode-system, xcode-preview-action, manus-agent-loop, manus-modules, manus-prompt, traycer-phase-mode, devin-deepwiki, devin-prompt, replit, codex-cli, codex-cli-2025-08-20, warp, trae-builder, trae-chat, cursor-agent-2-0, cursor-agent-cli, windsurf-prompt, windsurf-tools.
+- مانده: Qoder (۳ فایل)، Gemini CLI، VSCode Agent، Lovable، Bolt، Kiro (۲)، NotionAi، Same.dev، Antigravity (۲)، CodeBuddy، Claude، RooCode، v0، Cline، Comet، Gemini، Claude Design.
+- نکته‌های قالب: پرامپت‌هایی که بلوک کد تودرتو دارند، نمونه‌ها را داخل حصار `~~~` می‌گذارند؛ تعریف ابزارهای TypeScript به نثر + امضای نوع با کامنت ترجمه‌شده درمی‌آیند؛ متن خراب یا ناقص منبع با یادداشت مشخص می‌شود و چیزی به آن اضافه نمی‌شود.
 
 ## قاعده نگارش فارسی (از 2026-10-24 الزامی)
 
