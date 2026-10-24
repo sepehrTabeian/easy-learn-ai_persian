@@ -18,8 +18,10 @@
   - `*.txt` (متن اصلی انگلیسی) ← `kodche/<slug>/prompt.md`. **از انگلیسی ترجمه شود، نه از `.zh.md`.**
 - قالب: Markdown ساده بدون frontmatter؛ عنوان H1 با واژهٔ فارسی شروع شود؛ بلوک‌های `<example>` به بلوک کد `text` تبدیل شوند (رندرکنندهٔ Markdown تگ HTML ناشناخته را پنهان می‌کند)؛ فهرست شماره‌دار با `1.` لاتین (با `۱.` فهرست Markdown ساخته نمی‌شود؛ اپ می‌تواند `list-style: persian` بگذارد)؛ بخش «对这个项目的展示建议» (پیشنهاد نمایش در سایت Easy AI) حذف می‌شود.
 - بررسی: `fa_lint.py --check` و پیش‌نمایش `persian_cleanup.py --edit` (تغییر شمارهٔ فهرست‌ها و نسخه‌هایی مثل Sonnet 4 را نپذیرید).
-- انجام‌شده (کاربر نمونه را تأیید کرد): claude-code, methodology (از article.md), xcode-system, xcode-preview-action, manus-agent-loop, manus-modules, manus-prompt, traycer-phase-mode, devin-deepwiki, devin-prompt, replit, codex-cli, codex-cli-2025-08-20, warp, trae-builder, trae-chat, cursor-agent-2-0, cursor-agent-cli, windsurf-prompt, windsurf-tools.
-- مانده: Qoder (۳ فایل)، Gemini CLI، VSCode Agent، Lovable، Bolt، Kiro (۲)، NotionAi، Same.dev، Antigravity (۲)، CodeBuddy، Claude، RooCode، v0، Cline، Comet، Gemini، Claude Design.
+- انجام‌شده (۳۰ پوشه در `kodche/`، هر کدام `lesson.md` + `prompt.md`؛ methodology فقط lesson): claude-code, methodology (از article.md), xcode-system, xcode-preview-action, manus-agent-loop, manus-modules, manus-prompt, traycer-phase-mode, devin-deepwiki, devin-prompt, replit, codex-cli, codex-cli-2025-08-20, warp, trae-builder, trae-chat, cursor-agent-2-0, cursor-agent-cli, windsurf-prompt, windsurf-tools, qoder-prompt, qoder-quest-action, qoder-quest-design, gemini-cli, vscode-agent, lovable, bolt, kiro-vibe, kiro-spec, notion-ai.
+- **مانده (۱۲ پرامپت):** Same.dev (ترجمه نوشته شد اما به‌خاطر خطای ابزار ذخیره نشد؛ از نو)، Antigravity (`Fast Prompt` و `planning-mode`)، CodeBuddy، Claude، RooCode، v0، Cline، Comet، Gemini (`AI Studio vibe-coder`)، Claude Design (`Peompt`). منبع هر کدام: `public/awesome-prompt/<ابزار>/*.learning.md` (درسنامه، از چینی) و `*.txt` (پرامپت، از انگلیسی).
+- بعد از تمام شدن همه: یک `kodche/README.md` فهرست درسنامه‌ها (ترتیب پیشنهادی: methodology اول) بسازید.
+- روند هر پوشه: ترجمه ← `fa_lint.py --check` (خطوط شروع‌شونده با واژهٔ لاتین را با یک واژهٔ فارسی شروع کنید؛ ارقام لاتین در نسخه/کد/IP مجازند) ← commit جدا.
 - نکته‌های قالب: پرامپت‌هایی که بلوک کد تودرتو دارند، نمونه‌ها را داخل حصار `~~~` می‌گذارند؛ تعریف ابزارهای TypeScript به نثر + امضای نوع با کامنت ترجمه‌شده درمی‌آیند؛ متن خراب یا ناقص منبع با یادداشت مشخص می‌شود و چیزی به آن اضافه نمی‌شود.
 
 ## قاعده نگارش فارسی (از 2026-10-24 الزامی)
@@ -47,7 +49,7 @@
 | `public/awesome-prompt/` (حدود ۲۵۷ هزار) | ⛔ مانده | فایل‌های «ترجمه» پرامپت‌ها هنوز چینی‌اند |
 | `public/article/` (حدود ۱۱۳ هزار) | ⛔ مانده | HTML تک‌فایلی |
 | `ai-app/*` | ⛔ مانده | |
-| گراف کد Graphify | ✅ ساخته شد | حالت محلی `code-only`؛ خروجی در `graphify-out/` با ۳۲٬۹۶۲ گره و ۹۱٬۷۱۰ یال |
+| گراف کد Graphify | ✅ ساخته شد | حالت محلی `code-only`؛ خروجی در `graphify-out/` با ۴۰٬۷۱۹ گره و ۹۸٬۴۶۸ یال (به‌روزشده 2026-10-24) |
 
 ## ساختار پوشه `docs/translation/`
 
@@ -188,3 +190,4 @@ docs/translation/
 - **2026-10-24** — تکمیل دستهٔ سیزدهم ترجمهٔ ai-sites شامل قطعه‌های ۴۲۰۰ تا ۴۵۴۹ در فایل `work/tr_sites_012.tsv`؛ اصلاح گیومه ASCII در ترجمه قطعه ۲۴ (override در همین فایل) (مجموعاً ۴٬۵۵۰ قطعهٔ ترجمه‌شده در work).
 - **2026-10-24** — قاعده الزامی استفاده از مهارت `persian-writing` برای همه ترجمه‌ها اضافه شد؛ ترجمه‌های قبلی نیاز به بازبینی با این مهارت دارند.
 - **2026-10-24** — هدف به درسنامه‌های Markdown برای اپ کدچه تغییر کرد؛ ترجمهٔ ai-sites متوقف شد. نمونهٔ `kodche/claude-code/` (درسنامه از learning.md، پرامپت از متن انگلیسی) طبق مهارت persian-writing ساخته شد.
+- **2026-10-24** — ۳۰ درسنامهٔ کدچه (از ۴۱ پرامپت + روش‌شناسی) ترجمه و commit شد؛ ۱۲ مورد مانده در بخش «هدف تازه» ثبت شد. گراف Graphify به‌روز شد.
