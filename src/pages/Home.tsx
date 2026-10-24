@@ -13,7 +13,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 import {
   Brain,
-  Newspaper,
   GraduationCap,
   Users,
   ArrowUpRight,
@@ -99,17 +98,6 @@ const chapters: Chapter[] = [
   },
   {
     serial: "05",
-    title: "گزارش روزانه AI",
-    enTitle: "Today, in AI",
-    description: "تحولات منتخب روزانه صنعت، چکیده خواندنی‌ترین خبرهای هر روز.",
-    icon: <Newspaper strokeWidth={2} className="w-12 h-12" />,
-    path: "/ai-daily",
-    meta: "Daily",
-    bgColor: "bg-butter-soft",
-    iconColor: "text-ink",
-  },
-  {
-    serial: "06",
     title: "آموزش‌های AI",
     enTitle: "Long-form lessons",
     description: "آموزش‌های نظام‌مند از مقدماتی تا پیشرفته، همراه با تمرین عملی از ساده به عمیق.",
@@ -120,7 +108,7 @@ const chapters: Chapter[] = [
     iconColor: "text-ink",
   },
   {
-    serial: "07",
+    serial: "06",
     title: "پرامپت‌های AI",
     enTitle: "Prompt anatomy",
     description: "تحلیل پرامپت‌های سیستمی عالی، و یادگیری طراحی هویت، ابزارها و مرزهای Agent.",
@@ -132,7 +120,7 @@ const chapters: Chapter[] = [
     invertText: true,
   },
   {
-    serial: "08",
+    serial: "07",
     title: "سیاره دانش",
     enTitle: "The reading circle",
     description: "جامعه عمیق پولی، تا با هم‌علاقه‌ها مفاهیم را تا ته بشکافید و پروژه‌ها را تا آخر ببرید.",
@@ -188,7 +176,7 @@ const Home: React.FC = () => {
 
               {/* زیرعنوان —— text-pretty خودکار از کلمات یتیم جلوگیری می‌کند */}
               <p className="font-sans font-medium text-[18px] md:text-[20px] leading-[1.6] text-ink/85 max-w-[560px] mt-8">
-                مفاهیم پیچیده AI، مدل‌ها، ارزیابی‌ها، ابزارها و خبرهای روزانه با دقت گردآوری شده‌اند تا
+                مفاهیم پیچیده AI، مدل‌ها، ارزیابی‌ها و ابزارها با دقت گردآوری شده‌اند تا
                 <span className="bg-white px-2 mx-0.5 font-bold border-b-[3px] border-ink/85 whitespace-nowrap">
                   به‌راحتی بفهمید
                 </span>
@@ -473,7 +461,6 @@ const Home: React.FC = () => {
               links={[
                 { name: "مدل‌های AI", path: "/ai-model" },
                 { name: "ارزیابی AI", path: "/ai-benchmark" },
-                { name: "گزارش روزانه AI", path: "/ai-daily" },
                 { name: "آموزش‌های AI", path: "/ai-tutorial" },
               ]}
             />

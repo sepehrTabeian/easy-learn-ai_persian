@@ -15,7 +15,6 @@ const navigationItems: NavigationItem[] = [
   { name: "آثار", path: "/ai-application" },
   { name: "مدل‌ها", path: "/ai-model" },
   { name: "ارزیابی", path: "/ai-benchmark" },
-  { name: "اخبار روزانه", path: "/ai-daily" },
   { name: "آموزش‌ها", path: "/ai-tutorial" },
   { name: "سیاره", path: "/knowledge-planet" },
 ];

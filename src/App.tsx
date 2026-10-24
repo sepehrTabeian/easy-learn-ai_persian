@@ -12,7 +12,6 @@ import AIKnowledgeDetail from "./pages/AIKnowledgeDetail";
 import AIArticles from "./pages/AIArticles";
 import AIArticleDetail from "./pages/AIArticleDetail";
 import AIApplication from "./pages/AIApplication";
-import AIDaily from "./pages/AIDaily";
 import AITutorial from "./pages/AITutorial";
 import AIModel from "./pages/AIModel";
 import KnowledgePlanet from "./pages/KnowledgePlanet";
@@ -20,7 +19,6 @@ import AIBenchmark from "./pages/AIBenchmark";
 import AIPrompts from "./pages/AIPrompts";
 import PromptMethodology from "./pages/PromptMethodology";
 import AIPromptDetail from "./pages/AIPromptDetail";
-import { DailyDetail } from "./components/daily/DailyDetail";
 
 const App: React.FC = () => {
   return (
@@ -39,8 +37,6 @@ const App: React.FC = () => {
             <Route path="/ai-prompts/:id" element={<AIPromptDetail />} />
             <Route path="/ai-application" element={<AIApplication />} />
             <Route path="/ai-application/:id" element={<AIApplication />} />
-            <Route path="/ai-daily" element={<AIDaily />} />
-            <Route path="/ai-daily/:date" element={<DailyDetail />} />
             <Route path="/ai-model" element={<AIModel />} />
             <Route path="/ai-tutorial" element={<AITutorial />} />
             <Route path="/ai-benchmark" element={<AIBenchmark />} />

@@ -29,7 +29,7 @@ const ITEMS = [
   { y: 80, text: "بررسی تقویم", initialChecked: true, delayMs: 0 },
   { y: 100, text: "دریافت ایمیل", initialChecked: true, delayMs: 120 },
   { y: 120, text: "بررسی Git", initialChecked: false, delayMs: 240, inProgress: true },
-  { y: 140, text: "پیش‌نویس گزارش روزانه", initialChecked: false, delayMs: 360 },
+  { y: 140, text: "پیش‌نویس گزارش کار", initialChecked: false, delayMs: 360 },
 ];
 
 const AgentTodoCover: React.FC = () => {
