@@ -348,9 +348,3 @@
 4897	۱۷۵B · سرور بزرگ
 4898	لایه‌ها هم تقسیم می‌شوند، سطرها هم، و سپس DP
 4899	EOF
-python3 -I - <<'EOF'
-import json
-d=json.load(open('docs/translation/work/seg_sites.json'))
-lines=[l for l in open('docs/translation/work/tr_sites_013.tsv',encoding='utf-8').read().split('\n') if l.strip()]
-idx=[int(l.split('\t')[0]) for l in lines]
-print('rows',len(lines),'first',idx[0],'last',idx[-1],'bad',[l for l in lines if '\t' not in l][:3])
