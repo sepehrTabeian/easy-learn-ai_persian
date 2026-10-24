@@ -307,7 +307,7 @@ class Person {
 
 - پارامتر `filePaths` (آرایهٔ string، اجباری)
 
-## context `<context>`
+## زمینه (context) `<context>`
 
 تاریخ فعلی ۲۱ آوریل ۲۰۲۵ است.
 
