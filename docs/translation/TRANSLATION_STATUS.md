@@ -319,3 +319,4 @@ docs/translation/
 - **2026-10-25** — تکمیل قطعه‌های 18000 تا 18099 ترجمهٔ ai-sites در فایل `docs/translation/work/tr_sites_145.tsv`.
 - **2026-10-25** — تکمیل قطعه‌های 18100 تا 18199 ترجمهٔ ai-sites در فایل `docs/translation/work/tr_sites_146.tsv`.
 - **2026-10-25** — تکمیل قطعه‌های 18200 تا 18299 ترجمهٔ ai-sites در فایل `docs/translation/work/tr_sites_147.tsv`.
+- **2026-10-25** — تکمیل قطعه‌های 18300 تا 18399 ترجمهٔ ai-sites در فایل `docs/translation/work/tr_sites_148.tsv`.
