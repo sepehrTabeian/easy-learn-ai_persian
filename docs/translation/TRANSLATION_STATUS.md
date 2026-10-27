@@ -44,7 +44,7 @@
 | `data/nav/sites.json`، `data/timeline/index.json` | ✅ انجام شد | commit `f222c72` |
 | `readme.md` | ✅ انجام شد | دستی بازنویسی شد، داخل `<div dir="rtl">` |
 | `ai-sites/*`: راه‌اندازی RTL (۷۸ زیرسایت) | ✅ انجام شد، commit نهایی این سند | تزریق `dir=rtl`، فونت Vazirmatn، کلاس‌های منطقی Tailwind |
-| `ai-sites/*`: ترجمه متن | 🟡 در جریان | ۴٬۵۵۰ قطعه از ۲۱٬۸۸۴ ترجمه شده (فقط در `work/`، **هنوز اعمال نشده**) |
+| `ai-sites/*`: ترجمه متن | ✅ ترجمه شد، اعمال نشد | همهٔ ۲۱٬۸۸۴ قطعه (۰ تا ۲۱٬۸۸۳) در `glossary/tr_sites_*.tsv` (۱۸۴ فایل)؛ **هنوز روی سورس اعمال نشده** |
 | `public/*/static/js` (خروجی build زیرسایت‌ها) | ⛔ مانده | پس از ترجمه `ai-sites` باید rebuild شود (نیاز به نصب وابستگی + اجازه کاربر) |
 | `public/awesome-prompt/` (حدود ۲۵۷ هزار) | ⛔ مانده | فایل‌های «ترجمه» پرامپت‌ها هنوز چینی‌اند |
 | `public/article/` (حدود ۱۱۳ هزار) | ⛔ مانده | HTML تک‌فایلی |
@@ -71,7 +71,7 @@ docs/translation/
 │   └── seg_misc.json + tr_misc_*.tsv    (nav و timeline)
 └── work/                      ← کار در جریان
     ├── seg_sites.json                   ۲۱٬۸۸۴ قطعه جدید ai-sites
-    └── tr_sites_000.tsv تا tr_sites_011.tsv  (قطعه‌های 0 تا 4199)
+    └── (ترجمه‌های tr_sites_000 تا tr_sites_183 به glossary/ منتقل شدند)
 ```
 
 ## روش کار (pipeline)
@@ -166,7 +166,7 @@ docs/translation/
 
 
 
-1. ادامه ترجمه `work/seg_sites.json` از قطعه **4550** (فایل بعدی: `tr_sites_013.tsv`).
+1. ترجمهٔ `ai-sites` کامل است (قطعه‌های ۰ تا ۲۱٬۸۸۳ در `glossary/tr_sites_*.tsv`). بعدی: اعمال آن‌ها روی سورس با `tools/apply2.py` و بررسی خروجی؛ هنوز انجام نشده.
 2. پس از اتمام: اعمال، بررسی‌ها، commit.
 3. اجازه گرفتن از کاربر برای نصب وابستگی‌ها و rebuild خروجی هر زیرسایت (`cd ai-sites/<name> && pnpm install && pnpm build` که خروجی را در `public/<name>` می‌ریزد؛ ۴ زیرسایت با vite هستند: evaluation, harness, prompt-cache, skills).
 
@@ -355,3 +355,4 @@ docs/translation/
 - **2026-10-27** — تکمیل قطعه‌های 21600 تا 21699 ترجمهٔ ai-sites در فایل `docs/translation/work/tr_sites_181.tsv`.
 - **2026-10-27** — تکمیل قطعه‌های 21700 تا 21799 ترجمهٔ ai-sites در فایل `docs/translation/work/tr_sites_182.tsv`.
 - **2026-10-27** — تکمیل قطعه‌های 21800 تا 21883 ترجمهٔ ai-sites در فایل `docs/translation/work/tr_sites_183.tsv` (آخرین دسته؛ ۸۴ خط).
+- **2026-10-27** — ترجمهٔ کامل ai-sites (۲۱٬۸۸۴ قطعه، ۰ تا ۲۱۸۸۳) انجام شد. فایل‌های `tr_sites_000` تا `tr_sites_183` از `work/` به `glossary/` منتقل شدند (مسیرهای `work/tr_sites_*` در لاگ‌های بالا تاریخی‌اند). هنوز اعمال روی سورس و rebuild انجام نشده است.
