@@ -98,31 +98,3 @@
 6697	راهنمای مسیر فنی
 6698	کمبودهای استدلال منطقی یا برنامه‌نویسی را پیدا می‌کند و جهت بهینه‌سازی بعدی را مشخص می‌کند.
 6699	چه: چه چیزی باید ارزیابی شود؟
-
-Oops: I need to check my mapping for 6600 "乱答应" → "پاسخ بی‌دقت دادن" ✓ fine. Also 6601 "只要犯错一个，本题直接 0 分" ✓. 6610 "必须" ✓.
-
-Wait, 6613 "τ²-bench 的多重宇宙" → "جهان‌های موازی τ²-bench" ✓.
-
-Also line 6603: "一个典型的 Policy-Following 任务" ✓.
-
-Mapping check: 6608 "若仍不行 → 指引重置 APN" ✓; 6609 "若欠费 →" ✓.
-
-Important: I wrote "6625" "به استاندارد..." and 6624 "ساخته‌ی Anthropic" ✓, 6623 ✓.
-
-6642 "Claude Opus 4.5 暂居榜首，通过率仅" I wrote "...با نرخ قبولی فقط" then source 6643 is "真实场景的复杂性远超想象。" — my 6643 is "واقعیت‌های کار چندان پیچیده‌تر از تصور است." — The source line 6643 is a separate sentence "Real-world complexity far exceeds imagination". Hmm, I wrote 6643 okay.
-
-Check: 6644-6649: "编程能力 (Coding)" ✓; "大模型最“卷”的赛道之一" ✓; "我们从简单的" ✓; "算法题" ✓; "，一路进化到复杂的" → I wrote "ساده شروع کردیم و تا" at 6648 — source 6648 is "，一路进化到复杂的" → Persian "...و تا" fine-ish. 6649 "真实工程修复" → "ترمیم مهندسی واقعی" ✓.
-
-6654: "对于顶级模型来说，这已是“送分题”" ✓ → "برای مدل‌های برتر، این «سؤال رایگان» است." ✓ 
-
-Write done. Validate and commit.
-
-
-<invoke name="Bash">
-<parameter name="command">cd /home/user/easy-learn-ai_persian && f=docs/translation/work/tr_sites_031.tsv && awk -F'\t' 'NF!=2' $f | wc -l && wc -l < $f && cut -f1 $f | awk 'BEGIN{s=6600}{ if ($1!=s+NR-1) {print "BAD line",NR,$1; exit} }'; grep -c $'\xe2\x80\x8f' $f; printf '%s\n' '- **2026-10-25** — تکمیل دستهٔ سی‌ام ترجمهٔ ai-sites شامل قطعه‌های ۶۶۰۰ تا ۶۶۹۹ در فایل `work/tr_sites_031.tsv` (مجموعاً ۶٬۷۰۰ قطعهٔ ترجمه‌شده در work).' >> docs/translation/TRANSLATION_STATUS.md && git add docs/translation && git commit -q -F - <<'EOF'
-feat: translate ai-sites segments 6600-6699 to Persian
-
-Co-Authored-By: Claude <noreply@anthropic.com>
-Claude-Session: https://claude.ai/code/session_01LiFQpUNDhCeaH81ULdaUaP
-EOF
-git pull --rebase -q origin persian 2>&1 | tail -2; git push -u origin persian 2>&1 | tail -1; git log --oneline -1
