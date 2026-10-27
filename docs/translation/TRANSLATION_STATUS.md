@@ -205,3 +205,4 @@ docs/translation/
 - **2026-10-25** — تکمیل دستهٔ سی‌ام ترجمهٔ ai-sites شامل قطعه‌های ۶۶۰۰ تا ۶۶۹۹ در فایل `work/tr_sites_031.tsv` (مجموعاً ۶٬۷۰۰ قطعهٔ ترجمه‌شده در work).
 - **2026-10-25** — تکمیل قطعه‌های 6700 تا 6799 ترجمهٔ ai-sites در فایل `docs/translation/work/tr_sites_032.tsv`.
 - **2026-10-25** — تکمیل قطعه‌های 6800 تا 6899 ترجمهٔ ai-sites در فایل `docs/translation/work/tr_sites_033.tsv`.
+- **2026-10-25** — تکمیل قطعه‌های 6900 تا 6999 ترجمهٔ ai-sites در فایل `docs/translation/work/tr_sites_034.tsv`.
